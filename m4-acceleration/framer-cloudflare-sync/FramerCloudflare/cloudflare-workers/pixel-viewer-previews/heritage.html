@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum-Spatial Pixel Viewer</title>
+    <style>
+        :root {
+            --primary-color: #131A36;
+            --accent-color: #5AC8FA;
+            --background-color: #0A0621;
+            --text-color: #FFFFFF;
+        }
+        
+        body {
+            font-family: 'SF Pro Text', -apple-system, system-ui, sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+        
+        .controls {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .btn {
+            background-color: rgba(19, 26, 54, 0.6);
+            color: var(--text-color);
+            border: 1px solid rgba(90, 200, 250, 0.4);
+            border-radius: 6px;
+            padding: 5px 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            background-color: rgba(19, 26, 54, 0.8);
+            border-color: rgba(90, 200, 250, 0.8);
+        }
+        
+        .btn.active {
+            background-color: rgba(90, 200, 250, 0.2);
+            border-color: rgba(90, 200, 250, 1);
+        }
+        
+        .pixel-viewer {
+            width: 100%;
+            height: 300px;
+            border: 1px solid rgba(90, 200, 250, 0.4);
+            border-radius: 8px;
+            margin-top: 1rem;
+            background-color: rgba(19, 26, 54, 0.4);
+        }
+        
+        .pixel-grid {
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            grid-template-rows: repeat(6, 1fr);
+            gap: 4px;
+            width: 100%;
+            height: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        
+        .mini-pixel {
+            background-color: #331F4A;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        
+        .mini-pixel:hover {
+            transform: scale(1.1);
+            z-index: 10;
+            box-shadow: 0 0 8px rgba(90, 200, 250, 0.8);
+        }
+        
+        .mini-pixel.heritage {
+            background-color: #2C5F2D;
+            box-shadow: 0 0 5px rgba(61, 255, 116, 0.6);
+        }
+        
+        .mini-pixel.transitional {
+            background-color: #331F4A;
+            box-shadow: 0 0 5px rgba(90, 200, 250, 0.6);
+        }
+        
+        .mini-pixel.quantum {
+            background-color: #6A3093;
+            box-shadow: 0 0 5px rgba(191, 64, 128, 0.6);
+        }
+        
+        .mini-pixel.superposition {
+            background-color: #6A3093;
+            box-shadow: 0 0 5px rgba(255, 255, 255, 0.6);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Quantum-Spatial Pixel Viewer</h1>
+        
+        <div class="controls">
+            <button class="btn active" data-state="heritage">Heritage</button>
+            <button class="btn " data-state="transitional">Transitional</button>
+            <button class="btn " data-state="quantum">Quantum</button>
+            <button class="btn " data-state="superposition">Superposition</button>
+        </div>
+        
+        <div class="pixel-viewer">
+            <div class="pixel-grid" id="pixel-grid"></div>
+        </div>
+    </div>
+
+    <script>
+        // Generate the pixel grid
+        const pixelGrid = document.getElementById('pixel-grid');
+        const rows = 6;
+        const columns = 8;
+        let currentState = 'heritage';
+        
+        function generateGrid() {
+            pixelGrid.innerHTML = '';
+            
+            for (let i = 0; i < rows * columns; i++) {
+                const pixel = document.createElement('div');
+                pixel.className = 'mini-pixel ' + currentState;
+                pixelGrid.appendChild(pixel);
+            }
+        }
+        
+        // State buttons functionality
+        const stateBtns = document.querySelectorAll('.btn');
+        stateBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active state
+                stateBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+                // Update current state
+                currentState = btn.dataset.state;
+                
+                // Regenerate grid
+                generateGrid();
+            });
+        });
+        
+        // Initialize grid
+        generateGrid();
+    </script>
+</body>
+</html>

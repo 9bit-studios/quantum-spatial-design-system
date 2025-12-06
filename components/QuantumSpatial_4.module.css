@@ -1,0 +1,174 @@
+/**
+ * QuantumSpatial_4 Component Styles
+ * Design System: Quantum Spatial
+ * Brand: 9Bit Studios
+ */
+
+.container {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Glass Container Wrapper */
+.glassWrapper {
+  position: relative;
+  display: inline-flex;
+  padding: var(--space-lg, 24px);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(var(--glass-blur, 20px));
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.37),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Hover State - Enhanced Glassmorphism */
+.glassWrapper:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(78, 205, 196, 0.3);
+  box-shadow:
+    0 12px 40px rgba(78, 205, 196, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Active State */
+.glassWrapper:active {
+  transform: scale(0.98);
+  transition: transform 0.1s ease-out;
+}
+
+/* SVG Container */
+.svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Responsive Sizing */
+.sizeSmall {
+  width: 120px;
+  height: 120px;
+}
+
+.sizeMedium {
+  width: 240px;
+  height: 240px;
+}
+
+.sizeLarge {
+  width: 360px;
+  height: 360px;
+}
+
+/* Loading State */
+.loading {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  margin: -20px 0 0 -20px;
+  border: 2px solid rgba(78, 205, 196, 0.3);
+  border-top-color: #4ECDC4;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Dark Theme Enhancements */
+@media (prefers-color-scheme: dark) {
+  .glassWrapper {
+    background: rgba(255, 255, 255, 0.03);
+    border-color: rgba(255, 255, 255, 0.12);
+  }
+
+  .glassWrapper:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(78, 205, 196, 0.4);
+  }
+}
+
+/* Light Theme Adjustments */
+@media (prefers-color-scheme: light) {
+  .glassWrapper {
+    background: rgba(0, 0, 0, 0.03);
+    border-color: rgba(0, 0, 0, 0.12);
+    box-shadow:
+      0 8px 32px rgba(0, 0, 0, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  }
+
+  .glassWrapper:hover {
+    background: rgba(0, 0, 0, 0.05);
+    border-color: rgba(78, 205, 196, 0.5);
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .glassWrapper,
+  .glassWrapper:hover,
+  .glassWrapper:active {
+    transition: none;
+  }
+
+  .loading::after {
+    animation: none;
+    border-top-color: #4ECDC4;
+    opacity: 0.5;
+  }
+}
+
+/* Mobile Optimizations (Reduced Glassmorphism for Performance) */
+@media (max-width: 768px) {
+  .glassWrapper {
+    backdrop-filter: blur(10px);
+    padding: var(--space-md, 16px);
+  }
+
+  .sizeLarge {
+    width: 280px;
+    height: 280px;
+  }
+}
+
+/* Touch Target Compliance (Apple HIG) */
+@media (pointer: coarse) {
+  .glassWrapper {
+    min-width: 44px;
+    min-height: 44px;
+    padding: var(--space-md, 16px);
+  }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+  .glassWrapper {
+    border-width: 2px;
+    border-color: currentColor;
+  }
+
+  .glassWrapper:hover {
+    border-color: #4ECDC4;
+  }
+}
+
+/* Focus State for Accessibility */
+.glassWrapper:focus-visible {
+  outline: 2px solid #4ECDC4;
+  outline-offset: 4px;
+  border-radius: 24px;
+}

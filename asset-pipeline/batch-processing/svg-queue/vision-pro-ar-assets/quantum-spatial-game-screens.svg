@@ -1,0 +1,319 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900">
+  <!-- Background with depth gradient -->
+  <defs>
+    <radialGradient id="bgGradient" cx="50%" cy="50%" r="70%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#0F0B26" />
+      <stop offset="80%" stop-color="#080418" />
+      <stop offset="100%" stop-color="#050210" />
+    </radialGradient>
+    
+    <!-- Dimensional grid pattern -->
+    <pattern id="gridPattern" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
+      <path d="M 100 0 L 0 0 0 100" fill="none" stroke="#5AC8FA" stroke-width="0.3" opacity="0.2"/>
+    </pattern>
+    
+    <!-- Glow effects -->
+    <filter id="blueGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feFlood flood-color="#5AC8FA" result="color"/>
+      <feComposite in="color" in2="blur" operator="in" result="glow"/>
+      <feMerge>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <filter id="purpleGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feFlood flood-color="#6A3093" result="color"/>
+      <feComposite in="color" in2="blur" operator="in" result="glow"/>
+      <feMerge>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <filter id="pinkGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-color="#BF4080" result="color"/>
+      <feComposite in="color" in2="blur" operator="in" result="glow"/>
+      <feMerge>
+        <feMergeNode in="glow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Main background -->
+  <rect width="1200" height="900" fill="url(#bgGradient)" />
+  
+  <!-- Dimensional grid (perspective effect) -->
+  <g opacity="0.15">
+    <!-- Horizontal lines -->
+    <path d="M 150,800 C 450,770 750,770 1050,800" stroke="#5AC8FA" stroke-width="0.7" />
+    <path d="M 130,700 C 450,680 750,680 1070,700" stroke="#5AC8FA" stroke-width="0.7" />
+    <path d="M 110,600 C 450,585 750,585 1090,600" stroke="#5AC8FA" stroke-width="0.7" />
+    <path d="M 90,500 C 450,490 750,490 1110,500" stroke="#5AC8FA" stroke-width="0.7" />
+    <path d="M 75,400 C 450,395 750,395 1125,400" stroke="#5AC8FA" stroke-width="0.7" />
+    <path d="M 60,300 C 450,300 750,300 1140,300" stroke="#5AC8FA" stroke-width="0.7" />
+    <path d="M 50,200 C 450,205 750,205 1150,200" stroke="#5AC8FA" stroke-width="0.7" />
+    <path d="M 45,100 C 450,110 750,110 1155,100" stroke="#5AC8FA" stroke-width="0.7" />
+    
+    <!-- Vertical lines -->
+    <path d="M 150,100 C 165,300 165,600 150,800" stroke="#5AC8FA" stroke-width="0.7" />
+    <path d="M 300,100 C 315,300 315,600 300,800" stroke="#5AC8FA" stroke-width="0.7" />
+    <path d="M 450,100 C 465,300 465,600 450,800" stroke="#5AC8FA" stroke-width="0.7" />
+    <path d="M 600,100 C 615,300 615,600 600,800" stroke="#5AC8FA" stroke-width="0.7" />
+    <path d="M 750,100 C 765,300 765,600 750,800" stroke="#5AC8FA" stroke-width="0.7" />
+    <path d="M 900,100 C 915,300 915,600 900,800" stroke="#5AC8FA" stroke-width="0.7" />
+    <path d="M 1050,100 C 1065,300 1065,600 1050,800" stroke="#5AC8FA" stroke-width="0.7" />
+  </g>
+  
+  <!-- Header with logo -->
+  <text x="60" y="60" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="24" fill="#FFFFFF" font-weight="bold">Quantum-Spatial Game Screen Concepts</text>
+  <text x="60" y="85" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="14" fill="#5AC8FA">For Apple Vision Pro AR Games</text>
+  
+  <!-- Game Screen Concepts Section -->
+  
+  <!-- Game Screen 1: Portal Discovery -->
+  <g transform="translate(100, 150)">
+    <rect x="0" y="0" width="450" height="300" rx="15" fill="#131A36" stroke="#5AC8FA" stroke-width="1" opacity="0.8" />
+    <text x="20" y="35" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="18" fill="#FFFFFF">Portal Discovery Interface</text>
+    
+    <!-- Portal visualization -->
+    <g transform="translate(225, 150)">
+      <!-- Portal outer ring -->
+      <circle cx="0" cy="0" r="80" fill="none" stroke="#6A3093" stroke-width="3" filter="url(#purpleGlow)" />
+      <circle cx="0" cy="0" r="70" fill="none" stroke="#BF4080" stroke-width="2" />
+      
+      <!-- Portal interior -->
+      <circle cx="0" cy="0" r="60" fill="#0A0621" opacity="0.8" />
+      
+      <!-- Energy ripples -->
+      <circle cx="0" cy="0" r="50" fill="none" stroke="#5AC8FA" stroke-width="1" opacity="0.8">
+        <animate attributeName="r" values="50;55;50" dur="3s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="0" cy="0" r="40" fill="none" stroke="#5AC8FA" stroke-width="1" opacity="0.6">
+        <animate attributeName="r" values="40;45;40" dur="3s" repeatCount="indefinite" begin="0.5s" />
+      </circle>
+      <circle cx="0" cy="0" r="30" fill="none" stroke="#5AC8FA" stroke-width="1" opacity="0.4">
+        <animate attributeName="r" values="30;35;30" dur="3s" repeatCount="indefinite" begin="1s" />
+      </circle>
+      
+      <!-- Quantum particles -->
+      <rect x="-40" y="-30" width="8" height="8" fill="#5AC8FA" opacity="0.9">
+        <animate attributeName="x" values="-40;-30;-40" dur="4s" repeatCount="indefinite" />
+        <animate attributeName="y" values="-30;-40;-30" dur="5s" repeatCount="indefinite" />
+      </rect>
+      <rect x="20" y="40" width="6" height="6" fill="#6A3093" opacity="0.9">
+        <animate attributeName="x" values="20;30;20" dur="3s" repeatCount="indefinite" />
+        <animate attributeName="y" values="40;35;40" dur="4s" repeatCount="indefinite" />
+      </rect>
+      <rect x="35" y="-20" width="7" height="7" fill="#BF4080" opacity="0.9">
+        <animate attributeName="x" values="35;40;35" dur="5s" repeatCount="indefinite" />
+        <animate attributeName="y" values="-20;-10;-20" dur="3s" repeatCount="indefinite" />
+      </rect>
+    </g>
+    
+    <!-- Interface elements -->
+    <g transform="translate(225, 250)">
+      <rect x="-80" y="0" width="160" height="30" rx="15" fill="#331F4A" stroke="#5AC8FA" stroke-width="1" />
+      <text x="0" y="20" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">ACTIVATE PORTAL</text>
+    </g>
+    
+    <!-- Data indicators -->
+    <g transform="translate(80, 130)">
+      <text x="0" y="0" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12" fill="#5AC8FA">Portal Energy:</text>
+      <rect x="0" y="10" width="100" height="10" rx="5" fill="#0D0D15" />
+      <rect x="0" y="10" width="75" height="10" rx="5" fill="#5AC8FA" opacity="0.7" />
+      
+      <text x="0" y="40" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12" fill="#5AC8FA">Stability:</text>
+      <rect x="0" y="50" width="100" height="10" rx="5" fill="#0D0D15" />
+      <rect x="0" y="50" width="60" height="10" rx="5" fill="#BF4080" opacity="0.7" />
+    </g>
+    
+    <g transform="translate(350, 130)">
+      <text x="0" y="0" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12" fill="#5AC8FA">Dimension:</text>
+      <text x="0" y="20" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="16" fill="#FFFFFF">Jrotharke</text>
+      
+      <text x="0" y="40" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12" fill="#5AC8FA">State:</text>
+      <text x="0" y="60" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="16" fill="#FFFFFF">Transitional</text>
+    </g>
+  </g>
+  
+  <!-- Game Screen 2: Inventory System -->
+  <g transform="translate(650, 150)">
+    <rect x="0" y="0" width="450" height="300" rx="15" fill="#131A36" stroke="#6A3093" stroke-width="1" opacity="0.8" />
+    <text x="20" y="35" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="18" fill="#FFFFFF">Quantum Inventory System</text>
+    
+    <!-- Inventory grid -->
+    <g transform="translate(225, 150)">
+      <!-- Container -->
+      <rect x="-150" y="-80" width="300" height="160" rx="10" fill="#0D0D15" opacity="0.7" />
+      
+      <!-- Grid lines -->
+      <line x1="-150" y1="-40" x2="150" y2="-40" stroke="#5AC8FA" stroke-width="1" opacity="0.3" />
+      <line x1="-150" y1="0" x2="150" y2="0" stroke="#5AC8FA" stroke-width="1" opacity="0.3" />
+      <line x1="-150" y1="40" x2="150" y2="40" stroke="#5AC8FA" stroke-width="1" opacity="0.3" />
+      
+      <line x1="-100" y1="-80" x2="-100" y2="80" stroke="#5AC8FA" stroke-width="1" opacity="0.3" />
+      <line x1="-50" y1="-80" x2="-50" y2="80" stroke="#5AC8FA" stroke-width="1" opacity="0.3" />
+      <line x1="0" y1="-80" x2="0" y2="80" stroke="#5AC8FA" stroke-width="1" opacity="0.3" />
+      <line x1="50" y1="-80" x2="50" y2="80" stroke="#5AC8FA" stroke-width="1" opacity="0.3" />
+      <line x1="100" y1="-80" x2="100" y2="80" stroke="#5AC8FA" stroke-width="1" opacity="0.3" />
+      
+      <!-- Inventory items -->
+      <!-- Item 1 -->
+      <g transform="translate(-125, -60)">
+        <rect x="-20" y="-15" width="40" height="30" rx="5" fill="#331F4A" stroke="#6A3093" stroke-width="1" />
+        <circle cx="0" cy="0" r="8" fill="#6A3093" filter="url(#purpleGlow)" />
+        <text x="0" y="25" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">Crystal</text>
+      </g>
+      
+      <!-- Item 2 -->
+      <g transform="translate(-75, -60)">
+        <rect x="-20" y="-15" width="40" height="30" rx="5" fill="#331F4A" stroke="#6A3093" stroke-width="1" />
+        <rect x="-7" y="-7" width="14" height="14" fill="#BF4080" filter="url(#pinkGlow)" />
+        <text x="0" y="25" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">Relic</text>
+      </g>
+      
+      <!-- Item 3 -->
+      <g transform="translate(-25, -60)">
+        <rect x="-20" y="-15" width="40" height="30" rx="5" fill="#331F4A" stroke="#6A3093" stroke-width="1" />
+        <path d="M -7,-7 L 7,-7 L 0,7 Z" fill="#5AC8FA" filter="url(#blueGlow)" />
+        <text x="0" y="25" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">Shard</text>
+      </g>
+      
+      <!-- Item 4 -->
+      <g transform="translate(25, -60)">
+        <rect x="-20" y="-15" width="40" height="30" rx="5" fill="#331F4A" stroke="#6A3093" stroke-width="1" opacity="0.5" stroke-dasharray="2,2" />
+        <text x="0" y="25" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="10" fill="#FFFFFF" opacity="0.5" text-anchor="middle">Empty</text>
+      </g>
+      
+      <!-- Selected item detail -->
+      <g transform="translate(0, 40)">
+        <rect x="-125" y="15" width="250" height="60" rx="5" fill="#331F4A" stroke="#BF4080" stroke-width="1" />
+        <text x="-115" y="35" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12" fill="#FFFFFF">Quantum Crystal</text>
+        <text x="-115" y="55" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="10" fill="#5AC8FA">Rare artifact with dimensional energy properties.</text>
+        <text x="-115" y="70" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="10" fill="#5AC8FA">Used in portal activation and quantum transformations.</text>
+      </g>
+    </g>
+  </g>
+  
+  <!-- Game Screen 3: Character Status -->
+  <g transform="translate(100, 480)">
+    <rect x="0" y="0" width="450" height="300" rx="15" fill="#131A36" stroke="#BF4080" stroke-width="1" opacity="0.8" />
+    <text x="20" y="35" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="18" fill="#FFFFFF">Character Status Interface</text>
+    
+    <!-- Character visualization -->
+    <g transform="translate(130, 150)">
+      <!-- Character silhouette -->
+      <path d="M 0,0 C -5,-15 -15,-25 -10,-40 C -5,-50 5,-50 10,-40 C 15,-25 5,-15 0,0" fill="#6A3093" opacity="0.7" />
+      <rect x="-15" y="0" width="30" height="45" rx="10" fill="#6A3093" opacity="0.7" />
+      <rect x="-15" y="45" width="10" height="35" fill="#6A3093" opacity="0.7" />
+      <rect x="5" y="45" width="10" height="35" fill="#6A3093" opacity="0.7" />
+      
+      <!-- Quantum overlay effects -->
+      <rect x="-10" y="15" width="8" height="8" fill="#5AC8FA" opacity="0.8" />
+      <rect x="5" y="30" width="8" height="8" fill="#BF4080" opacity="0.8" />
+      
+      <!-- Status indicators -->
+      <circle cx="-20" cy="-10" r="10" fill="none" stroke="#5AC8FA" stroke-width="1" />
+      <line x1="-25" y1="-10" x2="-15" y2="-10" stroke="#5AC8FA" stroke-width="2" />
+      <line x1="-20" y1="-15" x2="-20" y2="-5" stroke="#5AC8FA" stroke-width="2" />
+      
+      <circle cx="20" cy="-10" r="10" fill="none" stroke="#BF4080" stroke-width="1" />
+      <path d="M 15,-10 Q 20,-5 25,-10" stroke="#BF4080" stroke-width="2" fill="none" />
+    </g>
+    
+    <!-- Status indicators -->
+    <g transform="translate(290, 120)">
+      <text x="0" y="0" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="14" fill="#FFFFFF">Player Stats</text>
+      
+      <text x="0" y="30" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12" fill="#5AC8FA">Health:</text>
+      <rect x="70" y="20" width="100" height="15" rx="7.5" fill="#0D0D15" />
+      <rect x="70" y="20" width="75" height="15" rx="7.5" fill="#BF4080" opacity="0.7" />
+      
+      <text x="0" y="60" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12" fill="#5AC8FA">Energy:</text>
+      <rect x="70" y="50" width="100" height="15" rx="7.5" fill="#0D0D15" />
+      <rect x="70" y="50" width="85" height="15" rx="7.5" fill="#5AC8FA" opacity="0.7" />
+      
+      <text x="0" y="90" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12" fill="#5AC8FA">Focus:</text>
+      <rect x="70" y="80" width="100" height="15" rx="7.5" fill="#0D0D15" />
+      <rect x="70" y="80" width="60" height="15" rx="7.5" fill="#6A3093" opacity="0.7" />
+    </g>
+    
+    <!-- Equipped items -->
+    <g transform="translate(290, 220)">
+      <text x="0" y="0" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="14" fill="#FFFFFF">Equipped Items</text>
+      
+      <rect x="0" y="10" width="150" height="30" rx="5" fill="#331F4A" stroke="#5AC8FA" stroke-width="1" />
+      <circle cx="15" cy="25" r="8" fill="#5AC8FA" filter="url(#blueGlow)" />
+      <text x="35" y="30" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12" fill="#FFFFFF">Quantum Amulet</text>
+      
+      <rect x="0" y="50" width="150" height="30" rx="5" fill="#331F4A" stroke="#6A3093" stroke-width="1" />
+      <rect x="7" y="17" width="16" height="16" transform="translate(0, 50)" fill="#6A3093" filter="url(#purpleGlow)" />
+      <text x="35" y="70" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12" fill="#FFFFFF">Portal Key</text>
+    </g>
+  </g>
+  
+  <!-- Game Screen 4: Puzzle Interface -->
+  <g transform="translate(650, 480)">
+    <rect x="0" y="0" width="450" height="300" rx="15" fill="#131A36" stroke="#5AC8FA" stroke-width="1" opacity="0.8" />
+    <text x="20" y="35" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="18" fill="#FFFFFF">Quantum Puzzle Interface</text>
+    
+    <!-- Puzzle visualization -->
+    <g transform="translate(225, 150)">
+      <!-- Puzzle container -->
+      <rect x="-150" y="-80" width="300" height="160" rx="10" fill="#0D0D15" opacity="0.7" />
+      
+      <!-- Puzzle elements -->
+      <g transform="translate(-100, 0)">
+        <!-- Source node -->
+        <circle cx="0" cy="0" r="20" fill="#331F4A" stroke="#5AC8FA" stroke-width="2" />
+        <circle cx="0" cy="0" r="10" fill="#5AC8FA" filter="url(#blueGlow)" />
+        
+        <!-- Energy beams -->
+        <path d="M 20,0 C 40,-20 60,-20 80,0" stroke="#5AC8FA" stroke-width="2" fill="none" stroke-dasharray="4,2" />
+        <path d="M 20,0 C 40,20 60,20 80,0" stroke="#5AC8FA" stroke-width="2" fill="none" />
+        
+        <!-- Target node -->
+        <g transform="translate(100, 0)">
+          <circle cx="0" cy="0" r="20" fill="#331F4A" stroke="#BF4080" stroke-width="2" />
+          <rect x="-10" y="-10" width="20" height="20" fill="#BF4080" filter="url(#pinkGlow)" />
+        </g>
+        
+        <!-- Puzzle interfaces -->
+        <g transform="translate(50, -40)">
+          <circle cx="0" cy="0" r="15" fill="#331F4A" stroke="#6A3093" stroke-width="1" />
+          <rect x="-5" y="-5" width="10" height="10" fill="#6A3093" opacity="0.7" />
+          
+          <!-- Interactive element -->
+          <circle cx="0" cy="0" r="25" fill="none" stroke="#FFFFFF" stroke-width="1" stroke-dasharray="2,2" />
+        </g>
+      </g>
+      
+      <!-- Instructions -->
+      <rect x="-125" y="60" width="250" height="40" rx="5" fill="#331F4A" stroke="#6A3093" stroke-width="1" />
+      <text x="0" y="80" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle">Redirect quantum energy by rotating nodes</text>
+      <text x="0" y="95" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle">Use hand gestures or eye tracking + pinch</text>
+    </g>
+  </g>
+  
+  <!-- Design Notes Section -->
+  <g transform="translate(100, 810)">
+    <text x="0" y="0" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="16" fill="#FFFFFF">Design Notes:</text>
+    <text x="0" y="25" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12" fill="#5AC8FA">• Use depth layers (Z-axis) to create a sense of dimensionality in the interface</text>
+    <text x="0" y="50" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12" fill="#5AC8FA">• Implement state transitions between heritage, transitional, and quantum forms</text>
+    <text x="0" y="75" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12" fill="#5AC8FA">• Combine gaze tracking with hand gestures for intuitive spatial interaction</text>
+  </g>
+  
+  <g transform="translate(600, 810)">
+    <text x="0" y="25" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12" fill="#5AC8FA">• Use spatial audio cues to enhance directional awareness</text>
+    <text x="0" y="50" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12" fill="#5AC8FA">• Design UI elements that float at different distances from the user</text>
+    <text x="0" y="75" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12" fill="#5AC8FA">• Incorporate quantum pixels as visual affordances for interactive elements</text>
+  </g>
+  
+  <!-- Footer -->
+  <text x="600" y="880" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">9Bit Studios © 2025 • Quantum-Spatial AR Game Screen Concepts for Apple Vision Pro</text>
+</svg>

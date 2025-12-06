@@ -1,0 +1,87 @@
+/**
+ * QuantumSpatial_7 Component Styles
+ * Design System: Quantum Spatial
+ * Brand: 9Bit Studios
+ * Performance: M4-optimized rendering
+ */
+
+.quantumSpatial7 {
+  /* M4 Optimization: GPU acceleration */
+  will-change: transform, opacity;
+  transform: translateZ(0);
+
+  /* Ensure smooth rendering */
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Prevent layout shifts */
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Container for responsive embedding */
+.quantumSpatial7Container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+
+  /* Glassmorphism context */
+  background: rgba(10, 14, 39, 0.8);
+  border-radius: 16px;
+  overflow: hidden;
+
+  /* Shadow for depth */
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Accessibility: Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .quantumSpatial7 * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Responsive sizing */
+@media (max-width: 768px) {
+  .quantumSpatial7Container {
+    max-width: 100%;
+    padding: 16px;
+  }
+
+  .quantumSpatial7 {
+    /* Reduce complexity on mobile for performance */
+    filter: none;
+  }
+}
+
+/* Dark mode enhancement (already dark by default) */
+@media (prefers-color-scheme: dark) {
+  .quantumSpatial7Container {
+    background: rgba(10, 14, 39, 0.95);
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .quantumSpatial7Container {
+    border: 2px solid rgba(255, 255, 255, 0.8);
+  }
+}
+
+/* Print styles */
+@media print {
+  .quantumSpatial7 {
+    /* Disable animations for print */
+    animation: none !important;
+  }
+
+  .quantumSpatial7Container {
+    box-shadow: none;
+    background: transparent;
+  }
+}

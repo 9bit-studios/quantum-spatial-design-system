@@ -1,0 +1,101 @@
+<svg width="240" height="80" viewBox="0 0 240 80" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Glowing effects -->
+    <filter id="heritage-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+    <linearGradient id="heritage-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D0D15" />
+      <stop offset="100%" stop-color="#131A36" />
+    </linearGradient>
+    
+    <linearGradient id="heritage-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1B3D1A" />
+      <stop offset="100%" stop-color="#2C5F2D" />
+    </linearGradient>
+    
+    <linearGradient id="heritage-edge" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2C5F2D" />
+      <stop offset="100%" stop-color="#3D8B40" />
+    </linearGradient>
+    
+    <linearGradient id="button-text" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3DFF74" />
+      <stop offset="100%" stop-color="#5AC8FA" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Button Base -->
+  <g>
+    <!-- Background with subtle grid -->
+    <rect x="10" y="10" width="220" height="60" rx="8" fill="url(#heritage-bg)" />
+    
+    <!-- Grid Pattern -->
+    <g opacity="0.1">
+      <path d="M10,25 L230,25 M10,40 L230,40 M10,55 L230,55" stroke="#5AC8FA" stroke-width="0.5" />
+      <path d="M55,10 L55,70 M100,10 L100,70 M145,10 L145,70 M190,10 L190,70" stroke="#5AC8FA" stroke-width="0.5" />
+    </g>
+    
+    <!-- Heritage Pixel Button -->
+    <rect x="20" y="20" width="200" height="40" rx="4" fill="url(#heritage-gradient)" />
+    
+    <!-- Button Edge Effect -->
+    <path d="M20,60 L220,60 L220,56 L20,56 Z" fill="url(#heritage-edge)" />
+    <path d="M220,20 L220,60 L216,60 L216,20 Z" fill="url(#heritage-edge)" />
+    
+    <!-- Button Inner Pixel Pattern -->
+    <g opacity="0.7">
+      <rect x="25" y="25" width="30" height="30" fill="#2C5F2D" />
+      <rect x="60" y="25" width="30" height="30" fill="#2C5F2D" />
+      <rect x="95" y="25" width="30" height="30" fill="#2C5F2D" />
+      <rect x="130" y="25" width="30" height="30" fill="#2C5F2D" />
+      <rect x="165" y="25" width="30" height="30" fill="#2C5F2D" />
+    </g>
+    
+    <!-- Heritage Glow Effect -->
+    <rect x="20" y="20" width="200" height="40" rx="4" fill="#3DFF74" opacity="0.1" filter="url(#heritage-glow)">
+      <animate attributeName="opacity" values="0.1;0.2;0.1" dur="3s" repeatCount="indefinite" />
+    </rect>
+    
+    <!-- Button Text -->
+    <text x="120" y="45" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="16" fill="url(#button-text)" text-anchor="middle" font-weight="bold">ACTIVATE HERITAGE</text>
+    
+    <!-- Energy Particles -->
+    <g>
+      <circle cx="40" cy="40" r="1.5" fill="#3DFF74" opacity="0.8">
+        <animate attributeName="opacity" values="0.8;0.3;0.8" dur="4s" repeatCount="indefinite" />
+      </circle>
+      
+      <circle cx="75" cy="40" r="1.5" fill="#3DFF74" opacity="0.8">
+        <animate attributeName="opacity" values="0.8;0.3;0.8" dur="3s" repeatCount="indefinite" />
+      </circle>
+      
+      <circle cx="110" cy="40" r="1.5" fill="#3DFF74" opacity="0.8">
+        <animate attributeName="opacity" values="0.8;0.3;0.8" dur="5s" repeatCount="indefinite" />
+      </circle>
+      
+      <circle cx="145" cy="40" r="1.5" fill="#3DFF74" opacity="0.8">
+        <animate attributeName="opacity" values="0.8;0.3;0.8" dur="4s" repeatCount="indefinite" />
+      </circle>
+      
+      <circle cx="180" cy="40" r="1.5" fill="#3DFF74" opacity="0.8">
+        <animate attributeName="opacity" values="0.8;0.3;0.8" dur="3s" repeatCount="indefinite" />
+      </circle>
+    </g>
+  </g>
+  
+  <!-- Hover Effect: Uncomment and modify for interactive use in HTML
+  <rect x="10" y="10" width="220" height="60" rx="8" fill="transparent" stroke="transparent" 
+    onmouseover="
+      evt.target.previousElementSibling.querySelector('rect[fill=\'url(#heritage-gradient)\']').setAttribute('fill', 'url(#heritage-edge)');
+      evt.target.previousElementSibling.querySelector('rect[filter=\'url(#heritage-glow)\']').setAttribute('opacity', '0.3');
+    "
+    onmouseout="
+      evt.target.previousElementSibling.querySelector('rect[fill=\'url(#heritage-edge)\']').setAttribute('fill', 'url(#heritage-gradient)');
+      evt.target.previousElementSibling.querySelector('rect[filter=\'url(#heritage-glow)\']').setAttribute('opacity', '0.1');
+    "
+  />
+  -->
+</svg>

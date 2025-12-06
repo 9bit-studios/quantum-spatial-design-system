@@ -1,0 +1,102 @@
+{
+    "collections": [
+        {
+            "name": "Font Size",
+            "modes": [
+                "Desktop",
+                "Tablet",
+                "Mobile"
+            ],
+            "variables": {
+                "heading-1": {
+                    "type": "number",
+                    "values": {
+                        "Desktop": 60,
+                        "Tablet": 40,
+                        "Mobile": 34
+                    }
+                },
+                "heading-2": {
+                    "type": "number",
+                    "values": {
+                        "Desktop": 50,
+                        "Tablet": 30,
+                        "Mobile": 28
+                    }
+                },
+                "heading-3": {
+                    "type": "number",
+                    "values": {
+                        "Desktop": 40,
+                        "Tablet": 28,
+                        "Mobile": 24
+                    }
+                },
+                "heading-4": {
+                    "type": "number",
+                    "values": {
+                        "Desktop": 30,
+                        "Tablet": 24,
+                        "Mobile": 22
+                    }
+                },
+                "heading-5": {
+                    "type": "number",
+                    "values": {
+                        "Desktop": 24,
+                        "Tablet": 20,
+                        "Mobile": 20
+                    }
+                },
+                "body-large": {
+                    "type": "number",
+                    "values": {
+                        "Desktop": 18,
+                        "Tablet": 18,
+                        "Mobile": 18
+                    }
+                },
+                "body": {
+                    "type": "number",
+                    "values": {
+                        "Desktop": 16,
+                        "Tablet": 16,
+                        "Mobile": 16
+                    }
+                },
+                "footnote": {
+                    "type": "number",
+                    "values": {
+                        "Desktop": 14,
+                        "Tablet": 14,
+                        "Mobile": 14
+                    }
+                },
+                "caption": {
+                    "type": "number",
+                    "values": {
+                        "Desktop": 13,
+                        "Tablet": 13,
+                        "Mobile": 13
+                    }
+                },
+                "small": {
+                    "type": "number",
+                    "values": {
+                        "Desktop": 12,
+                        "Tablet": 12,
+                        "Mobile": 12
+                    }
+                },
+                "headline": {
+                    "type": "number",
+                    "values": {
+                        "Desktop": 20,
+                        "Tablet": 20,
+                        "Mobile": 20
+                    }
+                }
+            }
+        }
+    ]
+}

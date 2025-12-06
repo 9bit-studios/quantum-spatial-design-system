@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Framer to Shopify Style Extractor</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            background: #000;
+            color: #fff;
+            min-height: 100vh;
+            padding: 24px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 2rem;
+            margin-bottom: 8px;
+            background: linear-gradient(135deg, #007AFF, #5AC8FA);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .header p {
+            color: rgba(255,255,255,0.7);
+            font-size: 1rem;
+        }
+
+        .tool-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+
+        .tool-card {
+            background: rgba(255,255,255,0.02);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: 24px;
+            transition: all 0.3s ease;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-2px);
+            background: rgba(255,255,255,0.05);
+            border-color: rgba(255,255,255,0.2);
+        }
+
+        .tool-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #5AC8FA;
+        }
+
+        .tool-description {
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 24px;
+            background: rgba(0,122,255,0.2);
+            border: 1px solid rgba(0,122,255,0.4);
+            border-radius: 12px;
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            min-height: 48px;
+            width: 100%;
+        }
+
+        .btn:hover {
+            background: rgba(0,122,255,0.3);
+            transform: translateY(-1px);
+        }
+
+        .output-section {
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: 24px;
+            margin-top: 24px;
+        }
+
+        .output-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: #BF4080;
+        }
+
+        .code-block {
+            background: rgba(0,0,0,0.3);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 8px;
+            padding: 16px;
+            font-family: 'SF Mono', Monaco, monospace;
+            font-size: 0.85rem;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            margin-bottom: 16px;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .extract-form {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .form-label {
+            font-weight: 500;
+            color: rgba(255,255,255,0.9);
+        }
+
+        .form-input {
+            padding: 12px 16px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 8px;
+            color: white;
+            font-size: 0.9rem;
+        }
+
+        .form-input::placeholder {
+            color: rgba(255,255,255,0.5);
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: #007AFF;
+            background: rgba(255,255,255,0.08);
+        }
+
+        .copy-btn {
+            background: rgba(52,199,89,0.2);
+            border-color: rgba(52,199,89,0.4);
+            padding: 8px 16px;
+            font-size: 0.85rem;
+            min-height: 36px;
+            width: auto;
+            align-self: flex-start;
+        }
+
+        .copy-btn:hover {
+            background: rgba(52,199,89,0.3);
+        }
+
+        .steps {
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: 24px;
+            margin-top: 24px;
+        }
+
+        .steps h3 {
+            color: #FF9500;
+            margin-bottom: 16px;
+        }
+
+        .step {
+            margin-bottom: 12px;
+            padding-left: 24px;
+            position: relative;
+        }
+
+        .step::before {
+            content: counter(step-counter);
+            counter-increment: step-counter;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: #007AFF;
+            color: white;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .steps {
+            counter-reset: step-counter;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Framer → Shopify Style Extractor</h1>
+            <p>Extract and convert Framer Product Hub styles to Shopify Liquid/CSS</p>
+        </div>
+
+        <div class="tool-grid">
+            <div class="tool-card">
+                <div class="tool-title">🎨 CSS Inspector</div>
+                <div class="tool-description">Extract computed styles from any element in Framer Product Hub</div>
+                <button class="btn" onclick="showCSSInspector()">Launch CSS Inspector</button>
+            </div>
+
+            <div class="tool-card">
+                <div class="tool-title">📐 Layout Analyzer</div>
+                <div class="tool-description">Capture grid layouts, spacing, and responsive breakpoints</div>
+                <button class="btn" onclick="showLayoutAnalyzer()">Analyze Layout</button>
+            </div>
+
+            <div class="tool-card">
+                <div class="tool-title">⚡ Bulk Converter</div>
+                <div class="tool-description">Convert CSS properties to Shopify variables and Liquid syntax</div>
+                <button class="btn" onclick="showBulkConverter()">Convert Styles</button>
+            </div>
+
+            <div class="tool-card">
+                <div class="tool-title">📱 Mobile Optimizer</div>
+                <div class="tool-description">Extract mobile-specific styles and responsive settings</div>
+                <button class="btn" onclick="showMobileOptimizer()">Extract Mobile Styles</button>
+            </div>
+        </div>
+
+        <div id="output-container"></div>
+
+        <div class="steps">
+            <h3>Quick Extraction Process</h3>
+            <div class="step">Open Framer Product Hub in browser and open DevTools (F12)</div>
+            <div class="step">Right-click any element → Inspect Element</div>
+            <div class="step">Copy the JavaScript code below and paste in Console tab</div>
+            <div class="step">Use the tools above to analyze and convert styles</div>
+            <div class="step">Copy generated Liquid/CSS to your Shopify theme</div>
+        </div>
+    </div>
+
+    <script>
+        function showCSSInspector() {
+            const output = `
+                <div class="output-section">
+                    <div class="output-title">CSS Inspector Script</div>
+                    <div class="code-block">// Paste this in Framer DevTools Console
+function extractElementStyles(selector = null) {
+    const element = selector ? document.querySelector(selector) : document.elementFromPoint(window.innerWidth/2, window.innerHeight/2);
+    if (!element) return;
+    
+    const styles = window.getComputedStyle(element);
+    const relevantProps = [
+        'background', 'backgroundColor', 'backgroundImage',
+        'border', 'borderRadius', 'borderWidth', 'borderColor',
+        'padding', 'margin', 'width', 'height',
+        'display', 'flexDirection', 'justifyContent', 'alignItems',
+        'fontSize', 'fontWeight', 'lineHeight', 'letterSpacing',
+        'color', 'opacity', 'transform', 'transition',
+        'backdropFilter', 'filter', 'boxShadow',
+        'position', 'top', 'left', 'right', 'bottom', 'zIndex'
+    ];
+    
+    const extractedStyles = {};
+    relevantProps.forEach(prop => {
+        const value = styles.getPropertyValue(prop) || styles[prop];
+        if (value && value !== 'none' && value !== 'auto' && value !== 'initial') {
+            extractedStyles[prop] = value;
+        }
+    });
+    
+    console.log('Element:', element);
+    console.log('Extracted Styles:', extractedStyles);
+    
+    return {
+        element: element.tagName.toLowerCase() + (element.className ? '.' + element.className.split(' ').join('.') : ''),
+        styles: extractedStyles,
+        css: Object.entries(extractedStyles).map(([prop, value]) => 
+            \`  \${prop.replace(/([A-Z])/g, '-$1').toLowerCase()}: \${value};\`
+        ).join('\')
+    };
+}
+
+// Usage examples:
+extractElementStyles(); // Extract from center of screen
+extractElementStyles('.product-card'); // Extract specific selector
+extractElementStyles('[data-framer-name="ProductCard"]'); // Extract by Framer name</div>
+                    <button class="copy-btn" onclick="copyToClipboard(this.previousElementSibling.textContent)">Copy Script</button>
+                </div>
+            `;
+            showOutput(output);
+        }
+
+        function showLayoutAnalyzer() {
+            const output = `
+                <div class="output-section">
+                    <div class="output-title">Layout Analysis Script</div>
+                    <div class="code-block">// Analyze grid layouts and spacing
+function analyzeLayout() {
+    const containers = document.querySelectorAll('[style*="grid"], [style*="flex"], .grid, .flex');
+    const analysis = [];
+    
+    containers.forEach((container, index) => {
+        const styles = window.getComputedStyle(container);
+        const rect = container.getBoundingClientRect();
+        
+        // Safe className handling
+        const className = container.className || '';
+        const classString = typeof className === 'string' ? className : className.baseVal || '';
+        
+        const layoutInfo = {
+            selector: container.tagName.toLowerCase() + (classString ? '.' + classString.split(' ').filter(c => c).join('.') : ''),
+            display: styles.display,
+            width: Math.round(rect.width),
+            height: Math.round(rect.height),
+            children: container.children.length
+        };
+        
+        if (styles.display.includes('grid')) {
+            layoutInfo.gridTemplateColumns = styles.gridTemplateColumns;
+            layoutInfo.gridTemplateRows = styles.gridTemplateRows;
+            layoutInfo.gap = styles.gap;
+        }
+        
+        if (styles.display.includes('flex')) {
+            layoutInfo.flexDirection = styles.flexDirection;
+            layoutInfo.justifyContent = styles.justifyContent;
+            layoutInfo.alignItems = styles.alignItems;
+            layoutInfo.gap = styles.gap;
+        }
+        
+        analysis.push(layoutInfo);
+    });
+    
+    console.log('Layout Analysis:', analysis);
+    return analysis;
+}
+
+// Convert to Shopify grid classes
+function generateShopifyGrid(analysis) {
+    return analysis.map(layout => {
+        if (layout.display.includes('grid')) {
+            const columns = layout.gridTemplateColumns.split(' ').length;
+            return \`<div class="grid grid-cols-\${columns} gap-4">
+  <!-- Product cards here -->
+</div>\`;
+        }
+        return \`<div class="flex \${layout.flexDirection === 'column' ? 'flex-col' : 'flex-row'} gap-4">
+  <!-- Content here -->
+</div>\`;
+    }).join('\\');
+}
+
+analyzeLayout();</div>
+                    <button class="copy-btn" onclick="copyToClipboard(this.previousElementSibling.textContent)">Copy Script</button>
+                </div>
+
+                <div class="output-section">
+                    <div class="output-title">Shopify Grid Template</div>
+                    <div class="code-block">{%- comment -%} Product Grid - Mobile First {%- endcomment -%}
+<div class="product-grid">
+  {% for product in collection.products %}
+    <div class="product-card glass-card">
+      <div class="product-image-container">
+        <img src="{{ product.featured_image | img_url: '600x600' }}" 
+             alt="{{ product.title }}" 
+             loading="lazy"
+             class="product-image">
+      </div>
+      <div class="product-info">
+        <h3 class="product-title">{{ product.title }}</h3>
+        <div class="product-price">{{ product.price | money }}</div>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
+<style>
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 0.75rem;
+    padding: 0.75rem;
+  }
+}
+
+.product-card {
+  background: rgba(255,255,255,0.02);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.product-image-container {
+  aspect-ratio: 1;
+  overflow: hidden;
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+</style></div>
+                    <button class="copy-btn" onclick="copyToClipboard(this.previousElementSibling.textContent)">Copy Template</button>
+                </div>
+            `;
+            showOutput(output);
+        }
+
+        function showBulkConverter() {
+            const output = `
+                <div class="output-section">
+                    <div class="output-title">Bulk CSS to Shopify Converter</div>
+                    <div class="extract-form">
+                        <div class="form-group">
+                            <label class="form-label">Paste CSS Properties:</label>
+                            <textarea class="form-input" id="cssInput" rows="10" placeholder="background: rgba(255,255,255,0.02);
+backdrop-filter: blur(10px);
+border-radius: 16px;
+padding: 24px;"></textarea>
+                        </div>
+                        <button class="btn" onclick="convertCSS()">Convert to Shopify Variables</button>
+                    </div>
+                    <div id="conversionOutput"></div>
+                </div>
+            `;
+            showOutput(output);
+        }
+
+        function showMobileOptimizer() {
+            const output = `
+                <div class="output-section">
+                    <div class="output-title">Mobile Style Extractor</div>
+                    <div class="code-block">// Extract mobile-specific styles
+function extractMobileStyles() {
+    const mobileBreakpoint = 768;
+    const currentWidth = window.innerWidth;
+    
+    // Simulate mobile viewport
+    if (currentWidth > mobileBreakpoint) {
+        alert('Resize window to ' + mobileBreakpoint + 'px or less for mobile extraction');
+        return;
+    }
+    
+    const elements = document.querySelectorAll('[class*="product"], [class*="card"], [class*="grid"]');
+    const mobileStyles = {};
+    
+    elements.forEach(el => {
+        const styles = window.getComputedStyle(el);
+        const className = el.className.split(' ')[0] || el.tagName.toLowerCase();
+        
+        mobileStyles[className] = {
+            width: styles.width,
+            height: styles.height,
+            padding: styles.padding,
+            margin: styles.margin,
+            fontSize: styles.fontSize,
+            lineHeight: styles.lineHeight
+        };
+    });
+    
+    console.log('Mobile Styles:', mobileStyles);
+    return mobileStyles;
+}
+
+// Generate responsive CSS
+function generateResponsiveCSS(mobileStyles) {
+    let css = '@media (max-width: 768px) {\';
+    
+    Object.entries(mobileStyles).forEach(([className, styles]) => {
+        css += \`  .\${className} {\\`;
+        Object.entries(styles).forEach(([prop, value]) => {
+            if (value && value !== 'auto') {
+                css += \`    \${prop.replace(/([A-Z])/g, '-$1').toLowerCase()}: \${value};\\`;
+            }
+        });
+        css += '  }\\';
+    });
+    
+    css += '}';
+    return css;
+}
+
+extractMobileStyles();</div>
+                    <button class="copy-btn" onclick="copyToClipboard(this.previousElementSibling.textContent)">Copy Script</button>
+                </div>
+
+                <div class="output-section">
+                    <div class="output-title">Mobile-First Shopify CSS Template</div>
+                    <div class="code-block">/* Mobile-First Styles for Petersen Games */
+:root {
+  --color-bg: #000000;
+  --color-text: #FFFFFF;
+  --glass-bg: rgba(255,255,255,0.02);
+  --glass-border: rgba(255,255,255,0.1);
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+}
+
+/* Base mobile styles */
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-sm);
+}
+
+/* Product grid - mobile first */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-sm);
+}
+
+.product-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  transition: all 0.3s ease;
+}
+
+/* Touch targets - Apple HIG compliant */
+.btn, .touch-target {
+  min-height: 48px;
+  min-width: 48px;
+}
+
+/* Desktop enhancements */
+@media (min-width: 768px) {
+  .container {
+    padding: 0 var(--space-md);
+  }
+  
+  .product-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-md);
+  }
+}</div>
+                    <button class="copy-btn" onclick="copyToClipboard(this.previousElementSibling.textContent)">Copy CSS</button>
+                </div>
+            `;
+            showOutput(output);
+        }
+
+        function convertCSS() {
+            const input = document.getElementById('cssInput').value;
+            if (!input.trim()) return;
+            
+            const lines = input.split('');
+            let shopifyCSS = '';
+            let liquidVariables = '';
+            
+            lines.forEach(line => {
+                const match = line.match(/^\s*([a-zA-Z-]+)\s*:\s*(.+?);?\s*$/);
+                if (match) {
+                    const property = match[1];
+                    const value = match[2];
+                    
+                    // Convert to Shopify variables for common values
+                    if (value.includes('#') || value.includes('rgb') || value.includes('rgba')) {
+                        const varName = `color-${property.replace(/-/g, '-')}`;
+                        liquidVariables += `{% assign ${varName} = settings.${varName} | default: '${value}' %}`;
+                        shopifyCSS += `  ${property}: {{ ${varName} }};`;
+                    } else if (value.includes('px') || value.includes('rem') || value.includes('%')) {
+                        const varName = `spacing-${property.replace(/-/g, '-')}`;
+                        liquidVariables += `{% assign ${varName} = settings.${varName} | default: '${value}' %}`;
+                        shopifyCSS += `  ${property}: {{ ${varName} }};`;
+                    } else {
+                        shopifyCSS += `  ${property}: ${value};`;
+                    }
+                }
+            });
+            
+            const output = `
+                <div id="conversionOutput">
+                    <div class="output-title">Liquid Variables</div>
+                    <div class="code-block">${liquidVariables}</div>
+                    <button class="copy-btn" onclick="copyToClipboard(this.previousElementSibling.textContent)">Copy Variables</button>
+                    
+                    <div class="output-title">Shopify CSS</div>
+                    <div class="code-block">.converted-element {
+${shopifyCSS}}</div>
+                    <button class="copy-btn" onclick="copyToClipboard(this.previousElementSibling.textContent)">Copy CSS</button>
+                </div>
+            `;
+            
+            document.getElementById('conversionOutput').innerHTML = output;
+        }
+
+        function showOutput(content) {
+            document.getElementById('output-container').innerHTML = content;
+        }
+
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                // Visual feedback
+                event.target.textContent = 'Copied!';
+                setTimeout(() => {
+                    event.target.textContent = event.target.textContent.includes('Copy') ? event.target.textContent : 'Copy';
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>

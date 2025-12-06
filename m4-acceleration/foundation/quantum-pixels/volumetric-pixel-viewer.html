@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quantum-Spatial Volumetric Pixel System Viewer</title>
+  <style>
+    :root {
+      /* Color: Primary Foundation */
+      --color-void-black: #0A0621;
+      --color-deep-space-indigo: #131A36;
+      --color-ultra-indigo: #1E1F5C;
+      --color-dimensional-eggplant: #331F4A;
+      --color-midnight-richness: #0D0D15;
+      --color-quantum-violet: #6A3093;
+      
+      /* Color: Secondary Accents */
+      --color-subtle-aqua: #29B6F6;
+      --color-subtle-cyan: #5AC8FA;
+      --color-dimensional-teal: #126D71;
+      --color-rose-energy: #BF4080;
+      --color-quantum-pulse-pink: #FF2D55;
+      
+      /* Color: Heritage System */
+      --color-heritage-green: #2C5F2D;
+      --color-heritage-green-light: #3D8B40;
+      --color-heritage-green-dark: #1B3D1A;
+      --color-heritage-pixel-green: #3DFF74;
+      --color-heritage-pixel-aqua: #00FFC8;
+      
+      /* Core design system values */
+      --border-radius-sm: 4px;
+      --border-radius-md: 8px;
+      --border-radius-lg: 12px;
+      --spacing-sm: 8px;
+      --spacing-md: 16px;
+      --spacing-lg: 24px;
+      --spacing-xl: 32px;
+    }
+    
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      background-color: var(--color-void-black);
+      color: white;
+      font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif;
+      overflow-x: hidden;
+    }
+    
+    h1, h2, h3, h4 {
+      font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-weight: 600;
+    }
+    
+    main {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: var(--spacing-lg);
+    }
+    
+    header {
+      text-align: center;
+      margin-bottom: var(--spacing-xl);
+    }
+    
+    header h1 {
+      font-size: 2.5rem;
+      background: linear-gradient(to right, #3DFF74, #5AC8FA, #BF4080);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 0.5rem;
+    }
+    
+    header p {
+      font-size: 1.1rem;
+      max-width: 800px;
+      margin: 0 auto;
+      color: rgba(255, 255, 255, 0.8);
+    }
+    
+    .dimensional-grid {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: 100px 100px;
+      background-image:
+        linear-gradient(to right, rgba(90, 200, 250, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(90, 200, 250, 0.05) 1px, transparent 1px);
+      transform: perspective(1000px) rotateX(60deg) scale(2.5);
+      transform-origin: center bottom;
+      pointer-events: none;
+      z-index: -5;
+    }
+    
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--spacing-md);
+      justify-content: center;
+      margin-bottom: var(--spacing-xl);
+    }
+    
+    .tab-button {
+      background: rgba(19, 26, 54, 0.4);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(90, 200, 250, 0.2);
+      border-radius: var(--border-radius-md);
+      color: white;
+      padding: var(--spacing-md) var(--spacing-lg);
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .tab-button:hover {
+      background: rgba(19, 26, 54, 0.6);
+      border-color: rgba(90, 200, 250, 0.4);
+    }
+    
+    .tab-button.active {
+      background: rgba(19, 26, 54, 0.8);
+      border-color: var(--color-subtle-cyan);
+      box-shadow: 0 0 15px rgba(90, 200, 250, 0.4);
+    }
+    
+    .tab-button.heritage {
+      border-color: rgba(61, 255, 116, 0.2);
+    }
+    
+    .tab-button.heritage:hover {
+      border-color: rgba(61, 255, 116, 0.4);
+    }
+    
+    .tab-button.heritage.active {
+      border-color: var(--color-heritage-pixel-green);
+      box-shadow: 0 0 15px rgba(61, 255, 116, 0.4);
+    }
+    
+    .tab-button.transitional {
+      border-color: rgba(90, 200, 250, 0.2);
+    }
+    
+    .tab-button.transitional:hover {
+      border-color: rgba(90, 200, 250, 0.4);
+    }
+    
+    .tab-button.transitional.active {
+      border-color: var(--color-subtle-cyan);
+      box-shadow: 0 0 15px rgba(90, 200, 250, 0.4);
+    }
+    
+    .tab-button.quantum {
+      border-color: rgba(191, 64, 128, 0.2);
+    }
+    
+    .tab-button.quantum:hover {
+      border-color: rgba(191, 64, 128, 0.4);
+    }
+    
+    .tab-button.quantum.active {
+      border-color: var(--color-rose-energy);
+      box-shadow: 0 0 15px rgba(191, 64, 128, 0.4);
+    }
+    
+    .tab-button.superposition {
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+    
+    .tab-button.superposition:hover {
+      border-color: rgba(255, 255, 255, 0.4);
+    }
+    
+    .tab-button.superposition.active {
+      border-color: white;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+    }
+    
+    .tab-content {
+      display: none;
+    }
+    
+    .tab-content.active {
+      display: block;
+    }
+    
+    .pixel-showcase {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: var(--spacing-xl);
+    }
+    
+    .pixel-display {
+      width: 300px;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: var(--spacing-lg);
+    }
+    
+    .pixel-display svg {
+      width: 100%;
+      height: 100%;
+    }
+    
+    .pixel-info {
+      background: rgba(19, 26, 54, 0.6);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(90, 200, 250, 0.2);
+      border-radius: var(--border-radius-lg);
+      padding: var(--spacing-lg);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .pixel-info h3 {
+      margin-top: 0;
+      font-size: 1.5rem;
+    }
+    
+    .pixel-info p {
+      line-height: 1.6;
+    }
+    
+    .pixel-info-heritage h3 {
+      color: var(--color-heritage-pixel-green);
+    }
+    
+    .pixel-info-heritage {
+      border-color: rgba(61, 255, 116, 0.3);
+    }
+    
+    .pixel-info-transitional h3 {
+      color: var(--color-subtle-cyan);
+    }
+    
+    .pixel-info-transitional {
+      border-color: rgba(90, 200, 250, 0.3);
+    }
+    
+    .pixel-info-quantum h3 {
+      color: var(--color-rose-energy);
+    }
+    
+    .pixel-info-quantum {
+      border-color: rgba(191, 64, 128, 0.3);
+    }
+    
+    .pixel-info-superposition h3 {
+      background: linear-gradient(to right, #3DFF74, #5AC8FA, #FF2D55);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .pixel-info-superposition {
+      border-color: rgba(255, 255, 255, 0.3);
+    }
+    
+    .size-variants {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--spacing-lg);
+      justify-content: center;
+      margin-top: var(--spacing-xl);
+    }
+    
+    .size-variant {
+      background: rgba(19, 26, 54, 0.4);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(90, 200, 250, 0.2);
+      border-radius: var(--border-radius-md);
+      padding: var(--spacing-md);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .size-variant-heritage {
+      border-color: rgba(61, 255, 116, 0.2);
+    }
+    
+    .size-variant-transitional {
+      border-color: rgba(90, 200, 250, 0.2);
+    }
+    
+    .size-variant-quantum {
+      border-color: rgba(191, 64, 128, 0.2);
+    }
+    
+    .size-variant-superposition {
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+    
+    .size-variant-label {
+      margin-top: var(--spacing-sm);
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.8);
+    }
+    
+    .size-64 {
+      width: 64px;
+      height: 64px;
+    }
+    
+    .size-128 {
+      width: 128px;
+      height: 128px;
+    }
+    
+    .size-200 {
+      width: 200px;
+      height: 200px;
+    }
+    
+    code-section {
+      background: var(--color-deep-space-indigo);
+      border-radius: var(--border-radius-md);
+      padding: var(--spacing-md);
+      margin: var(--spacing-lg) 0;
+      overflow-x: auto;
+      font-family: 'SF Mono', monospace;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      color: var(--color-subtle-cyan);
+    }
+    
+    .particle {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background-color: rgba(90, 200, 250, 0.8);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: -1;
+    }
+    
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      
+      .tabs {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .tab-button {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="dimensional-grid"></div>
+  
+  <main>
+    <header>
+      <h1>Quantum-Spatial Volumetric Pixel System</h1>
+      <p>Advanced 3D/4D volumetric pixels that visually represent different energy states in the quantum-spatial design system. M4-optimized for performance with enhanced visual characteristics.</p>
+    </header>
+    
+    <div class="tabs">
+      <button class="tab-button heritage active" data-tab="heritage">Heritage State</button>
+      <button class="tab-button transitional" data-tab="transitional">Transitional State</button>
+      <button class="tab-button quantum" data-tab="quantum">Quantum State</button>
+      <button class="tab-button superposition" data-tab="superposition">Superposition State</button>
+    </div>
+    
+    <div id="heritage" class="tab-content active">
+      <div class="pixel-showcase">
+        <div class="pixel-display">
+          <object data="volumetric-templates/heritage-state.svg" type="image/svg+xml"></object>
+        </div>
+        <div class="pixel-info pixel-info-heritage">
+          <h3>Heritage State</h3>
+          <p>The Heritage state represents the foundational 8-bit pixel aesthetic with volumetric dimension. This state features clean edges, structured layout, and subtle energy highlights that reference the retro heritage of pixel art while adding modern depth through isometric projection.</p>
+          <p>Color palette features Heritage Green (#2C5F2D) with Heritage Pixel Green (#3DFF74) accent highlighting, creating a nostalgic yet sophisticated visual language that forms the basis of the Quantum-Spatial design system.</p>
+        </div>
+      </div>
+      
+      <h3>Size Variants</h3>
+      <div class="size-variants">
+        <div class="size-variant size-variant-heritage">
+          <div class="size-64">
+            <object data="volumetric-templates/heritage-state.svg" type="image/svg+xml"></object>
+          </div>
+          <span class="size-variant-label">64px</span>
+        </div>
+        <div class="size-variant size-variant-heritage">
+          <div class="size-128">
+            <object data="volumetric-templates/heritage-state.svg" type="image/svg+xml"></object>
+          </div>
+          <span class="size-variant-label">128px</span>
+        </div>
+        <div class="size-variant size-variant-heritage">
+          <div class="size-200">
+            <object data="volumetric-templates/heritage-state.svg" type="image/svg+xml"></object>
+          </div>
+          <span class="size-variant-label">200px</span>
+        </div>
+      </div>
+    </div>
+    
+    <div id="transitional" class="tab-content">
+      <div class="pixel-showcase">
+        <div class="pixel-display">
+          <object data="volumetric-templates/transitional-state.svg" type="image/svg+xml"></object>
+        </div>
+        <div class="pixel-info pixel-info-transitional">
+          <h3>Transitional State</h3>
+          <p>The Transitional state shows the evolution from structured heritage to quantum fluidity. Features softened edges, increased dimensional depth, and animated energy particles that indicate transformation in process. This state blends structure with energy movement.</p>
+          <p>Uses Dimensional Eggplant (#331F4A) and Subtle Cyan (#5AC8FA) as its primary color scheme, with slight displacement effects and energy particles that begin to break the structured form.</p>
+        </div>
+      </div>
+      
+      <h3>Size Variants</h3>
+      <div class="size-variants">
+        <div class="size-variant size-variant-transitional">
+          <div class="size-64">
+            <object data="volumetric-templates/transitional-state.svg" type="image/svg+xml"></object>
+          </div>
+          <span class="size-variant-label">64px</span>
+        </div>
+        <div class="size-variant size-variant-transitional">
+          <div class="size-128">
+            <object data="volumetric-templates/transitional-state.svg" type="image/svg+xml"></object>
+          </div>
+          <span class="size-variant-label">128px</span>
+        </div>
+        <div class="size-variant size-variant-transitional">
+          <div class="size-200">
+            <object data="volumetric-templates/transitional-state.svg" type="image/svg+xml"></object>
+          </div>
+          <span class="size-variant-label">200px</span>
+        </div>
+      </div>
+    </div>
+    
+    <div id="quantum" class="tab-content">
+      <div class="pixel-showcase">
+        <div class="pixel-display">
+          <object data="volumetric-templates/quantum-state.svg" type="image/svg+xml"></object>
+        </div>
+        <div class="pixel-info pixel-info-quantum">
+          <h3>Quantum State</h3>
+          <p>The fully evolved Quantum state represents advanced energy materialization with organic, fluid forms. Features a glowing energy core, orbiting particles, and dimensional ripples that extend beyond the pixel's boundaries. The cubic structure has evolved into a more rounded, organic form.</p>
+          <p>Uses Quantum Violet (#6A3093) and Rose Energy (#BF4080) with Quantum Pulse Pink (#FF2D55) highlights. Enhanced with animated particle orbits, energy ripples, and distortion effects that create a living, dynamic presence.</p>
+        </div>
+      </div>
+      
+      <h3>Size Variants</h3>
+      <div class="size-variants">
+        <div class="size-variant size-variant-quantum">
+          <div class="size-64">
+            <object data="volumetric-templates/quantum-state.svg" type="image/svg+xml"></object>
+          </div>
+          <span class="size-variant-label">64px</span>
+        </div>
+        <div class="size-variant size-variant-quantum">
+          <div class="size-128">
+            <object data="volumetric-templates/quantum-state.svg" type="image/svg+xml"></object>
+          </div>
+          <span class="size-variant-label">128px</span>
+        </div>
+        <div class="size-variant size-variant-quantum">
+          <div class="size-200">
+            <object data="volumetric-templates/quantum-state.svg" type="image/svg+xml"></object>
+          </div>
+          <span class="size-variant-label">200px</span>
+        </div>
+      </div>
+    </div>
+    
+    <div id="superposition" class="tab-content">
+      <div class="pixel-showcase">
+        <div class="pixel-display">
+          <object data="volumetric-templates/superposition-state.svg" type="image/svg+xml"></object>
+        </div>
+        <div class="pixel-info pixel-info-superposition">
+          <h3>Superposition State</h3>
+          <p>The Superposition state represents the simultaneous existence of multiple states, truly embracing quantum principles. Features overlapping forms from all three states (Heritage, Transitional, and Quantum) that shift and morph dynamically, with probabilistic wave patterns and energy transfer between states.</p>
+          <p>Uses a blend of all color palettes with a brilliant white core that represents pure energy potential. Advanced displacement effects and animated probability waves create a constantly shifting, hyperdimensional presence that transcends traditional UI constraints.</p>
+        </div>
+      </div>
+      
+      <h3>Size Variants</h3>
+      <div class="size-variants">
+        <div class="size-variant size-variant-superposition">
+          <div class="size-64">
+            <object data="volumetric-templates/superposition-state.svg" type="image/svg+xml"></object>
+          </div>
+          <span class="size-variant-label">64px</span>
+        </div>
+        <div class="size-variant size-variant-superposition">
+          <div class="size-128">
+            <object data="volumetric-templates/superposition-state.svg" type="image/svg+xml"></object>
+          </div>
+          <span class="size-variant-label">128px</span>
+        </div>
+        <div class="size-variant size-variant-superposition">
+          <div class="size-200">
+            <object data="volumetric-templates/superposition-state.svg" type="image/svg+xml"></object>
+          </div>
+          <span class="size-variant-label">200px</span>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Tab functionality
+      const tabButtons = document.querySelectorAll('.tab-button');
+      const tabContents = document.querySelectorAll('.tab-content');
+      
+      tabButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          const tabId = button.getAttribute('data-tab');
+          
+          // Remove active class from all buttons and contents
+          tabButtons.forEach(b => b.classList.remove('active'));
+          tabContents.forEach(c => c.classList.remove('active'));
+          
+          // Add active class to clicked button and corresponding content
+          button.classList.add('active');
+          document.getElementById(tabId).classList.add('active');
+        });
+      });
+      
+      // Create floating particles for background effect
+      createParticles();
+    });
+    
+    // Background particle effect
+    function createParticles() {
+      const particleCount = 50;
+      const body = document.querySelector('body');
+      
+      for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        
+        // Random position
+        const x = Math.random() * window.innerWidth;
+        const y = Math.random() * window.innerHeight;
+        
+        // Random size (1-3px)
+        const size = 1 + Math.random() * 2;
+        
+        // Random color
+        const colors = ['#3DFF74', '#5AC8FA', '#BF4080', '#FF2D55', '#FFFFFF'];
+        const color = colors[Math.floor(Math.random() * colors.length)];
+        
+        // Random opacity
+        const opacity = 0.3 + Math.random() * 0.5;
+        
+        // Apply styles
+        particle.style.left = `${x}px`;
+        particle.style.top = `${y}px`;
+        particle.style.width = `${size}px`;
+        particle.style.height = `${size}px`;
+        particle.style.backgroundColor = color;
+        particle.style.opacity = opacity;
+        
+        // Apply animation
+        const duration = 20 + Math.random() * 40;
+        const delay = Math.random() * 5;
+        
+        particle.style.animation = `float ${duration}s ${delay}s linear infinite`;
+        
+        // Add to body
+        body.appendChild(particle);
+      }
+    }
+    
+    // Define the float animation
+    const style = document.createElement('style');
+    style.textContent = `
+      @keyframes float {
+        0% {
+          transform: translateY(0) translateX(0);
+          opacity: 0.3;
+        }
+        25% {
+          transform: translateY(-30px) translateX(10px);
+          opacity: 0.5;
+        }
+        50% {
+          transform: translateY(-60px) translateX(-10px);
+          opacity: 0.7;
+        }
+        75% {
+          transform: translateY(-90px) translateX(5px);
+          opacity: 0.5;
+        }
+        100% {
+          transform: translateY(-120px) translateX(0);
+          opacity: 0.3;
+        }
+      }
+    `;
+    document.head.appendChild(style);
+  </script>
+</body>
+</html>

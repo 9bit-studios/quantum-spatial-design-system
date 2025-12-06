@@ -1,0 +1,178 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <!-- Background -->
+  <rect width="800" height="500" fill="#0A0621" />
+  
+  <!-- Grid background -->
+  <g opacity="0.1">
+    <!-- Horizontal grid lines with perspective effect -->
+    <path d="M200,450 L600,450" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M150,400 L650,400" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M125,350 L675,350" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M100,300 L700,300" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M90,250 L710,250" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M80,200 L720,200" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M70,150 L730,150" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M60,100 L740,100" stroke="#5AC8FA" stroke-width="1" />
+    
+    <!-- Vertical grid lines -->
+    <path d="M200,100 L200,450" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M250,100 L250,450" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M300,100 L300,450" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M350,100 L350,450" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M400,100 L400,450" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M450,100 L450,450" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M500,100 L500,450" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M550,100 L550,450" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M600,100 L600,450" stroke="#5AC8FA" stroke-width="1" />
+  </g>
+  
+  <!-- Title -->
+  <text x="400" y="50" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" font-size="24" font-weight="bold" fill="#FFFFFF" text-anchor="middle">React Three Fiber + Framer: Seamless Creative Platform</text>
+  
+  <!-- Central visualization - Split view of code and 3D output -->
+  <g transform="translate(100, 90)">
+    <!-- Main container -->
+    <rect x="0" y="0" width="600" height="320" rx="10" fill="#131A36" stroke="#5AC8FA" stroke-width="2" />
+    
+    <!-- Left side - code editor -->
+    <g>
+      <rect x="0" y="0" width="300" height="320" rx="10" fill="#0D0D15" />
+      
+      <!-- Code header -->
+      <rect x="0" y="0" width="300" height="30" rx="10" fill="#331F4A" />
+      <text x="150" y="20" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">TarotCard.jsx</text>
+      
+      <!-- Code content -->
+      <g transform="translate(15, 45)">
+        <text x="0" y="0" font-family="'SF Mono', monospace" font-size="12" fill="#BF4080">import</text>
+        <text x="50" y="0" font-family="'SF Mono', monospace" font-size="12" fill="#FFFFFF">React, { useRef } </text>
+        <text x="180" y="0" font-family="'SF Mono', monospace" font-size="12" fill="#BF4080">from</text>
+        <text x="210" y="0" font-family="'SF Mono', monospace" font-size="12" fill="#2D854D">'react'</text>
+        
+        <text x="0" y="20" font-family="'SF Mono', monospace" font-size="12" fill="#BF4080">import</text>
+        <text x="50" y="20" font-family="'SF Mono', monospace" font-size="12" fill="#FFFFFF">{ useFrame } </text>
+        <text x="150" y="20" font-family="'SF Mono', monospace" font-size="12" fill="#BF4080">from</text>
+        <text x="180" y="20" font-family="'SF Mono', monospace" font-size="12" fill="#2D854D">'@react-three/fiber'</text>
+        
+        <text x="0" y="40" font-family="'SF Mono', monospace" font-size="12" fill="#BF4080">import</text>
+        <text x="50" y="40" font-family="'SF Mono', monospace" font-size="12" fill="#FFFFFF">{ Text, useTexture } </text>
+        <text x="185" y="40" font-family="'SF Mono', monospace" font-size="12" fill="#BF4080">from</text>
+        <text x="215" y="40" font-family="'SF Mono', monospace" font-size="12" fill="#2D854D">'@react-three/drei'</text>
+        
+        <text x="0" y="65" font-family="'SF Mono', monospace" font-size="12" fill="#BF4080">export default function</text>
+        <text x="150" y="65" font-family="'SF Mono', monospace" font-size="12" fill="#5AC8FA">TarotCard</text>
+        <text x="210" y="65" font-family="'SF Mono', monospace" font-size="12" fill="#FFFFFF">({ name, texture }) {</text>
+        
+        <text x="15" y="85" font-family="'SF Mono', monospace" font-size="12" fill="#BF4080">const</text>
+        <text x="45" y="85" font-family="'SF Mono', monospace" font-size="12" fill="#FFFFFF">card = useRef()</text>
+        <text x="15" y="105" font-family="'SF Mono', monospace" font-size="12" fill="#BF4080">const</text>
+        <text x="45" y="105" font-family="'SF Mono', monospace" font-size="12" fill="#FFFFFF">textures = useTexture({</text>
+        <text x="30" y="125" font-family="'SF Mono', monospace" font-size="12" fill="#FFFFFF">map: texture,</text>
+        <text x="30" y="145" font-family="'SF Mono', monospace" font-size="12" fill="#FFFFFF">normalMap: `${texture.replace('.jpg', '_normal.jpg')}`</text>
+        <text x="15" y="165" font-family="'SF Mono', monospace" font-size="12" fill="#FFFFFF">})</text>
+        
+        <text x="15" y="185" font-family="'SF Mono', monospace" font-size="12" fill="#5AC8FA">useFrame</text>
+        <text x="65" y="185" font-family="'SF Mono', monospace" font-size="12" fill="#FFFFFF">((state) => {</text>
+        <text x="30" y="205" font-family="'SF Mono', monospace" font-size="12" fill="#FFFFFF">card.current.rotation.y = Math.sin(state.clock.elapsedTime / 3) * 0.3</text>
+        <text x="15" y="225" font-family="'SF Mono', monospace" font-size="12" fill="#FFFFFF">})</text>
+        
+        <text x="15" y="245" font-family="'SF Mono', monospace" font-size="12" fill="#BF4080">return</text>
+        <text x="50" y="245" font-family="'SF Mono', monospace" font-size="12" fill="#FFFFFF">(</text>
+        <text x="30" y="265" font-family="'SF Mono', monospace" font-size="12" fill="#5AC8FA">&lt;mesh</text>
+        <text x="70" y="265" font-family="'SF Mono', monospace" font-size="12" fill="#BF4080">ref</text>
+        <text x="90" y="265" font-family="'SF Mono', monospace" font-size="12" fill="#FFFFFF">={card}&gt;</text>
+        <text x="0" y="285" font-family="'SF Mono', monospace" font-size="12" fill="#FFFFFF">    // More component JSX</text>
+      </g>
+    </g>
+    
+    <!-- Right side - 3D visualization -->
+    <g transform="translate(300, 0)">
+      <rect x="0" y="0" width="300" height="320" rx="10" fill="#0A0621" />
+      
+      <!-- Tarot Card 3D Visualization with quantum spatial aesthetic -->
+      <g transform="translate(150, 160)">
+        <!-- Card base with perspective -->
+        <g transform="rotate(15) skewX(-10)">
+          <rect x="-60" y="-100" width="120" height="200" rx="8" fill="#331F4A" stroke="#5AC8FA" stroke-width="1" />
+          
+          <!-- Card Front Design -->
+          <rect x="-50" y="-90" width="100" height="180" fill="#131A36" />
+          
+          <!-- Stylized Tarot Graphics -->
+          <circle cx="0" cy="-50" r="25" fill="#6A3093" />
+          <circle cx="0" cy="-50" r="15" fill="#BF4080" />
+          
+          <!-- Quantum-spatial effect -->
+          <g>
+            <rect x="-40" y="30" width="10" height="10" fill="#5AC8FA" opacity="0.7" />
+            <rect x="30" y="-20" width="10" height="10" fill="#5AC8FA" opacity="0.7" />
+            <rect x="-20" y="60" width="10" height="10" fill="#5AC8FA" opacity="0.7" />
+          </g>
+          
+          <!-- Card Text -->
+          <rect x="-40" y="70" width="80" height="15" rx="5" fill="#331F4A" />
+          <text x="0" y="82" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">The Magician</text>
+        </g>
+        
+        <!-- Glow effect -->
+        <ellipse cx="0" cy="110" rx="70" ry="15" fill="#5AC8FA" opacity="0.2" />
+      </g>
+      
+      <!-- Grid system visualization -->
+      <g opacity="0.3">
+        <path d="M75,80 L225,80" stroke="#5AC8FA" stroke-width="0.5" />
+        <path d="M75,160 L225,160" stroke="#5AC8FA" stroke-width="0.5" />
+        <path d="M75,240 L225,240" stroke="#5AC8FA" stroke-width="0.5" />
+        
+        <path d="M75,80 L75,240" stroke="#5AC8FA" stroke-width="0.5" />
+        <path d="M150,80 L150,240" stroke="#5AC8FA" stroke-width="0.5" />
+        <path d="M225,80 L225,240" stroke="#5AC8FA" stroke-width="0.5" />
+      </g>
+      
+      <!-- Camera position indicator -->
+      <g transform="translate(265, 25)">
+        <circle cx="0" cy="0" r="15" fill="#331F4A" />
+        <path d="M-5,-5 L5,5 M-5,5 L5,-5" stroke="#5AC8FA" stroke-width="2" />
+      </g>
+    </g>
+  </g>
+  
+  <!-- Integration with Framer -->
+  <g transform="translate(150, 430)">
+    <text x="0" y="0" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF">Key Benefits</text>
+    
+    <!-- Benefits -->
+    <g transform="translate(0, 20)">
+      <rect x="0" y="-8" width="8" height="8" fill="#5AC8FA" />
+      <rect x="8" y="-8" width="8" height="8" fill="#6A3093" />
+      <text x="25" y="0" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="14" fill="#FFFFFF">3D UI Components for AI Branding Quiz</text>
+    </g>
+    
+    <g transform="translate(0, 45)">
+      <rect x="0" y="-8" width="8" height="8" fill="#5AC8FA" />
+      <rect x="8" y="-8" width="8" height="8" fill="#6A3093" />
+      <text x="25" y="0" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="14" fill="#FFFFFF">Interactive Tarot Cards for Pocket Oracle</text>
+    </g>
+    
+    <g transform="translate(400, 20)">
+      <rect x="0" y="-8" width="8" height="8" fill="#5AC8FA" />
+      <rect x="8" y="-8" width="8" height="8" fill="#6A3093" />
+      <text x="25" y="0" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="14" fill="#FFFFFF">Leverages existing Framer expertise</text>
+    </g>
+    
+    <g transform="translate(400, 45)">
+      <rect x="0" y="-8" width="8" height="8" fill="#5AC8FA" />
+      <rect x="8" y="-8" width="8" height="8" fill="#6A3093" />
+      <text x="25" y="0" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="14" fill="#FFFFFF">Create once, deploy everywhere</text>
+    </g>
+  </g>
+  
+  <!-- Framer Logo with quantum effect -->
+  <g transform="translate(720, 60)">
+    <circle cx="0" cy="0" r="30" fill="#331F4A" />
+    <path d="M-15,-15 L0,0 L-15,15 M0,0 L15,-15 L15,15 L0,0" stroke="#5AC8FA" stroke-width="2" />
+    <!-- Quantum pixel effect -->
+    <rect x="-6" y="-6" width="4" height="4" fill="#5AC8FA" opacity="0.8" />
+    <rect x="2" y="2" width="4" height="4" fill="#5AC8FA" opacity="0.8" />
+  </g>
+</svg>

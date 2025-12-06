@@ -1,0 +1,59 @@
+<svg width="{{size}}" height="{{size}}" viewBox="0 0 {{size}} {{size}}" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="glow-partial" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="{{glowIntensity}}" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <linearGradient id="partialGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="{{accentColor}}" stop-opacity="0.05"/>
+      <stop offset="80%" stop-color="{{color}}" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="{{color}}" stop-opacity="0.8"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Main pixel shape with partial materialization -->
+  <rect
+    x="2"
+    y="2"
+    width="{{innerSize}}"
+    height="{{innerSize}}"
+    rx="{{borderRadius}}"
+    fill="url(#partialGradient)"
+    filter="url(#glow-partial)"
+    class="quantum-pixel partial-state"
+  />
+  
+  <!-- Edge detail to suggest partial materialization -->
+  <rect
+    x="1"
+    y="1"
+    width="{{outerSize}}"
+    height="{{outerSize}}"
+    rx="{{borderRadius}}"
+    stroke="{{accentColor}}"
+    stroke-width="0.5"
+    stroke-dasharray="{{dashArray}}"
+    fill="none"
+    opacity="0.6"
+    class="partial-edge"
+  />
+  
+  <!-- Energy highlights -->
+  <circle
+    cx="{{accentX1}}"
+    cy="{{accentY1}}"
+    r="{{particleSize}}"
+    fill="{{accentColor}}"
+    opacity="0.6"
+    class="energy-particle pulse-opacity"
+  />
+  
+  <circle
+    cx="{{accentX2}}"
+    cy="{{accentY2}}"
+    r="{{particleSize}}"
+    fill="{{accentColor}}"
+    opacity="0.4"
+    class="energy-particle pulse-opacity delay-xs"
+  />
+</svg>

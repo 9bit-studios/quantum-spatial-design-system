@@ -1,0 +1,394 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background with dimensional grid -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A0621" />
+      <stop offset="70%" stop-color="#131A36" />
+      <stop offset="100%" stop-color="#1E1F5C" />
+    </linearGradient>
+    
+    <linearGradient id="oksanaGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#331F4A" />
+      <stop offset="100%" stop-color="#6A3093" />
+    </linearGradient>
+    
+    <linearGradient id="jrotharkeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#126D71" />
+      <stop offset="100%" stop-color="#29B6F6" />
+    </linearGradient>
+    
+    <linearGradient id="portalGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#BF4080" />
+      <stop offset="100%" stop-color="#FF2D55" />
+    </linearGradient>
+    
+    <linearGradient id="visionGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5AC8FA" />
+      <stop offset="100%" stop-color="#126D71" />
+    </linearGradient>
+    
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+    <pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse">
+      <path d="M 100 0 L 0 0 0 100" fill="none" stroke="#331F4A" stroke-width="0.5" stroke-opacity="0.15" />
+    </pattern>
+    
+    <pattern id="dimensionalGrid" width="200" height="200" patternUnits="userSpaceOnUse" patternTransform="scale(0.5) rotate(15)">
+      <path d="M 0,0 L 200,0 L 200,200 L 0,200 Z" fill="none" stroke="#5AC8FA" stroke-width="0.5" stroke-opacity="0.05" />
+      <path d="M 0,50 L 200,50 M 0,100 L 200,100 M 0,150 L 200,150" fill="none" stroke="#5AC8FA" stroke-width="0.3" stroke-opacity="0.05" />
+      <path d="M 50,0 L 50,200 M 100,0 L 100,200 M 150,0 L 150,200" fill="none" stroke="#5AC8FA" stroke-width="0.3" stroke-opacity="0.05" />
+    </pattern>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bgGradient)" />
+  <rect width="800" height="600" fill="url(#grid)" />
+  <rect width="800" height="600" fill="url(#dimensionalGrid)" />
+  
+  <!-- Central Connector Hub -->
+  <g transform="translate(400, 300)">
+    <!-- Hub structure -->
+    <circle r="60" fill="#0D0D15" opacity="0.9" />
+    <circle r="55" fill="#131A36" opacity="0.95" />
+    
+    <!-- Hexagonal connector framework -->
+    <path d="M 0,-35 L 30.31,-17.5 L 30.31,17.5 L 0,35 L -30.31,17.5 L -30.31,-17.5 Z" fill="none" stroke="#5AC8FA" stroke-width="1" stroke-opacity="0.7" />
+    
+    <!-- Inner connector -->
+    <path d="M 0,-20 L 17.32,-10 L 17.32,10 L 0,20 L -17.32,10 L -17.32,-10 Z" fill="none" stroke="#5AC8FA" stroke-width="1" stroke-opacity="0.9" />
+    
+    <!-- Quantum pixel at center -->
+    <rect x="-8" y="-8" width="16" height="16" fill="#5AC8FA" opacity="0.9">
+      <animate attributeName="opacity" values="0.9;0.7;0.9" dur="3s" repeatCount="indefinite" />
+      <animate attributeName="transform" values="rotate(0);rotate(90);rotate(180);rotate(270);rotate(360)" dur="12s" repeatCount="indefinite" />
+    </rect>
+    
+    <!-- Connector energy rings -->
+    <circle r="70" fill="none" stroke="#5AC8FA" stroke-width="1" stroke-opacity="0.4">
+      <animate attributeName="r" values="70;75;70" dur="5s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.4;0.2;0.4" dur="5s" repeatCount="indefinite" />
+    </circle>
+    
+    <circle r="80" fill="none" stroke="#BF4080" stroke-width="1" stroke-opacity="0.3" transform="rotate(45)">
+      <animate attributeName="r" values="80;85;80" dur="7s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.3;0.1;0.3" dur="7s" repeatCount="indefinite" />
+    </circle>
+    
+    <text x="0" y="-70" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="11" fill="#FFFFFF" text-anchor="middle">Quantum-Spatial Framework</text>
+  </g>
+  
+  <!-- Product Implementation Nodes -->
+  <!-- 1. Oksana Creative Platform -->
+  <g transform="translate(200, 150)">
+    <!-- Platform container -->
+    <rect x="-75" y="-60" width="150" height="120" rx="10" fill="url(#oksanaGradient)" opacity="0.85">
+      <animate attributeName="opacity" values="0.85;0.75;0.85" dur="4s" repeatCount="indefinite" />
+    </rect>
+    
+    <!-- Platform visualization -->
+    <g transform="translate(0, -20)">
+      <text x="0" y="0" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle">Oksana Creative Platform</text>
+    </g>
+    
+    <!-- Asset management visualization -->
+    <g transform="translate(-40, 15)">
+      <rect x="-15" y="-15" width="30" height="30" rx="3" fill="#FFFFFF" opacity="0.2" />
+      <rect x="-10" y="-10" width="20" height="20" rx="2" fill="#FFFFFF" opacity="0.4" />
+    </g>
+    
+    <!-- Brand intelligence visualization -->
+    <g transform="translate(10, 15)">
+      <path d="M 0,-15 L 15,0 L 0,15 L -15,0 Z" fill="#FFFFFF" opacity="0.3" />
+      <path d="M 0,-7 L 7,0 L 0,7 L -7,0 Z" fill="#FFFFFF" opacity="0.6" />
+    </g>
+    
+    <!-- Content creation visualization -->
+    <g transform="translate(45, 15)">
+      <rect x="-10" y="-15" width="20" height="5" rx="1" fill="#FFFFFF" opacity="0.4" />
+      <rect x="-10" y="-7" width="15" height="5" rx="1" fill="#FFFFFF" opacity="0.4" />
+      <rect x="-10" y="1" width="20" height="5" rx="1" fill="#FFFFFF" opacity="0.4" />
+      <rect x="-10" y="9" width="12" height="5" rx="1" fill="#FFFFFF" opacity="0.4" />
+    </g>
+    
+    <!-- Connection to central hub -->
+    <path d="M 0,60 L 200,150" stroke="url(#oksanaGradient)" stroke-width="2" fill="none" stroke-opacity="0.7">
+      <animate attributeName="stroke-opacity" values="0.7;0.4;0.7" dur="5s" repeatCount="indefinite" />
+    </path>
+    
+    <!-- Quantum pixel elements flowing along connection -->
+    <g>
+      <rect width="6" height="6" fill="#6A3093" opacity="0.8">
+        <animateMotion path="M 0,60 L 200,150" dur="3s" repeatCount="indefinite" />
+      </rect>
+      
+      <rect width="4" height="4" fill="#6A3093" opacity="0.8">
+        <animateMotion path="M 0,60 L 200,150" begin="1s" dur="3s" repeatCount="indefinite" />
+      </rect>
+    </g>
+  </g>
+  
+  <!-- 2. Jrotharke World -->
+  <g transform="translate(200, 450)">
+    <!-- Platform container -->
+    <rect x="-75" y="-60" width="150" height="120" rx="10" fill="url(#jrotharkeGradient)" opacity="0.85">
+      <animate attributeName="opacity" values="0.85;0.75;0.85" dur="5s" repeatCount="indefinite" />
+    </rect>
+    
+    <!-- Platform visualization -->
+    <g transform="translate(0, -20)">
+      <text x="0" y="0" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle">World of Jrotharke</text>
+    </g>
+    
+    <!-- Game world visualization -->
+    <g transform="scale(0.8) translate(0, 15)">
+      <!-- Stylized mountain (Hacroth) -->
+      <path d="M -50,30 L -10,-20 L 10,10 L 50,30 Z" fill="#29B6F6" opacity="0.3" />
+      <path d="M -30,30 L 0,-10 L 30,30 Z" fill="#FFFFFF" opacity="0.2" />
+      
+      <!-- Small pixel elements representing game elements -->
+      <rect x="-40" y="15" width="8" height="8" fill="#FFFFFF" opacity="0.4" />
+      <rect x="-20" y="0" width="8" height="8" fill="#FFFFFF" opacity="0.5" />
+      <rect x="15" y="10" width="8" height="8" fill="#FFFFFF" opacity="0.4" />
+      <rect x="35" y="18" width="8" height="8" fill="#FFFFFF" opacity="0.5" />
+    </g>
+    
+    <!-- Connection to central hub -->
+    <path d="M 0,-60 L 200,-150" stroke="url(#jrotharkeGradient)" stroke-width="2" fill="none" stroke-opacity="0.7">
+      <animate attributeName="stroke-opacity" values="0.7;0.4;0.7" dur="6s" repeatCount="indefinite" />
+    </path>
+    
+    <!-- Quantum pixel elements flowing along connection -->
+    <g>
+      <rect width="6" height="6" fill="#29B6F6" opacity="0.8">
+        <animateMotion path="M 0,-60 L 200,-150" dur="3.5s" repeatCount="indefinite" />
+      </rect>
+      
+      <rect width="4" height="4" fill="#29B6F6" opacity="0.8">
+        <animateMotion path="M 0,-60 L 200,-150" begin="1.5s" dur="3.5s" repeatCount="indefinite" />
+      </rect>
+    </g>
+  </g>
+  
+  <!-- 3. Creative Portal & Client Experience -->
+  <g transform="translate(600, 150)">
+    <!-- Platform container -->
+    <rect x="-75" y="-60" width="150" height="120" rx="10" fill="url(#portalGradient)" opacity="0.85">
+      <animate attributeName="opacity" values="0.85;0.75;0.85" dur="4.5s" repeatCount="indefinite" />
+    </rect>
+    
+    <!-- Platform visualization -->
+    <g transform="translate(0, -20)">
+      <text x="0" y="0" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle">Oksana Creator Portal Accelerator Experience</text>
+    </g>
+    
+    <!-- Portal visualization -->
+    <g transform="translate(-40, 15)">
+      <rect x="-15" y="-15" width="30" height="30" rx="5" fill="#FFFFFF" opacity="0.2" />
+      <rect x="-10" y="-10" width="20" height="20" rx="3" fill="#FFFFFF" opacity="0.4" />
+      <rect x="-5" y="-5" width="10" height="10" rx="2" fill="#FFFFFF" opacity="0.6" />
+    </g>
+    
+    <!-- Dashboard visualization -->
+    <g transform="translate(10, 15)">
+      <rect x="-12" y="-15" width="24" height="7" rx="1" fill="#FFFFFF" opacity="0.4" />
+      <rect x="-12" y="-5" width="24" height="20" rx="1" fill="#FFFFFF" opacity="0.2" />
+      <path d="M -8,0 L -4,5 L 0,2 L 4,8 L 8,0" stroke="#FFFFFF" stroke-width="1" fill="none" stroke-opacity="0.6" />
+    </g>
+    
+    <!-- Brand assets visualization -->
+    <g transform="translate(45, 15)">
+      <rect x="-10" y="-10" width="20" height="20" rx="2" fill="#FFFFFF" opacity="0.3" />
+      <circle cx="-2" cy="-2" r="4" fill="#FFFFFF" opacity="0.5" />
+      <rect x="-5" y="5" width="10" height="5" rx="1" fill="#FFFFFF" opacity="0.5" />
+    </g>
+    
+    <!-- Connection to central hub -->
+    <path d="M 0,60 L -200,150" stroke="url(#portalGradient)" stroke-width="2" fill="none" stroke-opacity="0.7">
+      <animate attributeName="stroke-opacity" values="0.7;0.4;0.7" dur="5.5s" repeatCount="indefinite" />
+    </path>
+    
+    <!-- Quantum pixel elements flowing along connection -->
+    <g>
+      <rect width="6" height="6" fill="#FF2D55" opacity="0.8">
+        <animateMotion path="M 0,60 L -200,150" dur="4s" repeatCount="indefinite" />
+      </rect>
+      
+      <rect width="4" height="4" fill="#FF2D55" opacity="0.8">
+        <animateMotion path="M 0,60 L -200,150" begin="2s" dur="4s" repeatCount="indefinite" />
+      </rect>
+    </g>
+  </g>
+  
+  <!-- 4. Vision Pro Experiences -->
+  <g transform="translate(600, 450)">
+    <!-- Platform container -->
+    <rect x="-75" y="-60" width="150" height="120" rx="10" fill="url(#visionGradient)" opacity="0.85">
+      <animate attributeName="opacity" values="0.85;0.75;0.85" dur="4.2s" repeatCount="indefinite" />
+    </rect>
+    
+    <!-- Platform visualization -->
+    <g transform="translate(0, -20)">
+      <text x="0" y="0" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle">Vision Pro Experiences</text>
+    </g>
+    
+    <!-- Spatial computing visualization -->
+    <g transform="scale(0.8) translate(0, 15)">
+      <!-- Stylized 3D coordinate system -->
+      <line x1="-30" y1="0" x2="30" y2="0" stroke="#FFFFFF" stroke-width="1" stroke-opacity="0.6" />
+      <line x1="0" y1="-30" x2="0" y2="30" stroke="#FFFFFF" stroke-width="1" stroke-opacity="0.6" />
+      <line x1="-15" y1="-15" x2="15" y2="15" stroke="#FFFFFF" stroke-width="1" stroke-opacity="0.4" />
+      
+      <!-- 3D objects -->
+      <rect x="-20" y="-20" width="15" height="15" fill="#5AC8FA" opacity="0.3" transform="rotate(15)" />
+      <circle cx="15" cy="-10" r="8" fill="#126D71" opacity="0.4" />
+      <path d="M 10,10 L 25,15 L 15,25 Z" fill="#FFFFFF" opacity="0.3" />
+    </g>
+    
+    <!-- Connection to central hub -->
+    <path d="M 0,-60 L -200,-150" stroke="url(#visionGradient)" stroke-width="2" fill="none" stroke-opacity="0.7">
+      <animate attributeName="stroke-opacity" values="0.7;0.4;0.7" dur="6.5s" repeatCount="indefinite" />
+    </path>
+    
+    <!-- Quantum pixel elements flowing along connection -->
+    <g>
+      <rect width="6" height="6" fill="#5AC8FA" opacity="0.8">
+        <animateMotion path="M 0,-60 L -200,-150" dur="4.5s" repeatCount="indefinite" />
+      </rect>
+      
+      <rect width="4" height="4" fill="#5AC8FA" opacity="0.8">
+        <animateMotion path="M 0,-60 L -200,-150" begin="2.5s" dur="4.5s" repeatCount="indefinite" />
+      </rect>
+    </g>
+  </g>
+  
+  <!-- User Experience Elements -->
+  <!-- 1. Brand Quiz Experience -->
+  <g transform="translate(100, 300)">
+    <!-- Experience node -->
+    <rect x="-40" y="-25" width="80" height="50" rx="5" fill="#0D0D15" opacity="0.8" />
+    
+    <text x="0" y="-10" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="9" fill="#FFFFFF" text-anchor="middle">Brand Quiz</text>
+    
+    <!-- UI elements visualization -->
+    <rect x="-25" y="0" width="50" height="5" rx="2" fill="#FF2D55" opacity="0.7" />
+    <rect x="-25" y="10" width="35" height="5" rx="2" fill="#FF2D55" opacity="0.7" />
+    
+    <!-- Connection to Oksana -->
+    <path d="M 40,0 L 60,-150" stroke="#FF2D55" stroke-width="1" stroke-opacity="0.5" />
+    
+    <!-- Connection to Portal -->
+    <path d="M 40,0 L 460,-150" stroke="#FF2D55" stroke-width="1" stroke-opacity="0.5" />
+  </g>
+  
+  <!-- 2. Narrative Adventure -->
+  <g transform="translate(200, 300)">
+    <!-- Experience node -->
+    <rect x="-40" y="-25" width="80" height="50" rx="5" fill="#0D0D15" opacity="0.8" />
+    
+    <text x="0" y="-10" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="9" fill="#FFFFFF" text-anchor="middle">Narrative Adventure</text>
+    
+    <!-- Narrative visualization -->
+    <path d="M -25,5 L -20,0 L -15,10 L -10,5 L -5,15 L 0,5 L 5,10 L 10,0 L 15,5 L 20,2 L 25,7" 
+          stroke="#29B6F6" stroke-width="1.5" fill="none" stroke-opacity="0.8" />
+    
+    <!-- Connection to Jrotharke -->
+    <path d="M 0,25 L 0,125" stroke="#29B6F6" stroke-width="1" stroke-opacity="0.5" />
+  </g>
+  
+  <!-- 3. Creative Command Center -->
+  <g transform="translate(600, 300)">
+    <!-- Experience node -->
+    <rect x="-40" y="-25" width="80" height="50" rx="5" fill="#0D0D15" opacity="0.8" />
+    
+    <text x="0" y="-10" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="9" fill="#FFFFFF" text-anchor="middle">Creative Command</text>
+    
+    <!-- Command visualization -->
+    <circle cx="-20" cy="5" r="6" fill="#613FE7" opacity="0.7" />
+    <rect x="-5" y="-1" width="12" height="12" rx="2" fill="#FF2D55" opacity="0.7" />
+    <path d="M 15,-1 L 25,5 L 15,11 Z" fill="#29B6F6" opacity="0.7" />
+    
+    <!-- Connection to all platforms -->
+    <path d="M 0,25 L 0,125" stroke="#5AC8FA" stroke-width="1" stroke-opacity="0.5" />
+    <path d="M -40,0 L -160,-150" stroke="#613FE7" stroke-width="1" stroke-opacity="0.5" />
+    <path d="M -40,0 L -400,-150" stroke="#613FE7" stroke-width="1" stroke-opacity="0.5" />
+  </g>
+  
+  <!-- 4. Virtual Escape Room -->
+  <g transform="translate(300, 300)">
+    <!-- Experience node -->
+    <rect x="-40" y="-25" width="80" height="50" rx="5" fill="#0D0D15" opacity="0.8" />
+    
+    <text x="0" y="-10" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="9" fill="#FFFFFF" text-anchor="middle">Virtual Escape Room</text>
+    
+    <!-- Room visualization -->
+    <rect x="-20" y="-5" width="40" height="20" rx="0" fill="none" stroke="#29B6F6" stroke-width="1" stroke-opacity="0.7" />
+    <circle cx="0" cy="5" r="5" fill="#29B6F6" opacity="0.5" />
+    
+    <!-- Connection to Jrotharke -->
+    <path d="M 0,25 L -100,125" stroke="#29B6F6" stroke-width="1" stroke-opacity="0.5" />
+  </g>
+  
+  <!-- 5. Asset Manager -->
+  <g transform="translate(500, 300)">
+    <!-- Experience node -->
+    <rect x="-40" y="-25" width="80" height="50" rx="5" fill="#0D0D15" opacity="0.8" />
+    
+    <text x="0" y="-10" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="9" fill="#FFFFFF" text-anchor="middle">Asset Manager</text>
+    
+    <!-- Asset visualization -->
+    <rect x="-25" y="-5" width="15" height="15" rx="0" fill="#613FE7" opacity="0.5" />
+    <rect x="-5" y="-5" width="15" height="15" rx="0" fill="#613FE7" opacity="0.6" />
+    <rect x="15" y="-5" width="15" height="15" rx="0" fill="#613FE7" opacity="0.5" />
+    
+    <!-- Connection to Oksana -->
+    <path d="M -40,0 L -260,-150" stroke="#613FE7" stroke-width="1" stroke-opacity="0.5" />
+  </g>
+  
+  <!-- 6. Spatial Designer -->
+  <g transform="translate(400, 300)">
+    <!-- Experience node -->
+    <rect x="-40" y="-25" width="80" height="50" rx="5" fill="#0D0D15" opacity="0.8" />
+    
+    <text x="0" y="-10" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="9" fill="#FFFFFF" text-anchor="middle">Spatial Designer</text>
+    
+    <!-- Spatial visualization -->
+    <path d="M -20,-5 L 0,-15 L 20,-5 L 0,15 Z" fill="none" stroke="#5AC8FA" stroke-width="1" stroke-opacity="0.7" />
+    <path d="M -10,0 L 0,-5 L 10,0 L 0,7 Z" fill="#5AC8FA" opacity="0.4" />
+    
+    <!-- Connection to Vision Pro -->
+    <path d="M 0,25 L 200,125" stroke="#5AC8FA" stroke-width="1" stroke-opacity="0.5" />
+  </g>
+  
+  <!-- Title and Labels -->
+  <g font-family="SF Pro Text, -apple-system, system-ui, sans-serif" fill="#FFFFFF">
+    <text x="400" y="40" font-size="18" text-anchor="middle" fill="#FFFFFF">9Bit Quantum-Spatial Implementation Across Products</text>
+    <text x="400" y="65" font-size="12" text-anchor="middle" fill="#5AC8FA">Unified Design Language Creating Cohesive User Experiences</text>
+  </g>
+  
+  <!-- Energy transfer particles across the system -->
+  <g>
+    <!-- Central system particles -->
+    <circle cx="400" cy="300" r="2" fill="#5AC8FA" opacity="0.7">
+      <animate attributeName="cx" values="400;410;400" dur="6s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="300;290;300" dur="6s" repeatCount="indefinite" />
+    </circle>
+    
+    <circle cx="400" cy="300" r="1.5" fill="#FF2D55" opacity="0.6">
+      <animate attributeName="cx" values="400;390;400" dur="8s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="300;310;300" dur="8s" repeatCount="indefinite" />
+    </circle>
+    
+    <circle cx="400" cy="300" r="2" fill="#29B6F6" opacity="0.6">
+      <animate attributeName="cx" values="400;410;400" dur="7s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="300;310;300" dur="7s" repeatCount="indefinite" />
+    </circle>
+    
+    <circle cx="400" cy="300" r="1.5" fill="#613FE7" opacity="0.7">
+      <animate attributeName="cx" values="400;390;400" dur="9s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="300;290;300" dur="9s" repeatCount="indefinite" />
+    </circle>
+  </g>
+</svg>

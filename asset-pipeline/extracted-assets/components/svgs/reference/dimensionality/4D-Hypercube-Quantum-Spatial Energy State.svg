@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="Spatial_Background_Gradient" data-name="Spatial Background Gradient" x1="-12.125" y1="540" x2="1920" y2="540" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0a0621"/>
+      <stop offset=".3" stop-color="#131a36"/>
+      <stop offset=".7" stop-color="#331f4a"/>
+      <stop offset="1" stop-color="#0d0d15"/>
+    </linearGradient>
+    <linearGradient id="Spatial_Background_Gradient-2" data-name="Spatial Background Gradient" x1="-8.465" y1="542.157" y2="542.157" xlink:href="#Spatial_Background_Gradient"/>
+    <radialGradient id="New_Gradient_Swatch" data-name="New Gradient Swatch" cx="966.062" cy="540" fx="966.062" fy="540" r="782.584" gradientTransform="" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#131a36" stop-opacity=".2"/>
+      <stop offset="1" stop-color="#050008" stop-opacity=".8"/>
+    </radialGradient>
+    <radialGradient id="radial-gradient" cx="-2936.216" cy="379.579" fx="-2936.216" fy="379.579" r="442.457" gradientTransform="translate(2834.92 66.013) scale(1.167 1.3)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#126d71" stop-opacity="0"/>
+      <stop offset=".134" stop-color="#331f4a" stop-opacity="0"/>
+      <stop offset=".4" stop-color="#331f4a"/>
+      <stop offset=".874" stop-color="#bf4080" stop-opacity=".2"/>
+      <stop offset=".983" stop-color="#bf4080" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="radial-gradient-2" cx="-1283.395" cy="-543.471" fx="-1283.395" fy="-543.471" r="446.612" gradientTransform="translate(2137.133 965.25) scale(1.167 .938)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#bf4080" stop-opacity=".9"/>
+      <stop offset=".459" stop-color="#331f4a"/>
+      <stop offset=".766" stop-color="#126d71" stop-opacity="0"/>
+      <stop offset=".874" stop-color="#bf4080" stop-opacity=".2"/>
+    </radialGradient>
+    <radialGradient id="radial-gradient-3" cx="-1310.881" cy="953.288" fx="-1310.881" fy="953.288" r="442.457" gradientTransform="translate(2976.363 -680.011) scale(1.167 1.3)" xlink:href="#radial-gradient"/>
+    <radialGradient id="radial-gradient-4" cx="960" cy="539.157" fx="960" fy="539.157" r="779.594" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#131a36" stop-opacity=".2"/>
+      <stop offset="1" stop-color="#050008" stop-opacity=".8"/>
+    </radialGradient>
+    <linearGradient id="Accent_Highlight_Gradient" data-name="Accent Highlight Gradient" x1="504.276" y1="427.683" x2="637.226" y2="427.683" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5ac8fa"/>
+      <stop offset=".5" stop-color="#126d71"/>
+      <stop offset="1" stop-color="#36eae8"/>
+    </linearGradient>
+    <linearGradient id="Accent_Highlight_Gradient-2" data-name="Accent Highlight Gradient" x1="569.089" y1="427.683" x2="572.413" y2="427.683" xlink:href="#Accent_Highlight_Gradient"/>
+    <linearGradient id="Accent_Highlight_Gradient-3" data-name="Accent Highlight Gradient" x1="511.41" y1="386.137" x2="546.998" y2="386.137" xlink:href="#Accent_Highlight_Gradient"/>
+    <linearGradient id="Accent_Highlight_Gradient-4" data-name="Accent Highlight Gradient" x1="594.504" y1="386.137" x2="630.091" y2="386.137" xlink:href="#Accent_Highlight_Gradient"/>
+    <linearGradient id="Accent_Highlight_Gradient-5" data-name="Accent Highlight Gradient" x1="511.41" y1="469.23" x2="546.998" y2="469.23" xlink:href="#Accent_Highlight_Gradient"/>
+    <linearGradient id="Accent_Highlight_Gradient-6" data-name="Accent Highlight Gradient" x1="594.504" y1="469.23" x2="630.091" y2="469.23" xlink:href="#Accent_Highlight_Gradient"/>
+    <linearGradient id="Accent_Highlight_Gradient-7" data-name="Accent Highlight Gradient" x1="1242.978" y1="394.446" x2="1394.208" y2="394.446" xlink:href="#Accent_Highlight_Gradient"/>
+    <linearGradient id="Accent_Highlight_Gradient-8" data-name="Accent Highlight Gradient" x1="1316.931" y1="344.59" x2="1320.255" y2="344.59" xlink:href="#Accent_Highlight_Gradient"/>
+    <linearGradient id="Accent_Highlight_Gradient-9" data-name="Accent Highlight Gradient" x1="1375.584" y1="365.363" x2="1386.243" y2="365.363" xlink:href="#Accent_Highlight_Gradient"/>
+    <linearGradient id="Accent_Highlight_Gradient-10" data-name="Accent Highlight Gradient" x1="1250.943" y1="365.363" x2="1261.603" y2="365.363" xlink:href="#Accent_Highlight_Gradient"/>
+    <linearGradient id="Accent_Highlight_Gradient-11" data-name="Accent Highlight Gradient" x1="1316.931" y1="469.23" x2="1320.255" y2="469.23" xlink:href="#Accent_Highlight_Gradient"/>
+    <linearGradient id="Accent_Highlight_Gradient-12" data-name="Accent Highlight Gradient" x1="860.697" y1="745.101" x2="915.64" y2="745.101" xlink:href="#Accent_Highlight_Gradient"/>
+    <linearGradient id="Accent_Highlight_Gradient-13" data-name="Accent Highlight Gradient" x1="973.704" y1="745.101" x2="1028.647" y2="745.101" xlink:href="#Accent_Highlight_Gradient"/>
+    <linearGradient id="Accent_Highlight_Gradient-14" data-name="Accent Highlight Gradient" x1="973.704" y1="858.108" x2="1028.647" y2="858.108" xlink:href="#Accent_Highlight_Gradient"/>
+    <linearGradient id="Accent_Highlight_Gradient-15" data-name="Accent Highlight Gradient" x1="860.697" y1="858.108" x2="915.64" y2="858.108" xlink:href="#Accent_Highlight_Gradient"/>
+    <radialGradient id="New_Gradient_Swatch-2" data-name="New Gradient Swatch" cx="334.985" cy="84.78" fx="334.985" fy="84.78" r="227.389" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#New_Gradient_Swatch"/>
+    <linearGradient id="Accent_Highlight_Gradient-16" data-name="Accent Highlight Gradient" x1="19.625" y1="84.78" x2="650.345" y2="84.78" xlink:href="#Accent_Highlight_Gradient"/>
+  </defs>
+  <g isolation="isolate">
+    <g id="Background_logo_footer" data-name="Background + logo footer">
+      <rect x="-12.125" y="0" width="1932.125" height="1080" fill="url(#Spatial_Background_Gradient)"/>
+      <rect x="-8.465" y="0" width="1928.465" height="1084.314" fill="url(#Spatial_Background_Gradient-2)"/>
+    </g>
+    <g id="Depth_Layers" data-name="Depth Layers">
+      <rect width="1920" height="1080" fill="url(#New_Gradient_Swatch)"/>
+      <rect x="-1228.736" y="162.291" width="1274.455" height="794.621" transform="translate(-245.882 -177.676) rotate(-21.471)" fill="url(#radial-gradient)" mix-blend-mode="color" opacity=".28"/>
+      <rect x="-3.74" y="166.102" width="1286.421" height="578.637" transform="translate(79.268 -94.583) rotate(9.016)" fill="url(#radial-gradient-2)" mix-blend-mode="color" opacity=".28"/>
+      <rect x="809.398" y="162.291" width="1274.455" height="794.621" transform="translate(-104.439 568.348) rotate(-21.471)" fill="url(#radial-gradient-3)" mix-blend-mode="color" opacity=".28"/>
+      <rect y="-3" width="1920" height="1084.314" fill="url(#radial-gradient-4)"/>
+    </g>
+    <g id="Content">
+      <g>
+        <circle cx="570.751" cy="427.683" r="166.187" fill="#131a36" stroke="#331f4a" stroke-width="4.986"/>
+        <g>
+          <rect x="537.513" y="394.446" width="66.475" height="66.475" fill="#6a3093"/>
+          <rect x="537.513" y="394.446" width="66.475" height="66.475" fill="#bf4080" isolation="isolate" opacity=".7"/>
+          <circle cx="570.751" cy="427.683" r="24.928" fill="#fff" isolation="isolate" opacity=".3"/>
+          <line x1="504.276" y1="427.683" x2="637.226" y2="427.683" fill="none" isolation="isolate" opacity=".6" stroke="url(#Accent_Highlight_Gradient)" stroke-width="3.324"/>
+          <line x1="570.751" y1="361.209" x2="570.751" y2="494.158" fill="none" isolation="isolate" opacity=".6" stroke="url(#Accent_Highlight_Gradient-2)" stroke-width="3.324"/>
+        </g>
+        <g>
+          <rect x="462.729" y="319.662" width="49.856" height="49.856" fill="#331f4a"/>
+          <rect x="462.729" y="319.662" width="49.856" height="49.856" fill="#6a3093" isolation="isolate" opacity=".5"/>
+        </g>
+        <g>
+          <rect x="628.916" y="319.662" width="49.856" height="49.856" fill="#331f4a"/>
+          <rect x="628.916" y="319.662" width="49.856" height="49.856" fill="#6a3093" isolation="isolate" opacity=".4"/>
+        </g>
+        <g>
+          <rect x="462.729" y="485.849" width="49.856" height="49.856" fill="#331f4a"/>
+          <rect x="462.729" y="485.849" width="49.856" height="49.856" fill="#6a3093" isolation="isolate" opacity=".4"/>
+        </g>
+        <g>
+          <rect x="628.916" y="485.849" width="49.856" height="49.856" fill="#331f4a"/>
+          <rect x="628.916" y="485.849" width="49.856" height="49.856" fill="#6a3093" isolation="isolate" opacity=".5"/>
+        </g>
+        <path d="M512.585,369.518l33.237,33.237" isolation="isolate" opacity=".6" stroke="url(#Accent_Highlight_Gradient-3)" stroke-width="3.324"/>
+        <path d="M628.916,369.518l-33.237,33.237" isolation="isolate" opacity=".6" stroke="url(#Accent_Highlight_Gradient-4)" stroke-width="3.324"/>
+        <path d="M512.585,485.849l33.237-33.237" isolation="isolate" opacity=".6" stroke="url(#Accent_Highlight_Gradient-5)" stroke-width="3.324"/>
+        <path d="M628.916,485.849l-33.237-33.237" isolation="isolate" opacity=".6" stroke="url(#Accent_Highlight_Gradient-6)" stroke-width="3.324"/>
+        <text transform="translate(478.005 560.632)" fill="#fff" font-family="SF Pro Regular, &apos;SF Pro &apos;" font-size="23.266" isolation="isolate"><tspan x="0" y="0" letter-spacing="-.007em">F</tspan><tspan x="12.424" y="0">u</tspan><tspan x="25.127" y="0" letter-spacing=".006em">l</tspan><tspan x="29.547" y="0">l E</tspan><tspan x="51.021" y="0" letter-spacing="-.002em">n</tspan><tspan x="63.515" y="0" letter-spacing="-.005em">e</tspan><tspan x="75.59" y="0" letter-spacing="-.009em">r</tspan><tspan x="85.385" y="0" letter-spacing="-.014em">g</tspan><tspan x="97.856" y="0">y </tspan><tspan x="114.002" y="0" letter-spacing="-.015em">S</tspan><tspan x="127.357" y="0" letter-spacing="-.006em">t</tspan><tspan x="135.151" y="0" letter-spacing="-.008em">a</tspan><tspan x="146.621" y="0" letter-spacing="-.022em">t</tspan><tspan x="154.043" y="0">e</tspan></text>
+        <text transform="translate(461.735 593.87)" fill="#5ac8fa" font-family="SF Pro Regular, &apos;SF Pro &apos;" font-size="19.942" isolation="isolate"><tspan x="0" y="0" letter-spacing="-.014em">R</tspan><tspan x="11.686" y="0">a</tspan><tspan x="21.677" y="0" letter-spacing="-.005em">pi</tspan><tspan x="35.976" y="0" letter-spacing="0em">d </tspan><tspan x="50.633" y="0" letter-spacing="0em">p</tspan><tspan x="61.621" y="0" letter-spacing="0em">a</tspan><tspan x="71.612" y="0" letter-spacing="-.001em">r</tspan><tspan x="80.167" y="0" letter-spacing="-.006em">t</tspan><tspan x="86.848" y="0" letter-spacing="-.005em">i</tspan><tspan x="90.278" y="0" letter-spacing="-.004em">cl</tspan><tspan x="104.118" y="0">e </tspan><tspan x="118.257" y="0" letter-spacing="-.005em">e</tspan><tspan x="128.607" y="0">m</tspan><tspan x="146.116" y="0" letter-spacing="-.003em">i</tspan><tspan x="149.586" y="0" letter-spacing="-.005em">s</tspan><tspan x="159.139" y="0" letter-spacing="-.003em">s</tspan><tspan x="168.731" y="0" letter-spacing="-.005em">io</tspan><tspan x="182.99" y="0">n</tspan></text>
+        <text transform="translate(449.187 228.259)" fill="#fff" font-family="SF Pro Semibold, &apos;SF Pro &apos;" font-size="33.237" font-weight="600" isolation="isolate"><tspan x="0" y="0">2D E</tspan><tspan x="69.698" y="0" letter-spacing="-.003em">n</tspan><tspan x="89.175" y="0" letter-spacing="-.006em">e</tspan><tspan x="107.356" y="0" letter-spacing="-.004em">r</tspan><tspan x="123.609" y="0" letter-spacing="-.01em">g</tspan><tspan x="142.986" y="0">y </tspan><tspan x="168.545" y="0" letter-spacing="-.013em">S</tspan><tspan x="188.687" y="0">t</tspan><tspan x="201.982" y="0" letter-spacing="-.004em">a</tspan><tspan x="219.93" y="0" letter-spacing="-.015em">t</tspan><tspan x="232.726" y="0">e</tspan></text>
+      </g>
+      <g>
+        <circle cx="1318.593" cy="427.683" r="166.187" fill="#131a36" stroke="#331f4a" stroke-width="4.986"/>
+        <g>
+          <path d="M1318.593,460.921l-58.166-33.237,58.166-33.237,58.166,33.237-58.166,33.237Z" fill="#331f4a"/>
+          <path d="M1260.428,427.683v-66.475l58.166-33.237v66.475l-58.166,33.237Z" fill="#4a2f61"/>
+          <path d="M1376.759,427.683v-66.475l-58.166-33.237v66.475l58.166,33.237Z" fill="#6a3093"/>
+          <path d="M1318.593,460.921l-58.166-33.237v-66.475l58.166-33.237,58.166,33.237v66.475l-58.166,33.237Z" fill="#bf4080" isolation="isolate" opacity=".5"/>
+          <path d="M1318.593,444.302l-33.237-16.619v-49.856l33.237-16.619,33.237,16.619v49.856l-33.237,16.619Z" fill="#fff" isolation="isolate" opacity=".2"/>
+          <circle cx="1318.593" cy="327.971" r="8.309" fill="#5ac8fa" isolation="isolate" opacity=".8"/>
+          <circle cx="1376.759" cy="361.209" r="6.647" fill="#5ac8fa" isolation="isolate" opacity=".7"/>
+          <circle cx="1260.428" cy="361.209" r="6.647" fill="#5ac8fa" isolation="isolate" opacity=".7"/>
+          <circle cx="1318.593" cy="394.446" r="74.784" fill="none" isolation="isolate" opacity=".4" stroke="url(#Accent_Highlight_Gradient-7)" stroke-width="1.662"/>
+        </g>
+        <g>
+          <path d="M1318.593,311.352l-33.237-16.619,33.237-16.619,33.237,16.619-33.237,16.619Z" fill="#331f4a"/>
+          <path d="M1285.356,294.734v-24.928l33.237-16.619v24.928l-33.237,16.619Z" fill="#4a2f61"/>
+          <path d="M1351.831,294.734v-24.928l-33.237-16.619v24.928l33.237,16.619Z" fill="#6a3093"/>
+          <path d="M1318.593,311.352l-33.237-16.619v-24.928l33.237-16.619,33.237,16.619v24.928l-33.237,16.619Z" fill="#bf4080" isolation="isolate" opacity=".3"/>
+        </g>
+        <g>
+          <path d="M1418.306,411.065l-33.237-16.619,33.237-16.619,33.237,16.619-33.237,16.619Z" fill="#331f4a"/>
+          <path d="M1385.068,394.446v-24.928l33.237-16.619v24.928l-33.237,16.619Z" fill="#4a2f61"/>
+          <path d="M1451.543,394.446v-24.928l-33.237-16.619v24.928l33.237,16.619Z" fill="#6a3093"/>
+          <path d="M1418.306,411.065l-33.237-16.619v-24.928l33.237-16.619,33.237,16.619v24.928l-33.237,16.619Z" fill="#bf4080" isolation="isolate" opacity=".4"/>
+        </g>
+        <g>
+          <path d="M1218.881,411.065l-33.237-16.619,33.237-16.619,33.237,16.619-33.237,16.619Z" fill="#331f4a"/>
+          <path d="M1185.643,394.446v-24.928l33.237-16.619v24.928l-33.237,16.619Z" fill="#4a2f61"/>
+          <path d="M1252.118,394.446v-24.928l-33.237-16.619v24.928l33.237,16.619Z" fill="#6a3093"/>
+          <path d="M1218.881,411.065l-33.237-16.619v-24.928l33.237-16.619,33.237,16.619v24.928l-33.237,16.619Z" fill="#bf4080" isolation="isolate" opacity=".35"/>
+        </g>
+        <g>
+          <path d="M1318.593,510.777l-33.237-16.619,33.237-16.619,33.237,16.619-33.237,16.619Z" fill="#331f4a"/>
+          <path d="M1285.356,494.158v-24.928l33.237-16.619v24.928l-33.237,16.619Z" fill="#4a2f61"/>
+          <path d="M1351.831,494.158v-24.928l-33.237-16.619v24.928l33.237,16.619Z" fill="#6a3093"/>
+          <path d="M1318.593,510.777l-33.237-16.619v-24.928l33.237-16.619,33.237,16.619v24.928l-33.237,16.619Z" fill="#bf4080" isolation="isolate" opacity=".25"/>
+        </g>
+        <line x1="1318.593" y1="327.971" x2="1318.593" y2="361.209" fill="none" isolation="isolate" opacity=".6" stroke="url(#Accent_Highlight_Gradient-8)" stroke-width="3.324"/>
+        <line x1="1376.759" y1="361.209" x2="1385.068" y2="369.518" fill="none" isolation="isolate" opacity=".6" stroke="url(#Accent_Highlight_Gradient-9)" stroke-width="3.324"/>
+        <line x1="1260.428" y1="361.209" x2="1252.118" y2="369.518" fill="none" isolation="isolate" opacity=".6" stroke="url(#Accent_Highlight_Gradient-10)" stroke-width="3.324"/>
+        <line x1="1318.593" y1="460.921" x2="1318.593" y2="477.54" fill="none" isolation="isolate" opacity=".6" stroke="url(#Accent_Highlight_Gradient-11)" stroke-width="3.324"/>
+        <text transform="translate(1209.749 560.632)" fill="#fff" font-family="SF Pro Regular, &apos;SF Pro &apos;" font-size="23.266" isolation="isolate"><tspan x="0" y="0">3D E</tspan><tspan x="45.81" y="0" letter-spacing="-.002em">n</tspan><tspan x="58.304" y="0" letter-spacing="-.005em">e</tspan><tspan x="70.379" y="0" letter-spacing="-.009em">r</tspan><tspan x="80.174" y="0" letter-spacing="-.014em">g</tspan><tspan x="92.645" y="0">y Em</tspan><tspan x="142.108" y="0" letter-spacing="-.003em">i</tspan><tspan x="146.156" y="0" letter-spacing="-.005em">s</tspan><tspan x="157.301" y="0" letter-spacing="-.003em">s</tspan><tspan x="168.492" y="0" letter-spacing="-.005em">io</tspan><tspan x="185.127" y="0" letter-spacing="0em">n</tspan></text>
+        <text transform="translate(1193.491 593.87)" fill="#5ac8fa" font-family="SF Pro Regular, &apos;SF Pro &apos;" font-size="19.942" isolation="isolate"><tspan x="0" y="0" letter-spacing="-.065em">V</tspan><tspan x="11.726" y="0" letter-spacing="-.004em">o</tspan><tspan x="22.575" y="0">lu</tspan><tspan x="37.133" y="0" letter-spacing="-.002em">m</tspan><tspan x="54.602" y="0" letter-spacing="-.01em">e</tspan><tspan x="64.852" y="0">t</tspan><tspan x="71.652" y="0" letter-spacing="-.015em">r</tspan><tspan x="79.928" y="0" letter-spacing="-.005em">i</tspan><tspan x="83.358" y="0">c </tspan><tspan x="97.378" y="0" letter-spacing="-.005em">e</tspan><tspan x="107.728" y="0" letter-spacing="-.002em">n</tspan><tspan x="118.437" y="0" letter-spacing="-.005em">e</tspan><tspan x="128.787" y="0" letter-spacing="-.009em">r</tspan><tspan x="137.183" y="0" letter-spacing="-.014em">g</tspan><tspan x="147.872" y="0">y t</tspan><tspan x="168.512" y="0" letter-spacing="-.021em">r</tspan><tspan x="176.668" y="0">a</tspan><tspan x="186.659" y="0" letter-spacing="-.003em">n</tspan><tspan x="197.348" y="0" letter-spacing="-.006em">s</tspan><tspan x="206.881" y="0" letter-spacing="-.026em">f</tspan><tspan x="212.225" y="0" letter-spacing="-.005em">e</tspan><tspan x="222.575" y="0" letter-spacing="0em">r</tspan></text>
+        <text transform="translate(1122.245 228.259)" fill="#fff" font-family="SF Pro Semibold, &apos;SF Pro &apos;" font-size="33.237" font-weight="600" isolation="isolate"><tspan x="0" y="0">3D </tspan><tspan x="49.556" y="0" letter-spacing=".002em">I</tspan><tspan x="57.732" y="0" letter-spacing="0em">s</tspan><tspan x="74.516" y="0" letter-spacing="-.006em">o</tspan><tspan x="93.229" y="0" letter-spacing="-.003em">m</tspan><tspan x="123.741" y="0" letter-spacing="-.01em">e</tspan><tspan x="141.789" y="0" letter-spacing="0em">t</tspan><tspan x="155.083" y="0" letter-spacing="-.01em">r</tspan><tspan x="171.137" y="0" letter-spacing="-.006em">i</tspan><tspan x="178.516" y="0">c E</tspan><tspan x="222.953" y="0" letter-spacing="-.003em">n</tspan><tspan x="242.431" y="0" letter-spacing="-.006em">e</tspan><tspan x="260.611" y="0" letter-spacing="-.004em">r</tspan><tspan x="276.865" y="0" letter-spacing="-.01em">g</tspan><tspan x="296.242" y="0" letter-spacing="0em">y </tspan><tspan x="321.801" y="0" letter-spacing="-.013em">S</tspan><tspan x="341.943" y="0">t</tspan><tspan x="355.238" y="0" letter-spacing="-.004em">a</tspan><tspan x="373.185" y="0" letter-spacing="-.015em">t</tspan><tspan x="385.982" y="0">e</tspan></text>
+      </g>
+      <g>
+        <circle cx="944.672" cy="801.605" r="166.187" fill="#131a36" stroke="#331f4a" stroke-width="4.986"/>
+        <g>
+          <path d="M914.758,771.691h59.827v59.827h-59.827v-59.827Z" fill="#331f4a" isolation="isolate" opacity=".7"/>
+          <circle cx="944.672" cy="801.605" r="19.942" fill="#bf4080" isolation="isolate" opacity=".6"/>
+        </g>
+        <g>
+          <path d="M861.578,718.511h166.187v166.187h-166.187v-166.187Z" fill="none" isolation="isolate" opacity=".5" stroke="#6a3093" stroke-width="3.324"/>
+          <line x1="861.578" y1="718.511" x2="914.758" y2="771.691" fill="none" isolation="isolate" opacity=".6" stroke="url(#Accent_Highlight_Gradient-12)" stroke-width="2.493"/>
+          <line x1="1027.766" y1="718.511" x2="974.586" y2="771.691" fill="none" isolation="isolate" opacity=".6" stroke="url(#Accent_Highlight_Gradient-13)" stroke-width="2.493"/>
+          <line x1="1027.766" y1="884.698" x2="974.586" y2="831.518" fill="none" isolation="isolate" opacity=".6" stroke="url(#Accent_Highlight_Gradient-14)" stroke-width="2.493"/>
+          <line x1="861.578" y1="884.698" x2="914.758" y2="831.518" fill="none" isolation="isolate" opacity=".6" stroke="url(#Accent_Highlight_Gradient-15)" stroke-width="2.493"/>
+          <g>
+            <path d="M878.197,735.13c33.237-33.237,99.712-33.237,132.95,0" fill="none" isolation="isolate" opacity=".5" stroke="#bf4080" stroke-width="3.324"/>
+            <path d="M878.197,868.08c33.237,33.237,99.712,33.237,132.95,0" fill="none" isolation="isolate" opacity=".5" stroke="#bf4080" stroke-width="3.324"/>
+            <path d="M878.197,735.13c-33.237,33.237-33.237,99.712,0,132.95" fill="none" isolation="isolate" opacity=".5" stroke="#bf4080" stroke-width="3.324"/>
+            <path d="M1011.147,735.13c33.237,33.237,33.237,99.712,0,132.95" fill="none" isolation="isolate" opacity=".5" stroke="#bf4080" stroke-width="3.324"/>
+          </g>
+        </g>
+        <g>
+          <circle cx="886.506" cy="743.439" r="4.986" fill="#5ac8fa"/>
+          <circle cx="1002.838" cy="743.439" r="4.986" fill="#5ac8fa"/>
+          <circle cx="1002.838" cy="859.77" r="4.986" fill="#5ac8fa"/>
+          <circle cx="886.506" cy="859.77" r="4.986" fill="#5ac8fa"/>
+        </g>
+        <circle cx="944.672" cy="801.605" r="99.712" fill="none" isolation="isolate" opacity=".2" stroke="#fff" stroke-width="1.662"/>
+        <text transform="translate(772.738 909.626)" fill="#fff" font-family="SF Pro Regular, &apos;SF Pro &apos;" font-size="23.266" isolation="isolate"><tspan x="0" y="0" letter-spacing="-.018em">H</tspan><tspan x="14.588" y="0" letter-spacing="-.009em">y</tspan><tspan x="26.221" y="0">p</tspan><tspan x="39.017" y="0" letter-spacing="-.005em">e</tspan><tspan x="51.092" y="0" letter-spacing="-.009em">r</tspan><tspan x="60.887" y="0">di</tspan><tspan x="77.801" y="0" letter-spacing="-.002em">m</tspan><tspan x="98.182" y="0" letter-spacing="-.005em">e</tspan><tspan x="110.257" y="0" letter-spacing="-.003em">ns</tspan><tspan x="133.919" y="0" letter-spacing="-.005em">io</tspan><tspan x="150.554" y="0" letter-spacing="-.002em">n</tspan><tspan x="163.048" y="0" letter-spacing="0em">al E</tspan><tspan x="196.178" y="0" letter-spacing="-.002em">n</tspan><tspan x="208.672" y="0" letter-spacing="-.005em">e</tspan><tspan x="220.747" y="0" letter-spacing="-.009em">r</tspan><tspan x="230.542" y="0" letter-spacing="-.014em">g</tspan><tspan x="243.013" y="0">y </tspan><tspan x="259.159" y="0" letter-spacing="-.015em">S</tspan><tspan x="272.514" y="0" letter-spacing="-.006em">t</tspan><tspan x="280.308" y="0" letter-spacing="-.008em">a</tspan><tspan x="291.778" y="0" letter-spacing="-.022em">t</tspan><tspan x="299.2" y="0" letter-spacing="0em">e</tspan></text>
+        <text transform="translate(781.949 942.863)" fill="#5ac8fa" font-family="SF Pro Regular, &apos;SF Pro &apos;" font-size="19.942" isolation="isolate"><tspan x="0" y="0">C</tspan><tspan x="13.082" y="0" letter-spacing="-.009em">r</tspan><tspan x="21.478" y="0">o</tspan><tspan x="32.406" y="0" letter-spacing="-.005em">s</tspan><tspan x="41.959" y="0" letter-spacing="-.007em">s</tspan><tspan x="51.471" y="0">-di</tspan><tspan x="72.45" y="0" letter-spacing="-.002em">m</tspan><tspan x="89.92" y="0" letter-spacing="-.005em">e</tspan><tspan x="100.27" y="0" letter-spacing="-.003em">ns</tspan><tspan x="120.551" y="0" letter-spacing="-.005em">io</tspan><tspan x="134.81" y="0" letter-spacing="-.002em">n</tspan><tspan x="145.519" y="0">al </tspan><tspan x="162.868" y="0" letter-spacing="-.005em">e</tspan><tspan x="173.219" y="0" letter-spacing="-.002em">n</tspan><tspan x="183.927" y="0" letter-spacing="-.005em">e</tspan><tspan x="194.278" y="0" letter-spacing="-.009em">r</tspan><tspan x="202.673" y="0" letter-spacing="-.014em">g</tspan><tspan x="213.362" y="0" letter-spacing="0em">y t</tspan><tspan x="234.002" y="0" letter-spacing="-.021em">r</tspan><tspan x="242.159" y="0">a</tspan><tspan x="252.15" y="0" letter-spacing="-.003em">n</tspan><tspan x="262.839" y="0" letter-spacing="-.006em">s</tspan><tspan x="272.371" y="0" letter-spacing="-.026em">f</tspan><tspan x="277.716" y="0" letter-spacing="-.005em">e</tspan><tspan x="288.066" y="0" letter-spacing="0em">r</tspan></text>
+        <text transform="translate(735.381 643.726)" fill="#fff" font-family="SF Pro Semibold, &apos;SF Pro &apos;" font-size="33.237" font-weight="600" isolation="isolate"><tspan x="0" y="0">4D </tspan><tspan x="50.52" y="0" letter-spacing="-.014em">Hy</tspan><tspan x="91.635" y="0">p</tspan><tspan x="111.344" y="0" letter-spacing="-.006em">e</tspan><tspan x="129.525" y="0" letter-spacing="-.004em">r</tspan><tspan x="145.778" y="0" letter-spacing="-.006em">c</tspan><tspan x="163.892" y="0">ube E</tspan><tspan x="247.682" y="0" letter-spacing="-.003em">n</tspan><tspan x="267.159" y="0" letter-spacing="-.006em">e</tspan><tspan x="285.34" y="0" letter-spacing="-.004em">r</tspan><tspan x="301.593" y="0" letter-spacing="-.01em">g</tspan><tspan x="320.97" y="0">y </tspan><tspan x="346.53" y="0" letter-spacing="-.013em">S</tspan><tspan x="366.671" y="0">t</tspan><tspan x="379.966" y="0" letter-spacing="-.004em">a</tspan><tspan x="397.914" y="0" letter-spacing="-.015em">t</tspan><tspan x="410.71" y="0">e</tspan></text>
+      </g>
+      <g>
+        <rect x="529.204" y="942.864" width="830.936" height="66.475" rx="8.309" ry="8.309" fill="#131a36" isolation="isolate" opacity=".8"/>
+        <g>
+          <rect x="645.535" y="959.483" width="33.237" height="33.237" fill="#6a3093" isolation="isolate" opacity=".3"/>
+          <text transform="translate(695.392 984.409)" fill="#fff" font-family="SF Pro Regular, &apos;SF Pro &apos;" font-size="23.266" isolation="isolate"><tspan x="0" y="0" letter-spacing="-.025em">P</tspan><tspan x="13.239" y="0" letter-spacing="-.003em">a</tspan><tspan x="24.825" y="0" letter-spacing="-.005em">s</tspan><tspan x="35.97" y="0" letter-spacing="-.003em">s</tspan><tspan x="47.161" y="0" letter-spacing="-.01em">i</tspan><tspan x="51.046" y="0" letter-spacing="-.025em">v</tspan><tspan x="62.307" y="0">e </tspan><tspan x="78.802" y="0" letter-spacing="-.015em">S</tspan><tspan x="92.157" y="0" letter-spacing="-.006em">t</tspan><tspan x="99.951" y="0" letter-spacing="-.008em">a</tspan><tspan x="111.421" y="0" letter-spacing="-.022em">t</tspan><tspan x="118.843" y="0">e</tspan></text>
+        </g>
+        <g>
+          <rect x="928.053" y="959.483" width="33.237" height="33.237" fill="#6a3093" isolation="isolate" opacity=".7"/>
+          <rect x="928.053" y="959.483" width="33.237" height="33.237" fill="#bf4080" isolation="isolate" opacity=".4"/>
+          <text transform="translate(977.911 984.409)" fill="#fff" font-family="SF Pro Regular, &apos;SF Pro &apos;" font-size="23.266" isolation="isolate"><tspan x="0" y="0" letter-spacing="-.05em">T</tspan><tspan x="12.145" y="0" letter-spacing="-.021em">r</tspan><tspan x="21.661" y="0" letter-spacing="0em">a</tspan><tspan x="33.317" y="0" letter-spacing="-.003em">ns</tspan><tspan x="56.979" y="0" letter-spacing="-.006em">it</tspan><tspan x="68.751" y="0" letter-spacing="-.005em">io</tspan><tspan x="85.386" y="0" letter-spacing="-.002em">n</tspan><tspan x="97.88" y="0">al </tspan><tspan x="118.121" y="0" letter-spacing="-.015em">S</tspan><tspan x="131.476" y="0" letter-spacing="-.006em">t</tspan><tspan x="139.27" y="0" letter-spacing="-.008em">a</tspan><tspan x="150.74" y="0" letter-spacing="-.022em">t</tspan><tspan x="158.162" y="0">e</tspan></text>
+        </g>
+        <g>
+          <rect x="1210.572" y="959.483" width="33.237" height="33.237" fill="#bf4080" isolation="isolate" opacity=".7"/>
+          <circle cx="1227.19" cy="976.101" r="8.309" fill="#5ac8fa"/>
+          <text transform="translate(1260.428 984.409)" fill="#fff" font-family="SF Pro Regular, &apos;SF Pro &apos;" font-size="23.266" isolation="isolate"><tspan x="0" y="0" letter-spacing="-.021em">A</tspan><tspan x="15.169" y="0" letter-spacing="-.01em">c</tspan><tspan x="26.989" y="0" letter-spacing="-.006em">t</tspan><tspan x="34.782" y="0" letter-spacing="-.01em">i</tspan><tspan x="38.668" y="0" letter-spacing="-.025em">v</tspan><tspan x="49.928" y="0">e E</tspan><tspan x="79.313" y="0" letter-spacing="-.002em">n</tspan><tspan x="91.807" y="0" letter-spacing="-.005em">e</tspan><tspan x="103.882" y="0" letter-spacing="-.009em">r</tspan><tspan x="113.677" y="0" letter-spacing="-.014em">g</tspan><tspan x="126.147" y="0">y </tspan><tspan x="142.294" y="0" letter-spacing="-.015em">S</tspan><tspan x="155.648" y="0" letter-spacing="-.006em">t</tspan><tspan x="163.442" y="0" letter-spacing="-.008em">a</tspan><tspan x="174.913" y="0" letter-spacing="-.022em">t</tspan><tspan x="182.334" y="0">e</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g id="Titles">
+      <rect x="20" y="20" width="629.97" height="129.56" rx="18.441" ry="18.441" fill="url(#New_Gradient_Swatch-2)" isolation="isolate" opacity=".8" stroke="url(#Accent_Highlight_Gradient-16)" stroke-width=".75"/>
+      <g isolation="isolate">
+        <g isolation="isolate">
+          <text transform="translate(58.126 75.84)" fill="#fff" font-family="SF Pro Semibold, &apos;SF Pro &apos;" font-size="30" font-weight="600" isolation="isolate"><tspan x="0" y="0">Q</tspan><tspan x="21.209" y="0" letter-spacing="-.002em">u</tspan><tspan x="38.819" y="0" letter-spacing="0em">a</tspan><tspan x="55.139" y="0" letter-spacing="-.004em">n</tspan><tspan x="72.689" y="0">tum-S</tspan><tspan x="160.917" y="0" letter-spacing="-.002em">p</tspan><tspan x="178.647" y="0" letter-spacing="-.004em">a</tspan><tspan x="194.847" y="0" letter-spacing="-.003em">t</tspan><tspan x="206.757" y="0">ial E</tspan><tspan x="260.726" y="0" letter-spacing="-.003em">n</tspan><tspan x="278.306" y="0" letter-spacing="-.006em">e</tspan><tspan x="294.716" y="0" letter-spacing="-.004em">r</tspan><tspan x="309.385" y="0" letter-spacing="-.01em">g</tspan><tspan x="326.875" y="0" letter-spacing="0em">y </tspan><tspan x="349.945" y="0" letter-spacing="-.013em">S</tspan><tspan x="368.125" y="0">t</tspan><tspan x="380.125" y="0" letter-spacing="-.004em">a</tspan><tspan x="396.324" y="0" letter-spacing="-.015em">t</tspan><tspan x="407.874" y="0">e</tspan></text>
+        </g>
+      </g>
+      <g isolation="isolate">
+        <text transform="translate(58.126 114.106)" fill="#fff" font-family="SF Pro Regular, &apos;SF Pro &apos;" font-size="20" isolation="isolate"><tspan x="0" y="0">Q</tspan><tspan x="13.74" y="0" letter-spacing="-.002em">u</tspan><tspan x="24.62" y="0">a</tspan><tspan x="34.64" y="0" letter-spacing="-.008em">n</tspan><tspan x="45.26" y="0" letter-spacing="0em">tum-S</tspan><tspan x="98.839" y="0" letter-spacing="0em">p</tspan><tspan x="109.858" y="0" letter-spacing="-.008em">a</tspan><tspan x="119.718" y="0" letter-spacing="-.006em">t</tspan><tspan x="126.418" y="0">ial </tspan><tspan x="147.357" y="0" letter-spacing=".003em">O</tspan><tspan x="161.157" y="0" letter-spacing="0em">b</tspan><tspan x="172.137" y="0" letter-spacing="-.005em">j</tspan><tspan x="175.757" y="0">e</tspan><tspan x="186.237" y="0" letter-spacing="-.01em">c</tspan><tspan x="196.396" y="0">t </tspan><tspan x="206.916" y="0" letter-spacing="-.013em">E</tspan><tspan x="217.736" y="0" letter-spacing="-.025em">v</tspan><tspan x="227.416" y="0" letter-spacing="-.004em">o</tspan><tspan x="238.296" y="0">l</tspan><tspan x="241.976" y="0" letter-spacing="-.008em">u</tspan><tspan x="252.736" y="0" letter-spacing="-.006em">t</tspan><tspan x="259.435" y="0" letter-spacing="-.005em">io</tspan><tspan x="273.735" y="0" letter-spacing="0em">n</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <!-- Background -->
+  <rect width="800" height="400" fill="#0A0621" />
+  
+  <!-- Dimensional grid background -->
+  <g opacity="0.1">
+    <!-- Horizontal grid lines -->
+    <path d="M100,380 Q400,360 700,380" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M100,340 Q400,325 700,340" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M100,300 Q400,290 700,300" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M100,260 Q400,255 700,260" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M100,220 Q400,215 700,220" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M100,180 Q400,175 700,180" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M100,140 Q400,135 700,140" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M100,100 Q400,95 700,100" stroke="#5AC8FA" stroke-width="1" />
+    
+    <!-- Vertical grid lines -->
+    <path d="M200,80 Q210,240 200,380" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M300,80 Q310,240 300,380" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M400,80 Q410,240 400,380" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M500,80 Q510,240 500,380" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M600,80 Q610,240 600,380" stroke="#5AC8FA" stroke-width="1" />
+  </g>
+  
+  <!-- Title -->
+  <text x="400" y="50" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="24" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Jrotharke Vision Pro Color System &amp; Interaction Zones</text>
+  
+  <!-- Color Palette Section -->
+  <text x="175" y="100" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="18" fill="#FFFFFF" text-anchor="middle">Quantum-Spatial Color System</text>
+  
+  <!-- Primary Colors -->
+  <rect x="50" y="120" width="50" height="30" rx="5" fill="#0A0621" stroke="#FFFFFF" stroke-width="1"/>
+  <text x="110" y="140" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12" fill="#FFFFFF">Void Black (#0A0621)</text>
+  
+  <rect x="50" y="160" width="50" height="30" rx="5" fill="#131A36" stroke="#FFFFFF" stroke-width="1"/>
+  <text x="110" y="180" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12" fill="#FFFFFF">Deep Space Indigo (#131A36)</text>
+  
+  <rect x="50" y="200" width="50" height="30" rx="5" fill="#331F4A" stroke="#FFFFFF" stroke-width="1"/>
+  <text x="110" y="220" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12" fill="#FFFFFF">Dimensional Eggplant (#331F4A)</text>
+  
+  <rect x="50" y="240" width="50" height="30" rx="5" fill="#0D0D15" stroke="#FFFFFF" stroke-width="1"/>
+  <text x="110" y="260" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12" fill="#FFFFFF">Midnight Richness (#0D0D15)</text>
+  
+  <!-- Accent Colors -->
+  <rect x="50" y="280" width="50" height="30" rx="5" fill="#6A3093" stroke="#FFFFFF" stroke-width="1"/>
+  <text x="110" y="300" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12" fill="#FFFFFF">Quantum Violet (#6A3093)</text>
+  
+  <rect x="50" y="320" width="50" height="30" rx="5" fill="#5AC8FA" stroke="#FFFFFF" stroke-width="1"/>
+  <text x="110" y="340" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12" fill="#FFFFFF">Subtle Cyan (#5AC8FA)</text>
+  
+  <rect x="250" y="120" width="50" height="30" rx="5" fill="#BF4080" stroke="#FFFFFF" stroke-width="1"/>
+  <text x="310" y="140" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12" fill="#FFFFFF">Rose Energy (#BF4080)</text>
+  
+  <rect x="250" y="160" width="50" height="30" rx="5" fill="#2D854D" stroke="#FFFFFF" stroke-width="1"/>
+  <text x="310" y="180" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12" fill="#FFFFFF">Heritage Green (#2D854D)</text>
+  
+  <!-- Interaction Zones Section -->
+  <text x="625" y="100" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="18" fill="#FFFFFF" text-anchor="middle">Vision Pro Interaction Zones</text>
+  
+  <!-- Vision Pro Headset Outline -->
+  <g transform="translate(625, 240)">
+    <!-- VisionPro Simplified Outline -->
+    <ellipse cx="0" cy="0" rx="120" ry="80" fill="none" stroke="#FFFFFF" stroke-width="1" opacity="0.3"/>
+    
+    <!-- Field of View Visualization -->
+    <path d="M-90,-20 C-70,-70 70,-70 90,-20" fill="none" stroke="#5AC8FA" stroke-width="1.5" stroke-dasharray="5,3"/>
+    <path d="M-100,0 C-80,80 80,80 100,0" fill="none" stroke="#5AC8FA" stroke-width="1.5" stroke-dasharray="5,3"/>
+    
+    <!-- Eye tracking zone -->
+    <ellipse cx="0" cy="-10" rx="40" ry="25" fill="#6A3093" opacity="0.3" stroke="#6A3093" stroke-width="1"/>
+    <text x="0" y="-10" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">Eye Tracking Zone</text>
+    
+    <!-- Primary Interaction Zone -->
+    <rect x="-60" y="10" width="120" height="80" rx="10" fill="#5AC8FA" opacity="0.2" stroke="#5AC8FA" stroke-width="1"/>
+    <text x="0" y="50" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle">Primary Hand</text>
+    <text x="0" y="65" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle">Interaction Zone</text>
+    
+    <!-- Interaction Notes -->
+    <text x="90" y="-50" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="10" fill="#FFFFFF">Peripheral Awareness</text>
+    <line x1="50" y1="-50" x2="20" y2="-30" stroke="#FFFFFF" stroke-width="1" opacity="0.5"/>
+    
+    <text x="-90" y="-50" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="10" fill="#FFFFFF">Environment Blending</text>
+    <line x1="-50" y1="-50" x2="-20" y2="-30" stroke="#FFFFFF" stroke-width="1" opacity="0.5"/>
+    
+    <text x="90" y="30" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="10" fill="#FFFFFF">Gesture Recognition</text>
+    <line x1="70" y1="30" x2="50" y2="40" stroke="#FFFFFF" stroke-width="1" opacity="0.5"/>
+    
+    <text x="-100" y="30" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="10" fill="#FFFFFF">Depth Perception</text>
+    <line x1="-70" y1="30" x2="-50" y2="40" stroke="#FFFFFF" stroke-width="1" opacity="0.5"/>
+  </g>
+  
+  <!-- Design Principles -->
+  <g transform="translate(400, 360)">
+    <!-- Design Principles Boxes -->
+    <rect x="-350" y="-30" width="700" height="60" rx="10" fill="#131A36" opacity="0.8" stroke="#5AC8FA" stroke-width="1"/>
+    
+    <text x="-250" y="0" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle">Layer UI at different depths</text>
+    <text x="-100" y="0" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle">Use gaze for selection</text>
+    <text x="50" y="0" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle">Design for 3D space</text>
+    <text x="200" y="0" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle">Maintain quantum-spatial aesthetic</text>
+    
+    <!-- Separators -->
+    <line x1="-175" y1="-15" x2="-175" y2="15" stroke="#5AC8FA" stroke-width="1" opacity="0.5"/>
+    <line x1="-25" y1="-15" x2="-25" y2="15" stroke="#5AC8FA" stroke-width="1" opacity="0.5"/>
+    <line x1="125" y1="-15" x2="125" y2="15" stroke="#5AC8FA" stroke-width="1" opacity="0.5"/>
+  </g>
+</svg>

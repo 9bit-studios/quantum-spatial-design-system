@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#131A36"/>
+  
+  <!-- Grid overlay -->
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(90, 200, 250, 0.1)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="600" fill="url(#grid)"/>
+  
+  <!-- Title -->
+  <text x="400" y="40" font-family="SF Pro Display" font-size="24" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Framer Component Conflict Resolution</text>
+  
+  <!-- Current State -->
+  <g transform="translate(50, 80)">
+    <rect x="0" y="0" width="300" height="150" rx="8" fill="#331F4A" stroke="#BF4080" stroke-width="2"/>
+    <text x="150" y="25" font-family="SF Pro Display" font-size="16" font-weight="600" fill="#BF4080" text-anchor="middle">Current Framer Project</text>
+    
+    <!-- Error component -->
+    <rect x="20" y="40" width="260" height="60" rx="4" fill="#0D0D15" stroke="#BF4080" stroke-width="1" opacity="0.7"/>
+    <text x="30" y="60" font-family="SF Mono" font-size="12" fill="#FFFFFF">QuantumSpatialSystem.tsx</text>
+    <text x="30" y="80" font-family="SF Mono" font-size="10" fill="#BF4080">❌ Failed to load foundation system</text>
+    
+    <text x="150" y="125" font-family="SF Pro Text" font-size="12" fill="#5AC8FA" text-anchor="middle">Status: Error State</text>
+  </g>
+  
+  <!-- Worker Component -->
+  <g transform="translate(450, 80)">
+    <rect x="0" y="0" width="300" height="150" rx="8" fill="#331F4A" stroke="#5AC8FA" stroke-width="2"/>
+    <text x="150" y="25" font-family="SF Pro Display" font-size="16" font-weight="600" fill="#5AC8FA" text-anchor="middle">Cloudflare Worker</text>
+    
+    <!-- Working component -->
+    <rect x="20" y="40" width="260" height="60" rx="4" fill="#0D0D15" stroke="#5AC8FA" stroke-width="1"/>
+    <text x="30" y="60" font-family="SF Mono" font-size="12" fill="#FFFFFF">QuantumSpatialSystem.tsx</text>
+    <text x="30" y="80" font-family="SF Mono" font-size="10" fill="#5AC8FA">✅ Working implementation</text>
+    
+    <text x="150" y="125" font-family="SF Pro Text" font-size="12" fill="#5AC8FA" text-anchor="middle">Status: Functional</text>
+  </g>
+  
+  <!-- Arrow -->
+  <path d="M 350 155 L 450 155" stroke="#6A3093" stroke-width="3" marker-end="url(#arrowhead)"/>
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#6A3093"/>
+    </marker>
+  </defs>
+  
+  <!-- Conflict Resolution -->
+  <g transform="translate(200, 280)">
+    <rect x="0" y="0" width="400" height="200" rx="12" fill="rgba(106, 48, 147, 0.3)" stroke="#6A3093" stroke-width="2"/>
+    <text x="200" y="30" font-family="SF Pro Display" font-size="18" font-weight="600" fill="#6A3093" text-anchor="middle">❌ NO - Won't Overwrite</text>
+    
+    <!-- Explanation points -->
+    <text x="20" y="60" font-family="SF Pro Text" font-size="14" fill="#FFFFFF">Name conflicts in Framer:</text>
+    
+    <text x="30" y="85" font-family="SF Pro Text" font-size="12" fill="#5AC8FA">• Framer isolates components by source</text>
+    <text x="30" y="105" font-family="SF Pro Text" font-size="12" fill="#5AC8FA">• Worker components appear as separate entities</text>
+    <text x="30" y="125" font-family="SF Pro Text" font-size="12" fill="#5AC8FA">• Broken local component remains broken</text>
+    <text x="30" y="145" font-family="SF Pro Text" font-size="12" fill="#5AC8FA">• You'll have: Local (broken) + Worker (working)</text>
+    
+    <text x="200" y="175" font-family="SF Pro Text" font-size="12" font-weight="600" fill="#BF4080" text-anchor="middle">You must manually delete the broken component</text>
+  </g>
+  
+  <!-- Solution -->
+  <g transform="translate(50, 520)">
+    <rect x="0" y="0" width="700" height="60" rx="8" fill="rgba(90, 200, 250, 0.2)" stroke="#5AC8FA" stroke-width="1"/>
+    <text x="350" y="25" font-family="SF Pro Display" font-size="16" font-weight="600" fill="#5AC8FA" text-anchor="middle">✅ Solution</text>
+    <text x="350" y="45" font-family="SF Pro Text" font-size="12" fill="#FFFFFF" text-anchor="middle">Delete the broken local component first, then use the working worker component</text>
+  </g>
+</svg>

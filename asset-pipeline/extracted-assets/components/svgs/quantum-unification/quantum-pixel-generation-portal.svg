@@ -1,0 +1,153 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Grid -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A0621" />
+      <stop offset="100%" stop-color="#131A36" />
+    </linearGradient>
+    <radialGradient id="energyGlow" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#5AC8FA" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#5AC8FA" stop-opacity="0" />
+    </radialGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="M 50 0 L 0 0 0 50" fill="none" stroke="#331F4A" stroke-width="0.5" opacity="0.1" />
+    </pattern>
+  </defs>
+
+  <!-- Main Background -->
+  <rect width="800" height="600" fill="url(#bgGradient)" />
+  <rect width="800" height="600" fill="url(#grid)" opacity="0.15" />
+
+  <!-- M4 Neural Engine Representation -->
+  <g transform="translate(400, 100)">
+    <rect x="-100" y="-40" width="200" height="80" rx="10" fill="#1E1F5C" opacity="0.9" />
+    <text text-anchor="middle" x="0" y="0" font-family="SF Pro Display, sans-serif" font-size="16" fill="white" font-weight="bold">M4 Neural Engine</text>
+    <text text-anchor="middle" x="0" y="25" font-family="SF Pro Display, sans-serif" font-size="12" fill="#5AC8FA">Accelerated Processing</text>
+    
+    <!-- Energy Emissions -->
+    <circle cx="0" cy="0" r="70" fill="url(#energyGlow)" opacity="0.3">
+      <animate attributeName="r" values="65;80;65" dur="4s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.3;0.5;0.3" dur="4s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- Heritage State Pixel -->
+  <g transform="translate(150, 250)">
+    <rect x="-25" y="-25" width="50" height="50" fill="#2C5F2D" />
+    <text text-anchor="middle" x="0" y="85" font-family="SF Pro Text, sans-serif" font-size="14" fill="white">Heritage State</text>
+  </g>
+
+  <!-- Transitional State Pixel -->
+  <g transform="translate(400, 250)">
+    <rect x="-30" y="-30" width="60" height="60" rx="5" fill="#331F4A">
+      <animate attributeName="rx" values="5;8;5" dur="3s" repeatCount="indefinite" />
+    </rect>
+    <rect x="-30" y="-30" width="60" height="60" rx="5" fill="#6A3093" opacity="0.3">
+      <animate attributeName="opacity" values="0.3;0.5;0.3" dur="3s" repeatCount="indefinite" />
+    </rect>
+    <text text-anchor="middle" x="0" y="85" font-family="SF Pro Text, sans-serif" font-size="14" fill="white">Transitional State</text>
+  </g>
+
+  <!-- Quantum State Pixel -->
+  <g transform="translate(650, 250)">
+    <rect x="-35" y="-35" width="70" height="70" rx="10" fill="#6A3093" filter="url(#glow)">
+      <animate attributeName="opacity" values="0.8;1;0.8" dur="2s" repeatCount="indefinite" />
+    </rect>
+    <rect x="-35" y="-35" width="70" height="70" rx="10" fill="#FF2D55" opacity="0.2" filter="url(#glow)">
+      <animate attributeName="opacity" values="0.2;0.4;0.2" dur="2s" repeatCount="indefinite" />
+    </rect>
+    <text text-anchor="middle" x="0" y="85" font-family="SF Pro Text, sans-serif" font-size="14" fill="white">Quantum State</text>
+  </g>
+
+  <!-- Process Flow Lines -->
+  <g opacity="0.6">
+    <!-- From M4 to Heritage -->
+    <path d="M 330 130 C 250 150, 200 170, 150 220" stroke="#5AC8FA" stroke-width="2" fill="none">
+      <animate attributeName="stroke-dasharray" from="0,500" to="500,0" dur="3s" repeatCount="indefinite" />
+    </path>
+    
+    <!-- Heritage to Transitional -->
+    <path d="M 190 250 L 360 250" stroke="#5AC8FA" stroke-width="2" fill="none">
+      <animate attributeName="stroke-dasharray" from="0,500" to="500,0" dur="3s" repeatCount="indefinite" />
+    </path>
+    
+    <!-- Transitional to Quantum -->
+    <path d="M 440 250 L 610 250" stroke="#5AC8FA" stroke-width="2" fill="none">
+      <animate attributeName="stroke-dasharray" from="0,500" to="500,0" dur="3s" repeatCount="indefinite" />
+    </path>
+  </g>
+
+  <!-- Creative Process Labels -->
+  <g transform="translate(400, 450)">
+    <rect x="-350" y="-30" width="700" height="60" rx="30" fill="#0D0D15" opacity="0.7" />
+    
+    <!-- Process Steps -->
+    <g transform="translate(-260, 0)">
+      <circle cx="0" cy="0" r="15" fill="#131A36" stroke="#5AC8FA" stroke-width="2" />
+      <text text-anchor="middle" x="0" y="0" dominant-baseline="middle" font-family="SF Pro Text, sans-serif" font-size="12" fill="white">1</text>
+      <text text-anchor="middle" x="0" y="35" font-family="SF Pro Text, sans-serif" font-size="12" fill="white">Initial</text>
+    </g>
+    
+    <g transform="translate(-130, 0)">
+      <circle cx="0" cy="0" r="15" fill="#131A36" stroke="#5AC8FA" stroke-width="2" />
+      <text text-anchor="middle" x="0" y="0" dominant-baseline="middle" font-family="SF Pro Text, sans-serif" font-size="12" fill="white">2</text>
+      <text text-anchor="middle" x="0" y="35" font-family="SF Pro Text, sans-serif" font-size="12" fill="white">Generation</text>
+    </g>
+    
+    <g transform="translate(0, 0)">
+      <circle cx="0" cy="0" r="15" fill="#131A36" stroke="#BF4080" stroke-width="2" />
+      <text text-anchor="middle" x="0" y="0" dominant-baseline="middle" font-family="SF Pro Text, sans-serif" font-size="12" fill="white">3</text>
+      <text text-anchor="middle" x="0" y="35" font-family="SF Pro Text, sans-serif" font-size="12" fill="white">Enhancement</text>
+    </g>
+    
+    <g transform="translate(130, 0)">
+      <circle cx="0" cy="0" r="15" fill="#131A36" stroke="#BF4080" stroke-width="2" />
+      <text text-anchor="middle" x="0" y="0" dominant-baseline="middle" font-family="SF Pro Text, sans-serif" font-size="12" fill="white">4</text>
+      <text text-anchor="middle" x="0" y="35" font-family="SF Pro Text, sans-serif" font-size="12" fill="white">Refinement</text>
+    </g>
+    
+    <g transform="translate(260, 0)">
+      <circle cx="0" cy="0" r="15" fill="#131A36" stroke="#FF2D55" stroke-width="2" />
+      <text text-anchor="middle" x="0" y="0" dominant-baseline="middle" font-family="SF Pro Text, sans-serif" font-size="12" fill="white">5</text>
+      <text text-anchor="middle" x="0" y="35" font-family="SF Pro Text, sans-serif" font-size="12" fill="white">Finalization</text>
+    </g>
+  </g>
+
+  <!-- Title -->
+  <g transform="translate(400, 540)">
+    <text text-anchor="middle" x="0" y="0" font-family="SF Pro Display, sans-serif" font-size="18" fill="white" font-weight="bold">9BIT STUDIOS M4-OPTIMIZED ART GENERATION PIPELINE</text>
+    <line x1="-300" y1="15" x2="300" y2="15" stroke="#5AC8FA" stroke-width="1" opacity="0.6" />
+  </g>
+
+  <!-- Energy Particles -->
+  <g>
+    <circle cx="200" cy="180" r="3" fill="#5AC8FA" opacity="0.7">
+      <animate attributeName="cy" values="180;220;180" dur="2s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.7;0.3;0.7" dur="2s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="230" cy="190" r="2" fill="#5AC8FA" opacity="0.5">
+      <animate attributeName="cy" values="190;230;190" dur="3s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.5;0.2;0.5" dur="3s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="450" cy="200" r="2" fill="#5AC8FA" opacity="0.6">
+      <animate attributeName="cy" values="200;230;200" dur="2.5s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.6;0.3;0.6" dur="2.5s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="500" cy="190" r="3" fill="#BF4080" opacity="0.5">
+      <animate attributeName="cy" values="190;220;190" dur="3.5s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.5;0.2;0.5" dur="3.5s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="580" cy="180" r="2" fill="#BF4080" opacity="0.7">
+      <animate attributeName="cy" values="180;210;180" dur="3s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.7;0.4;0.7" dur="3s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="620" cy="200" r="3" fill="#FF2D55" opacity="0.6">
+      <animate attributeName="cy" values="200;230;200" dur="2s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.6;0.3;0.6" dur="2s" repeatCount="indefinite" />
+    </circle>
+  </g>
+</svg>

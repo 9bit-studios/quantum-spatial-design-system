@@ -1,0 +1,35 @@
+<svg width="81" height="81" viewBox="0 0 81 81" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.35">
+<path d="M10.02 10.02V70.16" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M20.04 10.02V70.16" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M30.07 10.02V70.16" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M40.09 10.02V70.16" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M50.11 10.02V70.16" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M60.14 10.02V70.16" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M70.16 10.02V70.16" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M10.02 10.02H70.16" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M10.02 20.04H70.16" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M10.02 30.07H70.16" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M10.02 40.09H70.16" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M10.02 50.11H70.16" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M10.02 60.14H70.16" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M10.02 70.16H70.16" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<g opacity="0.9">
+<path d="M10.02 10.02V70.16" stroke="white" stroke-width="0.75"/>
+<path d="M20.04 10.02V70.16" stroke="white" stroke-width="0.75"/>
+<path d="M30.07 10.02V70.16" stroke="white" stroke-width="0.75"/>
+<path d="M40.09 10.02V70.16" stroke="white" stroke-width="0.75"/>
+<path d="M50.11 10.02V70.16" stroke="white" stroke-width="0.75"/>
+<path d="M60.14 10.02V70.16" stroke="white" stroke-width="0.75"/>
+<path d="M70.16 10.02V70.16" stroke="white" stroke-width="0.75"/>
+<path d="M10.02 10.02H70.16" stroke="white" stroke-width="0.75"/>
+<path d="M10.02 20.04H70.16" stroke="white" stroke-width="0.75"/>
+<path d="M10.02 30.07H70.16" stroke="white" stroke-width="0.75"/>
+<path d="M10.02 40.09H70.16" stroke="white" stroke-width="0.75"/>
+<path d="M10.02 50.11H70.16" stroke="white" stroke-width="0.75"/>
+<path d="M10.02 60.14H70.16" stroke="white" stroke-width="0.75"/>
+<path d="M10.02 70.16H70.16" stroke="white" stroke-width="0.75"/>
+</g>
+<path opacity="0.9" d="M20.04 20.04H30.06V30.06H20.04V20.04ZM30.07 30.07H40.09V20.05H30.07V30.07ZM40.09 30.07H50.11V20.05H40.09V30.07ZM50.11 30.07H60.13V20.05H50.11V30.07ZM20.04 40.09H30.06V30.07H20.04V40.09ZM50.11 40.09H60.13V30.07H50.11V40.09ZM20.04 50.11H30.06V40.09H20.04V50.11ZM30.07 50.11H40.09V40.09H30.07V50.11ZM40.09 50.11H50.11V40.09H40.09V50.11ZM50.11 50.11H60.13V40.09H50.11V50.11ZM50.11 60.14H60.13V50.12H50.11V60.14ZM20.04 70.16H30.06V60.14H20.04V70.16ZM30.07 70.16H40.09V60.14H30.07V70.16ZM40.09 70.16H50.11V60.14H40.09V70.16ZM50.11 70.16H60.13V60.14H50.11V70.16Z" fill="white"/>
+</svg>

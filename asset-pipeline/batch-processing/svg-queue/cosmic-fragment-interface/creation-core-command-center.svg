@@ -1,0 +1,211 @@
+<svg width="1500" height="500" viewBox="0 0 1500 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Glowing effects -->
+    <filter id="glow-heritage" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+    <filter id="glow-quantum" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+    <filter id="glass-effect" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+      <feSpecularLighting specularExponent="20" lighting-color="#ffffff" surfaceScale="2" result="specOut">
+        <fePointLight x="250" y="125" z="300" />
+      </feSpecularLighting>
+      <feComposite in="specOut" in2="SourceGraphic" operator="in" result="specOut" />
+      <feComposite in="SourceGraphic" in2="specOut" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" />
+    </filter>
+    
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A0621" />
+      <stop offset="100%" stop-color="#131A36" />
+    </linearGradient>
+    
+    <linearGradient id="heritage-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1B3D1A" />
+      <stop offset="100%" stop-color="#2C5F2D" />
+    </linearGradient>
+    
+    <linearGradient id="quantum-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#331F4A" />
+      <stop offset="100%" stop-color="#6A3093" />
+    </linearGradient>
+    
+    <linearGradient id="energy-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF2D55" />
+      <stop offset="100%" stop-color="#BF4080" />
+    </linearGradient>
+    
+    <!-- Crystal Pattern -->
+    <pattern id="crystal-pattern" x="0" y="0" width="50" height="50" patternUnits="userSpaceOnUse">
+      <polygon points="25,0 50,25 25,50 0,25" fill="#5AC8FA" fill-opacity="0.05" />
+      <path d="M0,25 L50,25 M25,0 L25,50" stroke="#5AC8FA" stroke-width="0.5" stroke-opacity="0.1" />
+    </pattern>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1500" height="500" fill="url(#bg-gradient)" />
+  <rect width="1500" height="500" fill="url(#crystal-pattern)" />
+  
+  <!-- Dimensional Grid -->
+  <g opacity="0.1">
+    <!-- Horizontal Grid Lines -->
+    <path d="M0,100 L1500,100 M0,200 L1500,200 M0,300 L1500,300 M0,400 L1500,400" stroke="#5AC8FA" stroke-width="1" />
+    
+    <!-- Vertical Grid Lines -->
+    <path d="M300,0 L300,500 M600,0 L600,500 M900,0 L900,500 M1200,0 L1200,500" stroke="#5AC8FA" stroke-width="1" />
+    
+    <!-- Perspective Lines -->
+    <path d="M0,0 L1500,500 M1500,0 L0,500" stroke="#5AC8FA" stroke-width="0.5" />
+  </g>
+  
+  <!-- Central Command Core -->
+  <g transform="translate(750, 250)">
+    <!-- Core Crystal Structure -->
+    <g filter="url(#glass-effect)">
+      <polygon points="-150,-100 150,-100 200,0 150,100 -150,100 -200,0" fill="#131A36" fill-opacity="0.7" stroke="#5AC8FA" stroke-width="2" />
+      <polygon points="-100,-75 100,-75 150,0 100,75 -100,75 -150,0" fill="#331F4A" fill-opacity="0.8" stroke="#5AC8FA" stroke-width="1" />
+      <circle cx="0" cy="0" r="40" fill="#0D0D15" />
+    </g>
+    
+    <!-- Energy Core -->
+    <circle cx="0" cy="0" r="30" fill="url(#energy-gradient)">
+      <animate attributeName="r" values="30;32;30" dur="3s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.8;1;0.8" dur="3s" repeatCount="indefinite" />
+    </circle>
+    
+    <!-- Glowing Pulse -->
+    <circle cx="0" cy="0" r="25" fill="#FF2D55" filter="url(#glow-quantum)">
+      <animate attributeName="r" values="25;27;25" dur="2s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.7;0.9;0.7" dur="2s" repeatCount="indefinite" />
+    </circle>
+    
+    <!-- Code Matrix Pattern -->
+    <g opacity="0.7">
+      <path d="M-20,-10 L20,-10 M-15,-5 L15,-5 M-20,0 L20,0 M-15,5 L15,5 M-20,10 L20,10" stroke="#5AC8FA" stroke-width="0.5" />
+    </g>
+  </g>
+  
+  <!-- Left Fragment - Heritage Source -->
+  <g transform="translate(300, 250)">
+    <!-- Fragment Shape -->
+    <g filter="url(#glass-effect)">
+      <path d="M-120,-80 L-20,-100 L80,-60 L100,40 L20,100 L-80,60 Z" fill="url(#heritage-gradient)" fill-opacity="0.8" stroke="#3D8B40" stroke-width="1.5" />
+    </g>
+    
+    <!-- Heritage Energy Core -->
+    <circle cx="0" cy="0" r="35" fill="#2C5F2D" filter="url(#glow-heritage)">
+      <animate attributeName="r" values="35;37;35" dur="4s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.7;0.9;0.7" dur="4s" repeatCount="indefinite" />
+    </circle>
+    
+    <!-- Energy Pulse -->
+    <circle cx="0" cy="0" r="25" fill="#3DFF74" opacity="0.6">
+      <animate attributeName="r" values="25;28;25" dur="3s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.6;0.8;0.6" dur="3s" repeatCount="indefinite" />
+    </circle>
+    
+    <!-- Connection Beam to Center -->
+    <path d="M50,20 L380,100" stroke="#3DFF74" stroke-width="1.5" opacity="0.4">
+      <animate attributeName="stroke-dasharray" values="1,10;10,1" dur="5s" repeatCount="indefinite" />
+    </path>
+    
+    <!-- Energy Particles -->
+    <circle cx="100" cy="30" r="2" fill="#3DFF74">
+      <animate attributeName="cx" values="100;350;100" dur="5s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="30;90;30" dur="5s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.1;0.8;0.1" dur="5s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="140" cy="40" r="1.5" fill="#3DFF74">
+      <animate attributeName="cx" values="140;370;140" dur="7s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="40;95;40" dur="7s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.1;0.7;0.1" dur="7s" repeatCount="indefinite" />
+    </circle>
+  </g>
+  
+  <!-- Right Fragment - Quantum Future -->
+  <g transform="translate(1200, 250)">
+    <!-- Fragment Shape -->
+    <g filter="url(#glass-effect)">
+      <path d="M-80,-60 L20,-100 L120,-80 L80,60 L-20,100 L-100,40 Z" fill="url(#quantum-gradient)" fill-opacity="0.8" stroke="#6A3093" stroke-width="1.5" />
+    </g>
+    
+    <!-- Quantum Energy Core -->
+    <circle cx="0" cy="0" r="35" fill="#331F4A" filter="url(#glow-quantum)">
+      <animate attributeName="r" values="35;38;35" dur="4s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.7;0.9;0.7" dur="4s" repeatCount="indefinite" />
+    </circle>
+    
+    <!-- Energy Pulse -->
+    <circle cx="0" cy="0" r="25" fill="#BF4080" opacity="0.6">
+      <animate attributeName="r" values="25;28;25" dur="3.5s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.6;0.8;0.6" dur="3.5s" repeatCount="indefinite" />
+    </circle>
+    
+    <!-- Connection Beam to Center -->
+    <path d="M-50,20 L-380,100" stroke="#BF4080" stroke-width="1.5" opacity="0.4">
+      <animate attributeName="stroke-dasharray" values="1,10;10,1" dur="5s" repeatCount="indefinite" />
+    </path>
+    
+    <!-- Energy Particles -->
+    <circle cx="-100" cy="30" r="2" fill="#BF4080">
+      <animate attributeName="cx" values="-100;-350;-100" dur="6s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="30;90;30" dur="6s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.1;0.8;0.1" dur="6s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="-140" cy="40" r="1.5" fill="#BF4080">
+      <animate attributeName="cx" values="-140;-370;-140" dur="8s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="40;95;40" dur="8s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.1;0.7;0.1" dur="8s" repeatCount="indefinite" />
+    </circle>
+  </g>
+  
+  <!-- Energy Connection Network -->
+  <g opacity="0.6">
+    <path d="M300,250 C 500,100 700,400 750,250" stroke="#3DFF74" stroke-width="1" fill="none">
+      <animate attributeName="stroke-dasharray" values="1,30;30,1" dur="10s" repeatCount="indefinite" />
+    </path>
+    <path d="M1200,250 C 1000,100 800,400 750,250" stroke="#BF4080" stroke-width="1" fill="none">
+      <animate attributeName="stroke-dasharray" values="1,30;30,1" dur="10s" repeatCount="indefinite" />
+    </path>
+  </g>
+  
+  <!-- Title -->
+  <g transform="translate(750, 100)">
+    <text x="0" y="0" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="36" fill="#5AC8FA" text-anchor="middle" font-weight="bold">CREATION CORE COMMAND CENTER</text>
+    <text x="0" y="36" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="20" fill="#5AC8FA" text-anchor="middle" opacity="0.7">Dimensional Gateway to the Creative Cosmos</text>
+  </g>
+  
+  <!-- Small Floating Energy Particles -->
+  <g>
+    <circle cx="400" cy="150" r="1.5" fill="#3DFF74" opacity="0.8">
+      <animate attributeName="cy" values="150;140;150" dur="9s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.8;0.3;0.8" dur="9s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="600" cy="350" r="2" fill="#5AC8FA" opacity="0.7">
+      <animate attributeName="cy" values="350;360;350" dur="7s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.7;0.2;0.7" dur="7s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="900" cy="200" r="1.5" fill="#BF4080" opacity="0.6">
+      <animate attributeName="cy" values="200;190;200" dur="8s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.6;0.2;0.6" dur="8s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="1100" cy="300" r="2" fill="#5AC8FA" opacity="0.7">
+      <animate attributeName="cy" values="300;310;300" dur="10s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.7;0.3;0.7" dur="10s" repeatCount="indefinite" />
+    </circle>
+  </g>
+  
+  <!-- Subtle Dimensional Fractures -->
+  <g opacity="0.2">
+    <path d="M500,0 L550,500" stroke="#5AC8FA" stroke-width="0.5" />
+    <path d="M1000,0 L950,500" stroke="#BF4080" stroke-width="0.5" />
+    <path d="M0,150 L1500,175" stroke="#3DFF74" stroke-width="0.5" />
+    <path d="M0,350 L1500,325" stroke="#FF2D55" stroke-width="0.5" />
+  </g>
+</svg>

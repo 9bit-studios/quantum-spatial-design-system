@@ -1,0 +1,223 @@
+<svg width="1500" height="500" viewBox="0 0 1500 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Glowing effects -->
+    <filter id="crystal-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="15" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+    <filter id="energy-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+    <filter id="liquid-glass" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" />
+      <feColorMatrix type="matrix"
+          values="1 0 0 0 0
+                  0 1 0 0 0
+                  0 0 1 0 0
+                  0 0 0 18 -7" />
+    </filter>
+    
+    <!-- Gradients -->
+    <linearGradient id="crystal-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A0621" />
+      <stop offset="50%" stop-color="#131A36" />
+      <stop offset="100%" stop-color="#0D0D15" />
+    </linearGradient>
+    
+    <linearGradient id="crystal-body" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#331F4A" stop-opacity="0.4" />
+      <stop offset="50%" stop-color="#6A3093" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#331F4A" stop-opacity="0.4" />
+    </linearGradient>
+    
+    <linearGradient id="crystal-facet-1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5AC8FA" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#5AC8FA" stop-opacity="0.3" />
+    </linearGradient>
+    
+    <linearGradient id="crystal-facet-2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#BF4080" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#FF2D55" stop-opacity="0.2" />
+    </linearGradient>
+    
+    <radialGradient id="energy-core" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#FF2D55" stop-opacity="1" />
+      <stop offset="70%" stop-color="#BF4080" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#6A3093" stop-opacity="0.5" />
+    </radialGradient>
+    
+    <!-- Crystal Reflection Pattern -->
+    <pattern id="reflection-pattern" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
+      <path d="M0,50 L100,50 M50,0 L50,100" stroke="#5AC8FA" stroke-width="0.5" stroke-opacity="0.2" />
+      <path d="M0,0 L100,100 M100,0 L0,100" stroke="#5AC8FA" stroke-width="0.3" stroke-opacity="0.1" />
+    </pattern>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1500" height="500" fill="url(#crystal-bg)" />
+  
+  <!-- Subtle Grid -->
+  <g opacity="0.08">
+    <path d="M0,100 L1500,100 M0,200 L1500,200 M0,300 L1500,300 M0,400 L1500,400" stroke="#5AC8FA" />
+    <path d="M300,0 L300,500 M600,0 L600,500 M900,0 L900,500 M1200,0 L1200,500" stroke="#5AC8FA" />
+  </g>
+  
+  <!-- Crystalline Environment -->
+  <g opacity="0.3">
+    <!-- Distant Crystal Formations -->
+    <path d="M150,350 L200,150 L300,250 L350,100 L400,300 Z" fill="none" stroke="#5AC8FA" stroke-width="0.5" />
+    <path d="M1100,300 L1150,100 L1250,200 L1300,50 L1350,250 Z" fill="none" stroke="#BF4080" stroke-width="0.5" />
+    <path d="M250,450 L350,300 L450,400 L550,200 L650,350 Z" fill="none" stroke="#5AC8FA" stroke-width="0.5" />
+    <path d="M850,450 L950,300 L1050,400 L1150,200 L1250,350 Z" fill="none" stroke="#BF4080" stroke-width="0.5" />
+  </g>
+  
+  <!-- Main Crystal Structure -->
+  <g transform="translate(750, 250)">
+    <!-- Crystal Outer Structure -->
+    <g filter="url(#liquid-glass)">
+      <path d="M-200,-150 L0,-200 L200,-150 L250,0 L200,150 L0,200 L-200,150 L-250,0 Z" fill="url(#crystal-body)" stroke="#5AC8FA" stroke-width="1" />
+    </g>
+    
+    <!-- Crystal Facets -->
+    <g opacity="0.7">
+      <path d="M-200,-150 L0,-200 L0,0 L-250,0 Z" fill="url(#crystal-facet-1)" />
+      <path d="M0,-200 L200,-150 L250,0 L0,0 Z" fill="url(#crystal-facet-2)" />
+      <path d="M250,0 L200,150 L0,200 L0,0 Z" fill="url(#crystal-facet-1)" />
+      <path d="M0,200 L-200,150 L-250,0 L0,0 Z" fill="url(#crystal-facet-2)" />
+    </g>
+    
+    <!-- Crystal Reflections -->
+    <g opacity="0.3">
+      <path d="M-200,-150 L0,-200 L200,-150 L250,0 L200,150 L0,200 L-200,150 L-250,0 Z" fill="url(#reflection-pattern)" />
+    </g>
+    
+    <!-- Energy Core -->
+    <circle cx="0" cy="0" r="80" fill="url(#energy-core)" filter="url(#energy-glow)">
+      <animate attributeName="r" values="80;85;80" dur="8s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.9;1;0.9" dur="8s" repeatCount="indefinite" />
+    </circle>
+    
+    <!-- Inner Crystal Structure -->
+    <g opacity="0.7">
+      <path d="M-100,-75 L0,-100 L100,-75 L125,0 L100,75 L0,100 L-100,75 L-125,0 Z" fill="none" stroke="#5AC8FA" stroke-width="0.5" />
+      <path d="M-50,-37.5 L0,-50 L50,-37.5 L62.5,0 L50,37.5 L0,50 L-50,37.5 L-62.5,0 Z" fill="none" stroke="#5AC8FA" stroke-width="0.7" />
+    </g>
+    
+    <!-- Vision Portal Energy -->
+    <circle cx="0" cy="0" r="60" fill="#BF4080" opacity="0.5" filter="url(#crystal-glow)">
+      <animate attributeName="r" values="60;65;60" dur="5s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.5;0.7;0.5" dur="5s" repeatCount="indefinite" />
+    </circle>
+    
+    <!-- Vision Core -->
+    <circle cx="0" cy="0" r="40" fill="#FF2D55" opacity="0.8">
+      <animate attributeName="r" values="40;42;40" dur="3s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.8;1;0.8" dur="3s" repeatCount="indefinite" />
+    </circle>
+    
+    <!-- Energy Emanations -->
+    <g>
+      <path d="M0,0 L200,0" stroke="#FF2D55" stroke-width="1.5" opacity="0.5">
+        <animate attributeName="stroke-dasharray" values="1,20;20,1" dur="4s" repeatCount="indefinite" />
+      </path>
+      <path d="M0,0 L-200,0" stroke="#FF2D55" stroke-width="1.5" opacity="0.5">
+        <animate attributeName="stroke-dasharray" values="1,20;20,1" dur="4s" repeatCount="indefinite" />
+      </path>
+      <path d="M0,0 L0,150" stroke="#FF2D55" stroke-width="1.5" opacity="0.5">
+        <animate attributeName="stroke-dasharray" values="1,20;20,1" dur="4s" repeatCount="indefinite" />
+      </path>
+      <path d="M0,0 L0,-150" stroke="#FF2D55" stroke-width="1.5" opacity="0.5">
+        <animate attributeName="stroke-dasharray" values="1,20;20,1" dur="4s" repeatCount="indefinite" />
+      </path>
+    </g>
+    
+    <!-- Crystal Vertices Glow -->
+    <g>
+      <circle cx="-200" cy="-150" r="5" fill="#5AC8FA" opacity="0.7" filter="url(#energy-glow)" />
+      <circle cx="0" cy="-200" r="5" fill="#5AC8FA" opacity="0.7" filter="url(#energy-glow)" />
+      <circle cx="200" cy="-150" r="5" fill="#5AC8FA" opacity="0.7" filter="url(#energy-glow)" />
+      <circle cx="250" cy="0" r="5" fill="#5AC8FA" opacity="0.7" filter="url(#energy-glow)" />
+      <circle cx="200" cy="150" r="5" fill="#5AC8FA" opacity="0.7" filter="url(#energy-glow)" />
+      <circle cx="0" cy="200" r="5" fill="#5AC8FA" opacity="0.7" filter="url(#energy-glow)" />
+      <circle cx="-200" cy="150" r="5" fill="#5AC8FA" opacity="0.7" filter="url(#energy-glow)" />
+      <circle cx="-250" cy="0" r="5" fill="#5AC8FA" opacity="0.7" filter="url(#energy-glow)" />
+    </g>
+  </g>
+  
+  <!-- Energy Particles -->
+  <g>
+    <!-- Clockwise Orbiting Particles -->
+    <circle cx="750" cy="250" r="2" fill="#FF2D55" opacity="0.8">
+      <animateTransform
+        attributeName="transform"
+        type="rotate"
+        from="0 750 250"
+        to="360 750 250"
+        dur="10s"
+        repeatCount="indefinite"
+      />
+      <animate attributeName="opacity" values="0.8;0.3;0.8" dur="10s" repeatCount="indefinite" />
+    </circle>
+    
+    <circle cx="750" cy="150" r="2" fill="#5AC8FA" opacity="0.8">
+      <animateTransform
+        attributeName="transform"
+        type="rotate"
+        from="120 750 250"
+        to="480 750 250"
+        dur="15s"
+        repeatCount="indefinite"
+      />
+      <animate attributeName="opacity" values="0.8;0.3;0.8" dur="15s" repeatCount="indefinite" />
+    </circle>
+    
+    <circle cx="750" cy="350" r="2" fill="#3DFF74" opacity="0.8">
+      <animateTransform
+        attributeName="transform"
+        type="rotate"
+        from="240 750 250"
+        to="600 750 250"
+        dur="12s"
+        repeatCount="indefinite"
+      />
+      <animate attributeName="opacity" values="0.8;0.3;0.8" dur="12s" repeatCount="indefinite" />
+    </circle>
+  </g>
+  
+  <!-- Crystal Reflections Overlay -->
+  <g opacity="0.1">
+    <path d="M0,0 L1500,500 M0,500 L1500,0" stroke="#5AC8FA" stroke-width="0.5" />
+    <path d="M750,0 L750,500 M0,250 L1500,250" stroke="#5AC8FA" stroke-width="0.5" />
+  </g>
+  
+  <!-- Title -->
+  <g transform="translate(750, 100)">
+    <text x="0" y="0" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="36" fill="#5AC8FA" text-anchor="middle" font-weight="bold" filter="url(#energy-glow)">CRYSTAL VISION POWER PORTAL</text>
+    <text x="0" y="36" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="20" fill="#5AC8FA" text-anchor="middle" opacity="0.7">Gateway to Multidimensional Insight</text>
+  </g>
+  
+  <!-- Ambient Environment Particles -->
+  <g opacity="0.5">
+    <circle cx="300" cy="150" r="1" fill="#5AC8FA">
+      <animate attributeName="opacity" values="0.5;0.1;0.5" dur="7s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="400" cy="350" r="1" fill="#5AC8FA">
+      <animate attributeName="opacity" values="0.5;0.1;0.5" dur="5s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="500" cy="200" r="1" fill="#BF4080">
+      <animate attributeName="opacity" values="0.5;0.1;0.5" dur="6s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="1000" cy="400" r="1" fill="#BF4080">
+      <animate attributeName="opacity" values="0.5;0.1;0.5" dur="8s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="1100" cy="150" r="1" fill="#5AC8FA">
+      <animate attributeName="opacity" values="0.5;0.1;0.5" dur="7s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="1200" cy="300" r="1" fill="#5AC8FA">
+      <animate attributeName="opacity" values="0.5;0.1;0.5" dur="9s" repeatCount="indefinite" />
+    </circle>
+  </g>
+</svg>

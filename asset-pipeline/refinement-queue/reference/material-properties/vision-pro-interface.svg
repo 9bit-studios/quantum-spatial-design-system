@@ -1,0 +1,420 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 800">
+  <!-- Background and definitions -->
+  <defs>
+    <!-- Main background gradient -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A0621" />
+      <stop offset="100%" stop-color="#131A36" />
+    </linearGradient>
+    
+    <!-- Depth gradient for panels -->
+    <linearGradient id="depthGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#131A36" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#331F4A" stop-opacity="0.7" />
+    </linearGradient>
+    
+    <!-- Energy transition gradient -->
+    <linearGradient id="energyGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2C5F2D" />
+      <stop offset="50%" stop-color="#131A36" />
+      <stop offset="100%" stop-color="#5AC8FA" />
+    </linearGradient>
+    
+    <!-- Spiritual transition gradient -->
+    <linearGradient id="spiritualGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6A3093" />
+      <stop offset="50%" stop-color="#BF4080" />
+      <stop offset="100%" stop-color="#5AC8FA" />
+    </linearGradient>
+    
+    <!-- Quantum gradient for active elements -->
+    <linearGradient id="quantumGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#131A36" />
+      <stop offset="50%" stop-color="#331F4A" />
+      <stop offset="100%" stop-color="#6A3093" />
+    </linearGradient>
+    
+    <!-- Light glow effect -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur" />
+      <feColorMatrix in="blur" mode="matrix" values="
+          1 0 0 0 0
+          0 1 0 0 0 
+          0 0 1 0 0
+          0 0 0 0.5 0" result="glow" />
+      <feComposite in="SourceGraphic" in2="glow" operator="over" />
+    </filter>
+    
+    <!-- Depth of field blur for background elements -->
+    <filter id="depthBlur" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3" />
+    </filter>
+    
+    <!-- Heavy depth blur for distant elements -->
+    <filter id="distantBlur" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="5" />
+    </filter>
+    
+    <!-- Grid pattern for spatial awareness -->
+    <pattern id="spatialGrid" patternUnits="userSpaceOnUse" width="100" height="100" patternTransform="rotate(15) scale(0.5)">
+      <path d="M 0 0 L 100 0" stroke="#5AC8FA" stroke-width="0.5" stroke-opacity="0.05" />
+      <path d="M 0 20 L 100 20" stroke="#5AC8FA" stroke-width="0.5" stroke-opacity="0.05" />
+      <path d="M 0 40 L 100 40" stroke="#5AC8FA" stroke-width="0.5" stroke-opacity="0.05" />
+      <path d="M 0 60 L 100 60" stroke="#5AC8FA" stroke-width="0.5" stroke-opacity="0.05" />
+      <path d="M 0 80 L 100 80" stroke="#5AC8FA" stroke-width="0.5" stroke-opacity="0.05" />
+      <path d="M 0 0 L 0 100" stroke="#5AC8FA" stroke-width="0.5" stroke-opacity="0.05" />
+      <path d="M 20 0 L 20 100" stroke="#5AC8FA" stroke-width="0.5" stroke-opacity="0.05" />
+      <path d="M 40 0 L 40 100" stroke="#5AC8FA" stroke-width="0.5" stroke-opacity="0.05" />
+      <path d="M 60 0 L 60 100" stroke="#5AC8FA" stroke-width="0.5" stroke-opacity="0.05" />
+      <path d="M 80 0 L 80 100" stroke="#5AC8FA" stroke-width="0.5" stroke-opacity="0.05" />
+    </pattern>
+    
+    <!-- Depth grid pattern -->
+    <pattern id="depthGrid" patternUnits="userSpaceOnUse" width="100" height="100" patternTransform="rotate(75) scale(0.6)">
+      <path d="M 0 0 L 100 0" stroke="#6A3093" stroke-width="0.3" stroke-opacity="0.07" />
+      <path d="M 0 20 L 100 20" stroke="#6A3093" stroke-width="0.3" stroke-opacity="0.07" />
+      <path d="M 0 40 L 100 40" stroke="#6A3093" stroke-width="0.3" stroke-opacity="0.07" />
+      <path d="M 0 60 L 100 60" stroke="#6A3093" stroke-width="0.3" stroke-opacity="0.07" />
+      <path d="M 0 80 L 100 80" stroke="#6A3093" stroke-width="0.3" stroke-opacity="0.07" />
+      <path d="M 0 0 L 0 100" stroke="#6A3093" stroke-width="0.3" stroke-opacity="0.07" />
+      <path d="M 20 0 L 20 100" stroke="#6A3093" stroke-width="0.3" stroke-opacity="0.07" />
+      <path d="M 40 0 L 40 100" stroke="#6A3093" stroke-width="0.3" stroke-opacity="0.07" />
+      <path d="M 60 0 L 60 100" stroke="#6A3093" stroke-width="0.3" stroke-opacity="0.07" />
+      <path d="M 80 0 L 80 100" stroke="#6A3093" stroke-width="0.3" stroke-opacity="0.07" />
+    </pattern>
+    
+    <!-- Moving particles effect for depth perception -->
+    <filter id="particleEffect" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="3" result="noise" seed="15" />
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="5" xChannelSelector="R" yChannelSelector="G" />
+    </filter>
+    
+    <!-- Glow for primary elements -->
+    <filter id="primaryGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="4" result="blur" />
+      <feFlood flood-color="#5AC8FA" flood-opacity="0.5" result="color" />
+      <feComposite in="color" in2="blur" operator="in" result="glow" />
+      <feBlend in="SourceGraphic" in2="glow" mode="screen" />
+    </filter>
+    
+    <!-- Subtle glow for secondary elements -->
+    <filter id="secondaryGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2" result="blur" />
+      <feFlood flood-color="#6A3093" flood-opacity="0.4" result="color" />
+      <feComposite in="color" in2="blur" operator="in" result="glow" />
+      <feBlend in="SourceGraphic" in2="glow" mode="screen" />
+    </filter>
+    
+    <!-- Energy glow for action elements -->
+    <filter id="energyGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2" result="blur" />
+      <feFlood flood-color="#BF4080" flood-opacity="0.5" result="color" />
+      <feComposite in="color" in2="blur" operator="in" result="glow" />
+      <feBlend in="SourceGraphic" in2="glow" mode="screen" />
+    </filter>
+    
+    <!-- Glass effect for Vision Pro UI -->
+    <linearGradient id="glassGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.08" />
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.04" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.02" />
+    </linearGradient>
+    
+    <!-- Glass surface reflection -->
+    <linearGradient id="glassReflection" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.15" />
+      <stop offset="20%" stop-color="#ffffff" stop-opacity="0.05" />
+      <stop offset="60%" stop-color="#ffffff" stop-opacity="0.02" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+    </linearGradient>
+    
+    <!-- Distance fog effect -->
+    <linearGradient id="distanceFog" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0A0621" stop-opacity="0" />
+      <stop offset="80%" stop-color="#0A0621" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#0A0621" stop-opacity="0.5" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Main Background with Depth Grid -->
+  <rect width="900" height="800" fill="url(#bgGradient)" />
+  <rect width="900" height="800" fill="url(#spatialGrid)" />
+  <rect width="900" height="800" fill="url(#depthGrid)" />
+  <rect width="900" height="800" fill="url(#distanceFog)" />
+  
+  <!-- Title Section -->
+  <g transform="translate(450, 50)">
+    <text x="0" y="0" font-family="'SF Pro Display', -apple-system, sans-serif" font-size="32" font-weight="bold" fill="#FFFFFF" text-anchor="middle" filter="url(#glow)">Vision Pro Spatial Interface</text>
+    <text x="0" y="40" font-family="'SF Pro Display', -apple-system, sans-serif" font-size="18" fill="#5AC8FA" text-anchor="middle">Quantum-Spatial Design System</text>
+  </g>
+  
+  <!-- Distant Environment Elements (7-10m plane) -->
+  <g transform="translate(450, 380)" filter="url(#distantBlur)">
+    <!-- Mountain silhouettes -->
+    <path d="M-450,200 L-350,100 L-300,150 L-200,50 L-100,120 L0,20 L100,130 L200,80 L250,100 L350,40 L450,180 L450,200 L-450,200 Z" fill="#131A36" opacity="0.3" />
+    
+    <!-- Distant floating structures -->
+    <g opacity="0.4">
+      <rect x="-400" y="-150" width="80" height="120" rx="10" fill="#331F4A" opacity="0.2" />
+      <rect x="-380" y="-140" width="40" height="80" rx="5" fill="#6A3093" opacity="0.3" />
+      
+      <rect x="320" y="-170" width="100" height="80" rx="10" fill="#331F4A" opacity="0.2" />
+      <rect x="340" y="-160" width="60" height="40" rx="5" fill="#6A3093" opacity="0.3" />
+      
+      <rect x="-150" y="-200" width="60" height="100" rx="8" fill="#331F4A" opacity="0.2" />
+      <rect x="-140" y="-190" width="40" height="60" rx="5" fill="#6A3093" opacity="0.3" />
+      
+      <rect x="120" y="-190" width="70" height="90" rx="8" fill="#331F4A" opacity="0.2" />
+      <rect x="130" y="-180" width="50" height="50" rx="5" fill="#6A3093" opacity="0.3" />
+    </g>
+    
+    <!-- Distant stars and moons -->
+    <circle cx="-350" cy="-160" r="3" fill="#FFFFFF" opacity="0.6" />
+    <circle cx="-200" cy="-180" r="2" fill="#FFFFFF" opacity="0.5" />
+    <circle cx="-50" cy="-170" r="4" fill="#FFFFFF" opacity="0.7" />
+    <circle cx="100" cy="-190" r="2" fill="#FFFFFF" opacity="0.5" />
+    <circle cx="250" cy="-160" r="3" fill="#FFFFFF" opacity="0.6" />
+    <circle cx="400" cy="-180" r="2.5" fill="#FFFFFF" opacity="0.6" />
+    
+    <!-- Colorful moons as described in lore -->
+    <circle cx="-300" cy="-140" r="8" fill="#D10056" opacity="0.3" /> <!-- Ruby moon -->
+    <circle cx="350" cy="-130" r="12" fill="#A0E6BB" opacity="0.2" /> <!-- Pale green moon -->
+    <circle cx="50" cy="-150" r="10" fill="#9932CC" opacity="0.2" /> <!-- Violet moon -->
+    
+    <!-- Non-circular moon -->
+    <polygon points="200,-140 215,-135 210,-120 195,-125" fill="#E6E6FA" opacity="0.3" />
+  </g>
+  
+  <!-- Mid-distance Elements (3-7m plane) -->
+  <g transform="translate(450, 380)" filter="url(#depthBlur)">
+    <!-- Floating structures with more detail -->
+    <rect x="-380" y="-130" width="100" height="60" rx="8" fill="#131A36" opacity="0.5" stroke="#5AC8FA" stroke-width="0.5" stroke-opacity="0.3" />
+    <rect x="-370" y="-120" width="80" height="40" rx="5" fill="#331F4A" opacity="0.4" />
+    
+    <rect x="280" y="-140" width="120" height="80" rx="10" fill="#131A36" opacity="0.5" stroke="#5AC8FA" stroke-width="0.5" stroke-opacity="0.3" />
+    <rect x="290" y="-130" width="100" height="60" rx="8" fill="#331F4A" opacity="0.4" />
+    
+    <!-- Hovering panels with quantum pixel effect -->
+    <g transform="translate(-220, -80)">
+      <rect x="-50" y="-30" width="100" height="60" rx="8" fill="#131A36" opacity="0.6" stroke="#6A3093" stroke-width="0.8" stroke-opacity="0.4" />
+      <rect x="-45" y="-25" width="90" height="50" rx="5" fill="#331F4A" opacity="0.5" />
+      <rect x="-40" y="-20" width="80" height="40" rx="4" fill="url(#glassGradient)" />
+      <rect x="-35" y="-15" width="6" height="6" fill="#5AC8FA" opacity="0.6" />
+      <rect x="25" y="15" width="6" height="6" fill="#5AC8FA" opacity="0.6" />
+    </g>
+    
+    <g transform="translate(180, -60)">
+      <rect x="-40" y="-25" width="80" height="50" rx="8" fill="#131A36" opacity="0.6" stroke="#BF4080" stroke-width="0.8" stroke-opacity="0.4" />
+      <rect x="-35" y="-20" width="70" height="40" rx="5" fill="#331F4A" opacity="0.5" />
+      <rect x="-30" y="-15" width="60" height="30" rx="4" fill="url(#glassGradient)" />
+      <rect x="-25" y="-10" width="5" height="5" fill="#BF4080" opacity="0.6" />
+      <rect x="20" y="10" width="5" height="5" fill="#BF4080" opacity="0.6" />
+    </g>
+    
+    <!-- Energy connections between elements -->
+    <path d="M-220,-80 C-150,-50 -50,-70 0,-40" stroke="#5AC8FA" stroke-width="0.8" stroke-opacity="0.3" fill="none" />
+    <path d="M180,-60 C120,-30 60,-50 0,-40" stroke="#BF4080" stroke-width="0.8" stroke-opacity="0.3" fill="none" />
+    
+    <!-- Spatial awareness grid planes -->
+    <g opacity="0.2">
+      <path d="M-300,-50 L300,-50" stroke="#5AC8FA" stroke-width="0.4" stroke-opacity="0.3" />
+      <path d="M-300,-40 L300,-40" stroke="#5AC8FA" stroke-width="0.4" stroke-opacity="0.3" />
+      <path d="M-300,-30 L300,-30" stroke="#5AC8FA" stroke-width="0.4" stroke-opacity="0.3" />
+      <path d="M-300,-20 L300,-20" stroke="#5AC8FA" stroke-width="0.4" stroke-opacity="0.3" />
+      <path d="M-300,-10 L300,-10" stroke="#5AC8FA" stroke-width="0.4" stroke-opacity="0.3" />
+      <path d="M-300,0 L300,0" stroke="#5AC8FA" stroke-width="0.4" stroke-opacity="0.3" />
+      <path d="M-300,10 L300,10" stroke="#5AC8FA" stroke-width="0.4" stroke-opacity="0.3" />
+      <path d="M-300,20 L300,20" stroke="#5AC8FA" stroke-width="0.4" stroke-opacity="0.3" />
+      <path d="M-300,30 L300,30" stroke="#5AC8FA" stroke-width="0.4" stroke-opacity="0.3" />
+      <path d="M-300,40 L300,40" stroke="#5AC8FA" stroke-width="0.4" stroke-opacity="0.3" />
+      <path d="M-300,50 L300,50" stroke="#5AC8FA" stroke-width="0.4" stroke-opacity="0.3" />
+    </g>
+  </g>
+  
+  <!-- Main spatial interface visualization -->
+  <g transform="translate(450, 380)">
+    <!-- Main spatial interface components -->
+    <!-- Central UI Element (Jrotharke World Explorer) -->
+    <g>
+      <!-- Main interface panel (central) -->
+      <g filter="url(#glow)">
+        <rect x="-200" y="-120" width="400" height="240" rx="20" fill="#131A36" fill-opacity="0.7" stroke="#5AC8FA" stroke-width="1" stroke-opacity="0.5" />
+        <rect x="-195" y="-115" width="390" height="35" rx="10" fill="url(#spiritualGradient)" fill-opacity="0.3" />
+        
+        <!-- Glass effect overlay -->
+        <rect x="-195" y="-80" width="390" height="195" rx="0 0 20 20" fill="url(#glassGradient)" />
+        <rect x="-195" y="-115" width="390" height="35" rx="10 10 0 0" fill="url(#glassReflection)" />
+        
+        <!-- Interface title -->
+        <text x="0" y="-92" font-family="'SF Pro Display', -apple-system, sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">Jrotharke World Explorer</text>
+        
+        <!-- World view -->
+        <rect x="-190" y="-75" width="380" height="160" rx="8" fill="#0A0621" fill-opacity="0.7" />
+        
+        <!-- Stylized 3D environment visualization -->
+        <g transform="translate(0, 5)">
+          <!-- Sky with quantum effect -->
+          <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#0A0621" />
+            <stop offset="80%" stop-color="#151F40" />
+            <stop offset="100%" stop-color="#1E1F5C" />
+          </linearGradient>
+          <rect x="-180" y="-70" width="360" height="90" fill="url(#skyGradient)" />
+          
+          <!-- Mountains silhouette -->
+          <path d="M-180,20 L-150,-10 L-120,5 L-90,-15 L-60,0 L-30,-20 L0,-5 L30,-25 L60,-10 L90,-30 L120,-15 L150,-5 L180,10 L180,20 L-180,20 Z" fill="#151F40" />
+          
+          <!-- Foreground terrain -->
+          <path d="M-180,20 L180,20 L180,70 L-180,70 Z" fill="#131A36" />
+          
+          <!-- Magic system visualization: Energy connections -->
+          <path d="M-120,40 C-80,20 -40,45 0,30" stroke="url(#energyGradient)" stroke-width="2" stroke-opacity="0.8" fill="none" />
+          <path d="M50,30 C90,50 130,35 170,45" stroke="url(#spiritualGradient)" stroke-width="2" stroke-opacity="0.8" fill="none" />
+          
+          <!-- Character silhouette -->
+          <g transform="translate(0, 45)">
+            <!-- Character silhouette with mauve tinge -->
+            <path d="M0,-20 C-3,-25 -8,-25 -5,-20 S0,-22 5,-20 S3,-25 0,-20" fill="#896878" />
+            <rect x="-6" y="-20" width="12" height="15" rx="3" fill="#896878" />
+            <rect x="-10" y="-15" width="4" height="12" rx="1" fill="#896878" />
+            <rect x="6" y="-15" width="4" height="12" rx="1" fill="#896878" />
+            <rect x="-5" y="-5" width="4" height="15" rx="1" fill="#896878" />
+            <rect x="1" y="-5" width="4" height="15" rx="1" fill="#896878" />
+            
+            <!-- Magic effect visualization -->
+            <circle cx="0" cy="-10" r="15" fill="none" stroke="#5AC8FA" stroke-width="0.5" stroke-opacity="0.7" stroke-dasharray="2,2" />
+            
+            <!-- Quantum pixel accents -->
+            <rect x="-12" y="-18" width="4" height="4" fill="#5AC8FA" opacity="0.7" />
+            <rect x="8" y="-12" width="4" height="4" fill="#5AC8FA" opacity="0.7" />
+          </g>
+        </g>
+        
+        <!-- Interface controls -->
+        <g transform="translate(0, 110)">
+          <!-- Navigation controls with quantum-spatial design -->
+          <rect x="-180" y="-15" width="360" height="30" rx="5" fill="#0D0D15" fill-opacity="0.7" />
+          
+          <!-- Primary action buttons -->
+          <g transform="translate(-160, 0)">
+            <rect x="-20" y="-10" width="40" height="20" rx="10" fill="#0D0D15" stroke="#5AC8FA" stroke-width="1" filter="url(#primaryGlow)" />
+            <text x="0" y="4" font-family="'SF Pro Text', -apple-system, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">Explore</text>
+          </g>
+          
+          <g transform="translate(-80, 0)">
+            <rect x="-20" y="-10" width="40" height="20" rx="10" fill="#0D0D15" stroke="#6A3093" stroke-width="1" />
+            <text x="0" y="4" font-family="'SF Pro Text', -apple-system, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">Map</text>
+          </g>
+          
+          <g transform="translate(0, 0)">
+            <rect x="-20" y="-10" width="40" height="20" rx="10" fill="#0D0D15" stroke="#6A3093" stroke-width="1" />
+            <text x="0" y="4" font-family="'SF Pro Text', -apple-system, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">Quests</text>
+          </g>
+          
+          <g transform="translate(80, 0)">
+            <rect x="-20" y="-10" width="40" height="20" rx="10" fill="#0D0D15" stroke="#6A3093" stroke-width="1" />
+            <text x="0" y="4" font-family="'SF Pro Text', -apple-system, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">Items</text>
+          </g>
+          
+          <g transform="translate(160, 0)">
+            <rect x="-20" y="-10" width="40" height="20" rx="10" fill="#0D0D15" stroke="#BF4080" stroke-width="1" filter="url(#energyGlow)" />
+            <text x="0" y="4" font-family="'SF Pro Text', -apple-system, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">Magic</text>
+          </g>
+        </g>
+      </g>
+    </g>
+    
+    <!-- Floating contextual UI elements (near plane) -->
+    <!-- Character Stats Panel (left) -->
+    <g transform="translate(-300, 0)">
+      <g filter="url(#secondaryGlow)">
+        <rect x="-70" y="-90" width="140" height="180" rx="15" fill="#131A36" fill-opacity="0.6" stroke="#6A3093" stroke-width="1" stroke-opacity="0.6" />
+        <rect x="-65" y="-85" width="130" height="30" rx="8" fill="url(#quantumGradient)" fill-opacity="0.3" />
+        
+        <!-- Glass effect overlay -->
+        <rect x="-65" y="-55" width="130" height="140" rx="0 0 15 15" fill="url(#glassGradient)" />
+        <rect x="-65" y="-85" width="130" height="30" rx="8 8 0 0" fill="url(#glassReflection)" />
+        
+        <!-- Panel title -->
+        <text x="0" y="-65" font-family="'SF Pro Display', -apple-system, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">Character</text>
+        
+        <!-- Character stats -->
+        <g transform="translate(0, -30)">
+          <!-- Stat bars with quantum-spatial design -->
+          <text x="-55" y="0" font-family="'SF Pro Text', -apple-system, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="start">Health</text>
+          <rect x="-55" y="5" width="110" height="8" rx="4" fill="#0D0D15" />
+          <rect x="-55" y="5" width="88" height="8" rx="4" fill="url(#energyGradient)" />
+          
+          <text x="-55" y="25" font-family="'SF Pro Text', -apple-system, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="start">Magic</text>
+          <rect x="-55" y="30" width="110" height="8" rx="4" fill="#0D0D15" />
+          <rect x="-55" y="30" width="75" height="8" rx="4" fill="url(#spiritualGradient)" />
+          
+          <text x="-55" y="50" font-family="'SF Pro Text', -apple-system, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="start">Stamina</text>
+          <rect x="-55" y="55" width="110" height="8" rx="4" fill="#0D0D15" />
+          <rect x="-55" y="55" width="95" height="8" rx="4" fill="#5AC8FA" />
+          
+          <text x="-55" y="75" font-family="'SF Pro Text', -apple-system, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="start">Experience</text>
+          <rect x="-55" y="80" width="110" height="8" rx="4" fill="#0D0D15" />
+          <rect x="-55" y="80" width="65" height="8" rx="4" fill="#BF4080" />
+        </g>
+      </g>
+    </g>
+    
+    <!-- Quest Panel (right) -->
+    <g transform="translate(300, 0)">
+      <g filter="url(#secondaryGlow)">
+        <rect x="-70" y="-90" width="140" height="180" rx="15" fill="#131A36" fill-opacity="0.6" stroke="#BF4080" stroke-width="1" stroke-opacity="0.6" />
+        <rect x="-65" y="-85" width="130" height="30" rx="8" fill="url(#spiritualGradient)" fill-opacity="0.3" />
+        
+        <!-- Glass effect overlay -->
+        <rect x="-65" y="-55" width="130" height="140" rx="0 0 15 15" fill="url(#glassGradient)" />
+        <rect x="-65" y="-85" width="130" height="30" rx="8 8 0 0" fill="url(#glassReflection)" />
+        
+        <!-- Panel title -->
+        <text x="0" y="-65" font-family="'SF Pro Display', -apple-system, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">Active Quests</text>
+        
+        <!-- Quest list -->
+        <g transform="translate(0, -30)">
+          <!-- Quest items with quantum-spatial design -->
+          <g transform="translate(0, 0)">
+            <rect x="-55" y="0" width="110" height="30" rx="4" fill="#0D0D15" fill-opacity="0.7" />
+            <text x="-50" y="15" font-family="'SF Pro Text', -apple-system, sans-serif" font-size="10" fill="#FFFFFF">The Lost Temple</text>
+            <rect x="-50" y="20" width="100" height="4" rx="2" fill="#5AC8FA" fill-opacity="0.5" />
+          </g>
+          
+          <g transform="translate(0, 40)">
+            <rect x="-55" y="0" width="110" height="30" rx="4" fill="#0D0D15" fill-opacity="0.7" />
+            <text x="-50" y="15" font-family="'SF Pro Text', -apple-system, sans-serif" font-size="10" fill="#FFFFFF">Ancient Artifacts</text>
+            <rect x="-50" y="20" width="60" height="4" rx="2" fill="#BF4080" fill-opacity="0.5" />
+          </g>
+          
+          <g transform="translate(0, 80)">
+            <rect x="-55" y="0" width="110" height="30" rx="4" fill="#0D0D15" fill-opacity="0.7" />
+            <text x="-50" y="15" font-family="'SF Pro Text', -apple-system, sans-serif" font-size="10" fill="#FFFFFF">Mystic Runes</text>
+            <rect x="-50" y="20" width="30" height="4" rx="2" fill="#6A3093" fill-opacity="0.5" />
+          </g>
+        </g>
+      </g>
+    </g>
+    
+    <!-- Floating notifications -->
+    <g transform="translate(0, -200)">
+      <!-- System notification -->
+      <g filter="url(#glow)">
+        <rect x="-100" y="-20" width="200" height="40" rx="8" fill="#131A36" fill-opacity="0.8" stroke="#5AC8FA" stroke-width="1" stroke-opacity="0.6" />
+        <text x="0" y="0" font-family="'SF Pro Text', -apple-system, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle">New Quest Available</text>
+        <text x="0" y="15" font-family="'SF Pro Text', -apple-system, sans-serif" font-size="10" fill="#5AC8FA" text-anchor="middle">The Lost Temple of Jrotharke</text>
+      </g>
+    </g>
+    
+    <!-- Spatial interaction indicators -->
+    <g transform="translate(0, 200)">
+      <!-- Hand tracking indicators -->
+      <circle cx="-150" cy="0" r="8" fill="none" stroke="#5AC8FA" stroke-width="1" stroke-opacity="0.6" stroke-dasharray="2,2" />
+      <circle cx="150" cy="0" r="8" fill="none" stroke="#5AC8FA" stroke-width="1" stroke-opacity="0.6" stroke-dasharray="2,2" />
+      
+      <!-- Eye tracking indicator -->
+      <circle cx="0" cy="-20" r="4" fill="#5AC8FA" fill-opacity="0.6" />
+    </g>
+  </g>
+</svg>

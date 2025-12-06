@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="deepSpaceGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A0621" />
+      <stop offset="100%" stop-color="#131A36" />
+    </linearGradient>
+    
+    <linearGradient id="eggplantGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#331F4A" />
+      <stop offset="100%" stop-color="#6A3093" />
+    </linearGradient>
+    
+    <linearGradient id="cyanGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5AC8FA" />
+      <stop offset="100%" stop-color="#29B6F6" />
+    </linearGradient>
+    
+    <linearGradient id="energyGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#BF4080" />
+      <stop offset="100%" stop-color="#FF2D55" />
+    </linearGradient>
+    
+    <!-- Filters -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+    <!-- Patterns -->
+    <pattern id="gridPattern" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <rect width="40" height="40" fill="none" stroke="#5AC8FA" stroke-width="0.5" stroke-opacity="0.1" />
+      <line x1="0" y1="20" x2="40" y2="20" stroke="#5AC8FA" stroke-width="0.3" stroke-opacity="0.1" />
+      <line x1="20" y1="0" x2="20" y2="40" stroke="#5AC8FA" stroke-width="0.3" stroke-opacity="0.1" />
+    </pattern>
+    
+    <!-- Code texture -->
+    <pattern id="codePattern" x="0" y="0" width="250" height="250" patternUnits="userSpaceOnUse">
+      <text x="10" y="20" fill="#5AC8FA" opacity="0.15" font-family="monospace" font-size="10">function exponentialGrowth(x, base=2) {</text>
+      <text x="20" y="35" fill="#5AC8FA" opacity="0.15" font-family="monospace" font-size="10">  return Math.pow(base, x);</text>
+      <text x="10" y="50" fill="#5AC8FA" opacity="0.15" font-family="monospace" font-size="10">}</text>
+      <text x="10" y="80" fill="#5AC8FA" opacity="0.15" font-family="monospace" font-size="10">function logarithmicGrowth(x, base=Math.E) {</text>
+      <text x="20" y="95" fill="#5AC8FA" opacity="0.15" font-family="monospace" font-size="10">  return Math.log(x) / Math.log(base);</text>
+      <text x="10" y="110" fill="#5AC8FA" opacity="0.15" font-family="monospace" font-size="10">}</text>
+      <text x="10" y="140" fill="#BF4080" opacity="0.15" font-family="monospace" font-size="10">function quantumGrowth(x, dimensions=4) {</text>
+      <text x="20" y="155" fill="#BF4080" opacity="0.15" font-family="monospace" font-size="10">  let result = 0;</text>
+      <text x="20" y="170" fill="#BF4080" opacity="0.15" font-family="monospace" font-size="10">  for (let d = 0; d < dimensions; d++) {</text>
+      <text x="30" y="185" fill="#BF4080" opacity="0.15" font-family="monospace" font-size="10">result += Math.pow(x, d) * Math.sin(x * d);</text>
+      <text x="20" y="200" fill="#BF4080" opacity="0.15" font-family="monospace" font-size="10">  }</text>
+      <text x="20" y="215" fill="#BF4080" opacity="0.15" font-family="monospace" font-size="10">  return Math.abs(result);</text>
+      <text x="10" y="230" fill="#BF4080" opacity="0.15" font-family="monospace" font-size="10">}</text>
+    </pattern>
+    
+    <!-- Arrow marker -->
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#FFFFFF" />
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#deepSpaceGradient)" />
+  <rect width="800" height="600" fill="url(#codePattern)" />
+  <rect width="800" height="600" fill="url(#gridPattern)" />
+  
+  <!-- Coordinate System -->
+  <g id="coordinateSystem" transform="translate(100, 450)">
+    <!-- X axis -->
+    <line x1="0" y1="0" x2="600" y2="0" stroke="#FFFFFF" stroke-width="2" marker-end="url(#arrowhead)" />
+    <!-- Y axis -->
+    <line x1="0" y1="0" x2="0" y2="-400" stroke="#FFFFFF" stroke-width="2" marker-end="url(#arrowhead)" />
+    
+    <!-- Axis labels -->
+    <text x="590" y="30" text-anchor="end" fill="#FFFFFF" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="14">Time / Iterations</text>
+    <text x="-10" y="-380" text-anchor="end" fill="#FFFFFF" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="14" transform="rotate(-90, -10, -380)">Growth</text>
+    
+    <!-- Grid lines -->
+    <g id="gridLines" stroke="#FFFFFF" stroke-width="0.5" stroke-opacity="0.2" stroke-dasharray="5,5">
+      <!-- Horizontal grid lines -->
+      <line x1="0" y1="-100" x2="600" y2="-100" />
+      <line x1="0" y1="-200" x2="600" y2="-200" />
+      <line x1="0" y1="-300" x2="600" y2="-300" />
+      <!-- Vertical grid lines -->
+      <line x1="100" y1="0" x2="100" y2="-400" />
+      <line x1="200" y1="0" x2="200" y2="-400" />
+      <line x1="300" y1="0" x2="300" y2="-400" />
+      <line x1="400" y1="0" x2="400" y2="-400" />
+      <line x1="500" y1="0" x2="500" y2="-400" />
+    </g>
+  </g>
+  
+  <!-- Growth Curves -->
+  <g id="growthCurves" transform="translate(100, 450)">
+    <!-- Linear Growth -->
+    <path d="M 0,0 L 100,-40 L 200,-80 L 300,-120 L 400,-160 L 500,-200 L 550,-220" 
+          fill="none" stroke="#FF2D55" stroke-width="2" stroke-opacity="0.7" />
+    <text x="550" y="-220" text-anchor="start" fill="#FF2D55" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12">Linear</text>
+    
+    <!-- Exponential Growth -->
+    <path d="M 0,0 L 100,-5 L 200,-20 L 300,-80 L 400,-320 L 450,-380" 
+          fill="none" stroke="#5AC8FA" stroke-width="2" stroke-opacity="0.7" />
+    <text x="450" y="-380" text-anchor="start" fill="#5AC8FA" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12">Exponential</text>
+    
+    <!-- Logarithmic Growth -->
+    <path d="M 0,0 L 100,-150 L 200,-200 L 300,-230 L 400,-250 L 500,-265 L 550,-270" 
+          fill="none" stroke="#29B6F6" stroke-width="2" stroke-opacity="0.7" />
+    <text x="550" y="-270" text-anchor="start" fill="#29B6F6" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12">Logarithmic</text>
+    
+    <!-- Quantum Growth -->
+    <path d="M 0,0 
+             Q 50,-120 100,-70 
+             T 200,-180 
+             T 300,-100 
+             T 400,-250 
+             T 500,-150 
+             T 550,-320" 
+          fill="none" stroke="#6A3093" stroke-width="3" stroke-opacity="0.8" filter="url(#softGlow)" />
+    <text x="550" y="-320" text-anchor="start" fill="#6A3093" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="14" font-weight="bold">Quantum</text>
+  </g>
+  
+  <!-- Vector Trajectories -->
+  <g id="vectorTrajectories" transform="translate(100, 450)">
+    <!-- Starting point -->
+    <circle cx="0" cy="0" r="5" fill="#FFFFFF" />
+    
+    <!-- Quantum path nodes -->
+    <circle cx="100" cy="-70" r="5" fill="#6A3093" filter="url(#softGlow)" />
+    <circle cx="200" cy="-180" r="5" fill="#6A3093" filter="url(#softGlow)" />
+    <circle cx="300" cy="-100" r="5" fill="#6A3093" filter="url(#softGlow)" />
+    <circle cx="400" cy="-250" r="5" fill="#6A3093" filter="url(#softGlow)" />
+    <circle cx="500" cy="-150" r="5" fill="#6A3093" filter="url(#softGlow)" />
+    <circle cx="550" cy="-320" r="5" fill="#6A3093" filter="url(#softGlow)" />
+    
+    <!-- Vector arrows showing direction changes -->
+    <!-- First segment -->
+    <line x1="50" y1="-60" x2="65" y2="-65" stroke="#FFFFFF" stroke-width="1.5" marker-end="url(#arrowhead)" />
+    
+    <!-- Second segment -->
+    <line x1="150" y1="-125" x2="165" y2="-140" stroke="#FFFFFF" stroke-width="1.5" marker-end="url(#arrowhead)" />
+    
+    <!-- Third segment -->
+    <line x1="250" y1="-140" x2="265" y2="-120" stroke="#FFFFFF" stroke-width="1.5" marker-end="url(#arrowhead)" />
+    
+    <!-- Fourth segment -->
+    <line x1="350" y1="-175" x2="365" y2="-200" stroke="#FFFFFF" stroke-width="1.5" marker-end="url(#arrowhead)" />
+    
+    <!-- Fifth segment -->
+    <line x1="450" y1="-200" x2="465" y2="-175" stroke="#FFFFFF" stroke-width="1.5" marker-end="url(#arrowhead)" />
+    
+    <!-- Sixth segment -->
+    <line x1="525" y1="-235" x2="535" y2="-260" stroke="#FFFFFF" stroke-width="1.5" marker-end="url(#arrowhead)" />
+  </g>
+  
+  <!-- Dimensional Shift Indicators -->
+  <g id="dimensionalShifts" transform="translate(100, 450)">
+    <!-- Shift at first inflection point -->
+    <circle cx="100" cy="-70" r="20" fill="none" stroke="#FF2D55" stroke-width="1.5" stroke-dasharray="3,3">
+      <animate attributeName="r" values="15;25;15" dur="4s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.9;0.3;0.9" dur="4s" repeatCount="indefinite" />
+    </circle>
+    
+    <!-- Shift at second inflection point -->
+    <circle cx="300" cy="-100" r="20" fill="none" stroke="#FF2D55" stroke-width="1.5" stroke-dasharray="3,3">
+      <animate attributeName="r" values="15;25;15" dur="4s" begin="1s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.9;0.3;0.9" dur="4s" begin="1s" repeatCount="indefinite" />
+    </circle>
+    
+    <!-- Shift at third inflection point -->
+    <circle cx="500" cy="-150" r="20" fill="none" stroke="#FF2D55" stroke-width="1.5" stroke-dasharray="3,3">
+      <animate attributeName="r" values="15;25;15" dur="4s" begin="2s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.9;0.3;0.9" dur="4s" begin="2s" repeatCount="indefinite" />
+    </circle>
+  </g>
+  
+  <!-- Particle Effects -->
+  <g id="particles" transform="translate(100, 450)">
+    <!-- Particles along quantum path -->
+    <circle cx="0" cy="0" r="1.5" fill="#FFFFFF" opacity="0.7">
+      <animateMotion 
+        path="M 0,0 Q 50,-120 100,-70 T 200,-180 T 300,-100 T 400,-250 T 500,-150 T 550,-320" 
+        dur="8s" 
+        repeatCount="indefinite" />
+    </circle>
+    
+    <circle cx="0" cy="0" r="1.5" fill="#FFFFFF" opacity="0.7">
+      <animateMotion 
+        path="M 0,0 Q 50,-120 100,-70 T 200,-180 T 300,-100 T 400,-250 T 500,-150 T 550,-320" 
+        dur="8s" 
+        begin="1s"
+        repeatCount="indefinite" />
+    </circle>
+    
+    <circle cx="0" cy="0" r="1.5" fill="#FFFFFF" opacity="0.7">
+      <animateMotion 
+        path="M 0,0 Q 50,-120 100,-70 T 200,-180 T 300,-100 T 400,-250 T 500,-150 T 550,-320" 
+        dur="8s" 
+        begin="2s"
+        repeatCount="indefinite" />
+    </circle>
+    
+    <circle cx="0" cy="0" r="1.5" fill="#FFFFFF" opacity="0.7">
+      <animateMotion 
+        path="M 0,0 Q 50,-120 100,-70 T 200,-180 T 300,-100 T 400,-250 T 500,-150 T 550,-320" 
+        dur="8s" 
+        begin="3s"
+        repeatCount="indefinite" />
+    </circle>
+  </g>
+  
+  <!-- Glow effect around quantum curve -->
+  <g id="quantumPathGlow" transform="translate(100, 450)">
+    <path d="M 0,0 
+             Q 50,-120 100,-70 
+             T 200,-180 
+             T 300,-100 
+             T 400,-250 
+             T 500,-150 
+             T 550,-320" 
+          fill="none" stroke="#6A3093" stroke-width="8" stroke-opacity="0.2" filter="url(#glow)" />
+  </g>
+  
+  <!-- Title and Description -->
+  <text x="400" y="50" text-anchor="middle" fill="#FFFFFF" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="24" font-weight="bold">Non-Linear Growth Vector Trajectories</text>
+  <text x="400" y="80" text-anchor="middle" fill="#5AC8FA" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="14" font-style="italic">"Breaking classical growth patterns through quantum mechanics"</text>
+  
+  <!-- Legend -->
+  <g id="legend" transform="translate(650, 200)">
+    <rect x="-10" y="-10" width="140" height="150" fill="#131A36" fill-opacity="0.7" rx="10" ry="10" stroke="#5AC8FA" stroke-width="1" stroke-opacity="0.5" />
+    
+    <text x="0" y="10" fill="#FFFFFF" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="14" font-weight="bold">Growth Patterns</text>
+    
+    <line x1="0" y1="30" x2="30" y2="30" stroke="#FF2D55" stroke-width="2" />
+    <text x="40" y="35" fill="#FFFFFF" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12">Linear</text>
+    
+    <line x1="0" y1="60" x2="30" y2="60" stroke="#5AC8FA" stroke-width="2" />
+    <text x="40" y="65" fill="#FFFFFF" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12">Exponential</text>
+    
+    <line x1="0" y1="90" x2="30" y2="90" stroke="#29B6F6" stroke-width="2" />
+    <text x="40" y="95" fill="#FFFFFF" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12">Logarithmic</text>
+    
+    <line x1="0" y1="120" x2="30" y2="120" stroke="#6A3093" stroke-width="3" filter="url(#softGlow)" />
+    <text x="40" y="125" fill="#FFFFFF" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12">Quantum</text>
+  </g>
+  
+  <!-- Bottom text -->
+  <g id="bottomText" transform="translate(400, 550)">
+    <text x="0" y="0" text-anchor="middle" fill="#FFFFFF" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12">Visualizing how quantum systems follow unpredictable but patterned growth trajectories</text>
+    <text x="0" y="20" text-anchor="middle" fill="#5AC8FA" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="10">9Bit Studios Quantum-Spatial Visualization Framework</text>
+  </g>
+</svg>

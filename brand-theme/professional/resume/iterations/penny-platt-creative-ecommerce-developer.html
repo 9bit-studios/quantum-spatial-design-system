@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penny Platt - Creative eCommerce Developer & UX Strategist</title>
+    <style>
+        @page {
+            size: letter;
+            margin: 0.5in 0.75in;
+            orphans: 3;
+            widows: 3;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif;
+            font-size: 10pt;
+            line-height: 1.4;
+            color: #131A36;
+            background: white;
+            max-width: 8.5in;
+            margin: 0 auto;
+            padding: 0.5in 0.75in;
+            orphans: 3;
+            widows: 3;
+        }
+        
+        .header {
+            margin-bottom: 14px;
+            border-bottom: 1px solid rgba(64, 93, 229, 0.15);
+            padding-bottom: 12px;
+        }
+        
+        h1 {
+            font-family: 'SF Pro Display', -apple-system, sans-serif;
+            font-size: 26pt;
+            font-weight: 600;
+            color: #131A36;
+            margin-bottom: 3px;
+            letter-spacing: -0.5px;
+        }
+        
+        .tagline {
+            font-size: 12pt;
+            font-weight: 500;
+            color: #6A3093;
+            margin-bottom: 10px;
+        }
+        
+        .contact {
+            font-size: 9pt;
+            color: #613FE7;
+            line-height: 1.6;
+        }
+        
+        .contact-row {
+            display: flex;
+            gap: 18px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        
+        .contact a {
+            color: #613FE7;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+        
+        .contact-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+        
+        .icon {
+            width: 12px;
+            height: 12px;
+            opacity: 0.7;
+        }
+        
+        .section {
+            margin-bottom: 10px;
+        }
+        
+        .section-title {
+            font-family: 'SF Pro Display', -apple-system, sans-serif;
+            font-size: 13pt;
+            font-weight: 600;
+            color: #613FE7;
+            margin-top: 20px;
+            margin-bottom: 6px;
+            padding-left: 8px;
+            border-left: 3px solid #613FE7;
+        }
+        
+        .profile {
+            font-size: 10pt;
+            line-height: 1.5;
+            margin-bottom: 8px;
+        }
+        
+        .profile-highlight {
+            background: rgba(97, 63, 231, 0.05);
+            border-left: 3px solid #613FE7;
+            padding: 6px 10px;
+            margin: 5px 0 6px 0;
+            border-radius: 3px;
+        }
+        
+        .job {
+            margin-bottom: 10px;
+            page-break-inside: avoid;
+        }
+        
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 4px;
+        }
+        
+        .job-title {
+            font-size: 11pt;
+            font-weight: 600;
+            color: #131A36;
+        }
+        
+        .job-company {
+            font-size: 10.5pt;
+            font-weight: 500;
+            color: #405de5;
+        }
+        
+        .job-date {
+            font-size: 8.5pt;
+            color: #6A3093;
+        }
+        
+        .job-location {
+            font-size: 8.5pt;
+            color: #6A3093;
+            margin-bottom: 5px;
+        }
+        
+        .job ul {
+            margin-left: 16px;
+            margin-top: 5px;
+        }
+        
+        .job li {
+            margin-bottom: 3px;
+            line-height: 1.35;
+        }
+        
+        .portfolio-highlight {
+            background: rgba(97, 63, 231, 0.05);
+            border-left: 3px solid #613FE7;
+            padding: 7px 10px;
+            margin: 6px 0 10px 0;
+            border-radius: 4px;
+        }
+        
+        .portfolio-title {
+            font-weight: 600;
+            color: #613FE7;
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .portfolio-link {
+            font-size: 9pt;
+            color: #405de5;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px 24px;
+            font-size: 10pt;
+        }
+        
+        .skill-category {
+            font-weight: 600;
+            color: #131A36;
+        }
+        
+        .skill-list {
+            color: #131A36;
+            margin-top: 2px;
+        }
+        
+        .education-item {
+            margin-bottom: 6px;
+            font-size: 9.5pt;
+        }
+        
+        .education-degree {
+            font-weight: 600;
+            color: #131A36;
+        }
+        
+        .education-school {
+            color: #405de5;
+        }
+        
+        .cert-item {
+            font-size: 9.5pt;
+            margin-bottom: 4px;
+        }
+        
+        .education-year {
+            color: #6A3093;
+            font-size: 9pt;
+        }
+        
+        @media print {
+            body {
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Penny Platt</h1>
+        <div class="tagline">Creative eCommerce Developer & UX Strategist</div>
+        <div class="contact">
+            <div class="contact-row">
+                <span class="contact-item">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    Portland, Oregon | Remote or On-Site
+                </span>
+                <span class="contact-item">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                    (971) 386-7688
+                </span>
+            </div>
+            <div class="contact-row">
+                <a href="/cdn-cgi/l/email-protection#d7a7b2b9b9ae97eeb5bea3a4a3a2b3beb8a4f9beb8">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                    <span class="__cf_email__" data-cfemail="cabaafa4a4b38af3a8a3beb9bebfaea3a5b9e4a3a5">[email&#160;protected]</span>
+                <a href="https://linkedin.com/in/penny-platt">
+                    <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
+                    @penny-platt
+                </a>
+                <a href="https://9bitstudios.io">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="2" y1="12" x2="22" y2="12"></line>
+                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                    </svg>
+                    9bitstudios.io
+                </a>
+                <a href="https://Oksana.ai">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="2" y1="12" x2="22" y2="12"></line>
+                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                    </svg>
+                    Oksana.ai
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Profile</h2>
+        <p class="profile">With over five years of Shopify Plus development and two decades of design-to-development expertise, I’m a dedicated eCommerce developer specializing in Liquid/JavaScript theme development, third-party API integrations, and conversion optimization. I’ve built automation systems that reduced content management time by 89% while ensuring brand consistency across multi-currency stores. My expertise includes systematic validation practices and a deep understanding of DTC eCommerce strategy.</p>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="skills-grid">
+            <div>
+                <div class="skill-category">Shopify Plus Development</div>
+                <div class="skill-list">Liquid, JavaScript (ES6+), HTML5, CSS3/SASS, Shopify CLI, Custom Theme Architecture, Checkout Customization</div>
+            </div>
+            <div>
+                <div class="skill-category">APIs & Integrations</div>
+                <div class="skill-list">Shopify Admin/Storefront API (REST & GraphQL), Webhooks, Shopify Flow, Third-Party App Management</div>
+            </div>
+            <div>
+                <div class="skill-category">Frameworks & Tools</div>
+                <div class="skill-list">Next.js, React, TypeScript, Git Workflows, Deployment Automation, Vercel</div>
+            </div>
+            <div>
+                <div class="skill-category">E-Commerce Strategy</div>
+                <div class="skill-list">GA4, Conversion Optimization, A/B Testing, SEO, Email Marketing (Klaviyo, Braze), UTM Tracking</div>
+            </div>
+            <div>
+                <div class="skill-category">Automation & Data</div>
+                <div class="skill-list">Matrixify, Product/Content Automation, ERP/PIM Integrations, Power BI, Tableau</div>
+            </div>
+            <div>
+                <div class="skill-category">Design & UX</div>
+                <div class="skill-list">Figma, Adobe Creative Suite, Design Systems, Accessibility (WCAG), Responsive Design</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Featured Projects</h2>
+    </div>
+
+    <div class="portfolio-highlight">
+        <div class="portfolio-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+            </svg>
+            Case Study
+        </div>
+        <div style="font-size: 9.5pt; line-height: 1.5; margin-bottom: 6px;">
+            Custom Shopify Plus theme with ultra-smart filtering architecture managing complex product catalogs for horror gaming collectors. Built type-safe validation system handling 15+ filter categories, integrated Klaviyo email intelligence and Grid API analytics for behavioral tracking. Achieved 94/100 Lighthouse score, 2.3s load time, 47% revenue growth within 6 months.
+        </div>
+        <a href="https://9bitstudios.io/portfolio/premium-shopify" class="portfolio-link">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+            Petersen Games Custom Shopify Liquid
+        </a>
+    </div>
+</div>
+
+<div class="portfolio-highlight">
+    <div class="portfolio-title">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+            <line x1="8" y1="21" x2="16" y2="21"></line>
+            <line x1="12" y1="17" x2="12" y2="21"></line>
+        </svg>
+        Portfolio Project: Oksana - Brand-Aware Content Intelligence Platform
+    </div>
+    <div style="font-size: 9.5pt; line-height: 1.5; margin-bottom: 6px;">
+        Apple Intelligence-powered platform for content strategy automation and analytics intelligence. Integrates Notion, Shopify, Klaviyo, and Grid API for real-time brand consistency enforcement and content acceleration.
+    </div>
+    <a href="https://Oksana.ai" class="portfolio-link">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <line x1="10" y1="14" x2="21" y2="3"></line>
+        </svg>
+        oksana.ai
+    </a>
+</div>
+</div>
+
+    <div class="section">
+        <h2 class="section-title">Professional Experience</h2>
+        
+        <div class="job">
+            <div class="job-header">
+                <div>
+                    <div class="job-title">Founder & Creative Director</div>
+                    <div class="job-company">9Bit Studios</div>
+                </div>
+                <div class="job-date">September 2023 - Present</div>
+            </div>
+            <div class="job-location">Portland, OR</div>
+            <ul>
+                <li><strong>Shopify Development:</strong> Built custom themes using Liquid, JavaScript, HTML5/CSS3 with performance optimization achieving 90+ PageSpeed scores</li>
+                <li><strong>API Integrations:</strong> Developed custom Shopify integrations connecting Klaviyo (email), Notion (content management), and analytics platforms via REST/GraphQL APIs</li>
+                <li><strong>Automation Systems:</strong> Created content automation workflows reducing manual product updates by 89% using Matrixify and custom scripts</li>
+                <li><strong>Design System Enforcement:</strong> Built TypeScript validation layer ensuring brand consistency across 100+ product pages and checkout flows</li>
+                <li><strong>International Commerce:</strong> Implemented multi-currency configurations with localization support for global DTC brands</li>
+            </ul>
+            
+        <div class="job">
+            <div class="job-header">
+                <div>
+                    <div class="job-title">Art Director & UX Designer</div>
+                    <div class="job-company">RunSmart Online</div>
+                </div>
+                <div class="job-date">January 2021 - January 2023</div>
+            </div>
+            <div class="job-location">Remote</div>
+            <ul>
+                <li><strong>Conversion Optimization:</strong> Increased user engagement 40% and memberships 25% through data-informed UX redesigns and A/B testing programs</li>
+                <li><strong>Analytics Implementation:</strong> Built custom dashboards using GA4 and third-party analytics tracking conversion funnels, cart abandonment, and user behavior</li>
+                <li><strong>Email Marketing Integration:</strong> Developed automated email flows with Klaviyo integration, improving retention 30%</li>
+                <li><strong>Responsive Design:</strong> Created mobile-first experiences optimized for conversion across devices</li>
+                <li><strong>Cross-Functional Collaboration:</strong> Partnered with engineering, marketing, and operations teams on feature development and deployment workflows</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <div>
+                    <div class="job-title">Art Director & E-Commerce Developer</div>
+                    <div class="job-company">American College of Healthcare Sciences</div>
+                </div>
+                <div class="job-date">January 2018 - January 2021</div>
+            </div>
+            <div class="job-location">Portland, OR</div>
+            <ul>
+                <li><strong>Shopify Store Development:</strong> Built and maintained Shopify e-commerce site generating $500K+ annual revenue with conversion rate optimization</li>
+                <li><strong>Product Management:</strong> Managed 200+ SKUs with automated inventory sync and product data workflows</li>
+                <li><strong>SEO & Performance:</strong> Conducted comprehensive web audits improving organic traffic 45% through technical SEO and page speed optimization</li>
+                <li><strong>Platform Certification:</strong> Completed HubSpot certification suite (2017): Content Marketing, Social Media, Inbound Marketing, Email Marketing</li>
+                <li><strong>Design System Implementation:</strong> Created comprehensive design system ensuring brand consistency across 100+ digital touchpoints</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <div>
+                    <div class="job-title">Art Director & E-Commerce Consultant</div>
+                    <div class="job-company">Petersen Games</div>
+                </div>
+                <div class="job-date">January 2016 - January 2018</div>
+            </div>
+            <div class="job-location">Rockwall, TX</div>
+            <ul>
+                <li><strong>E-Commerce Strategy:</strong> Directed Kickstarter campaigns generating $2M+ in funding with conversion-optimized landing pages and product presentation</li>
+                <li><strong>Shopify Implementation:</strong> Currently developing custom Shopify Plus store with advanced product customization and international shipping</li>
+                <li><strong>Product Data Management:</strong> Created systems managing 100+ SKU product lines with variant management and automated workflows</li>
+                <li><strong>Team Leadership:</strong> Managed international team of 15+ designers with systematic Git workflows and deployment processes</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <div>
+                    <div class="job-title">Senior Designer</div>
+                    <div class="job-company">Texas Creative</div>
+                </div>
+                <div class="job-date">January 2014 - April 2016</div>
+            </div>
+            <div class="job-location">Austin, TX</div>
+            <ul>
+                <li>Created responsive email templates and landing pages for conversion optimization across campaigns</li>
+                <li>Developed brand identity systems and digital style guides with systematic documentation</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Education</h2>
+        <div class="education-item">
+            <span class="education-degree">BA, Communication Design</span> |
+            <span class="education-school">University of Texas at San Antonio</span>
+            <span class="education-year">(2010-2012)</span>
+        </div>
+        <div class="education-item">
+            <span class="education-degree">AAS, Visual Communications</span> |
+            <span class="education-school">Collin College</span>
+            <span class="education-year">(1995-1998)</span>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Certifications</h2>
+        <div class="cert-item"><strong>HubSpot (2017):</strong> Content Marketing, Social Media, Inbound Marketing, Email Marketing</div>
+        <div class="cert-item"><strong>Interaction Design Foundation (2020):</strong> Agile Methods for UX, Journey Mapping, UX Foundations</div>
+    </div>
+    
+</body>
+</html>

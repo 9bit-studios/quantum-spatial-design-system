@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RunSmart Coach - Messages</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', system-ui, sans-serif;
+            background: #000000;
+            color: #FFFFFF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .phone-frame {
+            width: 393px;
+            height: 852px;
+            background: #000;
+            border-radius: 55px;
+            padding: 12px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8),
+                        inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .dynamic-island {
+            position: absolute;
+            top: 12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 126px;
+            height: 37px;
+            background: #000;
+            border-radius: 20px;
+            z-index: 100;
+        }
+
+        .screen {
+            width: 100%;
+            height: 100%;
+            background: #000;
+            border-radius: 47px;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
+        .status-bar {
+            padding: 54px 24px 12px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        .content {
+            padding: 0 24px 100px 24px;
+        }
+
+        /* Header */
+        .page-header {
+            margin-bottom: 24px;
+        }
+
+        .header-title {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .header-subtitle {
+            font-size: 14px;
+            color: #888;
+        }
+
+        /* Conversation List */
+        .conversation-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .conversation-card {
+            background: #0A0A0A;
+            border: 1px solid #1A1A1A;
+            border-radius: 16px;
+            padding: 16px;
+            display: flex;
+            gap: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .conversation-card:active {
+            transform: scale(0.98);
+            background: #0F0F0F;
+        }
+
+        .conversation-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 24px;
+            background: linear-gradient(135deg, #7B00FF, #A0CC00);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: #000;
+            flex-shrink: 0;
+        }
+
+        .conversation-content {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .conversation-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 4px;
+        }
+
+        .conversation-name {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .conversation-time {
+            font-size: 12px;
+            color: #666;
+        }
+
+        .conversation-preview {
+            font-size: 14px;
+            color: #888;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .conversation-meta {
+            display: flex;
+            gap: 8px;
+            margin-top: 8px;
+        }
+
+        .meta-tag {
+            padding: 4px 8px;
+            background: rgba(123, 0, 255, 0.1);
+            border: 1px solid #7B00FF;
+            border-radius: 8px;
+            font-size: 10px;
+            font-weight: 700;
+            color: #7B00FF;
+            text-transform: uppercase;
+        }
+
+        .unread-badge {
+            width: 20px;
+            height: 20px;
+            background: #7B00FF;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            font-weight: 700;
+            color: #000;
+            margin-left: auto;
+        }
+
+        /* Tab Bar */
+        .tab-bar {
+            position: fixed;
+            bottom: 12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 369px;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid #1A1A1A;
+            border-radius: 24px;
+            padding: 12px 16px;
+            display: flex;
+            justify-content: space-around;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .tab-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .tab-icon {
+            opacity: 0.5;
+        }
+
+        .tab-label {
+            font-size: 10px;
+            color: #888;
+            font-weight: 500;
+        }
+
+        .tab-item.active .tab-icon {
+            opacity: 1;
+            filter: drop-shadow(0 0 8px #7B00FF);
+        }
+
+        .tab-item.active .tab-label {
+            color: #7B00FF;
+            font-weight: 600;
+        }
+
+        .tab-icon svg {
+            width: 24px;
+            height: 24px;
+        }
+    </style>
+    <link rel="stylesheet" href="../../assets/runsmart-design-system.css">
+</head>
+<body>
+    <div class="phone-frame">
+        <div class="dynamic-island"></div>
+
+        <div class="screen">
+            <div class="status-bar">
+                <div class="time">9:41</div>
+                <div class="status-icons">
+                    <svg width="18" height="12" viewBox="0 0 18 12" fill="currentColor" style="opacity: 0.8;">
+                        <circle cx="2" cy="10" r="1.5" fill="currentColor"/>
+                        <circle cx="6" cy="7.5" r="1.5" fill="currentColor"/>
+                        <circle cx="10" cy="5" r="1.5" fill="currentColor"/>
+                        <circle cx="14" cy="2.5" r="1.5" fill="currentColor"/>
+                    </svg>
+                    <svg width="22" height="12" viewBox="0 0 22 12" fill="none" style="margin-left: 6px;">
+                        <rect x="1" y="1" width="18" height="10" rx="2" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                        <rect x="3" y="3" width="13" height="6" rx="1" fill="currentColor"/>
+                        <rect x="19.5" y="4" width="1.5" height="4" rx="0.75" fill="currentColor"/>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="content">
+                <div class="page-header">
+                    <div class="header-title">Messages</div>
+                    <div class="header-subtitle">12 active conversations</div>
+                </div>
+
+                <div class="conversation-list">
+                    <div class="conversation-card">
+                        <div class="conversation-avatar">JD</div>
+                        <div class="conversation-content">
+                            <div class="conversation-header">
+                                <div class="conversation-name">John Davis</div>
+                                <div class="conversation-time">2m ago</div>
+                            </div>
+                            <div class="conversation-preview">Thanks coach! I'll try that recovery plan</div>
+                            <div class="conversation-meta">
+                                <div class="meta-tag">At Risk</div>
+                            </div>
+                        </div>
+                        <div class="unread-badge">2</div>
+                    </div>
+
+                    <div class="conversation-card">
+                        <div class="conversation-avatar">SM</div>
+                        <div class="conversation-content">
+                            <div class="conversation-header">
+                                <div class="conversation-name">Sarah Martinez</div>
+                                <div class="conversation-time">15m ago</div>
+                            </div>
+                            <div class="conversation-preview">Should I do a long run tomorrow?</div>
+                            <div class="conversation-meta">
+                                <div class="meta-tag">Active</div>
+                            </div>
+                        </div>
+                        <div class="unread-badge">1</div>
+                    </div>
+
+                    <div class="conversation-card">
+                        <div class="conversation-avatar">TC</div>
+                        <div class="conversation-content">
+                            <div class="conversation-header">
+                                <div class="conversation-name">Tom Chen</div>
+                                <div class="conversation-time">1h ago</div>
+                            </div>
+                            <div class="conversation-preview">Just finished my tempo run!</div>
+                        </div>
+                    </div>
+
+                    <div class="conversation-card">
+                        <div class="conversation-avatar">ER</div>
+                        <div class="conversation-content">
+                            <div class="conversation-header">
+                                <div class="conversation-name">Emily Rodriguez</div>
+                                <div class="conversation-time">3h ago</div>
+                            </div>
+                            <div class="conversation-preview">Can we adjust my marathon plan?</div>
+                        </div>
+                    </div>
+
+                    <div class="conversation-card">
+                        <div class="conversation-avatar">MJ</div>
+                        <div class="conversation-content">
+                            <div class="conversation-header">
+                                <div class="conversation-name">Mike Johnson</div>
+                                <div class="conversation-time">Yesterday</div>
+                            </div>
+                            <div class="conversation-preview">Thanks for the form feedback!</div>
+                        </div>
+                    </div>
+
+                    <div class="conversation-card">
+                        <div class="conversation-avatar">LW</div>
+                        <div class="conversation-content">
+                            <div class="conversation-header">
+                                <div class="conversation-name">Lisa Wong</div>
+                                <div class="conversation-time">Yesterday</div>
+                            </div>
+                            <div class="conversation-preview">Feeling great after rest day</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                        <div class="tab-bar">
+                <a href="mobile-coach-dashboard.html" class="tab-item">
+                    <svg class="tab-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+                    </svg>
+                    <div class="tab-label">Dashboard</div>
+                </a>
+                <a href="mobile-coach-member-detail.html" class="tab-item">
+                    <svg class="tab-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M16 11c1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 3-1.34 3-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+                    </svg>
+                    <div class="tab-label">Members</div>
+                </a>
+                <a href="mobile-coach-messages.html" class="tab-item active">
+                    <svg class="tab-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/>
+                    </svg>
+                    <div class="tab-label">Messages</div>
+                </a>
+                <a href="mobile-coach-settings.html" class="tab-item">
+                    <svg class="tab-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/>
+                    </svg>
+                    <div class="tab-label">Settings</div>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

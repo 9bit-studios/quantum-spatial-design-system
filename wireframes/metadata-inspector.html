@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PNG Metadata Checker</title>
+    <style>
+        body {
+            font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #0A0A0A;
+            color: #F8F9FA;
+            line-height: 1.6;
+        }
+        
+        .container {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 30px;
+        }
+        
+        h1 {
+            color: #D4AF37;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .upload-zone {
+            border: 2px dashed rgba(212, 175, 55, 0.5);
+            border-radius: 8px;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+        }
+        
+        .upload-zone:hover {
+            border-color: #D4AF37;
+            background: rgba(212, 175, 55, 0.05);
+        }
+        
+        .upload-zone.dragover {
+            border-color: #D4AF37;
+            background: rgba(212, 175, 55, 0.1);
+        }
+        
+        input[type="file"] {
+            display: none;
+        }
+        
+        .upload-btn {
+            background: linear-gradient(135deg, #2D1B69, #D4AF37);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        
+        .upload-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+        }
+        
+        .metadata-display {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 20px;
+            font-family: 'Monaco', monospace;
+            display: none;
+        }
+        
+        .metadata-item {
+            margin-bottom: 8px;
+            padding: 8px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 4px;
+            border-left: 3px solid #D4AF37;
+        }
+        
+        .warning {
+            color: #ff6b6b;
+            font-weight: bold;
+        }
+        
+        .safe {
+            color: #51cf66;
+            font-weight: bold;
+        }
+        
+        .commands {
+            background: rgba(45, 27, 105, 0.2);
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 20px;
+            font-family: 'Monaco', monospace;
+        }
+        
+        .command {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 4px;
+            margin: 10px 0;
+            border-left: 3px solid #0F4C3A;
+        }
+        
+        .copy-btn {
+            background: #0F4C3A;
+            color: white;
+            border: none;
+            padding: 4px 8px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 12px;
+            margin-left: 10px;
+        }
+        
+        .preview {
+            max-width: 300px;
+            max-height: 300px;
+            border-radius: 8px;
+            margin: 20px auto;
+            display: block;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔍 PNG Metadata Inspector</h1>
+        
+        <div class="upload-zone" id="uploadZone">
+            <p>Drop your PNG file here or click to select</p>
+            <button class="upload-btn" onclick="document.getElementById('fileInput').click()">
+                Choose PNG File
+            </button>
+            <input type="file" id="fileInput" accept=".png" />
+        </div>
+        
+        <div id="preview"></div>
+        
+        <div class="metadata-display" id="metadataDisplay">
+            <h3>📋 File Analysis</h3>
+            <div id="metadataContent"></div>
+        </div>
+        
+        <div class="commands">
+            <h3>🛠️ Apple Photos Metadata Removal</h3>
+            
+            <div class="command">
+                <strong>Check Apple Photos metadata:</strong><br>
+                <code>exiftool IMG_1234.HEIC</code>
+                <button class="copy-btn" onclick="copyCommand('exiftool IMG_1234.HEIC')">Copy</button>
+            </div>
+            
+            <div class="command">
+                <strong>Strip all Apple Photos data:</strong><br>
+                <code>exiftool -all= IMG_1234.HEIC</code>
+                <button class="copy-btn" onclick="copyCommand('exiftool -all= IMG_1234.HEIC')">Copy</button>
+            </div>
+            
+            <div class="command">
+                <strong>Remove GPS only (keep camera info):</strong><br>
+                <code>exiftool -gps:all= IMG_1234.HEIC</code>
+                <button class="copy-btn" onclick="copyCommand('exiftool -gps:all= IMG_1234.HEIC')">Copy</button>
+            </div>
+            
+            <div class="command">
+                <strong>Batch process Photos library:</strong><br>
+                <code>exiftool -all= ~/Pictures/Photos\ Library.photoslibrary/</code>
+                <button class="copy-btn" onclick="copyCommand('exiftool -all= ~/Pictures/Photos\\ Library.photoslibrary/')">Copy</button>
+            </div>
+            
+            <div class="command">
+                <strong>Alternative: Use Photos export</strong><br>
+                <em>Photos app → Share → "Options" → Location: OFF</em>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const uploadZone = document.getElementById('uploadZone');
+        const fileInput = document.getElementById('fileInput');
+        const metadataDisplay = document.getElementById('metadataDisplay');
+        const metadataContent = document.getElementById('metadataContent');
+        const preview = document.getElementById('preview');
+
+        // Drag and drop handlers
+        uploadZone.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            uploadZone.classList.add('dragover');
+        });
+
+        uploadZone.addEventListener('dragleave', () => {
+            uploadZone.classList.remove('dragover');
+        });
+
+        uploadZone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            uploadZone.classList.remove('dragover');
+            const files = e.dataTransfer.files;
+            if (files.length > 0 && files[0].type === 'image/png') {
+                handleFile(files[0]);
+            }
+        });
+
+        fileInput.addEventListener('change', (e) => {
+            if (e.target.files.length > 0) {
+                handleFile(e.target.files[0]);
+            }
+        });
+
+        function handleFile(file) {
+            // Show preview
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                preview.innerHTML = `<img src="${e.target.result}" class="preview" alt="PNG Preview">`;
+            };
+            reader.readAsDataURL(file);
+
+            // Analyze file properties
+            analyzeFile(file);
+        }
+
+        function analyzeFile(file) {
+            const metadata = [];
+            
+            // Basic file info
+            metadata.push({
+                key: 'File Name',
+                value: file.name,
+                concern: false
+            });
+            
+            metadata.push({
+                key: 'File Size',
+                value: `${(file.size / 1024).toFixed(2)} KB`,
+                concern: false
+            });
+            
+            metadata.push({
+                key: 'Last Modified',
+                value: new Date(file.lastModified).toLocaleString(),
+                concern: true,
+                note: 'Creation timestamp - consider removing'
+            });
+            
+            metadata.push({
+                key: 'MIME Type',
+                value: file.type,
+                concern: false
+            });
+
+            // Check if likely exported from design tool
+            if (file.name.includes('figma') || file.name.includes('export')) {
+                metadata.push({
+                    key: 'Source Detection',
+                    value: 'Likely design tool export',
+                    concern: true,
+                    note: 'May contain creator/software metadata'
+                });
+            }
+
+            displayMetadata(metadata);
+        }
+
+        function displayMetadata(metadata) {
+            metadataContent.innerHTML = '';
+            
+            metadata.forEach(item => {
+                const div = document.createElement('div');
+                div.className = 'metadata-item';
+                
+                const concernClass = item.concern ? 'warning' : 'safe';
+                const icon = item.concern ? '⚠️' : '✅';
+                
+                div.innerHTML = `
+                    ${icon} <strong>${item.key}:</strong> 
+                    <span class="${concernClass}">${item.value}</span>
+                    ${item.note ? `<br><small>${item.note}</small>` : ''}
+                `;
+                
+                metadataContent.appendChild(div);
+            });
+            
+            metadataDisplay.style.display = 'block';
+        }
+
+        function copyCommand(command) {
+            navigator.clipboard.writeText(command).then(() => {
+                // Visual feedback
+                event.target.textContent = 'Copied!';
+                setTimeout(() => {
+                    event.target.textContent = 'Copy';
+                }, 1000);
+            });
+        }
+    </script>
+</body>
+</html>

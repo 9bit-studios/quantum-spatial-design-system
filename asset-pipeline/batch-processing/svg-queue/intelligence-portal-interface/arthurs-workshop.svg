@@ -1,0 +1,170 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600">
+  <!-- Background -->
+  <rect width="900" height="600" fill="#0A0621" />
+  
+  <!-- Dimensional grid with perspective effect -->
+  <g opacity="0.12">
+    <!-- Horizontal grid lines with perspective effect -->
+    <path d="M150,550 L750,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M100,500 L800,500" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M75,450 L825,450" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M50,400 L850,400" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M40,350 L860,350" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M30,300 L870,300" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M25,250 L875,250" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M20,200 L880,200" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M15,150 L885,150" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M10,100 L890,100" stroke="#5AC8FA" stroke-width="1" />
+    
+    <!-- Vertical grid lines -->
+    <path d="M150,100 L150,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M225,100 L225,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M300,100 L300,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M375,100 L375,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M450,100 L450,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M525,100 L525,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M600,100 L600,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M675,100 L675,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M750,100 L750,550" stroke="#5AC8FA" stroke-width="1" />
+  </g>
+  
+  <!-- Title -->
+  <text x="450" y="60" font-family="'SF Pro Display', sans-serif" font-size="28" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Arthur's Game Design Workshop</text>
+  <text x="450" y="90" font-family="'SF Pro Display', sans-serif" font-size="16" fill="#5AC8FA" text-anchor="middle">Personal Teamspace with AI-Assisted Design Tools</text>
+  
+  <!-- Main visualization with four quadrants -->
+  <g transform="translate(450, 320)">
+    <!-- First Quadrant: Quantum-Spatial Design Primer -->
+    <g transform="translate(-225, -150)">
+      <rect x="-150" y="-70" width="300" height="140" rx="10" fill="#131A36" stroke="#5AC8FA" stroke-width="2" />
+      
+      <text x="0" y="-40" font-family="'SF Pro Display', sans-serif" font-size="18" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Quantum-Spatial Design Primer</text>
+      
+      <!-- Design elements visualization -->
+      <g transform="translate(0, 0)">
+        <!-- Grid system example -->
+        <rect x="-120" y="-20" width="80" height="60" fill="none" stroke="#5AC8FA" stroke-width="1" opacity="0.5" />
+        <rect x="-110" y="-10" width="60" height="40" fill="none" stroke="#5AC8FA" stroke-width="1" opacity="0.7" />
+        <rect x="-100" y="0" width="40" height="20" fill="#5AC8FA" opacity="0.3" />
+        
+        <!-- Color palette -->
+        <circle cx="0" cy="0" r="20" fill="#331F4A" />
+        <circle cx="0" cy="0" r="15" fill="#6A3093" />
+        <circle cx="0" cy="0" r="10" fill="#BF4080" />
+        <circle cx="0" cy="0" r="5" fill="#5AC8FA" />
+        
+        <!-- Pixel state transitions -->
+        <rect x="80" y="-20" width="20" height="20" fill="#0D0D15" />
+        <rect x="70" y="-10" width="20" height="20" fill="#131A36" opacity="0.8" />
+        <rect x="60" y="0" width="20" height="20" fill="#331F4A" opacity="0.8" />
+        <rect x="50" y="10" width="20" height="20" fill="#6A3093" opacity="0.8" />
+      </g>
+      
+      <text x="0" y="40" font-family="'SF Pro Text', sans-serif" font-size="11" fill="#FFFFFF" text-anchor="middle">Interactive tutorial with visual examples</text>
+      <text x="0" y="55" font-family="'SF Pro Text', sans-serif" font-size="11" fill="#FFFFFF" text-anchor="middle">and practical exercises</text>
+    </g>
+    
+    <!-- Second Quadrant: Game Design Template Library -->
+    <g transform="translate(225, -150)">
+      <rect x="-150" y="-70" width="300" height="140" rx="10" fill="#131A36" stroke="#BF4080" stroke-width="2" />
+      
+      <text x="0" y="-40" font-family="'SF Pro Display', sans-serif" font-size="18" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Game Design Template Library</text>
+      
+      <!-- Document templates visualization -->
+      <g transform="translate(0, 0)">
+        <!-- Template stack -->
+        <rect x="-120" y="-20" width="80" height="60" fill="#0D0D15" stroke="#BF4080" stroke-width="1" />
+        <rect x="-125" y="-25" width="80" height="60" fill="#0D0D15" stroke="#BF4080" stroke-width="1" />
+        <rect x="-130" y="-30" width="80" height="60" fill="#0D0D15" stroke="#BF4080" stroke-width="1" />
+        <text x="-90" y="5" font-family="'SF Pro Text', sans-serif" font-size="8" fill="#FFFFFF" text-anchor="middle">Mechanics</text>
+        
+        <rect x="0" y="-20" width="80" height="60" fill="#0D0D15" stroke="#5AC8FA" stroke-width="1" />
+        <rect x="-5" y="-25" width="80" height="60" fill="#0D0D15" stroke="#5AC8FA" stroke-width="1" />
+        <rect x="-10" y="-30" width="80" height="60" fill="#0D0D15" stroke="#5AC8FA" stroke-width="1" />
+        <text x="30" y="5" font-family="'SF Pro Text', sans-serif" font-size="8" fill="#FFFFFF" text-anchor="middle">Narrative</text>
+        
+        <rect x="80" y="-20" width="80" height="60" fill="#0D0D15" stroke="#6A3093" stroke-width="1" />
+        <rect x="75" y="-25" width="80" height="60" fill="#0D0D15" stroke="#6A3093" stroke-width="1" />
+        <rect x="70" y="-30" width="80" height="60" fill="#0D0D15" stroke="#6A3093" stroke-width="1" />
+        <text x="110" y="5" font-family="'SF Pro Text', sans-serif" font-size="8" fill="#FFFFFF" text-anchor="middle">Systems</text>
+      </g>
+      
+      <text x="0" y="40" font-family="'SF Pro Text', sans-serif" font-size="11" fill="#FFFFFF" text-anchor="middle">Ready-to-use templates for game mechanics,</text>
+      <text x="0" y="55" font-family="'SF Pro Text', sans-serif" font-size="11" fill="#FFFFFF" text-anchor="middle">narrative structures, and player systems</text>
+    </g>
+    
+    <!-- Third Quadrant: ML-Enhanced Ink Tutorial -->
+    <g transform="translate(-225, 150)">
+      <rect x="-150" y="-70" width="300" height="140" rx="10" fill="#131A36" stroke="#6A3093" stroke-width="2" />
+      
+      <text x="0" y="-40" font-family="'SF Pro Display', sans-serif" font-size="18" font-weight="bold" fill="#FFFFFF" text-anchor="middle">ML-Enhanced Ink Tutorial</text>
+      
+      <!-- Ink script visualization -->
+      <g transform="translate(0, 0)">
+        <!-- Code snippet -->
+        <rect x="-125" y="-25" width="250" height="50" rx="5" fill="#0D0D15" />
+        <text x="-120" y="-10" font-family="'SF Mono', monospace" font-size="8" fill="#BF4080">VAR player_affinity = 0</text>
+        <text x="-120" y="0" font-family="'SF Mono', monospace" font-size="8" fill="#FFFFFF">The guard looks at you suspiciously.</text>
+        <text x="-120" y="10" font-family="'SF Mono', monospace" font-size="8" fill="#5AC8FA">* [Show your papers] -> papers</text>
+        <text x="-120" y="20" font-family="'SF Mono', monospace" font-size="8" fill="#5AC8FA">* [Smile confidently] -> generateResponse("guard", "smile", player_affinity)</text>
+        
+        <!-- ML connection visualization -->
+        <path d="M125, 0 C145,0 155,20 175,20" stroke="#6A3093" stroke-width="1.5" fill="none" />
+        <rect x="175" y="10" width="30" height="20" rx="5" fill="#6A3093" opacity="0.7" />
+        <text x="190" y="23" font-family="'SF Pro Text', sans-serif" font-size="8" fill="#FFFFFF" text-anchor="middle">ML</text>
+      </g>
+      
+      <text x="0" y="40" font-family="'SF Pro Text', sans-serif" font-size="11" fill="#FFFFFF" text-anchor="middle">Quick-start guide to narrative tools with</text>
+      <text x="0" y="55" font-family="'SF Pro Text', sans-serif" font-size="11" fill="#FFFFFF" text-anchor="middle">AI-powered dynamic responses</text>
+    </g>
+    
+    <!-- Fourth Quadrant: Personal Sandbox -->
+    <g transform="translate(225, 150)">
+      <rect x="-150" y="-70" width="300" height="140" rx="10" fill="#131A36" stroke="#2D854D" stroke-width="2" />
+      
+      <text x="0" y="-40" font-family="'SF Pro Display', sans-serif" font-size="18" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Personal Sandbox</text>
+      
+      <!-- Creative sandbox visualization -->
+      <g transform="translate(0, 0)">
+        <!-- Experimental elements -->
+        <rect x="-100" y="-20" width="40" height="40" rx="5" fill="#6A3093" opacity="0.3" />
+        <circle cx="-45" cy="0" r="20" fill="#5AC8FA" opacity="0.3" />
+        <polygon points="0,20 -20,-10 20,-10" fill="#BF4080" opacity="0.3" />
+        <rect x="30" y="-20" width="25" height="40" rx="5" fill="#2D854D" opacity="0.3" />
+        <circle cx="80" cy="0" r="15" fill="#6A3093" opacity="0.3" />
+        
+        <!-- Connecting lines -->
+        <path d="M-80,0 L-65,0" stroke="#FFFFFF" stroke-width="1" stroke-opacity="0.5" />
+        <path d="M-25,0 L-10,0" stroke="#FFFFFF" stroke-width="1" stroke-opacity="0.5" />
+        <path d="M20,0 L30,0" stroke="#FFFFFF" stroke-width="1" stroke-opacity="0.5" />
+        <path d="M55,0 L65,0" stroke="#FFFFFF" stroke-width="1" stroke-opacity="0.5" />
+      </g>
+      
+      <text x="0" y="40" font-family="'SF Pro Text', sans-serif" font-size="11" fill="#FFFFFF" text-anchor="middle">Area for experimental design concepts</text>
+      <text x="0" y="55" font-family="'SF Pro Text', sans-serif" font-size="11" fill="#FFFFFF" text-anchor="middle">with AI-assisted ideation</text>
+    </g>
+  </g>
+  
+  <!-- AI Assistant indicators -->
+  <g transform="translate(450, 520)">
+    <rect x="-350" y="-30" width="700" height="60" rx="10" fill="#131A36" opacity="0.8" />
+    
+    <text x="0" y="-5" font-family="'SF Pro Display', sans-serif" font-size="18" font-weight="bold" fill="#FFFFFF" text-anchor="middle">AI Integration Points</text>
+    
+    <!-- AI Assistant features -->
+    <g transform="translate(-260, 20)">
+      <rect x="-8" y="-8" width="16" height="16" fill="#5AC8FA" opacity="0.7" />
+      <text x="15" y="4" font-family="'SF Pro Text', sans-serif" font-size="12" fill="#FFFFFF" text-anchor="start">Design Pattern Suggestions</text>
+    </g>
+    
+    <g transform="translate(-60, 20)">
+      <rect x="-8" y="-8" width="16" height="16" fill="#6A3093" opacity="0.7" />
+      <text x="15" y="4" font-family="'SF Pro Text', sans-serif" font-size="12" fill="#FFFFFF" text-anchor="start">Narrative Flow Analysis</text>
+    </g>
+    
+    <g transform="translate(140, 20)">
+      <rect x="-8" y="-8" width="16" height="16" fill="#BF4080" opacity="0.7" />
+      <text x="15" y="4" font-family="'SF Pro Text', sans-serif" font-size="12" fill="#FFFFFF" text-anchor="start">Character Response Generation</text>
+    </g>
+  </g>
+</svg>

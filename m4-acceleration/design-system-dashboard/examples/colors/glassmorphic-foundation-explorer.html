@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glassmorphic Foundation Explorer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', system-ui, sans-serif;
+            background: #000000;
+            color: #FFFFFF;
+            overflow-x: hidden;
+            transition: all 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
+        }
+
+        /* Theme Variables */
+        :root {
+            /* Deep Space Theme */
+            --bg-primary: #0A0621;
+            --bg-secondary: #131A36;
+            --bg-tertiary: #331F4A;
+            --accent-primary: #5AC8FA;
+            --accent-secondary: #6A3093;
+            --accent-heritage: #2C5F2D;
+            
+            /* Glass Properties */
+            --glass-base: rgba(255, 255, 255, 0.02);
+            --glass-elevated: rgba(255, 255, 255, 0.05);
+            --glass-active: rgba(255, 255, 255, 0.08);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --glass-shimmer: rgba(255, 255, 255, 0.15);
+            
+            /* Oil Slick Properties */
+            --oil-gradient: linear-gradient(135deg, 
+                rgba(255, 255, 255, 0.1) 0%,
+                rgba(255, 255, 255, 0.05) 25%,
+                rgba(90, 200, 250, 0.03) 50%,
+                rgba(191, 64, 128, 0.03) 75%,
+                rgba(255, 255, 255, 0.08) 100%);
+            
+            /* Transition Easing */
+            --ease-gentle: cubic-bezier(0.25, 0.1, 0.25, 1);
+            --ease-snap: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            --ease-silk: cubic-bezier(0.165, 0.84, 0.44, 1);
+            --ease-magnetic: cubic-bezier(0.2, 0, 0.38, 0.9);
+        }
+
+        /* Daybreak Theme */
+        body.daybreak {
+            --bg-primary: #1E2A3A;
+            --bg-secondary: #2A3B4D;
+            --bg-tertiary: #3D4F63;
+            --accent-primary: #8FB8D3;
+            --accent-secondary: #7A95B5;
+            --glass-base: rgba(255, 255, 255, 0.08);
+            --glass-elevated: rgba(255, 255, 255, 0.12);
+            --glass-active: rgba(255, 255, 255, 0.16);
+            --glass-border: rgba(255, 255, 255, 0.2);
+            color: #E8F4FD;
+        }
+
+        /* Golden Light Theme */
+        body.golden {
+            --bg-primary: #2A1810;
+            --bg-secondary: #3D2A1F;
+            --bg-tertiary: #4F3A2D;
+            --accent-primary: #FFB800;
+            --accent-secondary: #FF9400;
+            --glass-base: rgba(255, 220, 150, 0.03);
+            --glass-elevated: rgba(255, 220, 150, 0.06);
+            --glass-active: rgba(255, 220, 150, 0.1);
+            --glass-border: rgba(255, 220, 150, 0.15);
+            --oil-gradient: linear-gradient(135deg, 
+                rgba(255, 220, 150, 0.1) 0%,
+                rgba(255, 184, 0, 0.05) 25%,
+                rgba(255, 149, 0, 0.03) 50%,
+                rgba(255, 220, 150, 0.08) 100%);
+            color: #FFF8E7;
+        }
+
+        .theme-selector {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+            display: flex;
+            gap: 12px;
+        }
+
+        .theme-btn {
+            padding: 8px 16px;
+            background: var(--glass-base);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            color: currentColor;
+            cursor: pointer;
+            transition: all 0.3s var(--ease-gentle);
+            font-size: 14px;
+            font-weight: 400;
+        }
+
+        .theme-btn:hover {
+            background: var(--glass-elevated);
+            transform: translateY(-1px);
+        }
+
+        .theme-btn.active {
+            background: var(--accent-primary);
+            color: var(--bg-primary);
+        }
+
+        .container {
+            min-height: 100vh;
+            padding: 80px 40px 40px;
+            background: 
+                radial-gradient(circle at 20% 30%, var(--bg-secondary) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, var(--bg-tertiary) 0%, transparent 50%),
+                var(--bg-primary);
+            transition: background 0.8s var(--ease-gentle);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: clamp(1.5rem, 5vw, 4rem);
+            font-weight: 400;
+            margin-bottom: 3rem;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .exploration-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* Glass Foundation Cards */
+        .glass-card {
+            position: relative;
+            padding: 2rem;
+            background: var(--glass-base);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            transition: all 0.4s var(--ease-gentle);
+            overflow: hidden;
+        }
+
+        .glass-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: var(--oil-gradient);
+            opacity: 0;
+            transition: opacity 0.6s var(--ease-silk);
+        }
+
+        .glass-card:hover {
+            background: var(--glass-elevated);
+            transform: translateY(-4px);
+            border-color: var(--glass-shimmer);
+        }
+
+        .glass-card:hover::before {
+            opacity: 1;
+        }
+
+        /* Oil Slick Effect */
+        .oil-slick {
+            background: var(--oil-gradient);
+            background-size: 200% 200%;
+            animation: oilShimmer 8s ease-in-out infinite;
+        }
+
+        @keyframes oilShimmer {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        /* Interactive Elements */
+        .interactive-demo {
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: var(--glass-base);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            transition: all 0.3s var(--ease-gentle);
+        }
+
+        .button-showcase {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin: 1.5rem 0;
+        }
+
+        .glass-btn {
+            padding: 12px 24px;
+            background: var(--glass-base);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            color: currentColor;
+            cursor: pointer;
+            transition: all 0.3s var(--ease-gentle);
+            font-weight: 400;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .glass-btn::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, var(--glass-shimmer), transparent);
+            transition: left 0.6s var(--ease-silk);
+        }
+
+        .glass-btn:hover {
+            background: var(--glass-active);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .glass-btn:hover::after {
+            left: 100%;
+        }
+
+        .glass-btn:active {
+            transform: translateY(0) scale(0.98);
+            transition: all 0.1s var(--ease-snap);
+        }
+
+        /* Easing Demonstrations */
+        .easing-demo {
+            height: 60px;
+            background: var(--glass-base);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            position: relative;
+            margin: 1rem 0;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .easing-ball {
+            width: 20px;
+            height: 20px;
+            background: var(--accent-primary);
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+            transition: left 2s var(--ease-gentle);
+            box-shadow: 0 0 20px rgba(90, 200, 250, 0.5);
+        }
+
+        .easing-demo:hover .easing-ball {
+            left: calc(100% - 30px);
+        }
+
+        .easing-demo.snap .easing-ball {
+            transition: left 1s var(--ease-snap);
+        }
+
+        .easing-demo.silk .easing-ball {
+            transition: left 1.5s var(--ease-silk);
+        }
+
+        .easing-demo.magnetic .easing-ball {
+            transition: left 1.2s var(--ease-magnetic);
+        }
+
+        /* Glass Depth Levels */
+        .depth-showcase {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .depth-card {
+            padding: 1.5rem;
+            border-radius: 16px;
+            text-align: center;
+            transition: all 0.3s var(--ease-gentle);
+            border: 1px solid var(--glass-border);
+        }
+
+        .depth-1 {
+            background: var(--glass-base);
+            backdrop-filter: blur(10px);
+        }
+
+        .depth-2 {
+            background: var(--glass-elevated);
+            backdrop-filter: blur(15px);
+        }
+
+        .depth-3 {
+            background: var(--glass-active);
+            backdrop-filter: blur(20px);
+        }
+
+        .depth-card:hover {
+            transform: translateY(-4px) scale(1.02);
+        }
+
+        /* Shimmer Effects */
+        .shimmer-text {
+            background: linear-gradient(135deg, 
+                currentColor 0%,
+                var(--accent-primary) 50%,
+                currentColor 100%);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: shimmerMove 3s ease-in-out infinite;
+        }
+
+        @keyframes shimmerMove {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: 400;
+            margin-bottom: 1rem;
+            color: var(--accent-primary);
+        }
+
+        .description {
+            opacity: 0.55;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 60px 20px 20px;
+            }
+            
+            .exploration-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .button-showcase {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="theme-selector">
+        <button class="theme-btn active" onclick="setTheme('deep')">Deep Space</button>
+        <button class="theme-btn" onclick="setTheme('daybreak')">Daybreak</button>
+        <button class="theme-btn" onclick="setTheme('golden')">Golden Light</button>
+    </div>
+
+    <div class="container">
+        <h1 class="shimmer-text">Glassmorphic Foundation Explorer</h1>
+        
+        <div class="exploration-grid">
+            <!-- Oil Slick Effects -->
+            <div class="glass-card">
+                <h2 class="section-title">Oil Slick Shimmer</h2>
+                <p class="description">
+                    Subtle iridescent effects that create depth and premium feel without being obvious.
+                </p>
+                <div class="interactive-demo oil-slick">
+                    <p>Hover over cards to see the oil slick effect activate</p>
+                </div>
+            </div>
+
+            <!-- Glass Depth Levels -->
+            <div class="glass-card">
+                <h2 class="section-title">Glass Depth System</h2>
+                <p class="description">
+                    Three levels of glassmorphic depth for interface hierarchy.
+                </p>
+                <div class="depth-showcase">
+                    <div class="depth-card depth-1">
+                        <h4>Base Glass</h4>
+                        <small>2% opacity</small>
+                    </div>
+                    <div class="depth-card depth-2">
+                        <h4>Elevated</h4>
+                        <small>5% opacity</small>
+                    </div>
+                    <div class="depth-card depth-3">
+                        <h4>Active</h4>
+                        <small>8% opacity</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interactive Buttons -->
+            <div class="glass-card">
+                <h2 class="section-title">Interactive Elements</h2>
+                <p class="description">
+                    Buttons with shimmer effects and sophisticated state transitions.
+                </p>
+                <div class="button-showcase">
+                    <button class="glass-btn">Hover for Shimmer</button>
+                    <button class="glass-btn">Press for Snap</button>
+                    <button class="glass-btn">Glass Action</button>
+                </div>
+            </div>
+
+            <!-- Easing Exploration -->
+            <div class="glass-card">
+                <h2 class="section-title">Transition Easing</h2>
+                <p class="description">
+                    The art of movement - different easing curves for different emotional qualities.
+                </p>
+                
+                <div class="easing-demo">
+                    <div class="easing-ball"></div>
+                    <small style="position: absolute; top: 5px; left: 10px; opacity: 0.55;">Gentle</small>
+                </div>
+                
+                <div class="easing-demo snap">
+                    <div class="easing-ball"></div>
+                    <small style="position: absolute; top: 5px; left: 10px; opacity: 0.55;">Snap</small>
+                </div>
+                
+                <div class="easing-demo silk">
+                    <div class="easing-ball"></div>
+                    <small style="position: absolute; top: 5px; left: 10px; opacity: 0.55;">Silk</small>
+                </div>
+                
+                <div class="easing-demo magnetic">
+                    <div class="easing-ball"></div>
+                    <small style="position: absolute; top: 5px; left: 10px; opacity: 0.55;">Magnetic</small>
+                </div>
+                
+                <p style="font-size: 0.9rem; opacity: 0.55; margin-top: 1rem;">
+                    Hover over each demo to see the easing difference
+                </p>
+            </div>
+
+            <!-- Energy and Light -->
+            <div class="glass-card">
+                <h2 class="section-title">Energy & Light Interaction</h2>
+                <p class="description">
+                    How light behaves through glass surfaces with different themes and contexts.
+                </p>
+                <div class="interactive-demo">
+                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;">
+                        <div style="padding: 1rem; background: var(--glass-base); border-radius: 12px; text-align: center; transition: all 0.3s var(--ease-gentle);" 
+                             onmouseover="this.style.background='var(--glass-elevated)'" 
+                             onmouseout="this.style.background='var(--glass-base)'">
+                            <h4>Subtle</h4>
+                        </div>
+                        <div style="padding: 1rem; background: var(--glass-elevated); border-radius: 12px; text-align: center; transition: all 0.3s var(--ease-gentle);" 
+                             onmouseover="this.style.background='var(--glass-active)'" 
+                             onmouseout="this.style.background='var(--glass-elevated)'">
+                            <h4>Present</h4>
+                        </div>
+                        <div style="padding: 1rem; background: var(--glass-active); border-radius: 12px; text-align: center; transition: all 0.3s var(--ease-gentle);" 
+                             onmouseover="this.style.background='var(--glass-shimmer)'" 
+                             onmouseout="this.style.background='var(--glass-active)'">
+                            <h4>Radiant</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mysterious Sophistication -->
+            <div class="glass-card">
+                <h2 class="section-title">Mysterious Sophistication</h2>
+                <p class="description">
+                    The balance between obvious and subtle - effects that users feel but don't necessarily notice consciously.
+                </p>
+                <div style="padding: 1.5rem; background: var(--oil-gradient); border-radius: 16px; text-align: center; position: relative; overflow: hidden;">
+                    <h3 style="margin-bottom: 0.5rem;">Quantum Interface</h3>
+                    <p style="opacity: 0.9; font-size: 0.9rem;">Dimensional depth meets refined interaction</p>
+                    <div style="position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent); animation: shimmerSweep 4s ease-in-out infinite;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function setTheme(theme) {
+            // Remove all theme classes
+            document.body.classList.remove('daybreak', 'golden');
+            
+            // Remove active class from all buttons
+            document.querySelectorAll('.theme-btn').forEach(btn => btn.classList.remove('active'));
+            
+            // Add new theme
+            if (theme === 'daybreak') {
+                document.body.classList.add('daybreak');
+            } else if (theme === 'golden') {
+                document.body.classList.add('golden');
+            }
+            
+            // Set active button
+            event.target.classList.add('active');
+        }
+
+        // Add shimmer sweep animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes shimmerSweep {
+                0% { left: -100%; }
+                50% { left: 100%; }
+                100% { left: 100%; }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Add subtle parallax effect to background
+        document.addEventListener('mousemove', (e) => {
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+            
+            document.querySelector('.container').style.background = `
+                radial-gradient(circle at ${20 + x * 10}% ${30 + y * 10}%, var(--bg-secondary) 0%, transparent 50%),
+                radial-gradient(circle at ${80 - x * 10}% ${70 - y * 10}%, var(--bg-tertiary) 0%, transparent 50%),
+                var(--bg-primary)
+            `;
+        });
+    </script>
+</body>
+</html>

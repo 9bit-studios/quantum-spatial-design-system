@@ -1,0 +1,196 @@
+{
+  "colors": [
+    {
+      "name": "typography-fill",
+      "value": "#160918FF",
+      "category": "extracted",
+      "source": "Typography",
+      "usage": 37
+    },
+    {
+      "name": "heading-1-60-medium-fill",
+      "value": "#FFFFFFE5",
+      "category": "extracted",
+      "source": "Heading 1 - 60 Medium",
+      "usage": 807
+    },
+    {
+      "name": "color-styles-light-mode-fill",
+      "value": "#080808FF",
+      "category": "foundation",
+      "source": "Color Styles Light Mode",
+      "usage": 1
+    },
+    {
+      "name": "circle-stroke",
+      "value": "#FFFFFF1A",
+      "category": "extracted",
+      "source": "Circle",
+      "usage": 74
+    },
+    {
+      "name": "circle-fill",
+      "value": "#FFFFFF80",
+      "category": "extracted",
+      "source": "Circle",
+      "usage": 113
+    },
+    {
+      "name": "circle-fill",
+      "value": "#FFFFFF33",
+      "category": "extracted",
+      "source": "Circle",
+      "usage": 13
+    },
+    {
+      "name": "circle-fill",
+      "value": "#00000080",
+      "category": "foundation",
+      "source": "Circle",
+      "usage": 3
+    },
+    {
+      "name": "circle-fill",
+      "value": "#FFFFFF12",
+      "category": "extracted",
+      "source": "Circle",
+      "usage": 1
+    },
+    {
+      "name": "button-circle-effect",
+      "value": "#0000001A",
+      "category": "foundation",
+      "source": "Button Circle",
+      "usage": 15
+    },
+    {
+      "name": "button-circle-effect",
+      "value": "#0000000D",
+      "category": "foundation",
+      "source": "Button Circle",
+      "usage": 14
+    },
+    {
+      "name": "button-primary-effect",
+      "value": "#00000008",
+      "category": "foundation",
+      "source": "Button Primary",
+      "usage": 12
+    },
+    {
+      "name": "blue-glow-button-effect",
+      "value": "#497BFFB2",
+      "category": "accent",
+      "source": "Blue Glow Button",
+      "usage": 2
+    },
+    {
+      "name": "blue-glow-button-effect",
+      "value": "#3F4AAF80",
+      "category": "extracted",
+      "source": "Blue Glow Button",
+      "usage": 1
+    },
+    {
+      "name": "subtract-fill",
+      "value": "#007AFFFF",
+      "category": "extracted",
+      "source": "Subtract",
+      "usage": 2
+    },
+    {
+      "name": "ellipse-6-effect",
+      "value": "#00000033",
+      "category": "foundation",
+      "source": "Ellipse 6",
+      "usage": 2
+    },
+    {
+      "name": "union-fill",
+      "value": "#FFFFFFFF",
+      "category": "extracted",
+      "source": "Union",
+      "usage": 12
+    },
+    {
+      "name": "vector-fill",
+      "value": "#B5CDFBFF",
+      "category": "extracted",
+      "source": "Vector",
+      "usage": 1
+    },
+    {
+      "name": "vector-fill",
+      "value": "#3913B8FF",
+      "category": "extracted",
+      "source": "Vector",
+      "usage": 1
+    },
+    {
+      "name": "lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit-cras-ac-cras-in-ac-tincidunt-mauris-est-non-et-massa-vitae-fill",
+      "value": "#FFFFFF99",
+      "category": "extracted",
+      "source": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac cras in ac tincidunt. Mauris est non et massa. Vitae.",
+      "usage": 4
+    },
+    {
+      "name": "button-menu-stroke",
+      "value": "#2670E9FF",
+      "category": "accent",
+      "source": "Button Menu",
+      "usage": 6
+    },
+    {
+      "name": "filters-list-effect",
+      "value": "#00000026",
+      "category": "foundation",
+      "source": "Filters List",
+      "usage": 1
+    },
+    {
+      "name": "ellipse-15-fill",
+      "value": "#4C89FFFF",
+      "category": "accent",
+      "source": "Ellipse 15",
+      "usage": 3
+    },
+    {
+      "name": "counter-fill",
+      "value": "#FFFFFF3B",
+      "category": "extracted",
+      "source": "Counter",
+      "usage": 1
+    },
+    {
+      "name": "counter-fill",
+      "value": "#545454FF",
+      "category": "extracted",
+      "source": "Counter",
+      "usage": 1
+    },
+    {
+      "name": "add-fill",
+      "value": "#7B00FFFF",
+      "category": "extracted",
+      "source": "Add",
+      "usage": 1
+    },
+    {
+      "name": "knob-effect",
+      "value": "#8E9BAE33",
+      "category": "extracted",
+      "source": "Knob",
+      "usage": 2
+    },
+    {
+      "name": "knob-fill",
+      "value": "#0B010DCC",
+      "category": "extracted",
+      "source": "Knob",
+      "usage": 1
+    }
+  ],
+  "timestamp": "2025-12-03T06:25:22.247Z",
+  "figmaFileKey": "unknown",
+  "extractedFrom": "Typography, Color Styles Light Mode, Color Styles Dark Mode, Texts, Texts Small, Lists, Lists, Titles"
+}

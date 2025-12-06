@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quantum-Spatial Design System - Framer Cloudflare Integration Demo</title>
+  <style>
+    :root {
+      --color-primary: #6A3093;
+      --color-secondary: #BF4080;
+      --color-accent: #5AC8FA;
+      --color-background: #0D0D15;
+      --color-surface: #0A0621;
+      --color-text: #FFFFFF;
+      --spacing-xs: 4px;
+      --spacing-sm: 8px;
+      --spacing-md: 16px;
+      --spacing-lg: 24px;
+      --spacing-xl: 32px;
+      --font-family: "SF Pro Display", system-ui, sans-serif;
+      --font-size-sm: 14px;
+      --font-size-md: 16px;
+      --font-size-lg: 18px;
+      --font-size-xl: 24px;
+    }
+    
+    body {
+      font-family: var(--font-family);
+      background-color: var(--color-background);
+      color: var(--color-text);
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .container {
+      max-width: 1200px;
+      width: 100%;
+      padding: var(--spacing-lg);
+    }
+    
+    header {
+      text-align: center;
+      margin-bottom: var(--spacing-xl);
+      padding: var(--spacing-lg) 0;
+      border-bottom: 1px solid rgba(90, 200, 250, 0.2);
+    }
+    
+    h1 {
+      font-size: 36px;
+      margin-bottom: var(--spacing-sm);
+      background: linear-gradient(to right, var(--color-accent), var(--color-secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    h2 {
+      color: var(--color-accent);
+      margin-top: var(--spacing-xl);
+      margin-bottom: var(--spacing-md);
+    }
+    
+    p {
+      line-height: 1.6;
+      margin-bottom: var(--spacing-md);
+    }
+    
+    .card {
+      background-color: var(--color-surface);
+      border-radius: 12px;
+      padding: var(--spacing-lg);
+      margin-bottom: var(--spacing-lg);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 48px rgba(0, 0, 0, 0.4), 0 0 24px rgba(90, 200, 250, 0.2);
+    }
+    
+    .card h3 {
+      color: var(--color-accent);
+      margin-top: 0;
+      margin-bottom: var(--spacing-md);
+    }
+    
+    .button {
+      background-color: var(--color-primary);
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.2s, background-color 0.2s;
+      display: inline-block;
+      text-decoration: none;
+      margin-right: var(--spacing-sm);
+    }
+    
+    .button:hover {
+      transform: scale(1.02);
+    }
+    
+    .button.primary {
+      background-color: var(--color-primary);
+    }
+    
+    .button.secondary {
+      background-color: var(--color-secondary);
+    }
+    
+    .button.accent {
+      background-color: var(--color-accent);
+    }
+    
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: var(--spacing-lg);
+      margin-top: var(--spacing-lg);
+    }
+    
+    .states {
+      display: flex;
+      justify-content: center;
+      margin: var(--spacing-lg) 0;
+      gap: var(--spacing-sm);
+    }
+    
+    .state-button {
+      padding: 8px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background-color: rgba(255, 255, 255, 0.05);
+      color: var(--color-text);
+      font-weight: 500;
+      transition: background-color 0.2s;
+    }
+    
+    .state-button:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    .state-button.active {
+      background-color: var(--color-primary);
+      border-color: var(--color-primary);
+    }
+    
+    .dashboard-layout {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 600px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4);
+      margin-top: var(--spacing-xl);
+    }
+    
+    .dashboard-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #131A36;
+      padding: 0 var(--spacing-lg);
+      height: 64px;
+      border-bottom: 1px solid rgba(90, 200, 250, 0.1);
+    }
+    
+    .dashboard-content {
+      display: flex;
+      flex: 1;
+      overflow: hidden;
+    }
+    
+    .dashboard-sidebar {
+      width: 240px;
+      background-color: #0A0621;
+      border-right: 1px solid rgba(90, 200, 250, 0.1);
+      padding: var(--spacing-md);
+      overflow-y: auto;
+    }
+    
+    .dashboard-main {
+      flex: 1;
+      padding: var(--spacing-lg);
+      overflow-y: auto;
+    }
+    
+    .nav-item {
+      padding: var(--spacing-sm) var(--spacing-md);
+      border-radius: 8px;
+      color: var(--color-text);
+      text-decoration: none;
+      display: block;
+      margin-bottom: var(--spacing-sm);
+      transition: background-color 0.2s;
+    }
+    
+    .nav-item:hover {
+      background-color: rgba(255, 255, 255, 0.05);
+    }
+    
+    .nav-item.active {
+      background-color: rgba(90, 200, 250, 0.1);
+      color: var(--color-accent);
+      font-weight: bold;
+    }
+    
+    .status-badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 12px;
+      font-size: 12px;
+      font-weight: bold;
+      background-color: rgba(90, 200, 250, 0.2);
+      color: var(--color-accent);
+    }
+    
+    code {
+      display: block;
+      background-color: rgba(0, 0, 0, 0.2);
+      padding: var(--spacing-md);
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: var(--spacing-md) 0;
+      font-family: 'SF Mono', monospace;
+      white-space: pre;
+    }
+    
+    .device-info {
+      margin-top: var(--spacing-xl);
+      padding: var(--spacing-md);
+      background-color: rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+    }
+    
+    .device-info p {
+      margin: var(--spacing-xs) 0;
+    }
+    
+    footer {
+      text-align: center;
+      margin-top: var(--spacing-xl);
+      padding: var(--spacing-lg) 0;
+      opacity: 0.6;
+      font-size: var(--font-size-sm);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Quantum-Spatial Design System</h1>
+      <p>Framer Cloudflare Integration Demo</p>
+      
+      <div class="states">
+        <button class="state-button" data-state="heritage">Heritage</button>
+        <button class="state-button" data-state="transitional">Transitional</button>
+        <button class="state-button active" data-state="quantum">Quantum</button>
+        <button class="state-button" data-state="superposition">Superposition</button>
+      </div>
+    </header>
+    
+    <section>
+      <h2>Overview</h2>
+      <p>
+        The Quantum-Spatial Design System provides a comprehensive, M4-optimized design system with automatic 
+        Cloudflare Worker integration for Framer projects. This demo showcases the components, layouts, and 
+        design tokens available in the system.
+      </p>
+      
+      <div class="grid">
+        <div class="card">
+          <h3>Auto-Detection</h3>
+          <p>Automatically detects device capabilities and optimizes for M4 processors with enhanced visuals and performance.</p>
+          <button class="button primary">Learn More</button>
+        </div>
+        
+        <div class="card">
+          <h3>Multiple Design States</h3>
+          <p>Switch between Heritage, Transitional, Quantum, and Superposition states to match your design needs.</p>
+          <button class="button secondary">View States</button>
+        </div>
+        
+        <div class="card">
+          <h3>Cloudflare Integration</h3>
+          <p>Fetches design tokens and components from Cloudflare Workers with automatic fallbacks for reliability.</p>
+          <button class="button accent">See API</button>
+        </div>
+      </div>
+    </section>
+    
+    <section>
+      <h2>Components</h2>
+      <p>
+        The design system includes various pre-built components that adapt to the current design state and device capabilities.
+      </p>
+      
+      <div class="grid">
+        <div class="card">
+          <h3>Button Component</h3>
+          <p>Multi-variant button with M4 optimizations</p>
+          <div>
+            <button class="button primary">Primary</button>
+            <button class="button secondary">Secondary</button>
+            <button class="button accent">Accent</button>
+          </div>
+        </div>
+        
+        <div class="card">
+          <h3>Card Component</h3>
+          <p>Versatile container with elevation and variants</p>
+          <button class="button primary">Learn More</button>
+        </div>
+        
+        <div class="card">
+          <h3>DimensionalGrid</h3>
+          <p>Grid component with optional volumetric effects</p>
+          <button class="button primary">View Examples</button>
+        </div>
+      </div>
+    </section>
+    
+    <section>
+      <h2>Dashboard Layout Example</h2>
+      <p>
+        The DashboardLayout component provides a complete application layout with header, sidebar, and main content area.
+      </p>
+      
+      <div class="dashboard-layout">
+        <div class="dashboard-header">
+          <h3>Quantum Dashboard</h3>
+          <div class="status-badge">Quantum State</div>
+        </div>
+        
+        <div class="dashboard-content">
+          <div class="dashboard-sidebar">
+            <nav>
+              <a href="#" class="nav-item active">Dashboard</a>
+              <a href="#" class="nav-item">Components</a>
+              <a href="#" class="nav-item">Design Tokens</a>
+              <a href="#" class="nav-item">Settings</a>
+            </nav>
+          </div>
+          
+          <div class="dashboard-main">
+            <h2>Dashboard Content</h2>
+            <p>This is an example of the DashboardLayout component from the Quantum-Spatial Design System.</p>
+            
+            <div class="grid">
+              <div class="card">
+                <h3>Components</h3>
+                <p>32 components available</p>
+                <button class="button primary">View</button>
+              </div>
+              
+              <div class="card">
+                <h3>Design Tokens</h3>
+                <p>120 design tokens configured</p>
+                <button class="button primary">Explore</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section>
+      <h2>Integration Code</h2>
+      <p>
+        To integrate the Quantum-Spatial Design System with Framer and Cloudflare, add this code to your project:
+      </p>
+      
+      <code>
+// Import the design system provider
+import { QuantumSpatialProvider, Button, Card } from "quantum-spatial-design-system";
+
+export function App() {
+  return (
+    &lt;QuantumSpatialProvider
+      autoDetect={true}
+      initialState="quantum"
+      workerUrl="https://design-system.9bitstudios.io"
+    &gt;
+      &lt;YourContent /&gt;
+    &lt;/QuantumSpatialProvider&gt;
+  );
+}
+
+function YourContent() {
+  const { tokens, designState, setDesignState } = useQuantumSpatial();
+  
+  return (
+    &lt;div&gt;
+      &lt;Card title="Welcome" elevated={true}&gt;
+        &lt;p&gt;Welcome to the Quantum-Spatial Design System.&lt;/p&gt;
+        &lt;Button text="Learn More" variant="primary" /&gt;
+      &lt;/Card&gt;
+    &lt;/div&gt;
+  );
+}</code>
+    </section>
+    
+    <div class="device-info">
+      <h3>Device Information</h3>
+      <div id="device-info-content">
+        <p>Detecting device capabilities...</p>
+      </div>
+    </div>
+    
+    <footer>
+      <p>© 2025 9Bit Studios. All rights reserved.</p>
+    </footer>
+  </div>
+  
+  <script>
+    // Simulate device detection
+    function detectDeviceCapabilities() {
+      const isMac = navigator.userAgent.includes('Mac');
+      const isAppleSilicon = isMac && !navigator.userAgent.includes('Intel');
+      const cpuCores = navigator.hardwareConcurrency || 1;
+      
+      // Simulate M4 detection (not possible in real-world without benchmarking)
+      const isM4 = isAppleSilicon && cpuCores >= 8;
+      
+      return {
+        platform: navigator.platform,
+        isMac,
+        isAppleSilicon,
+        cpuCores,
+        isM4Detected: isM4,
+        isM4Pro: isM4 && cpuCores >= 10,
+        isM4Max: isM4 && cpuCores >= 12,
+        isM4Ultra: isM4 && cpuCores >= 16,
+        recommendedState: isM4 ? 'superposition' : 'quantum',
+        renderQuality: isM4 ? 'high' : 'standard'
+      };
+    }
+    
+    // Update device info display
+    function updateDeviceInfo() {
+      const deviceInfo = detectDeviceCapabilities();
+      const infoElement = document.getElementById('device-info-content');
+      
+      let html = '';
+      Object.entries(deviceInfo).forEach(([key, value]) => {
+        html += `<p><strong>${key}:</strong> ${value}</p>`;
+      });
+      
+      infoElement.innerHTML = html;
+      
+      // Auto-select recommended state if M4 is detected
+      if (deviceInfo.isM4Detected) {
+        setDesignState(deviceInfo.recommendedState);
+      }
+    }
+    
+    // Set design state
+    function setDesignState(state) {
+      // Update active button
+      document.querySelectorAll('.state-button').forEach(button => {
+        button.classList.toggle('active', button.dataset.state === state);
+      });
+      
+      // Update CSS variables based on state
+      const root = document.documentElement;
+      
+      // Clear previous state class
+      root.classList.remove('heritage', 'transitional', 'quantum', 'superposition');
+      root.classList.add(state);
+      
+      // Set state-specific variables
+      switch (state) {
+        case 'heritage':
+          root.style.setProperty('--color-primary', '#131A36');
+          root.style.setProperty('--color-secondary', '#666666');
+          root.style.setProperty('--color-accent', '#888888');
+          root.style.setProperty('--color-background', '#FFFFFF');
+          root.style.setProperty('--color-surface', '#F5F5F5');
+          root.style.setProperty('--color-text', '#333333');
+          break;
+        case 'transitional':
+          root.style.setProperty('--color-primary', '#131A36');
+          root.style.setProperty('--color-secondary', '#331F4A');
+          root.style.setProperty('--color-accent', '#5AC8FA');
+          root.style.setProperty('--color-background', '#FFFFFF');
+          root.style.setProperty('--color-surface', '#F8F9FA');
+          root.style.setProperty('--color-text', '#2D3748');
+          break;
+        case 'quantum':
+          root.style.setProperty('--color-primary', '#6A3093');
+          root.style.setProperty('--color-secondary', '#BF4080');
+          root.style.setProperty('--color-accent', '#5AC8FA');
+          root.style.setProperty('--color-background', '#0D0D15');
+          root.style.setProperty('--color-surface', '#0A0621');
+          root.style.setProperty('--color-text', '#FFFFFF');
+          break;
+        case 'superposition':
+          root.style.setProperty('--color-primary', '#6A3093');
+          root.style.setProperty('--color-secondary', '#BF4080');
+          root.style.setProperty('--color-accent', '#5AC8FA');
+          root.style.setProperty('--color-background', '#0D0D15');
+          root.style.setProperty('--color-surface', '#0A0621');
+          root.style.setProperty('--color-text', '#FFFFFF');
+          // Add enhanced visual effects for superposition state
+          document.querySelectorAll('.card').forEach(card => {
+            card.style.boxShadow = '0 16px 48px rgba(0,0,0,0.4), 0 0 24px rgba(90, 200, 250, 0.2)';
+          });
+          break;
+      }
+      
+      // Update status badge
+      document.querySelector('.status-badge').textContent = `${state.charAt(0).toUpperCase() + state.slice(1)} State`;
+    }
+    
+    // Initialize
+    document.addEventListener('DOMContentLoaded', () => {
+      // Update device info
+      updateDeviceInfo();
+      
+      // Set up state buttons
+      document.querySelectorAll('.state-button').forEach(button => {
+        button.addEventListener('click', () => {
+          setDesignState(button.dataset.state);
+        });
+      });
+      
+      // Initialize with quantum state
+      setDesignState('quantum');
+    });
+  </script>
+</body>
+</html>

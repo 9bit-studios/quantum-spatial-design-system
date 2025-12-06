@@ -1,0 +1,275 @@
+/**
+ * Quantum-Spatial Design System
+ * DimensionalGrid Component Styles
+ * 
+ * This file provides CSS-based styling for the DimensionalGrid component
+ * while canvas-based rendering provides more advanced visual effects.
+ */
+
+/* Base container style */
+.dimensional-grid {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  box-sizing: border-box;
+  will-change: transform;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Grid Types with appropriate opacities */
+.dimensional-grid-background {
+  /* Background Grid: Subtle, non-intrusive */
+  transform-origin: center center;
+  --grid-opacity-min: 0.08;
+  --grid-opacity-max: 0.12;
+  --grid-opacity: 0.1;
+}
+
+.dimensional-grid-interface {
+  /* Interface Grid: More pronounced for UI organization */
+  transform-origin: center center;
+  --grid-opacity-min: 0.15;
+  --grid-opacity-max: 0.20;
+  --grid-opacity: 0.175;
+}
+
+.dimensional-grid-feature {
+  /* Feature Grid: Highest visibility for key elements */
+  transform-origin: center center;
+  --grid-opacity-min: 0.20;
+  --grid-opacity-max: 0.25;
+  --grid-opacity: 0.225;
+}
+
+/* Grid Density Variations */
+.dimensional-grid-fine {
+  /* Fine Grid: 8px base */
+  --grid-size: 8px;
+}
+
+.dimensional-grid-medium {
+  /* Medium Grid: 16px base */
+  --grid-size: 16px;
+}
+
+.dimensional-grid-coarse {
+  /* Coarse Grid: 32px base */
+  --grid-size: 32px;
+}
+
+/* State-Specific Styles and Colors */
+.dimensional-grid-heritage {
+  --primary-color: #3DFF74; /* Heritage Pixel Green */
+  --secondary-color: #00FFC8; /* Heritage Pixel Aqua */
+  --primary-bg: rgba(44, 95, 45, 0.2);
+  --secondary-bg: rgba(27, 61, 26, 0.3);
+}
+
+.dimensional-grid-heritage .dimensional-grid-primary {
+  /* Heritage state: Green-based primary grid */
+  transition: opacity 0.4s ease;
+}
+
+.dimensional-grid-heritage .dimensional-grid-secondary {
+  /* Heritage state: Green-aqua secondary grid */
+  transition: opacity 0.4s ease;
+}
+
+.dimensional-grid-transitional {
+  --primary-color: #5AC8FA; /* Subtle Cyan */
+  --secondary-color: #613FE7; /* Ultra Violet */
+  --primary-bg: rgba(51, 31, 74, 0.2);
+  --secondary-bg: rgba(30, 31, 92, 0.3);
+}
+
+.dimensional-grid-transitional .dimensional-grid-primary {
+  /* Transitional state: Cyan-based primary grid */
+  transition: opacity 0.4s ease;
+}
+
+.dimensional-grid-transitional .dimensional-grid-secondary {
+  /* Transitional state: Violet secondary grid */
+  transition: opacity 0.4s ease;
+}
+
+.dimensional-grid-quantum {
+  --primary-color: #BF4080; /* Rose Energy */
+  --secondary-color: #FF2D55; /* Quantum Pulse Pink */
+  --primary-bg: rgba(106, 48, 147, 0.2);
+  --secondary-bg: rgba(51, 31, 74, 0.3);
+}
+
+.dimensional-grid-quantum .dimensional-grid-primary {
+  /* Quantum state: Rose-based primary grid */
+  transition: opacity 0.4s ease;
+}
+
+.dimensional-grid-quantum .dimensional-grid-secondary {
+  /* Quantum state: Pink secondary grid */
+  transition: opacity 0.4s ease;
+}
+
+/* Canvas elements for optimized rendering */
+.dimensional-grid canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease-out;
+}
+
+/* CSS-based grid fallback when canvas is not used */
+.dimensional-grid-primary-css {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    linear-gradient(to right, var(--primary-color) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--primary-color) 1px, transparent 1px);
+  background-size: var(--grid-size) var(--grid-size);
+  opacity: var(--grid-opacity);
+  transition: transform 0.2s ease-out, opacity 0.3s ease-out;
+}
+
+/* Secondary CSS-based grid (diagonal lines for depth) */
+.dimensional-grid-secondary-css {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    linear-gradient(45deg, var(--secondary-color) 1px, transparent 1px),
+    linear-gradient(135deg, var(--secondary-color) 1px, transparent 1px);
+  background-size: calc(var(--grid-size) * 2) calc(var(--grid-size) * 2);
+  opacity: calc(var(--grid-opacity) * 0.5);
+  transform: scale(1.5);
+  transform-origin: center center;
+  transition: transform 0.2s ease-out, opacity 0.3s ease-out;
+}
+
+/* Perspective shift enhancement */
+.dimensional-grid[data-perspective="true"] .dimensional-grid-primary,
+.dimensional-grid[data-perspective="true"] .dimensional-grid-secondary {
+  transform: perspective(1000px) rotateX(60deg) rotateY(0deg);
+  transform-origin: center bottom;
+  transition: transform 0.2s ease-out;
+}
+
+/* Distance-based falloff effect (radial gradient overlay) */
+.dimensional-grid[data-falloff="true"]::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at center,
+    transparent 30%,
+    var(--primary-bg) 80%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* State-specific background enhancements */
+.dimensional-grid-heritage::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(44, 95, 45, 0.05), rgba(27, 61, 26, 0.05));
+  z-index: -1;
+}
+
+.dimensional-grid-transitional::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(51, 31, 74, 0.05), rgba(30, 31, 92, 0.05));
+  z-index: -1;
+}
+
+.dimensional-grid-quantum::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(106, 48, 147, 0.05), rgba(51, 31, 74, 0.05));
+  z-index: -1;
+}
+
+/* M4 Hardware Acceleration Optimizations */
+.dimensional-grid-m4-optimized .dimensional-grid-primary,
+.dimensional-grid-m4-optimized .dimensional-grid-secondary {
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+@supports (transform: translate3d(0,0,0)) {
+  .dimensional-grid canvas {
+    transform: translate3d(0,0,0);
+  }
+}
+
+/* High-contrast mode adjustments */
+@media (forced-colors: active) {
+  .dimensional-grid-primary,
+  .dimensional-grid-secondary {
+    stroke: CanvasText;
+    opacity: 0.2;
+  }
+  
+  .dimensional-grid-primary-css {
+    background-image:
+      linear-gradient(to right, CanvasText 1px, transparent 1px),
+      linear-gradient(to bottom, CanvasText 1px, transparent 1px);
+    opacity: 0.3;
+  }
+  
+  .dimensional-grid-secondary-css {
+    background-image:
+      linear-gradient(45deg, CanvasText 1px, transparent 1px),
+      linear-gradient(135deg, CanvasText 1px, transparent 1px);
+    opacity: 0.15;
+  }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .dimensional-grid {
+    transition: none;
+  }
+  
+  .dimensional-grid canvas {
+    transition: none;
+  }
+  
+  .dimensional-grid[data-perspective="true"] .dimensional-grid-primary,
+  .dimensional-grid[data-perspective="true"] .dimensional-grid-secondary {
+    transform: none;
+    transition: opacity 0.3s ease-out;
+  }
+  
+  .dimensional-grid[data-perspective="true"]:hover .dimensional-grid-primary,
+  .dimensional-grid[data-perspective="true"]:hover .dimensional-grid-secondary {
+    transform: none;
+  }
+}

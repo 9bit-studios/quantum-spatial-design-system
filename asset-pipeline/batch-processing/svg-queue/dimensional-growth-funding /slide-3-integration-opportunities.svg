@@ -1,0 +1,190 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <!-- Background with quantum grid -->
+  <rect width="1200" height="800" fill="#0A0621" />
+  
+  <!-- Dimensional grid with perspective effect -->
+  <g opacity="0.1">
+    <!-- Horizontal grid lines -->
+    <path d="M100,700 Q600,680 1100,700" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M150,650 Q600,630 1050,650" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M200,600 Q600,580 1000,600" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M250,550 Q600,530 950,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M300,500 Q600,480 900,500" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M350,450 Q600,430 850,450" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M400,400 Q600,380 800,400" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M450,350 Q600,330 750,350" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M500,300 Q600,280 700,300" stroke="#5AC8FA" stroke-width="1" />
+    
+    <!-- Vertical grid lines -->
+    <path d="M400,300 L400,700" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M500,300 L500,700" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M600,300 L600,700" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M700,300 L700,700" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M800,300 L800,700" stroke="#5AC8FA" stroke-width="1" />
+  </g>
+  
+  <!-- Title with quantum-spatial effect -->
+  <g>
+    <text x="600" y="120" font-family="'SF Pro Display', sans-serif" font-size="70" font-weight="bold" fill="#FFFFFF" text-anchor="middle">INTEGRATION OPPORTUNITIES</text>
+    <!-- Quantum pixels on title -->
+    <rect x="320" y="90" width="10" height="10" fill="#5AC8FA" opacity="0.8" />
+    <rect x="880" y="110" width="8" height="8" fill="#6A3093" opacity="0.8" />
+    <rect x="330" y="130" width="12" height="12" fill="#BF4080" opacity="0.8" />
+    <rect x="870" y="90" width="14" height="14" fill="#5AC8FA" opacity="0.7" />
+  </g>
+
+  <!-- Central Hub -->
+  <g transform="translate(600, 250)">
+    <circle cx="0" cy="0" r="50" fill="#131A36" stroke="#5AC8FA" stroke-width="2" />
+    <text x="0" y="5" font-family="'SF Pro Display', sans-serif" font-size="18" font-weight="bold" fill="#FFFFFF" text-anchor="middle">GRID</text>
+    <text x="0" y="25" font-family="'SF Pro Text', sans-serif" font-size="12" fill="#5AC8FA" text-anchor="middle">INTEGRATION</text>
+    
+    <!-- Quantum pixels -->
+    <rect x="-30" y="-30" width="12" height="12" fill="#BF4080" opacity="0.8" />
+    <rect x="20" y="20" width="10" height="10" fill="#5AC8FA" opacity="0.7" />
+  </g>
+  
+  <!-- Path 1: Spatial Narrative Transformation -->
+  <g transform="translate(300, 450)">
+    <rect x="-150" y="-150" width="300" height="300" rx="15" fill="#131A36" opacity="0.9" stroke="#5AC8FA" stroke-width="2" />
+    <text x="0" y="-115" font-family="'SF Pro Display', sans-serif" font-size="22" fill="#FFFFFF" text-anchor="middle">PATH 1</text>
+    <text x="0" y="-90" font-family="'SF Pro Display', sans-serif" font-size="22" fill="#5AC8FA" text-anchor="middle">SPATIAL NARRATIVE</text>
+    
+    <!-- Icon for Vision Pro integration -->
+    <g transform="translate(0, -40)">
+      <path d="M-40,-20 C-40,-30 40,-30 40,-20 C40,0 40,20 40,40 C40,50 -40,50 -40,40 C-40,20 -40,0 -40,-20 Z" fill="none" stroke="#5AC8FA" stroke-width="2" />
+      <path d="M-20,-10 C-20,-15 20,-15 20,-10 C20,0 20,10 20,20 C20,25 -20,25 -20,20 C-20,10 -20,0 -20,-10 Z" fill="none" stroke="#5AC8FA" stroke-width="1.5" />
+    </g>
+    
+    <!-- Feature points -->
+    <g transform="translate(0, 30)">
+      <rect x="-110" y="-10" width="220" height="25" rx="5" fill="#0D0D15" stroke="#5AC8FA" stroke-width="1" />
+      <text x="0" y="5" font-family="'SF Pro Text', sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">3D Worldbuilding Environments</text>
+    </g>
+    
+    <g transform="translate(0, 70)">
+      <rect x="-110" y="-10" width="220" height="25" rx="5" fill="#0D0D15" stroke="#5AC8FA" stroke-width="1" />
+      <text x="0" y="5" font-family="'SF Pro Text', sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">Dynamic Character Behaviors</text>
+    </g>
+    
+    <g transform="translate(0, 110)">
+      <rect x="-110" y="-10" width="220" height="25" rx="5" fill="#0D0D15" stroke="#5AC8FA" stroke-width="1" />
+      <text x="0" y="5" font-family="'SF Pro Text', sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">Environmental Intelligence</text>
+    </g>
+    
+    <!-- Quantum pixel decoration -->
+    <rect x="-130" y="-130" width="15" height="15" fill="#5AC8FA" opacity="0.7" />
+    <rect x="120" y="-130" width="10" height="10" fill="#BF4080" opacity="0.8" />
+    <rect x="-130" y="130" width="12" height="12" fill="#6A3093" opacity="0.7" />
+    <rect x="120" y="130" width="8" height="8" fill="#5AC8FA" opacity="0.7" />
+  </g>
+  
+  <!-- Path 2: Content Intelligence Engine -->
+  <g transform="translate(600, 450)">
+    <rect x="-150" y="-150" width="300" height="300" rx="15" fill="#131A36" opacity="0.9" stroke="#6A3093" stroke-width="2" />
+    <text x="0" y="-115" font-family="'SF Pro Display', sans-serif" font-size="22" fill="#FFFFFF" text-anchor="middle">PATH 2</text>
+    <text x="0" y="-90" font-family="'SF Pro Display', sans-serif" font-size="22" fill="#6A3093" text-anchor="middle">CONTENT INTELLIGENCE</text>
+    
+    <!-- Icon for Content Intelligence -->
+    <g transform="translate(0, -40)">
+      <rect x="-30" y="-30" width="60" height="60" rx="5" fill="none" stroke="#6A3093" stroke-width="2" />
+      <path d="M-20,-20 L20,20 M-20,20 L20,-20" stroke="#6A3093" stroke-width="2" />
+      <circle cx="0" cy="0" r="10" fill="#6A3093" />
+    </g>
+    
+    <!-- Feature points -->
+    <g transform="translate(0, 30)">
+      <rect x="-110" y="-10" width="220" height="25" rx="5" fill="#0D0D15" stroke="#6A3093" stroke-width="1" />
+      <text x="0" y="5" font-family="'SF Pro Text', sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">Notion Database Analysis</text>
+    </g>
+    
+    <g transform="translate(0, 70)">
+      <rect x="-110" y="-10" width="220" height="25" rx="5" fill="#0D0D15" stroke="#6A3093" stroke-width="1" />
+      <text x="0" y="5" font-family="'SF Pro Text', sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">Strategic Recommendations</text>
+    </g>
+    
+    <g transform="translate(0, 110)">
+      <rect x="-110" y="-10" width="220" height="25" rx="5" fill="#0D0D15" stroke="#6A3093" stroke-width="1" />
+      <text x="0" y="5" font-family="'SF Pro Text', sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">Low-Code Implementation</text>
+    </g>
+    
+    <!-- Quantum pixel decoration -->
+    <rect x="-130" y="-130" width="15" height="15" fill="#BF4080" opacity="0.7" />
+    <rect x="120" y="-130" width="10" height="10" fill="#5AC8FA" opacity="0.8" />
+    <rect x="-130" y="130" width="12" height="12" fill="#5AC8FA" opacity="0.7" />
+    <rect x="120" y="130" width="8" height="8" fill="#BF4080" opacity="0.7" />
+  </g>
+  
+  <!-- Path 3: Strategic Roadmap Optimization -->
+  <g transform="translate(900, 450)">
+    <rect x="-150" y="-150" width="300" height="300" rx="15" fill="#131A36" opacity="0.9" stroke="#BF4080" stroke-width="2" />
+    <text x="0" y="-115" font-family="'SF Pro Display', sans-serif" font-size="22" fill="#FFFFFF" text-anchor="middle">PATH 3</text>
+    <text x="0" y="-90" font-family="'SF Pro Display', sans-serif" font-size="22" fill="#BF4080" text-anchor="middle">STRATEGIC ROADMAP</text>
+    
+    <!-- Icon for Strategic Roadmap -->
+    <g transform="translate(0, -40)">
+      <path d="M-30,-20 L30,-20 L30,20 L-30,20 Z" fill="none" stroke="#BF4080" stroke-width="2" />
+      <path d="M-20,-10 L20,-10 M-20,0 L10,0 M-20,10 L0,10" stroke="#BF4080" stroke-width="2" />
+    </g>
+    
+    <!-- Feature points -->
+    <g transform="translate(0, 30)">
+      <rect x="-110" y="-10" width="220" height="25" rx="5" fill="#0D0D15" stroke="#BF4080" stroke-width="1" />
+      <text x="0" y="5" font-family="'SF Pro Text', sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">AI Product Development</text>
+    </g>
+    
+    <g transform="translate(0, 70)">
+      <rect x="-110" y="-10" width="220" height="25" rx="5" fill="#0D0D15" stroke="#BF4080" stroke-width="1" />
+      <text x="0" y="5" font-family="'SF Pro Text', sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">Resource Optimization</text>
+    </g>
+    
+    <g transform="translate(0, 110)">
+      <rect x="-110" y="-10" width="220" height="25" rx="5" fill="#0D0D15" stroke="#BF4080" stroke-width="1" />
+      <text x="0" y="5" font-family="'SF Pro Text', sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">Cloudflare + Grid Integration</text>
+    </g>
+    
+    <!-- Quantum pixel decoration -->
+    <rect x="-130" y="-130" width="15" height="15" fill="#5AC8FA" opacity="0.7" />
+    <rect x="120" y="-130" width="10" height="10" fill="#6A3093" opacity="0.8" />
+    <rect x="-130" y="130" width="12" height="12" fill="#BF4080" opacity="0.7" />
+    <rect x="120" y="130" width="8" height="8" fill="#5AC8FA" opacity="0.7" />
+  </g>
+  
+  <!-- Connection lines from central hub to the three paths -->
+  <path d="M600,300 L300,300" stroke="#5AC8FA" stroke-width="2" stroke-dasharray="10,5" />
+  <path d="M300,300 L300,300" stroke="#5AC8FA" stroke-width="2" />
+  
+  <path d="M600,300 L600,300" stroke="#6A3093" stroke-width="2" />
+  
+  <path d="M600,300 L900,300" stroke="#BF4080" stroke-width="2" stroke-dasharray="10,5" />
+  <path d="M900,300 L900,300" stroke="#BF4080" stroke-width="2" />
+  
+  <!-- Embracer Group Opportunity -->
+  <g transform="translate(600, 700)">
+    <rect x="-500" y="-50" width="1000" height="100" rx="15" fill="#0D0D15" stroke="#5AC8FA" stroke-width="1.5" />
+    <text x="0" y="-15" font-family="'SF Pro Display', sans-serif" font-size="28" fill="#FFFFFF" text-anchor="middle">EMBRACER GROUP OPPORTUNITY</text>
+    <text x="-300" y="20" font-family="'SF Pro Text', sans-serif" font-size="18" fill="#5AC8FA" text-anchor="middle">Dark Horse Comics IP</text>
+    <text x="0" y="20" font-family="'SF Pro Text', sans-serif" font-size="18" fill="#6A3093" text-anchor="middle">Nordic Connection</text>
+    <text x="300" y="20" font-family="'SF Pro Text', sans-serif" font-size="18" fill="#BF4080" text-anchor="middle">Multiple Implementation Paths</text>
+    
+    <!-- Quantum pixel decoration -->
+    <rect x="-480" y="-30" width="15" height="15" fill="#5AC8FA" opacity="0.7" />
+    <rect x="470" y="-30" width="10" height="10" fill="#BF4080" opacity="0.8" />
+    <rect x="-480" y="20" width="12" height="12" fill="#6A3093" opacity="0.7" />
+    <rect x="470" y="20" width="8" height="8" fill="#5AC8FA" opacity="0.7" />
+  </g>
+  
+  <!-- 9Bit Studios Logo suggesting in top corner -->
+  <g transform="translate(120, 120)">
+    <rect x="-40" y="-40" width="80" height="80" rx="10" fill="#131A36" stroke="#5AC8FA" stroke-width="2" />
+    <text x="0" y="0" font-family="'SF Pro Display', sans-serif" font-size="24" font-weight="bold" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle">9B</text>
+    <rect x="-25" y="-25" width="8" height="8" fill="#BF4080" opacity="0.8" />
+    <rect x="15" y="15" width="10" height="10" fill="#5AC8FA" opacity="0.7" />
+  </g>
+  
+  <!-- Time indicator -->
+  <g transform="translate(1080, 120)">
+    <rect x="-80" y="-30" width="160" height="60" rx="30" fill="#0D0D15" stroke="#6A3093" stroke-width="1.5" />
+    <text x="0" y="8" font-family="'SF Pro Text', sans-serif" font-size="24" fill="#FFFFFF" text-anchor="middle">9 minutes</text>
+  </g>
+</svg>

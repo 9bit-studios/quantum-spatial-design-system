@@ -1,0 +1,14 @@
+{
+  "colors": [
+    {
+      "name": "heading-1-60-medium-fill",
+      "value": "#FFFFFFE5",
+      "category": "extracted",
+      "source": "Heading 1 - 60 Medium",
+      "usage": 28
+    }
+  ],
+  "timestamp": "2025-12-03T06:40:10.939Z",
+  "figmaFileKey": "unknown",
+  "extractedFrom": "Heading 1 - 60 Semibold, Heading 2 - 50 Semibold, Heading 3 - 40 Semibold, Heading 4 - 30 Semibold, Heading 5 - 24 Semibold, Headline - 20 Regular, Headline - 20 Medium, Body Large - 18 Regular, Body Large - 18 Medium, Body - 16 Regular, Body - 16 Medium, Footnote - 14 Regular, Footnote - 14 Medium, Caption - 13 Regular, Caption - 13 Medium, Small - 12 Regular, Small - 12 Medium, Mobile Heading 1 - 40 Semibold, Mobile Heading 2 - 30 Semibold, Mobile Heading 3 - 28 Semibold, Mobile Heading 4 - 24 Semibold, Body Large - 18 Mono, Body - 16 Mono, Footnote - 14 Mono, Caption - 13 Mono, Small - 12 Mono, Body - 16 Mono, Body Large - 18 Mono"
+}

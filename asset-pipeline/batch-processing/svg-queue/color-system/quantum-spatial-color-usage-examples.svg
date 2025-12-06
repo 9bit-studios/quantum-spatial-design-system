@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="1200" height="1600" version="1.1" viewBox="0 0 1200 1600">
+  <!-- Generator: Adobe Illustrator 29.4.0, SVG Export Plug-In . SVG Version: 2.1.0 Build 152)  -->
+  <defs>
+    <style>
+      .st0, .st1, .st2 {
+        fill: #5b2c91;
+      }
+
+      .st3 {
+        font-size: 12px;
+      }
+
+      .st3, .st4, .st5, .st6, .st1, .st2, .st7, .st8, .st9, .st10, .st11, .st12, .st13, .st14, .st15, .st16, .st17, .st18, .st19, .st20, .st21, .st22, .st23, .st24, .st25, .st26, .st27, .st28, .st29 {
+        isolation: isolate;
+      }
+
+      .st3, .st4, .st5, .st7, .st8, .st9, .st10, .st12, .st15, .st24, .st25, .st26, .st27, .st28, .st29 {
+        fill: #fff;
+      }
+
+      .st3, .st5, .st9, .st10, .st13 {
+        font-family: SFProText-Regular, 'SF Pro Text';
+      }
+
+      .st30, .st31, .st32, .st33 {
+        fill: #0a0621;
+      }
+
+      .st34, .st13, .st16, .st17, .st18, .st19, .st20, .st21 {
+        fill: #36eae8;
+      }
+
+      .st4, .st8 {
+        font-family: SFProDisplay-Regular, 'SF Pro Display';
+      }
+
+      .st4, .st9, .st12 {
+        font-size: 16px;
+      }
+
+      .st5, .st8, .st13, .st15 {
+        font-size: 14px;
+      }
+
+      .st35 {
+        fill: #4f8cff;
+      }
+
+      .st6, .st2, .st14, .st16, .st22, .st28 {
+        opacity: .8;
+      }
+
+      .st6, .st36, .st37, .st38 {
+        fill: #2e1b45;
+      }
+
+      .st1, .st19, .st23, .st29 {
+        opacity: .6;
+      }
+
+      .st31, .st32, .st33, .st39, .st40, .st38 {
+        stroke: #36eae8;
+      }
+
+      .st7 {
+        font-size: 36px;
+      }
+
+      .st7, .st12, .st15, .st24, .st25 {
+        font-family: SFProDisplay-Bold, 'SF Pro Display';
+        font-weight: 700;
+      }
+
+      .st32 {
+        stroke-opacity: .6;
+      }
+
+      .st33 {
+        stroke-opacity: .4;
+      }
+
+      .st10 {
+        font-size: 18px;
+      }
+
+      .st11, .st41 {
+        fill: #161d4e;
+      }
+
+      .st11, .st27 {
+        opacity: .9;
+      }
+
+      .st42, .st14 {
+        fill: #ff6b57;
+      }
+
+      .st40 {
+        fill: none;
+        stroke-opacity: .8;
+      }
+
+      .st40, .st37, .st38 {
+        stroke-width: 2px;
+      }
+
+      .st43 {
+        opacity: .1;
+      }
+
+      .st37 {
+        stroke: #5b2c91;
+      }
+
+      .st44, .st22, .st23 {
+        fill: #3dff74;
+      }
+
+      .st17 {
+        opacity: .15;
+      }
+
+      .st18 {
+        opacity: .4;
+      }
+
+      .st20 {
+        opacity: .2;
+      }
+
+      .st21 {
+        opacity: .3;
+      }
+
+      .st24 {
+        font-size: 24px;
+      }
+
+      .st25 {
+        font-size: 20px;
+      }
+
+      .st26 {
+        opacity: .7;
+      }
+    </style>
+  </defs>
+  <rect class="st30" width="1200" height="1600"/>
+  <g class="st43">
+    <path class="st39" d="M0,0h1200"/>
+    <path class="st39" d="M0,100h1200"/>
+    <path class="st39" d="M0,200h1200"/>
+    <path class="st39" d="M0,300h1200"/>
+    <path class="st39" d="M0,400h1200"/>
+    <path class="st39" d="M0,500h1200"/>
+    <path class="st39" d="M0,600h1200"/>
+    <path class="st39" d="M0,700h1200"/>
+    <path class="st39" d="M0,800h1200"/>
+    <path class="st39" d="M0,900h1200"/>
+    <path class="st39" d="M0,1000h1200"/>
+    <path class="st39" d="M0,1100h1200"/>
+    <path class="st39" d="M0,1200h1200"/>
+    <path class="st39" d="M0,1300h1200"/>
+    <path class="st39" d="M0,1400h1200"/>
+    <path class="st39" d="M0,1500h1200"/>
+    <path class="st39" d="M0,0v1600"/>
+    <path class="st39" d="M100,0v1600"/>
+    <path class="st39" d="M200,0v1600"/>
+    <path class="st39" d="M300,0v1600"/>
+    <path class="st39" d="M400,0v1600"/>
+    <path class="st39" d="M500,0v1600"/>
+    <path class="st39" d="M600,0v1600"/>
+    <path class="st39" d="M700,0v1600"/>
+    <path class="st39" d="M800,0v1600"/>
+    <path class="st39" d="M900,0v1600"/>
+    <path class="st39" d="M1000,0v1600"/>
+    <path class="st39" d="M1100,0v1600"/>
+  </g>
+  <text class="st7" transform="translate(312.94 70)"><tspan x="0" y="0">9Bit Studios Color Usage Examples</tspan></text>
+  <text class="st10" transform="translate(431.9 110)"><tspan x="0" y="0">Application Across Product Ecosystems</tspan></text>
+  <g>
+    <rect class="st6" x="100" y="180" width="1000" height="360" rx="12" ry="12"/>
+    <rect class="st0" x="100" y="180" width="1000" height="60" rx="12" ry="12"/>
+    <text class="st24" transform="translate(364.143 220)"><tspan x="0" y="0">Games Portfolio: High-Intensity Application</tspan></text>
+    <g>
+      <rect class="st31" x="150" y="270" width="280" height="240" rx="8" ry="8"/>
+      <rect class="st36" x="170" y="290" width="240" height="40" rx="4" ry="4"/>
+      <text class="st12" transform="translate(190 315)"><tspan x="0" y="0">Player Status</tspan></text>
+      <path class="st41" d="M198,340h104c4.418,0,8,3.582,8,8h0c0,4.418-3.582,8-8,8h-104c-4.418,0-8-3.582-8-8h0c0-4.418,3.582-8,8-8Z"/>
+      <path class="st42" d="M198,340h64c4.418,0,8,3.582,8,8h0c0,4.418-3.582,8-8,8h-64c-4.418,0-8-3.582-8-8h0c0-4.418,3.582-8,8-8Z"/>
+      <text class="st3" transform="translate(320 353)"><tspan x="0" y="0">Health</tspan></text>
+      <path class="st41" d="M198,365h104c4.418,0,8,3.582,8,8h0c0,4.418-3.582,8-8,8h-104c-4.418,0-8-3.582-8-8h0c0-4.418,3.582-8,8-8Z"/>
+      <path class="st34" d="M198,365h84c4.418,0,8,3.582,8,8h0c0,4.418-3.582,8-8,8h-84c-4.418,0-8-3.582-8-8h0c0-4.418,3.582-8,8-8Z"/>
+      <text class="st3" transform="translate(320 378)"><tspan x="0" y="0">Energy</tspan></text>
+      <rect class="st37" x="190" y="400" width="40" height="40" rx="4" ry="4"/>
+      <rect class="st37" x="240" y="400" width="40" height="40" rx="4" ry="4"/>
+      <rect class="st38" x="290" y="400" width="40" height="40" rx="4" ry="4"/>
+      <rect class="st37" x="340" y="400" width="40" height="40" rx="4" ry="4"/>
+      <circle class="st2" cx="220" cy="470" r="20"/>
+      <circle class="st16" cx="280" cy="470" r="20"/>
+      <circle class="st14" cx="340" cy="470" r="20"/>
+      <rect class="st44" x="150" y="270" width="6" height="6"/>
+      <rect class="st22" x="156" y="270" width="6" height="6"/>
+      <rect class="st22" x="150" y="276" width="6" height="6"/>
+      <rect class="st23" x="156" y="276" width="6" height="6"/>
+    </g>
+    <g>
+      <text class="st25" transform="translate(480 300)"><tspan x="0" y="0">Gaming Interface Guidelines</tspan></text>
+      <text class="st9" transform="translate(480 340)"><tspan x="0" y="0">• Full saturation values (100%)</tspan></text>
+      <text class="st9" transform="translate(480 370)"><tspan x="0" y="0">• High contrast for gameplay elements</tspan></text>
+      <text class="st9" transform="translate(480 400)"><tspan x="0" y="0">• Vibrant accent colors for interactive elements</tspan></text>
+      <text class="st9" transform="translate(480 430)"><tspan x="0" y="0">• 8-bit pixel elements incorporate Retro Green</tspan></text>
+      <text class="st9" transform="translate(480 460)"><tspan x="0" y="0">• Health/status indicators use Dimensional Orange</tspan></text>
+      <text class="st9" transform="translate(480 490)"><tspan x="0" y="0">• Energy/mana uses Digital Cyan</tspan></text>
+    </g>
+    <g>
+      <rect class="st0" x="820" y="320" width="30" height="30" rx="4" ry="4"/>
+      <text class="st5" transform="translate(860 340)"><tspan x="0" y="0">Quantum Purple (100%)</tspan></text>
+      <rect class="st34" x="820" y="360" width="30" height="30" rx="4" ry="4"/>
+      <text class="st5" transform="translate(860 380)"><tspan x="0" y="0">Digital Cyan (100%)</tspan></text>
+      <rect class="st42" x="820" y="400" width="30" height="30" rx="4" ry="4"/>
+      <text class="st5" transform="translate(860 420)"><tspan x="0" y="0">Dimensional Orange (100%)</tspan></text>
+      <rect class="st44" x="820" y="440" width="30" height="30" rx="4" ry="4"/>
+      <text class="st5" transform="translate(860 460)"><tspan x="0" y="0">Retro Green (100%)</tspan></text>
+    </g>
+  </g>
+  <g>
+    <rect class="st6" x="100" y="580" width="1000" height="360" rx="12" ry="12"/>
+    <rect class="st0" x="100" y="580" width="1000" height="60" rx="12" ry="12"/>
+    <text class="st24" transform="translate(299.941 620)"><tspan x="0" y="0">Creative SaaS Products: Reduced-Intensity Application</tspan></text>
+    <g>
+      <rect class="st32" x="150" y="670" width="280" height="240" rx="8" ry="8"/>
+      <rect class="st36" x="150" y="670" width="280" height="40" rx="8" ry="8"/>
+      <text class="st4" transform="translate(170 695)"><tspan x="0" y="0">Oksana Asset Manager</tspan></text>
+      <rect class="st41" x="150" y="710" width="70" height="200"/>
+      <path class="st2" d="M167,730h36c1.105,0,2,.895,2,2h0c0,1.105-.895,2-2,2h-36c-1.105,0-2-.895-2-2h0c0-1.105.895-2,2-2Z"/>
+      <path class="st2" d="M167,740h26c1.105,0,2,.895,2,2h0c0,1.105-.895,2-2,2h-26c-1.105,0-2-.895-2-2h0c0-1.105.895-2,2-2Z"/>
+      <path class="st29" d="M167,770h36c1.105,0,2,.895,2,2h0c0,1.105-.895,2-2,2h-36c-1.105,0-2-.895-2-2h0c0-1.105.895-2,2-2Z"/>
+      <path class="st29" d="M167,780h26c1.105,0,2,.895,2,2h0c0,1.105-.895,2-2,2h-26c-1.105,0-2-.895-2-2h0c0-1.105.895-2,2-2Z"/>
+      <path class="st29" d="M167,810h36c1.105,0,2,.895,2,2h0c0,1.105-.895,2-2,2h-36c-1.105,0-2-.895-2-2h0c0-1.105.895-2,2-2Z"/>
+      <path class="st29" d="M167,820h26c1.105,0,2,.895,2,2h0c0,1.105-.895,2-2,2h-26c-1.105,0-2-.895-2-2h0c0-1.105.895-2,2-2Z"/>
+      <path class="st29" d="M167,850h36c1.105,0,2,.895,2,2h0c0,1.105-.895,2-2,2h-36c-1.105,0-2-.895-2-2h0c0-1.105.895-2,2-2Z"/>
+      <path class="st29" d="M167,860h26c1.105,0,2,.895,2,2h0c0,1.105-.895,2-2,2h-26c-1.105,0-2-.895-2-2h0c0-1.105.895-2,2-2Z"/>
+      <rect class="st30" x="220" y="710" width="210" height="200"/>
+      <rect class="st36" x="235" y="725" width="80" height="80" rx="4" ry="4"/>
+      <rect class="st36" x="325" y="725" width="80" height="80" rx="4" ry="4"/>
+      <rect class="st36" x="235" y="815" width="80" height="80" rx="4" ry="4"/>
+      <rect class="st36" x="325" y="815" width="80" height="80" rx="4" ry="4"/>
+      <rect class="st40" x="235" y="725" width="80" height="80" rx="4" ry="4"/>
+      <rect class="st19" x="150" y="670" width="4" height="4"/>
+      <rect class="st18" x="154" y="670" width="4" height="4"/>
+      <rect class="st18" x="150" y="674" width="4" height="4"/>
+      <rect class="st20" x="154" y="674" width="4" height="4"/>
+    </g>
+    <g>
+      <text class="st25" transform="translate(480 700)"><tspan x="0" y="0">SaaS Interface Guidelines</tspan></text>
+      <text class="st9" transform="translate(480 740)"><tspan x="0" y="0">• Reduced saturation values (80%)</tspan></text>
+      <text class="st9" transform="translate(480 770)"><tspan x="0" y="0">• Subtle accent colors for professional tools</tspan></text>
+      <text class="st9" transform="translate(480 800)"><tspan x="0" y="0">• Clean, functional interfaces with minimal noise</tspan></text>
+      <text class="st9" transform="translate(480 830)"><tspan x="0" y="0">• Quantum pixels at lower opacity for branding</tspan></text>
+      <text class="st9" transform="translate(480 860)"><tspan x="0" y="0">• Strategic use of accent colors for selected states</tspan></text>
+      <text class="st9" transform="translate(480 890)"><tspan x="0" y="0">• Focus on readability and reduced eye strain</tspan></text>
+    </g>
+    <g>
+      <rect class="st2" x="820" y="720" width="30" height="30" rx="4" ry="4"/>
+      <text class="st5" transform="translate(860 740)"><tspan x="0" y="0">Quantum Purple (80%)</tspan></text>
+      <rect class="st16" x="820" y="760" width="30" height="30" rx="4" ry="4"/>
+      <text class="st5" transform="translate(860 780)"><tspan x="0" y="0">Digital Cyan (80%)</tspan></text>
+      <rect class="st14" x="820" y="800" width="30" height="30" rx="4" ry="4"/>
+      <text class="st5" transform="translate(860 820)"><tspan x="0" y="0">Dimensional Orange (80%)</tspan></text>
+      <rect class="st28" x="820" y="840" width="30" height="30" rx="4" ry="4"/>
+      <text class="st5" transform="translate(860 860)"><tspan x="0" y="0">White (80% for text/UI)</tspan></text>
+    </g>
+  </g>
+  <g>
+    <rect class="st6" x="100" y="980" width="1000" height="360" rx="12" ry="12"/>
+    <rect class="st0" x="100" y="980" width="1000" height="60" rx="12" ry="12"/>
+    <text class="st24" transform="translate(357.176 1020)"><tspan x="0" y="0">Documentation: Subtle-Intensity Application</tspan></text>
+    <g>
+      <rect class="st33" x="150" y="1070" width="280" height="240" rx="8" ry="8"/>
+      <rect class="st41" x="150" y="1070" width="280" height="30" rx="8" ry="8"/>
+      <text class="st8" transform="translate(170 1090)"><tspan x="0" y="0">Technical Documentation</tspan></text>
+      <path class="st1" d="M174,1115h152c2.209,0,4,1.791,4,4h0c0,2.209-1.791,4-4,4h-152c-2.209,0-4-1.791-4-4h0c0-2.209,1.791-4,4-4Z"/>
+      <path class="st28" d="M172,1135h236c1.105,0,2,.895,2,2h0c0,1.105-.895,2-2,2h-236c-1.105,0-2-.895-2-2h0c0-1.105.895-2,2-2Z"/>
+      <path class="st28" d="M172,1145h236c1.105,0,2,.895,2,2h0c0,1.105-.895,2-2,2h-236c-1.105,0-2-.895-2-2h0c0-1.105.895-2,2-2Z"/>
+      <path class="st28" d="M172,1155h196c1.105,0,2,.895,2,2h0c0,1.105-.895,2-2,2h-196c-1.105,0-2-.895-2-2h0c0-1.105.895-2,2-2Z"/>
+      <path class="st28" d="M172,1165h216c1.105,0,2,.895,2,2h0c0,1.105-.895,2-2,2h-216c-1.105,0-2-.895-2-2h0c0-1.105.895-2,2-2Z"/>
+      <path class="st19" d="M173,1185h114c1.657,0,3,1.343,3,3h0c0,1.657-1.343,3-3,3h-114c-1.657,0-3-1.343-3-3h0c0-1.657,1.343-3,3-3Z"/>
+      <path class="st26" d="M192,1205h196c1.105,0,2,.895,2,2h0c0,1.105-.895,2-2,2h-196c-1.105,0-2-.895-2-2h0c0-1.105.895-2,2-2Z"/>
+      <path class="st26" d="M192,1215h196c1.105,0,2,.895,2,2h0c0,1.105-.895,2-2,2h-196c-1.105,0-2-.895-2-2h0c0-1.105.895-2,2-2Z"/>
+      <path class="st26" d="M192,1225h176c1.105,0,2,.895,2,2h0c0,1.105-.895,2-2,2h-176c-1.105,0-2-.895-2-2h0c0-1.105.895-2,2-2Z"/>
+      <path class="st19" d="M173,1245h94c1.657,0,3,1.343,3,3h0c0,1.657-1.343,3-3,3h-94c-1.657,0-3-1.343-3-3h0c0-1.657,1.343-3,3-3Z"/>
+      <path class="st26" d="M192,1265h186c1.105,0,2,.895,2,2h0c0,1.105-.895,2-2,2h-186c-1.105,0-2-.895-2-2h0c0-1.105.895-2,2-2Z"/>
+      <path class="st26" d="M192,1275h196c1.105,0,2,.895,2,2h0c0,1.105-.895,2-2,2h-196c-1.105,0-2-.895-2-2h0c0-1.105.895-2,2-2Z"/>
+      <path class="st26" d="M192,1285h166c1.105,0,2,.895,2,2h0c0,1.105-.895,2-2,2h-166c-1.105,0-2-.895-2-2h0c0-1.105.895-2,2-2Z"/>
+      <rect class="st18" x="150" y="1070" width="4" height="4"/>
+      <rect class="st21" x="154" y="1070" width="4" height="4"/>
+      <rect class="st21" x="150" y="1074" width="4" height="4"/>
+      <rect class="st20" x="154" y="1074" width="4" height="4"/>
+    </g>
+    <g>
+      <text class="st25" transform="translate(480 1100)"><tspan x="0" y="0">Documentation Guidelines</tspan></text>
+      <text class="st9" transform="translate(480 1140)"><tspan x="0" y="0">• Low saturation values (60%)</tspan></text>
+      <text class="st9" transform="translate(480 1170)"><tspan x="0" y="0">• Minimalist color application for extended reading</tspan></text>
+      <text class="st9" transform="translate(480 1200)"><tspan x="0" y="0">• Increased white space for content breathing room</tspan></text>
+      <text class="st9" transform="translate(480 1230)"><tspan x="0" y="0">• Minimal quantum pixel elements for branding only</tspan></text>
+      <text class="st9" transform="translate(480 1260)"><tspan x="0" y="0">• Accent colors reserved for headings and links</tspan></text>
+      <text class="st9" transform="translate(480 1290)"><tspan x="0" y="0">• Focus on optimal reading comfort for long sessions</tspan></text>
+    </g>
+    <g>
+      <rect class="st1" x="820" y="1120" width="30" height="30" rx="4" ry="4"/>
+      <text class="st5" transform="translate(860 1140)"><tspan x="0" y="0">Quantum Purple (60%)</tspan></text>
+      <rect class="st19" x="820" y="1160" width="30" height="30" rx="4" ry="4"/>
+      <text class="st5" transform="translate(860 1180)"><tspan x="0" y="0">Digital Cyan (60%)</tspan></text>
+      <rect class="st11" x="820" y="1200" width="30" height="30" rx="4" ry="4"/>
+      <text class="st5" transform="translate(860 1220)"><tspan x="0" y="0">Midnight Navy (90%)</tspan></text>
+      <rect class="st27" x="820" y="1240" width="30" height="30" rx="4" ry="4"/>
+      <text class="st5" transform="translate(860 1260)"><tspan x="0" y="0">White (90% for body text)</tspan></text>
+    </g>
+  </g>
+  <g>
+    <rect class="st17" x="100" y="1380" width="1000" height="170" rx="12" ry="12"/>
+    <text class="st24" transform="translate(140 1420)"><tspan x="0" y="0">Accessibility Considerations</tspan></text>
+    <text class="st9" transform="translate(140 1460)"><tspan x="0" y="0">• All text maintains minimum 4.5:1 contrast ratio against backgrounds</tspan></text>
+    <text class="st9" transform="translate(140 1490)"><tspan x="0" y="0">• Interactive elements include non-color identifiers (icons, shapes, labels)</tspan></text>
+    <text class="st9" transform="translate(140 1520)"><tspan x="0" y="0">• Color pairs are tested for all forms of color vision deficiency</tspan></text>
+    <g>
+      <path class="st30" d="M765,1440h90c8.284,0,15,6.716,15,15h0c0,8.284-6.716,15-15,15h-90c-8.284,0-15-6.716-15-15h0c0-8.284,6.716-15,15-15Z"/>
+      <text class="st13" transform="translate(755.627 1460)"><tspan x="0" y="0">WCAG AA: PASS</tspan></text>
+      <path class="st30" d="M915,1440h90c8.284,0,15,6.716,15,15h0c0,8.284-6.716,15-15,15h-90c-8.284,0-15-6.716-15-15h0c0-8.284,6.716-15,15-15Z"/>
+      <text class="st5" transform="translate(900.91 1460)"><tspan x="0" y="0">WCAG AAA: PASS</tspan></text>
+    </g>
+  </g>
+  <g>
+    <g>
+      <rect class="st44" x="1060" y="1550" width="10" height="10"/>
+      <rect class="st35" x="1070" y="1550" width="10" height="10"/>
+      <rect class="st0" x="1060" y="1560" width="10" height="10"/>
+      <rect class="st34" x="1070" y="1560" width="10" height="10"/>
+      <rect class="st42" x="1080" y="1560" width="10" height="10"/>
+    </g>
+    <text class="st15" transform="translate(961.981 1585)"><tspan x="0" y="0">9Bit Studios</tspan></text>
+  </g>
+</svg>

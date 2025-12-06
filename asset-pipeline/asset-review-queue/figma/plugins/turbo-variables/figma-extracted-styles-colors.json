@@ -1,0 +1,448 @@
+{
+  "colors": [
+    {
+      "name": "vector-fill",
+      "value": "#13141CFF",
+      "category": "extracted",
+      "source": "Vector",
+      "usage": 2
+    },
+    {
+      "name": "quantum-heritage-green-showcase-fill",
+      "value": "#FFFFFFFF",
+      "category": "extracted",
+      "source": "Quantum Heritage Green Showcase",
+      "usage": 57
+    },
+    {
+      "name": "vector-fill",
+      "value": "#2C5F2D26",
+      "category": "heritage",
+      "source": "Vector",
+      "usage": 1
+    },
+    {
+      "name": "vector-fill",
+      "value": "#2C5F2D80",
+      "category": "heritage",
+      "source": "Vector",
+      "usage": 3
+    },
+    {
+      "name": "vector-fill",
+      "value": "#2C5F2DD9",
+      "category": "heritage",
+      "source": "Vector",
+      "usage": 1
+    },
+    {
+      "name": "vector-stroke",
+      "value": "#2C5F2D4D",
+      "category": "heritage",
+      "source": "Vector",
+      "usage": 2
+    },
+    {
+      "name": "vector-stroke",
+      "value": "#2C5F2DB2",
+      "category": "heritage",
+      "source": "Vector",
+      "usage": 2
+    },
+    {
+      "name": "vector-fill",
+      "value": "#131A36FF",
+      "category": "extracted",
+      "source": "Vector",
+      "usage": 6
+    },
+    {
+      "name": "vector-stroke",
+      "value": "#2C5F2DFF",
+      "category": "heritage",
+      "source": "Vector",
+      "usage": 19
+    },
+    {
+      "name": "vector-fill",
+      "value": "#2C5F2D1A",
+      "category": "heritage",
+      "source": "Vector",
+      "usage": 1
+    },
+    {
+      "name": "normal-state-fill",
+      "value": "#3D8B40FF",
+      "category": "accent",
+      "source": "Normal State",
+      "usage": 7
+    },
+    {
+      "name": "vector-fill",
+      "value": "#1B3D1AFF",
+      "category": "heritage",
+      "source": "Vector",
+      "usage": 1
+    },
+    {
+      "name": "vector-fill",
+      "value": "#3DFF74FF",
+      "category": "accent",
+      "source": "Vector",
+      "usage": 2
+    },
+    {
+      "name": "quantum-spatial-color-system-fill",
+      "value": "#FFFFFFF5",
+      "category": "extracted",
+      "source": "Quantum-Spatial Color System",
+      "usage": 2
+    },
+    {
+      "name": "primary-foundation-colors-fill",
+      "value": "#999999FF",
+      "category": "extracted",
+      "source": "Primary Foundation Colors",
+      "usage": 41
+    },
+    {
+      "name": "vector-fill",
+      "value": "#7100AA0F",
+      "category": "extracted",
+      "source": "Vector",
+      "usage": 1
+    },
+    {
+      "name": "a0a0f-fill",
+      "value": "#0B4FD7FF",
+      "category": "extracted",
+      "source": "#$A0A0F",
+      "usage": 30
+    },
+    {
+      "name": "vector-fill",
+      "value": "#AA00AA18",
+      "category": "extracted",
+      "source": "Vector",
+      "usage": 1
+    },
+    {
+      "name": "vector-fill",
+      "value": "#160918FF",
+      "category": "extracted",
+      "source": "Vector",
+      "usage": 1
+    },
+    {
+      "name": "vector-fill",
+      "value": "#0A0621FF",
+      "category": "extracted",
+      "source": "Vector",
+      "usage": 1
+    },
+    {
+      "name": "vector-fill",
+      "value": "#150621FF",
+      "category": "extracted",
+      "source": "Vector",
+      "usage": 1
+    },
+    {
+      "name": "vector-fill",
+      "value": "#1E1F5CFF",
+      "category": "extracted",
+      "source": "Vector",
+      "usage": 2
+    },
+    {
+      "name": "vector-fill",
+      "value": "#480F92FF",
+      "category": "extracted",
+      "source": "Vector",
+      "usage": 1
+    },
+    {
+      "name": "vector-fill",
+      "value": "#0D0D15FF",
+      "category": "extracted",
+      "source": "Vector",
+      "usage": 1
+    },
+    {
+      "name": "vector-fill",
+      "value": "#110413FF",
+      "category": "extracted",
+      "source": "Vector",
+      "usage": 1
+    },
+    {
+      "name": "vector-fill",
+      "value": "#0B010DFF",
+      "category": "extracted",
+      "source": "Vector",
+      "usage": 1
+    },
+    {
+      "name": "vector-fill",
+      "value": "#0A0A0FFF",
+      "category": "extracted",
+      "source": "Vector",
+      "usage": 1
+    },
+    {
+      "name": "vector-fill",
+      "value": "#000000FF",
+      "category": "foundation",
+      "source": "Vector",
+      "usage": 2
+    },
+    {
+      "name": "vector-fill",
+      "value": "#512CF9FF",
+      "category": "extracted",
+      "source": "Vector",
+      "usage": 1
+    },
+    {
+      "name": "vector-fill",
+      "value": "#3B39ECFF",
+      "category": "extracted",
+      "source": "Vector",
+      "usage": 1
+    },
+    {
+      "name": "vector-fill",
+      "value": "#6366F1FF",
+      "category": "accent",
+      "source": "Vector",
+      "usage": 1
+    },
+    {
+      "name": "6366f1-fill",
+      "value": "#007AFFFF",
+      "category": "extracted",
+      "source": "#6366F1",
+      "usage": 7
+    },
+    {
+      "name": "vector-fill",
+      "value": "#EC4899FF",
+      "category": "accent",
+      "source": "Vector",
+      "usage": 1
+    },
+    {
+      "name": "vector-fill",
+      "value": "#FF2D92FF",
+      "category": "accent",
+      "source": "Vector",
+      "usage": 1
+    },
+    {
+      "name": "vector-fill",
+      "value": "#D0196BFF",
+      "category": "extracted",
+      "source": "Vector",
+      "usage": 1
+    },
+    {
+      "name": "vector-fill",
+      "value": "#FF375FFF",
+      "category": "accent",
+      "source": "Vector",
+      "usage": 1
+    },
+    {
+      "name": "vector-fill",
+      "value": "#FF66E3FF",
+      "category": "accent",
+      "source": "Vector",
+      "usage": 1
+    },
+    {
+      "name": "vector-fill",
+      "value": "#613FE7FF",
+      "category": "extracted",
+      "source": "Vector",
+      "usage": 1
+    },
+    {
+      "name": "vector-fill",
+      "value": "#6E00FFFF",
+      "category": "extracted",
+      "source": "Vector",
+      "usage": 1
+    },
+    {
+      "name": "vector-fill",
+      "value": "#7B00FFFF",
+      "category": "extracted",
+      "source": "Vector",
+      "usage": 2
+    },
+    {
+      "name": "vector-fill",
+      "value": "#BF5AF2FF",
+      "category": "accent",
+      "source": "Vector",
+      "usage": 1
+    },
+    {
+      "name": "vector-stroke",
+      "value": "#36EAE84D",
+      "category": "accent",
+      "source": "Vector",
+      "usage": 1
+    },
+    {
+      "name": "vector-stroke",
+      "value": "#5AC8FA4D",
+      "category": "accent",
+      "source": "Vector",
+      "usage": 2
+    },
+    {
+      "name": "vector-fill",
+      "value": "#0D0E29FF",
+      "category": "extracted",
+      "source": "Vector",
+      "usage": 1
+    },
+    {
+      "name": "material-state-variation-fill",
+      "value": "#8C8C8CFF",
+      "category": "extracted",
+      "source": "Material State Variation",
+      "usage": 3
+    },
+    {
+      "name": "vector-fill",
+      "value": "#1A1B26FF",
+      "category": "extracted",
+      "source": "Vector",
+      "usage": 1
+    },
+    {
+      "name": "vector-fill",
+      "value": "#33313AFF",
+      "category": "foundation",
+      "source": "Vector",
+      "usage": 1
+    },
+    {
+      "name": "vector-fill",
+      "value": "#3F3F4BFF",
+      "category": "extracted",
+      "source": "Vector",
+      "usage": 1
+    },
+    {
+      "name": "vector-fill",
+      "value": "#29B6F6FF",
+      "category": "accent",
+      "source": "Vector",
+      "usage": 1
+    },
+    {
+      "name": "vector-fill",
+      "value": "#3CD3FEFF",
+      "category": "accent",
+      "source": "Vector",
+      "usage": 1
+    },
+    {
+      "name": "vector-fill",
+      "value": "#FF4F52FF",
+      "category": "accent",
+      "source": "Vector",
+      "usage": 1
+    },
+    {
+      "name": "vector-fill",
+      "value": "#FF6B6BFF",
+      "category": "accent",
+      "source": "Vector",
+      "usage": 1
+    },
+    {
+      "name": "ultra-thin-fill",
+      "value": "#0000001A",
+      "category": "foundation",
+      "source": "Ultra Thin",
+      "usage": 1
+    },
+    {
+      "name": "thin-fill",
+      "value": "#00000033",
+      "category": "foundation",
+      "source": "Thin",
+      "usage": 1
+    },
+    {
+      "name": "medium-fill",
+      "value": "#0000004A",
+      "category": "foundation",
+      "source": "Medium",
+      "usage": 1
+    },
+    {
+      "name": "thick-fill",
+      "value": "#00000066",
+      "category": "foundation",
+      "source": "Thick",
+      "usage": 1
+    },
+    {
+      "name": "ultrathick-fill",
+      "value": "#00000080",
+      "category": "foundation",
+      "source": "UltraThick",
+      "usage": 1
+    },
+    {
+      "name": "ultrathin-fill",
+      "value": "#7C7C7CFF",
+      "category": "extracted",
+      "source": "UltraThin",
+      "usage": 5
+    },
+    {
+      "name": "color-fill",
+      "value": "#808080FF",
+      "category": "extracted",
+      "source": "Color",
+      "usage": 1
+    },
+    {
+      "name": "color-fill",
+      "value": "#333333FF",
+      "category": "extracted",
+      "source": "Color",
+      "usage": 1
+    },
+    {
+      "name": "color-fill",
+      "value": "#4F0F9EFF",
+      "category": "extracted",
+      "source": "Color",
+      "usage": 1
+    },
+    {
+      "name": "color-fill",
+      "value": "#0F51CDFF",
+      "category": "extracted",
+      "source": "Color",
+      "usage": 1
+    },
+    {
+      "name": "color-fill",
+      "value": "#19B516FF",
+      "category": "accent",
+      "source": "Color",
+      "usage": 1
+    }
+  ],
+  "timestamp": "2025-12-03T06:22:04.200Z",
+  "figmaFileKey": "unknown",
+  "extractedFrom": "Color_usage_guidelines_Heritage_Green, color-system 1, Materials - Dark, _Colors/Dark"
+}

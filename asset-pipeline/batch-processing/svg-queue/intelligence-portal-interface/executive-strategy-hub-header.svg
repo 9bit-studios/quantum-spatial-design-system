@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1804.069" height="676.526" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1804.069 676.526">
+  <defs>
+    <linearGradient id="linear-gradient" x1="199.75" y1="-198.47" x2="202.025" y2="-200.745" gradientTransform="translate(-159800 -59540.9) scale(800 -300)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0a0621"/>
+      <stop offset=".5" stop-color="#131a36"/>
+      <stop offset="1" stop-color="#1e1f5c"/>
+    </linearGradient>
+    <filter id="mountainBlur" x="0" y="0" width="100%" height="100%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1"/>
+    </filter>
+    <linearGradient id="linear-gradient-2" x1="200.982" y1="-200.536" x2="201.74" y2="-201.294" gradientTransform="translate(-71580 -35823.398) scale(360 -180)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#331f4a"/>
+      <stop offset=".5" stop-color="#613fe7" stop-opacity=".8"/>
+      <stop offset="1" stop-color="#6a3093"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-3" x1="201.078" y1="-201.114" x2="201.988" y2="-202.024" gradientTransform="translate(-59550 -29894.023) scale(300 -150)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#331f4a"/>
+      <stop offset=".5" stop-color="#5ac8fa" stop-opacity=".6"/>
+      <stop offset="1" stop-color="#126d71"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-4" x1="201.223" y1="-201.98" x2="202.361" y2="-203.118" gradientTransform="translate(-47520 -23964.648) scale(240 -120)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#613fe7" stop-opacity=".7"/>
+      <stop offset=".7" stop-color="#ff2d55" stop-opacity=".5"/>
+      <stop offset="1" stop-color="#bf4080" stop-opacity=".8"/>
+    </linearGradient>
+    <filter id="glassEffect" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"/>
+      <feColorMatrix in="blur" result="glow" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7"/>
+      <feComposite in="SourceGraphic" in2="glow" operator="atop"/>
+    </filter>
+    <linearGradient id="linear-gradient-5" x1="213.957" y1="-234.421" x2="216.232" y2="-234.421" gradientTransform="translate(-2668 -3409.479) scale(16 -16)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#613fe7" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#613fe7" stop-opacity=".8"/>
+      <stop offset="1" stop-color="#613fe7" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-6" x1="214.863" y1="-227.066" x2="217.138" y2="-227.066" gradientTransform="translate(-3410 -4200.063) scale(20 -20)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#613fe7" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#613fe7" stop-opacity=".8"/>
+      <stop offset="1" stop-color="#613fe7" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-7" x1="223.52" y1="-234.421" x2="225.795" y2="-234.421" gradientTransform="translate(-2548 -3409.479) scale(16 -16)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#613fe7" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#613fe7" stop-opacity=".8"/>
+      <stop offset="1" stop-color="#613fe7" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <g isolation="isolate">
+    <g id="Layer_1" data-name="Layer 1">
+      <rect width="1820.039" height="682.515" fill="url(#linear-gradient)"/>
+      <g opacity=".15">
+        <path d="M0,113.752h1820.039" stroke="#5ac8fa" stroke-width="1.138"/>
+        <path d="M0,227.505h1820.039" stroke="#5ac8fa" stroke-width="1.138"/>
+        <path d="M0,341.257h1820.039" stroke="#5ac8fa" stroke-width="1.138"/>
+        <path d="M0,455.01h1820.039" stroke="#5ac8fa" stroke-width="1.138"/>
+        <path d="M0,568.762h1820.039" stroke="#5ac8fa" stroke-width="1.138"/>
+        <path d="M227.505,0v682.515" stroke="#5ac8fa" stroke-width="1.138"/>
+        <path d="M455.01,0v682.515" stroke="#5ac8fa" stroke-width="1.138"/>
+        <path d="M682.515,0v682.515" stroke="#5ac8fa" stroke-width="1.138"/>
+        <path d="M910.019,0v682.515" stroke="#5ac8fa" stroke-width="1.138"/>
+        <path d="M1137.524,0v682.515" stroke="#5ac8fa" stroke-width="1.138"/>
+        <path d="M1365.029,0v682.515" stroke="#5ac8fa" stroke-width="1.138"/>
+        <path d="M1592.534,0v682.515" stroke="#5ac8fa" stroke-width="1.138"/>
+      </g>
+      <rect width="1820.039" height="682.515" fill="#0a0621" mix-blend-mode="multiply" opacity=".8"/>
+      <g filter="url(#mountainBlur)" opacity=".3">
+        <path d="M0,568.762l227.505-113.752,227.505,45.501,227.505-159.253,113.752,45.501,113.752-159.253,113.752,68.251,113.752-91.002,227.505,204.754,227.505-91.002,227.505,136.503v227.505H0v-113.752Z" fill="#331f4a"/>
+        <path d="M682.515,386.758l227.505-113.752,227.505,68.251,227.505-113.752,227.505,182.004,227.505,91.002v182.004H682.515v-295.756Z" fill="#1e1f5c" isolation="isolate" opacity=".5"/>
+      </g>
+      <g>
+        <ellipse cx="910.019" cy="341.257" rx="409.509" ry="204.754" fill="none" isolation="isolate" opacity=".9" stroke="url(#linear-gradient-2)" stroke-width="2.275"/>
+        <ellipse cx="910.019" cy="341.257" rx="341.257" ry="170.629" fill="none" isolation="isolate" opacity=".8" stroke="url(#linear-gradient-3)" stroke-width="2.275"/>
+        <ellipse cx="910.019" cy="341.257" rx="273.006" ry="136.503" fill="none" isolation="isolate" opacity=".7" stroke="url(#linear-gradient-4)" stroke-width="2.275"/>
+        <g filter="url(#glassEffect)" isolation="isolate" opacity=".7">
+          <ellipse cx="910.019" cy="341.257" rx="227.505" ry="113.752" fill="#0d0d15"/>
+        </g>
+        <g opacity=".9">
+          <path d="M728.016,318.507c91.002,45.501,182.004-22.75,273.006,22.75,91.002,45.501,182.004,0,273.006-68.251" fill="none" stroke="#5ac8fa" stroke-width="2.275"/>
+          <path d="M728.016,364.008c91.002-45.501,182.004,22.75,273.006-22.75,91.002-45.501,182.004,0,273.006,68.251" fill="none" stroke="#613fe7" stroke-width="2.275"/>
+          <path d="M728.016,341.257h546.012" fill="none" stroke="#29B6F6" stroke-width="2.275"/>
+        </g>
+        <g>
+          <circle cx="773.516" cy="341.257" r="11.375" fill="#126d71"/>
+          <circle cx="910.019" cy="341.257" r="13.65" fill="#126d71"/>
+          <circle cx="1046.522" cy="341.257" r="11.375" fill="#126d71"/>
+          <circle cx="819.017" cy="307.132" r="9.1" fill="#126d71"/>
+          <circle cx="1001.021" cy="375.383" r="9.1" fill="#126d71"/>
+        </g>
+        <g>
+          <circle cx="773.516" cy="341.257" r="18.2" fill="url(#linear-gradient-5)" isolation="isolate" opacity=".6"/>
+          <circle cx="910.019" cy="341.257" r="22.75" fill="url(#linear-gradient-6)" isolation="isolate" opacity=".8"/>
+          <circle cx="1046.522" cy="341.257" r="18.2" fill="url(#linear-gradient-7)" isolation="isolate" opacity=".6"/>
+        </g>
+      </g>
+      <g>
+        <rect x="227.505" y="113.752" width="18.2" height="18.2" fill="#613fe7" isolation="isolate" opacity=".7"/>
+        <rect x="568.762" y="273.006" width="22.75" height="22.75" fill="#ff2d55" isolation="isolate" opacity=".5"/>
+        <rect x="1251.277" y="182.004" width="27.301" height="27.301" fill="#5ac8fa" isolation="isolate" opacity=".6"/>
+        <rect x="1478.782" y="455.01" width="18.2" height="18.2" fill="#bf4080" isolation="isolate" opacity=".7"/>
+        <rect x="455.01" y="568.762" width="22.75" height="22.75" fill="#29B6F6" isolation="isolate" opacity=".5"/>
+        <rect x="910.019" y="113.752" width="22.75" height="22.75" fill="#613fe7" isolation="isolate" opacity=".8"/>
+        <rect x="1592.534" y="341.257" width="27.301" height="27.301" fill="#5ac8fa" isolation="isolate" opacity=".7"/>
+        <rect x="341.257" y="409.509" width="18.2" height="18.2" fill="#ff2d55" isolation="isolate" opacity=".6"/>
+      </g>
+    </g>
+  </g>
+</svg>

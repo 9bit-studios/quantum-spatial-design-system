@@ -1,0 +1,16 @@
+{
+  "environments": {
+    "production": {
+      "name": "quantum-spatial-design-system",
+      "account_id": "7082db633f378f09d2706f247a1a721d",
+      "zone_id": "8769152ff63dcc8733ab1d18e33dd92c",
+      "routes": ["design-system.9bitstudios.io/*"]
+    },
+    "staging": {
+      "name": "quantum-spatial-design-system-staging",
+      "account_id": "7082db633f378f09d2706f247a1a721d",
+      "zone_id": "8769152ff63dcc8733ab1d18e33dd92c",
+      "routes": ["design-system-staging.9bitstudios.io/*"]
+    }
+  }
+}

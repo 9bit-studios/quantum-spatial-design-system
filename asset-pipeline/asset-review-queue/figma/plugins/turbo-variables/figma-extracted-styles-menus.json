@@ -1,0 +1,392 @@
+{
+  "colors": [
+    {
+      "name": "segmented-controls-fill",
+      "value": "#16091899",
+      "category": "extracted",
+      "source": "Segmented Controls",
+      "usage": 11
+    },
+    {
+      "name": "switch-3d-stroke",
+      "value": "#9747FFFF",
+      "category": "accent",
+      "source": "Switch 3D",
+      "usage": 11
+    },
+    {
+      "name": "container-fill",
+      "value": "#160918FF",
+      "category": "extracted",
+      "source": "Container",
+      "usage": 138
+    },
+    {
+      "name": "middle-effect",
+      "value": "#00000040",
+      "category": "foundation",
+      "source": "Middle",
+      "usage": 4
+    },
+    {
+      "name": "monthly-fill",
+      "value": "#FFFFFFE5",
+      "category": "extracted",
+      "source": "Monthly",
+      "usage": 949
+    },
+    {
+      "name": "monthly-effect",
+      "value": "#FFFFFFFF",
+      "category": "extracted",
+      "source": "Monthly",
+      "usage": 165
+    },
+    {
+      "name": "yearly-fill",
+      "value": "#FFFFFF80",
+      "category": "extracted",
+      "source": "Yearly",
+      "usage": 168
+    },
+    {
+      "name": "glow-fill",
+      "value": "#7B00FFFF",
+      "category": "extracted",
+      "source": "Glow",
+      "usage": 16
+    },
+    {
+      "name": "glow-fill",
+      "value": "#0066FFFF",
+      "category": "extracted",
+      "source": "Glow",
+      "usage": 4
+    },
+    {
+      "name": "divider-fill",
+      "value": "#FFFFFF1A",
+      "category": "extracted",
+      "source": "Divider",
+      "usage": 121
+    },
+    {
+      "name": "button-toggle-effect",
+      "value": "#00000008",
+      "category": "foundation",
+      "source": "Button Toggle",
+      "usage": 80
+    },
+    {
+      "name": "button-toggle-effect",
+      "value": "#0000001A",
+      "category": "foundation",
+      "source": "Button Toggle",
+      "usage": 75
+    },
+    {
+      "name": "button-toggle-effect",
+      "value": "#0000000D",
+      "category": "foundation",
+      "source": "Button Toggle",
+      "usage": 58
+    },
+    {
+      "name": "breakpoint-dark-property-2-mobile-property-3-glass-fill",
+      "value": "#00000080",
+      "category": "foundation",
+      "source": "Breakpoint=Dark, Property 2=Mobile, Property 3=Glass",
+      "usage": 6
+    },
+    {
+      "name": "breakpoint-dark-property-2-mobile-property-3-glass-stroke",
+      "value": "#FFFFFF12",
+      "category": "extracted",
+      "source": "Breakpoint=Dark, Property 2=Mobile, Property 3=Glass",
+      "usage": 3
+    },
+    {
+      "name": "header-effect",
+      "value": "#00000005",
+      "category": "foundation",
+      "source": "Header",
+      "usage": 1
+    },
+    {
+      "name": "button-stroke",
+      "value": "#FFFFFF33",
+      "category": "extracted",
+      "source": "Button",
+      "usage": 46
+    },
+    {
+      "name": "vector-fill",
+      "value": "#B5CDFBFF",
+      "category": "extracted",
+      "source": "Vector",
+      "usage": 80
+    },
+    {
+      "name": "vector-fill",
+      "value": "#3913B8FF",
+      "category": "extracted",
+      "source": "Vector",
+      "usage": 43
+    },
+    {
+      "name": "vector-stroke",
+      "value": "#000000FF",
+      "category": "foundation",
+      "source": "Vector",
+      "usage": 41
+    },
+    {
+      "name": "vector-fill",
+      "value": "#C9F5FFFF",
+      "category": "extracted",
+      "source": "Vector",
+      "usage": 1
+    },
+    {
+      "name": "ellipse-182-fill",
+      "value": "#FFD6D6FF",
+      "category": "extracted",
+      "source": "Ellipse 182",
+      "usage": 1
+    },
+    {
+      "name": "ellipse-183-fill",
+      "value": "#F0244DFF",
+      "category": "extracted",
+      "source": "Ellipse 183",
+      "usage": 1
+    },
+    {
+      "name": "subtract-fill",
+      "value": "#D5C8FFFF",
+      "category": "extracted",
+      "source": "Subtract",
+      "usage": 1
+    },
+    {
+      "name": "union-fill",
+      "value": "#4F25DDFF",
+      "category": "extracted",
+      "source": "Union",
+      "usage": 1
+    },
+    {
+      "name": "subtract-fill",
+      "value": "#D1E7FFFF",
+      "category": "extracted",
+      "source": "Subtract",
+      "usage": 1
+    },
+    {
+      "name": "close-fill",
+      "value": "#FF3B30FF",
+      "category": "accent",
+      "source": "Close",
+      "usage": 1
+    },
+    {
+      "name": "minimize-fill",
+      "value": "#34C759FF",
+      "category": "accent",
+      "source": "Minimize",
+      "usage": 3
+    },
+    {
+      "name": "overview-tab-fill",
+      "value": "#16090E66",
+      "category": "extracted",
+      "source": "Overview Tab",
+      "usage": 7
+    },
+    {
+      "name": "ellipse-1-fill",
+      "value": "#ED5E56FF",
+      "category": "accent",
+      "source": "Ellipse 1",
+      "usage": 1
+    },
+    {
+      "name": "ellipse-2-fill",
+      "value": "#FFB854FF",
+      "category": "accent",
+      "source": "Ellipse 2",
+      "usage": 1
+    },
+    {
+      "name": "segmented-control-stroke",
+      "value": "#8671EC33",
+      "category": "accent",
+      "source": "Segmented Control",
+      "usage": 1
+    },
+    {
+      "name": "segmented-control-effect",
+      "value": "#0000004C",
+      "category": "foundation",
+      "source": "Segmented Control",
+      "usage": 1
+    },
+    {
+      "name": "vector-3-stroke",
+      "value": "#9B9EAAFF",
+      "category": "extracted",
+      "source": "Vector 3",
+      "usage": 6
+    },
+    {
+      "name": "rectangle-7-fill",
+      "value": "#D9D9D9FF",
+      "category": "extracted",
+      "source": "Rectangle 7",
+      "usage": 2
+    },
+    {
+      "name": "vector-stroke",
+      "value": "#FFFFFFF2",
+      "category": "extracted",
+      "source": "Vector",
+      "usage": 4
+    },
+    {
+      "name": "button-circle-fill",
+      "value": "#0B010DCC",
+      "category": "extracted",
+      "source": "Button Circle",
+      "usage": 8
+    },
+    {
+      "name": "button-circle-fill",
+      "value": "#16090EFF",
+      "category": "extracted",
+      "source": "Button Circle",
+      "usage": 2
+    },
+    {
+      "name": "searchfield-effect",
+      "value": "#00000033",
+      "category": "foundation",
+      "source": "SearchField",
+      "usage": 4
+    },
+    {
+      "name": "icon-magnifyingglass-fill",
+      "value": "#FFFFFF99",
+      "category": "extracted",
+      "source": "Icon / magnifyingglass",
+      "usage": 3
+    },
+    {
+      "name": "cancel-fill",
+      "value": "#007AFFFF",
+      "category": "extracted",
+      "source": "Cancel",
+      "usage": 1
+    },
+    {
+      "name": "knob-effect",
+      "value": "#8E9BAE33",
+      "category": "extracted",
+      "source": "Knob",
+      "usage": 4
+    },
+    {
+      "name": "off-effect",
+      "value": "#0000004D",
+      "category": "foundation",
+      "source": "Off",
+      "usage": 7
+    },
+    {
+      "name": "color-fill",
+      "value": "#979797FF",
+      "category": "extracted",
+      "source": "Color",
+      "usage": 1
+    },
+    {
+      "name": "color-fill",
+      "value": "#2670E9FF",
+      "category": "accent",
+      "source": "Color",
+      "usage": 4
+    },
+    {
+      "name": "color-fill",
+      "value": "#F46772FF",
+      "category": "accent",
+      "source": "Color",
+      "usage": 1
+    },
+    {
+      "name": "button-tooltip-fill",
+      "value": "#0B010DFF",
+      "category": "extracted",
+      "source": "Button Tooltip",
+      "usage": 4
+    },
+    {
+      "name": "ellipse-15-fill",
+      "value": "#4C89FFFF",
+      "category": "accent",
+      "source": "Ellipse 15",
+      "usage": 2
+    },
+    {
+      "name": "counter-fill",
+      "value": "#FFFFFF3B",
+      "category": "extracted",
+      "source": "Counter",
+      "usage": 1
+    },
+    {
+      "name": "counter-fill",
+      "value": "#545454FF",
+      "category": "extracted",
+      "source": "Counter",
+      "usage": 1
+    },
+    {
+      "name": "rectangle-107-fill",
+      "value": "#5AC8FAFF",
+      "category": "accent",
+      "source": "Rectangle 107",
+      "usage": 12
+    },
+    {
+      "name": "sidebar-effect",
+      "value": "#FFFFFFCC",
+      "category": "extracted",
+      "source": "Sidebar",
+      "usage": 1
+    },
+    {
+      "name": "list-fill",
+      "value": "#FFFFFF0D",
+      "category": "extracted",
+      "source": "List",
+      "usage": 2
+    },
+    {
+      "name": "content-fill",
+      "value": "#00000029",
+      "category": "foundation",
+      "source": "Content",
+      "usage": 2
+    },
+    {
+      "name": "home-fill",
+      "value": "#EDF0F7FF",
+      "category": "extracted",
+      "source": "Home",
+      "usage": 9
+    }
+  ],
+  "timestamp": "2025-12-03T06:31:55.262Z",
+  "figmaFileKey": "unknown",
+  "extractedFrom": "Segmented Controls, Navigation, Inputs, Menu / Filter, Guide, Menu / Filter, Stepper | Slider | Controls, Vertical Menu"
+}

@@ -1,0 +1,10 @@
+name = "simple-quantum-design-system"
+main = "src/simple-worker.js"
+compatibility_date = "2023-05-18"
+account_id = "7082db633f378f09d2706f247a1a721d"
+
+# Just use workers.dev subdomain for now to test basic functionality
+workers_dev = true
+
+[vars]
+ENVIRONMENT = "staging"

@@ -1,0 +1,224 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600">
+  <!-- Background -->
+  <rect width="900" height="600" fill="#0A0621" />
+  
+  <!-- Dimensional grid with perspective effect -->
+  <g opacity="0.12">
+    <!-- Horizontal grid lines with distortion to suggest spatial warping -->
+    <path d="M100,550 Q450,530 800,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M80,500 Q450,490 820,500" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M60,450 Q450,430 840,450" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M40,400 Q450,390 860,400" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M30,350 Q450,330 870,350" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M20,300 Q450,290 880,300" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M15,250 Q450,220 885,250" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M10,200 Q450,190 890,200" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M5,150 Q450,130 895,150" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M0,100 Q450,70 900,100" stroke="#5AC8FA" stroke-width="1" />
+    
+    <!-- Vertical grid lines with distortion -->
+    <path d="M150,100 Q175,300 150,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M250,100 Q285,300 250,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M350,100 Q370,300 350,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M450,100 Q470,300 450,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M550,100 Q530,300 550,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M650,100 Q615,300 650,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M750,100 Q725,300 750,550" stroke="#5AC8FA" stroke-width="1" />
+  </g>
+  
+  <!-- Title -->
+  <text x="450" y="50" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" font-size="28" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Quantum State 4D Hypercube</text>
+  <text x="450" y="80" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" font-size="18" fill="#5AC8FA" text-anchor="middle">Advanced Spatial Manifestation</text>
+  
+  <!-- Main 4D Hypercube in center -->
+  <g transform="translate(450, 300)">
+    <!-- Hypercube outer "frame" - the 3D projection of 4D shape -->
+    <!-- Outer cube -->
+    <g>
+      <!-- Outer cube vertices (front face) -->
+      <circle cx="-100" cy="-100" r="5" fill="#5AC8FA" opacity="0.8" />
+      <circle cx="100" cy="-100" r="5" fill="#5AC8FA" opacity="0.8" />
+      <circle cx="100" cy="100" r="5" fill="#5AC8FA" opacity="0.8" />
+      <circle cx="-100" cy="100" r="5" fill="#5AC8FA" opacity="0.8" />
+      
+      <!-- Outer cube edges (front face) -->
+      <line x1="-100" y1="-100" x2="100" y2="-100" stroke="#5AC8FA" stroke-width="2" opacity="0.6">
+        <animate attributeName="opacity" values="0.6;0.9;0.6" dur="4s" repeatCount="indefinite" />
+      </line>
+      <line x1="100" y1="-100" x2="100" y2="100" stroke="#5AC8FA" stroke-width="2" opacity="0.6">
+        <animate attributeName="opacity" values="0.6;0.9;0.6" dur="4.5s" repeatCount="indefinite" />
+      </line>
+      <line x1="100" y1="100" x2="-100" y2="100" stroke="#5AC8FA" stroke-width="2" opacity="0.6">
+        <animate attributeName="opacity" values="0.6;0.9;0.6" dur="5s" repeatCount="indefinite" />
+      </line>
+      <line x1="-100" y1="100" x2="-100" y2="-100" stroke="#5AC8FA" stroke-width="2" opacity="0.6">
+        <animate attributeName="opacity" values="0.6;0.9;0.6" dur="5.5s" repeatCount="indefinite" />
+      </line>
+    </g>
+    
+    <!-- Inner cube (3D shadow of the 4D hypercube) -->
+    <g>
+      <!-- Inner cube vertices (front face) -->
+      <circle cx="-60" cy="-60" r="5" fill="#BF4080" opacity="0.8" />
+      <circle cx="60" cy="-60" r="5" fill="#BF4080" opacity="0.8" />
+      <circle cx="60" cy="60" r="5" fill="#BF4080" opacity="0.8" />
+      <circle cx="-60" cy="60" r="5" fill="#BF4080" opacity="0.8" />
+      
+      <!-- Inner cube edges (front face) -->
+      <line x1="-60" y1="-60" x2="60" y2="-60" stroke="#BF4080" stroke-width="2" opacity="0.7">
+        <animate attributeName="opacity" values="0.7;1;0.7" dur="3s" repeatCount="indefinite" />
+      </line>
+      <line x1="60" y1="-60" x2="60" y2="60" stroke="#BF4080" stroke-width="2" opacity="0.7">
+        <animate attributeName="opacity" values="0.7;1;0.7" dur="3.2s" repeatCount="indefinite" />
+      </line>
+      <line x1="60" y1="60" x2="-60" y2="60" stroke="#BF4080" stroke-width="2" opacity="0.7">
+        <animate attributeName="opacity" values="0.7;1;0.7" dur="3.4s" repeatCount="indefinite" />
+      </line>
+      <line x1="-60" y1="60" x2="-60" y2="-60" stroke="#BF4080" stroke-width="2" opacity="0.7">
+        <animate attributeName="opacity" values="0.7;1;0.7" dur="3.6s" repeatCount="indefinite" />
+      </line>
+    </g>
+    
+    <!-- Connecting lines between cubes (representing 4D connections) -->
+    <line x1="-100" y1="-100" x2="-60" y2="-60" stroke="#6A3093" stroke-width="2" opacity="0.7">
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="4s" repeatCount="indefinite" />
+    </line>
+    <line x1="100" y1="-100" x2="60" y2="-60" stroke="#6A3093" stroke-width="2" opacity="0.7">
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="4.2s" repeatCount="indefinite" />
+    </line>
+    <line x1="100" y1="100" x2="60" y2="60" stroke="#6A3093" stroke-width="2" opacity="0.7">
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="4.4s" repeatCount="indefinite" />
+    </line>
+    <line x1="-100" y1="100" x2="-60" y2="60" stroke="#6A3093" stroke-width="2" opacity="0.7">
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="4.6s" repeatCount="indefinite" />
+    </line>
+    
+    <!-- Additional 4D projections (tesseract edges that appear during rotation) -->
+    <g>
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="30s" repeatCount="indefinite" />
+      
+      <!-- Cross-dimensional edges that only appear in 4D -->
+      <path d="M-80,-80 C-40,-120 40,-120 80,-80" stroke="#5AC8FA" stroke-width="2" fill="none" opacity="0.5">
+        <animate attributeName="opacity" values="0.5;0.8;0.5" dur="10s" repeatCount="indefinite" />
+      </path>
+      <path d="M-80,80 C-40,120 40,120 80,80" stroke="#5AC8FA" stroke-width="2" fill="none" opacity="0.5">
+        <animate attributeName="opacity" values="0.5;0.8;0.5" dur="11s" repeatCount="indefinite" />
+      </path>
+      <path d="M-80,-80 C-120,-40 -120,40 -80,80" stroke="#5AC8FA" stroke-width="2" fill="none" opacity="0.5">
+        <animate attributeName="opacity" values="0.5;0.8;0.5" dur="12s" repeatCount="indefinite" />
+      </path>
+      <path d="M80,-80 C120,-40 120,40 80,80" stroke="#5AC8FA" stroke-width="2" fill="none" opacity="0.5">
+        <animate attributeName="opacity" values="0.5;0.8;0.5" dur="13s" repeatCount="indefinite" />
+      </path>
+    </g>
+    
+    <!-- The 4D core - represents the fourth dimensional aspect -->
+    <g>
+      <!-- 4D energy core -->
+      <circle cx="0" cy="0" r="30" fill="url(#core-gradient)" opacity="0.8">
+        <animate attributeName="r" values="30;35;30" dur="4s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.8;1;0.8" dur="4s" repeatCount="indefinite" />
+      </circle>
+      
+      <!-- 4D energy waves -->
+      <circle cx="0" cy="0" r="50" fill="none" stroke="#5AC8FA" stroke-width="1" opacity="0.5">
+        <animate attributeName="r" values="50;80;50" dur="8s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.5;0.1;0.5" dur="8s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="0" cy="0" r="70" fill="none" stroke="#BF4080" stroke-width="1" opacity="0.3">
+        <animate attributeName="r" values="70;100;70" dur="12s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.3;0.1;0.3" dur="12s" repeatCount="indefinite" />
+      </circle>
+    </g>
+    
+    <!-- Energy particles -->
+    <g>
+      <!-- Particles moving along 4D pathways -->
+      <circle cx="-80" cy="-80" r="4" fill="#FFFFFF" opacity="0.8">
+        <animate attributeName="cx" values="-80;-60;-80" dur="3s" repeatCount="indefinite" />
+        <animate attributeName="cy" values="-80;-60;-80" dur="3s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.8;0.2;0.8" dur="3s" repeatCount="indefinite" />
+      </circle>
+      
+      <circle cx="80" cy="-80" r="4" fill="#FFFFFF" opacity="0.8">
+        <animate attributeName="cx" values="80;60;80" dur="3.5s" repeatCount="indefinite" />
+        <animate attributeName="cy" values="-80;-60;-80" dur="3.5s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.8;0.2;0.8" dur="3.5s" repeatCount="indefinite" />
+      </circle>
+      
+      <circle cx="80" cy="80" r="4" fill="#FFFFFF" opacity="0.8">
+        <animate attributeName="cx" values="80;60;80" dur="4s" repeatCount="indefinite" />
+        <animate attributeName="cy" values="80;60;80" dur="4s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.8;0.2;0.8" dur="4s" repeatCount="indefinite" />
+      </circle>
+      
+      <circle cx="-80" cy="80" r="4" fill="#FFFFFF" opacity="0.8">
+        <animate attributeName="cx" values="-80;-60;-80" dur="4.5s" repeatCount="indefinite" />
+        <animate attributeName="cy" values="80;60;80" dur="4.5s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.8;0.2;0.8" dur="4.5s" repeatCount="indefinite" />
+      </circle>
+    </g>
+    
+    <!-- Dimensional distortion effects -->
+    <g opacity="0.3">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="20s" repeatCount="indefinite" />
+      <ellipse cx="0" cy="0" rx="120" ry="40" fill="none" stroke="#6A3093" stroke-width="1">
+        <animate attributeName="rx" values="120;110;120" dur="10s" repeatCount="indefinite" />
+        <animate attributeName="ry" values="40;50;40" dur="10s" repeatCount="indefinite" />
+      </ellipse>
+      <ellipse cx="0" cy="0" rx="40" ry="120" fill="none" stroke="#BF4080" stroke-width="1">
+        <animate attributeName="rx" values="40;50;40" dur="15s" repeatCount="indefinite" />
+        <animate attributeName="ry" values="120;110;120" dur="15s" repeatCount="indefinite" />
+      </ellipse>
+    </g>
+  </g>
+  
+  <!-- Spatial Explanation Elements -->
+  <g transform="translate(200, 180)">
+    <rect x="-150" y="-30" width="300" height="60" rx="10" fill="#131A36" opacity="0.8" stroke="#5AC8FA" stroke-width="1" />
+    <text x="0" y="-5" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">4D Tesseract Projection</text>
+    <text x="0" y="20" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#5AC8FA" text-anchor="middle">Inner and outer cubes represent 3D shadows of 4D object</text>
+    
+    <path d="M0,30 L0,80" stroke="#5AC8FA" stroke-width="1" stroke-dasharray="4,4" />
+  </g>
+  
+  <g transform="translate(700, 180)">
+    <rect x="-150" y="-30" width="300" height="60" rx="10" fill="#131A36" opacity="0.8" stroke="#BF4080" stroke-width="1" />
+    <text x="0" y="-5" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">Cross-Dimensional Energy Transfer</text>
+    <text x="0" y="20" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#BF4080" text-anchor="middle">Energy pathways that exist only in higher dimensions</text>
+    
+    <path d="M0,30 L-50,100" stroke="#BF4080" stroke-width="1" stroke-dasharray="4,4" />
+  </g>
+  
+  <g transform="translate(200, 420)">
+    <rect x="-150" y="-30" width="300" height="60" rx="10" fill="#131A36" opacity="0.8" stroke="#6A3093" stroke-width="1" />
+    <text x="0" y="-5" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">Quantum State Superposition</text>
+    <text x="0" y="20" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#6A3093" text-anchor="middle">Object exists in multiple dimensional states simultaneously</text>
+    
+    <path d="M0,30 L50,100" stroke="#6A3093" stroke-width="1" stroke-dasharray="4,4" />
+  </g>
+  
+  <g transform="translate(700, 420)">
+    <rect x="-150" y="-30" width="300" height="60" rx="10" fill="#131A36" opacity="0.8" stroke="#FFFFFF" stroke-width="1" />
+    <text x="0" y="-5" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">AR Spatial Interface Potential</text>
+    <text x="0" y="20" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle">Users can interact with different dimensional planes</text>
+    
+    <path d="M0,30 L-50,100" stroke="#FFFFFF" stroke-width="1" stroke-dasharray="4,4" />
+  </g>
+  
+  <!-- User Experience Notes -->
+  <g transform="translate(450, 530)">
+    <rect x="-400" y="-30" width="800" height="60" rx="10" fill="#131A36" opacity="0.9" />
+    <text x="0" y="-5" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" font-size="18" fill="#FFFFFF" text-anchor="middle">Immersive AR Experience Potential</text>
+    <text x="0" y="20" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="14" fill="#5AC8FA" text-anchor="middle">Users interact with quantum-spatial elements that transform across dimensional states based on proximity and gesture</text>
+  </g>
+  
+  <!-- Gradients -->
+  <defs>
+    <radialGradient id="core-gradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.9"/>
+      <stop offset="40%" stop-color="#BF4080" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#6A3093" stop-opacity="0.5"/>
+    </radialGradient>
+  </defs>
+</svg>

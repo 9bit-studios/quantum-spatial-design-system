@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <!-- 
+    Quantum-Spatial Color System
+    Core Color Definitions
+    
+    This file contains all color definitions for the Quantum-Spatial Design System.
+    Include this in your SVG components by referencing with <use> elements.
+  -->
+  
+  <defs>
+    <!-- ==================== PRIMARY FOUNDATION COLORS ==================== -->
+    
+    <!-- Core Foundation Colors -->
+    <linearGradient id="void-black" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A0621" />
+      <stop offset="100%" stop-color="#070417" />
+    </linearGradient>
+    
+    <linearGradient id="deep-space-indigo" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#131A36" />
+      <stop offset="100%" stop-color="#10142A" />
+    </linearGradient>
+    
+    <linearGradient id="ultra-indigo" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E1F5C" />
+      <stop offset="100%" stop-color="#171849" />
+    </linearGradient>
+    
+    <linearGradient id="dimensional-eggplant" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#331F4A" />
+      <stop offset="100%" stop-color="#27183A" />
+    </linearGradient>
+    
+    <linearGradient id="midnight-richness" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D0D15" />
+      <stop offset="100%" stop-color="#0A0A10" />
+    </linearGradient>
+    
+    <linearGradient id="ultra-marine" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#405DE5" />
+      <stop offset="100%" stop-color="#3049C5" />
+    </linearGradient>
+    
+    <linearGradient id="ultra-violet" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#613FE7" />
+      <stop offset="100%" stop-color="#5132D3" />
+    </linearGradient>
+    
+    <!-- ==================== SECONDARY ACCENT COLORS ==================== -->
+    
+    <linearGradient id="subtle-aqua" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00FFC8" />
+      <stop offset="100%" stop-color="#00E0B0" />
+    </linearGradient>
+    
+    <linearGradient id="subtle-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5AC8FA" />
+      <stop offset="100%" stop-color="#40B2F0" />
+    </linearGradient>
+    
+    <linearGradient id="dimensional-teal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#126D71" />
+      <stop offset="100%" stop-color="#0F5B5E" />
+    </linearGradient>
+    
+    <linearGradient id="rose-energy" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#BF4080" />
+      <stop offset="100%" stop-color="#AA3270" />
+    </linearGradient>
+    
+    <linearGradient id="quantum-pulse-pink" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF2D55" />
+      <stop offset="100%" stop-color="#F01D45" />
+    </linearGradient>
+    
+    <linearGradient id="dimensional-orange" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF6B6B" />
+      <stop offset="100%" stop-color="#F25555" />
+    </linearGradient>
+    
+    <!-- ==================== HERITAGE GREEN COLORS ==================== -->
+    
+    <linearGradient id="heritage-green-core" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2C5F2D" />
+      <stop offset="100%" stop-color="#255024" />
+    </linearGradient>
+    
+    <linearGradient id="heritage-green-dark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1B3D1A" />
+      <stop offset="100%" stop-color="#153015" />
+    </linearGradient>
+    
+    <linearGradient id="heritage-green-light" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#33FF66" />
+      <stop offset="100%" stop-color="#22E555" />
+    </linearGradient>
+    
+    <linearGradient id="heritage-pixel-green" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3DFF74" />
+      <stop offset="100%" stop-color="#2DE565" />
+    </linearGradient>
+    
+    <linearGradient id="heritage-pixel-aqua" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00FFC8" />
+      <stop offset="100%" stop-color="#00E0B0" />
+    </linearGradient>
+    
+    <linearGradient id="ultra-heritage-pixel-green" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#94FE00" />
+      <stop offset="100%" stop-color="#7BDA00" />
+    </linearGradient>
+    
+    <!-- ==================== STATE GRADIENTS ==================== -->
+    
+    <!-- Heritage State Gradients -->
+    <linearGradient id="heritage-gradient-primary" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1B3D1A" />
+      <stop offset="100%" stop-color="#2C5F2D" />
+    </linearGradient>
+    
+    <linearGradient id="heritage-gradient-edge" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2C5F2D" />
+      <stop offset="100%" stop-color="#3D8B40" />
+    </linearGradient>
+    
+    <linearGradient id="heritage-gradient-glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3D8B40" opacity="0.7" />
+      <stop offset="100%" stop-color="#3DFF74" opacity="0.3" />
+    </linearGradient>
+    
+    <!-- Transitional State Gradients -->
+    <linearGradient id="transitional-gradient-primary" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1F2C58" />
+      <stop offset="100%" stop-color="#5AC8FA" />
+    </linearGradient>
+    
+    <linearGradient id="transitional-gradient-edge" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3D8B40" />
+      <stop offset="50%" stop-color="#5AC8FA" />
+      <stop offset="100%" stop-color="#6A3093" />
+    </linearGradient>
+    
+    <linearGradient id="transitional-gradient-glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3DFF74" opacity="0.5" />
+      <stop offset="50%" stop-color="#5AC8FA" opacity="0.5" />
+      <stop offset="100%" stop-color="#BF4080" opacity="0.5" />
+    </linearGradient>
+    
+    <!-- Quantum State Gradients -->
+    <linearGradient id="quantum-gradient-primary" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#331F4A" />
+      <stop offset="100%" stop-color="#6A3093" />
+    </linearGradient>
+    
+    <linearGradient id="quantum-gradient-edge" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6A3093" />
+      <stop offset="100%" stop-color="#BF4080" />
+    </linearGradient>
+    
+    <linearGradient id="quantum-gradient-glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6A3093" opacity="0.7" />
+      <stop offset="100%" stop-color="#BF4080" opacity="0.3" />
+    </linearGradient>
+    
+    <!-- ==================== FLOW GRADIENTS ==================== -->
+    
+    <linearGradient id="heritage-flow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2C5F2D" />
+      <stop offset="100%" stop-color="#3DFF74" />
+    </linearGradient>
+    
+    <linearGradient id="quantum-flow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6A3093" />
+      <stop offset="100%" stop-color="#BF4080" />
+    </linearGradient>
+    
+    <linearGradient id="transition-flow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3DFF74" />
+      <stop offset="50%" stop-color="#5AC8FA" />
+      <stop offset="100%" stop-color="#BF4080" />
+    </linearGradient>
+    
+    <!-- ==================== MATERIAL GRADIENTS ==================== -->
+    
+    <linearGradient id="quantum-material-base" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2C5F2D" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#6A3093" stop-opacity="0.3" />
+    </linearGradient>
+    
+    <linearGradient id="quantum-material-glossy" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.4" />
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0" />
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.1" />
+    </linearGradient>
+    
+    <linearGradient id="quantum-material-metallic" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#BF4080" stop-opacity="0.8" />
+      <stop offset="40%" stop-color="#6A3093" stop-opacity="0.4" />
+      <stop offset="60%" stop-color="#5AC8FA" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#BF4080" stop-opacity="0.8" />
+    </linearGradient>
+    
+    <!-- ==================== BACKGROUND GRADIENTS ==================== -->
+    
+    <linearGradient id="deep-space-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D0D15" />
+      <stop offset="100%" stop-color="#131A36" />
+    </linearGradient>
+    
+    <linearGradient id="transition-bg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#131A36" />
+      <stop offset="50%" stop-color="#0D0D15" />
+      <stop offset="100%" stop-color="#131A36" />
+    </linearGradient>
+  </defs>
+</svg>

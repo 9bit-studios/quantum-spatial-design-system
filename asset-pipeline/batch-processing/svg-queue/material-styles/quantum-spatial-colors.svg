@@ -1,0 +1,333 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900">
+  <!-- Background -->
+  <rect width="1200" height="900" fill="#0A0621" />
+  
+  <!-- Grid Background with perspective effect -->
+  <g opacity="0.08">
+    <!-- Horizontal lines with perspective -->
+    <path d="M300,750 L900,750" stroke="#36EAE8" stroke-width="1" />
+    <path d="M250,700 L950,700" stroke="#36EAE8" stroke-width="1" />
+    <path d="M200,650 L1000,650" stroke="#36EAE8" stroke-width="1" />
+    <path d="M150,600 L1050,600" stroke="#36EAE8" stroke-width="1" />
+    <path d="M125,550 L1075,550" stroke="#36EAE8" stroke-width="1" />
+    <path d="M100,500 L1100,500" stroke="#36EAE8" stroke-width="1" />
+    <path d="M90,450 L1110,450" stroke="#36EAE8" stroke-width="1" />
+    <path d="M80,400 L1120,400" stroke="#36EAE8" stroke-width="1" />
+    <path d="M70,350 L1130,350" stroke="#36EAE8" stroke-width="1" />
+    <path d="M60,300 L1140,300" stroke="#36EAE8" stroke-width="1" />
+    <path d="M50,250 L1150,250" stroke="#36EAE8" stroke-width="1" />
+    <path d="M40,200 L1160,200" stroke="#36EAE8" stroke-width="1" />
+    <path d="M30,150 L1170,150" stroke="#36EAE8" stroke-width="1" />
+    <path d="M20,100 L1180,100" stroke="#36EAE8" stroke-width="1" />
+    <path d="M10,50 L1190,50" stroke="#36EAE8" stroke-width="1" />
+    
+    <!-- Vertical lines with perspective -->
+    <path d="M300,50 L300,750" stroke="#36EAE8" stroke-width="1" />
+    <path d="M350,50 L350,750" stroke="#36EAE8" stroke-width="1" />
+    <path d="M400,50 L400,750" stroke="#36EAE8" stroke-width="1" />
+    <path d="M450,50 L450,750" stroke="#36EAE8" stroke-width="1" />
+    <path d="M500,50 L500,750" stroke="#36EAE8" stroke-width="1" />
+    <path d="M550,50 L550,750" stroke="#36EAE8" stroke-width="1" />
+    <path d="M600,50 L600,750" stroke="#36EAE8" stroke-width="1" />
+    <path d="M650,50 L650,750" stroke="#36EAE8" stroke-width="1" />
+    <path d="M700,50 L700,750" stroke="#36EAE8" stroke-width="1" />
+    <path d="M750,50 L750,750" stroke="#36EAE8" stroke-width="1" />
+    <path d="M800,50 L800,750" stroke="#36EAE8" stroke-width="1" />
+    <path d="M850,50 L850,750" stroke="#36EAE8" stroke-width="1" />
+    <path d="M900,50 L900,750" stroke="#36EAE8" stroke-width="1" />
+  </g>
+  
+  <!-- Title -->
+  <text x="600" y="70" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" font-size="32" font-weight="bold" fill="#FFFFFF" text-anchor="middle">9Bit Studios Quantum-Spatial Color System</text>
+  <text x="600" y="110" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="18" fill="#FFFFFF" text-anchor="middle">Future-Classic Tech Wave Aesthetic</text>
+  
+  <!-- Primary Colors Section -->
+  <g>
+    <text x="200" y="170" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" font-size="24" font-weight="bold" fill="#FFFFFF">Primary Foundation Colors</text>
+    
+    <!-- Void Black -->
+    <g transform="translate(100, 200)">
+      <rect width="160" height="160" rx="8" fill="#0A0621" />
+      <rect width="160" height="160" rx="8" fill="#0A0621" stroke="#36EAE8" stroke-width="1" stroke-opacity="0.3" />
+      
+      <!-- Pixel quantum state effect -->
+      <g opacity="0.8">
+        <rect x="0" y="0" width="16" height="16" fill="#0A0621" />
+        <rect x="16" y="0" width="16" height="16" fill="#0A0621" />
+        <rect x="0" y="16" width="16" height="16" fill="#0A0621" />
+        <rect x="16" y="16" width="16" height="16" fill="#36EAE8" opacity="0.5" />
+      </g>
+      
+      <text x="80" y="185" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="18" fill="#FFFFFF" text-anchor="middle">Void Black</text>
+      <text x="80" y="210" font-family="'SF Mono', monospace" font-size="15" fill="#FFFFFF" text-anchor="middle">#0A0621</text>
+    </g>
+    
+    <!-- Deep Space Indigo -->
+    <g transform="translate(290, 200)">
+      <rect width="160" height="160" rx="8" fill="#131A36" />
+      <rect width="160" height="160" rx="8" fill="#131A36" stroke="#36EAE8" stroke-width="1" stroke-opacity="0.3" />
+      
+      <!-- Pixel quantum state effect -->
+      <g opacity="0.8">
+        <rect x="0" y="0" width="16" height="16" fill="#131A36" />
+        <rect x="16" y="0" width="16" height="16" fill="#131A36" />
+        <rect x="0" y="16" width="16" height="16" fill="#131A36" />
+        <rect x="16" y="16" width="16" height="16" fill="#36EAE8" opacity="0.5" />
+      </g>
+      
+      <text x="80" y="185" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="18" fill="#FFFFFF" text-anchor="middle">Deep Space Indigo</text>
+      <text x="80" y="210" font-family="'SF Mono', monospace" font-size="15" fill="#FFFFFF" text-anchor="middle">#131A36</text>
+    </g>
+    
+    <!-- Dimensional Eggplant -->
+    <g transform="translate(480, 200)">
+      <rect width="160" height="160" rx="8" fill="#331F4A" />
+      <rect width="160" height="160" rx="8" fill="#331F4A" stroke="#36EAE8" stroke-width="1" stroke-opacity="0.3" />
+      
+      <!-- Pixel quantum state effect -->
+      <g opacity="0.8">
+        <rect x="0" y="0" width="16" height="16" fill="#331F4A" />
+        <rect x="16" y="0" width="16" height="16" fill="#331F4A" />
+        <rect x="0" y="16" width="16" height="16" fill="#331F4A" />
+        <rect x="16" y="16" width="16" height="16" fill="#36EAE8" opacity="0.5" />
+      </g>
+      
+      <text x="80" y="185" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="18" fill="#FFFFFF" text-anchor="middle">Dimensional Eggplant</text>
+      <text x="80" y="210" font-family="'SF Mono', monospace" font-size="15" fill="#FFFFFF" text-anchor="middle">#331F4A</text>
+    </g>
+    
+    <!-- Quantum Violet -->
+    <g transform="translate(670, 200)">
+      <rect width="160" height="160" rx="8" fill="#6A3093" />
+      <rect width="160" height="160" rx="8" fill="#6A3093" stroke="#36EAE8" stroke-width="1" stroke-opacity="0.3" />
+      
+      <!-- Pixel quantum state effect -->
+      <g opacity="0.8">
+        <rect x="0" y="0" width="16" height="16" fill="#6A3093" />
+        <rect x="16" y="0" width="16" height="16" fill="#6A3093" />
+        <rect x="0" y="16" width="16" height="16" fill="#6A3093" />
+        <rect x="16" y="16" width="16" height="16" fill="#36EAE8" opacity="0.5" />
+      </g>
+      
+      <text x="80" y="185" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="18" fill="#FFFFFF" text-anchor="middle">Quantum Violet</text>
+      <text x="80" y="210" font-family="'SF Mono', monospace" font-size="15" fill="#FFFFFF" text-anchor="middle">#6A3093</text>
+    </g>
+    
+    <!-- Midnight Richness -->
+    <g transform="translate(860, 200)">
+      <rect width="160" height="160" rx="8" fill="#0D0D15" />
+      <rect width="160" height="160" rx="8" fill="#0D0D15" stroke="#36EAE8" stroke-width="1" stroke-opacity="0.3" />
+      
+      <!-- Pixel quantum state effect -->
+      <g opacity="0.8">
+        <rect x="0" y="0" width="16" height="16" fill="#0D0D15" />
+        <rect x="16" y="0" width="16" height="16" fill="#0D0D15" />
+        <rect x="0" y="16" width="16" height="16" fill="#0D0D15" />
+        <rect x="16" y="16" width="16" height="16" fill="#36EAE8" opacity="0.5" />
+      </g>
+      
+      <text x="80" y="185" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="18" fill="#FFFFFF" text-anchor="middle">Midnight Richness</text>
+      <text x="80" y="210" font-family="'SF Mono', monospace" font-size="15" fill="#FFFFFF" text-anchor="middle">#0D0D15</text>
+    </g>
+  </g>
+  
+  <!-- Accent Colors Section -->
+  <g>
+    <text x="200" y="410" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" font-size="24" font-weight="bold" fill="#FFFFFF">Secondary Accent Colors</text>
+    
+    <!-- Subtle Cyan -->
+    <g transform="translate(100, 440)">
+      <rect width="160" height="160" rx="8" fill="#5AC8FA" />
+      <rect width="160" height="160" rx="8" fill="#5AC8FA" stroke="#36EAE8" stroke-width="1" stroke-opacity="0.3" />
+      
+      <!-- Pixel quantum state effect -->
+      <g opacity="0.8">
+        <rect x="0" y="0" width="16" height="16" fill="#5AC8FA" />
+        <rect x="16" y="0" width="16" height="16" fill="#5AC8FA" />
+        <rect x="0" y="16" width="16" height="16" fill="#5AC8FA" />
+        <rect x="16" y="16" width="16" height="16" fill="#6A3093" opacity="0.5" />
+      </g>
+      
+      <text x="80" y="185" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="18" fill="#0A0621" text-anchor="middle">Subtle Cyan</text>
+      <text x="80" y="210" font-family="'SF Mono', monospace" font-size="15" fill="#0A0621" text-anchor="middle">#5AC8FA</text>
+    </g>
+    
+    <!-- Dimensional Teal -->
+    <g transform="translate(290, 440)">
+      <rect width="160" height="160" rx="8" fill="#126D71" />
+      <rect width="160" height="160" rx="8" fill="#126D71" stroke="#36EAE8" stroke-width="1" stroke-opacity="0.3" />
+      
+      <!-- Pixel quantum state effect -->
+      <g opacity="0.8">
+        <rect x="0" y="0" width="16" height="16" fill="#126D71" />
+        <rect x="16" y="0" width="16" height="16" fill="#126D71" />
+        <rect x="0" y="16" width="16" height="16" fill="#126D71" />
+        <rect x="16" y="16" width="16" height="16" fill="#5AC8FA" opacity="0.5" />
+      </g>
+      
+      <text x="80" y="185" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="18" fill="#FFFFFF" text-anchor="middle">Dimensional Teal</text>
+      <text x="80" y="210" font-family="'SF Mono', monospace" font-size="15" fill="#FFFFFF" text-anchor="middle">#126D71</text>
+    </g>
+    
+    <!-- Rose Energy -->
+    <g transform="translate(480, 440)">
+      <rect width="160" height="160" rx="8" fill="#BF4080" />
+      <rect width="160" height="160" rx="8" fill="#BF4080" stroke="#36EAE8" stroke-width="1" stroke-opacity="0.3" />
+      
+      <!-- Pixel quantum state effect -->
+      <g opacity="0.8">
+        <rect x="0" y="0" width="16" height="16" fill="#BF4080" />
+        <rect x="16" y="0" width="16" height="16" fill="#BF4080" />
+        <rect x="0" y="16" width="16" height="16" fill="#BF4080" />
+        <rect x="16" y="16" width="16" height="16" fill="#5AC8FA" opacity="0.5" />
+      </g>
+      
+      <text x="80" y="185" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="18" fill="#FFFFFF" text-anchor="middle">Rose Energy</text>
+      <text x="80" y="210" font-family="'SF Mono', monospace" font-size="15" fill="#FFFFFF" text-anchor="middle">#BF4080</text>
+    </g>
+    
+    <!-- Heritage Green -->
+    <g transform="translate(670, 440)">
+      <rect width="160" height="160" rx="8" fill="#2D854D" />
+      <rect width="160" height="160" rx="8" fill="#2D854D" stroke="#36EAE8" stroke-width="1" stroke-opacity="0.3" />
+      
+      <!-- Pixel quantum state effect - 8-bit style -->
+      <g opacity="0.8">
+        <rect x="0" y="0" width="8" height="8" fill="#2D854D" />
+        <rect x="8" y="0" width="8" height="8" fill="#2D854D" />
+        <rect x="16" y="0" width="8" height="8" fill="#2D854D" />
+        <rect x="0" y="8" width="8" height="8" fill="#2D854D" />
+        <rect x="8" y="8" width="8" height="8" fill="#2D854D" />
+        <rect x="16" y="8" width="8" height="8" fill="#2D854D" />
+        <rect x="0" y="16" width="8" height="8" fill="#2D854D" />
+        <rect x="8" y="16" width="8" height="8" fill="#5AC8FA" opacity="0.5" />
+        <rect x="16" y="16" width="8" height="8" fill="#2D854D" />
+      </g>
+      
+      <text x="80" y="185" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="18" fill="#FFFFFF" text-anchor="middle">Heritage Green</text>
+      <text x="80" y="210" font-family="'SF Mono', monospace" font-size="15" fill="#FFFFFF" text-anchor="middle">#2D854D</text>
+    </g>
+
+    <!-- Dimensional Orange -->
+    <g transform="translate(860, 440)">
+      <rect width="160" height="160" rx="8" fill="#FF6B57" />
+      <rect width="160" height="160" rx="8" fill="#FF6B57" stroke="#36EAE8" stroke-width="1" stroke-opacity="0.3" />
+      
+      <!-- Pixel quantum state effect -->
+      <g opacity="0.8">
+        <rect x="0" y="0" width="16" height="16" fill="#FF6B57" />
+        <rect x="16" y="0" width="16" height="16" fill="#FF6B57" />
+        <rect x="0" y="16" width="16" height="16" fill="#FF6B57" />
+        <rect x="16" y="16" width="16" height="16" fill="#5AC8FA" opacity="0.5" />
+      </g>
+      
+      <text x="80" y="185" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="18" fill="#0A0621" text-anchor="middle">Dimensional Orange</text>
+      <text x="80" y="210" font-family="'SF Mono', monospace" font-size="15" fill="#0A0621" text-anchor="middle">#FF6B57</text>
+    </g>
+  </g>
+  
+  <!-- Gradient Demonstrations -->
+  <g>
+    <text x="600" y="650" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" font-size="24" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Material-Inspired Gradient Systems</text>
+    
+    <!-- Quantum Depth Gradient -->
+    <g transform="translate(100, 680)">
+      <defs>
+        <linearGradient id="quantumDepthGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#131A36" />
+          <stop offset="60%" stop-color="#331F4A" />
+          <stop offset="100%" stop-color="#6A3093" />
+        </linearGradient>
+      </defs>
+      <rect width="300" height="80" fill="url(#quantumDepthGradient)" rx="8" />
+      <rect width="300" height="80" rx="8" fill="url(#quantumDepthGradient)" stroke="#36EAE8" stroke-width="1" stroke-opacity="0.3" />
+      <text x="150" y="105" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="18" fill="#FFFFFF" text-anchor="middle">Quantum Depth Gradient</text>
+    </g>
+    
+    <!-- Energy State Transition -->
+    <g transform="translate(450, 680)">
+      <defs>
+        <linearGradient id="energyStateGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#2D854D" />
+          <stop offset="50%" stop-color="#131A36" />
+          <stop offset="100%" stop-color="#5AC8FA" />
+        </linearGradient>
+      </defs>
+      <rect width="300" height="80" fill="url(#energyStateGradient)" rx="8" />
+      <rect width="300" height="80" rx="8" fill="url(#energyStateGradient)" stroke="#36EAE8" stroke-width="1" stroke-opacity="0.3" />
+      <text x="150" y="105" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="18" fill="#FFFFFF" text-anchor="middle">Energy State Transition</text>
+    </g>
+    
+    <!-- Material State Variation -->
+    <g transform="translate(800, 680)">
+      <defs>
+        <linearGradient id="materialStateGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#331F4A" stop-opacity="0.6" />
+          <stop offset="40%" stop-color="#331F4A" />
+          <stop offset="90%" stop-color="#331F4A" />
+          <stop offset="95%" stop-color="#BF4080" stop-opacity="0.2" />
+          <stop offset="100%" stop-color="#126D71" stop-opacity="0.5" />
+        </linearGradient>
+      </defs>
+      <rect width="300" height="80" fill="url(#materialStateGradient)" rx="8" />
+      <rect width="300" height="80" rx="8" fill="url(#materialStateGradient)" stroke="#36EAE8" stroke-width="1" stroke-opacity="0.3" />
+      <text x="150" y="105" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="18" fill="#FFFFFF" text-anchor="middle">Material State Variation</text>
+    </g>
+    
+    <!-- Environmental Gradient -->
+    <g transform="translate(275, 790)">
+      <defs>
+        <linearGradient id="environmentalGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#0A0621" />
+          <stop offset="30%" stop-color="#131A36" />
+          <stop offset="70%" stop-color="#331F4A" />
+          <stop offset="100%" stop-color="#0D0D15" />
+        </linearGradient>
+      </defs>
+      <rect width="300" height="80" fill="url(#environmentalGradient)" rx="8" />
+      <rect width="300" height="80" rx="8" fill="url(#environmentalGradient)" stroke="#36EAE8" stroke-width="1" stroke-opacity="0.3" />
+      <text x="150" y="105" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="18" fill="#FFFFFF" text-anchor="middle">Spatial Background Gradient</text>
+    </g>
+    
+    <!-- Accent Highlight Gradient -->
+    <g transform="translate(625, 790)">
+      <defs>
+        <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#5AC8FA" />
+          <stop offset="50%" stop-color="#126D71" />
+          <stop offset="100%" stop-color="#36EAE8" />
+        </linearGradient>
+      </defs>
+      <rect width="300" height="80" fill="url(#accentGradient)" rx="8" />
+      <rect width="300" height="80" rx="8" fill="url(#accentGradient)" stroke="#36EAE8" stroke-width="1" stroke-opacity="0.3" />
+      <text x="150" y="105" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="18" fill="#0A0621" text-anchor="middle">Accent Highlight Gradient</text>
+    </g>
+  </g>
+  
+  <!-- 9Bit Logo -->
+  <g transform="translate(1120, 850)">
+    <g transform="scale(0.8)">
+      <!-- Stylized 9 built from quantum pixels -->
+      <g>
+        <rect x="0" y="0" width="16" height="16" fill="#331F4A" />
+        <rect x="16" y="0" width="16" height="16" fill="#331F4A" />
+        <rect x="32" y="0" width="16" height="16" fill="#331F4A" />
+        <rect x="0" y="16" width="16" height="16" fill="#331F4A" />
+        <rect x="32" y="16" width="16" height="16" fill="#331F4A" />
+        <rect x="0" y="32" width="16" height="16" fill="#331F4A" />
+        <rect x="16" y="32" width="16" height="16" fill="#331F4A" />
+        <rect x="32" y="32" width="16" height="16" fill="#331F4A" />
+        <rect x="32" y="48" width="16" height="16" fill="#331F4A" />
+        <rect x="32" y="64" width="16" height="16" fill="#331F4A" />
+        <rect x="0" y="64" width="16" height="16" fill="#331F4A" />
+        <rect x="16" y="64" width="16" height="16" fill="#331F4A" />
+        
+        <!-- Energy state pixels -->
+        <rect x="16" y="16" width="16" height="16" fill="#5AC8FA" opacity="0.7" />
+        <rect x="0" y="48" width="16" height="16" fill="#5AC8FA" opacity="0.5" />
+        <rect x="16" y="48" width="16" height="16" fill="#5AC8FA" opacity="0.7" />
+      </g>
+    </g>
+    <text x="-20" y="50" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" text-anchor="end">9Bit Studios</text>
+  </g>
+</svg>

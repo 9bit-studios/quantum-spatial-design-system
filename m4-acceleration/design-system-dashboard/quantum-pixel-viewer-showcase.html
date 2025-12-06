@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M4-Optimized Quantum-Spatial Pixel Viewer Showcase</title>
+    <style>
+        :root {
+            --primary-color: #131A36;
+            --accent-color: #5AC8FA;
+            --quantum-color: #BF4080;
+            --superposition-color: #6A3093;
+            --heritage-color: #3DFF74;
+            --background-color: #0A0621;
+            --text-color: #FFFFFF;
+        }
+        
+        body {
+            font-family: 'SF Pro Text', -apple-system, system-ui, sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .viewer-container {
+            border: 1px solid rgba(90, 200, 250, 0.3);
+            border-radius: 12px;
+            padding: 20px;
+            background-color: rgba(10, 6, 33, 0.7);
+        }
+        
+        .viewer-container.heritage h2 {
+            color: var(--heritage-color);
+        }
+        
+        .viewer-container.transitional h2 {
+            color: var(--accent-color);
+        }
+        
+        .viewer-container.quantum h2 {
+            color: var(--quantum-color);
+        }
+        
+        .viewer-container.superposition h2 {
+            color: var(--superposition-color);
+        }
+        
+        .viewer-container h2 {
+            text-align: center;
+            margin-top: 0;
+        }
+        
+        iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+            border-radius: 8px;
+            background-color: rgba(19, 26, 54, 0.4);
+        }
+        
+        .description {
+            text-align: center;
+            margin: 20px 0 40px 0;
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .m4-detection {
+            background-color: rgba(19, 26, 54, 0.6);
+            border: 1px solid rgba(90, 200, 250, 0.4);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .m4-badge {
+            display: inline-block;
+            background-color: #6A3093;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 24px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+        
+        .m4-badge.active {
+            background-color: #BF4080;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(191, 64, 128, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(191, 64, 128, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(191, 64, 128, 0); }
+        }
+        
+        .m4-features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>M4-Optimized Quantum-Spatial Pixel Viewer Showcase</h1>
+        
+        <div class="description">
+            A demonstration of the four quantum states in the M4-optimized Quantum-Spatial Design System
+        </div>
+        
+        <div class="m4-detection" id="m4-detection">
+            <h2>Device Capability Detection</h2>
+            <p>Detecting hardware capabilities to enable M4 optimizations...</p>
+            
+            <div class="m4-features">
+                <div class="m4-badge" id="badge-silicon">Apple Silicon</div>
+                <div class="m4-badge" id="badge-m4">M4 Chip</div>
+                <div class="m4-badge" id="badge-metal">Metal API</div>
+                <div class="m4-badge" id="badge-neural">Neural Engine</div>
+                <div class="m4-badge" id="badge-quantum">Quantum Rendering</div>
+            </div>
+        </div>
+        
+        <div class="grid">
+            <div class="viewer-container heritage">
+                <h2>Heritage State</h2>
+                <iframe src="pixel-viewer-previews/heritage.html" title="Heritage State Pixel Viewer"></iframe>
+                <p>The Heritage state represents the foundational 8-bit pixel aesthetic with structured layout and subtle energy highlights.</p>
+            </div>
+            
+            <div class="viewer-container transitional">
+                <h2>Transitional State</h2>
+                <iframe src="pixel-viewer-previews/transitional.html" title="Transitional State Pixel Viewer"></iframe>
+                <p>The Transitional state shows the evolution from structured heritage to quantum fluidity with softened edges and animated energy particles.</p>
+            </div>
+            
+            <div class="viewer-container quantum">
+                <h2>Quantum State</h2>
+                <iframe src="pixel-viewer-previews/quantum.html" title="Quantum State Pixel Viewer"></iframe>
+                <p>The Quantum state represents advanced energy materialization with organic forms, featuring a glowing energy core and orbiting particles.</p>
+            </div>
+            
+            <div class="viewer-container superposition">
+                <h2>Superposition State <span class="m4-label">(M4 Optimized)</span></h2>
+                <iframe src="pixel-viewer-previews/superposition.html" title="Superposition State Pixel Viewer"></iframe>
+                <p>The Superposition state represents multiple states simultaneously, truly embracing quantum principles with overlapping forms and energy transfer. This state leverages M4-specific optimizations for enhanced visual fidelity.</p>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>&copy; 2025 9Bit Studios. Created using the Quantum-Spatial Design System | M4-Optimized with Apple Silicon</p>
+        </div>
+    </div>
+
+    <script>
+        // Check for Apple Silicon and M4 capabilities
+        async function detectM4Capabilities() {
+            try {
+                // Try to detect using the API
+                const response = await fetch('https://design-system-staging.9bitstudios.io/m4-optimization');
+                if (!response.ok) {
+                    throw new Error('API not available');
+                }
+                
+                const data = await response.json();
+                
+                // Set badge states based on detection
+                updateBadge('badge-silicon', data.deviceInfo.isAppleSilicon);
+                updateBadge('badge-m4', data.deviceInfo.isM4);
+                updateBadge('badge-metal', data.flags.useMetal);
+                updateBadge('badge-neural', data.flags.useNeuralEngine);
+                updateBadge('badge-quantum', data.flags.useQuantumRendering);
+                
+                // Update detection box text
+                const detectionBox = document.getElementById('m4-detection');
+                detectionBox.querySelector('p').textContent = data.deviceInfo.isAppleSilicon 
+                    ? `Detected ${data.deviceInfo.chipGeneration} Apple Silicon chip. M4 optimizations ${data.deviceInfo.isM4 ? 'enabled' : 'partially enabled'}.`
+                    : 'Detected non-Apple Silicon device. Using standard rendering.';
+                
+            } catch (error) {
+                console.error('Error detecting M4 capabilities:', error);
+                
+                // Fallback to User-Agent detection
+                const userAgent = navigator.userAgent;
+                const isMac = userAgent.includes('Mac');
+                const isAppleSilicon = isMac && !userAgent.includes('Intel');
+                
+                updateBadge('badge-silicon', isAppleSilicon);
+                
+                // Set other badges to false for the fallback
+                updateBadge('badge-m4', false);
+                updateBadge('badge-metal', isAppleSilicon);
+                updateBadge('badge-neural', isAppleSilicon);
+                updateBadge('badge-quantum', false);
+                
+                // Update detection box text with fallback information
+                const detectionBox = document.getElementById('m4-detection');
+                detectionBox.querySelector('p').textContent = isAppleSilicon 
+                    ? 'Detected Apple Silicon Mac using browser detection. API unavailable.'
+                    : 'Detected non-Apple Silicon device. Using standard rendering.';
+            }
+        }
+        
+        // Update badge status
+        function updateBadge(id, isActive) {
+            const badge = document.getElementById(id);
+            if (isActive) {
+                badge.classList.add('active');
+            } else {
+                badge.classList.remove('active');
+            }
+        }
+        
+        // Run detection on page load
+        window.addEventListener('DOMContentLoaded', detectM4Capabilities);
+    </script>
+</body>
+</html>

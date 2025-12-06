@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900">
+  
+  <defs>
+    <linearGradient id="quantumDepth" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#131A36" />
+      <stop offset="50%" style="stop-color:#331F4A" />
+      <stop offset="100%" style="stop-color:#6A3093" />
+    </linearGradient>
+  <linearGradient id="quantum-depth-gradient" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#131A36" /><stop offset="50%" stop-color="#331F4A" /><stop offset="100%" stop-color="#6A3093" /></linearGradient><linearGradient id="energy-state-transition" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#2D854D" /><stop offset="50%" stop-color="#131A36" /><stop offset="100%" stop-color="#36EAE8" /></linearGradient><linearGradient id="material-state-variation" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#331F4A" /><stop offset="60%" stop-color="#BF4080" /><stop offset="100%" stop-color="#131A36" /></linearGradient><linearGradient id="spatial-background-gradient" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#0A0621" /><stop offset="70%" stop-color="#131A36" /><stop offset="100%" stop-color="#6A3093" /></linearGradient><linearGradient id="accent-highlight-gradient" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#36EAE8" /><stop offset="100%" stop-color="#126D71" /></linearGradient><linearGradient id="deep-spatial-background-gradient" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#0A0621" /><stop offset="40%" stop-color="#1E1F5C" /><stop offset="100%" stop-color="#131A36" /></linearGradient><linearGradient id="spiritual-state-transition" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#FF6B57" /><stop offset="50%" stop-color="#BF4080" /><stop offset="100%" stop-color="#36EAE8" /></linearGradient><linearGradient id="spiritual-material-state-transition" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#FF6B57" /><stop offset="50%" stop-color="#BF4080" /><stop offset="100%" stop-color="#131A36" /></linearGradient></defs>
+  <rect width="1200" height="900" fill="#0A0621" />
+  
+  
+  <g opacity="0.12">
+    
+    <g id="quantumGrid">
+      <path d="M300,800 C 400,790 800,790 900,800" stroke="#5AC8FA" stroke-width="0.8" fill="#6A3093">
+        <animate attributeName="d" values="M300,800 C 400,790 800,790 900,800;                         M300,800 C 400,810 800,810 900,800;                         M300,800 C 400,790 800,790 900,800" dur="12s" repeatCount="indefinite" />
+      </path>
+      
+    </g>
+    
+    
+    <g id="dimensionalGrid" opacity="0.08">
+      <path d="M0,450 Q 600,430 1200,450" stroke="#126D71" stroke-width="0.5" fill="#6A3093">
+        <animate attributeName="d" values="M0,450 Q 600,430 1200,450;                         M0,450 Q 600,470 1200,450;                         M0,450 Q 600,430 1200,450" dur="15s" repeatCount="indefinite" />
+      </path>
+    </g>
+  </g>
+  
+  
+  <g transform="translate(600,80)">
+    <text font-family="SF Pro Text, -apple-system, system-ui, sans-serif"SF Pro '" font-size="32" font-weight="700" fill="#FFFFFF" text-anchor="middle">
+      <tspan x="0" y="0">9Bit Studios Vision</tspan>
+      <animate attributeName="opacity" values="0.9;1;0.9" dur="4s" repeatCount="indefinite" />
+    </text>
+    <text x="0" y="40" font-family="SF Pro Text, -apple-system, system-ui, sans-serif"SF Pro '" font-size="18" fill="#FFFFFF" text-anchor="middle" opacity="0.9">
+      Quantum-Spatial AR Experience
+    </text>
+  </g>
+  
+  
+  <g transform="translate(600,450) scale(3)">
+    
+    <g>
+      
+      <g fill="#331F4A">
+        
+        <rect x="-40" y="-50" width="20" height="20" rx="2">
+          <animate attributeName="fill" values="#331F4A;#6A3093;#331F4A" dur="8s" repeatCount="indefinite" />
+        </rect>
+        
+      </g>
+      
+      
+      <g class="quantum-states">
+        <rect x="-20" y="-30" width="20" height="20" fill="#5AC8FA" rx="2" opacity="0.8">
+          <animate attributeName="opacity" values="0.6;0.9;0.6" dur="4s" repeatCount="indefinite" />
+          <animate attributeName="fill" values="#5AC8FA;#126D71;#5AC8FA" dur="6s" repeatCount="indefinite" />
+        </rect>
+      </g>
+      
+      
+      <g class="superposition" opacity="0.4">
+        <use href="#base-pixel" transform="translate(-1,-1) scale(1.02)">
+          <animate attributeName="opacity" values="0.2;0.4;0.2" dur="3s" repeatCount="indefinite" />
+        </use>
+      </g>
+    </g>
+    
+    
+    <g class="lighting" opacity="0.15">
+      <path d="M-50,-60 Q 0,-55 50,-60" stroke="#BF4080" stroke-width="0.5" fill="#6A3093">
+        <animate attributeName="stroke-dasharray" values="2,8;4,6;2,8" dur="5s" repeatCount="indefinite" />
+      </path>
+    </g>
+  </g>
+  
+  
+  <g transform="translate(0,650)">
+    
+    <g transform="translate(300,0)">
+      <text font-family="SF Pro Text, -apple-system, system-ui, sans-serif"SF Pro '" font-size="22" font-weight="600" fill="#FFFFFF" text-anchor="middle">
+        AR Experience
+      </text>
+    </g>
+    
+    
+    <g transform="translate(600,0)">
+      <text font-family="SF Pro Text, -apple-system, system-ui, sans-serif"SF Pro '" font-size="22" font-weight="600" fill="#FFFFFF" text-anchor="middle">
+        VR Experience
+      </text>
+    </g>
+    
+    
+    <g transform="translate(900,0)">
+      <text font-family="SF Pro Text, -apple-system, system-ui, sans-serif"SF Pro '" font-size="22" font-weight="600" fill="#FFFFFF" text-anchor="middle">
+        Mixed Reality
+      </text>
+    </g>
+  </g>
+  
+  
+  <g transform="translate(1120,850)">
+    <text font-family="SF Pro Text, -apple-system, system-ui, sans-serif"SF Pro '" font-size="14" font-weight="600" fill="#FFFFFF" text-anchor="end">
+      9Bit Studios Vision
+    </text>
+  </g>
+<g class="grid" opacity="0.1"><line x1="0" y1="45.0" x2="1200.0" y2="45.0" stroke="#36EAE8" stroke-width="1" /><line x1="0" y1="90.0" x2="1200.0" y2="90.0" stroke="#36EAE8" stroke-width="1" /><line x1="0" y1="135.0" x2="1200.0" y2="135.0" stroke="#36EAE8" stroke-width="1" /><line x1="0" y1="180.0" x2="1200.0" y2="180.0" stroke="#36EAE8" stroke-width="1" /><line x1="0" y1="225.0" x2="1200.0" y2="225.0" stroke="#36EAE8" stroke-width="1" /><line x1="0" y1="270.0" x2="1200.0" y2="270.0" stroke="#36EAE8" stroke-width="1" /><line x1="0" y1="315.0" x2="1200.0" y2="315.0" stroke="#36EAE8" stroke-width="1" /><line x1="0" y1="360.0" x2="1200.0" y2="360.0" stroke="#36EAE8" stroke-width="1" /><line x1="0" y1="405.0" x2="1200.0" y2="405.0" stroke="#36EAE8" stroke-width="1" /><line x1="0" y1="450.0" x2="1200.0" y2="450.0" stroke="#36EAE8" stroke-width="1" /><line x1="0" y1="495.0" x2="1200.0" y2="495.0" stroke="#36EAE8" stroke-width="1" /><line x1="0" y1="540.0" x2="1200.0" y2="540.0" stroke="#36EAE8" stroke-width="1" /><line x1="0" y1="585.0" x2="1200.0" y2="585.0" stroke="#36EAE8" stroke-width="1" /><line x1="0" y1="630.0" x2="1200.0" y2="630.0" stroke="#36EAE8" stroke-width="1" /><line x1="0" y1="675.0" x2="1200.0" y2="675.0" stroke="#36EAE8" stroke-width="1" /><line x1="0" y1="720.0" x2="1200.0" y2="720.0" stroke="#36EAE8" stroke-width="1" /><line x1="0" y1="765.0" x2="1200.0" y2="765.0" stroke="#36EAE8" stroke-width="1" /><line x1="0" y1="810.0" x2="1200.0" y2="810.0" stroke="#36EAE8" stroke-width="1" /><line x1="0" y1="855.0" x2="1200.0" y2="855.0" stroke="#36EAE8" stroke-width="1" /><line x1="60.0" y1="0" x2="60.0" y2="900.0" stroke="#36EAE8" stroke-width="1" /><line x1="120.0" y1="0" x2="120.0" y2="900.0" stroke="#36EAE8" stroke-width="1" /><line x1="180.0" y1="0" x2="180.0" y2="900.0" stroke="#36EAE8" stroke-width="1" /><line x1="240.0" y1="0" x2="240.0" y2="900.0" stroke="#36EAE8" stroke-width="1" /><line x1="300.0" y1="0" x2="300.0" y2="900.0" stroke="#36EAE8" stroke-width="1" /><line x1="360.0" y1="0" x2="360.0" y2="900.0" stroke="#36EAE8" stroke-width="1" /><line x1="420.0" y1="0" x2="420.0" y2="900.0" stroke="#36EAE8" stroke-width="1" /><line x1="480.0" y1="0" x2="480.0" y2="900.0" stroke="#36EAE8" stroke-width="1" /><line x1="540.0" y1="0" x2="540.0" y2="900.0" stroke="#36EAE8" stroke-width="1" /><line x1="600.0" y1="0" x2="600.0" y2="900.0" stroke="#36EAE8" stroke-width="1" /><line x1="660.0" y1="0" x2="660.0" y2="900.0" stroke="#36EAE8" stroke-width="1" /><line x1="720.0" y1="0" x2="720.0" y2="900.0" stroke="#36EAE8" stroke-width="1" /><line x1="780.0" y1="0" x2="780.0" y2="900.0" stroke="#36EAE8" stroke-width="1" /><line x1="840.0" y1="0" x2="840.0" y2="900.0" stroke="#36EAE8" stroke-width="1" /><line x1="900.0" y1="0" x2="900.0" y2="900.0" stroke="#36EAE8" stroke-width="1" /><line x1="960.0" y1="0" x2="960.0" y2="900.0" stroke="#36EAE8" stroke-width="1" /><line x1="1020.0" y1="0" x2="1020.0" y2="900.0" stroke="#36EAE8" stroke-width="1" /><line x1="1080.0" y1="0" x2="1080.0" y2="900.0" stroke="#36EAE8" stroke-width="1" /><line x1="1140.0" y1="0" x2="1140.0" y2="900.0" stroke="#36EAE8" stroke-width="1" /></g><g class="9bit-logo" transform="translate(60.0 855.0)"><g class="quantum-pixel" transform="translate(0 -24)"><rect width="12" height="12" fill="#331F4A" /><rect width="3.0" height="3.0" fill="#36EAE8" opacity="0.8" /></g><g class="quantum-pixel" transform="translate(0 -12)"><rect width="12" height="12" fill="#331F4A" /><rect width="3.0" height="3.0" fill="#36EAE8" opacity="0.8" /></g><text x="24" y="0" font-family="SF Pro Text, -apple-system, system-ui, sans-serif"SF Pro '" font-size="12.6px" fill="#FFFFFF">9Bit Studios</text></g></svg>

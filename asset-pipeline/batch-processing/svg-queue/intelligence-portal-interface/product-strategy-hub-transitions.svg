@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300">
+  <!-- Background and effects definitions -->
+  <defs>
+    <!-- Deep space background gradient -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A0621" />
+      <stop offset="60%" stop-color="#131A36" />
+      <stop offset="100%" stop-color="#0D0D15" />
+    </linearGradient>
+    
+    <!-- Glass effect with dimensional eggplant -->
+    <linearGradient id="glassGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#331F4A" stop-opacity="0.2" />
+      <stop offset="50%" stop-color="#331F4A" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#331F4A" stop-opacity="0.3" />
+    </linearGradient>
+    
+    <!-- Product states gradients -->
+    <linearGradient id="heritageGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2D854D" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#29B6F6" stop-opacity="0.5" />
+    </linearGradient>
+    
+    <linearGradient id="transitionalGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#126D71" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#5AC8FA" stop-opacity="0.6" />
+    </linearGradient>
+    
+    <linearGradient id="quantumGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6A3093" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#613FE7" stop-opacity="0.6" />
+    </linearGradient>
+    
+    <!-- Glass blur filter -->
+    <filter id="glassBlur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur" />
+      <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="glow" />
+      <feComposite in="SourceGraphic" in2="glow" operator="atop" />
+    </filter>
+    
+    <!-- Energy pulse animation for intersections -->
+    <radialGradient id="pulseGradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#FF2D55" stop-opacity="0.9" />
+      <stop offset="70%" stop-color="#FF2D55" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#FF2D55" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Main background -->
+  <rect width="800" height="300" fill="url(#bgGradient)" />
+  
+  <!-- Grid system with perspective shift -->
+  <g opacity="0.15">
+    <!-- Horizontal grid lines with perspective -->
+    <path d="M50,50 L750,65" stroke="#5AC8FA" stroke-width="0.5" />
+    <path d="M50,100 L750,120" stroke="#5AC8FA" stroke-width="0.5" />
+    <path d="M50,150 L750,175" stroke="#5AC8FA" stroke-width="0.5" />
+    <path d="M50,200 L750,230" stroke="#5AC8FA" stroke-width="0.5" />
+    <path d="M50,250 L750,285" stroke="#5AC8FA" stroke-width="0.5" />
+    
+    <!-- Vertical grid lines with perspective -->
+    <path d="M100,30 L100,270" stroke="#5AC8FA" stroke-width="0.5" />
+    <path d="M200,35 L210,275" stroke="#5AC8FA" stroke-width="0.5" />
+    <path d="M300,40 L320,280" stroke="#5AC8FA" stroke-width="0.5" />
+    <path d="M400,45 L430,285" stroke="#5AC8FA" stroke-width="0.5" />
+    <path d="M500,50 L540,290" stroke="#5AC8FA" stroke-width="0.5" />
+    <path d="M600,55 L650,295" stroke="#5AC8FA" stroke-width="0.5" />
+    <path d="M700,60 L760,300" stroke="#5AC8FA" stroke-width="0.5" />
+  </g>
+  
+  <!-- Glass-like quantum construction representing the Cosmic Monster's shattering -->
+  <!-- Central piece (Vaclond) -->
+  <g transform="translate(400, 150)">
+    <!-- Frosted glass effect container -->
+    <polygon points="-100,-80 100,-80 150,0 100,80 -100,80 -150,0" fill="url(#glassGradient)" stroke="#331F4A" stroke-width="2" filter="url(#glassBlur)" />
+    
+    <!-- Inner geometric structure -->
+    <polygon points="-80,-60 80,-60 120,0 80,60 -80,60 -120,0" fill="none" stroke="#5AC8FA" stroke-width="1" opacity="0.7" />
+    <polygon points="-60,-40 60,-40 90,0 60,40 -60,40 -90,0" fill="none" stroke="#613FE7" stroke-width="1" opacity="0.7" />
+    
+    <!-- Quantum state indicator -->
+    <circle cx="0" cy="0" r="25" fill="url(#quantumGradient)" opacity="0.8" />
+    <text x="0" y="5" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle">QUANTUM</text>
+  </g>
+  
+  <!-- Left piece (Prothohar) -->
+  <g transform="translate(180, 150) rotate(-15)">
+    <!-- Frosted glass effect container -->
+    <polygon points="-70,-60 70,-60 100,0 70,60 -70,60 -100,0" fill="url(#glassGradient)" stroke="#331F4A" stroke-width="2" filter="url(#glassBlur)" opacity="0.9" />
+    
+    <!-- Inner geometric structure -->
+    <polygon points="-50,-40 50,-40 70,0 50,40 -50,40 -70,0" fill="none" stroke="#5AC8FA" stroke-width="1" opacity="0.7" />
+    <polygon points="-30,-20 30,-20 40,0 30,20 -30,20 -40,0" fill="none" stroke="#613FE7" stroke-width="1" opacity="0.7" />
+    
+    <!-- Heritage state indicator -->
+    <circle cx="0" cy="0" r="20" fill="url(#heritageGradient)" opacity="0.8" />
+    <text x="0" y="5" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">HERITAGE</text>
+  </g>
+  
+  <!-- Right piece (Secret wild portion) -->
+  <g transform="translate(620, 150) rotate(15)">
+    <!-- Frosted glass effect container -->
+    <polygon points="-70,-60 70,-60 100,0 70,60 -70,60 -100,0" fill="url(#glassGradient)" stroke="#331F4A" stroke-width="2" filter="url(#glassBlur)" opacity="0.9" />
+    
+    <!-- Inner geometric structure -->
+    <polygon points="-50,-40 50,-40 70,0 50,40 -50,40 -70,0" fill="none" stroke="#5AC8FA" stroke-width="1" opacity="0.7" />
+    <polygon points="-30,-20 30,-20 40,0 30,20 -30,20 -40,0" fill="none" stroke="#613FE7" stroke-width="1" opacity="0.7" />
+    
+    <!-- Transitional state indicator -->
+    <circle cx="0" cy="0" r="20" fill="url(#transitionalGradient)" opacity="0.8" />
+    <text x="0" y="5" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="8" fill="#FFFFFF" text-anchor="middle">TRANSITIONAL</text>
+  </g>
+  
+  <!-- Connection energy between fragments -->
+  <g>
+    <!-- Left to center connection -->
+    <path d="M230,150 Q315,120 350,150" stroke="#BF4080" stroke-width="2" fill="none" opacity="0.6" />
+    <!-- Right to center connection -->
+    <path d="M570,150 Q485,180 450,150" stroke="#BF4080" stroke-width="2" fill="none" opacity="0.6" />
+    <!-- The hidden third connection -->
+    <path d="M230,150 Q425,250 570,150" stroke="#FF2D55" stroke-width="1" stroke-dasharray="5,5" fill="none" opacity="0.4" />
+  </g>
+  
+  <!-- Intersection points with energy pulses -->
+  <g>
+    <circle cx="345" cy="150" r="10" fill="url(#pulseGradient)" opacity="0.8">
+      <animate attributeName="r" values="10;15;10" dur="3s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.8;0.4;0.8" dur="3s" repeatCount="indefinite" />
+    </circle>
+    
+    <circle cx="455" cy="150" r="10" fill="url(#pulseGradient)" opacity="0.8">
+      <animate attributeName="r" values="10;15;10" dur="4s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.8;0.4;0.8" dur="4s" repeatCount="indefinite" />
+    </circle>
+    
+    <circle cx="400" cy="200" r="8" fill="url(#pulseGradient)" opacity="0.6">
+      <animate attributeName="r" values="8;12;8" dur="5s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.6;0.3;0.6" dur="5s" repeatCount="indefinite" />
+    </circle>
+  </g>
+  
+  <!-- Quantum pixels scattered throughout -->
+  <g>
+    <rect x="100" y="80" width="8" height="8" fill="#5AC8FA" opacity="0.7" />
+    <rect x="680" y="140" width="10" height="10" fill="#613FE7" opacity="0.6" />
+    <rect x="300" y="230" width="12" height="12" fill="#FF2D55" opacity="0.5" />
+    <rect x="450" y="70" width="8" height="8" fill="#29B6F6" opacity="0.6" />
+    <rect x="200" y="190" width="10" height="10" fill="#BF4080" opacity="0.7" />
+    <rect x="550" y="260" width="8" height="8" fill="#FF6B6B" opacity="0.6" />
+    
+    <!-- Animated quantum pixels -->
+    <rect x="350" y="50" width="10" height="10" fill="#613FE7" opacity="0.8">
+      <animate attributeName="opacity" values="0.8;0.3;0.8" dur="6s" repeatCount="indefinite" />
+    </rect>
+    <rect x="500" y="220" width="12" height="12" fill="#5AC8FA" opacity="0.7">
+      <animate attributeName="opacity" values="0.7;0.2;0.7" dur="7s" repeatCount="indefinite" />
+    </rect>
+    <rect x="150" y="120" width="8" height="8" fill="#FF2D55" opacity="0.6">
+      <animate attributeName="opacity" values="0.6;0.1;0.6" dur="5s" repeatCount="indefinite" />
+    </rect>
+  </g>
+</svg>

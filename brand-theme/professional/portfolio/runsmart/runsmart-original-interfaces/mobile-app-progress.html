@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RunSmart - Progress</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', system-ui, sans-serif;
+            background: #000000;
+            color: #FFFFFF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .phone-frame {
+            width: 393px;
+            height: 852px;
+            background: #000;
+            border-radius: 55px;
+            padding: 12px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8),
+                        inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .dynamic-island {
+            position: absolute;
+            top: 12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 126px;
+            height: 37px;
+            background: #000;
+            border-radius: 20px;
+            z-index: 100;
+        }
+
+        .screen {
+            width: 100%;
+            height: 100%;
+            background: #000;
+            border-radius: 47px;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
+        .status-bar {
+            padding: 54px 24px 12px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        .content {
+            padding: 0 24px 100px 24px;
+        }
+
+        /* Header */
+        .page-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .header-title {
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        .time-range {
+            display: flex;
+            gap: 4px;
+            background: #0A0A0A;
+            border: 1px solid #1A1A1A;
+            border-radius: 20px;
+            padding: 4px;
+        }
+
+        .range-btn {
+            padding: 6px 12px;
+            border-radius: 16px;
+            border: none;
+            background: transparent;
+            color: #888;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .range-btn.active {
+            background: #CDFF00;
+            color: #000;
+        }
+
+        /* You vs Past You Card */
+        .comparison-card {
+            background: linear-gradient(135deg, #0A0A0A 0%, #0A1A0A 100%);
+            border: 1px solid #1A1A1A;
+            border-radius: 24px;
+            padding: 24px;
+            margin-bottom: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .comparison-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #CDFF00 0%, #A0CC00 100%);
+        }
+
+        .comparison-title {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #CDFF00;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .comparison-side {
+            text-align: center;
+        }
+
+        .side-label {
+            font-size: 11px;
+            color: #888;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .side-value {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .side-meta {
+            font-size: 12px;
+            color: #666;
+        }
+
+        .comparison-insight {
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid #1A1A1A;
+            text-align: center;
+        }
+
+        .insight-highlight {
+            font-size: 18px;
+            font-weight: 700;
+            color: #CDFF00;
+            margin-bottom: 4px;
+        }
+
+        .insight-text {
+            font-size: 13px;
+            color: #CCC;
+        }
+
+        /* Chart Section */
+        .chart-card {
+            background: #0A0A0A;
+            border: 1px solid #1A1A1A;
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .chart-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .chart-title {
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .chart-legend {
+            display: flex;
+            gap: 12px;
+            font-size: 11px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            color: #888;
+        }
+
+        .legend-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 4px;
+        }
+
+        /* Pace Chart */
+        .pace-chart {
+            height: 160px;
+            position: relative;
+            margin-bottom: 8px;
+        }
+
+        .chart-line {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+        }
+
+        .pace-line {
+            stroke: #CDFF00;
+            stroke-width: 2;
+            fill: none;
+            filter: drop-shadow(0 0 4px rgba(205, 255, 0, 0.3));
+        }
+
+        .pace-fill {
+            fill: url(#pace-gradient);
+            opacity: 0.2;
+        }
+
+        .chart-grid {
+            stroke: #1A1A1A;
+            stroke-width: 1;
+        }
+
+        .chart-labels {
+            display: flex;
+            justify-content: space-between;
+            font-size: 10px;
+            color: #666;
+            margin-top: 8px;
+        }
+
+        /* Weekly Mileage Bars */
+        .mileage-chart {
+            height: 120px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 4px;
+            margin-bottom: 8px;
+        }
+
+        .mileage-bar {
+            flex: 1;
+            background: linear-gradient(to top, #CDFF00 0%, #A0CC00 100%);
+            border-radius: 4px 4px 0 0;
+            position: relative;
+            min-height: 20px;
+            transition: all 0.3s;
+        }
+
+        .mileage-bar:hover {
+            opacity: 0.8;
+        }
+
+        .bar-label {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 10px;
+            font-weight: 600;
+            color: #CDFF00;
+            white-space: nowrap;
+        }
+
+        /* Consistency Heatmap */
+        .heatmap {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 4px;
+            margin-bottom: 8px;
+        }
+
+        .heatmap-cell {
+            aspect-ratio: 1;
+            border-radius: 4px;
+            background: #1A1A1A;
+        }
+
+        .heatmap-cell.active-1 { background: rgba(205, 255, 0, 0.2); }
+        .heatmap-cell.active-2 { background: rgba(205, 255, 0, 0.4); }
+        .heatmap-cell.active-3 { background: rgba(205, 255, 0, 0.6); }
+        .heatmap-cell.active-4 { background: rgba(205, 255, 0, 0.8); }
+        .heatmap-cell.active-5 { background: #CDFF00; }
+
+        .heatmap-legend {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 10px;
+            color: #666;
+        }
+
+        /* Milestones */
+        .milestones-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .milestone-card {
+            background: #0A0A0A;
+            border: 1px solid #1A1A1A;
+            border-radius: 16px;
+            padding: 16px;
+            text-align: center;
+        }
+
+        .milestone-icon {
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+
+        .milestone-value {
+            font-size: 24px;
+            font-weight: 700;
+            color: #CDFF00;
+            margin-bottom: 4px;
+        }
+
+        .milestone-label {
+            font-size: 12px;
+            color: #888;
+        }
+
+        .milestone-badge {
+            display: inline-block;
+            margin-top: 6px;
+            padding: 3px 8px;
+            background: rgba(205, 255, 0, 0.1);
+            border: 1px solid #CDFF00;
+            border-radius: 10px;
+            font-size: 9px;
+            font-weight: 700;
+            color: #CDFF00;
+            text-transform: uppercase;
+        }
+
+        /* Photo Timeline */
+        .photo-timeline {
+            background: #0A0A0A;
+            border: 1px solid #1A1A1A;
+            border-radius: 20px;
+            padding: 20px;
+        }
+
+        .timeline-header {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .timeline-scroll {
+            display: flex;
+            gap: 12px;
+            overflow-x: auto;
+            padding-bottom: 8px;
+            scrollbar-width: none;
+        }
+
+        .timeline-scroll::-webkit-scrollbar {
+            display: none;
+        }
+
+        .photo-item {
+            flex-shrink: 0;
+            width: 120px;
+        }
+
+        .photo-frame {
+            width: 120px;
+            height: 160px;
+            background: linear-gradient(135deg, #1A1A1A 0%, #0A0A0A 100%);
+            border: 1px solid #1A1A1A;
+            border-radius: 12px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+        }
+
+        .photo-date {
+            font-size: 11px;
+            color: #888;
+            text-align: center;
+        }
+
+        /* Tab Bar */
+        .tab-bar {
+            position: fixed;
+            bottom: 12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 369px;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid #1A1A1A;
+            border-radius: 24px;
+            padding: 12px 20px;
+            display: flex;
+            justify-content: space-around;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .tab-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+            cursor: pointer;
+        }
+
+        .tab-icon {
+            font-size: 24px;
+            opacity: 0.5;
+        }
+
+        .tab-label {
+            font-size: 10px;
+            color: #888;
+            font-weight: 500;
+        }
+
+        .tab-item.active .tab-icon {
+            opacity: 1;
+            filter: drop-shadow(0 0 8px #CDFF00);
+        }
+
+        .tab-item.active .tab-label {
+            color: #CDFF00;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="phone-frame">
+        <div class="dynamic-island"></div>
+
+        <div class="screen">
+            <div class="status-bar">
+                <div class="time">9:41</div>
+                <div class="status-icons">
+                    <span>📶</span>
+                    <span>🔋</span>
+                </div>
+            </div>
+
+            <div class="content">
+                <div class="page-header">
+                    <div class="header-title">Your Progress</div>
+                    <div class="time-range">
+                        <button class="range-btn">Week</button>
+                        <button class="range-btn active">Month</button>
+                        <button class="range-btn">Year</button>
+                    </div>
+                </div>
+
+                <!-- You vs Past You -->
+                <div class="comparison-card">
+                    <div class="comparison-title">You vs. Past You</div>
+                    <div class="comparison-grid">
+                        <div class="comparison-side">
+                            <div class="side-label">3 Months Ago</div>
+                            <div class="side-value">9:24</div>
+                            <div class="side-meta">avg pace /mi</div>
+                        </div>
+                        <div class="comparison-side">
+                            <div class="side-label">Now</div>
+                            <div class="side-value" style="color: #CDFF00;">8:24</div>
+                            <div class="side-meta">avg pace /mi</div>
+                        </div>
+                    </div>
+                    <div class="comparison-insight">
+                        <div class="insight-highlight">↑ 12% faster</div>
+                        <div class="insight-text">Your pace has improved consistently. You're crushing it! 🔥</div>
+                    </div>
+                </div>
+
+                <!-- Pace Trend Chart -->
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <div class="chart-title">Pace Trend</div>
+                        <div class="chart-legend">
+                            <div class="legend-item">
+                                <div class="legend-dot" style="background: #CDFF00;"></div>
+                                <span>Avg Pace</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pace-chart">
+                        <svg width="100%" height="100%" viewBox="0 0 280 160">
+                            <defs>
+                                <linearGradient id="pace-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#CDFF00;stop-opacity:0.3" />
+                                    <stop offset="100%" style="stop-color:#CDFF00;stop-opacity:0" />
+                                </linearGradient>
+                            </defs>
+                            <!-- Grid Lines -->
+                            <line class="chart-grid" x1="0" y1="40" x2="280" y2="40" />
+                            <line class="chart-grid" x1="0" y1="80" x2="280" y2="80" />
+                            <line class="chart-grid" x1="0" y1="120" x2="280" y2="120" />
+                            <!-- Data -->
+                            <path class="pace-fill" d="M 0 60 L 40 65 L 80 70 L 120 55 L 160 50 L 200 45 L 240 30 L 280 25 L 280 160 L 0 160 Z" />
+                            <path class="pace-line" d="M 0 60 L 40 65 L 80 70 L 120 55 L 160 50 L 200 45 L 240 30 L 280 25" />
+                        </svg>
+                    </div>
+                    <div class="chart-labels">
+                        <span>Sep</span>
+                        <span>Oct</span>
+                        <span>Nov</span>
+                        <span>Dec</span>
+                    </div>
+                </div>
+
+                <!-- Weekly Mileage -->
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <div class="chart-title">Weekly Mileage</div>
+                    </div>
+                    <div class="mileage-chart">
+                        <div class="mileage-bar" style="height: 60%;">
+                            <div class="bar-label">18</div>
+                        </div>
+                        <div class="mileage-bar" style="height: 70%;">
+                            <div class="bar-label">21</div>
+                        </div>
+                        <div class="mileage-bar" style="height: 55%;">
+                            <div class="bar-label">16</div>
+                        </div>
+                        <div class="mileage-bar" style="height: 85%;">
+                            <div class="bar-label">25</div>
+                        </div>
+                    </div>
+                    <div class="chart-labels">
+                        <span>Week 1</span>
+                        <span>Week 2</span>
+                        <span>Week 3</span>
+                        <span>Week 4</span>
+                    </div>
+                </div>
+
+                <!-- Consistency Calendar -->
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <div class="chart-title">Consistency</div>
+                    </div>
+                    <div class="heatmap">
+                        <div class="heatmap-cell active-4"></div>
+                        <div class="heatmap-cell"></div>
+                        <div class="heatmap-cell active-5"></div>
+                        <div class="heatmap-cell active-3"></div>
+                        <div class="heatmap-cell"></div>
+                        <div class="heatmap-cell active-5"></div>
+                        <div class="heatmap-cell active-4"></div>
+
+                        <div class="heatmap-cell"></div>
+                        <div class="heatmap-cell active-3"></div>
+                        <div class="heatmap-cell active-5"></div>
+                        <div class="heatmap-cell active-2"></div>
+                        <div class="heatmap-cell"></div>
+                        <div class="heatmap-cell active-4"></div>
+                        <div class="heatmap-cell active-5"></div>
+
+                        <div class="heatmap-cell active-5"></div>
+                        <div class="heatmap-cell"></div>
+                        <div class="heatmap-cell active-4"></div>
+                        <div class="heatmap-cell active-5"></div>
+                        <div class="heatmap-cell active-3"></div>
+                        <div class="heatmap-cell"></div>
+                        <div class="heatmap-cell active-5"></div>
+
+                        <div class="heatmap-cell"></div>
+                        <div class="heatmap-cell active-5"></div>
+                        <div class="heatmap-cell active-4"></div>
+                        <div class="heatmap-cell"></div>
+                        <div class="heatmap-cell active-5"></div>
+                        <div class="heatmap-cell active-3"></div>
+                        <div class="heatmap-cell active-4"></div>
+                    </div>
+                    <div class="heatmap-legend">
+                        <span>Last 4 weeks</span>
+                        <span style="color: #CDFF00;">18 active days</span>
+                    </div>
+                </div>
+
+                <!-- Milestones -->
+                <div class="milestones-grid">
+                    <div class="milestone-card">
+                        <div class="milestone-icon">🏃</div>
+                        <div class="milestone-value">247</div>
+                        <div class="milestone-label">Total Runs</div>
+                    </div>
+                    <div class="milestone-card">
+                        <div class="milestone-icon">📏</div>
+                        <div class="milestone-value">892</div>
+                        <div class="milestone-label">Total Miles</div>
+                        <div class="milestone-badge">🔥 New Record</div>
+                    </div>
+                    <div class="milestone-card">
+                        <div class="milestone-icon">⚡</div>
+                        <div class="milestone-value">22:47</div>
+                        <div class="milestone-label">Fastest 5K</div>
+                    </div>
+                    <div class="milestone-card">
+                        <div class="milestone-icon">🔥</div>
+                        <div class="milestone-value">12</div>
+                        <div class="milestone-label">Day Streak</div>
+                    </div>
+                </div>
+
+                <!-- Photo Timeline -->
+                <div class="photo-timeline">
+                    <div class="timeline-header">Progress Photos</div>
+                    <div class="timeline-scroll">
+                        <div class="photo-item">
+                            <div class="photo-frame">📸</div>
+                            <div class="photo-date">Sep 2024</div>
+                        </div>
+                        <div class="photo-item">
+                            <div class="photo-frame">📸</div>
+                            <div class="photo-date">Oct 2024</div>
+                        </div>
+                        <div class="photo-item">
+                            <div class="photo-frame">📸</div>
+                            <div class="photo-date">Nov 2024</div>
+                        </div>
+                        <div class="photo-item">
+                            <div class="photo-frame">📸</div>
+                            <div class="photo-date">Dec 2024</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-bar">
+                <div class="tab-item">
+                    <div class="tab-icon">🏠</div>
+                    <div class="tab-label">Today</div>
+                </div>
+                <div class="tab-item">
+                    <div class="tab-icon">📅</div>
+                    <div class="tab-label">Calendar</div>
+                </div>
+                <div class="tab-item active">
+                    <div class="tab-icon">📊</div>
+                    <div class="tab-label">Progress</div>
+                </div>
+                <div class="tab-item">
+                    <div class="tab-icon">💬</div>
+                    <div class="tab-label">Coach</div>
+                </div>
+                <div class="tab-item">
+                    <div class="tab-icon">👥</div>
+                    <div class="tab-label">Community</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

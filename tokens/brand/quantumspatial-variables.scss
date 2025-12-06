@@ -1,0 +1,355 @@
+//
+// QuantumSpatial Color System Variables
+// Extracted and enhanced from raw color system
+// Apple HIG compliant with spatial depth
+//
+
+// ==================== FOUNDATION COLORS ====================
+
+// Primary Text Colors (Apple HIG Hierarchy)
+$qs-primary-foreground: #FCFDF2;
+$qs-secondary: #1A1B26;
+$qs-tertiary: #33313A;
+$qs-quaternary: #3F3F4B;
+
+// Text with Apple Opacity System
+$qs-text-primary: $qs-primary-foreground;
+$qs-text-secondary: rgba(252, 253, 242, 0.7);
+$qs-text-tertiary: rgba(252, 253, 242, 0.5);
+$qs-text-quaternary: rgba(252, 253, 242, 0.3);
+
+// ==================== BACKGROUND VARIANTS ====================
+
+// Ultradimensional (Deep cosmic backgrounds)
+$qs-ultradimensional-marine: #0A0621;
+$qs-ultradimensional-violet: #150621;
+
+// Mystic (Ultra-subtle transparency)
+$qs-mystic-midnight: rgba(113, 0, 170, 0.0588235);
+$qs-mystic-deepspace: rgba(170, 0, 170, 0.0947);
+
+// Deep Space (Core foundation)
+$qs-deep-space-night: #0D0D15;
+$qs-deep-space-violet: #160918;
+
+// Multidimensional (Complex layered)
+$qs-multidimensional-midnight: #0A0A0F;
+$qs-multidimensional-violet: #110413;
+
+// Void (Pure darkness)
+$qs-void-black: #000000;
+$qs-void-violet: #0B010D;
+
+// Dimensional (Mid-range spatial)
+$qs-dimensional-marine: #1E1F5C;
+$qs-dimensional-violet: #480F92;
+$qs-dimensional-pink: #D0196B;
+
+// ==================== UI ACTION COLORS ====================
+
+// Pixel Variants (Primary UI Actions)
+$qs-pixel-blue: #007AFF;
+$qs-pixel-marine: #504CF5;
+$qs-pixel-violet: #613FE7;
+$qs-pixel-pink: #EC4899;
+$qs-pixel-green: #2C5F2D;
+$qs-pixel-orange: #FF4F52;
+
+// Liquid Variants (Fluid states)
+$qs-liquid-blue: #5AC8FA;    // Primary AR UI Action
+$qs-liquid-marine: #6366F1;
+$qs-liquid-violet: #9151F1;
+$qs-liquid-pink: #FF66E3;
+$qs-liquid-orange: #FF6B6B;
+
+// Ultra Variants (High intensity)
+$qs-ultra-marine: #512CF9;
+$qs-ultra-violet: #6E00FF;
+$qs-ultra-pink: #FF2D92;
+
+// Special Colors
+$qs-plasma-green: #3DFF74;   // No variants except upcoming ultra plasma
+
+// ==================== COLOR MAPS ====================
+
+// Background Variants Map
+$qs-backgrounds: (
+  'ultradimensional': (
+    'marine': $qs-ultradimensional-marine,
+    'violet': $qs-ultradimensional-violet
+  ),
+  'mystic': (
+    'midnight': $qs-mystic-midnight,
+    'deepspace': $qs-mystic-deepspace
+  ),
+  'deep-space': (
+    'night': $qs-deep-space-night,
+    'violet': $qs-deep-space-violet
+  ),
+  'multidimensional': (
+    'midnight': $qs-multidimensional-midnight,
+    'violet': $qs-multidimensional-violet
+  ),
+  'void': (
+    'black': $qs-void-black,
+    'violet': $qs-void-violet
+  ),
+  'dimensional': (
+    'marine': $qs-dimensional-marine,
+    'violet': $qs-dimensional-violet,
+    'pink': $qs-dimensional-pink
+  )
+);
+
+// UI Action Colors Map
+$qs-actions: (
+  'pixel': (
+    'blue': $qs-pixel-blue,
+    'marine': $qs-pixel-marine,
+    'violet': $qs-pixel-violet,
+    'pink': $qs-pixel-pink,
+    'green': $qs-pixel-green,
+    'orange': $qs-pixel-orange
+  ),
+  'liquid': (
+    'blue': $qs-liquid-blue,
+    'marine': $qs-liquid-marine,
+    'violet': $qs-liquid-violet,
+    'pink': $qs-liquid-pink,
+    'orange': $qs-liquid-orange
+  ),
+  'ultra': (
+    'marine': $qs-ultra-marine,
+    'violet': $qs-ultra-violet,
+    'pink': $qs-ultra-pink
+  ),
+  'dimensional': (
+    'marine': $qs-dimensional-marine,
+    'violet': $qs-dimensional-violet,
+    'pink': $qs-dimensional-pink
+  )
+);
+
+// Foundation Colors Map
+$qs-foundation: (
+  'primary-foreground': $qs-primary-foreground,
+  'secondary': $qs-secondary,
+  'tertiary': $qs-tertiary,
+  'quaternary': $qs-quaternary,
+  'text-primary': $qs-text-primary,
+  'text-secondary': $qs-text-secondary,
+  'text-tertiary': $qs-text-tertiary,
+  'text-quaternary': $qs-text-quaternary
+);
+
+// ==================== SPATIAL GRADIENTS ====================
+
+// Core Spatial Gradients
+$qs-gradient-deep-spatial: linear-gradient(90deg, $qs-ultradimensional-marine 0%, #131A36 30%, $qs-ultradimensional-marine 70%, $qs-deep-space-night 100%);
+$qs-gradient-spatial: linear-gradient(90deg, $qs-ultradimensional-marine -4.8%, #131A36 26.56%, #331F4A 68.37%, $qs-deep-space-night 99.73%);
+$qs-gradient-quantum-depth: linear-gradient(90deg, #131A36 -0.02%, #331F4A 49.98%, #6A3093 99.98%);
+$qs-gradient-spatial-simple: linear-gradient(90deg, $qs-ultradimensional-marine -0.02%, #131A36 99.98%);
+
+// Glass Effects
+$qs-glass-border: rgba(90, 200, 250, 0.3);
+$qs-glass-subtle: rgba(10, 6, 33, 0.4);
+$qs-glass-medium: rgba(10, 6, 33, 0.6);
+$qs-glass-prominent: rgba(10, 6, 33, 0.8);
+
+// Gradient Map
+$qs-gradients: (
+  'deep-spatial': $qs-gradient-deep-spatial,
+  'spatial': $qs-gradient-spatial,
+  'quantum-depth': $qs-gradient-quantum-depth,
+  'spatial-simple': $qs-gradient-spatial-simple
+);
+
+// ==================== SEMANTIC MAPPINGS ====================
+
+// Primary Actions
+$qs-action-primary: $qs-pixel-blue;
+$qs-action-secondary: $qs-pixel-marine;
+$qs-action-tertiary: $qs-pixel-violet;
+
+// AR/Spatial Actions
+$qs-action-ar: $qs-liquid-blue;
+$qs-action-spatial: $qs-liquid-marine;
+
+// Accent Colors
+$qs-accent-pink: $qs-pixel-pink;
+$qs-accent-green: $qs-plasma-green;
+$qs-accent-orange: $qs-pixel-orange;
+
+// Background Hierarchy
+$qs-bg-primary: $qs-void-black;
+$qs-bg-secondary: $qs-deep-space-night;
+$qs-bg-tertiary: $qs-multidimensional-midnight;
+$qs-bg-elevated: $qs-ultradimensional-marine;
+
+// ==================== OPACITY SYSTEM ====================
+
+// Spatial Awareness Opacity (for animated meshes)
+$qs-spatial-opacity: (
+  'subtle': 0.05,
+  'medium': 0.1,
+  'prominent': 0.15
+);
+
+// Glass Effect Opacity
+$qs-glass-opacity: (
+  'subtle': 0.4,
+  'medium': 0.6,
+  'prominent': 0.8
+);
+
+// Text Hierarchy Opacity (Apple system)
+$qs-text-opacity: (
+  'primary': 1.0,
+  'secondary': 0.7,
+  'tertiary': 0.5,
+  'quaternary': 0.3
+);
+
+// ==================== TOUCH TARGETS (Apple HIG) ====================
+
+// Touch Target Sizes
+$qs-touch-target-standard: 44px;
+$qs-touch-target-enhanced: 56px;
+
+// ==================== HELPER FUNCTIONS ====================
+
+// Get background color by variant and shade
+@function qs-background($variant, $shade) {
+  @return map-get(map-get($qs-backgrounds, $variant), $shade);
+}
+
+// Get action color by variant and shade
+@function qs-action($variant, $shade) {
+  @return map-get(map-get($qs-actions, $variant), $shade);
+}
+
+// Get foundation color by name
+@function qs-foundation($name) {
+  @return map-get($qs-foundation, $name);
+}
+
+// Get gradient by name
+@function qs-gradient($name) {
+  @return map-get($qs-gradients, $name);
+}
+
+// Get spatial opacity by level
+@function qs-spatial-opacity($level) {
+  @return map-get($qs-spatial-opacity, $level);
+}
+
+// ==================== MIXINS ====================
+
+// Glass Panel Mixin
+@mixin qs-glass-panel($intensity: 'subtle') {
+  background: map-get($qs-glass-opacity, $intensity);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid $qs-glass-border;
+  border-radius: 12px;
+}
+
+// Spatial Background Mixin
+@mixin qs-spatial-background($animated: false) {
+  background: $qs-bg-primary;
+  
+  @if $animated {
+    position: relative;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: $qs-gradient-spatial;
+      opacity: qs-spatial-opacity('subtle');
+      animation: qs-spatial-flow 12s ease-in-out infinite;
+      pointer-events: none;
+    }
+  }
+}
+
+// Apple HIG Text Hierarchy Mixin
+@mixin qs-text($hierarchy: 'primary') {
+  color: map-get($qs-foundation, 'text-#{$hierarchy}');
+}
+
+// Touch Target Mixin (Apple HIG Compliance)
+@mixin qs-touch-target($enhanced: false) {
+  @if $enhanced {
+    min-height: $qs-touch-target-enhanced;
+    min-width: $qs-touch-target-enhanced;
+  } @else {
+    min-height: $qs-touch-target-standard;
+    min-width: $qs-touch-target-standard;
+  }
+}
+
+// Action Button Mixin
+@mixin qs-action-button($variant: 'pixel', $shade: 'blue', $enhanced-touch: false) {
+  background: qs-action($variant, $shade);
+  color: $qs-text-primary;
+  border: none;
+  @include qs-touch-target($enhanced-touch);
+  
+  &:hover {
+    opacity: 0.85;
+  }
+  
+  &:active {
+    opacity: 0.95;
+  }
+}
+
+// Void Enhancement Mixin (for enhancing void black with gradients)
+@mixin qs-void-enhancement($type: 'spatial') {
+  background: $qs-void-black;
+  position: relative;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: qs-gradient($type);
+    opacity: qs-spatial-opacity('subtle');
+    pointer-events: none;
+  }
+}
+
+// ==================== RESPONSIVE MIXINS ====================
+
+// Mobile Touch Target Enhancement
+@mixin qs-mobile-enhanced {
+  @media (max-width: 744px) {
+    @include qs-touch-target(true);
+  }
+}
+
+// ==================== ANIMATION KEYFRAMES ====================
+
+@keyframes qs-spatial-flow {
+  0%, 100% { 
+    background: $qs-gradient-spatial;
+    opacity: qs-spatial-opacity('subtle');
+  }
+  50% { 
+    background: $qs-gradient-deep-spatial;
+    opacity: qs-spatial-opacity('medium');
+  }
+}
+
+@keyframes qs-mystic-pulse {
+  0%, 100% { opacity: qs-spatial-opacity('subtle'); }
+  50% { opacity: qs-spatial-opacity('prominent'); }
+}
+
+@keyframes qs-liquid-flow {
+  0%, 100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+  25% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+  50% { border-radius: 40% 60% 30% 70% / 60% 40% 60% 30%; }
+  75% { border-radius: 70% 30% 40% 60% / 30% 60% 70% 40%; }
+}

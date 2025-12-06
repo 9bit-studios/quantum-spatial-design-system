@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 550">
+  <!-- Background -->
+  <rect width="800" height="550" fill="#f8f9fa" rx="10" ry="10"/>
+  
+  <!-- iPhone mockup -->
+  <rect x="270" y="50" width="260" height="480" rx="30" ry="30" fill="#333"/>
+  <rect x="280" y="90" width="240" height="400" rx="5" ry="5" fill="#1e272e"/>
+  <circle cx="400" cy="65" r="8" fill="#222"/>
+  <rect x="370" y="510" width="60" height="5" rx="2.5" ry="2.5" fill="#222"/>
+  
+  <!-- Game UI -->
+  <text x="400" y="120" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#ecf0f1">ESCAPE THE ANCIENT LIBRARY</text>
+  
+  <!-- Game scene -->
+  <rect x="295" y="140" width="210" height="150" fill="#34495e" rx="5" ry="5"/>
+  
+  <!-- Library scene elements -->
+  <rect x="310" y="155" width="40" height="70" fill="#795548"/> <!-- Bookshelf -->
+  <rect x="360" y="155" width="40" height="70" fill="#795548"/> <!-- Bookshelf -->
+  <rect x="410" y="155" width="40" height="70" fill="#795548"/> <!-- Bookshelf -->
+  <rect x="460" y="155" width="30" height="50" fill="#3c6382"/> <!-- Mysterious artifact -->
+  <rect x="320" y="235" width="160" height="20" fill="#84817a"/> <!-- Table -->
+  <circle cx="345" cy="235" r="8" fill="#f6b93b"/> <!-- Golden key -->
+  <rect x="380" y="220" width="30" height="15" fill="#4a69bd"/> <!-- Ancient tome -->
+  
+  <!-- Game mechanics UI -->
+  <text x="400" y="315" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="14" text-anchor="middle" fill="#ecf0f1">SOLVE THE PUZZLE: 12:45</text>
+  
+  <rect x="295" y="330" width="210" height="45" fill="#2c3e50" rx="5" ry="5"/>
+  <text x="400" y="357" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#ecf0f1">Hint: The symbols on the bookshelf seem to correspond to constellations in the night sky...</text>
+  
+  <!-- Inventory -->
+  <rect x="295" y="390" width="50" height="50" fill="#2c3e50" rx="5" ry="5"/>
+  <rect x="355" y="390" width="50" height="50" fill="#2c3e50" rx="5" ry="5"/>
+  <rect x="415" y="390" width="50" height="50" fill="#2c3e50" rx="5" ry="5"/>
+  <circle cx="320" cy="415" r="15" fill="#f6b93b" opacity="0.3"/> <!-- Empty slot -->
+  <rect x="367" y="405" width="25" height="20" fill="#4a69bd"/> <!-- Book in inventory -->
+  
+  <text x="400" y="460" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#ecf0f1">ROOM 1 of 5</text>
+  
+  <!-- Revenue panel -->
+  <rect x="50" y="150" width="200" height="265" rx="10" ry="10" fill="#fff" stroke="#9C27B0" stroke-width="2"/>
+  <text x="150" y="175" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#333">Monetization Strategy</text>
+  
+  <line x1="60" y1="185" x2="240" y2="185" stroke="#eee" stroke-width="2"/>
+  
+  <text x="60" y="210" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="14" fill="#333">• Free tutorial room ($0)</text>
+  <text x="60" y="235" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="14" fill="#333">• Full game ($6.99)</text>
+  <text x="60" y="260" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="14" fill="#333">• Premium hint package ($2.99)</text>
+  <text x="60" y="285" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="14" fill="#333">• Additional rooms ($3.99 each)</text>
+  <text x="60" y="310" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="14" fill="#333">• Room bundle packs ($9.99)</text>
+  <text x="60" y="335" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="14" fill="#333">• Cross-promotion to RPG</text>
+  
+  <rect x="60" y="355" width="180" height="40" fill="#f8f9fa" rx="5" ry="5"/>
+  <text x="150" y="380" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#9C27B0">1-Month Development</text>
+  
+  <!-- Tech panel -->
+  <rect x="550" y="150" width="200" height="265" rx="10" ry="10" fill="#fff" stroke="#9C27B0" stroke-width="2"/>
+  <text x="650" y="175" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#333">Technical Implementation</text>
+  
+  <line x1="560" y1="185" x2="740" y2="185" stroke="#eee" stroke-width="2"/>
+  
+  <text x="560" y="210" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="14" fill="#333">• SwiftUI for UI components</text>
+  <text x="560" y="235" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="14" fill="#333">• CloudKit for save states</text>
+  <text x="560" y="260" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="14" fill="#333">• AI-generated puzzles</text>
+  <text x="560" y="285" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="14" fill="#333">• In-app purchases</text>
+  <text x="560" y="310" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="14" fill="#333">• Shared code with RPG</text>
+  <text x="560" y="335" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="14" fill="#333">• Connected to Jrotharke lore</text>
+  
+  <rect x="560" y="355" width="180" height="40" fill="#f8f9fa" rx="5" ry="5"/>
+  <text x="650" y="380" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#9C27B0">iOS App Release</text>
+  
+  <!-- Title -->
+  <text x="400" y="40" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#333">Virtual Escape Room: Mysteries of Aldoria</text>
+</svg>

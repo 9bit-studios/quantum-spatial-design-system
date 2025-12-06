@@ -1,0 +1,50 @@
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="glow-superposition-green-base" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <linearGradient id="superposition-gradient-superposition-green-base" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3DFF74" stop-opacity="0.6"/>
+      <stop offset="50%" stop-color="#2C5F2D" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#3DFF74" stop-opacity="0.6"/>
+    </linearGradient>
+  </defs>
+  <rect 
+    x="2" 
+    y="2" 
+    width="28" 
+    height="28" 
+    rx="2" 
+    fill="url(#superposition-gradient-superposition-green-base)" 
+    opacity="0.85"
+    filter="url(#glow-superposition-green-base)"
+  />
+  <rect 
+    x="4" 
+    y="4" 
+    width="24" 
+    height="24" 
+    rx="2" 
+    fill="#2C5F2D" 
+    opacity="0.7"
+    
+  />
+  <rect 
+    x="6" 
+    y="6" 
+    width="20" 
+    height="20" 
+    rx="2" 
+    fill="#2C5F2D" 
+    opacity="0.55"
+    
+  />
+  <circle 
+    cx="27.2" 
+    cy="27.2" 
+    r="3.2" 
+    fill="#3DFF74" 
+    opacity="0.85"
+  />
+</svg>

@@ -1,0 +1,279 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600">
+  <!-- Background -->
+  <rect width="900" height="600" fill="#0A0621" />
+  
+  <!-- Dimensional grid with perspective effect -->
+  <g opacity="0.1">
+    <!-- Horizontal grid lines with perspective warp -->
+    <path d="M150,550 Q450,530 750,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M125,500 Q450,490 775,500" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M100,450 Q450,440 800,450" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M75,400 Q450,390 825,400" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M65,350 Q450,340 835,350" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M55,300 Q450,290 845,300" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M45,250 Q450,240 855,250" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M35,200 Q450,190 865,200" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M25,150 Q450,140 875,150" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M20,100 Q450,90 880,100" stroke="#5AC8FA" stroke-width="1" />
+    
+    <!-- Vertical grid lines with warp -->
+    <path d="M150,100 Q160,300 150,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M225,100 Q235,300 225,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M300,100 Q310,300 300,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M375,100 Q385,300 375,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M450,100 Q460,300 450,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M525,100 Q535,300 525,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M600,100 Q610,300 600,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M675,100 Q685,300 675,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M750,100 Q760,300 750,550" stroke="#5AC8FA" stroke-width="1" />
+  </g>
+  
+  <!-- Title -->
+  <text x="450" y="50" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" font-size="28" font-weight="bold" fill="#FFFFFF" text-anchor="middle">3D Isometric Transitional State</text>
+  <text x="450" y="80" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" font-size="18" fill="#5AC8FA" text-anchor="middle">9Bit Studios Quantum-Spatial Object Evolution</text>
+  
+  <!-- Main Visualization Area -->
+  <g transform="translate(450, 320)">
+    <!-- Central object - main display area -->
+    <g>
+      <!-- Background circle/environment -->
+      <circle cx="0" cy="0" r="200" fill="url(#environment-gradient)" opacity="0.8" />
+      
+      <!-- Heritage state - Old state evaporating -->
+      <g transform="translate(-140, -40) scale(0.7)" opacity="0.5">
+        <animateTransform attributeName="transform" type="translate" values="-140,-40;-160,-50;-140,-40" dur="8s" repeatCount="indefinite" additive="sum" />
+        <animate attributeName="opacity" values="0.5;0.3;0.5" dur="8s" repeatCount="indefinite" />
+        
+        <!-- 2D Pixel Heritage State -->
+        <rect x="-30" y="-30" width="60" height="60" fill="#331F4A" />
+        
+        <!-- Pixelated outline to show breaking state -->
+        <rect x="-30" y="-30" width="10" height="10" fill="#331F4A" opacity="0.6" />
+        <rect x="-10" y="-30" width="10" height="10" fill="#331F4A" opacity="0.5" />
+        <rect x="10" y="-30" width="10" height="10" fill="#331F4A" opacity="0.7" />
+        <rect x="-30" y="-10" width="10" height="10" fill="#331F4A" opacity="0.7" />
+        <rect x="20" y="-20" width="10" height="10" fill="#331F4A" opacity="0.4" />
+        <rect x="20" y="0" width="10" height="10" fill="#331F4A" opacity="0.5" />
+        <rect x="20" y="20" width="10" height="10" fill="#331F4A" opacity="0.6" />
+        <rect x="0" y="20" width="10" height="10" fill="#331F4A" opacity="0.5" />
+        <rect x="-20" y="20" width="10" height="10" fill="#331F4A" opacity="0.4" />
+        <rect x="-30" y="10" width="10" height="10" fill="#331F4A" opacity="0.5" />
+        
+        <!-- Heritage state label -->
+        <text x="0" y="50" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle">Heritage State</text>
+      </g>
+      
+      <!-- Main Transitional Isometric Object -->
+      <g>
+        <animateTransform attributeName="transform" type="rotate" values="0;5;-5;0" dur="10s" repeatCount="indefinite" />
+        
+        <!-- The transitional object combines multiple states in one -->
+        
+        <!-- Base isometric cube (expanded to show more dimensionality) -->
+        <g>
+          <!-- Bottom face -->
+          <path d="M0,60 L-80,20 L0,-20 L80,20 Z" fill="#331F4A" />
+          
+          <!-- Left face -->
+          <path d="M-80,20 L-80,-60 L0,-100 L0,-20 Z" fill="#40275A" />
+          
+          <!-- Right face -->
+          <path d="M80,20 L80,-60 L0,-100 L0,-20 Z" fill="#6A3093" />
+          
+          <!-- Inner energy core -->
+          <path d="M0,30 L-40,10 L-40,-40 L0,-60 L40,-40 L40,10 Z" fill="#BF4080" opacity="0.6">
+            <animate attributeName="opacity" values="0.6;0.8;0.6" dur="3s" repeatCount="indefinite" />
+          </path>
+        </g>
+        
+        <!-- Breaking/Forming Quantum Pixels - elements breaking off from the main shape -->
+        <!-- These represent the object in transition between states -->
+        
+        <!-- Detaching elements (top) -->
+        <g transform="translate(0, -120)">
+          <animateTransform attributeName="transform" type="translate" values="0,-120;0,-130;0,-120" dur="4s" repeatCount="indefinite" additive="sum" />
+          
+          <!-- Isometric cube fragment -->
+          <path d="M0,10 L-15,2 L0,-6 L15,2 Z" fill="#6A3093" />
+          <path d="M-15,2 L-15,-10 L0,-18 L0,-6 Z" fill="#40275A" />
+          <path d="M15,2 L15,-10 L0,-18 L0,-6 Z" fill="#6A3093" />
+          
+          <!-- Energy connection to main object -->
+          <path d="M0,0 L0,20" stroke="#5AC8FA" stroke-width="2" opacity="0.6">
+            <animate attributeName="opacity" values="0.6;0.2;0.6" dur="2s" repeatCount="indefinite" />
+          </path>
+        </g>
+        
+        <!-- Detaching elements (right) -->
+        <g transform="translate(100, -30)">
+          <animateTransform attributeName="transform" type="translate" values="100,-30;110,-35;100,-30" dur="5s" repeatCount="indefinite" additive="sum" />
+          
+          <!-- Isometric cube fragment -->
+          <path d="M0,10 L-15,2 L0,-6 L15,2 Z" fill="#6A3093" />
+          <path d="M-15,2 L-15,-10 L0,-18 L0,-6 Z" fill="#40275A" />
+          <path d="M15,2 L15,-10 L0,-18 L0,-6 Z" fill="#6A3093" />
+          
+          <!-- Energy connection to main object -->
+          <path d="M-20,0 L0,0" stroke="#5AC8FA" stroke-width="2" opacity="0.6">
+            <animate attributeName="opacity" values="0.6;0.2;0.6" dur="2.3s" repeatCount="indefinite" />
+          </path>
+        </g>
+        
+        <!-- Detaching elements (left) -->
+        <g transform="translate(-100, -30)">
+          <animateTransform attributeName="transform" type="translate" values="-100,-30;-110,-35;-100,-30" dur="4.5s" repeatCount="indefinite" additive="sum" />
+          
+          <!-- Isometric cube fragment -->
+          <path d="M0,10 L-15,2 L0,-6 L15,2 Z" fill="#6A3093" />
+          <path d="M-15,2 L-15,-10 L0,-18 L0,-6 Z" fill="#40275A" />
+          <path d="M15,2 L15,-10 L0,-18 L0,-6 Z" fill="#6A3093" />
+          
+          <!-- Energy connection to main object -->
+          <path d="M20,0 L0,0" stroke="#5AC8FA" stroke-width="2" opacity="0.6">
+            <animate attributeName="opacity" values="0.6;0.2;0.6" dur="2.5s" repeatCount="indefinite" />
+          </path>
+        </g>
+        
+        <!-- Forming elements (bottom) - representing the new state coming into being -->
+        <g transform="translate(0, 80)">
+          <animateTransform attributeName="transform" type="translate" values="0,80;0,90;0,80" dur="6s" repeatCount="indefinite" additive="sum" />
+          
+          <!-- Quantum state emerging cube -->
+          <path d="M0,15 L-25,0 L0,-15 L25,0 Z" fill="#6A3093" />
+          <path d="M-25,0 L-25,-20 L0,-35 L0,-15 Z" fill="#40275A" />
+          <path d="M25,0 L25,-20 L0,-35 L0,-15 Z" fill="#6A3093" />
+          
+          <!-- Energy core forming in the new element -->
+          <path d="M0,5 L-10,0 L-10,-10 L0,-15 L10,-10 L10,0 Z" fill="#BF4080" opacity="0.7">
+            <animate attributeName="opacity" values="0.7;0.9;0.7" dur="2s" repeatCount="indefinite" />
+          </path>
+          
+          <!-- Energy connection to main object -->
+          <path d="M0,-15 L0,-25" stroke="#5AC8FA" stroke-width="2" opacity="0.6">
+            <animate attributeName="opacity" values="0.6;0.3;0.6" dur="2s" repeatCount="indefinite" />
+          </path>
+        </g>
+        
+        <!-- Energy emission particles and effects -->
+        <g>
+          <!-- Energy particles -->
+          <circle cx="0" cy="-120" r="5" fill="#5AC8FA" opacity="0.8">
+            <animate attributeName="cy" values="-100;-120;-100" dur="3s" repeatCount="indefinite" />
+            <animate attributeName="opacity" values="0.8;0.2;0.8" dur="3s" repeatCount="indefinite" />
+          </circle>
+          
+          <circle cx="80" cy="-40" r="4" fill="#5AC8FA" opacity="0.7">
+            <animate attributeName="cx" values="80;95;80" dur="4s" repeatCount="indefinite" />
+            <animate attributeName="opacity" values="0.7;0.1;0.7" dur="4s" repeatCount="indefinite" />
+          </circle>
+          
+          <circle cx="-80" cy="-40" r="4" fill="#5AC8FA" opacity="0.7">
+            <animate attributeName="cx" values="-80;-95;-80" dur="3.5s" repeatCount="indefinite" />
+            <animate attributeName="opacity" values="0.7;0.1;0.7" dur="3.5s" repeatCount="indefinite" />
+          </circle>
+          
+          <circle cx="0" cy="60" r="5" fill="#5AC8FA" opacity="0.6">
+            <animate attributeName="cy" values="60;75;60" dur="5s" repeatCount="indefinite" />
+            <animate attributeName="opacity" values="0.6;0.1;0.6" dur="5s" repeatCount="indefinite" />
+          </circle>
+          
+          <!-- Energy aura around the main object -->
+          <ellipse cx="0" cy="0" rx="100" ry="120" fill="none" stroke="#5AC8FA" stroke-width="1" opacity="0.3">
+            <animate attributeName="rx" values="100;110;100" dur="10s" repeatCount="indefinite" />
+            <animate attributeName="ry" values="120;130;120" dur="10s" repeatCount="indefinite" />
+            <animate attributeName="opacity" values="0.3;0.1;0.3" dur="10s" repeatCount="indefinite" />
+          </ellipse>
+          
+          <ellipse cx="0" cy="0" rx="120" ry="100" fill="none" stroke="#BF4080" stroke-width="1" opacity="0.2">
+            <animate attributeName="rx" values="120;130;120" dur="15s" repeatCount="indefinite" />
+            <animate attributeName="ry" values="100;110;100" dur="15s" repeatCount="indefinite" />
+            <animate attributeName="opacity" values="0.2;0.1;0.2" dur="15s" repeatCount="indefinite" />
+          </ellipse>
+        </g>
+        
+        <!-- Quantum state label -->
+        <text x="0" y="120" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">Transitional State</text>
+      </g>
+      
+      <!-- Future/Quantum state - New materialized state forming -->
+      <g transform="translate(140, 40) scale(0.8)" opacity="0.7">
+        <animateTransform attributeName="transform" type="translate" values="140,40;160,50;140,40" dur="8s" repeatCount="indefinite" additive="sum" />
+        <animate attributeName="opacity" values="0.7;0.9;0.7" dur="8s" repeatCount="indefinite" />
+        
+        <!-- Fully formed quantum cube in advanced state -->
+        <path d="M0,40 L-50,15 L0,-10 L50,15 Z" fill="#6A3093" />
+        <path d="M-50,15 L-50,-35 L0,-60 L0,-10 Z" fill="#40275A" />
+        <path d="M50,15 L50,-35 L0,-60 L0,-10 Z" fill="#6A3093" />
+        
+        <!-- Energy core fully formed -->
+        <path d="M0,20 L-25,7.5 L-25,-25 L0,-37.5 L25,-25 L25,7.5 Z" fill="#BF4080" opacity="0.8">
+          <animate attributeName="opacity" values="0.8;1;0.8" dur="3s" repeatCount="indefinite" />
+        </path>
+        
+        <!-- Advanced quantum effects -->
+        <circle cx="0" cy="-60" r="10" fill="#5AC8FA" opacity="0.4">
+          <animate attributeName="r" values="10;15;10" dur="3s" repeatCount="indefinite" />
+          <animate attributeName="opacity" values="0.4;0.6;0.4" dur="3s" repeatCount="indefinite" />
+        </circle>
+        
+        <!-- Quantum state label -->
+        <text x="0" y="70" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle">Quantum State</text>
+      </g>
+    </g>
+    
+    <!-- Dimensional planes representation -->
+    <g opacity="0.3">
+      <!-- Planes showing the dimensional transitions between states -->
+      <!-- Horizontal transition plane -->
+      <ellipse cx="0" cy="0" rx="220" ry="80" fill="none" stroke="#5AC8FA" stroke-width="1">
+        <animateTransform attributeName="transform" type="rotate" values="0;360" dur="60s" repeatCount="indefinite" />
+      </ellipse>
+      
+      <!-- Vertical transition plane -->
+      <ellipse cx="0" cy="0" rx="80" ry="220" fill="none" stroke="#BF4080" stroke-width="1">
+        <animateTransform attributeName="transform" type="rotate" values="0;360" dur="45s" repeatCount="indefinite" />
+      </ellipse>
+      
+      <!-- Diagonal transition plane -->
+      <ellipse cx="0" cy="0" rx="180" ry="180" fill="none" stroke="#6A3093" stroke-width="1" transform="rotate(45)">
+        <animateTransform attributeName="transform" type="rotate" from="45" to="405" dur="75s" repeatCount="indefinite" />
+      </ellipse>
+    </g>
+  </g>
+  
+  <!-- Explanation Areas -->
+  <g transform="translate(190, 190)">
+    <rect x="-180" y="-40" width="360" height="80" rx="10" fill="#131A36" opacity="0.8" />
+    <text x="0" y="-15" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" font-size="18" fill="#FFFFFF" text-anchor="middle">Transitional Phase Mechanics</text>
+    <text x="0" y="15" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#5AC8FA" text-anchor="middle">Quantum pixels dynamically reassemble between states,</text>
+    <text x="0" y="35" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#5AC8FA" text-anchor="middle">maintaining energy core continuity through transformation</text>
+  </g>
+  
+  <g transform="translate(710, 190)">
+    <rect x="-180" y="-40" width="360" height="80" rx="10" fill="#131A36" opacity="0.8" />
+    <text x="0" y="-15" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" font-size="18" fill="#FFFFFF" text-anchor="middle">Multi-State Properties</text>
+    <text x="0" y="15" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#5AC8FA" text-anchor="middle">Objects exist simultaneously across all quantum states</text>
+    <text x="0" y="35" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#5AC8FA" text-anchor="middle">with variable manifestation intensity based on user focus</text>
+  </g>
+  
+  <g transform="translate(190, 450)">
+    <rect x="-180" y="-40" width="360" height="80" rx="10" fill="#131A36" opacity="0.8" />
+    <text x="0" y="-15" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" font-size="18" fill="#FFFFFF" text-anchor="middle">Dimensional Transfer</text>
+    <text x="0" y="15" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#5AC8FA" text-anchor="middle">Energy core maintains connections across all states,</text>
+    <text x="0" y="35" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#5AC8FA" text-anchor="middle">allowing smooth transitions between dimensional expressions</text>
+  </g>
+  
+  <g transform="translate(710, 450)">
+    <rect x="-180" y="-40" width="360" height="80" rx="10" fill="#131A36" opacity="0.8" />
+    <text x="0" y="-15" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" font-size="18" fill="#FFFFFF" text-anchor="middle">AR Interaction Model</text>
+    <text x="0" y="15" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#5AC8FA" text-anchor="middle">Hand gestures and spatial position determine state,</text>
+    <text x="0" y="35" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#5AC8FA" text-anchor="middle">with proximity triggering dimensional transformations</text>
+  </g>
+  
+  <!-- Bottom Section - User Experience Description -->
+  <g transform="translate(450, 560)">
+    <rect x="-425" y="-30" width="850" height="60" rx="10" fill="#131A36" opacity="0.9" />
+    <text x="0" y="0" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Immersive Quantum-Spatial Brand Experience</text>
+    <text x="0" y="25" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#5AC8FA" text-anchor="middle">Users experience brand elements transitioning between dimensional states based on their interaction, creating a distinctive and memorable spatial identity</text>
+  </g>
+ </svg> 

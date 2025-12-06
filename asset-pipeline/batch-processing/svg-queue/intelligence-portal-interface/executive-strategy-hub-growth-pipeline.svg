@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="linear-gradient" x1="64.216" y1="3211.746" x2="79.299" y2="3211.746" gradientTransform="translate(0 -2251.905)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5ac8fa"/>
+      <stop offset=".5" stop-color="#126d71"/>
+      <stop offset="1" stop-color="#36eae8"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" y1="3239.499" y2="3239.499" xlink:href="#linear-gradient"/>
+    <linearGradient id="Accent_Highlight_Gradient" data-name="Accent Highlight Gradient" x1="19.642" y1="84.78" x2="650.328" y2="84.78" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5ac8fa"/>
+      <stop offset=".5" stop-color="#126d71"/>
+      <stop offset="1" stop-color="#36eae8"/>
+    </linearGradient>
+  </defs>
+  <g id="Background_logo_footer" data-name="Background + logo footer">
+    <rect x="10" y=".092" width="1916.363" height="1103.346" fill="none"/>
+    <rect y="-5.266" width="1921.152" height="1098.957" fill="#0a0621"/>
+    <g opacity=".1">
+      <path d="M311.152,984.734c426.667-24,853.333-24,1280,0" stroke="#5ac8fa" stroke-width="1.96"/>
+      <path d="M257.818,894.734c462.222-12,924.444-12,1386.667,0" stroke="#5ac8fa" stroke-width="1.96"/>
+      <path d="M204.485,804.734c497.778-12,995.556-12,1493.333,0" stroke="#5ac8fa" stroke-width="1.96"/>
+      <path d="M151.152,714.734c533.333-12,1066.667-12,1600,0" stroke="#5ac8fa" stroke-width="1.96"/>
+      <path d="M129.818,624.734c547.556-12,1095.111-12,1642.667,0" stroke="#5ac8fa" stroke-width="1.96"/>
+      <path d="M108.485,534.734c561.778-12,1123.556-12,1685.333,0" stroke="#5ac8fa" stroke-width="1.96"/>
+      <path d="M87.152,444.734c576-12,1152-12,1728,0" stroke="#5ac8fa" stroke-width="1.96"/>
+      <path d="M65.818,354.734c590.222-12,1180.444-12,1770.667,0" stroke="#5ac8fa" stroke-width="1.96"/>
+      <path d="M44.485,264.734c604.444-12,1208.889-12,1813.333,0" stroke="#5ac8fa" stroke-width="1.96"/>
+      <path d="M33.818,174.734c611.556-12,1223.111-12,1834.667,0" stroke="#5ac8fa" stroke-width="1.96"/>
+      <path d="M311.152,174.734c14.222,240,14.222,510,0,810" stroke="#5ac8fa" stroke-width="1.96"/>
+      <path d="M471.152,174.734c14.222,240,14.222,510,0,810" stroke="#5ac8fa" stroke-width="1.96"/>
+      <path d="M631.152,174.734c14.222,240,14.222,510,0,810" stroke="#5ac8fa" stroke-width="1.96"/>
+      <path d="M791.152,174.734c14.222,240,14.222,510,0,810" stroke="#5ac8fa" stroke-width="1.96"/>
+      <path d="M951.152,174.734c14.222,240,14.222,510,0,810" stroke="#5ac8fa" stroke-width="1.96"/>
+      <path d="M1111.152,174.734c14.222,240,14.222,510,0,810" stroke="#5ac8fa" stroke-width="1.96"/>
+      <path d="M1271.152,174.734c14.222,240,14.222,510,0,810" stroke="#5ac8fa" stroke-width="1.96"/>
+      <path d="M1431.152,174.734c14.222,240,14.222,510,0,810" stroke="#5ac8fa" stroke-width="1.96"/>
+      <path d="M1591.152,174.734c14.222,240,14.222,510,0,810" stroke="#5ac8fa" stroke-width="1.96"/>
+    </g>
+    <g>
+      <rect x="50.943" y="939.026" width="13.877" height="13.877" fill="#331f4a"/>
+      <rect x="64.819" y="939.026" width="13.877" height="13.877" fill="#331f4a"/>
+      <rect x="78.696" y="939.026" width="13.877" height="13.877" fill="#331f4a"/>
+      <rect x="50.943" y="952.903" width="13.877" height="13.877" fill="#331f4a"/>
+      <rect x="78.696" y="952.903" width="13.877" height="13.877" fill="#331f4a"/>
+      <rect x="50.943" y="966.779" width="13.877" height="13.877" fill="#331f4a"/>
+      <rect x="64.819" y="966.779" width="13.877" height="13.877" fill="#331f4a"/>
+      <rect x="78.696" y="966.779" width="13.877" height="13.877" fill="#331f4a"/>
+      <rect x="78.696" y="980.656" width="13.877" height="13.877" fill="#331f4a"/>
+      <rect x="78.696" y="994.653" width="13.877" height="13.877" fill="#331f4a"/>
+      <rect x="50.943" y="994.653" width="13.877" height="13.877" fill="#331f4a"/>
+      <rect x="64.819" y="994.653" width="13.877" height="13.877" fill="#331f4a"/>
+      <rect x="64.819" y="952.903" width="13.877" height="13.877" fill="#36eae8" stroke="url(#linear-gradient)" stroke-opacity=".3" stroke-width="1.207"/>
+      <rect x="50.943" y="980.656" width="13.877" height="13.877" fill="#36eae8" isolation="isolate" opacity=".5"/>
+      <rect x="64.819" y="980.656" width="13.877" height="13.877" fill="#36eae8" stroke="url(#linear-gradient-2)" stroke-opacity=".3" stroke-width="1.207"/>
+    </g>
+    <g isolation="isolate">
+      <g isolation="isolate">
+        <text transform="translate(50.221 1034.955)" fill="#fff" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="15.204" font-weight="500" isolation="isolate"><tspan x="0" y="0">9B</tspan><tspan x="19.354" y="0" letter-spacing="-.004em">i</tspan><tspan x="22.35" y="0">t </tspan><tspan x="30.848" y="0" letter-spacing="-.014em">S</tspan><tspan x="39.819" y="0">t</tspan><tspan x="45.459" y="0" letter-spacing="-.002em">u</tspan><tspan x="54.079" y="0">d</tspan><tspan x="62.776" y="0" letter-spacing="-.005em">i</tspan><tspan x="65.756" y="0">os</tspan></text>
+      </g>
+    </g>
+  </g>
+  <g id="Content">
+    <rect x="380.485" y="154.751" width="1200" height="800" fill="#131a36"/>
+    <g opacity=".1">
+      <path d="M380.485,254.751h1200" stroke="#5ac8fa"/>
+      <path d="M380.485,354.751h1200" stroke="#5ac8fa"/>
+      <path d="M380.485,454.751h1200" stroke="#5ac8fa"/>
+      <path d="M380.485,554.751h1200" stroke="#5ac8fa"/>
+      <path d="M380.485,654.751h1200" stroke="#5ac8fa"/>
+      <path d="M380.485,754.751h1200" stroke="#5ac8fa"/>
+      <path d="M380.485,854.751h1200" stroke="#5ac8fa"/>
+      <path d="M480.485,154.751v800" stroke="#5ac8fa"/>
+      <path d="M680.485,154.751v800" stroke="#5ac8fa"/>
+      <path d="M880.485,154.751v800" stroke="#5ac8fa"/>
+      <path d="M1080.485,154.751v800" stroke="#5ac8fa"/>
+      <path d="M1280.485,154.751v800" stroke="#5ac8fa"/>
+      <path d="M1480.485,154.751v800" stroke="#5ac8fa"/>
+    </g>
+    <rect x="380.485" y="154.751" width="1200" height="70" fill="#331f4a"/>
+    <text transform="translate(440.485 194.751)" fill="#fff" font-family="SF Pro Display, -apple-system, system-ui, sans-serif" font-size="24" font-weight="700" isolation="isolate"><tspan x="0" y="0">Executive Strategy Hub</tspan></text>
+    <path d="M1000.485,169.751h510c11.046,0,20,8.954,20,20h0c0,11.046-8.954,20-20,20h-510c-11.046,0-20-8.954-20-20h0c0-11.046,8.954-20,20-20Z" fill="#0d0d15"/>
+    <text transform="translate(1010.485 194.751)" fill="#5ac8fa" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="14" isolation="isolate"><tspan x="0" y="0" letter-spacing="-.018em">W</tspan><tspan x="12.961" y="0">orkspaces /</tspan></text>
+    <text transform="translate(1110.485 194.751)" fill="#bf4080" font-family="SF Pro Display, -apple-system, system-ui, sans-serif" font-size="14" font-weight="700" isolation="isolate"><tspan x="0" y="0">Executive Strategy Hub</tspan></text>
+    <text transform="translate(1470.485 194.751)" fill="#bf4080" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="14" isolation="isolate"><tspan x="0" y="0">AI</tspan><tspan x="13.228" y="0" letter-spacing="-.055em"> </tspan><tspan x="16.345" y="0">Active</tspan></text>
+    <circle cx="1500.485" cy="189.751" r="8" fill="#bf4080"/>
+    <path d="M455.485,224.751h170c8.284,0,15,6.716,15,15h0c0,8.284-6.716,15-15,15h-170c-8.284,0-15-6.716-15-15h0c0-8.284,6.716-15,15-15Z" fill="#0d0d15"/>
+    <text transform="translate(451.201 244.751)" fill="#5ac8fa" font-size="14" isolation="isolate"><tspan x="0" y="0" font-family="MyriadPro-Regular, &apos;Myriad Pro&apos;">↩</tspan><tspan x="7" y="0" xml:space="preserve" font-family="SF Pro Text, -apple-system, system-ui, sans-serif"> Back to Central Command</tspan></text>
+    <g>
+      <rect x="430.485" y="274.751" width="550" height="300" rx="10" ry="10" fill="#0d0d15" stroke="#bf4080" stroke-width="2"/>
+      <text transform="translate(577.697 304.751)" fill="#fff" font-family="SF Pro Display, -apple-system, system-ui, sans-serif" font-size="20" font-weight="700" isolation="isolate"><tspan x="0" y="0">Pitch Evolution Dashboard</tspan></text>
+      <g>
+        <rect x="460.485" y="334.751" width="490" height="100" rx="5" ry="5" fill="#331f4a"/>
+        <text transform="translate(632.122 354.751)" fill="#fff" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="16" isolation="isolate"><tspan x="0" y="0">Pitch Deck Iterations</tspan></text>
+        <circle cx="510.485" cy="394.751" r="10" fill="#5ac8fa"/>
+        <line x1="510.485" y1="394.751" x2="610.485" y2="394.751" fill="none" stroke="#5ac8fa" stroke-width="2"/>
+        <text transform="translate(499.144 154.751)" fill="#fff" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12" isolation="isolate"><tspan x="0" y="0">v1.0</tspan></text>
+        <circle cx="610.485" cy="394.751" r="10" fill="#5ac8fa"/>
+        <line x1="610.485" y1="394.751" x2="710.485" y2="394.751" fill="none" stroke="#5ac8fa" stroke-width="2"/>
+        <text transform="translate(599.144 154.751)" fill="#fff" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12" isolation="isolate"><tspan x="0" y="0">v1.5</tspan></text>
+        <circle cx="710.485" cy="394.751" r="10" fill="#5ac8fa"/>
+        <line x1="710.485" y1="394.751" x2="810.485" y2="394.751" fill="none" stroke="#5ac8fa" stroke-width="2"/>
+        <text transform="translate(699.144 154.751)" fill="#fff" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12" isolation="isolate"><tspan x="0" y="0">v2.0</tspan></text>
+        <circle cx="810.485" cy="394.751" r="10" fill="#bf4080"/>
+        <text transform="translate(790.478 154.751)" fill="#fff" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12" isolation="isolate"><tspan x="0" y="0">Current</tspan></text>
+        <circle cx="810.485" cy="379.751" r="8" fill="#bf4080" stroke="#fff"/>
+        <text transform="translate(806.485 154.751)" fill="#fff" font-family="SF Pro Display, -apple-system, system-ui, sans-serif" font-size="8" font-weight="700" isolation="isolate"><tspan x="0" y="0">AI</tspan></text>
+      </g>
+      <rect x="460.485" y="454.751" width="230" height="100" rx="5" ry="5" fill="#331f4a"/>
+      <text transform="translate(518.125 474.751)" fill="#fff" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="16" isolation="isolate"><tspan x="0" y="0">Investor Interest</tspan></text>
+      <text transform="translate(547.464 509.751)" fill="#29B6F6" font-family="SF Pro Display, -apple-system, system-ui, sans-serif" font-size="28" font-weight="700" isolation="isolate"><tspan x="0" y="0">82%</tspan></text>
+      <text transform="translate(524.909 534.751)" fill="#fff" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="14" isolation="isolate"><tspan x="0" y="0">↑ 12% from v2.0</tspan></text>
+      <rect x="720.485" y="454.751" width="230" height="100" rx="5" ry="5" fill="#331f4a"/>
+      <text transform="translate(779.305 474.751)" fill="#fff" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="16" isolation="isolate"><tspan x="0" y="0" letter-spacing="-.037em">T</tspan><tspan x="9.18" y="0">ime to Engage</tspan></text>
+      <text transform="translate(787.244 509.751)" fill="#29B6F6" font-family="SF Pro Display, -apple-system, system-ui, sans-serif" font-size="28" font-weight="700" isolation="isolate"><tspan x="0" y="0">3.2 min</tspan></text>
+      <text transform="translate(775.964 534.751)" fill="#fff" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="14" isolation="isolate"><tspan x="0" y="0">↓ 0.8 min from v2.0</tspan></text>
+      <rect x="430.485" y="594.751" width="550" height="340" rx="10" ry="10" fill="#0d0d15" stroke="#6a3093" stroke-width="2"/>
+      <text transform="translate(584.347 624.751)" fill="#fff" font-family="SF Pro Display, -apple-system, system-ui, sans-serif" font-size="20" font-weight="700" isolation="isolate"><tspan x="0" y="0">Strategic Document </tspan><tspan x="194.482" y="0" letter-spacing="-.055em">V</tspan><tspan x="206.719" y="0">ault</tspan></text>
+      <rect x="460.485" y="644.751" width="490" height="40" rx="5" ry="5" fill="#331f4a"/>
+      <path d="M485.485,649.751h60c8.284,0,15,6.716,15,15h0c0,8.284-6.716,15-15,15h-60c-8.284,0-15-6.716-15-15h0c0-8.284,6.716-15,15-15Z" fill="#bf4080"/>
+      <text transform="translate(494.092 669.751)" fill="#fff" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="14" isolation="isolate"><tspan x="0" y="0">Market</tspan></text>
+      <path d="M585.485,649.751h60c8.284,0,15,6.716,15,15h0c0,8.284-6.716,15-15,15h-60c-8.284,0-15-6.716-15-15h0c0-8.284,6.716-15,15-15Z" fill="#5ac8fa"/>
+      <text transform="translate(591.361 669.751)" fill="#fff" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="14" isolation="isolate"><tspan x="0" y="0">Product</tspan></text>
+      <path d="M685.485,649.751h60c8.284,0,15,6.716,15,15h0c0,8.284-6.716,15-15,15h-60c-8.284,0-15-6.716-15-15h0c0-8.284,6.716-15,15-15Z" fill="#ffd166"/>
+      <text transform="translate(687.471 669.751)" fill="#fff" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="14" isolation="isolate"><tspan x="0" y="0">Financial</tspan></text>
+      <path d="M785.485,649.751h60c8.284,0,15,6.716,15,15h0c0,8.284-6.716,15-15,15h-60c-8.284,0-15-6.716-15-15h0c0-8.284,6.716-15,15-15Z" fill="#29B6F6"/>
+      <text transform="translate(798.357 669.751)" fill="#fff" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="14" isolation="isolate"><tspan x="0" y="0">Legal</tspan></text>
+      <rect x="460.485" y="704.751" width="490" height="50" rx="5" ry="5" fill="#331f4a"/>
+      <text transform="translate(480.485 734.751)" fill="#fff" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="16" isolation="isolate"><tspan x="0" y="0">M4-Optimized Game Dev Whitepaper</tspan></text>
+      <path d="M840.485,719.751h80c5.523,0,10,4.477,10,10h0c0,5.523-4.477,10-10,10h-80c-5.523,0-10-4.477-10-10h0c0-5.523,4.477-10,10-10Z" fill="#bf4080"/>
+      <text transform="translate(846.125 734.751)" fill="#fff" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12" isolation="isolate"><tspan x="0" y="0">AI Enhanced</tspan></text>
+      <rect x="460.485" y="764.751" width="490" height="50" rx="5" ry="5" fill="#331f4a"/>
+      <text transform="translate(480.485 794.751)" fill="#fff" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="16" isolation="isolate"><tspan x="0" y="0">Privacy-First</tspan><tspan x="88.883" y="0" letter-spacing="-.055em"> </tspan><tspan x="92.445" y="0">AI Framework</tspan></text>
+      <path d="M840.485,779.751h80c5.523,0,10,4.477,10,10h0c0,5.523-4.477,10-10,10h-80c-5.523,0-10-4.477-10-10h0c0-5.523,4.477-10,10-10Z" fill="#bf4080"/>
+      <text transform="translate(846.125 794.751)" fill="#fff" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12" isolation="isolate"><tspan x="0" y="0">AI Enhanced</tspan></text>
+      <rect x="460.485" y="824.751" width="490" height="50" rx="5" ry="5" fill="#331f4a"/>
+      <text transform="translate(480.485 854.751)" fill="#fff" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="16" isolation="isolate"><tspan x="0" y="0" letter-spacing="-.018em">V</tspan><tspan x="10.383" y="0">ision Pro Market</tspan><tspan x="125.977" y="0" letter-spacing="-.055em"> </tspan><tspan x="129.539" y="0">Analysis</tspan></text>
+      <rect x="460.485" y="884.751" width="490" height="30" rx="5" ry="5" fill="#5ac8fa" isolation="isolate" opacity=".6"/>
+      <text transform="translate(608.018 904.751)" fill="#fff" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="14" isolation="isolate"><tspan x="0" y="0">+</tspan><tspan x="8.176" y="0" letter-spacing="-.055em"> </tspan><tspan x="11.293" y="0">Add New Strategic Document</tspan></text>
+      <rect x="1000.485" y="274.751" width="550" height="300" rx="10" ry="10" fill="#0d0d15" stroke="#5ac8fa" stroke-width="2"/>
+      <text transform="translate(1116.574 304.751)" fill="#fff" font-family="SF Pro Display, -apple-system, system-ui, sans-serif" font-size="20" font-weight="700" isolation="isolate"><tspan x="0" y="0">Growth Metrics Command Center</tspan></text>
+      <g>
+        <rect x="1030.485" y="334.751" width="490" height="220" rx="5" ry="5" fill="#331f4a"/>
+        <line x1="1060.485" y1="504.751" x2="1490.485" y2="504.751" fill="none" stroke="#fff"/>
+        <line x1="1060.485" y1="504.751" x2="1060.485" y2="354.751" fill="none" stroke="#fff"/>
+        <text transform="translate(1053.815 524.751)" fill="#fff" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="10" isolation="isolate"><tspan x="0" y="0">Q1</tspan></text>
+        <text transform="translate(1153.815 524.751)" fill="#fff" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="10" isolation="isolate"><tspan x="0" y="0">Q2</tspan></text>
+        <text transform="translate(1253.815 524.751)" fill="#fff" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="10" isolation="isolate"><tspan x="0" y="0">Q3</tspan></text>
+        <text transform="translate(1353.815 524.751)" fill="#fff" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="10" isolation="isolate"><tspan x="0" y="0">Q4</tspan></text>
+        <text transform="translate(1450.204 524.751)" fill="#fff" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="10" isolation="isolate"><tspan x="0" y="0">Proj.</tspan></text>
+        <polyline points="1060.485 474.751 1160.485 464.751 1260.485 444.751 1360.485 404.751 1460.485 364.751" fill="none" stroke="#29B6F6" stroke-width="3"/>
+        <circle cx="1060.485" cy="474.751" r="5" fill="#29B6F6"/>
+        <circle cx="1160.485" cy="464.751" r="5" fill="#29B6F6"/>
+        <circle cx="1260.485" cy="444.751" r="5" fill="#29B6F6"/>
+        <circle cx="1360.485" cy="404.751" r="5" fill="#29B6F6"/>
+        <circle cx="1460.485" cy="364.751" r="5" fill="#29B6F6"/>
+        <polyline points="1060.485 484.751 1160.485 454.751 1260.485 424.751 1360.485 394.751 1460.485 354.751" fill="none" stroke="#5ac8fa" stroke-width="3"/>
+        <circle cx="1060.485" cy="484.751" r="5" fill="#5ac8fa"/>
+        <circle cx="1160.485" cy="454.751" r="5" fill="#5ac8fa"/>
+        <circle cx="1260.485" cy="424.751" r="5" fill="#5ac8fa"/>
+        <circle cx="1360.485" cy="394.751" r="5" fill="#5ac8fa"/>
+        <circle cx="1460.485" cy="354.751" r="5" fill="#5ac8fa"/>
+        <rect x="1130.485" y="334.751" width="15" height="15" fill="#29B6F6"/>
+        <text transform="translate(1155.485 347.751)" fill="#fff" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12" isolation="isolate"><tspan x="0" y="0">Revenue</tspan></text>
+        <rect x="1230.485" y="334.751" width="15" height="15" fill="#5ac8fa"/>
+        <text transform="translate(1255.485 347.751)" fill="#fff" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12" isolation="isolate"><tspan x="0" y="0">User</tspan><tspan x="25.336" y="0" letter-spacing="-.055em"> </tspan><tspan x="28.008" y="0">Acquisition</tspan></text>
+        <rect x="1330.485" y="334.751" width="15" height="15" fill="#bf4080"/>
+        <text transform="translate(1355.485 347.751)" fill="#fff" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12" isolation="isolate"><tspan x="0" y="0">AI Prediction</tspan></text>
+        <path d="M1460.485,364.751l50-20" stroke="#bf4080" stroke-dasharray="5 3" stroke-width="2"/>
+        <path d="M1460.485,354.751l50-20" stroke="#bf4080" stroke-dasharray="5 3" stroke-width="2"/>
+      </g>
+      <rect x="1000.485" y="594.751" width="550" height="340" rx="10" ry="10" fill="#0d0d15" stroke="#ff6b6b" stroke-width="2"/>
+      <text transform="translate(1157.668 624.751)" fill="#fff" font-family="SF Pro Display, -apple-system, system-ui, sans-serif" font-size="20" font-weight="700" isolation="isolate"><tspan x="0" y="0">Investor/Partner Pipeline</tspan></text>
+      <g>
+        <rect x="1030.485" y="644.751" width="120" height="30" rx="5" ry="5" fill="#331f4a"/>
+        <text transform="translate(1074.913 664.751)" fill="#fff" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="14" isolation="isolate"><tspan x="0" y="0">Lead</tspan></text>
+        <rect x="1160.485" y="644.751" width="120" height="30" rx="5" ry="5" fill="#331f4a"/>
+        <text transform="translate(1195.582 664.751)" fill="#fff" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="14" isolation="isolate"><tspan x="0" y="0">Meeting</tspan></text>
+        <rect x="1290.485" y="644.751" width="120" height="30" rx="5" ry="5" fill="#331f4a"/>
+        <text transform="translate(1320.14 664.751)" fill="#fff" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="14" isolation="isolate"><tspan x="0" y="0">Follow-up</tspan></text>
+        <rect x="1420.485" y="644.751" width="120" height="30" rx="5" ry="5" fill="#331f4a"/>
+        <text transform="translate(1458.696 664.751)" fill="#fff" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="14" isolation="isolate"><tspan x="0" y="0">Closed</tspan></text>
+        <rect x="1030.485" y="684.751" width="120" height="90" rx="5" ry="5" fill="#331f4a"/>
+        <text transform="translate(1040.485 704.751)" fill="#fff" font-family="SF Pro Display, -apple-system, system-ui, sans-serif" font-size="14" font-weight="700" isolation="isolate"><tspan x="0" y="0">Quantum VC</tspan></text>
+        <text transform="translate(1040.485 724.751)" fill="#fff" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12" isolation="isolate"><tspan x="0" y="0">$500K-1M Seed</tspan></text>
+        <text transform="translate(1040.485 744.751)" fill="#5ac8fa" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="10" isolation="isolate"><tspan x="0" y="0">Added 3 days ago</tspan></text>
+        <path d="M1047.985,754.751h45c4.142,0,7.5,3.358,7.5,7.5h0c0,4.142-3.358,7.5-7.5,7.5h-45c-4.142,0-7.5-3.358-7.5-7.5h0c0-4.142,3.358-7.5,7.5-7.5Z" fill="#bf4080"/>
+        <text transform="translate(1052.729 765.751)" fill="#fff" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="9" isolation="isolate"><tspan x="0" y="0">AI Match</tspan></text>
+        <rect x="1160.485" y="684.751" width="120" height="90" rx="5" ry="5" fill="#331f4a"/>
+        <text transform="translate(1170.485 704.751)" fill="#fff" font-family="SF Pro Display, -apple-system, system-ui, sans-serif" font-size="14" font-weight="700" isolation="isolate"><tspan x="0" y="0">Apple Dev Fund</tspan></text>
+        <text transform="translate(1170.485 724.751)" fill="#fff" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12" isolation="isolate"><tspan x="0" y="0">$250K Grant</tspan></text>
+        <text transform="translate(1170.485 744.751)" fill="#5ac8fa" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="10" isolation="isolate"><tspan x="0" y="0">Meeting on 4/10</tspan></text>
+        <rect x="1290.485" y="684.751" width="120" height="90" rx="5" ry="5" fill="#331f4a"/>
+        <text transform="translate(1300.485 704.751)" fill="#fff" font-family="SF Pro Display, -apple-system, system-ui, sans-serif" font-size="14" font-weight="700" isolation="isolate"><tspan x="0" y="0" letter-spacing="-.018em">V</tspan><tspan x="9.085" y="0">ision Studio</tspan></text>
+        <text transform="translate(1300.485 724.751)" fill="#fff" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12" isolation="isolate"><tspan x="0" y="0">Partnership</tspan></text>
+        <text transform="translate(1300.485 744.751)" fill="#5ac8fa" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="10" isolation="isolate"><tspan x="0" y="0">Presented 3/25</tspan></text>
+        <rect x="1420.485" y="684.751" width="120" height="90" rx="5" ry="5" fill="#331f4a"/>
+        <text transform="translate(1430.485 704.751)" fill="#fff" font-family="SF Pro Display, -apple-system, system-ui, sans-serif" font-size="14" font-weight="700" isolation="isolate"><tspan x="0" y="0">Startup Engine</tspan></text>
+        <text transform="translate(1430.485 724.751)" fill="#fff" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12" isolation="isolate"><tspan x="0" y="0">$100K Pre-seed</tspan></text>
+        <text transform="translate(1430.485 744.751)" fill="#29B6F6" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="10" isolation="isolate"><tspan x="0" y="0">Closed 3/15</tspan></text>
+        <rect x="1030.485" y="784.751" width="120" height="30" rx="5" ry="5" fill="#5ac8fa" isolation="isolate" opacity=".6"/>
+        <text transform="translate(1056.435 804.751)" fill="#fff" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="14" isolation="isolate"><tspan x="0" y="0">+</tspan><tspan x="8.176" y="0" letter-spacing="-.055em"> </tspan><tspan x="11.293" y="0">Add New</tspan></text>
+      </g>
+    </g>
+    <g>
+      <path d="M1435.485,224.751h90c8.284,0,15,6.716,15,15h0c0,8.284-6.716,15-15,15h-90c-8.284,0-15-6.716-15-15h0c0-8.284,6.716-15,15-15Z" fill="#6a3093"/>
+      <text transform="translate(1443.516 244.751)" fill="#fff" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="14" isolation="isolate"><tspan x="0" y="0">Need Help?</tspan></text>
+      <rect x="830.485" y="684.751" width="120" height="40" rx="10" ry="10" fill="#bf4080" isolation="isolate" opacity=".8"/>
+      <text transform="translate(843.789 699.751)" fill="#fff" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12" isolation="isolate"><tspan x="0" y="0">AI Enhanced with</tspan></text>
+      <text transform="translate(847.468 714.751)" fill="#fff" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12" isolation="isolate"><tspan x="0" y="0">Custom Insights</tspan></text>
+      <path d="M445.485,924.751h1090c8.284,0,15,6.716,15,15h0c0,8.284-6.716,15-15,15H445.485c-8.284,0-15-6.716-15-15h0c0-8.284,6.716-15,15-15Z" fill="#331f4a" isolation="isolate" opacity=".9"/>
+      <text transform="translate(759.869 944.751)" fill="#fff" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="14" isolation="isolate"><tspan x="0" y="0">Suggested Next: Review Product Strategy Hub for Roadmap</tspan><tspan x="375.86" y="0" letter-spacing="-.055em"> </tspan><tspan x="378.978" y="0">Alignment</tspan></text>
+      <g>
+        <path d="M1030.485,544.751l-30,30h-120l-30-30" fill="none" stroke="#5ac8fa" stroke-dasharray="5 3" stroke-width="2"/>
+        <text transform="translate(878.803 564.751)" fill="#5ac8fa" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12" isolation="isolate"><tspan x="0" y="0">Metrics inform Strategy</tspan></text>
+      </g>
+    </g>
+  </g>
+  <g id="Titles">
+    <rect x="20" y="20" width="629.97" height="129.56" rx="18.441" ry="18.441" fill="#131a36" isolation="isolate" opacity=".8" stroke="url(#Accent_Highlight_Gradient)" stroke-width=".716"/>
+    <g isolation="isolate">
+      <g isolation="isolate">
+        <text transform="translate(58.126 75.84)" fill="#fff" font-family="SF Pro Display, -apple-system, system-ui, sans-serif" font-size="30" font-weight="600" isolation="isolate"><tspan x="0" y="0" letter-spacing="-.007em">E</tspan><tspan x="17.67" y="0" letter-spacing="-.033em">x</tspan><tspan x="33.57" y="0">e</tspan><tspan x="50.16" y="0" letter-spacing="-.006em">c</tspan><tspan x="66.51" y="0" letter-spacing="-.004em">u</tspan><tspan x="84.06" y="0" letter-spacing="-.003em">t</tspan><tspan x="95.97" y="0" letter-spacing="-.015em">i</tspan><tspan x="102.36" y="0" letter-spacing="-.028em">v</tspan><tspan x="119.1" y="0">e </tspan><tspan x="141.389" y="0" letter-spacing="-.013em">S</tspan><tspan x="159.569" y="0">t</tspan><tspan x="171.569" y="0" letter-spacing="-.016em">r</tspan><tspan x="185.879" y="0" letter-spacing="-.004em">a</tspan><tspan x="202.079" y="0" letter-spacing="-.015em">t</tspan><tspan x="213.629" y="0">e</tspan><tspan x="230.219" y="0" letter-spacing="-.01em">g</tspan><tspan x="247.708" y="0">y </tspan><tspan x="270.778" y="0" letter-spacing=".002em">H</tspan><tspan x="291.417" y="0" letter-spacing="0em">ub</tspan></text>
+      </g>
+    </g>
+    <g isolation="isolate">
+      <text transform="translate(58.126 114.106)" fill="#fff" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="20" isolation="isolate"><tspan x="0" y="0">G</tspan><tspan x="13.56" y="0" letter-spacing="-.009em">r</tspan><tspan x="21.98" y="0" letter-spacing="-.025em">o</tspan><tspan x="32.44" y="0" letter-spacing="-.002em">w</tspan><tspan x="47.82" y="0" letter-spacing=".003em">t</tspan><tspan x="54.699" y="0" letter-spacing="0em">h O</tspan><tspan x="83.059" y="0" letter-spacing="-.005em">p</tspan><tspan x="93.959" y="0">p</tspan><tspan x="104.959" y="0" letter-spacing="-.005em">o</tspan><tspan x="115.819" y="0" letter-spacing="-.001em">r</tspan><tspan x="124.399" y="0">tun</tspan><tspan x="152.918" y="0" letter-spacing="-.006em">i</tspan><tspan x="156.338" y="0" letter-spacing="-.023em">t</tspan><tspan x="162.698" y="0">y </tspan><tspan x="176.577" y="0" letter-spacing="0em">P</tspan><tspan x="188.438" y="0">ip</tspan><tspan x="202.977" y="0" letter-spacing="-.004em">e</tspan><tspan x="213.377" y="0">li</tspan><tspan x="220.596" y="0" letter-spacing="-.002em">n</tspan><tspan x="231.336" y="0" letter-spacing="0em">e</tspan></text>
+    </g>
+  </g>
+</svg>

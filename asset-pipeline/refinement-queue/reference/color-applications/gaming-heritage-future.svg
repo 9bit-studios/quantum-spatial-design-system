@@ -1,0 +1,245 @@
+<svg width="1500" height="500" viewBox="0 0 1500 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background with retro futuristic gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A0621" />
+      <stop offset="40%" stop-color="#131A36" />
+      <stop offset="80%" stop-color="#331F4A" />
+      <stop offset="100%" stop-color="#0D0D15" />
+    </linearGradient>
+    
+    <!-- Vaporwave grid with perspective -->
+    <pattern id="vaporGrid" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse" patternTransform="skewX(-20) scale(1, 2)">
+      <line x1="0" y1="0" x2="100" y2="0" stroke="#FF2D55" stroke-width="0.5" stroke-opacity="0.15"/>
+      <line x1="0" y1="0" x2="0" y2="100" stroke="#00FFC8" stroke-width="0.5" stroke-opacity="0.15"/>
+    </pattern>
+    
+    <!-- Glow filters -->
+    <filter id="retroGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    
+    <filter id="neonGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    
+    <!-- Gaming eras with gradient styles -->
+    <linearGradient id="retro8bit" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1B3D1A" />
+      <stop offset="100%" stop-color="#3D8B40" />
+    </linearGradient>
+    
+    <linearGradient id="modern3D" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#613FE7" />
+      <stop offset="100%" stop-color="#5AC8FA" />
+    </linearGradient>
+    
+    <linearGradient id="futureAR" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#BF4080" />
+      <stop offset="100%" stop-color="#FF2D55" />
+    </linearGradient>
+    
+    <!-- Tech Wave pattern -->
+    <linearGradient id="techWave" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3DFF74" />
+      <stop offset="33%" stop-color="#00FFC8" />
+      <stop offset="66%" stop-color="#613FE7" />
+      <stop offset="100%" stop-color="#FF2D55" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1500" height="500" fill="url(#bgGradient)"/>
+  
+  <!-- Vaporwave Grid -->
+  <rect width="1500" height="500" fill="url(#vaporGrid)"/>
+  
+  <!-- Tech Wave horizon line -->
+  <path d="M0,350 C300,330 500,380 750,350 S1000,300 1200,330 S1400,350 1500,340" fill="none" stroke="url(#techWave)" stroke-width="3" opacity="0.7" filter="url(#retroGlow)">
+    <animate attributeName="d" values="M0,350 C300,330 500,380 750,350 S1000,300 1200,330 S1400,350 1500,340; M0,350 C300,340 500,360 750,340 S1000,320 1200,340 S1400,330 1500,340; M0,350 C300,330 500,380 750,350 S1000,300 1200,330 S1400,350 1500,340" dur="10s" repeatCount="indefinite"/>
+  </path>
+  
+  <!-- 8-bit Era Gaming -->
+  <g transform="translate(300, 250)">
+    <!-- 8-bit console with chunky pixels -->
+    <g transform="skewX(-10) skewY(5)">
+      <!-- Console body -->
+      <rect x="-40" y="-20" width="80" height="40" fill="#1B3D1A" stroke="#3DFF74" stroke-width="1.5" opacity="0.9"/>
+      
+      <!-- Screen -->
+      <rect x="-30" y="-15" width="60" height="30" fill="#000000" stroke="#3DFF74" stroke-width="1" opacity="0.9"/>
+      
+      <!-- Controls -->
+      <rect x="-25" y="30" width="15" height="15" fill="#2C5F2D" stroke="#3DFF74" stroke-width="1" opacity="0.9"/>
+      <rect x="10" y="30" width="15" height="15" fill="#2C5F2D" stroke="#3DFF74" stroke-width="1" opacity="0.9"/>
+    </g>
+    
+    <!-- 8-bit game display -->
+    <g transform="translate(0, -5) scale(0.9)">
+      <!-- Game screen content -->
+      <rect x="-25" y="-15" width="5" height="5" fill="#3DFF74" opacity="0.9"/>
+      <rect x="-15" y="-15" width="5" height="5" fill="#3DFF74" opacity="0.9"/>
+      <rect x="-5" y="-15" width="5" height="5" fill="#3DFF74" opacity="0.9"/>
+      <rect x="5" y="-15" width="5" height="5" fill="#3DFF74" opacity="0.9"/>
+      <rect x="15" y="-15" width="5" height="5" fill="#3DFF74" opacity="0.9"/>
+      
+      <rect x="-25" y="-5" width="5" height="5" fill="#3DFF74" opacity="0.9"/>
+      <rect x="15" y="-5" width="5" height="5" fill="#3DFF74" opacity="0.9"/>
+      
+      <rect x="-25" y="5" width="5" height="5" fill="#3DFF74" opacity="0.9"/>
+      <rect x="-15" y="5" width="5" height="5" fill="#3DFF74" opacity="0.9"/>
+      <rect x="-5" y="5" width="5" height="5" fill="#3DFF74" opacity="0.9"/>
+      <rect x="5" y="5" width="5" height="5" fill="#3DFF74" opacity="0.9"/>
+      <rect x="15" y="5" width="5" height="5" fill="#3DFF74" opacity="0.9"/>
+    </g>
+    
+    <!-- Label -->
+    <text x="0" y="70" font-family="SF Mono, monospace" font-size="12" fill="#3DFF74" text-anchor="middle" opacity="0.9" filter="url(#retroGlow)">8-BIT ERA</text>
+  </g>
+  
+  <!-- 3D Era Gaming -->
+  <g transform="translate(750, 250)">
+    <!-- Modern console with 3D capabilities -->
+    <g transform="skewX(-10) skewY(5)">
+      <!-- Console body - more streamlined -->
+      <rect x="-45" y="-25" width="90" height="50" fill="#1E1F5C" stroke="#5AC8FA" stroke-width="1.5" opacity="0.9" rx="5" ry="5"/>
+      
+      <!-- Screen - HD widescreen format -->
+      <rect x="-35" y="-18" width="70" height="36" fill="#000000" stroke="#5AC8FA" stroke-width="1" opacity="0.9" rx="2" ry="2"/>
+      
+      <!-- Controls - more ergonomic -->
+      <rect x="-30" y="35" width="20" height="10" fill="#331F4A" stroke="#5AC8FA" stroke-width="1" opacity="0.9" rx="5" ry="5"/>
+      <rect x="10" y="35" width="20" height="10" fill="#331F4A" stroke="#5AC8FA" stroke-width="1" opacity="0.9" rx="5" ry="5"/>
+    </g>
+    
+    <!-- 3D game display -->
+    <g transform="translate(0, -5) scale(0.9)">
+      <!-- 3D game content with perspective -->
+      <path d="M-25,-10 L-15,-15 L15,-15 L25,-10 L15,10 L-15,10 Z" fill="none" stroke="#5AC8FA" stroke-width="1" opacity="0.8"/>
+      <path d="M-15,-15 L-15,10" fill="none" stroke="#5AC8FA" stroke-width="0.5" opacity="0.6"/>
+      <path d="M15,-15 L15,10" fill="none" stroke="#5AC8FA" stroke-width="0.5" opacity="0.6"/>
+      <path d="M-25,-10 L-25,5" fill="none" stroke="#5AC8FA" stroke-width="0.5" opacity="0.6"/>
+      <path d="M25,-10 L25,5" fill="none" stroke="#5AC8FA" stroke-width="0.5" opacity="0.6"/>
+      <path d="M-25,5 L-15,10" fill="none" stroke="#5AC8FA" stroke-width="0.5" opacity="0.6"/>
+      <path d="M25,5 L15,10" fill="none" stroke="#5AC8FA" stroke-width="0.5" opacity="0.6"/>
+      
+      <!-- 3D character -->
+      <circle cx="0" cy="0" r="5" fill="#613FE7" opacity="0.9"/>
+      <path d="M0,5 L0,12 M-5,7 L5,7" stroke="#613FE7" stroke-width="1.5" opacity="0.9"/>
+    </g>
+    
+    <!-- Label -->
+    <text x="0" y="70" font-family="SF Mono, monospace" font-size="12" fill="#5AC8FA" text-anchor="middle" opacity="0.9" filter="url(#retroGlow)">3D ERA</text>
+  </g>
+  
+  <!-- Spatial Computing Era -->
+  <g transform="translate(1200, 250)">
+    <!-- Vision Pro-like headset -->
+    <g transform="skewX(-10) skewY(5)">
+      <!-- Headset visor -->
+      <rect x="-50" y="-25" width="100" height="40" fill="#331F4A" stroke="#FF2D55" stroke-width="1.5" opacity="0.9" rx="20" ry="20"/>
+      
+      <!-- Display area -->
+      <rect x="-40" y="-20" width="80" height="30" fill="#0A0621" stroke="#FF2D55" stroke-width="1" opacity="0.9" rx="15" ry="15"/>
+      
+      <!-- Control surfaces -->
+      <rect x="-30" y="35" width="60" height="5" fill="#BF4080" stroke="#FF2D55" stroke-width="1" opacity="0.9" rx="2.5" ry="2.5"/>
+    </g>
+    
+    <!-- Spatial computing content -->
+    <g transform="translate(0, -5) scale(0.9)" filter="url(#neonGlow)">
+      <!-- Holographic content - volumetric display -->
+      <circle cx="0" cy="0" r="15" fill="none" stroke="#FF2D55" stroke-width="0.5" opacity="0.6"/>
+      <circle cx="0" cy="0" r="10" fill="none" stroke="#FF2D55" stroke-width="0.5" opacity="0.7"/>
+      <circle cx="0" cy="0" r="5" fill="none" stroke="#FF2D55" stroke-width="0.5" opacity="0.8"/>
+      
+      <!-- 3D spatial content -->
+      <path d="M-8,-8 L8,8 M-8,8 L8,-8" stroke="#BF4080" stroke-width="1" opacity="0.9"/>
+      <circle cx="0" cy="0" r="2" fill="#FF2D55" opacity="1"/>
+      
+      <!-- Floating UI elements -->
+      <rect x="15" y="-10" width="10" height="5" fill="none" stroke="#FF2D55" stroke-width="0.5" opacity="0.8" rx="1" ry="1"/>
+      <rect x="15" y="0" width="10" height="5" fill="none" stroke="#FF2D55" stroke-width="0.5" opacity="0.8" rx="1" ry="1"/>
+      <rect x="-25" y="-10" width="10" height="5" fill="none" stroke="#FF2D55" stroke-width="0.5" opacity="0.8" rx="1" ry="1"/>
+      <rect x="-25" y="0" width="10" height="5" fill="none" stroke="#FF2D55" stroke-width="0.5" opacity="0.8" rx="1" ry="1"/>
+    </g>
+    
+    <!-- Label -->
+    <text x="0" y="70" font-family="SF Mono, monospace" font-size="12" fill="#FF2D55" text-anchor="middle" opacity="0.9" filter="url(#retroGlow)">SPATIAL ERA</text>
+  </g>
+  
+  <!-- Evolution connections between eras -->
+  <g opacity="0.8">
+    <!-- 8-bit to 3D connection -->
+    <path d="M375,250 C450,220 600,220 675,250" fill="none" stroke="#00FFC8" stroke-width="1.5" opacity="0.8" filter="url(#retroGlow)">
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="4s" repeatCount="indefinite"/>
+    </path>
+    
+    <!-- 3D to Spatial connection -->
+    <path d="M825,250 C900,220 1050,220 1125,250" fill="none" stroke="#BF4080" stroke-width="1.5" opacity="0.8" filter="url(#retroGlow)">
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="4s" repeatCount="indefinite" begin="1s"/>
+    </path>
+  </g>
+  
+  <!-- Evolution particles flowing along connections -->
+  <circle cx="450" cy="235" r="3" fill="#3DFF74" opacity="0.9" filter="url(#retroGlow)">
+    <animate attributeName="cx" values="375;675" dur="6s" repeatCount="indefinite"/>
+    <animate attributeName="fill" values="#3DFF74;#5AC8FA" dur="6s" repeatCount="indefinite"/>
+  </circle>
+  
+  <circle cx="550" cy="235" r="3" fill="#3DFF74" opacity="0.9" filter="url(#retroGlow)">
+    <animate attributeName="cx" values="375;675" dur="6s" repeatCount="indefinite" begin="2s"/>
+    <animate attributeName="fill" values="#3DFF74;#5AC8FA" dur="6s" repeatCount="indefinite" begin="2s"/>
+  </circle>
+  
+  <circle cx="900" cy="235" r="3" fill="#5AC8FA" opacity="0.9" filter="url(#retroGlow)">
+    <animate attributeName="cx" values="825;1125" dur="5s" repeatCount="indefinite"/>
+    <animate attributeName="fill" values="#5AC8FA;#FF2D55" dur="5s" repeatCount="indefinite"/>
+  </circle>
+  
+  <circle cx="1000" cy="235" r="3" fill="#5AC8FA" opacity="0.9" filter="url(#retroGlow)">
+    <animate attributeName="cx" values="825;1125" dur="5s" repeatCount="indefinite" begin="2.5s"/>
+    <animate attributeName="fill" values="#5AC8FA;#FF2D55" dur="5s" repeatCount="indefinite" begin="2.5s"/>
+  </circle>
+  
+  <!-- Retro sun in background -->
+  <circle cx="750" cy="120" r="40" fill="url(#futureAR)" opacity="0.5" filter="url(#neonGlow)"/>
+  <circle cx="750" cy="120" r="35" fill="none" stroke="#FF2D55" stroke-width="0.5" opacity="0.4"/>
+  <circle cx="750" cy="120" r="30" fill="none" stroke="#FF2D55" stroke-width="0.5" opacity="0.5"/>
+  <circle cx="750" cy="120" r="25" fill="none" stroke="#FF2D55" stroke-width="0.5" opacity="0.6"/>
+  <circle cx="750" cy="120" r="20" fill="none" stroke="#FF2D55" stroke-width="0.5" opacity="0.7"/>
+  
+  <!-- Mountains/skyline in background -->
+  <path d="M0,350 L200,310 L300,340 L400,290 L500,320 L600,280 L700,300 L800,270 L900,310 L1000,280 L1100,320 L1200,300 L1300,330 L1400,290 L1500,310 L1500,500 L0,500 Z" fill="#0A0621" opacity="0.7"/>
+  <path d="M0,350 L200,310 L300,340 L400,290 L500,320 L600,280 L700,300 L800,270 L900,310 L1000,280 L1100,320 L1200,300 L1300,330 L1400,290 L1500,310" fill="none" stroke="#FF2D55" stroke-width="0.5" opacity="0.5"/>
+  
+  <!-- Shine lines on sun -->
+  <line x1="750" y1="70" x2="750" y2="50" stroke="#FF2D55" stroke-width="1" opacity="0.8"/>
+  <line x1="750" y1="170" x2="750" y2="190" stroke="#FF2D55" stroke-width="1" opacity="0.8"/>
+  <line x1="700" y1="120" x2="680" y2="120" stroke="#FF2D55" stroke-width="1" opacity="0.8"/>
+  <line x1="800" y1="120" x2="820" y2="120" stroke="#FF2D55" stroke-width="1" opacity="0.8"/>
+  <line x1="715" y1="85" x2="700" y2="70" stroke="#FF2D55" stroke-width="1" opacity="0.8"/>
+  <line x1="785" y1="155" x2="800" y2="170" stroke="#FF2D55" stroke-width="1" opacity="0.8"/>
+  <line x1="715" y1="155" x2="700" y2="170" stroke="#FF2D55" stroke-width="1" opacity="0.8"/>
+  <line x1="785" y1="85" x2="800" y2="70" stroke="#FF2D55" stroke-width="1" opacity="0.8"/>
+  
+  <!-- Title overlay -->
+  <g transform="translate(750, 420)">
+    <text x="0" y="0" font-family="SF Pro Display, sans-serif" font-size="28" fill="#FFFFFF" text-anchor="middle" opacity="0.9" filter="url(#retroGlow)">9BIT STUDIOS</text>
+    <text x="0" y="30" font-family="SF Pro Display, sans-serif" font-size="16" fill="#00FFC8" text-anchor="middle" opacity="0.8">HERITAGE TO FUTURE</text>
+  </g>
+  
+  <!-- Small stars/particles -->
+  <g opacity="0.7">
+    <circle cx="150" cy="100" r="1" fill="#5AC8FA"/>
+    <circle cx="350" cy="150" r="1" fill="#FF2D55"/>
+    <circle cx="450" cy="80" r="1" fill="#5AC8FA"/>
+    <circle cx="550" cy="120" r="1" fill="#00FFC8"/>
+    <circle cx="950" cy="90" r="1" fill="#FF2D55"/>
+    <circle cx="1050" cy="130" r="1" fill="#5AC8FA"/>
+    <circle cx="1150" cy="70" r="1" fill="#00FFC8"/>
+    <circle cx="1350" cy="110" r="1" fill="#FF2D55"/>
+  </g>
+</svg>

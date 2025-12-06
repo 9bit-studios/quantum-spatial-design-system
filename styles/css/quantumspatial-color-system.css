@@ -1,0 +1,2153 @@
+/* 9Bit Studios QuantumSpatial Color System */
+
+position: absolute;
+left: 9%;
+right: 52.25%;
+top: 8.63%;
+bottom: 89.56%;
+
+font-family: 'SF Pro Rounded';
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 29px;
+/* identical to box height */
+
+color: #FCFDF2;
+
+
+
+/* Primary Foundation Colors */
+
+position: absolute;
+left: 9%;
+right: 78.41%;
+top: 11.37%;
+bottom: 87.57%;
+
+font-family: 'SF Pro Rounded';
+font-style: normal;
+font-weight: 300;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+
+color: #94929D;
+
+
+
+/* Variant Foundation Colors */
+
+position: absolute;
+left: 58.57%;
+right: 29.18%;
+top: 11.37%;
+bottom: 87.57%;
+
+font-family: 'SF Pro Rounded';
+font-style: normal;
+font-weight: 300;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+
+color: #94929D;
+
+
+
+/* Group 16 */
+
+position: absolute;
+width: 214px;
+height: 60px;
+left: 103.04px;
+top: 443.04px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 8.59%;
+right: 83.08%;
+top: 27.69%;
+bottom: 68.56%;
+
+background: rgba(113, 0, 170, 0.0588235);
+
+
+/* Mystic Midnight */
+
+position: absolute;
+left: 18.59%;
+right: 73.58%;
+top: 28.13%;
+bottom: 70.8%;
+
+font-family: 'SF Pro Rounded';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+
+color: #FCFDF2;
+
+
+
+/* #$A0A0F */
+
+position: absolute;
+left: 18.59%;
+right: 77.08%;
+top: 29.45%;
+bottom: 69.68%;
+
+font-family: 'SF Mono';
+font-style: italic;
+font-weight: 400;
+font-size: 12px;
+line-height: 14px;
+
+color: #007AFF;
+
+
+
+/* Group 32 */
+
+position: absolute;
+width: 232px;
+height: 60px;
+left: 697.87px;
+top: 443.04px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 58.16%;
+right: 33.51%;
+top: 27.69%;
+bottom: 68.56%;
+
+background: rgba(170, 0, 170, 0.0947);
+
+
+/* Mystic Deepspace */
+
+position: absolute;
+left: 68.16%;
+right: 22.51%;
+top: 28.13%;
+bottom: 70.8%;
+
+font-family: 'SF Pro Rounded';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+
+color: #FCFDF2;
+
+
+
+/* #$A0A0F */
+
+position: absolute;
+left: 68.16%;
+right: 27.51%;
+top: 29.45%;
+bottom: 69.68%;
+
+font-family: 'SF Mono';
+font-style: italic;
+font-weight: 400;
+font-size: 12px;
+line-height: 14px;
+
+color: #007AFF;
+
+
+
+/* Group 26 */
+
+position: absolute;
+width: 228px;
+height: 60px;
+left: 697.87px;
+top: 367.51px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 58.16%;
+right: 33.51%;
+top: 22.97%;
+bottom: 73.28%;
+
+background: #160918;
+
+
+/* Deep Space Violet */
+
+position: absolute;
+left: 68.16%;
+right: 22.84%;
+top: 23.41%;
+bottom: 75.53%;
+
+font-family: 'SF Pro Rounded';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+
+color: #FCFDF2;
+
+
+
+/* 160918 */
+
+position: absolute;
+left: 68.16%;
+right: 28.09%;
+top: 24.72%;
+bottom: 74.4%;
+
+font-family: 'SF Mono';
+font-style: italic;
+font-weight: 400;
+font-size: 12px;
+line-height: 14px;
+
+color: #007AFF;
+
+
+
+/* Group 12 */
+
+position: absolute;
+width: 262px;
+height: 60px;
+left: 103.04px;
+top: 515.28px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 8.59%;
+right: 83.08%;
+top: 32.2%;
+bottom: 64.05%;
+
+background: #0A0621;
+
+
+/* Ultradimensional Marine */
+
+position: absolute;
+left: 18.59%;
+right: 69.58%;
+top: 32.58%;
+bottom: 66.36%;
+
+font-family: 'SF Pro Rounded';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+
+color: #FCFDF2;
+
+
+
+/* #0A0621 */
+
+position: absolute;
+left: 18.59%;
+right: 77.08%;
+top: 33.58%;
+bottom: 65.55%;
+
+font-family: 'SF Mono';
+font-style: italic;
+font-weight: 400;
+font-size: 12px;
+line-height: 14px;
+
+color: #007AFF;
+
+
+
+/* Group 25 */
+
+position: absolute;
+width: 255px;
+height: 60px;
+left: 697.87px;
+top: 515.28px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 58.16%;
+right: 33.51%;
+top: 32.2%;
+bottom: 64.05%;
+
+background: #150621;
+
+
+/* Ultradimensional Violet */
+
+position: absolute;
+left: 68.16%;
+right: 20.59%;
+top: 32.58%;
+bottom: 66.36%;
+
+font-family: 'SF Pro Rounded';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+
+color: #FCFDF2;
+
+
+
+/* #150621 */
+
+position: absolute;
+left: 68.16%;
+right: 27.51%;
+top: 33.58%;
+bottom: 65.55%;
+
+font-family: 'SF Mono';
+font-style: italic;
+font-weight: 400;
+font-size: 12px;
+line-height: 14px;
+
+color: #007AFF;
+
+
+
+/* Group 15 */
+
+position: absolute;
+width: 236px;
+height: 60px;
+left: 103.04px;
+top: 587.51px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 8.59%;
+right: 83.08%;
+top: 36.72%;
+bottom: 59.53%;
+
+background: #1E1F5C;
+
+
+/* Dimensional Marine */
+
+position: absolute;
+left: 18.59%;
+right: 71.75%;
+top: 36.98%;
+bottom: 61.96%;
+
+font-family: 'SF Pro Rounded';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+
+color: #FCFDF2;
+
+
+
+/* #1E1F5C */
+
+position: absolute;
+left: 18.59%;
+right: 77.08%;
+top: 38.43%;
+bottom: 60.7%;
+
+font-family: 'SF Mono';
+font-style: italic;
+font-weight: 400;
+font-size: 12px;
+line-height: 14px;
+
+color: #007AFF;
+
+
+
+/* Group 21 */
+
+position: absolute;
+width: 229px;
+height: 60px;
+left: 697.87px;
+top: 587.51px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 58.16%;
+right: 33.51%;
+top: 36.72%;
+bottom: 59.53%;
+
+background: #480F92;
+
+
+/* Dimensional Violet */
+
+position: absolute;
+left: 68.16%;
+right: 22.76%;
+top: 37.09%;
+bottom: 61.84%;
+
+font-family: 'SF Pro Rounded';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+
+color: #FCFDF2;
+
+
+
+/* #480F92 */
+
+position: absolute;
+left: 68.16%;
+right: 27.51%;
+top: 38.49%;
+bottom: 60.64%;
+
+font-family: 'SF Mono';
+font-style: italic;
+font-weight: 400;
+font-size: 12px;
+line-height: 14px;
+
+color: #007AFF;
+
+
+
+/* Group 17 */
+
+position: absolute;
+width: 227px;
+height: 60px;
+left: 103.04px;
+top: 370.81px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 8.59%;
+right: 83.08%;
+top: 23.18%;
+bottom: 73.07%;
+
+background: #0D0D15;
+
+
+/* Deep Space Night */
+
+position: absolute;
+left: 18.59%;
+right: 72.5%;
+top: 23.55%;
+bottom: 75.39%;
+
+font-family: 'SF Pro Rounded';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+
+color: #FCFDF2;
+
+
+
+/* #0D0D15 */
+
+position: absolute;
+left: 18.59%;
+right: 77.08%;
+top: 24.93%;
+bottom: 74.2%;
+
+font-family: 'SF Mono';
+font-style: italic;
+font-weight: 400;
+font-size: 12px;
+line-height: 14px;
+
+color: #007AFF;
+
+
+
+/* Group 28 */
+
+position: absolute;
+width: 256px;
+height: 60px;
+left: 697.87px;
+top: 295.27px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 58.16%;
+right: 33.51%;
+top: 18.45%;
+bottom: 77.8%;
+
+background: #110413;
+
+
+/* Multidimensional Violet */
+
+position: absolute;
+left: 68.16%;
+right: 20.51%;
+top: 18.83%;
+bottom: 80.11%;
+
+font-family: 'SF Pro Rounded';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+
+color: #FCFDF2;
+
+
+
+/* #110413 */
+
+position: absolute;
+left: 68.16%;
+right: 27.51%;
+top: 20.2%;
+bottom: 78.92%;
+
+font-family: 'SF Mono';
+font-style: italic;
+font-weight: 400;
+font-size: 12px;
+line-height: 14px;
+
+color: #007AFF;
+
+
+
+/* Group 29 */
+
+position: absolute;
+width: 182px;
+height: 60px;
+left: 697.87px;
+top: 215.9px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 58.16%;
+right: 33.51%;
+top: 13.49%;
+bottom: 82.76%;
+
+background: #0B010D;
+
+
+/* Void Violet */
+
+position: absolute;
+left: 68.16%;
+right: 26.68%;
+top: 13.87%;
+bottom: 85.07%;
+
+font-family: 'SF Pro Rounded';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+
+color: #FCFDF2;
+
+
+
+/* #0B010D */
+
+position: absolute;
+left: 68.16%;
+right: 27.51%;
+top: 15.24%;
+bottom: 83.88%;
+
+font-family: 'SF Mono';
+font-style: italic;
+font-weight: 400;
+font-size: 12px;
+line-height: 14px;
+
+color: #007AFF;
+
+
+
+/* Group 18 */
+
+position: absolute;
+width: 275px;
+height: 60px;
+left: 103.04px;
+top: 298.58px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 8.59%;
+right: 83.08%;
+top: 18.66%;
+bottom: 77.59%;
+
+background: #0A0A0F;
+
+
+/* Multidimensional Midnight */
+
+position: absolute;
+left: 18.59%;
+right: 68.5%;
+top: 19.09%;
+bottom: 79.85%;
+
+font-family: 'SF Pro Rounded';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+
+color: #FCFDF2;
+
+
+
+/* #0A0A0F */
+
+position: absolute;
+left: 18.59%;
+right: 77.08%;
+top: 20.4%;
+bottom: 77.85%;
+
+font-family: 'SF Mono';
+font-style: italic;
+font-weight: 400;
+font-size: 12px;
+line-height: 14px;
+
+color: #007AFF;
+
+
+
+/* Group 19 */
+
+position: absolute;
+width: 181px;
+height: 60px;
+left: 103.04px;
+top: 226.34px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 8.59%;
+right: 83.08%;
+top: 14.15%;
+bottom: 82.1%;
+
+background: #000000;
+
+
+/* Void Black */
+
+position: absolute;
+left: 18.59%;
+right: 76.33%;
+top: 14.24%;
+bottom: 84.69%;
+
+font-family: 'SF Pro Rounded';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+
+color: #FCFDF2;
+
+
+
+/* #000000 */
+
+position: absolute;
+left: 18.59%;
+right: 77.08%;
+top: 15.68%;
+bottom: 83.44%;
+
+font-family: 'SF Mono';
+font-style: italic;
+font-weight: 400;
+font-size: 12px;
+line-height: 14px;
+
+color: #007AFF;
+
+
+
+/* Group 14 */
+
+position: absolute;
+width: 192px;
+height: 60px;
+left: 103.04px;
+top: 659.74px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 8.59%;
+right: 83.08%;
+top: 41.23%;
+bottom: 55.02%;
+
+background: #512CF9;
+
+
+/* Ultra Marine */
+
+position: absolute;
+left: 18.59%;
+right: 75.41%;
+top: 41.52%;
+bottom: 57.42%;
+
+font-family: 'SF Pro Rounded';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+
+color: #FCFDF2;
+
+
+
+/* #512CF9 */
+
+position: absolute;
+left: 18.59%;
+right: 77.08%;
+top: 42.89%;
+bottom: 56.23%;
+
+font-family: 'SF Mono';
+font-style: italic;
+font-weight: 400;
+font-size: 12px;
+line-height: 14px;
+
+color: #007AFF;
+
+
+
+/* Group 13 */
+
+position: absolute;
+width: 191px;
+height: 60px;
+left: 103.04px;
+top: 732.4px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 8.59%;
+right: 83.08%;
+top: 45.78%;
+bottom: 50.47%;
+
+background: #504CF5;
+
+
+/* Pixel Marine */
+
+position: absolute;
+left: 18.59%;
+right: 75.5%;
+top: 46.15%;
+bottom: 52.79%;
+
+font-family: 'SF Pro Rounded';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+
+color: #FCFDF2;
+
+
+
+/* #504CF5 */
+
+position: absolute;
+left: 18.59%;
+right: 77.08%;
+top: 47.46%;
+bottom: 51.66%;
+
+font-family: 'SF Mono';
+font-style: italic;
+font-weight: 400;
+font-size: 12px;
+line-height: 14px;
+
+color: #007AFF;
+
+
+
+/* Foundation Colors */
+
+position: absolute;
+left: 33.01%;
+right: 58.24%;
+top: 11.37%;
+bottom: 87.57%;
+
+font-family: 'SF Pro Rounded';
+font-style: normal;
+font-weight: 300;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+
+color: #94929D;
+
+
+
+/* Group */
+
+position: absolute;
+left: 8.59%;
+right: 74.83%;
+top: 50.26%;
+bottom: 45.99%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 8.59%;
+right: 83.08%;
+top: 50.26%;
+bottom: 45.99%;
+
+background: #6366F1;
+
+
+/* Liquid Marine */
+
+position: absolute;
+left: 18.59%;
+right: 74.83%;
+top: 50.64%;
+bottom: 48.3%;
+
+font-family: 'SF Pro Rounded';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+
+color: #FCFDF2;
+
+
+
+/* #6366F1 */
+
+position: absolute;
+left: 18.59%;
+right: 77.08%;
+top: 52.01%;
+bottom: 47.11%;
+
+font-family: 'SF Mono';
+font-style: italic;
+font-weight: 400;
+font-size: 12px;
+line-height: 14px;
+
+color: #007AFF;
+
+
+
+/* Group 8 */
+
+position: absolute;
+width: 176px;
+height: 60px;
+left: 1056.59px;
+top: 732.4px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 88.05%;
+right: 3.62%;
+top: 45.78%;
+bottom: 50.47%;
+
+background: #EC4899;
+
+
+/* Pixel Pink */
+
+position: absolute;
+left: 98.05%;
+right: -2.72%;
+top: 46.15%;
+bottom: 52.79%;
+
+font-family: 'SF Pro Rounded';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+
+color: #FCFDF2;
+
+
+
+/* #EC4899 */
+
+position: absolute;
+left: 98.05%;
+right: -2.38%;
+top: 47.53%;
+bottom: 51.6%;
+
+font-family: 'SF Mono';
+font-style: italic;
+font-weight: 400;
+font-size: 12px;
+line-height: 14px;
+
+color: #007AFF;
+
+
+
+/* Group 7 */
+
+position: absolute;
+width: 177px;
+height: 60px;
+left: 1056.59px;
+top: 659.84px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 88.05%;
+right: 3.62%;
+top: 41.24%;
+bottom: 55.01%;
+
+background: #FF2D92;
+
+
+/* Ultra Pink */
+
+position: absolute;
+left: 98.05%;
+right: -2.8%;
+top: 41.62%;
+bottom: 57.32%;
+
+font-family: 'SF Pro Rounded';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+
+color: #FCFDF2;
+
+
+
+/* #BF4080 */
+
+position: absolute;
+left: 98.05%;
+right: -2.38%;
+top: 42.99%;
+bottom: 56.13%;
+
+font-family: 'SF Mono';
+font-style: italic;
+font-weight: 400;
+font-size: 12px;
+line-height: 14px;
+
+color: #007AFF;
+
+
+
+/* Group 33 */
+
+position: absolute;
+width: 221px;
+height: 60px;
+left: 1056.59px;
+top: 584.82px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 88.05%;
+right: 3.62%;
+top: 36.55%;
+bottom: 59.7%;
+
+background: #D0196B;
+
+
+/* Dimensional Pink */
+
+position: absolute;
+left: 98.05%;
+right: -6.47%;
+top: 36.93%;
+bottom: 62.01%;
+
+font-family: 'SF Pro Rounded';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+
+color: #FCFDF2;
+
+
+
+/* #D0196B */
+
+position: absolute;
+left: 98.05%;
+right: -2.38%;
+top: 38.3%;
+bottom: 60.82%;
+
+font-family: 'SF Mono';
+font-style: italic;
+font-weight: 400;
+font-size: 12px;
+line-height: 14px;
+
+color: #007AFF;
+
+
+
+/* Group 11 */
+
+position: absolute;
+width: 184px;
+height: 60px;
+left: 1056.59px;
+top: 804.97px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 88.05%;
+right: 3.62%;
+top: 50.31%;
+bottom: 45.94%;
+
+background: #FF66E3;
+
+
+/* Liquid Pink */
+
+position: absolute;
+left: 98.05%;
+right: -3.38%;
+top: 50.69%;
+bottom: 48.25%;
+
+font-family: 'SF Pro Rounded';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+
+color: #FCFDF2;
+
+
+
+/* #BF4080 */
+
+position: absolute;
+left: 98.05%;
+right: -2.38%;
+top: 52.06%;
+bottom: 47.06%;
+
+font-family: 'SF Mono';
+font-style: italic;
+font-weight: 400;
+font-size: 12px;
+line-height: 14px;
+
+color: #007AFF;
+
+
+
+/* Group */
+
+position: absolute;
+left: 58.16%;
+right: 26.51%;
+top: 45.78%;
+bottom: 50.47%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 58.16%;
+right: 33.51%;
+top: 45.78%;
+bottom: 50.47%;
+
+background: #613FE7;
+
+
+/* Pixel Violet */
+
+position: absolute;
+left: 68.16%;
+right: 26.51%;
+top: 46.15%;
+bottom: 52.79%;
+
+font-family: 'SF Pro Rounded';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+
+color: #FCFDF2;
+
+
+
+/* #613FE7 */
+
+position: absolute;
+left: 68.16%;
+right: 27.51%;
+top: 47.53%;
+bottom: 51.6%;
+
+font-family: 'SF Mono';
+font-style: italic;
+font-weight: 400;
+font-size: 12px;
+line-height: 14px;
+
+color: #007AFF;
+
+
+
+/* Group */
+
+position: absolute;
+left: 58.16%;
+right: 26.43%;
+top: 41.23%;
+bottom: 55.02%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 58.16%;
+right: 33.51%;
+top: 41.23%;
+bottom: 55.02%;
+
+background: #6E00FF;
+
+
+/* Ultra Violet */
+
+position: absolute;
+left: 68.16%;
+right: 26.43%;
+top: 41.61%;
+bottom: 57.33%;
+
+font-family: 'SF Pro Rounded';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+
+color: #FCFDF2;
+
+
+
+/* #6E00FF */
+
+position: absolute;
+left: 68.16%;
+right: 27.51%;
+top: 42.98%;
+bottom: 56.14%;
+
+font-family: 'SF Mono';
+font-style: italic;
+font-weight: 400;
+font-size: 12px;
+line-height: 14px;
+
+color: #007AFF;
+
+
+
+/* Group */
+
+position: absolute;
+left: 58.16%;
+right: 25.84%;
+top: 50.26%;
+bottom: 45.99%;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 58.16%;
+right: 33.51%;
+top: 50.26%;
+bottom: 45.99%;
+
+background: #9151F1;
+
+
+/* Liquid Violet */
+
+position: absolute;
+left: 68.16%;
+right: 25.84%;
+top: 50.64%;
+bottom: 48.3%;
+
+font-family: 'SF Pro Rounded';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+
+color: #FCFDF2;
+
+
+
+/* #9151F1 */
+
+position: absolute;
+left: 68.16%;
+right: 27.51%;
+top: 52.01%;
+bottom: 47.11%;
+
+font-family: 'SF Mono';
+font-style: italic;
+font-weight: 400;
+font-size: 12px;
+line-height: 14px;
+
+color: #007AFF;
+
+
+
+/* Group 4 */
+
+position: absolute;
+width: 186px;
+height: 60px;
+left: 1052.59px;
+top: 215.9px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 87.72%;
+right: 3.95%;
+top: 13.49%;
+bottom: 82.76%;
+
+background: #2C5F2D;
+
+
+/* Pixel Green */
+
+position: absolute;
+left: 97.72%;
+right: -3.22%;
+top: 13.87%;
+bottom: 85.07%;
+
+font-family: 'SF Pro Rounded';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+
+color: #FCFDF2;
+
+
+
+/* #2C5F2D */
+
+position: absolute;
+left: 97.72%;
+right: -2.05%;
+top: 15.24%;
+bottom: 83.88%;
+
+font-family: 'SF Mono';
+font-style: italic;
+font-weight: 400;
+font-size: 12px;
+line-height: 14px;
+
+color: #007AFF;
+
+
+
+/* Group 3 */
+
+position: absolute;
+width: 202px;
+height: 60px;
+left: 1052.59px;
+top: 286.86px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 87.72%;
+right: 3.95%;
+top: 17.93%;
+bottom: 78.32%;
+
+background: #3DFF74;
+
+
+/* Plasma Green */
+
+position: absolute;
+left: 97.72%;
+right: -4.55%;
+top: 18.3%;
+bottom: 80.63%;
+
+font-family: 'SF Pro Rounded';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+
+color: #FCFDF2;
+
+
+
+/* #3DFF74 */
+
+position: absolute;
+left: 97.72%;
+right: -2.05%;
+top: 19.68%;
+bottom: 79.45%;
+
+font-family: 'SF Mono';
+font-style: italic;
+font-weight: 400;
+font-size: 12px;
+line-height: 14px;
+
+color: #007AFF;
+
+
+
+/* Group 23 */
+
+position: absolute;
+width: 184px;
+height: 60px;
+left: 396.14px;
+top: 226.34px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 33.01%;
+right: 58.65%;
+top: 14.15%;
+bottom: 82.1%;
+
+background: #1A1B26;
+
+
+/* Secondary */
+
+position: absolute;
+left: 43.01%;
+right: 51.65%;
+top: 14.52%;
+bottom: 84.42%;
+
+font-family: 'SF Pro Rounded';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+
+color: #FCFDF2;
+
+
+
+/* #1A1B26 */
+
+position: absolute;
+left: 43.01%;
+right: 52.65%;
+top: 15.9%;
+bottom: 83.23%;
+
+font-family: 'SF Mono';
+font-style: italic;
+font-weight: 400;
+font-size: 12px;
+line-height: 14px;
+
+color: #007AFF;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 33.01%;
+right: 58.65%;
+top: 18.56%;
+bottom: 77.69%;
+
+background: #33313A;
+
+
+/* Tertiary */
+
+position: absolute;
+left: 43.01%;
+right: 53.32%;
+top: 18.94%;
+bottom: 78.94%;
+
+font-family: 'SF Pro Rounded';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+
+color: #FCFDF2;
+
+
+
+/* #33313A */
+
+position: absolute;
+left: 43.01%;
+right: 52.65%;
+top: 20.31%;
+bottom: 78.81%;
+
+font-family: 'SF Mono';
+font-style: italic;
+font-weight: 400;
+font-size: 12px;
+line-height: 14px;
+
+color: #007AFF;
+
+
+
+/* Group 24 */
+
+position: absolute;
+width: 186px;
+height: 60px;
+left: 396.14px;
+top: 370.81px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 33.01%;
+right: 58.65%;
+top: 23.18%;
+bottom: 73.07%;
+
+background: #3F3F4B;
+
+
+/* Quaternary */
+
+position: absolute;
+left: 43.01%;
+right: 51.49%;
+top: 23.55%;
+bottom: 74.32%;
+
+font-family: 'SF Pro Rounded';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+
+color: #FCFDF2;
+
+
+
+/* #331F4A */
+
+position: absolute;
+left: 43.01%;
+right: 52.65%;
+top: 24.93%;
+bottom: 74.2%;
+
+font-family: 'SF Mono';
+font-style: italic;
+font-weight: 400;
+font-size: 12px;
+line-height: 14px;
+
+color: #007AFF;
+
+
+
+/* Group 34 */
+
+position: absolute;
+width: 235px;
+height: 60px;
+left: 396.14px;
+top: 442.5px;
+
+
+
+/* Vector */
+
+position: absolute;
+left: 33.01%;
+right: 58.65%;
+top: 27.66%;
+bottom: 68.59%;
+
+background: #FCFDF2;
+
+
+/* Primary Foreground */
+
+position: absolute;
+left: 43.01%;
+right: 47.4%;
+top: 28.03%;
+bottom: 69.84%;
+
+font-family: 'SF Pro Rounded';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+
+color: #FCFDF2;
+
+
+
+/* #FCFDF2 */
+
+position: absolute;
+left: 43.01%;
+right: 52.65%;
+top: 29.41%;
+bottom: 69.72%;
+
+font-family: 'SF Mono';
+font-style: italic;
+font-weight: 400;
+font-size: 12px;
+line-height: 14px;
+
+color: #007AFF;
+
+
+
+/* Primary UI Action Color */
+
+position: absolute;
+left: 18.59%;
+right: 72%;
+top: 48.77%;
+bottom: 50.36%;
+
+font-family: 'SF Pro Rounded';
+font-style: normal;
+font-weight: 300;
+font-size: 12px;
+line-height: 14px;
+
+color: rgba(252, 253, 242, 0.7);
+
+
+
+/* Primary UI Action Color */
+
+position: absolute;
+left: 68.08%;
+right: 22.5%;
+top: 48.77%;
+bottom: 50.36%;
+
+font-family: 'SF Pro Rounded';
+font-style: normal;
+font-weight: 300;
+font-size: 12px;
+line-height: 14px;
+
+color: rgba(252, 253, 242, 0.7);
+
+
+
+/* Vector */
+
+position: absolute;
+left: 33.18%;
+right: 58.49%;
+top: 50%;
+bottom: 46.25%;
+
+background: #5AC8FA;
+
+
+/* Liquid Blue */
+
+position: absolute;
+left: 43.18%;
+right: 51.4%;
+top: 50.36%;
+bottom: 48.58%;
+
+font-family: 'SF Pro Rounded';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+
+color: #FCFDF2;
+
+
+
+/* #5AC8FA */
+
+position: absolute;
+left: 43.18%;
+right: 52.49%;
+top: 51.73%;
+bottom: 47.39%;
+
+font-family: 'SF Mono';
+font-style: italic;
+font-weight: 400;
+font-size: 12px;
+line-height: 14px;
+
+color: #007AFF;
+
+
+
+/* Primary AR UI Action Color */
+
+position: absolute;
+left: 43.18%;
+right: 45.99%;
+top: 52.98%;
+bottom: 46.14%;
+
+font-family: 'SF Pro Rounded';
+font-style: normal;
+font-weight: 300;
+font-size: 12px;
+line-height: 14px;
+
+color: rgba(252, 253, 242, 0.7);
+
+
+
+/* Vector */
+
+position: absolute;
+left: 33.27%;
+right: 58.4%;
+top: 45.42%;
+bottom: 50.83%;
+
+background: #007AFF;
+
+
+/* Pixel Blue */
+
+position: absolute;
+left: 43.27%;
+right: 51.98%;
+top: 45.8%;
+bottom: 53.14%;
+
+font-family: 'SF Pro Rounded';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+
+color: #FCFDF2;
+
+
+
+/* #007AFF */
+
+position: absolute;
+left: 43.27%;
+right: 52.4%;
+top: 47.17%;
+bottom: 51.95%;
+
+font-family: 'SF Mono';
+font-style: italic;
+font-weight: 400;
+font-size: 12px;
+line-height: 14px;
+
+color: #007AFF;
+
+
+
+/* Primary UI Action Color */
+
+position: absolute;
+left: 43.27%;
+right: 47.31%;
+top: 48.42%;
+bottom: 50.7%;
+
+font-family: 'SF Pro Rounded';
+font-style: normal;
+font-weight: 300;
+font-size: 12px;
+line-height: 14px;
+
+color: rgba(252, 253, 242, 0.7);
+
+
+
+/* Group 5 */
+
+position: absolute;
+width: 195px;
+height: 60px;
+
+
+
+/* Vector */
+
+position: absolute;
+width: 100px;
+height: 60px;
+
+background: #FF4F52;
+
+
+/* Pixel Orange */
+
+position: absolute;
+width: 75px;
+height: 17px;
+
+font-family: 'SF Pro Rounded';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+
+color: #FCFDF2;
+
+
+
+/* #FF6B6B */
+
+position: absolute;
+width: 52px;
+height: 14px;
+
+font-family: 'SF Mono';
+font-style: italic;
+font-weight: 400;
+font-size: 12px;
+line-height: 14px;
+
+color: #007AFF;
+
+
+
+/* Group 9 */
+
+position: absolute;
+width: 203px;
+height: 60px;
+
+
+
+/* Vector */
+
+position: absolute;
+width: 100px;
+height: 60px;
+
+background: #FF6B6B;
+
+
+/* Liquid Orange */
+
+position: absolute;
+width: 83px;
+height: 17px;
+
+font-family: 'SF Pro Rounded';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+
+color: #FCFDF2;
+
+
+
+/* #FF6B6B */
+
+position: absolute;
+width: 52px;
+height: 14px;
+
+font-family: 'SF Mono';
+font-style: italic;
+font-weight: 400;
+font-size: 12px;
+line-height: 14px;
+
+color: #007AFF;
+
+/* Vector */
+
+position: absolute;
+left: 8.59%;
+right: 67.5%;
+top: 65.81%;
+bottom: 30.14%;
+
+background: linear-gradient(90deg, #0A0621 -4.8%, #131A36 26.56%, #331F4A 68.37%, #0D0D15 99.73%);
+border: 1px solid rgba(90, 200, 250, 0.3);
+
+
+/* Vector */
+
+position: absolute;
+left: 8.5%;
+right: 67.58%;
+top: 57.7%;
+bottom: 38.25%;
+
+background: linear-gradient(90deg, #0A0621 0%, #131A36 30%, #0A0621 70%, #0D0D15 100%);
+border: 1px solid rgba(90, 200, 250, 0.3);
+
+
+/* Group */
+
+position: absolute;
+left: 8.84%;
+right: 76.75%;
+top: 70.56%;
+bottom: 28.38%;
+
+
+
+/* Group */
+
+position: absolute;
+left: 8.84%;
+right: 76.75%;
+top: 70.56%;
+bottom: 28.38%;
+
+
+
+/* Spatial Background Gradient */
+
+position: absolute;
+left: 8.84%;
+right: 76.75%;
+top: 70.56%;
+bottom: 28.38%;
+
+font-family: 'SF Pro Rounded';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+
+color: #FFFFFF;
+
+
+
+/* Group */
+
+position: absolute;
+left: 8.67%;
+right: 74%;
+top: 62.45%;
+bottom: 36.49%;
+
+
+
+/* Group */
+
+position: absolute;
+left: 8.67%;
+right: 74%;
+top: 62.45%;
+bottom: 36.49%;
+
+
+
+/* Deep Spatial Background Gradient */
+
+position: absolute;
+left: 8.67%;
+right: 74%;
+top: 62.45%;
+bottom: 36.49%;
+
+font-family: 'SF Pro Rounded';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+
+color: #FFFFFF;
+
+
+
+/* Material-Inspired Gradient Systems */
+
+position: absolute;
+width: 207px;
+height: 17px;
+
+font-family: 'SF Pro Rounded';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+
+color: #FFFFFF;
+
+
+
+/* Foundation Gradients */
+
+position: absolute;
+width: 126px;
+height: 17px;
+
+font-family: 'SF Pro Rounded';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+
+color: #FFFFFF;
+
+
+
+/* Group */
+
+position: absolute;
+width: 240px;
+height: 57px;
+
+
+
+/* Vector */
+
+position: absolute;
+width: 240px;
+height: 40px;
+
+background: linear-gradient(90deg, #131A36 -0.02%, #331F4A 49.98%, #6A3093 99.98%);
+
+
+/* Quantum Depth Gradient */
+
+position: absolute;
+width: 127px;
+height: 14px;
+
+font-family: 'SF Pro Rounded';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 14px;
+
+color: #FFFFFF;
+
+
+
+/* Group */
+
+position: absolute;
+width: 240px;
+height: 57px;
+
+
+
+/* Vector */
+
+position: absolute;
+width: 240px;
+height: 40px;
+
+background: linear-gradient(90deg, #0A0621 -0.02%, #131A36 99.98%);
+
+
+/* Spatial Background Gradient */
+
+position: absolute;
+width: 144px;
+height: 14px;
+
+font-family: 'SF Pro Rounded';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 14px;
+
+color: #FFFFFF;
+

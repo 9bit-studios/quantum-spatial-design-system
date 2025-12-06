@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RunSmart - Apple Watch Ultra</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', system-ui, sans-serif;
+            background: #000000;
+            color: #FFFFFF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 40px;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        /* Apple Watch Ultra Frame - 49mm */
+        .watch-frame {
+            width: 396px;
+            height: 484px;
+            background: #1C1C1E;
+            border-radius: 55px;
+            padding: 14px;
+            box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.9),
+                        inset 0 0 0 2px rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Action Button (left side) */
+        .action-button {
+            position: absolute;
+            left: -4px;
+            top: 160px;
+            width: 8px;
+            height: 60px;
+            background: #FF9500;
+            border-radius: 4px 0 0 4px;
+            z-index: 200;
+        }
+
+        /* Digital Crown & Side Button */
+        .crown {
+            position: absolute;
+            right: -6px;
+            top: 140px;
+            width: 12px;
+            height: 50px;
+            background: linear-gradient(135deg, #666, #333);
+            border-radius: 6px;
+            z-index: 200;
+        }
+
+        .side-button {
+            position: absolute;
+            right: -6px;
+            top: 210px;
+            width: 12px;
+            height: 40px;
+            background: linear-gradient(135deg, #555, #222);
+            border-radius: 6px;
+            z-index: 200;
+        }
+
+        .screen {
+            width: 100%;
+            height: 100%;
+            background: #000;
+            border-radius: 45px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Always-On Display with LTPO */
+        .aod-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        /* Status Bar */
+        .status-bar {
+            padding: 12px 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 13px;
+            font-weight: 600;
+            position: relative;
+            z-index: 10;
+        }
+
+        .time-display {
+            color: #7B00FF;
+            font-weight: 700;
+        }
+
+        /* Live Activity Header */
+        .live-activity {
+            background: linear-gradient(180deg, rgba(205, 255, 0, 0.15) 0%, transparent 100%);
+            padding: 16px;
+            border-bottom: 1px solid rgba(205, 255, 0, 0.2);
+        }
+
+        .activity-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .activity-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: #7B00FF;
+        }
+
+        .ai-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            background: rgba(205, 255, 0, 0.2);
+            padding: 4px 8px;
+            border-radius: 8px;
+            font-size: 10px;
+            font-weight: 700;
+            color: #CDFF00;
+        }
+
+        .ai-pulse {
+            width: 6px;
+            height: 6px;
+            background: #7B00FF;
+            border-radius: 3px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.6; transform: scale(0.8); }
+        }
+
+        /* Primary Metrics - Large Display */
+        .primary-metrics {
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .metric-hero {
+            text-align: center;
+        }
+
+        .metric-value-large {
+            font-size: 64px;
+            font-weight: 700;
+            line-height: 1;
+            background: linear-gradient(135deg, #7B00FF 0%, #A0CC00 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .metric-label-large {
+            font-size: 12px;
+            color: #888;
+            text-transform: uppercase;
+            margin-top: 4px;
+            letter-spacing: 1px;
+        }
+
+        /* Heart Rate Zone Visualization */
+        .hr-zone-display {
+            background: rgba(255, 0, 0, 0.1);
+            border: 1px solid #CDFF00;
+            border-radius: 16px;
+            padding: 12px;
+            margin: 0 16px;
+        }
+
+        .hr-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .hr-value {
+            font-size: 32px;
+            font-weight: 700;
+            color: #CDFF00;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .heartbeat {
+            animation: heartbeat 1s infinite;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            25% { transform: scale(1.1); }
+        }
+
+        .hr-zone {
+            font-size: 11px;
+            color: #888;
+            text-transform: uppercase;
+        }
+
+        .hr-zone-bar {
+            height: 6px;
+            background: #1A1A1A;
+            border-radius: 3px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hr-zone-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #10B981, #F59E0B, #CDFF00);
+            width: 78%;
+            border-radius: 3px;
+            transition: width 0.3s;
+        }
+
+        /* AI Coaching Insight Card */
+        .ai-insight-card {
+            background: linear-gradient(135deg, rgba(205, 255, 0, 0.1) 0%, rgba(160, 204, 0, 0.05) 100%);
+            border: 1px solid rgba(205, 255, 0, 0.3);
+            border-radius: 16px;
+            padding: 12px;
+            margin: 0 16px 12px 16px;
+        }
+
+        .insight-header {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 6px;
+        }
+
+        .insight-icon {
+            font-size: 16px;
+        }
+
+        .insight-title {
+            font-size: 11px;
+            font-weight: 700;
+            color: #7B00FF;
+            text-transform: uppercase;
+        }
+
+        .insight-text {
+            font-size: 13px;
+            color: #CCC;
+            line-height: 1.4;
+        }
+
+        .insight-action {
+            margin-top: 8px;
+            padding: 8px 12px;
+            background: #7B00FF;
+            color: #000;
+            border-radius: 10px;
+            font-size: 12px;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        /* Secondary Metrics Grid */
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+            padding: 0 16px 12px 16px;
+        }
+
+        .metric-card {
+            background: #0A0A0A;
+            border: 1px solid #1A1A1A;
+            border-radius: 12px;
+            padding: 10px;
+        }
+
+        .metric-label {
+            font-size: 10px;
+            color: #888;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+
+        .metric-value {
+            font-size: 20px;
+            font-weight: 700;
+            color: #7B00FF;
+        }
+
+        .metric-subtext {
+            font-size: 9px;
+            color: #666;
+            margin-top: 2px;
+        }
+
+        /* Haptic Feedback Indicator */
+        .haptic-feedback {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(205, 255, 0, 0.3), transparent);
+            opacity: 0;
+            pointer-events: none;
+            animation: haptic 0.5s;
+        }
+
+        @keyframes haptic {
+            0% { opacity: 0; transform: translate(-50%, -50%) scale(0.5); }
+            50% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+            100% { opacity: 0; transform: translate(-50%, -50%) scale(1.5); }
+        }
+
+        /* VoiceOver Accessibility Indicator */
+        .voiceover-indicator {
+            position: absolute;
+            bottom: 12px;
+            right: 12px;
+            width: 32px;
+            height: 32px;
+            background: rgba(205, 255, 0, 0.2);
+            border: 2px solid #7B00FF;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            z-index: 100;
+        }
+
+        /* Adaptive Brightness Ring */
+        .brightness-ring {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+            box-shadow: inset 0 0 20px rgba(205, 255, 0, 0.1);
+            border-radius: 45px;
+        }
+
+        /* Screen Label */
+        .screen-label {
+            position: absolute;
+            top: -30px;
+            left: 0;
+            font-size: 14px;
+            color: #888;
+            font-weight: 600;
+        }
+
+        /* Live Workout Mode Indicator */
+        .live-workout-pill {
+            position: absolute;
+            top: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(205, 255, 0, 0.9);
+            color: #000;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 10px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            z-index: 100;
+        }
+
+        .recording-dot {
+            width: 6px;
+            height: 6px;
+            background: #CDFF00;
+            border-radius: 3px;
+            animation: recording 2s infinite;
+        }
+
+        @keyframes recording {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+
+        /* Complications Bar */
+        .complications-bar {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(20px);
+            border-top: 1px solid #1A1A1A;
+            padding: 8px 16px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .complication {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2px;
+            font-size: 9px;
+            color: #888;
+        }
+
+        .complication-icon {
+            font-size: 16px;
+        }
+
+        .complication.active {
+            color: #7B00FF;
+        }
+
+        /* Predictive Pace Card */
+        .prediction-card {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(147, 51, 234, 0.1) 100%);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            border-radius: 16px;
+            padding: 12px;
+            margin: 0 16px 12px 16px;
+        }
+
+        .prediction-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .prediction-title {
+            font-size: 11px;
+            font-weight: 700;
+            color: #60A5FA;
+            text-transform: uppercase;
+        }
+
+        .confidence-badge {
+            background: rgba(59, 130, 246, 0.2);
+            color: #60A5FA;
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-size: 9px;
+            font-weight: 700;
+        }
+
+        .prediction-value {
+            font-size: 28px;
+            font-weight: 700;
+            color: #60A5FA;
+            margin-bottom: 4px;
+        }
+
+        .prediction-desc {
+            font-size: 11px;
+            color: #888;
+        }
+    </style>
+    <link rel="stylesheet" href="../../assets/runsmart-design-system.css">
+</head>
+<body>
+    <!-- Screen 1: Live Run - AI Coaching -->
+    <div class="watch-frame" style="position: relative;">
+        <div class="screen-label">Screen 1: Live Run - AI Coaching</div>
+        <div class="action-button"></div>
+        <div class="crown"></div>
+        <div class="side-button"></div>
+
+        <div class="screen">
+            <div class="live-workout-pill">
+                <div class="recording-dot"></div>
+                LIVE RUN
+            </div>
+
+            <div class="brightness-ring"></div>
+
+            <div class="status-bar">
+                <div class="time-display">10:47</div>
+                <div style="display: flex; align-items: center; gap: 4px;">
+                    <svg width="22" height="12" viewBox="0 0 22 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="1" y="1" width="18" height="10" rx="2" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                        <rect x="3" y="3" width="13.5" height="6" rx="1" fill="currentColor"/>
+                        <rect x="19.5" y="4" width="1.5" height="4" rx="0.75" fill="currentColor"/>
+                    </svg>
+                    87%
+                </div>
+            </div>
+
+            <div class="live-activity">
+                <div class="activity-header">
+                    <div class="activity-title">Tempo Run</div>
+                    <div class="ai-badge">
+                        <div class="ai-pulse"></div>
+                        AI ACTIVE
+                    </div>
+                </div>
+            </div>
+
+            <div class="primary-metrics">
+                <div class="metric-hero">
+                    <div class="metric-value-large">7:42</div>
+                    <div class="metric-label-large">Current Pace</div>
+                </div>
+            </div>
+
+            <div class="hr-zone-display">
+                <div class="hr-header">
+                    <div class="hr-value">
+                        <svg class="heartbeat" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" style="color: #CDFF00;">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                        <span>168</span>
+                    </div>
+                    <div class="hr-zone">Zone 4 - Threshold</div>
+                </div>
+                <div class="hr-zone-bar">
+                    <div class="hr-zone-fill"></div>
+                </div>
+            </div>
+
+            <div class="ai-insight-card">
+                <div class="insight-header">
+                    <svg class="insight-icon" width="16" height="20" viewBox="0 0 10 14" fill="currentColor" style="color: #7B00FF;">
+                        <path d="M7 0L0 8H5L3 14L10 6H5L7 0Z"/>
+                    </svg>
+                    <div class="insight-title">AI Coach Alert</div>
+                </div>
+                <div class="insight-text">
+                    You're 15 seconds ahead of target pace. Ease back slightly to maintain energy for final 2 miles.
+                </div>
+                <div class="insight-action">
+                    TAP FOR GUIDANCE
+                </div>
+            </div>
+
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-label">Distance</div>
+                    <div class="metric-value">4.2</div>
+                    <div class="metric-subtext">of 6 miles</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Cadence</div>
+                    <div class="metric-value">176</div>
+                    <div class="metric-subtext">spm • ideal</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Elevation</div>
+                    <div class="metric-value">+247</div>
+                    <div class="metric-subtext">ft gained</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Power</div>
+                    <div class="metric-value">289</div>
+                    <div class="metric-subtext">watts</div>
+                </div>
+            </div>
+
+            <div class="voiceover-indicator">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="color: #7B00FF;">
+                    <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <!-- Screen 2: Predictive Performance -->
+    <div class="watch-frame" style="position: relative;">
+        <div class="screen-label">Screen 2: Predictive Analytics</div>
+        <div class="action-button"></div>
+        <div class="crown"></div>
+        <div class="side-button"></div>
+
+        <div class="screen">
+            <div class="brightness-ring"></div>
+
+            <div class="status-bar">
+                <div class="time-display">10:47</div>
+                <div style="display: flex; align-items: center; gap: 4px;">
+                    <svg width="22" height="12" viewBox="0 0 22 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="1" y="1" width="18" height="10" rx="2" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                        <rect x="3" y="3" width="13.5" height="6" rx="1" fill="currentColor"/>
+                        <rect x="19.5" y="4" width="1.5" height="4" rx="0.75" fill="currentColor"/>
+                    </svg>
+                    87%
+                </div>
+            </div>
+
+            <div class="live-activity">
+                <div class="activity-header">
+                    <div class="activity-title">Performance Prediction</div>
+                    <div class="ai-badge">
+                        <div class="ai-pulse"></div>
+                        AI ANALYZING
+                    </div>
+                </div>
+            </div>
+
+            <div class="prediction-card">
+                <div class="prediction-header">
+                    <div class="prediction-title" style="display: flex; align-items: center; gap: 6px;">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color: #60A5FA;">
+                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/>
+                            <circle cx="12" cy="12" r="6" fill="currentColor"/>
+                            <circle cx="12" cy="12" r="2" fill="#000"/>
+                        </svg>
+                        Predicted Finish Time
+                    </div>
+                    <div class="confidence-badge">94% CONF</div>
+                </div>
+                <div class="prediction-value">46:12</div>
+                <div class="prediction-desc">Based on current HR, pace, cadence, & elevation</div>
+            </div>
+
+            <div class="ai-insight-card">
+                <div class="insight-header">
+                    <svg class="insight-icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="color: #7B00FF;">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
+                    </svg>
+                    <div class="insight-title">Neural Analysis</div>
+                </div>
+                <div class="insight-text">
+                    Your biometrics show optimal performance. Heart rate variability is +12% vs your 30-day average. You're primed for a PR!
+                </div>
+            </div>
+
+            <div class="prediction-card" style="border-color: rgba(139, 92, 246, 0.3); background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(236, 72, 153, 0.1) 100%);">
+                <div class="prediction-header">
+                    <div class="prediction-title" style="color: #A78BFA; display: flex; align-items: center; gap: 6px;">
+                        <svg width="12" height="16" viewBox="0 0 10 14" fill="currentColor">
+                            <path d="M7 0L0 8H5L3 14L10 6H5L7 0Z"/>
+                        </svg>
+                        Fatigue Level
+                    </div>
+                    <div class="confidence-badge" style="background: rgba(139, 92, 246, 0.2); color: #A78BFA;">LOW</div>
+                </div>
+                <div class="prediction-value" style="color: #A78BFA;">23%</div>
+                <div class="prediction-desc">Recovery is excellent. Ready for hard effort tomorrow.</div>
+            </div>
+
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-label">VO₂ Max</div>
+                    <div class="metric-value">54.2</div>
+                    <div class="metric-subtext">+1.3 this week</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Efficiency</div>
+                    <div class="metric-value">98%</div>
+                    <div class="metric-subtext">excellent</div>
+                </div>
+            </div>
+
+            <div class="voiceover-indicator">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="color: #7B00FF;">
+                    <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <!-- Screen 3: Adaptive Recovery Intelligence -->
+    <div class="watch-frame" style="position: relative;">
+        <div class="screen-label">Screen 3: Recovery Intelligence</div>
+        <div class="action-button"></div>
+        <div class="crown"></div>
+        <div class="side-button"></div>
+
+        <div class="screen">
+            <div class="brightness-ring"></div>
+
+            <div class="status-bar">
+                <div class="time-display">6:42 AM</div>
+                <div style="display: flex; align-items: center; gap: 4px;">
+                    <svg width="22" height="12" viewBox="0 0 22 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="1" y="1" width="18" height="10" rx="2" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                        <rect x="3" y="3" width="14.5" height="6" rx="1" fill="currentColor"/>
+                        <rect x="19.5" y="4" width="1.5" height="4" rx="0.75" fill="currentColor"/>
+                    </svg>
+                    92%
+                </div>
+            </div>
+
+            <div class="live-activity">
+                <div class="activity-header">
+                    <div class="activity-title">Recovery Status</div>
+                    <div class="ai-badge">
+                        <div class="ai-pulse"></div>
+                        MONITORING
+                    </div>
+                </div>
+            </div>
+
+            <div class="primary-metrics">
+                <div class="metric-hero">
+                    <div class="metric-value-large" style="background: linear-gradient(135deg, #10B981 0%, #059669 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">87%</div>
+                    <div class="metric-label-large">Recovered</div>
+                </div>
+            </div>
+
+            <div class="ai-insight-card" style="border-color: rgba(16, 185, 129, 0.3); background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(5, 150, 105, 0.05) 100%);">
+                <div class="insight-header">
+                    <svg class="insight-icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="color: #10B981;">
+                        <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
+                    </svg>
+                    <div class="insight-title" style="color: #10B981;">Sleep Analysis</div>
+                </div>
+                <div class="insight-text">
+                    7h 42m deep sleep detected. HRV increased 18% overnight. Your body is ready for today's tempo run.
+                </div>
+            </div>
+
+            <div class="prediction-card">
+                <div class="prediction-header">
+                    <div class="prediction-title" style="display: flex; align-items: center; gap: 6px;">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="color: #60A5FA;">
+                            <path d="M3.5 18.49l6-6.01 4 4L22 6.92l-1.41-1.41-7.09 7.97-4-4L2 16.99z"/>
+                        </svg>
+                        Readiness Score
+                    </div>
+                    <div class="confidence-badge">OPTIMAL</div>
+                </div>
+                <div class="prediction-value">9.2/10</div>
+                <div class="prediction-desc">Resting HR: 47 bpm (-5 vs avg) • HRV: 82ms (+12)</div>
+            </div>
+
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-label">Resting HR</div>
+                    <div class="metric-value">47</div>
+                    <div class="metric-subtext">-5 vs avg</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">HRV</div>
+                    <div class="metric-value">82</div>
+                    <div class="metric-subtext">+18% optimal</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Sleep</div>
+                    <div class="metric-value">7:42</div>
+                    <div class="metric-subtext">deep rest</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Stress</div>
+                    <div class="metric-value">LOW</div>
+                    <div class="metric-subtext">baseline</div>
+                </div>
+            </div>
+
+            <div class="voiceover-indicator">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="color: #7B00FF;">
+                    <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <!-- Screen 4: Accessibility - VoiceOver Mode -->
+    <div class="watch-frame" style="position: relative;">
+        <div class="screen-label">Screen 4: VoiceOver + Haptic Mode</div>
+        <div class="action-button"></div>
+        <div class="crown"></div>
+        <div class="side-button"></div>
+
+        <div class="screen">
+            <div class="brightness-ring"></div>
+
+            <div class="status-bar">
+                <div class="time-display">10:52</div>
+                <div style="display: flex; align-items: center; gap: 4px;">
+                    <svg width="22" height="12" viewBox="0 0 22 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="1" y="1" width="18" height="10" rx="2" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                        <rect x="3" y="3" width="13" height="6" rx="1" fill="currentColor"/>
+                        <rect x="19.5" y="4" width="1.5" height="4" rx="0.75" fill="currentColor"/>
+                    </svg>
+                    84%
+                </div>
+            </div>
+
+            <div class="live-activity" style="background: linear-gradient(180deg, rgba(59, 130, 246, 0.15) 0%, transparent 100%); border-bottom-color: rgba(59, 130, 246, 0.2);">
+                <div class="activity-header">
+                    <div class="activity-title" style="color: #60A5FA;">Accessible Run Mode</div>
+                    <div class="ai-badge" style="background: rgba(59, 130, 246, 0.2); color: #60A5FA;">
+                        <div class="ai-pulse" style="background: #60A5FA;"></div>
+                        VOICEOVER
+                    </div>
+                </div>
+            </div>
+
+            <div class="primary-metrics" style="text-align: center; padding: 24px 16px;">
+                <div style="font-size: 18px; color: #60A5FA; margin-bottom: 12px; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 8px;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+                    </svg>
+                    Audio Guidance Active
+                </div>
+                <div style="font-size: 14px; color: #CCC; line-height: 1.6; margin-bottom: 16px;">
+                    Haptic feedback + voice guidance for eyes-free running
+                </div>
+
+                <div class="ai-insight-card" style="border-color: rgba(59, 130, 246, 0.3); background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(37, 99, 235, 0.05) 100%); text-align: left;">
+                    <div class="insight-header">
+                        <svg class="insight-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="color: #60A5FA;">
+                            <path d="M0 0h24v24H0z" fill="none"/>
+                            <path d="M7 20h4c0 1.1-.9 2-2 2s-2-.9-2-2zm-2-1h8v-2H5v2zm11.5-9.5c0 3.82-2.66 5.86-3.77 6.5H5.27c-1.11-.64-3.77-2.68-3.77-6.5C1.5 5.36 4.86 2 9 2s7.5 3.36 7.5 7.5zm4.87-2.13L20 8l1.37.63L22 10l.63-1.37L24 8l-1.37-.63L22 6l-.63 1.37zM19 6l.94-2.06L22 3l-2.06-.94L19 0l-.94 2.06L16 3l2.06.94z"/>
+                        </svg>
+                        <div class="insight-title" style="color: #60A5FA;">Smart Haptics</div>
+                    </div>
+                    <div class="insight-text" style="margin-bottom: 12px;">
+                        • <strong>Double tap</strong> - Pace too fast<br>
+                        • <strong>Single tap</strong> - On target<br>
+                        • <strong>Triple tap</strong> - Pace too slow<br>
+                        • <strong>Long buzz</strong> - Mile complete
+                    </div>
+                </div>
+
+                <div class="ai-insight-card" style="margin-top: 12px; border-color: rgba(16, 185, 129, 0.3); background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(5, 150, 105, 0.05) 100%); text-align: left;">
+                    <div class="insight-header">
+                        <svg class="insight-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="color: #10B981;">
+                            <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/>
+                        </svg>
+                        <div class="insight-title" style="color: #10B981;">Voice Announcements</div>
+                    </div>
+                    <div class="insight-text">
+                        Every 0.25 mile: Current pace, heart rate, time<br><br>
+                        <strong>Siri Integration:</strong> "Hey Siri, what's my pace?" - instant response
+                    </div>
+                </div>
+            </div>
+
+            <div class="metrics-grid">
+                <div class="metric-card" style="border: 2px solid #60A5FA; background: rgba(59, 130, 246, 0.1);">
+                    <div class="metric-label" style="color: #60A5FA;">Pace</div>
+                    <div class="metric-value" style="color: #60A5FA;">7:38</div>
+                    <div class="metric-subtext">ON TARGET ✓</div>
+                </div>
+                <div class="metric-card" style="border: 2px solid #CDFF00; background: rgba(239, 68, 68, 0.1);">
+                    <div class="metric-label" style="color: #CDFF00;">HR</div>
+                    <div class="metric-value" style="color: #CDFF00;">172</div>
+                    <div class="metric-subtext">ZONE 4</div>
+                </div>
+            </div>
+
+            <div class="voiceover-indicator" style="border-color: #60A5FA; background: rgba(59, 130, 246, 0.3);">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="color: #60A5FA;">
+                    <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+                </svg>
+            </div>
+
+            <div class="complications-bar">
+                <div class="complication active">
+                    <svg class="complication-icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>
+                    </svg>
+                    <div>VoiceOver</div>
+                </div>
+                <div class="complication active">
+                    <svg class="complication-icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M0 15h2v2H0v-2zm0-2h2v-2H0v2zm0-4V7h2v2H0zm4 0V7h2v2H4zm0 6h2v-2H4v2zm0 2v2h2v-2H4zm4-4v2h2v-2H8zm0-4V7h2v2H8zm0 8v2h2v-2H8zm4-8V7h2v2h-2zm0 8v2h2v-2h-2zm0-4v2h2v-2h-2z"/>
+                    </svg>
+                    <div>Haptic</div>
+                </div>
+                <div class="complication active">
+                    <svg class="complication-icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z"/>
+                        <path d="M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"/>
+                    </svg>
+                    <div>Siri</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

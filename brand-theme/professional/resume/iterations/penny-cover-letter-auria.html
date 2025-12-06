@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penny Platt - Cover Letter - Auria UI/UX Designer</title>
+    <style>
+        @page {
+            size: letter;
+            margin: 0.75in;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif;
+            font-size: 11pt;
+            line-height: 1.5;
+            color: #131A36;
+            background: white;
+            max-width: 8.5in;
+            margin: 0 auto;
+            padding: 0.75in;
+        }
+        
+        .header {
+            margin-bottom: 24px;
+            border-bottom: 1px solid rgba(64, 93, 229, 0.15);
+            padding-bottom: 16px;
+        }
+        
+        h1 {
+            font-family: 'SF Pro Display', -apple-system, sans-serif;
+            font-size: 22pt;
+            font-weight: 600;
+            color: #131A36;
+            margin-bottom: 4px;
+            letter-spacing: -0.5px;
+        }
+        
+        .tagline {
+            font-size: 13pt;
+            font-weight: 500;
+            color: #6A3093;
+            margin-bottom: 12px;
+        }
+        
+        .contact {
+            font-size: 9pt;
+            color: #613FE7;
+            line-height: 1.8;
+        }
+        
+        .contact-row {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        
+        .contact a {
+            color: #613FE7;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+        
+        .contact-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+        
+        .icon {
+            width: 12px;
+            height: 12px;
+            opacity: 0.7;
+        }
+        
+        .recipient {
+            margin-bottom: 20px;
+            font-size: 11pt;
+            line-height: 1.6;
+        }
+        
+        .recipient-name {
+            font-weight: 600;
+            color: #131A36;
+        }
+        
+        .subject {
+            font-weight: 600;
+            color: #405de5;
+            margin-bottom: 16px;
+        }
+        
+        .salutation {
+            margin-bottom: 16px;
+        }
+        
+        p {
+            margin-bottom: 14px;
+            text-align: justify;
+        }
+        
+        .section {
+            margin-bottom: 20px;
+        }
+        
+        .section-title {
+            font-family: 'SF Pro Display', -apple-system, sans-serif;
+            font-size: 14pt;
+            font-weight: 600;
+            color: #613FE7;
+            margin-bottom: 8px;
+            padding-left: 8px;
+            border-left: 3px solid #613FE7;
+        }
+        
+        .profile {
+            font-size: 10pt;
+            line-height: 1.5;
+            margin-bottom: 16px;
+        }
+        
+        .subsection-heading {
+            font-weight: 600;
+            color: #405de5;
+            margin-top: 12px;
+            margin-bottom: 6px;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-bottom: 14px;
+        }
+        
+        li {
+            margin-bottom: 6px;
+        }
+        
+        .highlight-box {
+            background: rgba(97, 63, 231, 0.05);
+            border-left: 3px solid #613FE7;
+            padding: 12px 14px;
+            margin: 14px 0;
+            border-radius: 4px;
+        }
+        
+        .checklist {
+            list-style: none;
+            margin-left: 0;
+        }
+        
+        .checklist li:before {
+            content: "✓ ";
+            color: #66BB6A;
+            font-weight: bold;
+            margin-right: 6px;
+        }
+        
+        .closing {
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .signature {
+            font-weight: 600;
+            color: #131A36;
+        }
+        
+        .attachments {
+            font-size: 10pt;
+            margin-top: 24px;
+            padding-top: 12px;
+            border-top: 1px solid rgba(64, 93, 229, 0.15);
+        }
+        
+        .attachments-title {
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+        
+        .job {
+            margin-bottom: 16px;
+            page-break-inside: avoid;
+        }
+        
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 4px;
+        }
+        
+        .job-title {
+            font-size: 12pt;
+            font-weight: 600;
+            color: #131A36;
+        }
+        
+        .job-company {
+            font-size: 11pt;
+            font-weight: 500;
+            color: #405de5;
+        }
+        
+        .job-date {
+            font-size: 9pt;
+            color: #6A3093;
+        }
+        
+        .job-location {
+            font-size: 9pt;
+            color: #6A3093;
+            margin-bottom: 6px;
+        }
+        
+        .job ul {
+            margin-left: 16px;
+            margin-top: 6px;
+        }
+        
+        .job li {
+            margin-bottom: 4px;
+            line-height: 1.4;
+        }
+        
+        .portfolio-highlight {
+            background: rgba(97, 63, 231, 0.05);
+            border-left: 3px solid #613FE7;
+            padding: 10px 12px;
+            margin: 10px 0;
+            border-radius: 4px;
+        }
+        
+        .portfolio-title {
+            font-weight: 600;
+            color: #613FE7;
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .portfolio-link {
+            font-size: 9pt;
+            color: #405de5;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px 24px;
+            font-size: 10pt;
+        }
+        
+        .skill-category {
+            font-weight: 600;
+            color: #131A36;
+        }
+        
+        .skill-list {
+            color: #131A36;
+            margin-top: 2px;
+        }
+        
+        .education-item {
+            margin-bottom: 8px;
+        }
+        
+        .education-degree {
+            font-weight: 600;
+            color: #131A36;
+        }
+        
+        .education-school {
+            color: #405de5;
+        }
+        
+        .education-year {
+            color: #6A3093;
+            font-size: 9pt;
+        }
+        
+        .recipient-name {
+            font-weight: 600;
+            color: #131A36;
+        }
+        
+        .subject {
+            font-weight: 600;
+            color: #405de5;
+            margin-bottom: 16px;
+        }
+        
+        .salutation {
+            margin-bottom: 16px;
+        }
+        
+        @media print {
+            body {
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Penny Platt</h1>
+        <div class="tagline">Creative Developer & UX Strategist</div>
+        <div class="contact">
+            <div class="contact-row">
+                <span class="contact-item">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    Portland, Oregon | Open to Remote or Colorado Springs Relocation
+                </span>
+                <span class="contact-item">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                    (971) 386-7688
+                </span>
+            </div>
+            <div class="contact-row">
+                <a href="mailto:penny@9bitstudios.io">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                    penny@9bitstudios.io
+                <a href="https://linkedin.com/in/penny-platt">
+                    <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
+                    @penny-platt
+                </a>
+                <a href="https://9bitstudios.io">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="2" y1="12" x2="22" y2="12"></line>
+                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                    </svg>
+                    9bitstudios.io
+                </a>
+                <a href="https://Oksana.ai">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="2" y1="12" x2="22" y2="12"></line>
+                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                    </svg>
+                    Oksana.ai
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="recipient">
+        <div class="recipient-name">Auria</div>
+        <div>Colorado Springs, CO</div>
+    </div>
+
+    <div class="subject">Re: UI/UX Designer - Gamified Training & Defense Solutions</div>
+
+    <div class="salutation">Dear Hiring Manager,</div>
+
+    <pclass="profile">I'm excited to apply for the UI/UX Designer position. With 20+ years designing interactive experiences—from comprehensive 2D game systems to spatial computing interfaces—I bring exactly the blend of intuitive design thinking, technical execution, and systematic validation through Typescript and analytics intelligence.</p>
+
+    <div class="section-heading">Game Design + Interactive Experience Foundation</div>
+
+    <p>My background uniquely positions me for Auria's gamified training environment:</p>
+
+    <ul>
+        <li><strong>Comprehensive 2D Game Design:</strong> Trained by renowned game developer Arthur Petersen (Petersen Games), where I directed design for Kickstarter campaigns generating $2M+ in funding and created design systems for product lines with 100+ SKUs</li>
+        <li><strong>Generative Game Engine Development:</strong> Currently building Oksana—a generative narrative engine leveraging Apple Intelligence to create adaptive, branching storylines for interactive experiences</li>
+        <li><strong>Spatial Computing Architecture:</strong> Developing quantum-spatial design system optimized for dimensional interfaces, from traditional 2D screens to Apple Vision Pro's volumetric computing environment</li>
+    </ul>
+
+    <p>This experience translates directly to designing engaging, intuitive training simulations that balance gameplay mechanics with learning objectives—exactly what warfighter readiness demands.</p>
+
+    <div class="section-heading">UI/UX Excellence Across Platforms</div>
+
+    <p>My design practice emphasizes the systematic, user-centered approach your role requires:</p>
+
+    <div class="subsection-heading">Research & Discovery:</div>
+    <ul>
+        <li>Conducted stakeholder interviews and usability testing at American College of Healthcare Sciences (5,000+ students)</li>
+        <li>IxDF certified in UX Foundations, Journey Mapping, and Agile Methods for UX (2020)</li>
+        <li>Data-informed design decisions backed by analytics, A/B testing, and user behavior analysis</li>
+    </ul>
+
+    <div class="subsection-heading">Design Systems & Accessibility:</div>
+    <ul>
+        <li>Created quantum-spatial design system ensuring Apple HIG compliance and WCAG accessibility standards</li>
+        <li>Built reusable component libraries with TypeScript validation for consistency at scale</li>
+        <li>Developed comprehensive style guides and design tokens for cross-platform coherence</li>
+    </ul>
+
+    <div class="subsection-heading">Prototyping & Validation:</div>
+    <ul>
+        <li>Proficient in Figma, Adobe Creative Suite, and modern prototyping workflows</li>
+        <li>Created wireframes, interactive prototypes, and high-fidelity designs across web and desktop applications</li>
+        <li>Iterative design approach validated through user testing and stakeholder feedback</li>
+    </ul>
+
+    <div class="subsection-heading">Proven Results:</div>
+    <ul>
+        <li>40% engagement increase through systematic UX redesign (RunSmart Online)</li>
+        <li>25% membership growth via conversion-optimized experiences</li>
+        <li>$500k+ annual revenue e-commerce implementation (ACHS Shopify)</li>
+    </ul>
+
+    <div class="section-heading">Agile Team Integration & Technical Collaboration</div>
+
+    <p>I thrive in the Scrum environment your role requires:</p>
+
+    <ul>
+        <li><strong>Sprint Participation:</strong> Active in all ceremonies—planning, reviews, demos, retrospectives</li>
+        <li><strong>Developer Collaboration:</strong> Work alongside frontend teams implementing designs with technical precision</li>
+        <li><strong>Technical Communication:</strong> Bridge between design vision and engineering constraints, ensuring feasible, elegant solutions</li>
+        <li><strong>Mentorship Capability:</strong> Educate teams on user-centered design principles and human factors considerations</li>
+    </ul>
+
+    <div class="section-heading">Privacy-aligned Development Strategy</div>
+
+    <p>My systematic thinking naturally produces documentation and processes that strengthen team collaboration—from design system specifications to workflow optimizations:</p>
+
+    <ul>
+        <li><strong>Privacy-First Architecture:</strong> All my work emphasizes on-device processing and data security</li>
+        <li><strong>Accessibility Compliance:</strong> WCAG standards integration throughout design systems</li>
+        <li><strong>Systematic Validation:</strong> Quality control processes that catch issues before deployment</li>
+        <li><strong>Mission-Critical Mindset:</strong> 20 years delivering under tight deadlines with zero-compromise quality standards</li>
+    </ul>
+
+    <div class="subsection-heading">Gaming-Informed UX:</div>
+    <ul>
+        <li>Engagement mechanics that maintain attention without compromising learning objectives</li>
+        <li>Progressive disclosure patterns that mirror skill acquisition curves</li>
+        <li>Feedback systems tuned for rapid decision-making under pressure</li>
+    </ul>
+
+    <div class="subsection-heading">Technical Foundation:</div>
+    <ul>
+        <li>TypeScript-validated component libraries ensure consistency across teams</li>
+        <li>Design tokens enable rapid theming for classification levels or mission contexts</li>
+        <li>Responsive architecture adapts to diverse hardware configurations</li>
+    </ul>
+
+    <div class="section-heading">Oksana: Generative Intelligence for Training Scenarios</div>
+
+    <p>My Oksana platform demonstrates capabilities directly applicable to adaptive training systems:</p>
+
+    <ul>
+        <li><strong>Branching Narrative Engine:</strong> Generates dynamic scenario variations based on learner decisions</li>
+        <li><strong>Content Intelligence:</strong> Ensures consistency with doctrine, procedures, and training objectives</li>
+        <li><strong>Analytics Integration:</strong> Tracks performance metrics and adapts difficulty in real-time</li>
+        <li><strong>Brand-Aware Output:</strong> Maintains visual and content consistency with military standards</li>
+    </ul>
+
+    <p>This technology could enhance Auria's gamified trainers by creating infinite scenario variations while ensuring training objectives remain aligned with doctrine.</p>
+
+    <div class="section-heading">Why Auria + Why Now</div>
+
+    <p>Your mission—strengthening national security through innovative training solutions—resonates deeply with my values. The opportunity to apply game design thinking to warfighter readiness represents the perfect intersection of my skills:</p>
+
+    <div class="highlight-box">
+        <ul class="checklist">
+            <li><strong>Game design expertise</strong> from renowned developer + generative engine development</li>
+            <li><strong>Spatial computing architecture</strong> ready for LVC training environments</li>
+            <li><strong>Systematic UX validation</strong> ensuring mission-critical reliability</li>
+            <li><strong>Cross-functional collaboration</strong> within Agile teams</li>
+            <li><strong>Design system mastery</strong> for consistency at scale</li>
+        </ul>
+    </div>
+
+    <p>I'm open to remote work or relocating to Colorado Springs for the hybrid schedule. The chance to contribute to defense readiness while working with Auria's talented team on cutting-edge training technology is exactly the mission-driven challenge I'm seeking.</p>
+
+    <div class="section-heading">Technical Alignment Summary</div>
+
+    <div class="subsection-heading">Required Qualifications:</div>
+    <ul class="checklist">
+        <li>3+ years UI/UX with significant contributions to interactive experiences</li>
+        <li>Wireframes, mockups, intuitive design, UCD, prototyping, usability testing</li>
+        <li>Figma, Adobe Creative Suite proficiency</li>
+        <li>Design system development and iteration experience</li>
+        <li>Clear technical communication and presentation skills</li>
+        <li>Self-driven while thriving in team environments</li>
+        <li>Customer/leadership briefing comfort</li>
+        <li>Full UX lifecycle experience (define → research → design → test → iterate)</li>
+    </ul>
+
+    <div class="subsection-heading">Preferred Qualifications:</div>
+    <ul class="checklist">
+        <li>Intuitive design principles (McKay methodology)</li>
+        <li>Game design expertise (Schell methodology + Petersen training)</li>
+        <li>Jira and Confluence experience (current workflow tools)</li>
+        <li>Gamification and interactive learning approaches</li>
+        <li>Web design across platforms</li>
+        <li>3D spatial computing design (Apple Vision Pro architecture)</li>
+    </ul>
+
+    <p>I'd welcome the opportunity to discuss how my game design background, spatial computing expertise, and systematic UX approach can contribute to Auria's mission. I'm prepared to showcase portfolio examples of gamified interfaces, design system documentation, and the Oksana generative engine during interviews.</p>
+
+    <p>Thank you for considering my application. I look forward to the opportunity to strengthen warfighter readiness through innovative, user-centered design.</p>
+
+    <div class="closing">
+        <div>Sincerely,</div>
+        <div class="signature">Penny Platt</div>
+    </div>
+
+    <div class="attachments">
+        <div class="attachments-title">Attachments:</div>
+        <ul style="margin-top: 6px;">
+            <li>Resume</li>
+            <li>Portfolio: <a href="https://9bitstudios.io">9bitstudios.io</a></li>
+            <li>Oksana Platform: <a href="https://Oksana.ai">oksana.ai</a></li>
+            <li>Design System Documentation: Available upon request</li>
+        </ul>
+    </div>
+</body>
+</html>

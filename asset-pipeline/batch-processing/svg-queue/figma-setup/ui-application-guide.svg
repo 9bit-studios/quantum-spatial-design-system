@@ -1,0 +1,170 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
+  <!-- Background -->
+  <rect width="1000" height="1000" fill="#0A0621" />
+  
+  <!-- Grid effect for quantum-spatial aesthetic -->
+  <g opacity="0.1">
+    <!-- Horizontal grid lines -->
+    <path d="M0,100 L1000,100" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M0,200 L1000,200" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M0,300 L1000,300" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M0,400 L1000,400" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M0,500 L1000,500" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M0,600 L1000,600" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M0,700 L1000,700" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M0,800 L1000,800" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M0,900 L1000,900" stroke="#5AC8FA" stroke-width="1" />
+    
+    <!-- Vertical grid lines -->
+    <path d="M100,0 L100,1000" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M200,0 L200,1000" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M300,0 L300,1000" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M400,0 L400,1000" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M500,0 L500,1000" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M600,0 L600,1000" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M700,0 L700,1000" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M800,0 L800,1000" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M900,0 L900,1000" stroke="#5AC8FA" stroke-width="1" />
+  </g>
+  
+  <!-- Title -->
+  <text x="500" y="60" font-family="'SF Pro Display', -apple-system, sans-serif" font-size="36" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Quantum-Spatial UI Application Guide</text>
+  
+  <!-- UI Applications Section -->
+  <text x="500" y="120" font-family="'SF Pro Display', -apple-system, sans-serif" font-size="24" font-weight="bold" fill="#FFFFFF" text-anchor="middle">UI Color Applications</text>
+  
+  <!-- UI Elements Showcase -->
+  <g transform="translate(100, 150)">
+    <!-- Main content container -->
+    <rect x="0" y="0" width="800" height="780" rx="15" fill="#131A36" />
+    
+    <!-- App Bar -->
+    <rect x="0" y="0" width="800" height="70" rx="15" fill="url(#quantumDepthGradient)" />
+    <text x="400" y="42" font-family="'SF Pro Display', -apple-system, sans-serif" font-size="22" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Jrotharke: Character Creator</text>
+    <circle cx="40" cy="35" r="20" fill="#0A0621" />
+    <path d="M30,35 L50,35 M40,25 L40,45" stroke="#5AC8FA" stroke-width="2" />
+    
+    <!-- Left Sidebar -->
+    <rect x="20" y="90" width="200" height="670" rx="10" fill="#0D0D15" />
+    
+    <!-- Tab Buttons -->
+    <rect x="30" y="110" width="180" height="50" rx="8" fill="#331F4A" />
+    <text x="120" y="142" font-family="'SF Pro Text', -apple-system, sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">Character Stats</text>
+    
+    <rect x="30" y="170" width="180" height="50" rx="8" fill="#5AC8FA" />
+    <text x="120" y="202" font-family="'SF Pro Text', -apple-system, sans-serif" font-size="16" fill="#000000" text-anchor="middle">Appearance</text>
+    
+    <rect x="30" y="230" width="180" height="50" rx="8" fill="#331F4A" />
+    <text x="120" y="262" font-family="'SF Pro Text', -apple-system, sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">Background</text>
+    
+    <rect x="30" y="290" width="180" height="50" rx="8" fill="#331F4A" />
+    <text x="120" y="322" font-family="'SF Pro Text', -apple-system, sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">Equipment</text>
+    
+    <rect x="30" y="350" width="180" height="50" rx="8" fill="#331F4A" />
+    <text x="120" y="382" font-family="'SF Pro Text', -apple-system, sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">Magic Affinity</text>
+    
+    <!-- Content Area -->
+    <rect x="240" y="90" width="540" height="670" rx="10" fill="#0D0D15" />
+    
+    <!-- Section Title -->
+    <text x="510" y="130" font-family="'SF Pro Display', -apple-system, sans-serif" font-size="22" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Character Appearance</text>
+    
+    <!-- Avatar Preview -->
+    <rect x="270" y="150" width="220" height="270" rx="10" fill="#131A36" />
+    <ellipse cx="380" cy="220" rx="60" ry="60" fill="#331F4A" />
+    <rect x="320" y="290" width="120" height="100" rx="10" fill="#331F4A" />
+    
+    <!-- Character Name Input -->
+    <text x="380" y="450" font-family="'SF Pro Text', -apple-system, sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">Character Name</text>
+    <rect x="290" y="460" width="180" height="40" rx="8" fill="#0A0621" stroke="#331F4A" stroke-width="2" />
+    <text x="380" y="485" font-family="'SF Pro Text', -apple-system, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">Eldric</text>
+    
+    <!-- Color Options Section -->
+    <rect x="510" y="150" width="240" height="350" rx="10" fill="#131A36" />
+    <text x="630" y="180" font-family="'SF Pro Text', -apple-system, sans-serif" font-size="18" fill="#FFFFFF" text-anchor="middle">Appearance Options</text>
+    
+    <!-- Sliders -->
+    <text x="540" y="270" font-family="'SF Pro Text', -apple-system, sans-serif" font-size="14" fill="#FFFFFF">Body Type</text>
+    <rect x="540" y="280" width="180" height="10" rx="5" fill="#0D0D15" />
+    <rect x="540" y="280" width="90" height="10" rx="5" fill="#5AC8FA" />
+    <circle cx="630" cy="285" r="8" fill="#FFFFFF" />
+    
+    <text x="540" y="320" font-family="'SF Pro Text', -apple-system, sans-serif" font-size="14" fill="#FFFFFF">Skin Tone</text>
+    <rect x="540" y="330" width="180" height="10" rx="5" fill="#0D0D15" />
+    <rect x="540" y="330" width="150" height="10" rx="5" fill="#5AC8FA" />
+    <circle cx="690" cy="335" r="8" fill="#FFFFFF" />
+    
+    <text x="540" y="370" font-family="'SF Pro Text', -apple-system, sans-serif" font-size="14" fill="#FFFFFF">Hair Style</text>
+    <rect x="540" y="380" width="180" height="30" rx="5" fill="#0D0D15" />
+    <text x="630" y="400" font-family="'SF Pro Text', -apple-system, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">Long, Wavy</text>
+    <path d="M710,395 L720,390 L720,400 Z" fill="#5AC8FA" />
+    
+    <text x="540" y="320" font-family="'SF Pro Text', -apple-system, sans-serif" font-size="14" fill="#FFFFFF">Height</text>
+    <rect x="540" y="330" width="180" height="10" rx="5" fill="#0D0D15" />
+    <rect x="540" y="330" width="120" height="10" rx="5" fill="#5AC8FA" />
+    <circle cx="660" cy="335" r="8" fill="#FFFFFF" />
+    
+    <text x="540" y="270" font-family="'SF Pro Text', -apple-system, sans-serif" font-size="14" fill="#FFFFFF">Body Type</text>
+    <rect x="540" y="280" width="180" height="10" rx="5" fill="#0D0D15" />
+    <rect x="540" y="280" width="90" height="10" rx="5" fill="#5AC8FA" />
+    <circle cx="630" cy="285" r="8" fill="#FFFFFF" />
+    
+    <!-- Control Buttons -->
+    <rect x="510" y="430" width="110" height="50" rx="8" fill="#BF4080" />
+    <text x="565" y="462" font-family="'SF Pro Text', -apple-system, sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">Reset</text>
+    
+    <rect x="640" y="430" width="110" height="50" rx="8" fill="#5AC8FA" />
+    <text x="695" y="462" font-family="'SF Pro Text', -apple-system, sans-serif" font-size="16" fill="#000000" text-anchor="middle">Apply</text>
+    
+    <!-- Action Buttons -->
+    <rect x="270" y="540" width="480" height="1" fill="#331F4A" />
+    
+    <rect x="290" y="560" width="220" height="50" rx="8" fill="#331F4A" />
+    <text x="400" y="592" font-family="'SF Pro Text', -apple-system, sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">Save Character</text>
+    
+    <rect x="530" y="560" width="220" height="50" rx="8" fill="url(#spiritualStateTransitionGradient)" />
+    <text x="640" y="592" font-family="'SF Pro Text', -apple-system, sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">Start Adventure</text>
+    
+    <!-- Magic Energy State Indicator -->
+    <rect x="290" y="630" width="460" height="110" rx="10" fill="#0A0621" />
+    <text x="520" y="660" font-family="'SF Pro Display', -apple-system, sans-serif" font-size="18" fill="#FFFFFF" text-anchor="middle">Magic Energy Affinity</text>
+    
+    <!-- Magic Energy Bars -->
+    <text x="330" y="690" font-family="'SF Pro Text', -apple-system, sans-serif" font-size="14" fill="#FFFFFF">Jrotite</text>
+    <rect x="330" y="700" width="100" height="10" rx="5" fill="#0D0D15" />
+    <rect x="330" y="700" width="80" height="10" rx="5" fill="#5AC8FA" />
+    
+    <text x="470" y="690" font-family="'SF Pro Text', -apple-system, sans-serif" font-size="14" fill="#FFFFFF">Hacrothite</text>
+    <rect x="470" y="700" width="100" height="10" rx="5" fill="#0D0D15" />
+    <rect x="470" y="700" width="30" height="10" rx="5" fill="#6A3093" />
+    
+    <text x="610" y="690" font-family="'SF Pro Text', -apple-system, sans-serif" font-size="14" fill="#FFFFFF">Cholashite</text>
+    <rect x="610" y="700" width="100" height="10" rx="5" fill="#0D0D15" />
+    <rect x="610" y="700" width="60" height="10" rx="5" fill="#BF4080" />
+  </g>
+  
+  <!-- Platform-Specific Usage Section -->
+  <text x="500" y="960" font-family="'SF Pro Display', -apple-system, sans-serif" font-size="20" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Platform-Specific Applications</text>
+  
+  <!-- Define all gradients -->
+  <defs>
+    <!-- Foundation Gradients -->
+    <linearGradient id="quantumDepthGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#131A36"/>
+      <stop offset="50%" stop-color="#331F4A"/>
+      <stop offset="100%" stop-color="#6A3093"/>
+    </linearGradient>
+    
+    <linearGradient id="spatialBackgroundGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0A0621"/>
+      <stop offset="100%" stop-color="#131A36"/>
+    </linearGradient>
+    
+    <!-- Spiritual State Transitions -->
+    <linearGradient id="spiritualStateTransitionGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF6B6B"/>
+      <stop offset="50%" stop-color="#BF4080"/>
+      <stop offset="100%" stop-color="#5AC8FA"/>
+    </linearGradient>
+  </defs>
+</svg>

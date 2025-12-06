@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700">
+  <!-- Background -->
+  <rect width="900" height="700" fill="#f8f9fa" />
+  
+  <!-- Title -->
+  <text x="450" y="35" font-family="Arial" font-size="24" font-weight="bold" text-anchor="middle" fill="#131A36">Integration Flow Between Workflows</text>
+  
+  <!-- Main Workflow Boxes -->
+  <rect x="50" y="80" width="220" height="500" rx="10" fill="#d9e8fc" stroke="#2f54eb" stroke-width="2" />
+  <rect x="340" y="80" width="220" height="500" rx="10" fill="#ffeae8" stroke="#fa541c" stroke-width="2" />
+  <rect x="630" y="80" width="220" height="500" rx="10" fill="#e8f4ff" stroke="#1677ff" stroke-width="2" />
+  
+  <!-- Workflow Titles -->
+  <text x="160" y="110" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="#131A36">Game Design</text>
+  <text x="450" y="110" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="#131A36">Game Narrative</text>
+  <text x="740" y="110" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="#131A36">Game Art</text>
+  
+  <!-- Workflow Phases -->
+  <!-- Game Design -->
+  <rect x="60" y="130" width="200" height="70" rx="5" fill="#5AC8FA" stroke="#331F4A" stroke-width="1" />
+  <rect x="60" y="210" width="200" height="70" rx="5" fill="#5AC8FA" stroke="#331F4A" stroke-width="1" />
+  <rect x="60" y="290" width="200" height="70" rx="5" fill="#5AC8FA" stroke="#331F4A" stroke-width="1" />
+  <rect x="60" y="370" width="200" height="70" rx="5" fill="#5AC8FA" stroke="#331F4A" stroke-width="1" />
+  <rect x="60" y="450" width="200" height="70" rx="5" fill="#5AC8FA" stroke="#331F4A" stroke-width="1" />
+  
+  <text x="160" y="165" font-family="Arial" font-size="14" text-anchor="middle" fill="#131A36">Concept Development</text>
+  <text x="160" y="245" font-family="Arial" font-size="14" text-anchor="middle" fill="#131A36">Systems Design</text>
+  <text x="160" y="325" font-family="Arial" font-size="14" text-anchor="middle" fill="#131A36">Feature Implementation</text>
+  <text x="160" y="405" font-family="Arial" font-size="14" text-anchor="middle" fill="#131A36">Playtesting &amp; Iteration</text>
+  <text x="160" y="485" font-family="Arial" font-size="14" text-anchor="middle" fill="#131A36">Launch Preparation</text>
+  
+  <!-- Game Narrative -->
+  <rect x="350" y="130" width="200" height="70" rx="5" fill="#5AC8FA" stroke="#331F4A" stroke-width="1" />
+  <rect x="350" y="210" width="200" height="70" rx="5" fill="#5AC8FA" stroke="#331F4A" stroke-width="1" />
+  <rect x="350" y="290" width="200" height="70" rx="5" fill="#5AC8FA" stroke="#331F4A" stroke-width="1" />
+  <rect x="350" y="370" width="200" height="70" rx="5" fill="#5AC8FA" stroke="#331F4A" stroke-width="1" />
+  <rect x="350" y="450" width="200" height="70" rx="5" fill="#5AC8FA" stroke="#331F4A" stroke-width="1" />
+  
+  <text x="450" y="165" font-family="Arial" font-size="14" text-anchor="middle" fill="#131A36">Narrative Foundation</text>
+  <text x="450" y="245" font-family="Arial" font-size="14" text-anchor="middle" fill="#131A36">Narrative Structure</text>
+  <text x="450" y="325" font-family="Arial" font-size="14" text-anchor="middle" fill="#131A36">Dialogue &amp; Content</text>
+  <text x="450" y="405" font-family="Arial" font-size="14" text-anchor="middle" fill="#131A36">Ink Implementation</text>
+  <text x="450" y="485" font-family="Arial" font-size="14" text-anchor="middle" fill="#131A36">Narrative Refinement</text>
+  
+  <!-- Game Art -->
+  <rect x="640" y="130" width="200" height="70" rx="5" fill="#5AC8FA" stroke="#331F4A" stroke-width="1" />
+  <rect x="640" y="210" width="200" height="70" rx="5" fill="#5AC8FA" stroke="#331F4A" stroke-width="1" />
+  <rect x="640" y="290" width="200" height="70" rx="5" fill="#5AC8FA" stroke="#331F4A" stroke-width="1" />
+  <rect x="640" y="370" width="200" height="70" rx="5" fill="#5AC8FA" stroke="#331F4A" stroke-width="1" />
+  <rect x="640" y="450" width="200" height="70" rx="5" fill="#5AC8FA" stroke="#331F4A" stroke-width="1" />
+  
+  <text x="740" y="165" font-family="Arial" font-size="14" text-anchor="middle" fill="#131A36">Visual Direction</text>
+  <text x="740" y="245" font-family="Arial" font-size="14" text-anchor="middle" fill="#131A36">Character Art</text>
+  <text x="740" y="325" font-family="Arial" font-size="14" text-anchor="middle" fill="#131A36">Environment Art</text>
+  <text x="740" y="405" font-family="Arial" font-size="14" text-anchor="middle" fill="#131A36">UI and Effects</text>
+  <text x="740" y="485" font-family="Arial" font-size="14" text-anchor="middle" fill="#131A36">Implementation Support</text>
+  
+  <!-- Integration Arrows -->
+  <!-- Design to Narrative -->
+  <path d="M260,145 C290,145 320,145 350,145" stroke="#331F4A" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+  <text x="305" y="135" font-family="Arial" font-size="9" text-anchor="middle" fill="#131A36">Theme Alignment</text>
+  
+  <path d="M260,225 C290,225 320,225 350,225" stroke="#331F4A" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+  <text x="305" y="215" font-family="Arial" font-size="9" text-anchor="middle" fill="#131A36">Gameplay-Story Integration</text>
+  
+  <path d="M260,305 C290,305 320,305 350,305" stroke="#331F4A" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+  <text x="305" y="295" font-family="Arial" font-size="9" text-anchor="middle" fill="#131A36">Feature-Dialogue Mapping</text>
+  
+  <path d="M260,385 C290,385 320,385 350,385" stroke="#331F4A" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+  <text x="305" y="375" font-family="Arial" font-size="9" text-anchor="middle" fill="#131A36">Playtest Feedback</text>
+  
+  <path d="M260,465 C290,465 320,465 350,465" stroke="#331F4A" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+  <text x="305" y="455" font-family="Arial" font-size="9" text-anchor="middle" fill="#131A36">Final Narrative Approval</text>
+  
+  <!-- Narrative to Art -->
+  <path d="M550,145 C580,145 610,145 640,145" stroke="#331F4A" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+  <text x="595" y="135" font-family="Arial" font-size="9" text-anchor="middle" fill="#131A36">Visual Tone Direction</text>
+  
+  <path d="M550,225 C580,225 610,225 640,225" stroke="#331F4A" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+  <text x="595" y="215" font-family="Arial" font-size="9" text-anchor="middle" fill="#131A36">Character Descriptions</text>
+  
+  <path d="M550,305 C580,305 610,305 640,305" stroke="#331F4A" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+  <text x="595" y="295" font-family="Arial" font-size="9" text-anchor="middle" fill="#131A36">Environment Descriptions</text>
+  
+  <path d="M550,385 C580,385 610,385 640,385" stroke="#331F4A" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+  <text x="595" y="375" font-family="Arial" font-size="9" text-anchor="middle" fill="#131A36">Ink Tag Integration</text>
+  
+  <path d="M550,465 C580,465 610,465 640,465" stroke="#331F4A" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+  <text x="595" y="455" font-family="Arial" font-size="9" text-anchor="middle" fill="#131A36">Final Scene Visuals</text>
+  
+  <!-- Art to Design -->
+  <path d="M640,175 C610,175 320,185 260,185" stroke="#331F4A" stroke-width="2" fill="none" marker-end="url(#arrow)" stroke-dasharray="5,3" />
+  <text x="450" y="180" font-family="Arial" font-size="9" text-anchor="middle" fill="#131A36">Art Constraints &amp; Opportunities</text>
+  
+  <path d="M640,255 C610,255 320,265 260,265" stroke="#331F4A" stroke-width="2" fill="none" marker-end="url(#arrow)" stroke-dasharray="5,3" />
+  <text x="450" y="260" font-family="Arial" font-size="9" text-anchor="middle" fill="#131A36">Visual Progression Feedback</text>
+  
+  <path d="M640,335 C610,335 320,345 260,345" stroke="#331F4A" stroke-width="2" fill="none" marker-end="url(#arrow)" stroke-dasharray="5,3" />
+  <text x="450" y="340" font-family="Arial" font-size="9" text-anchor="middle" fill="#131A36">Technical Constraints</text>
+  
+  <path d="M640,415 C610,415 320,425 260,425" stroke="#331F4A" stroke-width="2" fill="none" marker-end="url(#arrow)" stroke-dasharray="5,3" />
+  <text x="450" y="420" font-family="Arial" font-size="9" text-anchor="middle" fill="#131A36">Visual Playtest Feedback</text>
+  
+  <path d="M640,495 C610,495 320,505 260,505" stroke="#331F4A" stroke-width="2" fill="none" marker-end="url(#arrow)" stroke-dasharray="5,3" />
+  <text x="450" y="500" font-family="Arial" font-size="9" text-anchor="middle" fill="#131A36">Marketing Asset Support</text>
+  
+  <!-- Central Hub - Fantasy Worldbuilding Suite -->
+  <rect x="315" y="600" width="270" height="60" rx="10" fill="#d9f7be" stroke="#52c41a" stroke-width="2" />
+  <text x="450" y="625" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="#131A36">Fantasy Worldbuilding Suite</text>
+  <text x="450" y="643" font-family="Arial" font-size="12" text-anchor="middle" fill="#131A36">Central Knowledge Repository</text>
+  
+  <!-- Hub Connections -->
+  <path d="M160,520 C160,550 250,600 315,620" stroke="#52c41a" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+  <path d="M450,520 C450,550 450,590 450,600" stroke="#52c41a" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+  <path d="M740,520 C740,550 650,600 585,620" stroke="#52c41a" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+  
+  <!-- Marker definitions -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#331F4A" />
+    </marker>
+  </defs>
+</svg>

@@ -1,0 +1,407 @@
+{
+    "collections": [
+        {
+            "name": "Colors",
+            "modes": [
+                "Dark",
+                "Void",
+                "Marine",
+                "Daybreak"
+            ],
+            "variables": {
+                "Foreground": {
+                    "primary": {
+                        "type": "color",
+                        "values": {
+                            "Dark": "#ffffff",
+                            "Void": "#ffffff",
+                            "Marine": "#ffffff",
+                            "Daybreak": "Primitive:Color/black"
+                        }
+                    },
+                    "secondary": {
+                        "type": "color",
+                        "values": {
+                            "Dark": "#ffffff",
+                            "Void": "#ffffff",
+                            "Marine": "#ffffff",
+                            "Daybreak": "Primitive:Color/black-a70"
+                        }
+                    },
+                    "tertiary": {
+                        "type": "color",
+                        "values": {
+                            "Dark": "#ffffff",
+                            "Void": "#ffffff",
+                            "Marine": "#ffffff",
+                            "Daybreak": "Primitive:Color/black-a50"
+                        }
+                    }
+                },
+                "Container": {
+                    "background-primary": {
+                        "type": "color",
+                        "values": {
+                            "Dark": "#0b010d",
+                            "Void": "#0b010d",
+                            "Marine": "#0b010d",
+                            "Daybreak": "Primitive:Color/white-a60"
+                        }
+                    },
+                    "border": {
+                        "type": "color",
+                        "values": {
+                            "Dark": "Primitive:Color/white-a10",
+                            "Void": "Primitive:Color/white-a10",
+                            "Marine": "Primitive:Color/white-a10",
+                            "Daybreak": "Primitive:Color/white-a50"
+                        }
+                    },
+                    "divider": {
+                        "type": "color",
+                        "values": {
+                            "Dark": "Primitive:Color/white-a10",
+                            "Void": "Primitive:Color/white-a10",
+                            "Marine": "Primitive:Color/white-a10",
+                            "Daybreak": "Primitive:Color/black-a10"
+                        }
+                    },
+                    "background-secondary": {
+                        "type": "color",
+                        "values": {
+                            "Dark": "#160918",
+                            "Void": "#160918",
+                            "Marine": "#160918",
+                            "Daybreak": "Primitive:Color/white-a10"
+                        }
+                    },
+                    "border-secondary": {
+                        "type": "color",
+                        "values": {
+                            "Dark": "Primitive:Color/white-a10",
+                            "Void": "Primitive:Color/white-a10",
+                            "Marine": "Primitive:Color/white-a10",
+                            "Daybreak": "Primitive:Color/white-a20"
+                        }
+                    },
+                    "background-tertiary": {
+                        "type": "color",
+                        "values": {
+                            "Dark": "#16090e",
+                            "Void": "#ffffff",
+                            "Marine": "#ffffff",
+                            "Daybreak": "Primitive:Color/white-a90"
+                        }
+                    },
+                    "background-recessed": {
+                        "type": "color",
+                        "values": {
+                            "Dark": "#ffffff",
+                            "Void": "Primitive:Color/black-a20",
+                            "Marine": "Primitive:Color/black-a20",
+                            "Daybreak": "Primitive:Color/white-a90"
+                        }
+                    },
+                    "divider-secondary": {
+                        "type": "color",
+                        "values": {
+                            "Dark": "Primitive:Color/white-a20",
+                            "Void": "Primitive:Color/white-a20",
+                            "Marine": "Primitive:Color/white-a20",
+                            "Daybreak": "Primitive:Color/black-a20"
+                        }
+                    }
+                },
+                "Instance": {
+                    "mode": {
+                        "type": "string",
+                        "values": {
+                            "Dark": "Dark",
+                            "Void": "Dark",
+                            "Marine": "Dark",
+                            "Daybreak": "Light"
+                        }
+                    }
+                },
+                "Background": {
+                    "onyx": {
+                        "type": "color",
+                        "values": {
+                            "Dark": "#000000",
+                            "Void": "#000000",
+                            "Marine": "#000000",
+                            "Daybreak": "Primitive:Color/white"
+                        }
+                    },
+                    "secondary": {
+                        "type": "color",
+                        "values": {
+                            "Dark": "#0b010d",
+                            "Void": "#0b010d",
+                            "Marine": "#0b010d",
+                            "Daybreak": "Primitive:Color/white-a10"
+                        }
+                    },
+                    "quanternary": {
+                        "type": "color",
+                        "values": {
+                            "Dark": "#160918",
+                            "Void": "#160918",
+                            "Marine": "#160918",
+                            "Daybreak": "#f2f3fa"
+                        }
+                    },
+                    "eggplant": {
+                        "type": "color",
+                        "values": {
+                            "Dark": "#160918",
+                            "Void": "#050505",
+                            "Marine": "#050505",
+                            "Daybreak": "#f0f0f0"
+                        }
+                    },
+                    "tertiary": {
+                        "type": "color",
+                        "values": {
+                            "Dark": "#16090e",
+                            "Void": "#16090e",
+                            "Marine": "#16090e",
+                            "Daybreak": "#000000"
+                        }
+                    },
+                    "Slate": {
+                        "type": "color",
+                        "values": {
+                            "Dark": "#09021a",
+                            "Void": "#09021a",
+                            "Marine": "#09021a",
+                            "Daybreak": "#ffffff"
+                        }
+                    },
+                    "primary": {
+                        "type": "color",
+                        "values": {
+                            "Dark": "#160918",
+                            "Void": "#000000",
+                            "Marine": "#000000",
+                            "Daybreak": "Primitive:Color/white"
+                        }
+                    }
+                },
+                "Button": {
+                    "primary": {
+                        "type": "color",
+                        "values": {
+                            "Dark": "#7b00ff",
+                            "Void": "#007aff",
+                            "Marine": "#007aff",
+                            "Daybreak": "#007aff"
+                        }
+                    },
+                    "hover": {
+                        "type": "color",
+                        "values": {
+                            "Dark": "#150621",
+                            "Void": "Colors:System Blue",
+                            "Marine": "Colors:System Blue",
+                            "Daybreak": "Colors:System Blue"
+                        }
+                    },
+                    "primary inactive": {
+                        "type": "color",
+                        "values": {
+                            "Dark": "Primitive:Color/white-a20",
+                            "Void": "Primitive:Color/white-a20",
+                            "Marine": "Primitive:Color/white-a20",
+                            "Daybreak": "Primitive:Color/black-a20"
+                        }
+                    },
+                    "secondary hover": {
+                        "type": "color",
+                        "values": {
+                            "Dark": "#7b00ff",
+                            "Void": "Primitive:Color/blue-400",
+                            "Marine": "Primitive:Color/blue-400",
+                            "Daybreak": "Primitive:Color/blue-500"
+                        }
+                    },
+                    "primary text": {
+                        "type": "color",
+                        "values": {
+                            "Dark": "#ffffff",
+                            "Void": "#007aff",
+                            "Marine": "#007aff",
+                            "Daybreak": "#007aff"
+                        }
+                    },
+                    "foreground": {
+                        "type": "color",
+                        "values": {
+                            "Dark": "",
+                            "Void": "",
+                            "Marine": "",
+                            "Daybreak": ""
+                        }
+                    },
+                    "secondary": {
+                        "type": "color",
+                        "values": {
+                            "Dark": "#150621",
+                            "Void": "Colors:System Blue",
+                            "Marine": "Colors:System Blue",
+                            "Daybreak": "Colors:System Blue"
+                        }
+                    },
+                    "tertiary": {
+                        "type": "color",
+                        "values": {
+                            "Dark": "#4e177c",
+                            "Void": "Colors:System Blue",
+                            "Marine": "Colors:System Blue",
+                            "Daybreak": "Colors:System Blue"
+                        }
+                    },
+                    "tertiary hover": {
+                        "type": "color",
+                        "values": {
+                            "Dark": "#4e177c",
+                            "Void": "Primitive:Color/blue-400",
+                            "Marine": "Primitive:Color/blue-400",
+                            "Daybreak": "Primitive:Color/blue-500"
+                        }
+                    },
+                    "foreground 2": {
+                        "type": "color",
+                        "values": {
+                            "Dark": "",
+                            "Void": "",
+                            "Marine": "",
+                            "Daybreak": ""
+                        }
+                    }
+                },
+                "Gradient": {
+                    "fill-1": {
+                        "type": "color",
+                        "values": {
+                            "Dark": "Primitive:Color/white-a20",
+                            "Void": "Primitive:Color/white-a20",
+                            "Marine": "Primitive:Color/white-a20",
+                            "Daybreak": "Primitive:Color/white-a90"
+                        }
+                    },
+                    "fill-2": {
+                        "type": "color",
+                        "values": {
+                            "Dark": "Primitive:Color/white-a10",
+                            "Void": "Primitive:Color/white-a10",
+                            "Marine": "Primitive:Color/white-a10",
+                            "Daybreak": "Primitive:Color/white-a80"
+                        }
+                    }
+                },
+                "System Violet": {
+                    "type": "color",
+                    "values": {
+                        "Dark": "#6e00ff",
+                        "Void": "#6e00ff",
+                        "Marine": "#6e00ff",
+                        "Daybreak": "#7b00ff"
+                    }
+                },
+                "System Cyan": {
+                    "type": "color",
+                    "values": {
+                        "Dark": "#5ac8fa",
+                        "Void": "#5ac8fa",
+                        "Marine": "#5ac8fa",
+                        "Daybreak": "#5ac8fa"
+                    }
+                },
+                "System Purple": {
+                    "type": "color",
+                    "values": {
+                        "Dark": "#3b39ec",
+                        "Void": "#3b39ec",
+                        "Marine": "#3b39ec",
+                        "Daybreak": "#504cf5"
+                    }
+                },
+                "System Blue": {
+                    "type": "color",
+                    "values": {
+                        "Dark": "#0b4fd7",
+                        "Void": "#0b4fd7",
+                        "Marine": "#0b4fd7",
+                        "Daybreak": "#007aff"
+                    }
+                },
+                "System Pink": {
+                    "type": "color",
+                    "values": {
+                        "Dark": "#d0196b",
+                        "Void": "#d0196b",
+                        "Marine": "#d0196b",
+                        "Daybreak": "#d0196b"
+                    }
+                },
+                "Deepnight": {
+                    "type": "color",
+                    "values": {
+                        "Dark": "#160918",
+                        "Void": "#160918",
+                        "Marine": "#160918",
+                        "Daybreak": "#160918"
+                    }
+                },
+                "gradientpurple": {
+                    "type": "color",
+                    "values": {
+                        "Dark": "#18192b",
+                        "Void": "#18192b",
+                        "Marine": "#18192b",
+                        "Daybreak": "#18192b"
+                    }
+                },
+                "Primary UI": {
+                    "UI 1": {
+                        "type": "color",
+                        "values": {
+                            "Dark": "#007aff",
+                            "Void": "#007aff",
+                            "Marine": "#007aff",
+                            "Daybreak": "#007aff"
+                        }
+                    },
+                    "UI 2": {
+                        "type": "color",
+                        "values": {
+                            "Dark": "Colors:System Cyan",
+                            "Void": "Colors:System Cyan",
+                            "Marine": "Colors:System Cyan",
+                            "Daybreak": "Colors:System Cyan"
+                        }
+                    },
+                    "UI 3": {
+                        "type": "color",
+                        "values": {
+                            "Dark": "Primitive:Color/blue-400",
+                            "Void": "Primitive:Color/blue-400",
+                            "Marine": "Primitive:Color/blue-400",
+                            "Daybreak": "Primitive:Color/blue-400"
+                        }
+                    },
+                    "UI 4": {
+                        "type": "color",
+                        "values": {
+                            "Dark": "#613fe7",
+                            "Void": "#613fe7",
+                            "Marine": "#613fe7",
+                            "Daybreak": "#613fe7"
+                        }
+                    }
+                }
+            }
+        }
+    ]
+}

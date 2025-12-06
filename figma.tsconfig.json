@@ -1,0 +1,28 @@
+{
+  "extends": "../tsconfig.base.json",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "moduleResolution": "node",
+    "outDir": "./dist/figma",
+    "baseUrl": ".",
+    "paths": {
+      "@figma/*": ["./src/figma/*"],
+      "@claude/*": ["./src/claude/*"],
+      "@AppleIntelligenceFramework/*": ["./src/apple-intelligence/*"],
+      "@quantum-spatial/design-system/tokens": ["./tokens"],
+      "@quantum-spatial/design-system/tokens/*": ["./tokens/*"],
+      "@quantum-spatial/oksana-bridge": ["../oksana-bridge/src"],
+      "@tokens/*": ["./tokens/*"]
+    }
+  },
+  "include": [
+    "src/**/*",
+    "figma/**/*",
+    "claude-code/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "build"
+  ]
+}

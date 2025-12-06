@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 750">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff2e8;
+        stroke: #fa8c16;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        opacity: .3;
+        stroke-dasharray: 5 5;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9, .cls-10, .cls-11, .cls-12, .cls-13, .cls-14, .cls-15, .cls-16, .cls-17 {
+        isolation: isolate;
+      }
+
+      .cls-2 {
+        fill: #f6ffed;
+        stroke: #52c41a;
+      }
+
+      .cls-18 {
+        fill: #f0f2f5;
+        stroke: #d9d9d9;
+      }
+
+      .cls-3 {
+        fill: #e6f7ff;
+        stroke: #1890ff;
+      }
+
+      .cls-4, .cls-5, .cls-6, .cls-10, .cls-11, .cls-14, .cls-15, .cls-16 {
+        font-family: Arial-BoldMT, Arial;
+        font-weight: 700;
+      }
+
+      .cls-4, .cls-6, .cls-10, .cls-16 {
+        font-size: 14px;
+      }
+
+      .cls-4, .cls-17 {
+        fill: #1890ff;
+      }
+
+      .cls-5, .cls-9 {
+        font-size: 9px;
+      }
+
+      .cls-6, .cls-13 {
+        fill: #fa8c16;
+      }
+
+      .cls-7 {
+        fill: #52c41a;
+      }
+
+      .cls-7, .cls-13, .cls-17 {
+        opacity: .8;
+      }
+
+      .cls-8, .cls-9 {
+        font-family: ArialMT, Arial;
+      }
+
+      .cls-8, .cls-12 {
+        font-size: 12px;
+      }
+
+      .cls-10 {
+        fill: #389e0d;
+      }
+
+      .cls-11, .cls-15 {
+        font-size: 16px;
+      }
+
+      .cls-12 {
+        font-family: Arial-ItalicMT, Arial;
+        font-style: italic;
+      }
+
+      .cls-12, .cls-15 {
+        fill: #722ed1;
+      }
+
+      .cls-19 {
+        fill: #f8f9fa;
+      }
+
+      .cls-14 {
+        font-size: 24px;
+      }
+
+      .cls-20 {
+        letter-spacing: -.07em;
+      }
+
+      .cls-21 {
+        letter-spacing: -.11em;
+      }
+
+      .cls-22 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-23 {
+        letter-spacing: -.06em;
+      }
+
+      .cls-24 {
+        letter-spacing: -.04em;
+      }
+
+      .cls-25 {
+        stroke: #333;
+      }
+
+      .cls-25, .cls-26 {
+        fill: none;
+        stroke-width: 2px;
+      }
+
+      .cls-26 {
+        stroke-dasharray: 10 4;
+      }
+
+      .cls-26, .cls-27 {
+        stroke: #722ed1;
+      }
+
+      .cls-27 {
+        fill: #f9f0ff;
+      }
+    </style>
+  </defs>
+  <rect class="cls-19" width="950" height="750"/>
+  <text class="cls-14" transform="translate(277.61 50)"><tspan x="0" y="0">Jrotharke Product Priorities Matrix</tspan></text>
+  <line class="cls-25" x1="150" y1="620" x2="880" y2="620"/>
+  <line class="cls-25" x1="150" y1="620" x2="150" y2="120"/>
+  <text class="cls-11" transform="translate(421.35 660)"><tspan x="0" y="0">Implementation </tspan><tspan class="cls-22" x="122.68" y="0">T</tspan><tspan x="132.16" y="0">imeline</tspan></text>
+  <text class="cls-11" transform="translate(90 428.7) rotate(-90)"><tspan x="0" y="0">Business </tspan><tspan class="cls-23" x="75.59" y="0">V</tspan><tspan x="85.37" y="0">alue</tspan></text>
+  <line class="cls-25" x1="150" y1="625" x2="150" y2="615"/>
+  <text class="cls-8" transform="translate(138 645)"><tspan x="0" y="0">Now</tspan></text>
+  <line class="cls-25" x1="333" y1="625" x2="333" y2="615"/>
+  <text class="cls-8" transform="translate(311.32 645)"><tspan x="0" y="0">Month 2</tspan></text>
+  <line class="cls-25" x1="516" y1="625" x2="516" y2="615"/>
+  <text class="cls-8" transform="translate(494.32 645)"><tspan x="0" y="0">Month 4</tspan></text>
+  <line class="cls-25" x1="699" y1="625" x2="699" y2="615"/>
+  <text class="cls-8" transform="translate(677.32 645)"><tspan x="0" y="0">Month 6</tspan></text>
+  <line class="cls-25" x1="880" y1="625" x2="880" y2="615"/>
+  <text class="cls-8" transform="translate(854.98 645)"><tspan x="0" y="0">Month 12</tspan></text>
+  <line class="cls-25" x1="145" y1="620" x2="155" y2="620"/>
+  <text class="cls-8" transform="translate(107.99 625)"><tspan x="0" y="0">Low</tspan></text>
+  <line class="cls-25" x1="145" y1="370" x2="155" y2="370"/>
+  <text class="cls-8" transform="translate(87.32 375)"><tspan x="0" y="0">Medium</tspan></text>
+  <line class="cls-25" x1="145" y1="120" x2="155" y2="120"/>
+  <text class="cls-8" transform="translate(105.32 125)"><tspan x="0" y="0">High</tspan></text>
+  <rect class="cls-2" x="150" y="120" width="730" height="166"/>
+  <text class="cls-10" transform="translate(175 140)"><tspan x="0" y="0">MUST H</tspan><tspan class="cls-20" x="53.66" y="0">A</tspan><tspan x="62.73" y="0">VE</tspan></text>
+  <rect class="cls-3" x="150" y="286" width="730" height="166"/>
+  <text class="cls-4" transform="translate(175 306)"><tspan x="0" y="0">SHOULD H</tspan><tspan class="cls-20" x="73.11" y="0">A</tspan><tspan x="82.18" y="0">VE</tspan></text>
+  <rect class="cls-1" x="150" y="452" width="730" height="168"/>
+  <text class="cls-6" transform="translate(175 472)"><tspan x="0" y="0">NICE </tspan><tspan class="cls-22" x="37.34" y="0">T</tspan><tspan x="45.64" y="0">O H</tspan><tspan class="cls-20" x="70.53" y="0">A</tspan><tspan x="79.6" y="0">VE</tspan></text>
+  <ellipse class="cls-26" cx="280" cy="220" rx="190" ry="110"/>
+  <text class="cls-15" transform="translate(172.14 250)"><tspan x="0" y="0">Fantasy </tspan><tspan class="cls-22" x="64.91" y="0">W</tspan><tspan x="79.73" y="0">orldbuilding Suite</tspan></text>
+  <text class="cls-12" transform="translate(217.96 270)"><tspan x="0" y="0">Central Integration Hub</tspan></text>
+  <circle class="cls-17" cx="180" cy="250" r="25"/>
+  <text class="cls-5" transform="translate(164.24 243.34)"><tspan x="0" y="0">M4 Dev</tspan></text>
+  <text class="cls-9" transform="translate(154.74 253.36)"><tspan x="0" y="0">Environment</tspan></text>
+  <circle class="cls-17" cx="240" cy="200" r="25"/>
+  <text class="cls-5" transform="translate(218.74 199.78)"><tspan x="0" y="0">Supabase</tspan></text>
+  <text class="cls-9" transform="translate(218.73 206.22)"><tspan x="0" y="0">Integration</tspan></text>
+  <circle class="cls-17" cx="300" cy="140" r="30"/>
+  <text class="cls-5" transform="translate(280.49 139.79)"><tspan x="0" y="0">Narrative</tspan></text>
+  <text class="cls-9" transform="translate(285.99 148)"><tspan x="0" y="0">Engine</tspan></text>
+  <circle class="cls-17" cx="350" cy="170" r="25"/>
+  <text class="cls-5" transform="translate(343.5 167)"><tspan x="0" y="0">Ink</tspan></text>
+  <text class="cls-9" transform="translate(328.73 177)"><tspan x="0" y="0">Integration</tspan></text>
+  <circle class="cls-17" cx="410" cy="220" r="25"/>
+  <text class="cls-5" transform="translate(387.49 220)"><tspan x="0" y="0">Save/Load</tspan></text>
+  <text class="cls-9" transform="translate(395 230)"><tspan x="0" y="0">System</tspan></text>
+  <circle class="cls-17" cx="470" cy="160" r="28"/>
+  <text class="cls-5" transform="translate(450.24 160)"><tspan x="0" y="0">M</tspan><tspan class="cls-22" x="7.5" y="0">L</tspan><tspan class="cls-24" x="12.83" y="0"> </tspan><tspan x="15" y="0">Asset</tspan></text>
+  <text class="cls-9" transform="translate(453.99 171)"><tspan x="0" y="0">Pipeline</tspan></text>
+  <circle class="cls-17" cx="530" cy="200" r="25"/>
+  <text class="cls-5" transform="translate(514.74 198)"><tspan x="0" y="0">Framer</tspan></text>
+  <text class="cls-9" transform="translate(513.83 208)"><tspan class="cls-22" x="0" y="0">W</tspan><tspan x="8.33" y="0">ebsite</tspan></text>
+  <circle class="cls-17" cx="610" cy="170" r="25"/>
+  <text class="cls-5" transform="translate(585.25 169)"><tspan x="0" y="0">Community</tspan></text>
+  <text class="cls-9" transform="translate(592.24 179)"><tspan x="0" y="0">Features</tspan></text>
+  <circle class="cls-17" cx="730" cy="150" r="30"/>
+  <text class="cls-5" transform="translate(707.83 148)"><tspan class="cls-22" x="0" y="0">V</tspan><tspan x="5.84" y="0">ision Pro</tspan></text>
+  <text class="cls-9" transform="translate(707.5 158)"><tspan x="0" y="0">Framework</tspan></text>
+  <circle class="cls-17" cx="810" cy="180" r="25"/>
+  <text class="cls-5" transform="translate(782.5 177)"><tspan x="0" y="0">Subscription</tspan></text>
+  <text class="cls-9" transform="translate(795 187)"><tspan x="0" y="0">System</tspan></text>
+  <circle class="cls-7" cx="210" cy="320" r="25"/>
+  <text class="cls-5" transform="translate(179.84 315.43)"><tspan class="cls-22" x="0" y="0">W</tspan><tspan x="8.33" y="0">orldbuilding</tspan></text>
+  <text class="cls-9" transform="translate(198.24 324.57)"><tspan x="0" y="0">Setup</tspan></text>
+  <circle class="cls-7" cx="280" cy="270" r="25"/>
+  <text class="cls-5" transform="translate(258.99 266.46)"><tspan x="0" y="0">Character</tspan></text>
+  <text class="cls-9" transform="translate(264.99 275)"><tspan x="0" y="0">Profiles</tspan></text>
+  <circle class="cls-7" cx="380" cy="140" r="30"/>
+  <text class="cls-5" transform="translate(370.25 138)"><tspan x="0" y="0">First</tspan></text>
+  <text class="cls-9" transform="translate(363.74 148)"><tspan x="0" y="0">Episode</tspan></text>
+  <circle class="cls-7" cx="430" cy="250" r="25"/>
+  <text class="cls-5" transform="translate(417.74 246)"><tspan x="0" y="0">Asset</tspan></text>
+  <text class="cls-9" transform="translate(416.25 256)"><tspan x="0" y="0">Library</tspan></text>
+  <circle class="cls-7" cx="500" cy="220" r="25"/>
+  <text class="cls-5" transform="translate(483 218)"><tspan x="0" y="0">Content</tspan></text>
+  <text class="cls-9" transform="translate(489.49 228)"><tspan class="cls-21" x="0" y="0">T</tspan><tspan x="4.5" y="0">ools</tspan></text>
+  <circle class="cls-7" cx="560" cy="140" r="30"/>
+  <text class="cls-5" transform="translate(543 135)"><tspan x="0" y="0">Content</tspan></text>
+  <text class="cls-9" transform="translate(541.49 145)"><tspan x="0" y="0">Episodes</tspan></text>
+  <circle class="cls-7" cx="650" cy="200" r="25"/>
+  <text class="cls-5" transform="translate(625.25 200)"><tspan x="0" y="0">Community</tspan></text>
+  <text class="cls-9" transform="translate(634.24 208)"><tspan x="0" y="0">Content</tspan></text>
+  <circle class="cls-7" cx="770" cy="160" r="28"/>
+  <text class="cls-5" transform="translate(748.41 159)"><tspan x="0" y="0">3D</tspan><tspan class="cls-24" x="11.5" y="0"> </tspan><tspan x="13.67" y="0">Assets</tspan></text>
+  <text class="cls-9" transform="translate(753.99 169)"><tspan x="0" y="0">Pipeline</tspan></text>
+  <circle class="cls-13" cx="260" cy="370" r="25"/>
+  <text class="cls-5" transform="translate(255.5 369)"><tspan x="0" y="0">UI</tspan></text>
+  <text class="cls-9" transform="translate(237.5 375.44)"><tspan x="0" y="0">Framework</tspan></text>
+  <circle class="cls-13" cx="320" cy="300" r="25"/>
+  <text class="cls-5" transform="translate(307.99 296)"><tspan x="0" y="0">Basic</tspan></text>
+  <text class="cls-9" transform="translate(299.49 306)"><tspan x="0" y="0">Gameplay</tspan></text>
+  <circle class="cls-13" cx="400" cy="340" r="25"/>
+  <text class="cls-5" transform="translate(378.99 339)"><tspan x="0" y="0">Character</tspan></text>
+  <text class="cls-9" transform="translate(385 349)"><tspan x="0" y="0">System</tspan></text>
+  <circle class="cls-13" cx="480" cy="290" r="25"/>
+  <text class="cls-5" transform="translate(475.5 289)"><tspan x="0" y="0">UI</tspan></text>
+  <text class="cls-9" transform="translate(467.74 299)"><tspan x="0" y="0">Polish</tspan></text>
+  <circle class="cls-13" cx="550" cy="260" r="25"/>
+  <text class="cls-5" transform="translate(531 260)"><tspan x="0" y="0">Adaptive</tspan></text>
+  <text class="cls-9" transform="translate(545.5 270)"><tspan x="0" y="0">UI</tspan></text>
+  <circle class="cls-13" cx="600" cy="320" r="25"/>
+  <text class="cls-5" transform="translate(584.74 320)"><tspan x="0" y="0">Framer</tspan></text>
+  <text class="cls-9" transform="translate(593.75 330)"><tspan x="0" y="0">UX</tspan></text>
+  <circle class="cls-13" cx="680" cy="220" r="30"/>
+  <text class="cls-5" transform="translate(665.25 217)"><tspan x="0" y="0">Spatial</tspan></text>
+  <text class="cls-9" transform="translate(675.5 227)"><tspan x="0" y="0">UI</tspan></text>
+  <circle class="cls-13" cx="780" cy="250" r="25"/>
+  <text class="cls-5" transform="translate(762.99 249)"><tspan x="0" y="0">Gesture</tspan></text>
+  <text class="cls-9" transform="translate(763.24 259)"><tspan x="0" y="0">Controls</tspan></text>
+  <circle class="cls-13" cx="830" cy="290" r="25"/>
+  <text class="cls-5" transform="translate(808.99 289)"><tspan x="0" y="0">Shared UI</tspan></text>
+  <text class="cls-9" transform="translate(804.49 299)"><tspan x="0" y="0">Components</tspan></text>
+  <rect class="cls-27" x="425" y="690" width="100" height="25" rx="5" ry="5"/>
+  <text class="cls-8" transform="translate(422.64 707)"><tspan x="0" y="0">Monetization Points</tspan></text>
+  <rect class="cls-27" x="500" y="220" width="15" height="15"/>
+  <rect class="cls-27" x="530" y="200" width="15" height="15"/>
+  <rect class="cls-27" x="560" y="140" width="15" height="15"/>
+  <rect class="cls-27" x="650" y="200" width="15" height="15"/>
+  <rect class="cls-27" x="730" y="150" width="15" height="15"/>
+  <rect class="cls-27" x="810" y="180" width="15" height="15"/>
+  <rect class="cls-18" x="635" y="472" width="220" height="120" rx="5" ry="5"/>
+  <text class="cls-16" transform="translate(646.84 492)"><tspan x="0" y="0">Legend</tspan></text>
+  <circle class="cls-17" cx="660" cy="517" r="15"/>
+  <text class="cls-8" transform="translate(680 522)"><tspan x="0" y="0">Core Systems</tspan></text>
+  <circle class="cls-7" cx="660" cy="547" r="15"/>
+  <text class="cls-8" transform="translate(680 552)"><tspan x="0" y="0">Content Creation</tspan></text>
+  <circle class="cls-13" cx="660" cy="577" r="15"/>
+  <text class="cls-8" transform="translate(680 582)"><tspan x="0" y="0">User Experience</tspan></text>
+</svg>

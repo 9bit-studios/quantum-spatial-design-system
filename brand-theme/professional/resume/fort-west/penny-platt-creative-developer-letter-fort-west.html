@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Developer | UX Designer</title>
+    <style>
+        @page {
+            size: letter;
+            margin: 0.5in 0.75in;
+            orphans: 3;
+            widows: 3;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif;
+            font-size: 10pt;
+            line-height: 1.4;
+            color: #131A36;
+            background: white;
+            max-width: 8.5in;
+            margin: 0 auto;
+            padding: 0.5in 0.75in;
+            orphans: 3;
+            widows: 3;
+        }
+        
+        .header {
+            margin-bottom: 14px;
+            border-bottom: 1px solid rgba(64, 93, 229, 0.15);
+            padding-bottom: 12px;
+        }
+        
+        h1 {
+            font-family: 'SF Pro Display', -apple-system, sans-serif;
+            font-size: 26pt;
+            font-weight: 600;
+            color: #131A36;
+            margin-bottom: 3px;
+            letter-spacing: -0.5px;
+        }
+        
+        .tagline {
+            font-size: 12pt;
+            font-weight: 500;
+            color: #6A3093;
+            margin-bottom: 10px;
+        }
+        
+        .contact {
+            font-size: 9pt;
+            color: #613FE7;
+            line-height: 1.6;
+        }
+        
+        .contact-row {
+            display: flex;
+            gap: 18px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        
+        .contact a {
+            color: #613FE7;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+        
+        .contact-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+        
+        .icon {
+            width: 12px;
+            height: 12px;
+            opacity: 0.7;
+        }
+        
+        .section {
+            margin-bottom: 10px;
+        }
+        
+        .section-title {
+            font-family: 'SF Pro Display', -apple-system, sans-serif;
+            font-size: 13pt;
+            font-weight: 600;
+            color: #613FE7;
+            margin-top: 20px;
+            margin-bottom: 6px;
+            padding-left: 8px;
+            border-left: 3px solid #613FE7;
+        }
+        
+        .profile {
+            font-size: 10pt;
+            line-height: 1.5;
+            margin-bottom: 8px;
+        }
+        
+        .profile-highlight {
+            background: rgba(97, 63, 231, 0.05);
+            border-left: 3px solid #613FE7;
+            padding: 6px 10px;
+            margin: 5px 0 6px 0;
+            border-radius: 3px;
+        }
+        
+        .job {
+            margin-bottom: 10px;
+            page-break-inside: avoid;
+        }
+        
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 4px;
+        }
+        
+        .job-title {
+            font-size: 11pt;
+            font-weight: 600;
+            color: #131A36;
+        }
+        
+        .job-company {
+            font-size: 10.5pt;
+            font-weight: 500;
+            color: #405de5;
+        }
+        
+        .job-date {
+            font-size: 8.5pt;
+            color: #6A3093;
+        }
+        
+        .job-location {
+            font-size: 8.5pt;
+            color: #6A3093;
+            margin-bottom: 5px;
+        }
+        
+        .job ul {
+            margin-left: 16px;
+            margin-top: 5px;
+        }
+        
+        .job li {
+            margin-bottom: 3px;
+            line-height: 1.35;
+        }
+        
+        .portfolio-highlight {
+            background: rgba(97, 63, 231, 0.05);
+            border-left: 3px solid #613FE7;
+            padding: 7px 10px;
+            margin: 6px 0 10px 0;
+            border-radius: 4px;
+        }
+        
+        .portfolio-title {
+            font-weight: 600;
+            color: #613FE7;
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .portfolio-link {
+            font-size: 9pt;
+            color: #405de5;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px 24px;
+            font-size: 10pt;
+        }
+        
+        .skill-category {
+            font-weight: 600;
+            color: #131A36;
+        }
+        
+        .skill-list {
+            color: #131A36;
+            margin-top: 2px;
+        }
+        
+        .education-item {
+            margin-bottom: 6px;
+            font-size: 9.5pt;
+        }
+        
+        .education-degree {
+            font-weight: 600;
+            color: #131A36;
+        }
+        
+        .education-school {
+            color: #405de5;
+        }
+        
+        .cert-item {
+            font-size: 9.5pt;
+            margin-bottom: 4px;
+        }
+        
+        .education-year {
+            color: #6A3093;
+            font-size: 9pt;
+        }
+        
+        @media print {
+            body {
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Penny Platt</h1>
+        <div class="tagline">Creative Developer | UX Designer</div>
+        <div class="contact">
+            <div class="contact-row">
+                <span class="contact-item">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    Portland, Oregon | Remote or On-Site
+                </span>
+                <span class="contact-item">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                    (971) 386-7688
+                </span>
+            </div>
+            <div class="contact-row">
+                <a href="mailto:penny@9bitstudios.io">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                    penny@9bitstudios.io
+                    <a href="https://linkedin.com/in/penny-platt">
+                    <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
+                    @penny-platt
+                </a>
+                <a href="https://9bitstudios.io">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="2" y1="12" x2="22" y2="12"></line>
+                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                    </svg>
+                    9bitstudios.io
+                </a>
+                <a href="https://Oksana.ai">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="2" y1="12" x2="22" y2="12"></line>
+                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                    </svg>
+                    Oksana.ai
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <p>Hello Fort West Team,</p>
+    </div>
+    
+    <div class="section">
+        <p>I'm Penny Platt— a Creative Developer with 20 years of brand development experience who recently evolved into building the technical systems that bring brands to life.</p>
+    </div>
+    
+    <div class="section">
+        <h2 class="section-title">Why I'm Excited about Fort West</h2>
+        <p>Your work demonstrates the kind of conceptual depth and visual craft that comes from understanding brand at a systems level. I was delighted to pause and appreciate your presentation.</p>
+        <p>Relevant Brand Development Experience</p>
+        <ul>
+            <li><strong>Petersen Games</strong> Complete brand identity system and Shopify implementation contributing to $2M+ revenue.</li>
+            <li><strong>RunSmart App</strong> Brand architecture supporting 40% engagement increase and 25% membership growth.</li>
+            <li><strong>9Bit Studios</strong> Quantum-Spatial design system bridging heritage aesthetics with futuristic spatial theming, on a path of exploring AR interfaces in Apple Vision Pro.</li>
+        </ul>
+    </div>
+    
+        <h2 class="section-title">Digital + Systems</h2>
+        <ul>
+            <li>Built comprehensive design token libraries and component systems in Figma.</li>
+            <li>Developed responsive website experiences with systematic accessibility compliance.</li>
+            <li>Created brand-to-code workflows ensuring design system integrity through development.</li>
+            <li>Currently building Oksana.ai— a brand-aware creative intelligence accelerator powered by Apple Intelligence beta APIs with use cases for thematic content acceleration for high end agencies, as well as generative game design, design system automation and narrative fiction development.</li>
+        </ul>
+    </div>
+    
+    <div class="section">
+        <h2 class="section-title">Bringing to the Table:</h2>
+        <ul>
+            <li><strong>Strong Visual Craft</strong> 20 years directing brand themes, packaging, digital campaigns across industries.</li>
+            <li><strong>Systems Thinking</strong> My neurodivergent brain naturally produces the documentation and systematic approaches that make complex projects manageable.</li>
+            <li><strong>Execution</strong> I don't just design responsive experiences—I validate them with TypeScript, design tokens, and automated QA Metrics Focus: Every project includes defined success metrics and post-launch analytics review.</li>
+        </ul>
+    </div>
+    
+    <div class="section">
+        <h2 class="section-title">The Variety you Mentioned:</h2>
+        <p>I thrive moving between brand expression and precise and comprehensive digital implementation. My background means I can:</p>
+        <ul>
+            <li>Develop visual identities with conceptual depth</li>
+            <li>Build cohesive design systems with technical precision</li>
+            <li>Translate those systems into responsive digital experiences</li>
+            <li>Interpret real-time analytics and engagement data with strong auditing practices, content optimization and strategic insights</li>
+            <li>Maintain brand integrity from strategy through execution</li>
+        </ul>
+    </div>
+    
+    <div class="section">
+        <h2 class="section-title">Compensation Expectations:</h2>
+        <p>For the contract period: $90,000 </p>
+        <p>With a clear path to $120,000+ upon full-time hire based on demonstrated value, if at such time we agree said value is on display. I understand this is above your stated range. </p>
+        <ul>
+            <li>My 20 years experience brings senior-level strategic thinking</li>
+            <li>My systematic approach means faster and more stable execution</li>
+            <li>I know that my practices will enhance profitability for your agency</li>
+        </ul>
+    </div>
+        
+        <div class="portfolio-highlight">
+            <div class="portfolio-title">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                    <line x1="8" y1="21" x2="16" y2="21"></line>
+                    <line x1="12" y1="17" x2="12" y2="21"></line>
+                </svg>
+                Portfolio Project: Oksana - Brand-Aware Content Intelligence Platform
+            </div>
+            <div style="font-size: 9.5pt; line-height: 1.5; margin-bottom: 6px;">
+                Apple Intelligence-powered platform for generative creative intelligence automation and analytics intelligence. Integrates Notion, Shopify, Klaviyo, and Grid API for real-time brand consistency enforcement and content acceleration. Some exciting developments include Apple m4-optimized quantum pixel, quantum token and volumetric pixel generation systems, dimensional grid generator and svg and tsx component generation with M4 dazzlements and surprises.
+            </div>
+            <a href="https://Oksana.ai" class="portfolio-link">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+                oksana.ai
+            </a>
+        </div>
+
+    <div class="section">
+        <p>I took an atypical path with my various art direction roles, serving for some rather far out brands with very demanding production schedules and a high scope of autonomy. I am now on an atypical path developing my design system and startup stack, so breaking the ice enough to open the door to presenting my secret super cool brand portfolio is something I have pondered.</p>
+    </div>
+    
+    <div class="section">
+        <p>I welcome a chat about how my services might help you find a good flow in the studio, and enjoy the confidence and relief that your help has arrived. I am someone that presents in a way that you are going to know what you are getting with me. The specific profile of this role: brand expression wrapped up in web design, UX, UI and content strategy is definitely my sweet spot.</p>
+    </div>
+
+    <div class="section">
+        <p>Upon viewing your site, I found the juxtaposition of precisely balanced minimalism and bold, distinctive thematic content throughout your theme to be superb, and evident that you are a group of really good designers who really care that the media you make is really good— both on the client side and the creator side. This is something that matters to me. </p>
+    </div>
+    
+    <div class="section">
+        <p>I think it is profound and awesome when we can enjoy working with people we know are really good at creative media— good in the way that the aesthetic is sublime but also that the lived experience is served with vision and enjoyment and flow. I've enjoyed this favorable teamspace about half of my years of service, and am fortunate that I have been well mentored and supported by a few of the kinds of creative directors who open up a brand new world and way to be, by playing such a fun, clever and crafty, well executed and generous creative game while being founded on sound strategy and business logic.</p>
+    </div>
+    
+    <div class="section">
+        <p>I have put an uncommon amount of tenacity and midnight oil in to my designer to developer journey the past many years. 2-3 years ago I thoroughly overhauled and validated my security, privacy, platform and data management protocols, and I went deep enough to really know that I know what I know and that clients and collaborators can trust me to share safe spaces, and I can trust myself and my system to stay stable and private as I work with collaborators, sometimes massive media archives, multiple platforms for web deployment and a private stack of 5-6 APIs.</p>
+    </div>
+    
+    <div class="section">
+        <p>I was surprised at the clarity of my A-ha! moment when I explored your site and noticed, you guys are really good. So I wanted to just show a few of my cards to you with trust that my intuition is correct and that we might make something really cool happen.</p>
+    </div>
+    
+    <div class="signature">
+        <p>Thank you for your consideration. I am available for immediate hire and am ready to adeptly take lots of weights off your plate.</p>
+        <p>Sincerely,</p>
+        <p><strong>Penny Platt</strong></p>
+    </div>
+
+</body>
+</html>

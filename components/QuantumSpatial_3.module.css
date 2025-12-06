@@ -1,0 +1,123 @@
+/**
+ * QuantumSpatial_3 Component Styles
+ * Quantum Spatial Design System
+ * Brand: 9Bit Studios
+ */
+
+.quantumSpatialContainer {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Animation Performance Optimization - M4 Accelerated */
+.quantumSpatialContainer svg {
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Responsive Scaling */
+.quantumSpatialSmall {
+  width: 200px;
+  height: 200px;
+}
+
+.quantumSpatialMedium {
+  width: 400px;
+  height: 400px;
+}
+
+.quantumSpatialLarge {
+  width: 600px;
+  height: 600px;
+}
+
+.quantumSpatialFull {
+  width: 100%;
+  height: auto;
+  max-width: 800px;
+}
+
+/* Interactive States */
+.quantumSpatialInteractive {
+  cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.quantumSpatialInteractive:hover {
+  transform: scale(1.05);
+}
+
+.quantumSpatialInteractive:active {
+  transform: scale(0.98);
+}
+
+/* Loading State */
+.quantumSpatialLoading {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 8px rgba(78, 205, 196, 0.3));
+  }
+  50% {
+    filter: drop-shadow(0 0 16px rgba(232, 93, 117, 0.5));
+  }
+}
+
+.quantumSpatialGlowing {
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+
+/* Dark Mode Enhancement */
+@media (prefers-color-scheme: dark) {
+  .quantumSpatialContainer svg {
+    filter: brightness(1.1);
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .quantumSpatialContainer svg * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .quantumSpatialContainer svg {
+    filter: contrast(1.2);
+  }
+}
+
+/* Performance Optimization for Mobile */
+@media (max-width: 768px) {
+  .quantumSpatialContainer svg {
+    /* Reduce glassmorphism complexity on mobile */
+    filter: none;
+  }
+
+  .quantumSpatialMedium {
+    width: 300px;
+    height: 300px;
+  }
+
+  .quantumSpatialLarge {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .quantumSpatialContainer svg {
+    filter: grayscale(1);
+  }
+}

@@ -1,0 +1,346 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600">
+  <!-- Background -->
+  <rect width="900" height="600" fill="#0A0621" />
+  
+  <!-- Dimensional grid with perspective effect -->
+  <g opacity="0.12">
+    <!-- Horizontal grid lines with perspective effect -->
+    <path d="M150,550 L750,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M100,500 L800,500" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M75,450 L825,450" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M50,400 L850,400" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M40,350 L860,350" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M30,300 L870,300" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M25,250 L875,250" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M20,200 L880,200" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M15,150 L885,150" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M10,100 L890,100" stroke="#5AC8FA" stroke-width="1" />
+    
+    <!-- Vertical grid lines -->
+    <path d="M150,100 L150,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M225,100 L225,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M300,100 L300,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M375,100 L375,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M450,100 L450,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M525,100 L525,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M600,100 L600,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M675,100 L675,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M750,100 L750,550" stroke="#5AC8FA" stroke-width="1" />
+  </g>
+  
+  <!-- Title -->
+  <text x="450" y="50" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" font-size="26" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Penny's Personal Teamspace</text>
+  <text x="450" y="80" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" font-size="16" fill="#BF4080" text-anchor="middle">Creative Director Dashboard for AI-Assisted Game Development</text>
+  
+  <!-- Main Dashboard Structure - Split into four quadrants -->
+  
+  <!-- Profile and Quick Stats (Top Left) -->
+  <g transform="translate(200, 175)">
+    <rect x="-150" y="-75" width="300" height="150" rx="10" fill="#131A36" opacity="0.9" stroke="#BF4080" stroke-width="2"/>
+    
+    <!-- Profile Section -->
+    <g transform="translate(-100, 0)">
+      <!-- Profile Avatar -->
+      <circle cx="0" cy="0" r="40" fill="#331F4A" stroke="#BF4080" stroke-width="1.5"/>
+      <path d="M0,-20 C-10,-20 -20,-5 -20,10 C-20,25 -5,35 0,35 C5,35 20,25 20,10 C20,-5 10,-20 0,-20" fill="#BF4080" opacity="0.7"/>
+      <circle cx="-12" cy="-5" r="4" fill="#331F4A"/>
+      <circle cx="12" cy="-5" r="4" fill="#331F4A"/>
+      <path d="M-10,15 C-5,20 5,20 10,15" fill="none" stroke="#331F4A" stroke-width="2"/>
+      
+      <!-- Status indicator -->
+      <circle cx="30" cy="-25" r="8" fill="#2D854D"/>
+      <text x="30" y="-22" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">✓</text>
+    </g>
+    
+    <!-- Profile Info -->
+    <g transform="translate(5, 0)">
+      <text x="0" y="-40" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" font-size="18" font-weight="bold" fill="#FFFFFF">Penny Platt</text>
+      <text x="0" y="-20" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" font-size="14" fill="#BF4080">Founder and Creative Director</text>
+      
+      <!-- Quick Stats -->
+      <g transform="translate(0, 10)">
+        <text x="0" y="0" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#FFFFFF">Projects: 5 Active</text>
+        <text x="0" y="20" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#FFFFFF">Assets: 128 Created This Week</text>
+        <text x="0" y="40" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#FFFFFF">AI Sessions: 14 Today</text>
+      </g>
+    </g>
+  </g>
+  
+  <!-- AI Assistant Hub (Top Right) -->
+  <g transform="translate(700, 175)">
+    <rect x="-150" y="-75" width="300" height="150" rx="10" fill="#131A36" opacity="0.9" stroke="#5AC8FA" stroke-width="2"/>
+    
+    <text x="0" y="-45" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">AI Assistant Hub</text>
+    
+    <!-- Neural Engine Visualization -->
+    <g transform="translate(-100, 0)">
+      <circle cx="0" cy="0" r="30" fill="#331F4A" stroke="#5AC8FA" stroke-width="1.5"/>
+      
+      <!-- Neural node connections -->
+      <g opacity="0.8">
+        <circle cx="0" cy="0" r="5" fill="#5AC8FA"/>
+        <circle cx="-15" cy="-10" r="3" fill="#5AC8FA"/>
+        <circle cx="15" cy="-10" r="3" fill="#5AC8FA"/>
+        <circle cx="-10" cy="15" r="3" fill="#5AC8FA"/>
+        <circle cx="10" cy="15" r="3" fill="#5AC8FA"/>
+        
+        <path d="M0,0 L-15,-10" stroke="#5AC8FA" stroke-width="1"/>
+        <path d="M0,0 L15,-10" stroke="#5AC8FA" stroke-width="1"/>
+        <path d="M0,0 L-10,15" stroke="#5AC8FA" stroke-width="1"/>
+        <path d="M0,0 L10,15" stroke="#5AC8FA" stroke-width="1"/>
+        
+        <!-- Pulsing animation suggestion (static in SVG) -->
+        <circle cx="0" cy="0" r="15" fill="none" stroke="#5AC8FA" stroke-width="1" opacity="0.5"/>
+        <circle cx="0" cy="0" r="25" fill="none" stroke="#5AC8FA" stroke-width="1" opacity="0.3"/>
+      </g>
+      
+      <text x="0" y="35" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">M4 Neural Engine</text>
+    </g>
+    
+    <!-- AI Assistant Quick Actions -->
+    <g transform="translate(70, 0)">
+      <text x="0" y="-25" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">Quick Actions</text>
+      
+      <!-- AI Action Buttons -->
+      <g transform="translate(0, 0)">
+        <rect x="-60" y="-10" width="120" height="20" rx="5" fill="#6A3093" opacity="0.8"/>
+        <text x="0" y="5" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">Generate Asset Concepts</text>
+      </g>
+      
+      <g transform="translate(0, 25)">
+        <rect x="-60" y="-10" width="120" height="20" rx="5" fill="#6A3093" opacity="0.8"/>
+        <text x="0" y="5" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">Prompt Engineering Tool</text>
+      </g>
+      
+      <g transform="translate(0, 50)">
+        <rect x="-60" y="-10" width="120" height="20" rx="5" fill="#6A3093" opacity="0.8"/>
+        <text x="0" y="5" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">Refine Visual Styles</text>
+      </g>
+    </g>
+  </g>
+  
+  <!-- Current Projects and Timeline (Bottom Left) -->
+  <g transform="translate(200, 425)">
+    <rect x="-150" y="-150" width="300" height="300" rx="10" fill="#131A36" opacity="0.9" stroke="#6A3093" stroke-width="2"/>
+    
+    <text x="0" y="-120" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Project Timeline</text>
+    
+    <!-- Project Timeline visualization -->
+    <g transform="translate(0, -80)">
+      <!-- Timeline axis -->
+      <line x1="-130" y1="0" x2="130" y2="0" stroke="#6A3093" stroke-width="2"/>
+      <line x1="-130" y1="0" x2="-130" y2="170" stroke="#6A3093" stroke-width="2"/>
+      
+      <!-- Timeline markers -->
+      <text x="-130" y="-10" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="8" fill="#FFFFFF" text-anchor="middle">Now</text>
+      <text x="-65" y="-10" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="8" fill="#FFFFFF" text-anchor="middle">May</text>
+      <text x="0" y="-10" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="8" fill="#FFFFFF" text-anchor="middle">June</text>
+      <text x="65" y="-10" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="8" fill="#FFFFFF" text-anchor="middle">July</text>
+      <text x="130" y="-10" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="8" fill="#FFFFFF" text-anchor="middle">Aug</text>
+      
+      <!-- Projects on timeline -->
+      <!-- Project 1: AI Branding Quiz -->
+      <rect x="-130" y="20" width="80" height="20" rx="5" fill="#BF4080" opacity="0.8"/>
+      <text x="-90" y="34" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">AI Branding Quiz</text>
+      
+      <!-- Project 2: Virtual Escape Room -->
+      <rect x="-95" y="50" width="130" height="20" rx="5" fill="#5AC8FA" opacity="0.8"/>
+      <text x="-30" y="64" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">Virtual Escape Room</text>
+      
+      <!-- Project 3: Portal Experience -->
+      <rect x="-60" y="80" width="160" height="20" rx="5" fill="#6A3093" opacity="0.8"/>
+      <text x="20" y="94" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">Jrotharke Portal Experience</text>
+      
+      <!-- Project 4: Brand Style Guidelines -->
+      <rect x="-20" y="110" width="100" height="20" rx="5" fill="#2D854D" opacity="0.8"/>
+      <text x="30" y="124" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">Style Guidelines 3.0</text>
+      
+      <!-- Project 5: Full RPG Experience -->
+      <rect x="30" y="140" width="100" height="20" rx="5" fill="#BF4080" opacity="0.8"/>
+      <text x="80" y="154" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">Full RPG Experience</text>
+      
+      <!-- Today marker -->
+      <line x1="-130" y1="0" x2="-130" y2="170" stroke="#FFFFFF" stroke-width="1" stroke-dasharray="4,4"/>
+      <circle cx="-130" cy="0" r="4" fill="#FFFFFF"/>
+    </g>
+  </g>
+  
+  <!-- Brand Asset Management (Bottom Right) -->
+  <g transform="translate(700, 425)">
+    <rect x="-150" y="-150" width="300" height="300" rx="10" fill="#131A36" opacity="0.9" stroke="#5AC8FA" stroke-width="2"/>
+    
+    <text x="0" y="-120" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Brand Asset Management</text>
+    
+    <!-- Asset Gallery -->
+    <g transform="translate(-100, -80)">
+      <!-- Gallery label -->
+      <text x="0" y="0" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#FFFFFF">Recent Assets</text>
+      
+      <!-- Miniature Asset Grid -->
+      <g transform="translate(0, 25)">
+        <!-- Row 1 -->
+        <rect x="0" y="0" width="30" height="30" rx="3" fill="#331F4A" stroke="#BF4080" stroke-width="1"/>
+        <rect x="40" y="0" width="30" height="30" rx="3" fill="#331F4A" stroke="#5AC8FA" stroke-width="1"/>
+        <rect x="80" y="0" width="30" height="30" rx="3" fill="#331F4A" stroke="#6A3093" stroke-width="1"/>
+        <rect x="120" y="0" width="30" height="30" rx="3" fill="#331F4A" stroke="#2D854D" stroke-width="1"/>
+        
+        <!-- Row 2 -->
+        <rect x="0" y="40" width="30" height="30" rx="3" fill="#331F4A" stroke="#5AC8FA" stroke-width="1"/>
+        <rect x="40" y="40" width="30" height="30" rx="3" fill="#331F4A" stroke="#6A3093" stroke-width="1"/>
+        <rect x="80" y="40" width="30" height="30" rx="3" fill="#331F4A" stroke="#BF4080" stroke-width="1"/>
+        <rect x="120" y="40" width="30" height="30" rx="3" fill="#331F4A" stroke="#5AC8FA" stroke-width="1"/>
+        
+        <!-- Row 3 -->
+        <rect x="0" y="80" width="30" height="30" rx="3" fill="#331F4A" stroke="#2D854D" stroke-width="1"/>
+        <rect x="40" y="80" width="30" height="30" rx="3" fill="#331F4A" stroke="#BF4080" stroke-width="1"/>
+        <rect x="80" y="80" width="30" height="30" rx="3" fill="#331F4A" stroke="#5AC8FA" stroke-width="1"/>
+        <rect x="120" y="80" width="30" height="30" rx="3" fill="#331F4A" stroke="#6A3093" stroke-width="1"/>
+        
+        <!-- Quantum pixel design elements -->
+        <rect x="8" y="8" width="14" height="14" fill="#BF4080" opacity="0.6"/>
+        <rect x="48" y="8" width="14" height="14" fill="#5AC8FA" opacity="0.6"/>
+        <rect x="88" y="8" width="14" height="14" fill="#6A3093" opacity="0.6"/>
+        <rect x="128" y="8" width="14" height="14" fill="#2D854D" opacity="0.6"/>
+        
+        <rect x="8" y="48" width="14" height="14" fill="#5AC8FA" opacity="0.6"/>
+        <rect x="48" y="48" width="14" height="14" fill="#6A3093" opacity="0.6"/>
+        <rect x="88" y="48" width="14" height="14" fill="#BF4080" opacity="0.6"/>
+        <rect x="128" y="48" width="14" height="14" fill="#5AC8FA" opacity="0.6"/>
+        
+        <rect x="8" y="88" width="14" height="14" fill="#2D854D" opacity="0.6"/>
+        <rect x="48" y="88" width="14" height="14" fill="#BF4080" opacity="0.6"/>
+        <rect x="88" y="88" width="14" height="14" fill="#5AC8FA" opacity="0.6"/>
+        <rect x="128" y="88" width="14" height="14" fill="#6A3093" opacity="0.6"/>
+      </g>
+    </g>
+    
+    <!-- Asset Stats -->
+    <g transform="translate(80, -80)">
+      <!-- Stats label -->
+      <text x="0" y="0" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#FFFFFF">Asset Stats</text>
+      
+      <!-- Asset metrics -->
+      <g transform="translate(0, 30)">
+        <rect x="-40" y="-10" width="80" height="20" rx="5" fill="#331F4A"/>
+        <text x="0" y="5" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">Characters: 28</text>
+      </g>
+      
+      <g transform="translate(0, 55)">
+        <rect x="-40" y="-10" width="80" height="20" rx="5" fill="#331F4A"/>
+        <text x="0" y="5" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">Environments: 14</text>
+      </g>
+      
+      <g transform="translate(0, 80)">
+        <rect x="-40" y="-10" width="80" height="20" rx="5" fill="#331F4A"/>
+        <text x="0" y="5" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">UI Elements: 56</text>
+      </g>
+      
+      <g transform="translate(0, 105)">
+        <rect x="-40" y="-10" width="80" height="20" rx="5" fill="#331F4A"/>
+        <text x="0" y="5" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">Materials: 32</text>
+      </g>
+    </g>
+    
+    <!-- AI Generation Tools -->
+    <g transform="translate(0, 80)">
+      <text x="0" y="0" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">Asset Generation Tools</text>
+      
+      <g transform="translate(-80, 30)">
+        <rect x="-40" y="-15" width="80" height="30" rx="5" fill="#6A3093" opacity="0.8"/>
+        <text x="0" y="0" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">Ideogram</text>
+        <text x="0" y="15" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="8" fill="#FFFFFF" text-anchor="middle">Concept Art</text>
+      </g>
+      
+      <g transform="translate(0, 30)">
+        <rect x="-40" y="-15" width="80" height="30" rx="5" fill="#5AC8FA" opacity="0.8"/>
+        <text x="0" y="0" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">DALL·E 3</text>
+        <text x="0" y="15" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="8" fill="#FFFFFF" text-anchor="middle">Asset Variants</text>
+      </g>
+      
+      <g transform="translate(80, 30)">
+        <rect x="-40" y="-15" width="80" height="30" rx="5" fill="#BF4080" opacity="0.8"/>
+        <text x="0" y="0" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">Claude</text>
+        <text x="0" y="15" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="8" fill="#FFFFFF" text-anchor="middle">Prompt Refinement</text>
+      </g>
+    </g>
+  </g>
+  
+  <!-- Central Connection Hub -->
+  <g transform="translate(450, 300)">
+    <!-- Central connection node -->
+    <circle cx="0" cy="0" r="35" fill="#131A36" stroke="#BF4080" stroke-width="2"/>
+    
+    <!-- Quantum pixel visual inside node -->
+    <g>
+      <rect x="-15" y="-15" width="10" height="10" fill="#5AC8FA" opacity="0.8"/>
+      <rect x="5" y="-15" width="10" height="10" fill="#BF4080" opacity="0.8"/>
+      <rect x="-15" y="5" width="10" height="10" fill="#6A3093" opacity="0.8"/>
+      <rect x="5" y="5" width="10" height="10" fill="#2D854D" opacity="0.8"/>
+    </g>
+    
+    <!-- Text label -->
+    <text x="0" y="50" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">9Bit Studios</text>
+    <text x="0" y="70" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#5AC8FA" text-anchor="middle">Creative Hub</text>
+    
+    <!-- Connection lines to quadrants -->
+    <path d="M-25,-25 L-150,-125" stroke="#BF4080" stroke-width="2" stroke-dasharray="5,5" fill="none"/>
+    <path d="M25,-25 L250,-125" stroke="#5AC8FA" stroke-width="2" stroke-dasharray="5,5" fill="none"/>
+    <path d="M-25,25 L-150,125" stroke="#6A3093" stroke-width="2" stroke-dasharray="5,5" fill="none"/>
+    <path d="M25,25 L250,125" stroke="#5AC8FA" stroke-width="2" stroke-dasharray="5,5" fill="none"/>
+    
+    <!-- Connection nodes -->
+    <circle cx="-25" cy="-25" r="5" fill="#BF4080"/>
+    <circle cx="25" cy="-25" r="5" fill="#5AC8FA"/>
+    <circle cx="-25" cy="25" r="5" fill="#6A3093"/>
+    <circle cx="25" cy="25" r="5" fill="#5AC8FA"/>
+  </g>
+  
+  <!-- Bottom Toolbar -->
+  <g transform="translate(450, 575)">
+    <rect x="-425" y="-25" width="850" height="50" rx="10" fill="#131A36" opacity="0.9"/>
+    
+    <!-- Toolbar items -->
+    <g transform="translate(-340, 0)">
+      <circle cx="0" cy="0" r="15" fill="#331F4A" stroke="#BF4080" stroke-width="1.5"/>
+      <text x="0" y="5" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="18" fill="#BF4080" text-anchor="middle">⊕</text>
+      <text x="0" y="25" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">New Project</text>
+    </g>
+    
+    <g transform="translate(-200, 0)">
+      <circle cx="0" cy="0" r="15" fill="#331F4A" stroke="#5AC8FA" stroke-width="1.5"/>
+      <text x="0" y="5" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="18" fill="#5AC8FA" text-anchor="middle">✎</text>
+      <text x="0" y="25" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">Prompt Library</text>
+    </g>
+    
+    <g transform="translate(-60, 0)">
+      <circle cx="0" cy="0" r="15" fill="#331F4A" stroke="#6A3093" stroke-width="1.5"/>
+      <text x="0" y="5" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="18" fill="#6A3093" text-anchor="middle">⚙</text>
+      <text x="0" y="25" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">Settings</text>
+    </g>
+    
+    <g transform="translate(60, 0)">
+      <circle cx="0" cy="0" r="15" fill="#331F4A" stroke="#5AC8FA" stroke-width="1.5"/>
+      <text x="0" y="5" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="18" fill="#5AC8FA" text-anchor="middle">↗</text>
+      <text x="0" y="25" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">Share Assets</text>
+    </g>
+    
+    <g transform="translate(200, 0)">
+      <circle cx="0" cy="0" r="15" fill="#331F4A" stroke="#BF4080" stroke-width="1.5"/>
+      <text x="0" y="5" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="18" fill="#BF4080" text-anchor="middle">⏱</text>
+      <text x="0" y="25" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">Time Tracking</text>
+    </g>
+    
+    <g transform="translate(340, 0)">
+      <circle cx="0" cy="0" r="15" fill="#331F4A" stroke="#2D854D" stroke-width="1.5"/>
+      <text x="0" y="5" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="18" fill="#2D854D" text-anchor="middle">✓</text>
+      <text x="0" y="25" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">Team Chat</text>
+    </g>
+  </g>
+  
+  <!-- M4 Optimization Badge -->
+  <g transform="translate(780, 100)">
+    <rect x="-70" y="-25" width="140" height="50" rx="25" fill="#331F4A" stroke="#5AC8FA" stroke-width="1.5"/>
+    <text x="0" y="0" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" text-anchor="middle">M4 Optimized</text>
+    <text x="0" y="20" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#5AC8FA" text-anchor="middle">Neural Engine Integration</text>
+  </g>
+</svg>

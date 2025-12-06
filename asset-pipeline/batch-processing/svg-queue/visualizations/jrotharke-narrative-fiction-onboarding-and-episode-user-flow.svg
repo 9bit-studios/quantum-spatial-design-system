@@ -1,0 +1,179 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700">
+  <!-- Background -->
+  <rect width="900" height="700" fill="#f8f9fa" />
+  
+  <!-- Title -->
+  <text x="450" y="40" font-family="Arial" font-size="24" font-weight="bold" text-anchor="middle">Jrotharke: Onboarding &amp; Episode User Flow</text>
+  
+  <!-- User Flow Phases -->
+  <rect x="80" y="70" width="740" height="600" rx="10" fill="#f0f5ff" stroke="#2f54eb" stroke-width="2" stroke-dasharray="5,5" />
+  
+  <!-- Onboarding Phase -->
+  <rect x="100" y="90" width="700" height="180" rx="10" fill="#e6f7ff" stroke="#1890ff" stroke-width="2" />
+  <text x="450" y="115" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle">Onboarding Experience</text>
+  
+  <!-- Onboarding Steps -->
+  <rect x="120" y="130" width="140" height="120" rx="5" fill="#bae7ff" stroke="#1890ff" stroke-width="1" />
+  <text x="190" y="150" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle">Character Creation</text>
+  <text x="190" y="170" font-family="Arial" font-size="12" text-anchor="middle">(Minimal but Meaningful)</text>
+  <text x="190" y="195" font-family="Arial" font-size="10" text-anchor="middle">• Select background</text>
+  <text x="190" y="210" font-family="Arial" font-size="10" text-anchor="middle">• Choose starting traits</text>
+  <text x="190" y="225" font-family="Arial" font-size="10" text-anchor="middle">• Define appearance</text>
+  <text x="190" y="240" font-family="Arial" font-size="10" text-anchor="middle">• Name character</text>
+  
+  <rect x="280" y="130" width="140" height="120" rx="5" fill="#bae7ff" stroke="#1890ff" stroke-width="1" />
+  <text x="350" y="150" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle">World Introduction</text>
+  <text x="350" y="170" font-family="Arial" font-size="12" text-anchor="middle">(Interactive Prologue)</text>
+  <text x="350" y="195" font-family="Arial" font-size="10" text-anchor="middle">• Cinematic introduction</text>
+  <text x="350" y="210" font-family="Arial" font-size="10" text-anchor="middle">• World lore overview</text>
+  <text x="350" y="225" font-family="Arial" font-size="10" text-anchor="middle">• Character backstory</text>
+  <text x="350" y="240" font-family="Arial" font-size="10" text-anchor="middle">• Initial motivation</text>
+  
+  <rect x="440" y="130" width="140" height="120" rx="5" fill="#bae7ff" stroke="#1890ff" stroke-width="1" />
+  <text x="510" y="150" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle">Tutorial Elements</text>
+  <text x="510" y="170" font-family="Arial" font-size="12" text-anchor="middle">(Woven into Narrative)</text>
+  <text x="510" y="195" font-family="Arial" font-size="10" text-anchor="middle">• UI introduction</text>
+  <text x="510" y="210" font-family="Arial" font-size="10" text-anchor="middle">• Choice mechanics</text>
+  <text x="510" y="225" font-family="Arial" font-size="10" text-anchor="middle">• Tactical system</text>
+  <text x="510" y="240" font-family="Arial" font-size="10" text-anchor="middle">• Relationship/stat tracking</text>
+  
+  <rect x="600" y="130" width="180" height="120" rx="5" fill="#bae7ff" stroke="#1890ff" stroke-width="1" />
+  <text x="690" y="150" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle">Save Progress &amp; Sync</text>
+  <text x="690" y="170" font-family="Arial" font-size="12" text-anchor="middle">(Supabase Integration)</text>
+  <text x="690" y="195" font-family="Arial" font-size="10" text-anchor="middle">• Account creation/login</text>
+  <text x="690" y="210" font-family="Arial" font-size="10" text-anchor="middle">• Auto-save progress</text>
+  <text x="690" y="225" font-family="Arial" font-size="10" text-anchor="middle">• Cross-device syncing</text>
+  <text x="690" y="240" font-family="Arial" font-size="10" text-anchor="middle">• Privacy settings</text>
+  
+  <!-- Episode Structure Phase -->
+  <rect x="100" y="290" width="700" height="200" rx="10" fill="#fff2e8" stroke="#fa541c" stroke-width="2" />
+  <text x="450" y="315" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle">Episode Structure</text>
+  
+  <!-- Episode Structure Elements -->
+  <rect x="120" y="330" width="100" height="80" rx="5" fill="#ffe7ba" stroke="#fa8c16" stroke-width="1" />
+  <text x="170" y="355" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">Opening</text>
+  <text x="170" y="370" font-family="Arial" font-size="10" text-anchor="middle">Conflict</text>
+  <text x="170" y="385" font-family="Arial" font-size="10" text-anchor="middle">Introduction</text>
+  
+  <rect x="240" y="330" width="100" height="80" rx="5" fill="#ffe7ba" stroke="#fa8c16" stroke-width="1" />
+  <text x="290" y="355" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">Character</text>
+  <text x="290" y="370" font-family="Arial" font-size="10" text-anchor="middle">Relationship</text>
+  <text x="290" y="385" font-family="Arial" font-size="10" text-anchor="middle">Development</text>
+  
+  <rect x="360" y="330" width="100" height="80" rx="5" fill="#ffe7ba" stroke="#fa8c16" stroke-width="1" />
+  <text x="410" y="355" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">Key Decision</text>
+  <text x="410" y="370" font-family="Arial" font-size="10" text-anchor="middle">Points</text>
+  <text x="410" y="385" font-family="Arial" font-size="10" text-anchor="middle">(3-5 choices)</text>
+  
+  <rect x="120" y="430" width="100" height="80" rx="5" fill="#ffe7ba" stroke="#fa8c16" stroke-width="1" />
+  <text x="170" y="455" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">Tactical</text>
+  <text x="170" y="470" font-family="Arial" font-size="10" text-anchor="middle">Challenges</text>
+  <text x="170" y="485" font-family="Arial" font-size="10" text-anchor="middle">(2-3 encounters)</text>
+  
+  <rect x="240" y="430" width="100" height="80" rx="5" fill="#ffe7ba" stroke="#fa8c16" stroke-width="1" />
+  <text x="290" y="455" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">Episode</text>
+  <text x="290" y="470" font-family="Arial" font-size="10" text-anchor="middle">Climax</text>
+  <text x="290" y="485" font-family="Arial" font-size="10" text-anchor="middle">&amp; Consequence</text>
+  
+  <rect x="360" y="430" width="100" height="80" rx="5" fill="#ffe7ba" stroke="#fa8c16" stroke-width="1" />
+  <text x="410" y="455" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">Epilogue</text>
+  <text x="410" y="470" font-family="Arial" font-size="10" text-anchor="middle">Immediate</text>
+  <text x="410" y="485" font-family="Arial" font-size="10" text-anchor="middle">Outcomes</text>
+  
+  <!-- State Management System -->
+  <rect x="480" y="330" width="300" height="180" rx="5" fill="#fff2e8" stroke="#fa541c" stroke-width="1" />
+  <text x="630" y="355" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle">Episode State Management (Ink + Supabase)</text>
+  
+  <text x="510" y="380" font-family="Arial" font-size="12" font-weight="bold" text-anchor="start">Player Variables</text>
+  <text x="510" y="400" font-family="Arial" font-size="10" text-anchor="start">• Relationship values</text>
+  <text x="510" y="415" font-family="Arial" font-size="10" text-anchor="start">• Moral alignment</text>
+  <text x="510" y="430" font-family="Arial" font-size="10" text-anchor="start">• Faction standings</text>
+  <text x="510" y="445" font-family="Arial" font-size="10" text-anchor="start">• Skills &amp; abilities</text>
+  
+  <text x="675" y="380" font-family="Arial" font-size="12" font-weight="bold" text-anchor="start">Story Flags</text>
+  <text x="675" y="400" font-family="Arial" font-size="10" text-anchor="start">• Key decisions</text>
+  <text x="675" y="415" font-family="Arial" font-size="10" text-anchor="start">• Character fates</text>
+  <text x="675" y="430" font-family="Arial" font-size="10" text-anchor="start">• Location states</text>
+  <text x="675" y="445" font-family="Arial" font-size="10" text-anchor="start">• Quest completion</text>
+  
+  <text x="510" y="470" font-family="Arial" font-size="12" font-weight="bold" text-anchor="start">Serialized State</text>
+  <text x="510" y="485" font-family="Arial" font-size="10" text-anchor="start">• JSON state object</text>
+  <text x="675" y="470" font-family="Arial" font-size="12" font-weight="bold" text-anchor="start">Sync Strategy</text>
+  <text x="675" y="485" font-family="Arial" font-size="10" text-anchor="start">• Real-time + delta updates</text>
+  
+  <!-- Between-Episode Engagement -->
+  <rect x="100" y="510" width="700" height="140" rx="10" fill="#f6ffed" stroke="#52c41a" stroke-width="2" />
+  <text x="450" y="535" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle">Between-Episode Engagement</text>
+  
+  <!-- Between-Episode Elements -->
+  <rect x="120" y="550" width="150" height="80" rx="5" fill="#d9f7be" stroke="#52c41a" stroke-width="1" />
+  <text x="195" y="575" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle">Codex Updates</text>
+  <text x="195" y="595" font-family="Arial" font-size="10" text-anchor="middle">• New lore entries</text>
+  <text x="195" y="610" font-family="Arial" font-size="10" text-anchor="middle">• Character backgrounds</text>
+  <text x="195" y="625" font-family="Arial" font-size="10" text-anchor="middle">• World history reveals</text>
+  
+  <rect x="290" y="550" width="150" height="80" rx="5" fill="#d9f7be" stroke="#52c41a" stroke-width="1" />
+  <text x="365" y="575" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle">Community Choice</text>
+  <text x="365" y="595" font-family="Arial" font-size="10" text-anchor="middle">• Global choice statistics</text>
+  <text x="365" y="610" font-family="Arial" font-size="10" text-anchor="middle">• Community impact</text>
+  <text x="365" y="625" font-family="Arial" font-size="10" text-anchor="middle">• Future content influence</text>
+  
+  <rect x="460" y="550" width="150" height="80" rx="5" fill="#d9f7be" stroke="#52c41a" stroke-width="1" />
+  <text x="535" y="575" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle">Character Growth</text>
+  <text x="535" y="595" font-family="Arial" font-size="10" text-anchor="middle">• Skill/ability upgrades</text>
+  <text x="535" y="610" font-family="Arial" font-size="10" text-anchor="middle">• Relationship deepening</text>
+  <text x="535" y="625" font-family="Arial" font-size="10" text-anchor="middle">• Personalization options</text>
+  
+  <rect x="630" y="550" width="150" height="80" rx="5" fill="#d9f7be" stroke="#52c41a" stroke-width="1" />
+  <text x="705" y="575" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle">Mini-Stories</text>
+  <text x="705" y="595" font-family="Arial" font-size="10" text-anchor="middle">• Character vignettes</text>
+  <text x="705" y="610" font-family="Arial" font-size="10" text-anchor="middle">• Side quest opportunities</text>
+  <text x="705" y="625" font-family="Arial" font-size="10" text-anchor="middle">• World-building moments</text>
+  
+  <!-- Flow Arrows -->
+  <!-- Onboarding Flow -->
+  <line x1="260" y1="180" x2="280" y2="180" stroke="#1890ff" stroke-width="2" />
+  <polygon points="275,175 280,180 275,185" fill="#1890ff" />
+  
+  <line x1="420" y1="180" x2="440" y2="180" stroke="#1890ff" stroke-width="2" />
+  <polygon points="435,175 440,180 435,185" fill="#1890ff" />
+  
+  <line x1="580" y1="180" x2="600" y2="180" stroke="#1890ff" stroke-width="2" />
+  <polygon points="595,175 600,180 595,185" fill="#1890ff" />
+  
+  <!-- Episode Flow -->
+  <line x1="220" y1="370" x2="240" y2="370" stroke="#fa8c16" stroke-width="2" />
+  <polygon points="235,365 240,370 235,375" fill="#fa8c16" />
+  
+  <line x1="340" y1="370" x2="360" y2="370" stroke="#fa8c16" stroke-width="2" />
+  <polygon points="355,365 360,370 355,375" fill="#fa8c16" />
+  
+  <line x1="410" y1="410" x2="410" y2="430" stroke="#fa8c16" stroke-width="2" />
+  <polygon points="405,425 410,430 415,425" fill="#fa8c16" />
+  
+  <line x1="220" y1="470" x2="240" y2="470" stroke="#fa8c16" stroke-width="2" />
+  <polygon points="235,465 240,470 235,475" fill="#fa8c16" />
+  
+  <line x1="340" y1="470" x2="360" y2="470" stroke="#fa8c16" stroke-width="2" />
+  <polygon points="355,465 360,470 355,475" fill="#fa8c16" />
+  
+  <!-- Between Episodes Flow -->
+  <line x1="270" y1="590" x2="290" y2="590" stroke="#52c41a" stroke-width="2" />
+  <polygon points="285,585 290,590 285,595" fill="#52c41a" />
+  
+  <line x1="440" y1="590" x2="460" y2="590" stroke="#52c41a" stroke-width="2" />
+  <polygon points="455,585 460,590 455,595" fill="#52c41a" />
+  
+  <line x1="610" y1="590" x2="630" y2="590" stroke="#52c41a" stroke-width="2" />
+  <polygon points="625,585 630,590 625,595" fill="#52c41a" />
+  
+  <!-- Phase Transitions -->
+  <path d="M690 210 Q730 210 730 255 Q730 290 450 290" fill="none" stroke="#1890ff" stroke-width="2" stroke-dasharray="5,5" />
+  <polygon points="455,287 450,290 455,293" fill="#1890ff" />
+  
+  <path d="M460 490 Q460 500 460 510" fill="none" stroke="#fa8c16" stroke-width="2" stroke-dasharray="5,5" />
+  <polygon points="455,505 460,510 465,505" fill="#fa8c16" />
+  
+  <path d="M780 590 Q840 590 840 255 Q840 70 780 70" fill="none" stroke="#52c41a" stroke-width="2" stroke-dasharray="5,5" />
+  <text x="850" y="330" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle" transform="rotate(90 850,330)">Next Episode Cycle</text>
+</svg>

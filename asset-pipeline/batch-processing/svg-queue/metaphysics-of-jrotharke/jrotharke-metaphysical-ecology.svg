@@ -1,0 +1,601 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600">
+  <!-- Background -->
+  <rect width="900" height="600" fill="#0A0621" />
+  
+  <!-- Dimensional grid with perspective effect for metaphysical plane -->
+  <g opacity="0.12">
+    <!-- Horizontal grid lines with quantum distortion -->
+    <path d="M150,550 Q450,530 750,550" stroke="#5AC8FA" stroke-width="1">
+      <animate attributeName="d" values="M150,550 Q450,530 750,550;M150,550 Q450,545 750,550;M150,550 Q450,530 750,550" dur="10s" repeatCount="indefinite" />
+    </path>
+    <path d="M125,500 Q450,490 775,500" stroke="#5AC8FA" stroke-width="1">
+      <animate attributeName="d" values="M125,500 Q450,490 775,500;M125,500 Q450,505 775,500;M125,500 Q450,490 775,500" dur="12s" repeatCount="indefinite" />
+    </path>
+    <path d="M100,450 Q450,440 800,450" stroke="#5AC8FA" stroke-width="1">
+      <animate attributeName="d" values="M100,450 Q450,440 800,450;M100,450 Q450,455 800,450;M100,450 Q450,440 800,450" dur="11s" repeatCount="indefinite" />
+    </path>
+    <path d="M75,400 Q450,390 825,400" stroke="#5AC8FA" stroke-width="1">
+      <animate attributeName="d" values="M75,400 Q450,390 825,400;M75,400 Q450,405 825,400;M75,400 Q450,390 825,400" dur="9s" repeatCount="indefinite" />
+    </path>
+    <path d="M65,350 Q450,340 835,350" stroke="#5AC8FA" stroke-width="1">
+      <animate attributeName="d" values="M65,350 Q450,340 835,350;M65,350 Q450,355 835,350;M65,350 Q450,340 835,350" dur="10s" repeatCount="indefinite" />
+    </path>
+    <path d="M55,300 Q450,290 845,300" stroke="#5AC8FA" stroke-width="1">
+      <animate attributeName="d" values="M55,300 Q450,290 845,300;M55,300 Q450,305 845,300;M55,300 Q450,290 845,300" dur="13s" repeatCount="indefinite" />
+    </path>
+    <path d="M45,250 Q450,240 855,250" stroke="#5AC8FA" stroke-width="1">
+      <animate attributeName="d" values="M45,250 Q450,240 855,250;M45,250 Q450,255 855,250;M45,250 Q450,240 855,250" dur="12s" repeatCount="indefinite" />
+    </path>
+    <path d="M35,200 Q450,190 865,200" stroke="#5AC8FA" stroke-width="1">
+      <animate attributeName="d" values="M35,200 Q450,190 865,200;M35,200 Q450,205 865,200;M35,200 Q450,190 865,200" dur="9s" repeatCount="indefinite" />
+    </path>
+    
+    <!-- Vertical grid lines with quantum distortion -->
+    <path d="M150,150 Q160,300 150,550" stroke="#5AC8FA" stroke-width="1">
+      <animate attributeName="d" values="M150,150 Q160,300 150,550;M150,150 Q155,300 150,550;M150,150 Q160,300 150,550" dur="15s" repeatCount="indefinite" />
+    </path>
+    <path d="M225,150 Q235,300 225,550" stroke="#5AC8FA" stroke-width="1">
+      <animate attributeName="d" values="M225,150 Q235,300 225,550;M225,150 Q230,300 225,550;M225,150 Q235,300 225,550" dur="14s" repeatCount="indefinite" />
+    </path>
+    <path d="M300,150 Q310,300 300,550" stroke="#5AC8FA" stroke-width="1">
+      <animate attributeName="d" values="M300,150 Q310,300 300,550;M300,150 Q305,300 300,550;M300,150 Q310,300 300,550" dur="16s" repeatCount="indefinite" />
+    </path>
+    <path d="M375,150 Q385,300 375,550" stroke="#5AC8FA" stroke-width="1">
+      <animate attributeName="d" values="M375,150 Q385,300 375,550;M375,150 Q380,300 375,550;M375,150 Q385,300 375,550" dur="13s" repeatCount="indefinite" />
+    </path>
+    <path d="M450,150 Q460,300 450,550" stroke="#5AC8FA" stroke-width="1">
+      <animate attributeName="d" values="M450,150 Q460,300 450,550;M450,150 Q455,300 450,550;M450,150 Q460,300 450,550" dur="15s" repeatCount="indefinite" />
+    </path>
+    <path d="M525,150 Q535,300 525,550" stroke="#5AC8FA" stroke-width="1">
+      <animate attributeName="d" values="M525,150 Q535,300 525,550;M525,150 Q530,300 525,550;M525,150 Q535,300 525,550" dur="12s" repeatCount="indefinite" />
+    </path>
+    <path d="M600,150 Q610,300 600,550" stroke="#5AC8FA" stroke-width="1">
+      <animate attributeName="d" values="M600,150 Q610,300 600,550;M600,150 Q605,300 600,550;M600,150 Q610,300 600,550" dur="14s" repeatCount="indefinite" />
+    </path>
+    <path d="M675,150 Q685,300 675,550" stroke="#5AC8FA" stroke-width="1">
+      <animate attributeName="d" values="M675,150 Q685,300 675,550;M675,150 Q680,300 675,550;M675,150 Q685,300 675,550" dur="13s" repeatCount="indefinite" />
+    </path>
+    <path d="M750,150 Q760,300 750,550" stroke="#5AC8FA" stroke-width="1">
+      <animate attributeName="d" values="M750,150 Q760,300 750,550;M750,150 Q755,300 750,550;M750,150 Q760,300 750,550" dur="16s" repeatCount="indefinite" />
+    </path>
+  </g>
+  
+  <!-- Title -->
+  <text x="450" y="50" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" font-size="28" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Jrotharke: The Dual Nature of Metaphysical Ecology</text>
+  
+  <!-- Central Energy Nexus - The convergence point of all mystical forces -->
+  <g transform="translate(450, 300)">
+    <!-- Energy Nexus Core - pulsating with energy -->
+    <circle cx="0" cy="0" r="50" fill="#6A3093" opacity="0.7">
+      <animate attributeName="r" values="50;55;50" dur="5s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.7;0.9;0.7" dur="5s" repeatCount="indefinite" />
+    </circle>
+    
+    <!-- Inner energy patterns -->
+    <circle cx="0" cy="0" r="35" fill="#BF4080" opacity="0.6">
+      <animate attributeName="r" values="35;40;35" dur="4s" repeatCount="indefinite" />
+    </circle>
+    
+    <circle cx="0" cy="0" r="20" fill="#5AC8FA" opacity="0.8">
+      <animate attributeName="r" values="20;25;20" dur="3s" repeatCount="indefinite" />
+    </circle>
+    
+    <!-- Energy tendrils connecting to other elements - constantly moving -->
+    <g>
+      <!-- Connection to higher spirits -->
+      <path d="M0,-50 Q0,-120 -100,-150" fill="none" stroke="#5AC8FA" stroke-width="3" opacity="0.6">
+        <animate attributeName="d" values="M0,-50 Q0,-120 -100,-150;M0,-50 Q-20,-130 -100,-150;M0,-50 Q0,-120 -100,-150" dur="10s" repeatCount="indefinite" />
+      </path>
+      
+      <path d="M0,-50 Q0,-120 100,-150" fill="none" stroke="#5AC8FA" stroke-width="3" opacity="0.6">
+        <animate attributeName="d" values="M0,-50 Q0,-120 100,-150;M0,-50 Q20,-130 100,-150;M0,-50 Q0,-120 100,-150" dur="11s" repeatCount="indefinite" />
+      </path>
+      
+      <!-- Connection to elemental spirits -->
+      <path d="M-50,0 Q-150,0 -200,50" fill="none" stroke="#BF4080" stroke-width="3" opacity="0.6">
+        <animate attributeName="d" values="M-50,0 Q-150,0 -200,50;M-50,0 Q-150,20 -200,50;M-50,0 Q-150,0 -200,50" dur="9s" repeatCount="indefinite" />
+      </path>
+      
+      <path d="M50,0 Q150,0 200,50" fill="none" stroke="#BF4080" stroke-width="3" opacity="0.6">
+        <animate attributeName="d" values="M50,0 Q150,0 200,50;M50,0 Q150,20 200,50;M50,0 Q150,0 200,50" dur="8s" repeatCount="indefinite" />
+      </path>
+      
+      <!-- Connection to nature spirits -->
+      <path d="M-35,35 Q-100,100 -175,125" fill="none" stroke="#2D854D" stroke-width="2" opacity="0.6">
+        <animate attributeName="d" values="M-35,35 Q-100,100 -175,125;M-35,35 Q-110,90 -175,125;M-35,35 Q-100,100 -175,125" dur="12s" repeatCount="indefinite" />
+      </path>
+      
+      <path d="M35,35 Q100,100 175,125" fill="none" stroke="#2D854D" stroke-width="2" opacity="0.6">
+        <animate attributeName="d" values="M35,35 Q100,100 175,125;M35,35 Q110,90 175,125;M35,35 Q100,100 175,125" dur="10s" repeatCount="indefinite" />
+      </path>
+      
+      <!-- Connection to human observer -->
+      <path d="M0,50 Q0,120 0,175" fill="none" stroke="#FFFFFF" stroke-width="2" opacity="0.7">
+        <animate attributeName="d" values="M0,50 Q0,120 0,175;M0,50 Q10,130 0,175;M0,50 Q0,120 0,175" dur="6s" repeatCount="indefinite" />
+      </path>
+    </g>
+    
+    <!-- Concept-Matter particles swirling around nexus -->
+    <g>
+      <!-- Rotating quantum pixels representing concept-matter transformation -->
+      <g>
+        <rect x="-5" y="-65" width="10" height="10" fill="#5AC8FA" opacity="0.8">
+          <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="20s" repeatCount="indefinite" />
+          <animate attributeName="opacity" values="0.8;0.4;0.8" dur="5s" repeatCount="indefinite" />
+        </rect>
+        
+        <rect x="60" y="-20" width="8" height="8" fill="#BF4080" opacity="0.8">
+          <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="15s" repeatCount="indefinite" />
+          <animate attributeName="opacity" values="0.8;0.5;0.8" dur="4s" repeatCount="indefinite" />
+        </rect>
+        
+        <rect x="-60" y="30" width="12" height="12" fill="#2D854D" opacity="0.8">
+          <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="25s" repeatCount="indefinite" />
+          <animate attributeName="opacity" values="0.8;0.6;0.8" dur="6s" repeatCount="indefinite" />
+        </rect>
+        
+        <rect x="30" y="55" width="9" height="9" fill="#FFFFFF" opacity="0.6">
+          <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="18s" repeatCount="indefinite" />
+          <animate attributeName="opacity" values="0.6;0.3;0.6" dur="7s" repeatCount="indefinite" />
+        </rect>
+        
+        <rect x="-40" y="-45" width="7" height="7" fill="#6A3093" opacity="0.7">
+          <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="22s" repeatCount="indefinite" />
+          <animate attributeName="opacity" values="0.7;0.4;0.7" dur="5s" repeatCount="indefinite" />
+        </rect>
+      </g>
+    </g>
+  </g>
+  
+  <!-- Higher Spirit Entities - Pure consciousness beings -->
+  <g transform="translate(300, 150)">
+    <!-- Higher spirit form - ethereal, non-material -->
+    <ellipse cx="0" cy="0" rx="70" ry="40" fill="#5AC8FA" opacity="0.2">
+      <animate attributeName="ry" values="40;45;40" dur="8s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.2;0.3;0.2" dur="6s" repeatCount="indefinite" />
+    </ellipse>
+    
+    <!-- Inner thought patterns constantly reforming -->
+    <g>
+      <path d="M-40,-10 Q-20,10 0,-5 Q20,10 40,-10" fill="none" stroke="#5AC8FA" stroke-width="1.5" opacity="0.8">
+        <animate attributeName="d" values="M-40,-10 Q-20,10 0,-5 Q20,10 40,-10;M-40,-5 Q-20,15 0,0 Q20,15 40,-5;M-40,-10 Q-20,10 0,-5 Q20,10 40,-10" dur="10s" repeatCount="indefinite" />
+      </path>
+      
+      <path d="M-35,0 Q-15,15 0,5 Q15,15 35,0" fill="none" stroke="#5AC8FA" stroke-width="1.5" opacity="0.8">
+        <animate attributeName="d" values="M-35,0 Q-15,15 0,5 Q15,15 35,0;M-35,5 Q-15,20 0,10 Q15,20 35,5;M-35,0 Q-15,15 0,5 Q15,15 35,0" dur="7s" repeatCount="indefinite" />
+      </path>
+      
+      <path d="M-30,10 Q-10,20 0,15 Q10,20 30,10" fill="none" stroke="#5AC8FA" stroke-width="1.5" opacity="0.8">
+        <animate attributeName="d" values="M-30,10 Q-10,20 0,15 Q10,20 30,10;M-30,15 Q-10,25 0,20 Q10,25 30,15;M-30,10 Q-10,20 0,15 Q10,20 30,10" dur="9s" repeatCount="indefinite" />
+      </path>
+    </g>
+    
+    <!-- Conceptual symbols flowing within spirit -->
+    <g opacity="0.7">
+      <text x="-25" y="5" font-family="'SF Pro Display', sans-serif" font-size="8" fill="#FFFFFF">wisdom</text>
+      <text x="5" y="-15" font-family="'SF Pro Display', sans-serif" font-size="9" fill="#FFFFFF">truth</text>
+      <text x="15" y="10" font-family="'SF Pro Display', sans-serif" font-size="7" fill="#FFFFFF">creation</text>
+      
+      <!-- Animate text opacity for ethereal effect -->
+      <animate attributeName="opacity" values="0.7;0.3;0.7" dur="8s" repeatCount="indefinite" />
+    </g>
+  </g>
+  
+  <g transform="translate(600, 150)">
+    <!-- Another higher spirit form with different pattern -->
+    <ellipse cx="0" cy="0" rx="60" ry="45" fill="#6A3093" opacity="0.2">
+      <animate attributeName="rx" values="60;65;60" dur="10s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.2;0.3;0.2" dur="7s" repeatCount="indefinite" />
+    </ellipse>
+    
+    <!-- Geometric thought patterns -->
+    <g>
+      <path d="M-30,-20 L0,20 L30,-20 Z" fill="none" stroke="#6A3093" stroke-width="1.5" opacity="0.8">
+        <animate attributeName="d" values="M-30,-20 L0,20 L30,-20 Z;M-35,-15 L0,25 L35,-15 Z;M-30,-20 L0,20 L30,-20 Z" dur="12s" repeatCount="indefinite" />
+      </path>
+      
+      <circle cx="0" cy="0" r="15" fill="none" stroke="#6A3093" stroke-width="1.5" opacity="0.7">
+        <animate attributeName="r" values="15;18;15" dur="9s" repeatCount="indefinite" />
+      </circle>
+      
+      <path d="M-25,10 L-15,-15 L15,-15 L25,10 Z" fill="none" stroke="#6A3093" stroke-width="1.5" opacity="0.8">
+        <animate attributeName="d" values="M-25,10 L-15,-15 L15,-15 L25,10 Z;M-30,15 L-20,-10 L20,-10 L30,15 Z;M-25,10 L-15,-15 L15,-15 L25,10 Z" dur="15s" repeatCount="indefinite" />
+      </path>
+    </g>
+    
+    <!-- Conceptual symbols -->
+    <g opacity="0.7">
+      <text x="-20" y="0" font-family="'SF Pro Display', sans-serif" font-size="8" fill="#FFFFFF">eternity</text>
+      <text x="-5" y="-15" font-family="'SF Pro Display', sans-serif" font-size="7" fill="#FFFFFF">memory</text>
+      <text x="5" y="15" font-family="'SF Pro Display', sans-serif" font-size="9" fill="#FFFFFF">order</text>
+      
+      <!-- Animate text opacity -->
+      <animate attributeName="opacity" values="0.7;0.4;0.7" dur="10s" repeatCount="indefinite" />
+    </g>
+  </g>
+  
+  <!-- Elemental Spirits - Manifestations of primal forces -->
+  <g transform="translate(250, 350)">
+    <!-- Water elemental spirit - fluid, ever-changing -->
+    <g>
+      <!-- Base form -->
+      <path d="M0,0 Q-30,15 -40,0 Q-30,-20 0,-25 Q30,-20 40,0 Q30,15 0,0 Z" fill="#5AC8FA" opacity="0.4">
+        <animate attributeName="d" values="M0,0 Q-30,15 -40,0 Q-30,-20 0,-25 Q30,-20 40,0 Q30,15 0,0 Z;M0,0 Q-35,10 -45,0 Q-35,-25 0,-30 Q35,-25 45,0 Q35,10 0,0 Z;M0,0 Q-30,15 -40,0 Q-30,-20 0,-25 Q30,-20 40,0 Q30,15 0,0 Z" dur="8s" repeatCount="indefinite" />
+      </path>
+      
+      <!-- Inner currents -->
+      <path d="M-25,-5 Q-10,10 0,0 Q10,10 25,-5" fill="none" stroke="#5AC8FA" stroke-width="2" opacity="0.6">
+        <animate attributeName="d" values="M-25,-5 Q-10,10 0,0 Q10,10 25,-5;M-25,0 Q-10,15 0,5 Q10,15 25,0;M-25,-5 Q-10,10 0,0 Q10,10 25,-5" dur="5s" repeatCount="indefinite" />
+      </path>
+      
+      <path d="M-20,5 Q-5,15 0,10 Q5,15 20,5" fill="none" stroke="#5AC8FA" stroke-width="2" opacity="0.6">
+        <animate attributeName="d" values="M-20,5 Q-5,15 0,10 Q5,15 20,5;M-20,10 Q-5,20 0,15 Q5,20 20,10;M-20,5 Q-5,15 0,10 Q5,15 20,5" dur="6s" repeatCount="indefinite" />
+      </path>
+    </g>
+    
+    <!-- Water droplets occasionally emerging -->
+    <g>
+      <circle cx="-30" cy="-10" r="3" fill="#5AC8FA" opacity="0.7">
+        <animate attributeName="cy" values="-10;0;-10" dur="4s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.7;0.3;0.7" dur="4s" repeatCount="indefinite" />
+      </circle>
+      
+      <circle cx="25" cy="0" r="2" fill="#5AC8FA" opacity="0.7">
+        <animate attributeName="cy" values="0;10;0" dur="5s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.7;0.4;0.7" dur="5s" repeatCount="indefinite" />
+      </circle>
+      
+      <circle cx="0" cy="-20" r="2.5" fill="#5AC8FA" opacity="0.7">
+        <animate attributeName="cy" values="-20;-10;-20" dur="6s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.7;0.5;0.7" dur="6s" repeatCount="indefinite" />
+      </circle>
+    </g>
+    
+    <!-- Physical-conceptual hybrid text -->
+    <text x="0" y="40" font-family="'SF Pro Display', sans-serif" font-size="14" fill="#5AC8FA" text-anchor="middle">Water Elemental</text>
+    <text x="0" y="60" font-family="'SF Pro Display', sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle" opacity="0.7">Embodies: Fluidity, Emotion, Change</text>
+  </g>
+  
+  <g transform="translate(650, 350)">
+    <!-- Fire elemental spirit - energetic, chaotic -->
+    <g>
+      <!-- Base form -->
+      <path d="M0,-30 Q-10,-15 -15,0 Q-10,15 0,30 Q10,15 15,0 Q10,-15 0,-30 Z" fill="#FF4500" opacity="0.3">
+        <animate attributeName="d" values="M0,-30 Q-10,-15 -15,0 Q-10,15 0,30 Q10,15 15,0 Q10,-15 0,-30 Z;M0,-35 Q-15,-20 -20,0 Q-15,20 0,35 Q15,20 20,0 Q15,-20 0,-35 Z;M0,-30 Q-10,-15 -15,0 Q-10,15 0,30 Q10,15 15,0 Q10,-15 0,-30 Z" dur="4s" repeatCount="indefinite" />
+      </path>
+      
+      <!-- Flame tendrils -->
+      <path d="M0,-25 Q-5,-15 -10,0 Q-5,10 0,20 Q5,10 10,0 Q5,-15 0,-25 Z" fill="#FF4500" opacity="0.5">
+        <animate attributeName="d" values="M0,-25 Q-5,-15 -10,0 Q-5,10 0,20 Q5,10 10,0 Q5,-15 0,-25 Z;M0,-30 Q-8,-20 -12,0 Q-8,15 0,25 Q8,15 12,0 Q8,-20 0,-30 Z;M0,-25 Q-5,-15 -10,0 Q-5,10 0,20 Q5,10 10,0 Q5,-15 0,-25 Z" dur="3s" repeatCount="indefinite" />
+      </path>
+      
+      <path d="M0,-20 Q-3,-10 -5,0 Q-3,5 0,10 Q3,5 5,0 Q3,-10 0,-20 Z" fill="#FFA500" opacity="0.7">
+        <animate attributeName="d" values="M0,-20 Q-3,-10 -5,0 Q-3,5 0,10 Q3,5 5,0 Q3,-10 0,-20 Z;M0,-22 Q-5,-12 -7,0 Q-5,7 0,12 Q5,7 7,0 Q5,-12 0,-22 Z;M0,-20 Q-3,-10 -5,0 Q-3,5 0,10 Q3,5 5,0 Q3,-10 0,-20 Z" dur="2s" repeatCount="indefinite" />
+      </path>
+      
+      <path d="M0,-15 Q-2,-7 -3,0 Q-2,3 0,5 Q2,3 3,0 Q2,-7 0,-15 Z" fill="#FFFF00" opacity="0.9">
+        <animate attributeName="d" values="M0,-15 Q-2,-7 -3,0 Q-2,3 0,5 Q2,3 3,0 Q2,-7 0,-15 Z;M0,-17 Q-3,-9 -4,0 Q-3,4 0,7 Q3,4 4,0 Q3,-9 0,-17 Z;M0,-15 Q-2,-7 -3,0 Q-2,3 0,5 Q2,3 3,0 Q2,-7 0,-15 Z" dur="1.5s" repeatCount="indefinite" />
+      </path>
+    </g>
+    
+    <!-- Spark particles -->
+    <g>
+      <circle cx="-12" cy="-20" r="1.5" fill="#FFFF00" opacity="0.9">
+        <animate attributeName="cy" values="-20;-30;-20" dur="2s" repeatCount="indefinite" />
+        <animate attributeName="cx" values="-12;-15;-12" dur="2s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.9;0.3;0.9" dur="2s" repeatCount="indefinite" />
+      </circle>
+      
+      <circle cx="10" cy="-25" r="1" fill="#FFFF00" opacity="0.9">
+        <animate attributeName="cy" values="-25;-35;-25" dur="1.5s" repeatCount="indefinite" />
+        <animate attributeName="cx" values="10;13;10" dur="1.5s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.9;0.4;0.9" dur="1.5s" repeatCount="indefinite" />
+      </circle>
+      
+      <circle cx="0" cy="-35" r="1.2" fill="#FFFF00" opacity="0.9">
+        <animate attributeName="cy" values="-35;-45;-35" dur="3s" repeatCount="indefinite" />
+        <animate attributeName="cx" values="0;-3;0" dur="3s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.9;0.5;0.9" dur="3s" repeatCount="indefinite" />
+      </circle>
+      
+      <circle cx="-8" cy="-10" r="0.8" fill="#FFFF00" opacity="0.9">
+        <animate attributeName="cy" values="-10;-20;-10" dur="2.5s" repeatCount="indefinite" />
+        <animate attributeName="cx" values="-8;-12;-8" dur="2.5s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.9;0.3;0.9" dur="2.5s" repeatCount="indefinite" />
+      </circle>
+    </g>
+    
+    <!-- Physical-conceptual hybrid text -->
+    <text x="0" y="40" font-family="'SF Pro Display', sans-serif" font-size="14" fill="#FF4500" text-anchor="middle">Fire Elemental</text>
+    <text x="0" y="60" font-family="'SF Pro Display', sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle" opacity="0.7">Embodies: Passion, Transformation, Will</text>
+  </g>
+  
+  <!-- Lesser Nature Spirits - Scattered throughout the ecosystem -->
+  <g>
+    <!-- Forest/Plant spirits -->
+    <g transform="translate(200, 450)">
+      <!-- Plant-spirit hybrid form -->
+      <path d="M0,-20 C-5,-15 -10,-15 -8,-10 C-15,-5 -15,0 -10,0 C-15,5 -15,10 -8,15 L0,30 L8,15 C15,10 15,5 10,0 C15,0 15,-5 8,-10 C10,-15 5,-15 0,-20 Z" fill="#2D854D" opacity="0.6">
+        <animate attributeName="d" values="M0,-20 C-5,-15 -10,-15 -8,-10 C-15,-5 -15,0 -10,0 C-15,5 -15,10 -8,15 L0,30 L8,15 C15,10 15,5 10,0 C15,0 15,-5 8,-10 C10,-15 5,-15 0,-20 Z;M0,-25 C-6,-18 -12,-18 -10,-12 C-18,-6 -18,0 -12,0 C-18,6 -18,12 -10,18 L0,35 L10,18 C18,12 18,6 12,0 C18,0 18,-6 10,-12 C12,-18 6,-18 0,-25 Z;M0,-20 C-5,-15 -10,-15 -8,-10 C-15,-5 -15,0 -10,0 C-15,5 -15,10 -8,15 L0,30 L8,15 C15,10 15,5 10,0 C15,0 15,-5 8,-10 C10,-15 5,-15 0,-20 Z" dur="20s" repeatCount="indefinite" />
+      </path>
+      
+      <!-- Thought patterns affecting physical form -->
+      <path d="M-8,5 C-5,7 0,7 5,5" fill="none" stroke="#FFFFFF" stroke-width="0.8" opacity="0.5">
+        <animate attributeName="d" values="M-8,5 C-5,7 0,7 5,5;M-9,3 C-5,5 0,5 6,3;M-8,5 C-5,7 0,7 5,5" dur="15s" repeatCount="indefinite" />
+      </path>
+      
+      <!-- Conceptual influence visualization -->
+      <text x="0" y="-5" font-family="'SF Pro Display', sans-serif" font-size="6" fill="#FFFFFF" text-anchor="middle" opacity="0.7">growth</text>
+      <text x="0" y="5" font-family="'SF Pro Display', sans-serif" font-size="5" fill="#FFFFFF" text-anchor="middle" opacity="0.6">patience</text>
+      
+      <!-- Physical-conceptual energy circulation -->
+      <circle cx="0" cy="8" r="3" fill="none" stroke="#2D854D" stroke-width="0.5" opacity="0.7">
+        <animate attributeName="r" values="3;4;3" dur="10s" repeatCount="indefinite" />
+      </circle>
+    </g>
+    
+    <!-- Stone/mineral spirits -->
+    <g transform="translate(300, 480)">
+      <!-- Stone-spirit hybrid form -->
+      <path d="M-10,-10 L10,-10 L15,0 L5,15 L-5,15 L-15,0 Z" fill="#708090" opacity="0.6">
+        <animate attributeName="d" values="M-10,-10 L10,-10 L15,0 L5,15 L-5,15 L-15,0 Z;M-12,-12 L12,-12 L18,0 L6,18 L-6,18 L-18,0 Z;M-10,-10 L10,-10 L15,0 L5,15 L-5,15 L-15,0 Z" dur="30s" repeatCount="indefinite" />
+      </path>
+      
+      <!-- Conceptual influence visualization -->
+      <text x="0" y="5" font-family="'SF Pro Display', sans-serif" font-size="5" fill="#FFFFFF" text-anchor="middle" opacity="0.7">endurance</text>
+      
+      <!-- Physical-conceptual energy -->
+      <circle cx="0" cy="0" r="5" fill="none" stroke="#708090" stroke-width="0.5" opacity="0.5">
+        <animate attributeName="opacity" values="0.5;0.7;0.5" dur="20s" repeatCount="indefinite" />
+      </circle>
+    </g>
+    
+    <!-- Wind/air spirits -->
+    <g transform="translate(700, 450)">
+      <!-- Air-spirit hybrid form - very ethereal -->
+      <path d="M0,0 Q-20,-10 -10,-20 Q0,-25 10,-20 Q20,-10 0,0" fill="#E6E6FA" opacity="0.2">
+        <animate attributeName="d" values="M0,0 Q-20,-10 -10,-20 Q0,-25 10,-20 Q20,-10 0,0;M0,0 Q-15,-15 -5,-25 Q0,-30 5,-25 Q15,-15 0,0;M0,0 Q-20,-10 -10,-20 Q0,-25 10,-20 Q20,-10 0,0" dur="5s" repeatCount="indefinite" />
+      </path>
+      
+      <path d="M-15,0 Q-10,10 0,15 Q10,10 15,0" fill="#E6E6FA" opacity="0.2">
+        <animate attributeName="d" values="M-15,0 Q-10,10 0,15 Q10,10 15,0;M-20,0 Q-10,15 0,20 Q10,15 20,0;M-15,0 Q-10,10 0,15 Q10,10 15,0" dur="4s" repeatCount="indefinite" />
+      </path>
+      
+      <!-- Air currents -->
+      <path d="M-20,-5 Q-10,0 0,-5 Q10,0 20,-5" fill="none" stroke="#E6E6FA" stroke-width="1" opacity="0.4">
+        <animate attributeName="d" values="M-20,-5 Q-10,0 0,-5 Q10,0 20,-5;M-20,0 Q-10,5 0,0 Q10,5 20,0;M-20,-5 Q-10,0 0,-5 Q10,0 20,-5" dur="3s" repeatCount="indefinite" />
+      </path>
+      
+      <path d="M-15,5 Q-5,10 0,5 Q5,10 15,5" fill="none" stroke="#E6E6FA" stroke-width="1" opacity="0.4">
+        <animate attributeName="d" values="M-15,5 Q-5,10 0,5 Q5,10 15,5;M-15,10 Q-5,15 0,10 Q5,15 15,10;M-15,5 Q-5,10 0,5 Q5,10 15,5" dur="2.5s" repeatCount="indefinite" />
+      </path>
+      
+      <!-- Conceptual influence visualization -->
+      <text x="0" y="30" font-family="'SF Pro Display', sans-serif" font-size="5" fill="#FFFFFF" text-anchor="middle" opacity="0.7">freedom</text>
+      <text x="0" y="40" font-family="'SF Pro Display', sans-serif" font-size="5" fill="#FFFFFF" text-anchor="middle" opacity="0.7">movement</text>
+    </g>
+    
+    <!-- Tiny spirits scattered throughout -->
+    <g>
+      <!-- Tiny light spirits -->
+      <circle cx="150" cy="380" r="2" fill="#FFFF00" opacity="0.6">
+        <animate attributeName="opacity" values="0.6;0.9;0.6" dur="2s" repeatCount="indefinite" />
+      </circle>
+      
+      <circle cx="400" cy="400" r="1.5" fill="#5AC8FA" opacity="0.7">
+        <animate attributeName="opacity" values="0.7;0.3;0.7" dur="3s" repeatCount="indefinite" />
+      </circle>
+      
+      <circle cx="500" cy="430" r="2" fill="#2D854D" opacity="0.5">
+        <animate attributeName="opacity" values="0.5;0.8;0.5" dur="4s" repeatCount="indefinite" />
+      </circle>
+      
+      <circle cx="600" cy="480" r="1.8" fill="#BF4080" opacity="0.6">
+        <animate attributeName="opacity" values="0.6;0.2;0.6" dur="3.5s" repeatCount="indefinite" />
+      </circle>
+      
+      <circle cx="750" cy="400" r="1.7" fill="#E6E6FA" opacity="0.7">
+        <animate attributeName="opacity" values="0.7;0.4;0.7" dur="2.5s" repeatCount="indefinite" />
+      </circle>
+      
+      <circle cx="200" cy="520" r="1.5" fill="#6A3093" opacity="0.6">
+        <animate attributeName="opacity" values="0.6;0.9;0.6" dur="3s" repeatCount="indefinite" />
+      </circle>
+      
+      <circle cx="350" cy="470" r="1.2" fill="#FF4500" opacity="0.5">
+        <animate attributeName="opacity" values="0.5;0.8;0.5" dur="2s" repeatCount="indefinite" />
+      </circle>
+    </g>
+  </g>
+  
+  <!-- Human Observer interfacing with spiritual ecology -->
+  <g transform="translate(450, 475)">
+    <!-- Human figure -->
+    <g>
+      <!-- Physical body -->
+      <path d="M0,-25 C-5,-30 -15,-30 -10,-25 S0,-30 10,-25 S5,-30 0,-25" fill="#708090" /> <!-- Head -->
+      <rect x="-10" y="-25" width="20" height="30" rx="5" fill="#708090" /> <!-- Torso -->
+      <rect x="-15" y="-15" width="6" height="20" rx="3" fill="#708090" /> <!-- Left arm -->
+      <rect x="9" y="-15" width="6" height="20" rx="3" fill="#708090" /> <!-- Right arm -->
+      <rect x="-8" y="5" width="6" height="25" rx="3" fill="#708090" /> <!-- Left leg -->
+      <rect x="2" y="5" width="6" height="25" rx="3" fill="#708090" /> <!-- Right leg -->
+    </g>
+    
+    <!-- Consciousness emanation -->
+    <g>
+      <!-- Thought patterns extending into metaphysical realm -->
+      <path d="M0,-30 Q-10,-40 0,-50 Q10,-40 0,-30" fill="none" stroke="#FFFFFF" stroke-width="1" opacity="0.6">
+        <animate attributeName="d" values="M0,-30 Q-10,-40 0,-50 Q10,-40 0,-30;M0,-30 Q-15,-45 0,-55 Q15,-45 0,-30;M0,-30 Q-10,-40 0,-50 Q10,-40 0,-30" dur="10s" repeatCount="indefinite" />
+      </path>
+      
+      <!-- Consciousness orb -->
+      <circle cx="0" cy="-50" r="8" fill="#FFFFFF" opacity="0.3">
+        <animate attributeName="r" values="8;10;8" dur="8s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.3;0.5;0.3" dur="8s" repeatCount="indefinite" />
+      </circle>
+      
+      <!-- Connection to energy nexus -->
+      <path d="M0,-58 Q0,-100 0,-125" fill="none" stroke="#FFFFFF" stroke-width="1" opacity="0.4">
+        <animate attributeName="d" values="M0,-58 Q0,-100 0,-125;M0,-58 Q-10,-100 0,-125;M0,-58 Q0,-100 0,-125" dur="15s" repeatCount="indefinite" />
+      </path>
+      
+      <!-- Conceptual text in consciousness -->
+      <text x="0" y="-48" font-family="'SF Pro Display', sans-serif" font-size="6" fill="#FFFFFF" text-anchor="middle" opacity="0.8">perception</text>
+    </g>
+    
+    <!-- Grounding connection to physical world -->
+    <path d="M-8,30 L-20,40 M2,30 L15,40" stroke="#2D854D" stroke-width="1" opacity="0.6" />
+    
+    <!-- Explanatory text -->
+    <text x="0" y="50" font-family="'SF Pro Display', sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle">Human Observer</text>
+    <text x="0" y="65" font-family="'SF Pro Display', sans-serif" font-size="9" fill="#FFFFFF" text-anchor="middle" opacity="0.7">Interfaces through Consciousness</text>
+  </g>
+  
+  <!-- Concept-Matter Transformation Elements -->
+  <g transform="translate(450, 120)">
+    <!-- Section title -->
+    <text x="0" y="0" font-family="'SF Pro Display', sans-serif" font-size="18" fill="#FFFFFF" text-anchor="middle">Concept-Matter Transformation</text>
+    
+    <!-- Transformation visualization -->
+    <g transform="translate(0, 25)">
+      <!-- Transformation cycle -->
+      <path d="M-60,0 A60,20 0 0 1 60,0 A60,20 0 0 1 -60,0 Z" fill="none" stroke="#BF4080" stroke-width="2" opacity="0.6">
+        <animate attributeName="d" values="M-60,0 A60,20 0 0 1 60,0 A60,20 0 0 1 -60,0 Z;M-60,0 A60,25 0 0 1 60,0 A60,25 0 0 1 -60,0 Z;M-60,0 A60,20 0 0 1 60,0 A60,20 0 0 1 -60,0 Z" dur="15s" repeatCount="indefinite" />
+      </path>
+      
+      <!-- Concept side -->
+      <text x="-45" y="0" font-family="'SF Pro Display', sans-serif" font-size="12" fill="#5AC8FA" text-anchor="middle">Thought</text>
+      
+      <!-- Matter side -->
+      <text x="45" y="0" font-family="'SF Pro Display', sans-serif" font-size="12" fill="#2D854D" text-anchor="middle">Form</text>
+      
+      <!-- Transformation particles -->
+      <g>
+        <rect x="-20" y="-3" width="6" height="6" fill="#BF4080" opacity="0.8">
+          <animateTransform attributeName="transform" type="translate" values="0,0; 40,0; 0,0" dur="8s" repeatCount="indefinite" />
+          <animate attributeName="opacity" values="0.8;0.4;0.8" dur="8s" repeatCount="indefinite" />
+        </rect>
+        
+        <rect x="14" y="-3" width="6" height="6" fill="#5AC8FA" opacity="0.8">
+          <animateTransform attributeName="transform" type="translate" values="0,0; -40,0; 0,0" dur="10s" repeatCount="indefinite" />
+          <animate attributeName="opacity" values="0.8;0.4;0.8" dur="10s" repeatCount="indefinite" />
+        </rect>
+      </g>
+    </g>
+  </g>
+  
+  <!-- Plants That Change Based on Thoughts -->
+  <g transform="translate(200, 250)">
+    <!-- Thought-responsive plant visualization -->
+    <g>
+      <!-- Plant base form -->
+      <path d="M0,0 L0,-20 C-10,-25 -15,-35 -10,-45 C-5,-50 0,-45 0,-40 C0,-45 5,-50 10,-45 C15,-35 10,-25 0,-20" fill="#2D854D" opacity="0.7">
+        <animate attributeName="d" values="M0,0 L0,-20 C-10,-25 -15,-35 -10,-45 C-5,-50 0,-45 0,-40 C0,-45 5,-50 10,-45 C15,-35 10,-25 0,-20;M0,0 L0,-20 C-15,-30 -20,-40 -15,-50 C-10,-55 -5,-50 0,-45 C5,-50 10,-55 15,-50 C20,-40 15,-30 0,-20;M0,0 L0,-20 C-10,-25 -15,-35 -10,-45 C-5,-50 0,-45 0,-40 C0,-45 5,-50 10,-45 C15,-35 10,-25 0,-20" dur="20s" repeatCount="indefinite" />
+      </path>
+      
+      <!-- Thought energy affecting plant -->
+      <path d="M-15,-35 Q-5,-30 0,-35 Q5,-30 15,-35" fill="none" stroke="#5AC8FA" stroke-width="1.5" opacity="0.7">
+        <animate attributeName="d" values="M-15,-35 Q-5,-30 0,-35 Q5,-30 15,-35;M-20,-40 Q-7,-35 0,-40 Q7,-35 20,-40;M-15,-35 Q-5,-30 0,-35 Q5,-30 15,-35" dur="8s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.7;0.3;0.7" dur="8s" repeatCount="indefinite" />
+      </path>
+      
+      <!-- Plant physical transformation -->
+      <g>
+        <!-- Flowers that appear with positive thoughts -->
+        <circle cx="-12" cy="-45" r="3" fill="#FF69B4" opacity="0.8">
+          <animate attributeName="opacity" values="0.8;0.2;0.8" dur="12s" repeatCount="indefinite" />
+          <animate attributeName="r" values="3;0;3" dur="12s" repeatCount="indefinite" />
+        </circle>
+        
+        <circle cx="12" cy="-45" r="3" fill="#FF69B4" opacity="0.8">
+          <animate attributeName="opacity" values="0.8;0.2;0.8" dur="12s" repeatCount="indefinite" />
+          <animate attributeName="r" values="3;0;3" dur="12s" repeatCount="indefinite" />
+        </circle>
+        
+        <circle cx="0" cy="-50" r="4" fill="#FF69B4" opacity="0.8">
+          <animate attributeName="opacity" values="0.8;0.1;0.8" dur="12s" repeatCount="indefinite" />
+          <animate attributeName="r" values="4;1;4" dur="12s" repeatCount="indefinite" />
+        </circle>
+      </g>
+    </g>
+    
+    <!-- Explanatory text -->
+    <text x="0" y="15" font-family="'SF Pro Display', sans-serif" font-size="12" fill="#2D854D" text-anchor="middle">Thought-Responsive Flora</text>
+    <text x="0" y="30" font-family="'SF Pro Display', sans-serif" font-size="9" fill="#FFFFFF" text-anchor="middle" opacity="0.7">Blossoms with Positive Thought</text>
+    <text x="0" y="42" font-family="'SF Pro Display', sans-serif" font-size="9" fill="#FFFFFF" text-anchor="middle" opacity="0.7">Withers with Negative Thought</text>
+  </g>
+  
+  <!-- Conceptual Hybrid Creature -->
+  <g transform="translate(700, 250)">
+    <!-- Creature that exists partially in material form and partially as concept -->
+    <g>
+      <!-- Physical body portion - semi-transparent -->
+      <path d="M-20,20 Q-15,10 -20,0 Q-15,-10 -5,-15 Q5,-10 10,0 Q15,10 20,20 Z" fill="#6A3093" opacity="0.4">
+        <animate attributeName="opacity" values="0.4;0.6;0.4" dur="10s" repeatCount="indefinite" />
+      </path>
+      
+      <!-- Conceptual portion - ethereal, constantly changing -->
+      <path d="M-15,-15 Q-5,-25 5,-25 Q15,-15 10,-5 Q15,5 5,15 Q-5,5 -15,-15 Z" fill="#5AC8FA" opacity="0.3">
+        <animate attributeName="d" values="M-15,-15 Q-5,-25 5,-25 Q15,-15 10,-5 Q15,5 5,15 Q-5,5 -15,-15 Z;M-10,-20 Q0,-30 10,-30 Q20,-20 15,-10 Q20,0 10,10 Q0,0 -10,-20 Z;M-15,-15 Q-5,-25 5,-25 Q15,-15 10,-5 Q15,5 5,15 Q-5,5 -15,-15 Z" dur="15s" repeatCount="indefinite" />
+      </path>
+      
+      <!-- Connecting energy between forms -->
+      <path d="M-5,-15 L5,15 M5,-15 L-5,15" stroke="#BF4080" stroke-width="1.5" opacity="0.6">
+        <animate attributeName="opacity" values="0.6;0.3;0.6" dur="8s" repeatCount="indefinite" />
+      </path>
+      
+      <!-- Concept text flowing through creature -->
+      <g opacity="0.8">
+        <text x="0" y="-10" font-family="'SF Pro Display', sans-serif" font-size="7" fill="#FFFFFF" text-anchor="middle">courage</text>
+        <text x="0" y="10" font-family="'SF Pro Display', sans-serif" font-size="7" fill="#FFFFFF" text-anchor="middle">curiosity</text>
+        
+        <animate attributeName="opacity" values="0.8;0.4;0.8" dur="10s" repeatCount="indefinite" />
+      </g>
+      
+      <!-- Energy wisps -->
+      <path d="M-20,0 Q-15,-5 -10,0 Q-5,5 0,0 Q5,-5 10,0 Q15,5 20,0" fill="none" stroke="#5AC8FA" stroke-width="1" opacity="0.5">
+        <animate attributeName="d" values="M-20,0 Q-15,-5 -10,0 Q-5,5 0,0 Q5,-5 10,0 Q15,5 20,0;M-20,5 Q-15,0 -10,5 Q-5,10 0,5 Q5,0 10,5 Q15,10 20,5;M-20,0 Q-15,-5 -10,0 Q-5,5 0,0 Q5,-5 10,0 Q15,5 20,0" dur="12s" repeatCount="indefinite" />
+      </path>
+    </g>
+    
+    <!-- Explanatory text -->
+    <text x="0" y="40" font-family="'SF Pro Display', sans-serif" font-size="12" fill="#6A3093" text-anchor="middle">Concept-Matter Hybrid</text>
+    <text x="0" y="55" font-family="'SF Pro Display', sans-serif" font-size="9" fill="#FFFFFF" text-anchor="middle" opacity="0.7">Exists in Both Realms Simultaneously</text>
+  </g>
+  
+  <!-- M4 Development Toolkit Benefits -->
+  <g transform="translate(450, 570)">
+    <rect x="-410" y="-30" width="820" height="50" rx="8" fill="#131A36" opacity="0.9" />
+    
+    <text x="0" y="-10" font-family="'SF Pro Display', sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">M4-Optimized Metaphysical Ecosystem Simulation</text>
+    
+    <!-- 4-column layout for benefits -->
+    <g transform="translate(-305, 15)">
+      <rect x="-15" y="-7" width="8" height="8" fill="#5AC8FA" />
+      <rect x="-7" y="-7" width="8" height="8" fill="#6A3093" />
+      <text x="0" y="0" font-family="'SF Pro Text', sans-serif" font-size="12" fill="#FFFFFF" text-anchor="start">Neural Engine Powers</text>
+      <text x="0" y="15" font-family="'SF Pro Text', sans-serif" font-size="10" fill="#FFFFFF" text-anchor="start">Concept-Matter Translation</text>
+    </g>
+    
+    <g transform="translate(-105, 15)">
+      <rect x="-15" y="-7" width="8" height="8" fill="#5AC8FA" />
+      <rect x="-7" y="-7" width="8" height="8" fill="#6A3093" />
+      <text x="0" y="0" font-family="'SF Pro Text', sans-serif" font-size="12" fill="#FFFFFF" text-anchor="start">Procedural Generation</text>
+      <text x="0" y="15" font-family="'SF Pro Text', sans-serif" font-size="10" fill="#FFFFFF" text-anchor="start">of Metaphysical Flora</text>
+    </g>
+    
+    <g transform="translate(105, 15)">
+      <rect x="-15" y="-7" width="8" height="8" fill="#5AC8FA" />
+      <rect x="-7" y="-7" width="8" height="8" fill="#6A3093" />
+      <text x="0" y="0" font-family="'SF Pro Text', sans-serif" font-size="12" fill="#FFFFFF" text-anchor="start">60-90 FPS Rendering</text>
+      <text x="0" y="15" font-family="'SF Pro Text', sans-serif" font-size="10" fill="#FFFFFF" text-anchor="start">of Spiritual Entities</text>
+    </g>
+    
+    <g transform="translate(305, 15)">
+      <rect x="-15" y="-7" width="8" height="8" fill="#5AC8FA" />
+      <rect x="-7" y="-7" width="8" height="8" fill="#6A3093" />
+      <text x="0" y="0" font-family="'SF Pro Text', sans-serif" font-size="12" fill="#FFFFFF" text-anchor="start">Thought-Based Physics</text>
+      <text x="0" y="15" font-family="'SF Pro Text', sans-serif" font-size="10" fill="#FFFFFF" text-anchor="start">for Mental Interactions</text>
+    </g>
+  </g>
+</svg>

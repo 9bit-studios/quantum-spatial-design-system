@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <!-- 
+    Quantum-Spatial Animation Definitions
+    Core Animation Presets
+    
+    This file contains all animation definitions for the Quantum-Spatial Design System.
+    Include this in your SVG components by referencing with <use> elements.
+  -->
+  
+  <defs>
+    <!-- ==================== CORE ANIMATIONS ==================== -->
+    
+    <!-- Pulse Animation -->
+    <animate id="pulse-animation" attributeName="opacity" values="1;0.7;1" dur="2s" repeatCount="indefinite" />
+    
+    <!-- M4-Optimized Pulse Animation (Faster) -->
+    <animate id="m4-pulse-animation" attributeName="opacity" values="1;0.8;1" dur="1.5s" repeatCount="indefinite" />
+    
+    <!-- Rotation Animation -->
+    <animateTransform id="rotate-animation" attributeName="transform" attributeType="XML" type="rotate" from="0 12 12" to="360 12 12" dur="8s" repeatCount="indefinite" />
+    
+    <!-- Subtle Scale Animation -->
+    <animate id="scale-animation" attributeName="transform" attributeType="XML" type="scale" values="1;1.05;1" dur="3s" repeatCount="indefinite" />
+    
+    <!-- Color Transition (Heritage → Transitional) -->
+    <animate id="heritage-to-transitional" attributeName="fill" from="url(#heritage-gradient-primary)" to="url(#transitional-gradient-primary)" dur="1.5s" fill="freeze" begin="indefinite" />
+    
+    <!-- Color Transition (Transitional → Quantum) -->
+    <animate id="transitional-to-quantum" attributeName="fill" from="url(#transitional-gradient-primary)" to="url(#quantum-gradient-primary)" dur="1.5s" fill="freeze" begin="indefinite" />
+    
+    <!-- Color Transition (Heritage → Quantum) -->
+    <animate id="heritage-to-quantum" attributeName="fill" from="url(#heritage-gradient-primary)" to="url(#quantum-gradient-primary)" dur="2s" fill="freeze" begin="indefinite" />
+    
+    <!-- ==================== STATE TRANSITION ANIMATIONS ==================== -->
+    
+    <!-- Material To Energy State (Fade) -->
+    <animate id="material-to-energy-fade" attributeName="opacity" from="1" to="0" dur="0.5s" fill="freeze" begin="indefinite" />
+    
+    <!-- Energy To Material State (Fade) -->
+    <animate id="energy-to-material-fade" attributeName="opacity" from="0" to="1" dur="0.5s" fill="freeze" begin="indefinite" />
+    
+    <!-- Material To Superposition (Split) -->
+    <animateTransform id="material-to-superposition" attributeName="transform" attributeType="XML" type="translate" from="0 0" to="-2 -2" dur="0.5s" fill="freeze" begin="indefinite" />
+    
+    <!-- Superposition To Material (Merge) -->
+    <animateTransform id="superposition-to-material" attributeName="transform" attributeType="XML" type="translate" from="-2 -2" to="0 0" dur="0.5s" fill="freeze" begin="indefinite" />
+    
+    <!-- ==================== QUANTUM EFFECTS ==================== -->
+    
+    <!-- Quantum Flicker Effect -->
+    <animate id="quantum-flicker" attributeName="opacity" values="1;0.7;0.9;0.6;1" dur="0.6s" repeatCount="indefinite" />
+    
+    <!-- Quantum Dimensional Shift -->
+    <animateTransform id="quantum-dimensional-shift" attributeName="transform" attributeType="XML" type="skewX" values="0;2;0;-2;0" dur="4s" repeatCount="indefinite" />
+    
+    <!-- Quantum Phase Transition -->
+    <animate id="quantum-phase-transition" attributeName="fill-opacity" values="1;0.7;0.5;0.3;0.5;0.7;1" dur="4s" repeatCount="indefinite" />
+  </defs>
+</svg>

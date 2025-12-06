@@ -1,0 +1,336 @@
+import SwiftUI
+import GameKit
+
+// Main app entry point
+@main
+struct HexecuteApp: App {
+    @StateObject private var gameCenter = GameCenterManager()
+    
+    var body: some Scene {
+        WindowGroup {
+            ContentView()
+                .environmentObject(gameCenter)
+                .onAppear {
+                    gameCenter.authenticatePlayer()
+                }
+        }
+    }
+}
+
+// Content view that handles navigation
+struct ContentView: View {
+    @State private var navigationPath = NavigationPath()
+    @EnvironmentObject private var gameCenter: GameCenterManager
+    
+    var body: some View {
+        NavigationStack(path: $navigationPath) {
+            MainMenuView(navigationPath: $navigationPath)
+                .navigationDestination(for: NavigationDestination.self) { destination in
+                    switch destination {
+                    case .game(let config):
+                        GameBoardView(gameManager: GameManager(config: config))
+                    case .settings:
+                        SettingsView()
+                    case .leaderboard:
+                        LeaderboardView()
+                    case .howToPlay:
+                        HowToPlayView()
+                    case .gameSetup:
+                        GameSetupView(navigationPath: $navigationPath)
+                    }
+                }
+        }
+    }
+}
+
+// Navigation destinations
+enum NavigationDestination: Hashable {
+    case game(config: GameConfig)
+    case settings
+    case leaderboard
+    case howToPlay
+    case gameSetup
+}
+
+// Main menu view
+struct MainMenuView: View {
+    @Binding var navigationPath: NavigationPath
+    @EnvironmentObject private var gameCenter: GameCenterManager
+    @State private var showingStoryModal = false
+    
+    var body: some View {
+        ZStack {
+            // Background
+            Color.black.ignoresSafeArea()
+            
+            // Stars background effect
+            StarsBackgroundView()
+            
+            VStack(spacing: 30) {
+                // Title
+                VStack {
+                    Text("HEXECUTE")
+                        .font(.system(size: 48, weight: .bold, design: .monospaced))
+                        .foregroundColor(.white)
+                    
+                    Text("SPACE TACTICAL COMBAT")
+                        .font(.system(size: 16, weight: .regular, design: .monospaced))
+                        .foregroundColor(.gray)
+                }
+                .padding(.top, 80)
+                
+                Spacer()
+                
+                // Menu buttons
+                VStack(spacing: 20) {
+                    MenuButton(title: "NEW GAME") {
+                        navigationPath.append(NavigationDestination.gameSetup)
+                    }
+                    
+                    MenuButton(title: "HOW TO PLAY") {
+                        navigationPath.append(NavigationDestination.howToPlay)
+                    }
+                    
+                    MenuButton(title: "LEADERBOARD") {
+                        navigationPath.append(NavigationDestination.leaderboard)
+                    }
+                    
+                    MenuButton(title: "SETTINGS") {
+                        navigationPath.append(NavigationDestination.settings)
+                    }
+                    
+                    // Story button
+                    Button(action: {
+                        showingStoryModal = true
+                    }) {
+                        Text("THE STORY SO FAR...")
+                            .font(.system(size: 16, weight: .regular, design: .monospaced))
+                            .foregroundColor(.yellow)
+                            .padding(.top, 20)
+                    }
+                }
+                .padding(.bottom, 80)
+            }
+            .padding()
+            .sheet(isPresented: $showingStoryModal) {
+                StoryView()
+                    .background(Color.black)
+                    .preferredColorScheme(.dark)
+            }
+        }
+    }
+}
+
+// Menu button component
+struct MenuButton: View {
+    let title: String
+    let action: () -> Void
+    
+    var body: some View {
+        Button(action: action) {
+            Text(title)
+                .font(.system(size: 20, weight: .bold, design: .monospaced))
+                .foregroundColor(.white)
+                .frame(width: 250, height: 50)
+                .background(
+                    RoundedRectangle(cornerRadius: 8)
+                        .stroke(Color.cyan, lineWidth: 2)
+                        .background(Color.black.opacity(0.8))
+                )
+        }
+    }
+}
+
+// Stars background view
+struct StarsBackgroundView: View {
+    let starCount = 200
+    
+    var body: some View {
+        GeometryReader { geometry in
+            ZStack {
+                ForEach(0..<starCount, id: \.self) { i in
+                    Circle()
+                        .fill(Color.white.opacity(Double.random(in: 0.3...0.8)))
+                        .frame(width: randomStarSize(), height: randomStarSize())
+                        .position(
+                            x: Double.random(in: 0...geometry.size.width),
+                            y: Double.random(in: 0...geometry.size.height)
+                        )
+                        .blur(radius: Double.random(in: 0...0.5))
+                }
+            }
+        }
+    }
+    
+    private func randomStarSize() -> CGFloat {
+        let sizes: [CGFloat] = [1, 1.5, 2, 2.5]
+        return sizes.randomElement() ?? 1
+    }
+}
+
+// Game setup view
+struct GameSetupView: View {
+    @Binding var navigationPath: NavigationPath
+    @State private var gameConfig = GameConfig()
+    @State private var selectedVariant = GameVariant.basic
+    
+    // Update game configuration based on selected variant
+    private func updateGameConfig() {
+        // Reset to defaults
+        gameConfig.hasObstacles = false
+        gameConfig.friendlyFire = false
+        gameConfig.beamWeapons = false
+        
+        // Apply variant-specific settings
+        switch selectedVariant {
+        case .basic:
+            // Basic game has no special rules
+            break
+        case .squadronLeader:
+            gameConfig.hasObstacles = true
+        case .wingCommander:
+            gameConfig.friendlyFire = true
+        case .supremeCommander:
+            gameConfig.beamWeapons = true
+            gameConfig.friendlyFire = true // Supreme Commander includes friendly fire
+        }
+    }
+    
+    enum GameVariant: String, CaseIterable, Identifiable {
+        case basic = "Basic Game"
+        case squadronLeader = "Squadron Leader"
+        case wingCommander = "Wing Commander"
+        case supremeCommander = "Supreme Commander"
+        
+        var id: String { self.rawValue }
+        
+        var description: String {
+            switch self {
+            case .basic:
+                return "The standard game with no special rules."
+            case .squadronLeader:
+                return "Adds obstacles like planets, asteroids, and black holes."
+            case .wingCommander:
+                return "Ships damage all adjacent ships, including friendly ones."
+            case .supremeCommander:
+                return "Ships shoot beams in all directions that hit any ship in their path."
+            }
+        }
+    }
+    
+    var body: some View {
+        ZStack {
+            Color.black.ignoresSafeArea()
+            StarsBackgroundView()
+            
+            VStack(spacing: 20) {
+                Text("GAME SETUP")
+                    .font(.system(size: 28, weight: .bold, design: .monospaced))
+                    .foregroundColor(.white)
+                    .padding(.top, 30)
+                
+                VStack(alignment: .leading, spacing: 15) {
+                    Text("SELECT GAME VARIANT:")
+                        .font(.system(size: 18, weight: .bold, design: .monospaced))
+                        .foregroundColor(.white)
+                    
+                    ForEach(GameVariant.allCases) { variant in
+                        HStack {
+                            Button(action: {
+                                selectedVariant = variant
+                                updateGameConfig()
+                            }) {
+                                HStack {
+                                    Image(systemName: selectedVariant == variant ? "checkmark.circle.fill" : "circle")
+                                        .foregroundColor(selectedVariant == variant ? .green : .gray)
+                                    
+                                    Text(variant.rawValue)
+                                        .font(.system(size: 16, design: .monospaced))
+                                        .foregroundColor(.white)
+                                }
+                            }
+                        }
+                        .padding(.vertical, 5)
+                    }
+                    
+                    Text(selectedVariant.description)
+                        .font(.system(size: 14, design: .monospaced))
+                        .foregroundColor(.gray)
+                        .padding(.top, 5)
+                        .frame(height: 60, alignment: .top)
+                }
+                .padding()
+                .background(Color.black.opacity(0.7))
+                .cornerRadius(10)
+                
+                // Board size selector
+                VStack(alignment: .leading) {
+                    Text("BOARD SIZE:")
+                        .font(.system(size: 18, weight: .bold, design: .monospaced))
+                        .foregroundColor(.white)
+                    
+                    Picker("Board Size", selection: $gameConfig.boardSize) {
+                        Text("Small (5)").tag(5)
+                        Text("Medium (6)").tag(6)
+                        Text("Large (7)").tag(7)
+                    }
+                    .pickerStyle(SegmentedPickerStyle())
+                    .padding(.vertical, 5)
+                    .colorScheme(.dark)
+                }
+                .padding()
+                .background(Color.black.opacity(0.7))
+                .cornerRadius(10)
+                
+                // Turn limit selector
+                VStack(alignment: .leading) {
+                    Text("TURN LIMIT:")
+                        .font(.system(size: 18, weight: .bold, design: .monospaced))
+                        .foregroundColor(.white)
+                    
+                    Picker("Turn Limit", selection: $gameConfig.maxTurns) {
+                        Text("Quick (10)").tag(10)
+                        Text("Standard (15)").tag(15)
+                        Text("Extended (20)").tag(20)
+                    }
+                    .pickerStyle(SegmentedPickerStyle())
+                    .padding(.vertical, 5)
+                    .colorScheme(.dark)
+                }
+                .padding()
+                .background(Color.black.opacity(0.7))
+                .cornerRadius(10)
+                
+                Spacer()
+                
+                HStack(spacing: 20) {
+                    Button(action: {
+                        navigationPath.removeLast()
+                    }) {
+                        Text("BACK")
+                            .font(.system(size: 18, weight: .bold, design: .monospaced))
+                            .foregroundColor(.white)
+                            .frame(width: 120, height: 50)
+                            .background(
+                                RoundedRectangle(cornerRadius: 8)
+                                    .stroke(Color.red, lineWidth: 2)
+                                    .background(Color.black.opacity(0.8))
+                            )
+                    }
+                    
+                    Button(action: {
+                        navigationPath.append(NavigationDestination.game(config: gameConfig))
+                    }) {
+                        Text("START GAME")
+                            .font(.system(size: 18, weight: .bold, design: .monospaced))
+                            .foregroundColor(.white)
+                            .frame(width: 200, height: 50)
+                            .background(
+                                RoundedRectangle(cornerRadius: 8)
+                                    .stroke(Color.green, lineWidth: 2)
+                                    .background(Color.black.opacity(0.8))
+                            )
+                    }
+                }
+                .padding(.bottom, 30)
+                

@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <!-- Background -->
+  <rect width="800" height="500" fill="#f8f9fa" />
+  
+  <!-- Title -->
+  <text x="400" y="35" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle">Unified M4 Mac Workflow for Jrotharke</text>
+  
+  <!-- Central M4 Developer Environment -->
+  <rect x="200" y="70" width="400" height="100" rx="10" fill="#e6f7ff" stroke="#1890ff" stroke-width="2" />
+  <text x="400" y="95" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">M4 Mac Developer Environment</text>
+  
+  <rect x="230" y="115" width="100" height="40" rx="5" fill="#ffffff" stroke="#d9d9d9" stroke-width="1" />
+  <text x="280" y="140" font-family="Arial" font-size="12" text-anchor="middle">Xcode 16</text>
+  
+  <rect x="350" y="115" width="100" height="40" rx="5" fill="#ffffff" stroke="#d9d9d9" stroke-width="1" />
+  <text x="400" y="140" font-family="Arial" font-size="12" text-anchor="middle">SwiftUI</text>
+  
+  <rect x="470" y="115" width="100" height="40" rx="5" fill="#ffffff" stroke="#d9d9d9" stroke-width="1" />
+  <text x="520" y="140" font-family="Arial" font-size="12" text-anchor="middle">visionOS SDK</text>
+  
+  <!-- Content Creation Pipeline -->
+  <rect x="50" y="200" width="220" height="250" rx="10" fill="#f6ffed" stroke="#52c41a" stroke-width="2" />
+  <text x="160" y="225" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">Content Creation</text>
+  
+  <!-- Worldbuilding -->
+  <rect x="70" y="240" width="180" height="80" rx="5" fill="#f0f5ff" stroke="#597ef7" stroke-width="1" />
+  <text x="160" y="260" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">Worldbuilding</text>
+  
+  <rect x="85" y="275" width="150" height="30" rx="3" fill="#ffffff" stroke="#d9d9d9" stroke-width="1" />
+  <text x="160" y="295" font-family="Arial" font-size="11" text-anchor="middle">Notion Fantasy Suite</text>
+  
+  <!-- Narrative Design -->
+  <rect x="70" y="330" width="180" height="100" rx="5" fill="#f9f0ff" stroke="#722ed1" stroke-width="1" />
+  <text x="160" y="350" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">Narrative Design</text>
+  
+  <rect x="85" y="365" width="150" height="25" rx="3" fill="#ffffff" stroke="#d9d9d9" stroke-width="1" />
+  <text x="160" y="382" font-family="Arial" font-size="11" text-anchor="middle">Inky Editor</text>
+  
+  <rect x="85" y="395" width="150" height="25" rx="3" fill="#ffffff" stroke="#d9d9d9" stroke-width="1" />
+  <text x="160" y="412" font-family="Arial" font-size="11" text-anchor="middle">Xcode Editor with Syntax</text>
+  
+  <!-- Integration Pipeline -->
+  <rect x="290" y="200" width="220" height="250" rx="10" fill="#fff2e8" stroke="#fa541c" stroke-width="2" />
+  <text x="400" y="225" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">Integration Pipeline</text>
+  
+  <!-- Swift Tools -->
+  <rect x="310" y="240" width="180" height="50" rx="5" fill="#f0f8ff" stroke="#096dd9" stroke-width="1" />
+  <text x="400" y="260" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">Swift Build Tools</text>
+  
+  <rect x="325" y="275" width="150" height="25" rx="3" fill="#ffffff" stroke="#d9d9d9" stroke-width="1" />
+  <text x="400" y="292" font-family="Arial" font-size="11" text-anchor="middle">Native Ink Compiler</text>
+  
+  <!-- Data Transformation -->
+  <rect x="310" y="300" width="180" height="80" rx="5" fill="#fff9f0" stroke="#d48806" stroke-width="1" />
+  <text x="400" y="320" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">Data Transformation</text>
+  
+  <rect x="325" y="335" width="150" height="25" rx="3" fill="#ffffff" stroke="#d9d9d9" stroke-width="1" />
+  <text x="400" y="352" font-family="Arial" font-size="11" text-anchor="middle">Notion → Ink Converter</text>
+  
+  <rect x="325" y="365" width="150" height="25" rx="3" fill="#ffffff" stroke="#d9d9d9" stroke-width="1" />
+  <text x="400" y="382" font-family="Arial" font-size="11" text-anchor="middle">Asset Pipeline</text>
+  
+  <!-- Xcode Integration -->
+  <rect x="310" y="390" width="180" height="50" rx="5" fill="#e6f7ff" stroke="#1890ff" stroke-width="1" />
+  <text x="400" y="410" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">Xcode Integration</text>
+  
+  <rect x="325" y="425" width="150" height="25" rx="3" fill="#ffffff" stroke="#d9d9d9" stroke-width="1" />
+  <text x="400" y="442" font-family="Arial" font-size="11" text-anchor="middle">Build Scripts</text>
+  
+  <!-- Platform Development -->
+  <rect x="530" y="200" width="220" height="250" rx="10" fill="#f0f5ff" stroke="#2f54eb" stroke-width="2" />
+  <text x="640" y="225" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">Platform Development</text>
+  
+  <!-- iOS Game -->
+  <rect x="550" y="240" width="180" height="80" rx="5" fill="#e6f7ff" stroke="#1890ff" stroke-width="1" />
+  <text x="640" y="260" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">iOS Game</text>
+  
+  <rect x="565" y="275" width="150" height="25" rx="3" fill="#ffffff" stroke="#d9d9d9" stroke-width="1" />
+  <text x="640" y="292" font-family="Arial" font-size="11" text-anchor="middle">SwiftUI + Ink Runtime</text>
+  
+  <!-- Framer Website -->
+  <rect x="550" y="330" width="180" height="50" rx="5" fill="#f9f0ff" stroke="#722ed1" stroke-width="1" />
+  <text x="640" y="350" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">Framer Website</text>
+  
+  <rect x="565" y="365" width="150" height="25" rx="3" fill="#ffffff" stroke="#d9d9d9" stroke-width="1" />
+  <text x="640" y="382" font-family="Arial" font-size="11" text-anchor="middle">Next.js + Supabase</text>
+  
+  <!-- Vision Pro -->
+  <rect x="550" y="390" width="180" height="50" rx="5" fill="#fff1f0" stroke="#a8071a" stroke-width="1" />
+  <text x="640" y="410" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">Vision Pro Experience</text>
+  
+  <rect x="565" y="425" width="150" height="25" rx="3" fill="#ffffff" stroke="#d9d9d9" stroke-width="1" />
+  <text x="640" y="442" font-family="Arial" font-size="11" text-anchor="middle">Spatial Computing</text>
+  
+  <!-- Connecting Arrows -->
+  <!-- M4 to all sections -->
+  <path d="M300,170 L160,200" fill="none" stroke="#333" stroke-width="1.5" />
+  <polygon points="162,196 154,204 166,204" fill="#333" />
+  
+  <path d="M400,170 L400,200" fill="none" stroke="#333" stroke-width="1.5" />
+  <polygon points="396,198 400,208 404,198" fill="#333" />
+  
+  <path d="M500,170 L640,200" fill="none" stroke="#333" stroke-width="1.5" />
+  <polygon points="638,196 646,204 634,204" fill="#333" />
+  
+  <!-- Content to Integration -->
+  <path d="M270,280 L310,280" fill="none" stroke="#333" stroke-width="1.5" />
+  <polygon points="308,276 318,280 308,284" fill="#333" />
+  
+  <path d="M270,380 L310,380" fill="none" stroke="#333" stroke-width="1.5" />
+  <polygon points="308,376 318,380 308,384" fill="#333" />
+  
+  <!-- Integration to Platform -->
+  <path d="M490,280 L550,280" fill="none" stroke="#333" stroke-width="1.5" />
+  <polygon points="548,276 558,280 548,284" fill="#333" />
+  
+  <path d="M490,380 L550,380" fill="none" stroke="#333" stroke-width="1.5" />
+  <polygon points="548,376 558,380 548,384" fill="#333" />
+  
+  <path d="M490,430 L550,430" fill="none" stroke="#333" stroke-width="1.5" />
+  <polygon points="548,426 558,430 548,434" fill="#333" />
+</svg>

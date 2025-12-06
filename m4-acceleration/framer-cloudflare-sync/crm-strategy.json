@@ -1,0 +1,10 @@
+{
+  "recommended": "Klaviyo",
+  "reasoning": "iOS SDK available, free tier, automation capabilities",
+  "alternative": "Fastmail + Supabase",
+  "integration_points": [
+    "Framer contact forms",
+    "Vercel portal signups",
+    "iOS app user tracking"
+  ]
+}

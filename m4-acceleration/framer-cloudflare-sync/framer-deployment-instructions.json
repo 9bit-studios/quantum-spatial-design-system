@@ -1,0 +1,21 @@
+{
+  "9bit_studios_site": {
+    "template": "Landin",
+    "customizations": "Apply quantum-spatial design tokens",
+    "content": "Use generated brand-aware content",
+    "domain": "9bitstudios.io",
+    "priority": "high"
+  },
+  "oksana_automation": {
+    "type": "landing_page",
+    "content": "Automation service descriptions",
+    "domain": "oksana.ai/automation",
+    "priority": "medium"
+  },
+  "oksana_ghostwriting": {
+    "type": "landing_page",
+    "content": "Ghostwriting service descriptions",
+    "domain": "oksana.ai/ghostwriting",
+    "priority": "medium"
+  }
+}

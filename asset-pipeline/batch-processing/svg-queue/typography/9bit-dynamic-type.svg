@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900">
+  <!-- Background -->
+  <rect width="1200" height="900" fill="#0A0621" />
+  
+  <!-- Grid Background -->
+  <g opacity="0.1">
+    <!-- Horizontal lines -->
+    <path d="M0,0 L1200,0" stroke="#36EAE8" stroke-width="1" />
+    <path d="M0,50 L1200,50" stroke="#36EAE8" stroke-width="1" />
+    <path d="M0,100 L1200,100" stroke="#36EAE8" stroke-width="1" />
+    <path d="M0,150 L1200,150" stroke="#36EAE8" stroke-width="1" />
+    <path d="M0,200 L1200,200" stroke="#36EAE8" stroke-width="1" />
+    <path d="M0,250 L1200,250" stroke="#36EAE8" stroke-width="1" />
+    <path d="M0,300 L1200,300" stroke="#36EAE8" stroke-width="1" />
+    <path d="M0,350 L1200,350" stroke="#36EAE8" stroke-width="1" />
+    <path d="M0,400 L1200,400" stroke="#36EAE8" stroke-width="1" />
+    <path d="M0,450 L1200,450" stroke="#36EAE8" stroke-width="1" />
+    <path d="M0,500 L1200,500" stroke="#36EAE8" stroke-width="1" />
+    <path d="M0,550 L1200,550" stroke="#36EAE8" stroke-width="1" />
+    <path d="M0,600 L1200,600" stroke="#36EAE8" stroke-width="1" />
+    <path d="M0,650 L1200,650" stroke="#36EAE8" stroke-width="1" />
+    <path d="M0,700 L1200,700" stroke="#36EAE8" stroke-width="1" />
+    <path d="M0,750 L1200,750" stroke="#36EAE8" stroke-width="1" />
+    <path d="M0,800 L1200,800" stroke="#36EAE8" stroke-width="1" />
+    <path d="M0,850 L1200,850" stroke="#36EAE8" stroke-width="1" />
+    
+    <!-- Vertical lines -->
+    <path d="M0,0 L0,900" stroke="#36EAE8" stroke-width="1" />
+    <path d="M100,0 L100,900" stroke="#36EAE8" stroke-width="1" />
+    <path d="M200,0 L200,900" stroke="#36EAE8" stroke-width="1" />
+    <path d="M300,0 L300,900" stroke="#36EAE8" stroke-width="1" />
+    <path d="M400,0 L400,900" stroke="#36EAE8" stroke-width="1" />
+    <path d="M500,0 L500,900" stroke="#36EAE8" stroke-width="1" />
+    <path d="M600,0 L600,900" stroke="#36EAE8" stroke-width="1" />
+    <path d="M700,0 L700,900" stroke="#36EAE8" stroke-width="1" />
+    <path d="M800,0 L800,900" stroke="#36EAE8" stroke-width="1" />
+    <path d="M900,0 L900,900" stroke="#36EAE8" stroke-width="1" />
+    <path d="M1000,0 L1000,900" stroke="#36EAE8" stroke-width="1" />
+    <path d="M1100,0 L1100,900" stroke="#36EAE8" stroke-width="1" />
+  </g>
+  
+  <!-- Title -->
+  <text x="600" y="70" font-family="SF Pro Display" font-size="36" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Dynamic Type Demonstration</text>
+  <text x="600" y="110" font-family="SF Pro Text" font-size="18" fill="#FFFFFF" text-anchor="middle">Supporting Apple's Accessibility Standards</text>
+  
+  <!-- Dynamic Type Size Comparison -->
+  <g transform="translate(100, 160)">
+    <rect width="1000" height="300" rx="12" fill="#2E1B45" opacity="0.8" />
+    <rect width="1000" height="60" rx="12" fill="#5B2C91" />
+    
+    <!-- Section Title -->
+    <text x="500" y="40" font-family="SF Pro Display" font-size="24" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Text Size Comparisons</text>
+    
+    <!-- Text Size Labels -->
+    <text x="30" y="100" font-family="SF Pro Display" font-size="16" fill="#36EAE8" opacity="0.8">DEFAULT (100%)</text>
+    <text x="30" y="180" font-family="SF Pro Display" font-size="16" fill="#36EAE8" opacity="0.8">LARGE (170%)</text>
+    <text x="30" y="260" font-family="SF Pro Display" font-size="16" fill="#36EAE8" opacity="0.8">EXTRA LARGE (230%)</text>
+    
+    <!-- Text Size Examples -->
+    <!-- Default Size -->
+    <g transform="translate(200, 80)">
+      <text font-family="SF Pro Display" font-size="20" font-weight="bold" fill="#FFFFFF">Title Text</text>
+      <text x="0" y="36" font-family="SF Pro Text" font-size="17" fill="#FFFFFF" opacity="0.9">Standard body text with our brand voice.</text>
+    </g>
+    
+    <!-- Large Size -->
+    <g transform="translate(200, 160)">
+      <text font-family="SF Pro Display" font-size="34" font-weight="bold" fill="#FFFFFF">Title Text</text>
+      <text x="0" y="60" font-family="SF Pro Text" font-size="29" fill="#FFFFFF" opacity="0.9">Standard body text with our brand voice.</text>
+    </g>
+    
+    <!-- Extra Large Size -->
+    <g transform="translate(200, 240)">
+      <text font-family="SF Pro Display" font-size="46" font-weight="bold" fill="#FFFFFF">Title Text</text>
+      <text x="0" y="80" font-family="SF Pro Text" font-size="39" fill="#FFFFFF" opacity="0.9">Standard body text with our brand voice.</text>
+    </g>
+    
+    <!-- Divider Lines -->
+    <line x1="30" y1="130" x2="970" y2="130" stroke="#FFFFFF" stroke-opacity="0.2" stroke-width="1" />
+    <line x1="30" y1="210" x2="970" y2="210" stroke="#FFFFFF" stroke-opacity="0.2" stroke-width="1" />
+  </g>
+  
+  <!-- Dynamic Type Implementation Examples -->
+  <g transform="translate(100, 500)">
+    <rect width="1000" height="340" rx="12" fill="#2E1B45" opacity="0.8" />
+    <rect width="1000" height="60" rx="12" fill="#5B2C91" />
+    
+    <!-- Section Title -->
+    <text x="500" y="40" font-family="SF Pro Display" font-size="24" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Implementation Guidelines</text>
+    
+    <!-- Left Column: Technical Guidelines -->
+    <g transform="translate(50, 90)">
+      <text font-family="SF Pro Display" font-size="20" font-weight="bold" fill="#FFFFFF">SwiftUI Implementation</text>
+      
+      <g transform="translate(0, 40)">
+        <rect width="400" height="180" rx="8" fill="#161D4E" opacity="0.6" />
+        
+        <!-- Code-like representation -->
+        <text x="20" y="30" font-family="SF Mono" font-size="14" fill="#36EAE8">Text("Title")</text>
+        <text x="20" y="50" font-family="SF Mono" font-size="14" fill="#36EAE8">.font(.title)</text>
+        <text x="20" y="70" font-family="SF Mono" font-size="14" fill="#36EAE8">.fontWeight(.bold)</text>
+        <text x="20" y="90" font-family="SF Mono" font-size="14" fill="#36EAE8">.foregroundColor(.white)</text>
+        
+        <text x="20" y="120" font-family="SF Mono" font-size="14" fill="#FFFFFF" opacity="0.8">Text("Body text example")</text>
+        <text x="20" y="140" font-family="SF Mono" font-size="14" fill="#FFFFFF" opacity="0.8">.font(.body)</text>
+        <text x="20" y="160" font-family="SF Mono" font-size="14" fill="#FFFFFF" opacity="0.8">.lineSpacing(4)</text>
+        <text x="20" y="180" font-family="SF Mono" font-size="14" fill="#FFFFFF" opacity="0.8">.foregroundColor(.white.opacity(0.9))</text>
+      </g>
+    </g>
+    
+    <!-- Right Column: Design Guidelines -->
+    <g transform="translate(500, 90)">
+      <text font-family="SF Pro Display" font-size="20" font-weight="bold" fill="#FFFFFF">Design Considerations</text>
+      
+      <text x="0" y="50" font-family="SF Pro Text" font-size="16" fill="#FFFFFF">• Use system font styles instead of fixed sizes</text>
+      <text x="0" y="86" font-family="SF Pro Text" font-size="16" fill="#FFFFFF">• Maintain proper line height (1.3× for body text)</text>
+      <text x="0" y="122" font-family="SF Pro Text" font-size="16" fill="#FFFFFF">• Ensure adequate touch targets (44×44pt minimum)</text>
+      <text x="0" y="158" font-family="SF Pro Text" font-size="16" fill="#FFFFFF">• Design flexible containers that expand with text</text>
+      <text x="0" y="194" font-family="SF Pro Text" font-size="16" fill="#FFFFFF">• Use bold weights for titles, regular for body text</text>
+      <text x="0" y="230" font-family="SF Pro Text" font-size="16" fill="#FFFFFF">• Test layouts with all Dynamic Type sizes</text>
+    </g>
+  </g>
+  
+  <!-- Annotation: iOS Text Styles -->
+  <g transform="translate(100, 860)">
+    <rect width="1000" height="30" rx="15" fill="#36EAE8" opacity="0.3" />
+    <text x="500" y="20" font-family="SF Pro Text" font-size="14" font-weight="semibold" fill="#FFFFFF" text-anchor="middle">Always use system text styles: .largeTitle, .title, .title2, .title3, .headline, .body, .callout, .subheadline, .footnote, .caption</text>
+  </g>
+  
+  <!-- 9Bit Branding -->
+  <g transform="translate(1050, 860)">
+    <!-- Stylized 9 logo -->
+    <g>
+      <rect x="10" y="0" width="10" height="10" fill="#3DFF74" />
+      <rect x="20" y="0" width="10" height="10" fill="#4F8CFF" />
+      <rect x="10" y="10" width="10" height="10" fill="#5B2C91" />
+      <rect x="20" y="10" width="10" height="10" fill="#36EAE8" />
+      <rect x="30" y="10" width="10" height="10" fill="#FF6B57" />
+    </g>
+    <text x="-10" y="35" font-family="SF Pro Display" font-size="14" font-weight="bold" fill="#FFFFFF" text-anchor="end">9Bit Studios</text>
+  </g>
+</svg>

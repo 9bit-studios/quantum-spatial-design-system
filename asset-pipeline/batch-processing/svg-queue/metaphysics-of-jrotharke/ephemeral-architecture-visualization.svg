@@ -1,0 +1,297 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600">
+  <!-- Background -->
+  <rect width="900" height="600" fill="#0A0621" />
+  
+  <!-- Dimensional grid with perspective effect -->
+  <g opacity="0.12">
+    <!-- Horizontal grid lines with rippling distortion -->
+    <path d="M150,550 C250,545 350,555 450,545 C550,555 650,545 750,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M125,500 C225,495 325,505 425,495 C525,505 625,495 775,500" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M100,450 C200,445 300,455 400,445 C500,455 600,445 800,450" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M75,400 C175,395 275,405 375,395 C475,405 575,395 825,400" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M65,350 C165,345 265,355 365,345 C465,355 565,345 835,350" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M55,300 C155,295 255,305 355,295 C455,305 555,295 845,300" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M45,250 C145,245 245,255 345,245 C445,255 545,245 855,250" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M35,200 C135,195 235,205 335,195 C435,205 535,195 865,200" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M25,150 C125,145 225,155 325,145 C425,155 525,145 875,150" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M15,100 C115,95 215,105 315,95 C415,105 515,95 885,100" stroke="#5AC8FA" stroke-width="1" />
+    
+    <!-- Vertical grid lines with subtle shifts -->
+    <path d="M150,100 C155,200 145,300 150,400 C155,450 145,500 150,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M225,100 C230,200 220,300 225,400 C230,450 220,500 225,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M300,100 C305,200 295,300 300,400 C305,450 295,500 300,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M375,100 C380,200 370,300 375,400 C380,450 370,500 375,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M450,100 C455,200 445,300 450,400 C455,450 445,500 450,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M525,100 C530,200 520,300 525,400 C530,450 520,500 525,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M600,100 C605,200 595,300 600,400 C605,450 595,500 600,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M675,100 C680,200 670,300 675,400 C680,450 670,500 675,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M750,100 C755,200 745,300 750,400 C755,450 745,500 750,550" stroke="#5AC8FA" stroke-width="1" />
+  </g>
+  
+  <!-- Starfield effect with Jrotharke moons -->
+  <g>
+    <!-- Stars -->
+    <circle cx="120" cy="85" r="1.2" fill="#FFFFFF" />
+    <circle cx="200" cy="65" r="1" fill="#FFFFFF" />
+    <circle cx="280" cy="120" r="1.5" fill="#FFFFFF" />
+    <circle cx="340" cy="50" r="1" fill="#FFFFFF" />
+    <circle cx="440" cy="90" r="1.3" fill="#FFFFFF" />
+    <circle cx="510" cy="70" r="1" fill="#FFFFFF" />
+    <circle cx="580" cy="85" r="1.5" fill="#FFFFFF" />
+    <circle cx="640" cy="55" r="1" fill="#FFFFFF" />
+    <circle cx="720" cy="95" r="1.2" fill="#FFFFFF" />
+    <circle cx="800" cy="75" r="1" fill="#FFFFFF" />
+    
+    <!-- Jrotharke moons -->
+    <circle cx="170" cy="70" r="6" fill="#D10056" opacity="0.5" /> <!-- Ruby moon -->
+    <circle cx="610" cy="85" r="7" fill="#9932CC" opacity="0.4" /> <!-- Violet moon -->
+    <circle cx="410" cy="80" r="5" fill="#A0E6BB" opacity="0.4" /> <!-- Pale green moon -->
+    
+    <!-- Non-circular moon -->
+    <polygon points="740,80 755,85 750,95 738,90" fill="#E6E6FA" opacity="0.6" />
+  </g>
+  
+  <!-- Title -->
+  <text x="450" y="60" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" font-size="28" font-weight="bold" fill="#FFFFFF" text-anchor="middle">The Ephemeral Architecture</text>
+  <text x="450" y="90" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" font-size="18" fill="#5AC8FA" text-anchor="middle">Buildings That Exist in Multiple States Simultaneously</text>
+  
+  <!-- Main visualization: Central architectural structure with three states -->
+  <g transform="translate(450, 300)">
+    <!-- Structure backdrop - subtle glow -->
+    <ellipse cx="0" cy="0" rx="350" ry="180" fill="#131A36" opacity="0.4" />
+    
+    <!-- Physical State (Left Side) - Heritage State -->
+    <g transform="translate(-200, 0)">
+      <!-- Physical state label -->
+      <text x="0" y="-140" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" font-size="18" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Physical Manifestation</text>
+      <text x="0" y="-120" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" font-size="14" fill="#5AC8FA" text-anchor="middle">Heritage State</text>
+      
+      <!-- Physical building - solid, defined edges -->
+      <g>
+        <!-- Building foundation -->
+        <rect x="-75" y="80" width="150" height="10" fill="#331F4A" />
+        
+        <!-- Building walls -->
+        <rect x="-70" y="0" width="140" height="80" fill="#331F4A" />
+        
+        <!-- Building roof -->
+        <path d="M-75,0 L0,-40 L75,0" fill="#331F4A" />
+        
+        <!-- Windows and door - regular pattern -->
+        <rect x="-50" y="30" width="20" height="30" fill="#5AC8FA" opacity="0.6" />
+        <rect x="-10" y="40" width="20" height="40" fill="#5AC8FA" opacity="0.7" />
+        <rect x="30" y="30" width="20" height="30" fill="#5AC8FA" opacity="0.6" />
+        
+        <!-- Rectangular doorway -->
+        <rect x="-10" y="60" width="20" height="20" fill="#0A0621" />
+      </g>
+      
+      <!-- Physical state aura - minimal -->
+      <ellipse cx="0" cy="20" rx="90" ry="110" fill="none" stroke="#5AC8FA" stroke-width="1" stroke-dasharray="5,5" opacity="0.3" />
+      
+      <!-- Observer visualization - more defined, solid -->
+      <g transform="translate(-120, 60)">
+        <!-- Physical human silhouette -->
+        <path d="M0,-20 C-5,-25 -15,-25 -10,-20 S0,-22 10,-20 S5,-25 0,-20" fill="#708090" /> <!-- Head -->
+        <rect x="-7" y="-20" width="14" height="25" rx="2" fill="#708090" /> <!-- Torso -->
+        <rect x="-12" y="-15" width="5" height="20" rx="2" fill="#708090" /> <!-- Left arm -->
+        <rect x="7" y="-15" width="5" height="20" rx="2" fill="#708090" /> <!-- Right arm -->
+        <rect x="-6" y="5" width="4" height="20" rx="1" fill="#708090" /> <!-- Left leg -->
+        <rect x="2" y="5" width="4" height="20" rx="1" fill="#708090" /> <!-- Right leg -->
+        
+        <!-- Neutral emotional state - standard perception -->
+        <text x="0" y="-30" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="8" fill="#FFFFFF" text-anchor="middle">Neutral</text>
+        <path d="M-4,-15 L4,-15" stroke="#FFFFFF" stroke-width="1" />
+      </g>
+    </g>
+    
+    <!-- Emotional State (Center) - Transitional State -->
+    <g transform="translate(0, 0)">
+      <!-- Emotional state label -->
+      <text x="0" y="-140" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" font-size="18" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Emotional Manifestation</text>
+      <text x="0" y="-120" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" font-size="14" fill="#BF4080" text-anchor="middle">Transitional State</text>
+      
+      <!-- Emotional building - fluid, responding to emotions -->
+      <g>
+        <!-- Building foundation - slightly warped -->
+        <path d="M-75,80 C-50,85 50,75 75,80 L75,90 L-75,90 Z" fill="#BF4080" opacity="0.7" />
+        
+        <!-- Building walls - curved, flowing -->
+        <path d="M-70,0 C-75,30 -65,60 -70,80 C-40,75 40,85 70,80 C65,60 75,30 70,0 Z" fill="#BF4080" opacity="0.7" />
+        
+        <!-- Building roof - asymmetrical -->
+        <path d="M-70,0 C-50,-30 50,-40 70,0" fill="#BF4080" opacity="0.7" />
+        
+        <!-- Windows and door - irregular, flowing -->
+        <path d="M-50,30 C-45,25 -35,25 -30,30 C-25,40 -35,65 -30,60 C-40,55 -55,40 -50,30" fill="#5AC8FA" opacity="0.5" />
+        <path d="M-10,40 C-5,35 5,35 10,40 C15,60 5,85 0,80 C-5,75 -15,60 -10,40" fill="#5AC8FA" opacity="0.6" />
+        <path d="M30,30 C35,25 45,25 50,30 C55,40 45,65 50,60 C40,55 25,40 30,30" fill="#5AC8FA" opacity="0.5" />
+        
+        <!-- Doorway - organic shape -->
+        <path d="M-10,60 C-5,55 5,55 10,60 C15,70 5,85 0,80 C-5,75 -15,70 -10,60" fill="#0A0621" />
+      </g>
+      
+      <!-- Emotional state aura - more pronounced -->
+      <ellipse cx="0" cy="20" rx="100" ry="120" fill="none" stroke="#BF4080" stroke-width="1.5" stroke-dasharray="3,3" opacity="0.5" />
+      
+      <!-- Observer visualization - emotional state affecting building -->
+      <g transform="translate(0, 60)">
+        <!-- Transitional human silhouette -->
+        <path d="M0,-20 C-5,-25 -15,-25 -10,-20 S0,-22 10,-20 S5,-25 0,-20" fill="#896878" opacity="0.9" /> <!-- Head -->
+        <rect x="-7" y="-20" width="14" height="25" rx="2" fill="#896878" opacity="0.9" /> <!-- Torso -->
+        <rect x="-12" y="-15" width="5" height="20" rx="2" fill="#896878" opacity="0.9" /> <!-- Left arm -->
+        <rect x="7" y="-15" width="5" height="20" rx="2" fill="#896878" opacity="0.9" /> <!-- Right arm -->
+        <rect x="-6" y="5" width="4" height="20" rx="1" fill="#896878" opacity="0.9" /> <!-- Left leg -->
+        <rect x="2" y="5" width="4" height="20" rx="1" fill="#896878" opacity="0.9" /> <!-- Right leg -->
+        
+        <!-- Joyful emotional state - affecting building -->
+        <text x="0" y="-30" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="8" fill="#FFFFFF" text-anchor="middle">Joyful</text>
+        <path d="M-4,-15 C-2,-13 2,-13 4,-15" stroke="#FFFFFF" stroke-width="1" fill="none" />
+        
+        <!-- Emotional connection to building -->
+        <path d="M0,-10 C20,-30 40,-20 60,-40" stroke="#BF4080" stroke-width="1" stroke-dasharray="2,2" fill="none" />
+        <path d="M0,-10 C-20,-50 0,-70 -10,-90" stroke="#BF4080" stroke-width="1" stroke-dasharray="2,2" fill="none" />
+      </g>
+    </g>
+    
+    <!-- Conceptual State (Right Side) - Quantum State -->
+    <g transform="translate(200, 0)">
+      <!-- Conceptual state label -->
+      <text x="0" y="-140" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" font-size="18" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Conceptual Manifestation</text>
+      <text x="0" y="-120" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" font-size="14" fill="#6A3093" text-anchor="middle">Quantum State</text>
+      
+      <!-- Conceptual building - abstract, symbolic -->
+      <g>
+        <!-- Building as conceptual framework - quantum pixels in structure form -->
+        <g>
+          <!-- Foundational concept -->
+          <rect x="-75" y="80" width="25" height="10" fill="#6A3093" opacity="0.6" />
+          <rect x="-45" y="80" width="25" height="10" fill="#6A3093" opacity="0.6" />
+          <rect x="-15" y="80" width="25" height="10" fill="#6A3093" opacity="0.8" />
+          <rect x="15" y="80" width="25" height="10" fill="#6A3093" opacity="0.6" />
+          <rect x="45" y="80" width="25" height="10" fill="#6A3093" opacity="0.6" />
+          
+          <!-- Wall concepts - quantum pixel clusters -->
+          <rect x="-70" y="65" width="20" height="15" fill="#6A3093" opacity="0.6" />
+          <rect x="-70" y="45" width="20" height="15" fill="#6A3093" opacity="0.7" />
+          <rect x="-70" y="25" width="20" height="15" fill="#6A3093" opacity="0.6" />
+          <rect x="-70" y="5" width="20" height="15" fill="#6A3093" opacity="0.5" />
+          
+          <rect x="50" y="65" width="20" height="15" fill="#6A3093" opacity="0.6" />
+          <rect x="50" y="45" width="20" height="15" fill="#6A3093" opacity="0.7" />
+          <rect x="50" y="25" width="20" height="15" fill="#6A3093" opacity="0.6" />
+          <rect x="50" y="5" width="20" height="15" fill="#6A3093" opacity="0.5" />
+          
+          <!-- Roof concept -->
+          <rect x="-50" y="0" width="20" height="15" fill="#6A3093" opacity="0.5" transform="rotate(-20, -40, 7)" />
+          <rect x="-25" y="-10" width="20" height="15" fill="#6A3093" opacity="0.6" transform="rotate(-10, -15, -2)" />
+          <rect x="0" y="-15" width="20" height="15" fill="#6A3093" opacity="0.8" />
+          <rect x="25" y="-10" width="20" height="15" fill="#6A3093" opacity="0.6" transform="rotate(10, 35, -2)" />
+          <rect x="50" y="0" width="20" height="15" fill="#6A3093" opacity="0.5" transform="rotate(20, 60, 7)" />
+          
+          <!-- Windows as conceptual portals -->
+          <rect x="-50" y="30" width="20" height="20" fill="#5AC8FA" opacity="0.5" />
+          <rect x="-15" y="40" width="30" height="30" fill="#5AC8FA" opacity="0.6" />
+          <rect x="30" y="30" width="20" height="20" fill="#5AC8FA" opacity="0.5" />
+          
+          <!-- Doorway as philosophical entrance -->
+          <path d="M-5,75 L5,75 L5,55 Q0,45 -5,55 Z" fill="#0A0621" />
+        </g>
+        
+        <!-- Non-physical building properties -->
+        <g opacity="0.7">
+          <!-- Wisdom lines -->
+          <path d="M-30,10 C-20,0 20,20 30,10" stroke="#6A3093" stroke-width="1" fill="none" />
+          <path d="M-40,30 C-30,20 30,40 40,30" stroke="#6A3093" stroke-width="1" fill="none" />
+          <path d="M-50,50 C-40,40 40,60 50,50" stroke="#6A3093" stroke-width="1" fill="none" />
+          
+          <!-- Truth nodes -->
+          <circle cx="-30" cy="10" r="3" fill="#FFFFFF" opacity="0.6" />
+          <circle cx="30" cy="10" r="3" fill="#FFFFFF" opacity="0.6" />
+          <circle cx="-40" cy="30" r="3" fill="#FFFFFF" opacity="0.6" />
+          <circle cx="40" cy="30" r="3" fill="#FFFFFF" opacity="0.6" />
+          <circle cx="-50" cy="50" r="3" fill="#FFFFFF" opacity="0.6" />
+          <circle cx="50" cy="50" r="3" fill="#FFFFFF" opacity="0.6" />
+        </g>
+      </g>
+      
+      <!-- Conceptual state aura - complex, multidimensional -->
+      <path d="M-80,-40 C-60,-80 0,-100 60,-80 C90,-40 100,20 90,60 C60,100 -40,100 -80,60 C-100,20 -100,-20 -80,-40" fill="none" stroke="#6A3093" stroke-width="2" stroke-dasharray="2,2" opacity="0.8" />
+      <ellipse cx="0" cy="20" rx="110" ry="130" fill="none" stroke="#6A3093" stroke-width="1" opacity="0.5" />
+      
+      <!-- Observer visualization - philosophical contemplation -->
+      <g transform="translate(120, 60)">
+        <!-- Quantum human silhouette -->
+        <path d="M0,-20 C-5,-25 -15,-25 -10,-20 S0,-22 10,-20 S5,-25 0,-20" fill="#896878" /> <!-- Head -->
+        <rect x="-7" y="-20" width="14" height="25" rx="2" fill="#896878" /> <!-- Torso -->
+        <rect x="-12" y="-15" width="5" height="20" rx="2" fill="#896878" /> <!-- Left arm -->
+        <rect x="7" y="-15" width="5" height="20" rx="2" fill="#896878" /> <!-- Right arm -->
+        <rect x="-6" y="5" width="4" height="20" rx="1" fill="#896878" /> <!-- Left leg -->
+        <rect x="2" y="5" width="4" height="20" rx="1" fill="#896878" /> <!-- Right leg -->
+        
+        <!-- Quantum pixel effect on body -->
+        <rect x="-3" y="-18" width="3" height="3" fill="#6A3093" opacity="0.8" />
+        <rect x="4" y="-15" width="3" height="3" fill="#6A3093" opacity="0.8" />
+        <rect x="-9" y="-10" width="3" height="3" fill="#6A3093" opacity="0.8" />
+        <rect x="2" y="-5" width="3" height="3" fill="#6A3093" opacity="0.8" />
+        <rect x="-4" y="0" width="3" height="3" fill="#6A3093" opacity="0.8" />
+        <rect x="3" y="10" width="3" height="3" fill="#6A3093" opacity="0.8" />
+        
+        <!-- Philosophical emotional state - deep thought -->
+        <text x="0" y="-30" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="8" fill="#FFFFFF" text-anchor="middle">Contemplative</text>
+        <ellipse cx="0" cy="-10" rx="8" ry="5" fill="none" stroke="#6A3093" stroke-width="1" />
+        
+        <!-- Conceptual connection to building -->
+        <path d="M0,-18 C-30,-40 -50,-50 -70,-30" stroke="#6A3093" stroke-width="1" stroke-dasharray="2,2" fill="none" />
+        <path d="M0,-15 C-40,-10 -70,-40 -100,-60" stroke="#6A3093" stroke-width="1" stroke-dasharray="2,2" fill="none" />
+        <path d="M0,-12 C-20,5 -40,-30 -60,0" stroke="#6A3093" stroke-width="1" stroke-dasharray="2,2" fill="none" />
+      </g>
+    </g>
+    
+    <!-- Shared Architectural Core - exists across all states -->
+    <g opacity="0.5">
+      <!-- Core geometric structure -->
+      <path d="M-200,80 L200,80" stroke="#FFFFFF" stroke-width="1" stroke-dasharray="5,5" />
+      <path d="M-70,-40 L70,-40" stroke="#FFFFFF" stroke-width="1" stroke-dasharray="5,5" />
+      <path d="M-200,80 L-70,-40" stroke="#FFFFFF" stroke-width="1" stroke-dasharray="5,5" />
+      <path d="M200,80 L70,-40" stroke="#FFFFFF" stroke-width="1" stroke-dasharray="5,5" />
+      
+      <!-- Core identity node -->
+      <circle cx="0" cy="20" r="5" fill="#FFFFFF" opacity="0.8" />
+      
+      <!-- Connection to all states -->
+      <path d="M0,20 L-200,20" stroke="#FFFFFF" stroke-width="1" stroke-dasharray="2,2" opacity="0.6" />
+      <path d="M0,20 L0,20" stroke="#FFFFFF" stroke-width="1" stroke-dasharray="2,2" opacity="0.6" />
+      <path d="M0,20 L200,20" stroke="#FFFFFF" stroke-width="1" stroke-dasharray="2,2" opacity="0.6" />
+    </g>
+  </g>
+  
+  <!-- Feature explanations -->
+  <g>
+    <!-- Multi-state existence -->
+    <g transform="translate(225, 470)">
+      <rect x="-150" y="0" width="300" height="70" rx="10" fill="#131A36" opacity="0.9" />
+      <text x="0" y="20" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Multi-State Existence</text>
+      <text x="0" y="45" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#5AC8FA" text-anchor="middle">Buildings that transcend physical form through emotional and conceptual layers</text>
+    </g>
+
+    <!-- Interactive Perception -->
+    <g transform="translate(675, 470)">
+      <rect x="-150" y="0" width="300" height="70" rx="10" fill="#131A36" opacity="0.9" />
+      <text x="0" y="20" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Interactive Perception</text>
+      <text x="0" y="45" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#5AC8FA" text-anchor="middle">Each observer's experience shapes the building's manifestation</text>
+    </g>
+
+    <!-- Quantum Architecture -->
+    <g transform="translate(450, 550)">
+      <rect x="-150" y="0" width="300" height="70" rx="10" fill="#131A36" opacity="0.9" />
+      <text x="0" y="20" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Quantum Architecture</text>
+      <text x="0" y="45" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#5AC8FA" text-anchor="middle">Where physical, emotional, and conceptual states coexist</text>
+    </g>
+  </g>
+
+  <!-- Footer -->
+  <g transform="translate(450, 580)">
+    <text x="0" y="0" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#5AC8FA" text-anchor="middle">© 2024 Jrotharke Visuals | The Ephemeral Architecture Project</text>
+  </g>
+</svg>
