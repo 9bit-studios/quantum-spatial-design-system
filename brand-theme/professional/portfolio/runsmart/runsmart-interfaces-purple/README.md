@@ -206,8 +206,12 @@ Then use classes throughout your HTML:
 runsmart-interfaces-purple/
 ├── index.html                          # Portfolio showcase
 ├── README.md                          # This file
-├── EMOJI-REPLACEMENT-GUIDE.md        # Icon reference
 ├── assets/
+│   ├── avatars/    
+│   ├── emojis/    
+│   ├── member-photos/
+│   ├── logos/
+│   ├── avatar-snippet-templates.html    
 │   ├── runsmart-design-system.css    # Unified CSS
 │   └── icons/                        # SVG icon library
 │       ├── Bolt.svg
@@ -215,6 +219,10 @@ runsmart-interfaces-purple/
 │       ├── Muscle.svg
 │       └── ... (20+ icons)
 ├── dashboard/
+│   ├── analytics.html
+│   ├── campaigns.html
+│   ├── insights.html
+│   ├── members.html
 │   ├── runsmart-dashboard.html
 │   ├── runsmart-member-detail.html
 │   ├── runsmart-email-intelligence.html
@@ -227,11 +235,22 @@ runsmart-interfaces-purple/
 │   │   ├── mobile-app-community.html
 │   │   └── mobile-app-coach.html
 │   └── coach/
+│       ├── mobile-coach-messages.html
+│       ├── mobile-coach-settings.html
 │       ├── mobile-coach-dashboard.html
 │       └── mobile-coach-member-detail.html
 ├── watch/
 │   ├── apple-watch-running-intelligence.html
 │   └── apple-watch-gamification.html
+├── documentation/
+│   ├── emoji-replacement-guide.md
+│   ├── runsmart-deployment-prompt.md
+│   ├── dashboard-complete.md
+│   ├── avatar-and-animation-guide.md
+├── scripts/
+│   ├── deploy-runsmart.sh
+│   ├── update-mobile-nav.py
+│   └── update-html-files.py
 └── presentation/
     └── runsmart-presentation.html
 ```
