@@ -92,7 +92,7 @@ assets/avatars/
 
 <!-- Cloudinary version -->
 <div class="member-avatar">
-    <img src="https://res.cloudinary.com/YOUR_CLOUD_NAME/image/upload/w_100,h_100,c_fill,g_face,q_auto,f_auto/avatars/john-davis.jpg"
+    <img src="https://res.cloudinary.com/cloudninestudios/image/upload/w_100,h_100,c_fill,g_face,q_auto,f_auto/avatars/john-davis.jpg"
          alt="John Davis"
          loading="lazy">
 </div>

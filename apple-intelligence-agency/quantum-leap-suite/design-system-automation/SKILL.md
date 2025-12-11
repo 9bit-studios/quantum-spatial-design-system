@@ -712,7 +712,7 @@ function calculateContrastRatio(color1: string, color2: string): number {
     font-weight: 600;
     border-radius: 4px;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: -0.5px;
   }
 
   .quantum-product-card__title {

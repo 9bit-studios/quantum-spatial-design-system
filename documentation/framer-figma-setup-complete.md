@@ -37,7 +37,7 @@ All Framer and Figma development dependencies have been successfully installed i
 ## 🔧 Issues Resolved
 
 ### 1. **Workspace Protocol Error**
-- **Problem**: npm doesn't support `workspace:*` protocol (used by pnpm/Yarn)
+- **Problem**: npm doesn't support `workspace:*` protocol (used by npm/Yarn)
 - **Fix**: Changed `@quantum-spatial/source-tokens` from `workspace:*` to `file:../source-tokens` in design-system package.json
 
 ### 2. **Non-Existent Package**

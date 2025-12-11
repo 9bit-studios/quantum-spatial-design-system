@@ -463,7 +463,7 @@ quantum-spatial/creative-intelligence-portal/shopify-themes/shopify-vercel/
 
 ### Future Enhancements
 1. **Workspace Configuration**: Add workspaces to root package.json for better dependency management
-2. **Monorepo Setup**: Consider using pnpm workspaces or npm workspaces
+2. **Monorepo Setup**: Consider using npm workspaces or npm workspaces
 3. **Type Declarations**: Add missing type declarations for bridge integrations
 4. **Validation Automation**: Integrate TypeScript validation into CI/CD pipeline
 

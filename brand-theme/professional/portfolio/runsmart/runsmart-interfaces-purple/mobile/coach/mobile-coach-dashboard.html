@@ -74,7 +74,7 @@
             right: -4px;
             width: 16px;
             height: 16px;
-            background: #CDFF00;
+            background: #7B00FF;
             border: 2px solid #000;
             border-radius: 8px;
             font-size: 9px;
@@ -154,7 +154,7 @@
         }
 
         .stat-change.negative {
-            color: #CDFF00;
+            color: #FF6B6B;
         }
 
         /* Priority Alert */
@@ -176,12 +176,12 @@
         .alert-title {
             font-size: 16px;
             font-weight: 700;
-            color: #CDFF00;
+            color: #FFFFFF;
         }
 
         .alert-count {
-            background: #CDFF00;
-            color: #000;
+            background: #7B00FF;
+            color: #FFFFFF;
             padding: 4px 10px;
             border-radius: 12px;
             font-size: 12px;
@@ -231,8 +231,8 @@
         }
 
         .risk-badge {
-            padding: 4px 10px;
-            border-radius: 12px;
+            padding: 4px 8px;
+            border-radius: 6px;
             font-size: 11px;
             font-weight: 700;
             text-transform: uppercase;
@@ -244,9 +244,8 @@
         }
 
         .risk-badge.high {
-            background: rgba(251, 191, 36, 0.2);
-            border: 1px solid #FBBF24;
-            color: #FBBF24;
+            background: rgba(245, 158, 11, 0.2);
+            color: #F59E0B;
         }
 
         .member-issues {
@@ -262,14 +261,21 @@
         .action-button {
             width: 100%;
             padding: 12px;
-            background: #7B00FF;
-            color: #000;
+            border-radius: var(--radius-sm);
             border: none;
-            border-radius: 12px;
-            font-size: 14px;
-            font-weight: 700;
             cursor: pointer;
-            transition: all 0.2s;
+            font-weight: var(--font-weight-medium);
+            font-size: var(--font-size-base);
+            transition: all var(--transition-base);
+            font-family: var(--font-family);
+            background: var(--purple-primary);
+            color: var(--text-primary);
+        }
+
+        .action-button:hover {
+            background: var(--purple-hover);
+            transform: translateY(-1px);
+            box-shadow: var(--glow-purple-sm);
         }
 
         .action-button:active {
@@ -434,10 +440,11 @@
         .nav-item.active .nav-icon {
             opacity: 1;
             filter: drop-shadow(0 0 8px #7B00FF);
+            color: var(--purple-primary);
         }
 
         .nav-item.active .nav-label {
-            color: #7B00FF;
+            color: #FFFFFF;
             font-weight: 600;
         }
 
@@ -520,7 +527,7 @@
                 <!-- Priority Alert -->
                 <div class="priority-alert">
                     <div class="alert-header">
-                        <div class="alert-title"><svg class="icon icon-inline" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 9V13M12 17H12.01M10.29 3.86L1.82 18C1.64537 18.3024 1.55299 18.6453 1.55201 18.9945C1.55103 19.3437 1.64151 19.6871 1.81445 19.9905C1.98738 20.2939 2.23675 20.5467 2.53773 20.7239C2.83871 20.9011 3.18082 20.9962 3.53 21H20.47C20.8192 20.9962 21.1613 20.9011 21.4623 20.7239C21.7633 20.5467 22.0126 20.2939 22.1856 19.9905C22.3585 19.6871 22.449 19.3437 22.448 18.9945C22.447 18.6453 22.3546 18.3024 22.18 18L13.71 3.86C13.5317 3.56611 13.2807 3.32312 12.9812 3.15448C12.6817 2.98585 12.3438 2.89725 12 2.89725C11.6562 2.89725 11.3183 2.98585 11.0188 3.15448C10.7193 3.32312 10.4683 3.56611 10.29 3.86Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Priority Queue</div>
+                        <div class="alert-title"><svg class="icon icon-inline" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 9V13M12 17H12.01M10.29 3.86L1.82 18C1.64537 18.3024 1.55299 18.6453 1.55201 18.9945C1.55103 19.3437 1.64151 19.6871 1.81445 19.9905C1.98738 20.2939 2.23675 20.5467 2.53773 20.7239C2.83871 20.9011 3.18082 20.9962 3.53 21H20.47C20.8192 20.9962 21.1613 20.9011 21.4623 20.7239C21.7633 20.5467 22.0126 20.2939 22.1856 19.9905C22.3585 19.6871 22.449 19.3437 22.448 18.9945C22.447 18.6453 22.3546 18.3024 22.18 18L13.71 3.86C13.5317 3.56611 13.2807 3.32312 12.9812 3.15448C12.6817 2.98585 12.3438 2.89725 12 2.89725C11.6562 2.89725 11.3183 2.98585 11.0188 3.15448C10.7193 3.32312 10.4683 3.56611 10.29 3.86Z" stroke="#EF4444" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Priority Queue</div>
                         <div class="alert-count">3</div>
                     </div>
 
@@ -528,16 +535,14 @@
                     <div class="member-priority-card">
                         <div class="member-header">
                             <div class="member-avatar">
-                                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
-                                    <circle cx="12" cy="8" r="4"/>
-                                    <path d="M12 14c-6 0-9 3-9 5v2h18v-2c0-2-3-5-9-5z"/>
-                                </svg>
-                            </div>
+                                <img src="https://res.cloudinary.com/cloudninestudios/image/upload/v1765009460/penny-platt-2_otynl8.jpg"
+                                     alt="Penny Platt"
+                                     loading="lazy"></div>
                             <div class="member-info">
-                                <div class="member-name">Sarah M.</div>
+                                <div class="member-name">Penny P.</div>
                                 <div class="member-meta">Last active: 5 days ago</div>
                             </div>
-                            <div class="risk-badge critical">72%</div>
+                            <div class="risk-badge critical">72% RISK</div>
                         </div>
                         <div class="member-issues">
                             ⚠️ Skipped last 3 workouts • Email opens: 0%
@@ -549,16 +554,14 @@
                     <div class="member-priority-card">
                         <div class="member-header">
                             <div class="member-avatar">
-                                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
-                                    <circle cx="12" cy="8" r="4"/>
-                                    <path d="M12 14c-6 0-9 3-9 5v2h18v-2c0-2-3-5-9-5z"/>
-                                </svg>
-                            </div>
+                                <img src="https://res.cloudinary.com/cloudninestudios/image/upload/v1765009460/mike-johnson_e2dtyk.jpg"
+                                     alt="Mike Thompson"
+                                     loading="lazy"></div>
                             <div class="member-info">
                                 <div class="member-name">Mike T.</div>
                                 <div class="member-meta">Last active: 4 days ago</div>
                             </div>
-                            <div class="risk-badge high">68%</div>
+                            <div class="risk-badge high">68% RISK</div>
                         </div>
                         <div class="member-issues">
                             ⚠️ Missed race goal • Engagement dropping

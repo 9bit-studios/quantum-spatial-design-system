@@ -89,23 +89,9 @@
         }
 
         .greeting {
-            font-size: 32px;
+            font-size: 28px;
             font-weight: 700;
             margin-bottom: 4px;
-        }
-
-        .streak-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            background: rgba(205, 255, 0, 0.15);
-            border: 1px solid #7B00FF;
-            padding: 6px 12px;
-            border-radius: 20px;
-            font-size: 13px;
-            font-weight: 600;
-            color: #7B00FF;
-            margin-top: 8px;
         }
 
         /* Hero Workout Card */
@@ -129,24 +115,8 @@
             background: linear-gradient(90deg, #7B00FF 0%, #A0CC00 100%);
         }
 
-        .ai-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 4px;
-            background: rgba(205, 255, 0, 0.1);
-            border: 1px solid #7B00FF;
-            padding: 4px 10px;
-            border-radius: 12px;
-            font-size: 11px;
-            font-weight: 700;
-            color: #CDFF00;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 16px;
-        }
-
         .workout-title {
-            font-size: 28px;
+            font-size: 22px;
             font-weight: 700;
             margin-bottom: 8px;
         }
@@ -188,7 +158,7 @@
             line-height: 1.5;
         }
 
-        .start-button {
+        .btn-primary {
             width: 100%;
             padding: 18px;
             background: #7B00FF;
@@ -201,7 +171,7 @@
             transition: all 0.2s;
         }
 
-        .start-button:active {
+        .btn-primary:active {
             transform: scale(0.98);
             background: #8C45FF;
         }
@@ -229,7 +199,7 @@
 
         .progress-value {
             font-size: 14px;
-            color: #7B00FF;
+            color: #A0CC00;
             font-weight: 700;
         }
 
@@ -299,7 +269,7 @@
         .stat-mini-value {
             font-size: 18px;
             font-weight: 700;
-            color: #7B00FF;
+            color: #A0CC00;
             margin-bottom: 2px;
         }
 
@@ -327,7 +297,7 @@
         .quick-stat-icon {
             width: 32px;
             height: 32px;
-            background: rgba(205, 255, 0, 0.1);
+            background: #000000;
             border-radius: 8px;
             display: flex;
             align-items: center;
@@ -349,29 +319,12 @@
 
         .quick-stat-change {
             font-size: 11px;
-            color: #7B00FF;
+            color: #A0CC00;
             font-weight: 600;
             margin-top: 4px;
         }
 
-        /* Bottom Tab Bar */
-        .tab-bar {
-            position: fixed;
-            bottom: 12px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 369px;
-            background: rgba(10, 10, 10, 0.95);
-            backdrop-filter: blur(20px);
-            border: 1px solid #1A1A1A;
-            border-radius: 24px;
-            padding: 12px 20px;
-            display: flex;
-            justify-content: space-around;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-        }
-
-        .tab-item {
+        .nav-item {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -380,26 +333,29 @@
             transition: all 0.2s;
         }
 
-        .tab-icon {
+        .nav-icon {
             font-size: 24px;
             opacity: 0.5;
             transition: all 0.2s;
         }
 
-        .tab-label {
+        .nav-label {
             font-size: 10px;
             color: #888;
             font-weight: 500;
         }
 
-        .tab-item.active .tab-icon {
+        .nav-item.active .nav-icon {
             opacity: 1;
             filter: drop-shadow(0 0 8px #7B00FF);
         }
 
-        .tab-item.active .tab-label {
-            color: #7B00FF;
-            font-weight: 600;
+        .nav-label.active {
+            color: var(--text-primary);
+            font-weight: var(--font-weight-medium);
+        }
+        .nav-icon.active {
+            color: var(--purple-primary);
         }
     </style>
     <link rel="stylesheet" href="../../assets/runsmart-design-system.css">
@@ -426,8 +382,8 @@
             <div class="content">
                 <div class="header">
                     <div class="greeting">Good morning,<br>Sarah</div>
-                    <div class="streak-badge">
-                        <svg width="16" height="20" viewBox="0 0 16 20" fill="currentColor" style="color: #FF9500;">
+                    <div class="challenge-badge">
+                        <svg width="16" height="20" viewBox="0 0 16 20" fill="currentColor">
                             <path d="M8 0C5.5 3 3 6 3 9c0 2.76 2.24 5 5 5s5-2.24 5-5c0-3-2.5-6-5-9zm0 16c-1.66 0-3-1.34-3-3 0-1.5 1.5-3.5 3-5.5 1.5 2 3 4 3 5.5 0 1.66-1.34 3-3 3z"/>
                         </svg>
                         12 day streak
@@ -466,7 +422,7 @@
                         <div class="why-title">Why this workout?</div>
                         <div class="why-text">Your pace improved 8% this week. Today's easy run will help your body adapt while maintaining momentum toward your 10K goal.</div>
                     </div>
-                    <button class="start-button">Start Run</button>
+                    <button class="btn-primary">Start Run</button>
                 </div>
 
                 <div class="progress-section">
@@ -518,7 +474,7 @@
                         <div class="quick-stat-change">↑ 8% faster</div>
                     </div>
                     <div class="quick-stat-card">
-                        <svg class="quick-stat-icon" width="32" height="32" viewBox="0 0 24 24" fill="currentColor" style="color: #10B981;">
+                        <svg class="quick-stat-icon" width="32" height="32" viewBox="0 0 24 24" fill="currentColor" style="color: #7B00FF;">
                             <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
                         </svg>
                         <div class="quick-stat-value">142</div>
@@ -528,36 +484,36 @@
                 </div>
             </div>
 
-                        <div class="tab-bar">
-                <a href="mobile-app-today.html" class="tab-item active">
-                    <svg class="tab-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <div class="bottom-nav">
+                <a href="mobile-app-today.html" class="nav-item active">
+                    <svg class="nav-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
                     </svg>
-                    <div class="tab-label">Today</div>
+                    <div class="nav-label">Today</div>
                 </a>
-                <a href="mobile-app-calendar.html" class="tab-item">
-                    <svg class="tab-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <a href="mobile-app-calendar.html" class="nav-item">
+                    <svg class="nav-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"/>
                     </svg>
-                    <div class="tab-label">Calendar</div>
+                    <div class="nav-label">Calendar</div>
                 </a>
-                <a href="mobile-app-progress.html" class="tab-item">
-                    <svg class="tab-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <a href="mobile-app-progress.html" class="nav-item">
+                    <svg class="nav-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M3 13h2v8H3v-8zm4-6h2v14H7V7zm4-4h2v18h-2V3zm4 9h2v9h-2v-9zm4-5h2v14h-2V7z"/>
                     </svg>
-                    <div class="tab-label">Progress</div>
+                    <div class="nav-label">Progress</div>
                 </a>
-                <a href="mobile-app-coach.html" class="tab-item">
-                    <svg class="tab-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <a href="mobile-app-coach.html" class="nav-item">
+                    <svg class="nav-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/>
                     </svg>
-                    <div class="tab-label">Coach</div>
+                    <div class="nav-label">Coach</div>
                 </a>
-                <a href="mobile-app-community.html" class="tab-item">
-                    <svg class="tab-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <a href="mobile-app-community.html" class="nav-item">
+                    <svg class="nav-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M16 11c1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 3-1.34 3-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
                     </svg>
-                    <div class="tab-label">Community</div>
+                    <div class="nav-label">Community</div>
                 </a>
             </div>
         </div>

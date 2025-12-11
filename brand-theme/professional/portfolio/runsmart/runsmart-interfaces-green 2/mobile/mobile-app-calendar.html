@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RunSmart - Training Calendar</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', system-ui, sans-serif;
+            background: #000000;
+            color: #FFFFFF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .phone-frame {
+            width: 393px;
+            height: 852px;
+            background: #000;
+            border-radius: 55px;
+            padding: 12px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8),
+                        inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .dynamic-island {
+            position: absolute;
+            top: 12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 126px;
+            height: 37px;
+            background: #000;
+            border-radius: 20px;
+            z-index: 100;
+        }
+
+        .screen {
+            width: 100%;
+            height: 100%;
+            background: #000;
+            border-radius: 47px;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
+        .status-bar {
+            padding: 54px 24px 12px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        .content {
+            padding: 0 24px 100px 24px;
+        }
+
+        /* Header */
+        .page-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+
+        .header-title {
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        .view-toggle {
+            display: flex;
+            background: #0A0A0A;
+            border: 1px solid #1A1A1A;
+            border-radius: 20px;
+            padding: 4px;
+        }
+
+        .toggle-btn {
+            padding: 6px 16px;
+            border-radius: 16px;
+            border: none;
+            background: transparent;
+            color: #888;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .toggle-btn.active {
+            background: #CDFF00;
+            color: #000;
+        }
+
+        /* Race Countdown */
+        .race-banner {
+            background: linear-gradient(135deg, rgba(205, 255, 0, 0.15) 0%, rgba(160, 204, 0, 0.05) 100%);
+            border: 1px solid #CDFF00;
+            border-radius: 16px;
+            padding: 16px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .race-icon {
+            font-size: 32px;
+        }
+
+        .race-info {
+            flex: 1;
+        }
+
+        .race-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: #CDFF00;
+            margin-bottom: 4px;
+        }
+
+        .race-countdown {
+            font-size: 12px;
+            color: #CCC;
+        }
+
+        /* Calendar */
+        .calendar {
+            background: #0A0A0A;
+            border: 1px solid #1A1A1A;
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .calendar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .month-title {
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .nav-arrows {
+            display: flex;
+            gap: 8px;
+        }
+
+        .nav-arrow {
+            width: 32px;
+            height: 32px;
+            background: transparent;
+            border: 1px solid #1A1A1A;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            color: #888;
+            transition: all 0.2s;
+        }
+
+        .nav-arrow:active {
+            background: #151515;
+            border-color: #CDFF00;
+            color: #CDFF00;
+        }
+
+        .weekdays {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+
+        .weekday {
+            text-align: center;
+            font-size: 11px;
+            color: #666;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 8px;
+        }
+
+        .calendar-day {
+            aspect-ratio: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .day-number {
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+
+        .day-indicator {
+            width: 4px;
+            height: 4px;
+            border-radius: 2px;
+        }
+
+        /* Intensity Colors */
+        .calendar-day.rest {
+            background: transparent;
+            color: #666;
+        }
+
+        .calendar-day.easy {
+            background: rgba(74, 222, 128, 0.15);
+            border: 1px solid rgba(74, 222, 128, 0.3);
+            color: #4ADE80;
+        }
+
+        .calendar-day.easy .day-indicator {
+            background: #4ADE80;
+        }
+
+        .calendar-day.moderate {
+            background: rgba(251, 191, 36, 0.15);
+            border: 1px solid rgba(251, 191, 36, 0.3);
+            color: #FBBF24;
+        }
+
+        .calendar-day.moderate .day-indicator {
+            background: #FBBF24;
+        }
+
+        .calendar-day.hard {
+            background: rgba(239, 68, 68, 0.15);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            color: #EF4444;
+        }
+
+        .calendar-day.hard .day-indicator {
+            background: #EF4444;
+        }
+
+        .calendar-day.race {
+            background: rgba(205, 255, 0, 0.2);
+            border: 2px solid #CDFF00;
+            color: #CDFF00;
+        }
+
+        .calendar-day.race .day-indicator {
+            background: #CDFF00;
+        }
+
+        .calendar-day.today {
+            ring: 2px solid #CDFF00;
+            box-shadow: 0 0 0 2px #CDFF00;
+        }
+
+        .calendar-day.selected {
+            background: #CDFF00 !important;
+            border-color: #CDFF00 !important;
+            color: #000 !important;
+        }
+
+        .calendar-day.selected .day-indicator {
+            background: #000 !important;
+        }
+
+        .calendar-day.other-month {
+            opacity: 0.3;
+        }
+
+        /* Selected Day Detail */
+        .day-detail {
+            background: linear-gradient(135deg, #0A0A0A 0%, #0A1A0A 100%);
+            border: 1px solid #1A1A1A;
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .detail-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 16px;
+        }
+
+        .detail-date {
+            font-size: 12px;
+            color: #888;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+
+        .detail-title {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .ai-adjusted {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            background: rgba(205, 255, 0, 0.1);
+            border: 1px solid #CDFF00;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 10px;
+            font-weight: 700;
+            color: #CDFF00;
+            text-transform: uppercase;
+        }
+
+        .workout-breakdown {
+            margin-bottom: 20px;
+        }
+
+        .breakdown-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid #1A1A1A;
+        }
+
+        .breakdown-row:last-child {
+            border-bottom: none;
+        }
+
+        .breakdown-label {
+            font-size: 14px;
+            color: #888;
+        }
+
+        .breakdown-value {
+            font-size: 14px;
+            font-weight: 600;
+            color: #FFF;
+        }
+
+        .ai-insight {
+            background: rgba(205, 255, 0, 0.05);
+            border-left: 2px solid #CDFF00;
+            padding: 12px;
+            margin-bottom: 16px;
+            border-radius: 8px;
+        }
+
+        .insight-text {
+            font-size: 13px;
+            color: #CCC;
+            line-height: 1.5;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 8px;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 12px;
+            border-radius: 12px;
+            border: none;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn-primary {
+            background: #CDFF00;
+            color: #000;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #CDFF00;
+            border: 1px solid #CDFF00;
+        }
+
+        .btn:active {
+            transform: scale(0.98);
+        }
+
+        /* Tab Bar */
+        .tab-bar {
+            position: fixed;
+            bottom: 12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 369px;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid #1A1A1A;
+            border-radius: 24px;
+            padding: 12px 20px;
+            display: flex;
+            justify-content: space-around;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .tab-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+            cursor: pointer;
+        }
+
+        .tab-icon {
+            font-size: 24px;
+            opacity: 0.5;
+        }
+
+        .tab-label {
+            font-size: 10px;
+            color: #888;
+            font-weight: 500;
+        }
+
+        .tab-item.active .tab-icon {
+            opacity: 1;
+            filter: drop-shadow(0 0 8px #CDFF00);
+        }
+
+        .tab-item.active .tab-label {
+            color: #CDFF00;
+            font-weight: 600;
+        }
+
+        /* SF Symbols Icons */
+        .tab-icon svg,
+        .status-icons svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        .ai-adjusted svg {
+            width: 12px;
+            height: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="phone-frame">
+        <div class="dynamic-island"></div>
+
+        <div class="screen">
+            <div class="status-bar">
+                <div class="time">9:41</div>
+                <div class="status-icons">
+                    <svg width="18" height="12" viewBox="0 0 18 12" fill="currentColor" style="opacity: 0.8;">
+                        <circle cx="2" cy="10" r="1.5" fill="currentColor"/>
+                        <circle cx="6" cy="7.5" r="1.5" fill="currentColor"/>
+                        <circle cx="10" cy="5" r="1.5" fill="currentColor"/>
+                        <circle cx="14" cy="2.5" r="1.5" fill="currentColor"/>
+                    </svg>
+                    <svg width="22" height="12" viewBox="0 0 22 12" fill="none" style="margin-left: 6px;">
+                        <rect x="1" y="1" width="18" height="10" rx="2" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                        <rect x="3" y="3" width="13" height="6" rx="1" fill="currentColor"/>
+                        <rect x="19.5" y="4" width="1.5" height="4" rx="0.75" fill="currentColor"/>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="content">
+                <div class="page-header">
+                    <div class="header-title">Training Plan</div>
+                    <div class="view-toggle">
+                        <button class="toggle-btn active">Week</button>
+                        <button class="toggle-btn">Month</button>
+                    </div>
+                </div>
+
+                <div class="race-banner">
+                    <div class="race-icon">🏆</div>
+                    <div class="race-info">
+                        <div class="race-title">Portland 10K</div>
+                        <div class="race-countdown">42 days until race day</div>
+                    </div>
+                </div>
+
+                <div class="calendar">
+                    <div class="calendar-header">
+                        <div class="month-title">December 2024</div>
+                        <div class="nav-arrows">
+                            <button class="nav-arrow">←</button>
+                            <button class="nav-arrow">→</button>
+                        </div>
+                    </div>
+
+                    <div class="weekdays">
+                        <div class="weekday">S</div>
+                        <div class="weekday">M</div>
+                        <div class="weekday">T</div>
+                        <div class="weekday">W</div>
+                        <div class="weekday">T</div>
+                        <div class="weekday">F</div>
+                        <div class="weekday">S</div>
+                    </div>
+
+                    <div class="calendar-grid">
+                        <!-- Week 1 -->
+                        <div class="calendar-day other-month rest">
+                            <div class="day-number">27</div>
+                        </div>
+                        <div class="calendar-day other-month easy">
+                            <div class="day-number">28</div>
+                            <div class="day-indicator"></div>
+                        </div>
+                        <div class="calendar-day other-month moderate">
+                            <div class="day-number">29</div>
+                            <div class="day-indicator"></div>
+                        </div>
+                        <div class="calendar-day other-month rest">
+                            <div class="day-number">30</div>
+                        </div>
+                        <div class="calendar-day easy">
+                            <div class="day-number">1</div>
+                            <div class="day-indicator"></div>
+                        </div>
+                        <div class="calendar-day moderate">
+                            <div class="day-number">2</div>
+                            <div class="day-indicator"></div>
+                        </div>
+                        <div class="calendar-day hard">
+                            <div class="day-number">3</div>
+                            <div class="day-indicator"></div>
+                        </div>
+
+                        <!-- Week 2 -->
+                        <div class="calendar-day rest">
+                            <div class="day-number">4</div>
+                        </div>
+                        <div class="calendar-day easy">
+                            <div class="day-number">5</div>
+                            <div class="day-indicator"></div>
+                        </div>
+                        <div class="calendar-day moderate">
+                            <div class="day-number">6</div>
+                            <div class="day-indicator"></div>
+                        </div>
+                        <div class="calendar-day easy">
+                            <div class="day-number">7</div>
+                            <div class="day-indicator"></div>
+                        </div>
+                        <div class="calendar-day rest">
+                            <div class="day-number">8</div>
+                        </div>
+                        <div class="calendar-day moderate">
+                            <div class="day-number">9</div>
+                            <div class="day-indicator"></div>
+                        </div>
+                        <div class="calendar-day hard">
+                            <div class="day-number">10</div>
+                            <div class="day-indicator"></div>
+                        </div>
+
+                        <!-- Week 3 -->
+                        <div class="calendar-day rest">
+                            <div class="day-number">11</div>
+                        </div>
+                        <div class="calendar-day selected today easy">
+                            <div class="day-number">12</div>
+                            <div class="day-indicator"></div>
+                        </div>
+                        <div class="calendar-day moderate">
+                            <div class="day-number">13</div>
+                            <div class="day-indicator"></div>
+                        </div>
+                        <div class="calendar-day easy">
+                            <div class="day-number">14</div>
+                            <div class="day-indicator"></div>
+                        </div>
+                        <div class="calendar-day rest">
+                            <div class="day-number">15</div>
+                        </div>
+                        <div class="calendar-day moderate">
+                            <div class="day-number">16</div>
+                            <div class="day-indicator"></div>
+                        </div>
+                        <div class="calendar-day hard">
+                            <div class="day-number">17</div>
+                            <div class="day-indicator"></div>
+                        </div>
+
+                        <!-- Week 4 -->
+                        <div class="calendar-day rest">
+                            <div class="day-number">18</div>
+                        </div>
+                        <div class="calendar-day easy">
+                            <div class="day-number">19</div>
+                            <div class="day-indicator"></div>
+                        </div>
+                        <div class="calendar-day moderate">
+                            <div class="day-number">20</div>
+                            <div class="day-indicator"></div>
+                        </div>
+                        <div class="calendar-day easy">
+                            <div class="day-number">21</div>
+                            <div class="day-indicator"></div>
+                        </div>
+                        <div class="calendar-day rest">
+                            <div class="day-number">22</div>
+                        </div>
+                        <div class="calendar-day race">
+                            <div class="day-number">23</div>
+                            <div class="day-indicator"></div>
+                        </div>
+                        <div class="calendar-day easy">
+                            <div class="day-number">24</div>
+                            <div class="day-indicator"></div>
+                        </div>
+
+                        <!-- Week 5 -->
+                        <div class="calendar-day rest">
+                            <div class="day-number">25</div>
+                        </div>
+                        <div class="calendar-day easy">
+                            <div class="day-number">26</div>
+                            <div class="day-indicator"></div>
+                        </div>
+                        <div class="calendar-day moderate">
+                            <div class="day-number">27</div>
+                            <div class="day-indicator"></div>
+                        </div>
+                        <div class="calendar-day easy">
+                            <div class="day-number">28</div>
+                            <div class="day-indicator"></div>
+                        </div>
+                        <div class="calendar-day rest">
+                            <div class="day-number">29</div>
+                        </div>
+                        <div class="calendar-day moderate">
+                            <div class="day-number">30</div>
+                            <div class="day-indicator"></div>
+                        </div>
+                        <div class="calendar-day hard">
+                            <div class="day-number">31</div>
+                            <div class="day-indicator"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="day-detail">
+                    <div class="detail-header">
+                        <div>
+                            <div class="detail-date">Today • Dec 12</div>
+                            <div class="detail-title">Easy Recovery Run</div>
+                        </div>
+                        <div class="ai-adjusted">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M13 2L3 14h8l-1 8 10-12h-8l1-8z"/>
+                            </svg>
+                            AI Adjusted
+                        </div>
+                    </div>
+
+                    <div class="ai-insight">
+                        <div class="insight-text">Reduced intensity by 15% based on yesterday's tempo run. Your heart rate variability suggests extra recovery would optimize adaptation.</div>
+                    </div>
+
+                    <div class="workout-breakdown">
+                        <div class="breakdown-row">
+                            <div class="breakdown-label">Duration</div>
+                            <div class="breakdown-value">30 minutes</div>
+                        </div>
+                        <div class="breakdown-row">
+                            <div class="breakdown-label">Distance</div>
+                            <div class="breakdown-value">3.5 miles</div>
+                        </div>
+                        <div class="breakdown-row">
+                            <div class="breakdown-label">Target Pace</div>
+                            <div class="breakdown-value">8:30-9:00 /mi</div>
+                        </div>
+                        <div class="breakdown-row">
+                            <div class="breakdown-label">Heart Rate Zone</div>
+                            <div class="breakdown-value">Zone 2 (135-150 bpm)</div>
+                        </div>
+                        <div class="breakdown-row">
+                            <div class="breakdown-label">Intensity</div>
+                            <div class="breakdown-value">Easy</div>
+                        </div>
+                    </div>
+
+                    <div class="action-buttons">
+                        <button class="btn btn-secondary">Swap Workout</button>
+                        <button class="btn btn-primary">Start Run</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-bar">
+                <div class="tab-item">
+                    <svg class="tab-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+                    </svg>
+                    <div class="tab-label">Today</div>
+                </div>
+                <div class="tab-item active">
+                    <svg class="tab-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"/>
+                    </svg>
+                    <div class="tab-label">Calendar</div>
+                </div>
+                <div class="tab-item">
+                    <svg class="tab-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M3 13h2v8H3v-8zm4-6h2v14H7V7zm4-4h2v18h-2V3zm4 9h2v9h-2v-9zm4-5h2v14h-2V7z"/>
+                    </svg>
+                    <div class="tab-label">Progress</div>
+                </div>
+                <div class="tab-item">
+                    <svg class="tab-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/>
+                    </svg>
+                    <div class="tab-label">Coach</div>
+                </div>
+                <div class="tab-item">
+                    <svg class="tab-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M16 11c1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 3-1.34 3-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+                    </svg>
+                    <div class="tab-label">Community</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

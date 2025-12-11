@@ -143,8 +143,13 @@
 
         .toggle-button.active {
             background: #7B00FF;
-            color: #000;
+            color: #FFFFFF;
             border-color: #7B00FF;
+        }
+
+        .toggle-button:hover {
+            transform: translateY(-1px);
+            box-shadow: var(--glow-purple-sm);
         }
 
         .toggle-button:not(.active):active {
@@ -348,7 +353,10 @@
 
                 <!-- Profile -->
                 <div class="profile-card">
-                    <div class="profile-avatar">SC</div>
+                    <div class="profile-avatar">
+                        <img src="https://res.cloudinary.com/cloudninestudios/image/upload/v1765009462/steve-coach_lmfpam.jpg"
+                             alt="Steve Coach"
+                             loading="lazy"></div>
                     <div class="profile-info">
                         <div class="profile-name">Steve Coach</div>
                         <div class="profile-role">Head Running Coach</div>

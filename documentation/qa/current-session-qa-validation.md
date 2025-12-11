@@ -11,7 +11,7 @@
 ### **✅ CURRENT ACTIVE PROJECT**
 **Project**: `/petersen-portal/`  
 **Status**: ACTIVE DEVELOPMENT - 48-hour launch timeline  
-**Framework**: Next.js 15.3.3 + pnpm + turbo  
+**Framework**: Next.js 15.3.3 + npm + turbo  
 **Integration**: Quantum-Spatial Design System rehabilitation  
 **Vercel**: `petersen-portal.vercel.app` (Project ID: prj_MrjJxkMUMPn3FmXFsROl8savQi6O)
 
@@ -59,8 +59,8 @@
 ```bash
 # REQUIRED: Zero build errors
 cd /petersen-portal/
-pnpm build  # Must succeed with zero errors
-pnpm lint   # Must pass without warnings
+npm build  # Must succeed with zero errors
+npm lint   # Must pass without warnings
 ```
 
 ### **2. Inline CSS Prevention Protocol**
@@ -131,11 +131,11 @@ COMPANY_NAME="Petersen Games"
 ### **Pre-Implementation Validation**
 1. **Sources Authentication**: Validate against `/sources-of-truth/` first
 2. **Technical Standards**: Apple HIG compliance check
-3. **Framework Validation**: Next.js 15.3.3 + pnpm presets
+3. **Framework Validation**: Next.js 15.3.3 + npm presets
 4. **Environment Clean**: No Google/Twitter/Commerce contamination
 
 ### **Implementation Validation**
-1. **Build Success**: `pnpm build` completes without errors
+1. **Build Success**: `npm build` completes without errors
 2. **TypeScript Compliance**: Zero type errors
 3. **Inline CSS Check**: Zero inline styling detected
 4. **Component Usage**: Design system token compliance

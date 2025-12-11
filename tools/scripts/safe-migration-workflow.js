@@ -757,7 +757,7 @@ export { CartProvider, useCart } from './CartProvider';
         {
           phase: 'Build Testing',
           tests: [
-            'Run pnpm build',
+            'Run npm build',
             'Check for TypeScript errors',
             'Verify no forbidden patterns',
             'Check bundle size'
@@ -843,7 +843,7 @@ export { CartProvider, useCart } from './CartProvider';
     }
 
     if (Object.values(this.migrationStatus).every(v => v === true)) {
-      steps.push('Run pnpm build to test compilation');
+      steps.push('Run npm build to test compilation');
       steps.push('Deploy to Vercel preview for testing');
       steps.push('Test all functionality in preview');
       steps.push('Deploy to production when ready');

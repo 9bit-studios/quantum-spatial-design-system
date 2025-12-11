@@ -175,7 +175,7 @@
 
         .message.user .message-bubble {
             background: #7B00FF;
-            color: #000;
+            color: #FFFFFF;
             border-radius: 20px 20px 4px 20px;
             font-weight: 500;
         }
@@ -328,54 +328,41 @@
             30% { transform: translateY(-8px); }
         }
 
-        /* Tab Bar */
-        .tab-bar {
-            position: fixed;
-            bottom: 12px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 369px;
-            background: rgba(10, 10, 10, 0.95);
-            backdrop-filter: blur(20px);
-            border: 1px solid #1A1A1A;
-            border-radius: 24px;
-            padding: 12px 20px;
-            display: flex;
-            justify-content: space-around;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-        }
-
-        .tab-item {
+        .nav-item {
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 4px;
             cursor: pointer;
+            transition: all 0.2s;
         }
 
-        .tab-icon {
+        .nav-icon {
             font-size: 24px;
             opacity: 0.5;
+            transition: all 0.2s;
         }
 
-        .tab-label {
+        .nav-label {
             font-size: 10px;
             color: #888;
             font-weight: 500;
         }
 
-        .tab-item.active .tab-icon {
+        .nav-item.active .nav-icon {
             opacity: 1;
             filter: drop-shadow(0 0 8px #7B00FF);
         }
 
-        .tab-item.active .tab-label {
-            color: #7B00FF;
-            font-weight: 600;
+        .nav-label.active {
+            color: var(--text-primary);
+            font-weight: var(--font-weight-medium);
         }
-
+        .nav-icon.active {
+            color: var(--purple-primary);
+        }
         /* SF Symbols Icons */
-        .tab-icon svg,
+        .nav-icon svg,
         .status-icons svg {
             width: 24px;
             height: 24px;
@@ -434,7 +421,10 @@
             <div class="messages">
                 <!-- AI Message 1 -->
                 <div class="message ai">
-                    <div class="message-avatar"><svg class="icon icon-inline" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 2L6 13.5H10L8 22L18 11.5H14L16 2Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                    <div class="message-avatar">
+                        <img src="https://res.cloudinary.com/cloudninestudios/image/upload/v1765009462/steve-coach_lmfpam.jpg"
+                             alt="Steve AI Coach"
+                             loading="lazy"></div>
                     <div class="message-bubble">
                         Good morning Sarah! I noticed you crushed yesterday's tempo run. How are your legs feeling today?
                     </div>
@@ -449,10 +439,9 @@
                 <!-- User Message 1 -->
                 <div class="message user">
                     <div class="message-avatar">
-                        <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
-                            <circle cx="12" cy="8" r="4"/>
-                            <path d="M12 14c-6 0-9 3-9 5v2h18v-2c0-2-3-5-9-5z"/>
-                        </svg>
+                        <img src="https://res.cloudinary.com/cloudninestudios/image/upload/v1765009460/mike-johnson_e2dtyk.jpg"
+                             alt="Mike Johnson"
+                             loading="lazy">
                     </div>
                     <div class="message-bubble">
                         A bit sore, but nothing major
@@ -462,7 +451,10 @@
 
                 <!-- AI Message 2 -->
                 <div class="message ai">
-                    <div class="message-avatar"><svg class="icon icon-inline" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 2L6 13.5H10L8 22L18 11.5H14L16 2Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                    <div class="message-avatar">
+                        <img src="https://res.cloudinary.com/cloudninestudios/image/upload/v1765009462/steve-coach_lmfpam.jpg"
+                             alt="Steve AI Coach"
+                             loading="lazy"></div>
                     <div class="message-bubble">
                         Perfect! That's exactly what we want - you're adapting to the training. I've adjusted today's run to keep that progress going.
                         <div class="insight-card">
@@ -476,10 +468,9 @@
                 <!-- User Message 2 -->
                 <div class="message user">
                     <div class="message-avatar">
-                        <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
-                            <circle cx="12" cy="8" r="4"/>
-                            <path d="M12 14c-6 0-9 3-9 5v2h18v-2c0-2-3-5-9-5z"/>
-                        </svg>
+                        <img src="https://res.cloudinary.com/cloudninestudios/image/upload/v1765009460/mike-johnson_e2dtyk.jpg"
+                             alt="Mike Johnson"
+                             loading="lazy">
                     </div>
                     <div class="message-bubble">
                         Should I run in the rain today?
@@ -489,7 +480,10 @@
 
                 <!-- AI Message 3 -->
                 <div class="message ai">
-                    <div class="message-avatar"><svg class="icon icon-inline" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 2L6 13.5H10L8 22L18 11.5H14L16 2Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                    <div class="message-avatar">
+                        <img src="https://res.cloudinary.com/cloudninestudios/image/upload/v1765009462/steve-coach_lmfpam.jpg"
+                             alt="Steve AI Coach"
+                             loading="lazy"></div>
                     <div class="message-bubble">
                         Light rain is actually great for running! Here's what I recommend:
                         <br><br>
@@ -506,10 +500,9 @@
                 <!-- User Message 3 -->
                 <div class="message user">
                     <div class="message-avatar">
-                        <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
-                            <circle cx="12" cy="8" r="4"/>
-                            <path d="M12 14c-6 0-9 3-9 5v2h18v-2c0-2-3-5-9-5z"/>
-                        </svg>
+                        <img src="https://res.cloudinary.com/cloudninestudios/image/upload/v1765009460/mike-johnson_e2dtyk.jpg"
+                             alt="Mike Johnson"
+                             loading="lazy">
                     </div>
                     <div class="message-bubble">
                         I only have 20 minutes today, work meeting came up
@@ -519,14 +512,17 @@
 
                 <!-- AI Message 4 -->
                 <div class="message ai">
-                    <div class="message-avatar"><svg class="icon icon-inline" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 2L6 13.5H10L8 22L18 11.5H14L16 2Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                    <div class="message-avatar">
+                        <img src="https://res.cloudinary.com/cloudninestudios/image/upload/v1765009462/steve-coach_lmfpam.jpg"
+                             alt="Steve AI Coach"
+                             loading="lazy"></div>
                     <div class="message-bubble">
                         No problem! Quality over quantity. Here's your modified workout:
                         <div class="insight-card">
                             <div class="insight-title"><svg class="icon icon-inline" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="13.5" cy="4" r="2" stroke="currentColor" stroke-width="1.5"/><path d="M8 22L10.5 18L11 13L9 11L5 12M16 11L14 8L11 9L11.5 13L14 16M19 22L16.5 19L14 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Quick Workout</div>
                             <div class="insight-text">
                                 <strong>5 min warm-up</strong><br>
-                                <strong>10 min tempo</strong> (comfortably hard)<br>
+                                <strong>10 min tempo</strong> (comfornavly hard)<br>
                                 <strong>5 min cool-down</strong><br>
                                 <br>
                                 Short runs still build fitness when done right!
@@ -542,7 +538,10 @@
 
                 <!-- Typing Indicator -->
                 <div class="message ai" style="margin-top: 20px;">
-                    <div class="message-avatar"><svg class="icon icon-inline" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 2L6 13.5H10L8 22L18 11.5H14L16 2Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                    <div class="message-avatar">
+                        <img src="https://res.cloudinary.com/cloudninestudios/image/upload/v1765009462/steve-coach_lmfpam.jpg"
+                             alt="Steve AI Coach"
+                             loading="lazy"></div>
                     <div class="message-bubble">
                         <div class="typing-indicator">
                             <div class="typing-dot"></div>
@@ -556,7 +555,7 @@
             <div class="input-bar">
                 <div class="input-container">
                     <button class="voice-button">
-                        <svg viewBox="0 0 24 24" fill="currentColor">
+                        <svg viewBox="0 0 24 24" fill="#888888">
                             <path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z"/>
                             <path d="M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"/>
                         </svg>
@@ -567,43 +566,43 @@
                         rows="1"
                     ></textarea>
                     <button class="send-button">
-                        <svg viewBox="0 0 24 24" fill="#000">
+                        <svg viewBox="0 0 24 24" fill="#FFFFFF">
                             <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
                         </svg>
                     </button>
                 </div>
             </div>
 
-                        <div class="tab-bar">
-                <a href="mobile-app-today.html" class="tab-item">
-                    <svg class="tab-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <div class="bottom-nav">
+                <a href="mobile-app-today.html" class="nav-item">
+                    <svg class="nav-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
                     </svg>
-                    <div class="tab-label">Today</div>
+                    <div class="nav-label">Today</div>
                 </a>
-                <a href="mobile-app-calendar.html" class="tab-item">
-                    <svg class="tab-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <a href="mobile-app-calendar.html" class="nav-item">
+                    <svg class="nav-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"/>
                     </svg>
-                    <div class="tab-label">Calendar</div>
+                    <div class="nav-label">Calendar</div>
                 </a>
-                <a href="mobile-app-progress.html" class="tab-item">
-                    <svg class="tab-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <a href="mobile-app-progress.html" class="nav-item">
+                    <svg class="nav-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M3 13h2v8H3v-8zm4-6h2v14H7V7zm4-4h2v18h-2V3zm4 9h2v9h-2v-9zm4-5h2v14h-2V7z"/>
                     </svg>
-                    <div class="tab-label">Progress</div>
+                    <div class="nav-label">Progress</div>
                 </a>
-                <a href="mobile-app-coach.html" class="tab-item active">
-                    <svg class="tab-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <a href="mobile-app-coach.html" class="nav-item active">
+                    <svg class="nav-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/>
                     </svg>
-                    <div class="tab-label">Coach</div>
+                    <div class="nav-label">Coach</div>
                 </a>
-                <a href="mobile-app-community.html" class="tab-item">
-                    <svg class="tab-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <a href="mobile-app-community.html" class="nav-item">
+                    <svg class="nav-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M16 11c1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 3-1.34 3-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
                     </svg>
-                    <div class="tab-label">Community</div>
+                    <div class="nav-label">Community</div>
                 </a>
             </div>
         </div>

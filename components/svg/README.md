@@ -163,7 +163,7 @@ import { QuantumSizes } from '@/components/svg';
 
 ## 🛠️ Installation
 
-### npm/yarn/pnpm
+### npm/yarn/npm
 
 ```bash
 # Copy files to your project

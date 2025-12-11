@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RunSmart - AI Coach</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', system-ui, sans-serif;
+            background: #000000;
+            color: #FFFFFF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .phone-frame {
+            width: 393px;
+            height: 852px;
+            background: #000;
+            border-radius: 55px;
+            padding: 12px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8),
+                        inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .dynamic-island {
+            position: absolute;
+            top: 12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 126px;
+            height: 37px;
+            background: #000;
+            border-radius: 20px;
+            z-index: 100;
+        }
+
+        .screen {
+            width: 100%;
+            height: 100%;
+            background: #000;
+            border-radius: 47px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .status-bar {
+            padding: 54px 24px 12px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        /* Header */
+        .chat-header {
+            padding: 0 24px 16px 24px;
+            border-bottom: 1px solid #1A1A1A;
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .header-title {
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        .settings-icon {
+            width: 36px;
+            height: 36px;
+            background: #0A0A0A;
+            border: 1px solid #1A1A1A;
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .ai-status {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 12px;
+            color: #CDFF00;
+        }
+
+        .status-dot {
+            width: 6px;
+            height: 6px;
+            background: #CDFF00;
+            border-radius: 3px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        /* Messages */
+        .messages {
+            flex: 1;
+            padding: 20px 24px;
+            overflow-y: auto;
+        }
+
+        .message {
+            margin-bottom: 16px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .message.ai {
+            align-items: flex-start;
+        }
+
+        .message.user {
+            align-items: flex-end;
+        }
+
+        .message-avatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 16px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+        }
+
+        .message.ai .message-avatar {
+            background: linear-gradient(135deg, #CDFF00 0%, #A0CC00 100%);
+            color: #000;
+        }
+
+        .message.user .message-avatar {
+            background: #333;
+        }
+
+        .message-bubble {
+            max-width: 75%;
+            padding: 12px 16px;
+            border-radius: 20px;
+            font-size: 15px;
+            line-height: 1.4;
+        }
+
+        .message.ai .message-bubble {
+            background: linear-gradient(135deg, #0A0A0A 0%, #0A1A0A 100%);
+            border: 1px solid #1A1A1A;
+            border-radius: 20px 20px 20px 4px;
+        }
+
+        .message.user .message-bubble {
+            background: #CDFF00;
+            color: #000;
+            border-radius: 20px 20px 4px 20px;
+            font-weight: 500;
+        }
+
+        .message-time {
+            font-size: 11px;
+            color: #666;
+            margin-top: 4px;
+            padding: 0 8px;
+        }
+
+        /* Quick Actions */
+        .quick-actions {
+            display: flex;
+            gap: 8px;
+            margin-top: 12px;
+        }
+
+        .quick-action-btn {
+            padding: 8px 14px;
+            background: transparent;
+            border: 1px solid #CDFF00;
+            color: #CDFF00;
+            border-radius: 16px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .quick-action-btn:active {
+            background: rgba(205, 255, 0, 0.1);
+            transform: scale(0.95);
+        }
+
+        /* AI Insight Card */
+        .insight-card {
+            background: rgba(205, 255, 0, 0.05);
+            border: 1px solid #CDFF00;
+            border-radius: 16px;
+            padding: 12px;
+            margin-top: 8px;
+        }
+
+        .insight-title {
+            font-size: 12px;
+            font-weight: 700;
+            color: #CDFF00;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+
+        .insight-text {
+            font-size: 14px;
+            color: #CCC;
+            line-height: 1.4;
+        }
+
+        /* Input Bar */
+        .input-bar {
+            padding: 12px 24px 24px 24px;
+            border-top: 1px solid #1A1A1A;
+            background: #000;
+        }
+
+        .input-container {
+            display: flex;
+            gap: 8px;
+            align-items: flex-end;
+        }
+
+        .input-field {
+            flex: 1;
+            background: #0A0A0A;
+            border: 1px solid #1A1A1A;
+            border-radius: 24px;
+            padding: 12px 16px;
+            color: #FFF;
+            font-size: 15px;
+            font-family: inherit;
+            resize: none;
+            max-height: 100px;
+        }
+
+        .input-field:focus {
+            outline: none;
+            border-color: #CDFF00;
+        }
+
+        .input-field::placeholder {
+            color: #666;
+        }
+
+        .send-button {
+            width: 44px;
+            height: 44px;
+            background: #CDFF00;
+            border: none;
+            border-radius: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 20px;
+            transition: all 0.2s;
+        }
+
+        .send-button:active {
+            transform: scale(0.9);
+        }
+
+        .voice-button {
+            width: 44px;
+            height: 44px;
+            background: #0A0A0A;
+            border: 1px solid #1A1A1A;
+            border-radius: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 20px;
+            transition: all 0.2s;
+        }
+
+        .voice-button:active {
+            background: #151515;
+        }
+
+        /* Typing Indicator */
+        .typing-indicator {
+            display: flex;
+            gap: 4px;
+            padding: 12px 16px;
+        }
+
+        .typing-dot {
+            width: 8px;
+            height: 8px;
+            background: #666;
+            border-radius: 4px;
+            animation: typing 1.4s infinite;
+        }
+
+        .typing-dot:nth-child(2) { animation-delay: 0.2s; }
+        .typing-dot:nth-child(3) { animation-delay: 0.4s; }
+
+        @keyframes typing {
+            0%, 60%, 100% { transform: translateY(0); }
+            30% { transform: translateY(-8px); }
+        }
+
+        /* Tab Bar */
+        .tab-bar {
+            position: fixed;
+            bottom: 12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 369px;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid #1A1A1A;
+            border-radius: 24px;
+            padding: 12px 20px;
+            display: flex;
+            justify-content: space-around;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .tab-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+            cursor: pointer;
+        }
+
+        .tab-icon {
+            font-size: 24px;
+            opacity: 0.5;
+        }
+
+        .tab-label {
+            font-size: 10px;
+            color: #888;
+            font-weight: 500;
+        }
+
+        .tab-item.active .tab-icon {
+            opacity: 1;
+            filter: drop-shadow(0 0 8px #CDFF00);
+        }
+
+        .tab-item.active .tab-label {
+            color: #CDFF00;
+            font-weight: 600;
+        }
+
+        /* SF Symbols Icons */
+        .tab-icon svg,
+        .status-icons svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        .settings-icon svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        .voice-button svg,
+        .send-button svg {
+            width: 20px;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="phone-frame">
+        <div class="dynamic-island"></div>
+
+        <div class="screen">
+            <div class="status-bar">
+                <div class="time">9:41</div>
+                <div class="status-icons">
+                    <svg width="18" height="12" viewBox="0 0 18 12" fill="currentColor" style="opacity: 0.8;">
+                        <circle cx="2" cy="10" r="1.5" fill="currentColor"/>
+                        <circle cx="6" cy="7.5" r="1.5" fill="currentColor"/>
+                        <circle cx="10" cy="5" r="1.5" fill="currentColor"/>
+                        <circle cx="14" cy="2.5" r="1.5" fill="currentColor"/>
+                    </svg>
+                    <svg width="22" height="12" viewBox="0 0 22 12" fill="none" style="margin-left: 6px;">
+                        <rect x="1" y="1" width="18" height="10" rx="2" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                        <rect x="3" y="3" width="13" height="6" rx="1" fill="currentColor"/>
+                        <rect x="19.5" y="4" width="1.5" height="4" rx="0.75" fill="currentColor"/>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="chat-header">
+                <div class="header-top">
+                    <div class="header-title">AI Coach</div>
+                    <div class="settings-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="ai-status">
+                    <div class="status-dot"></div>
+                    <span>AI is online and learning your patterns</span>
+                </div>
+            </div>
+
+            <div class="messages">
+                <!-- AI Message 1 -->
+                <div class="message ai">
+                    <div class="message-avatar">⚡</div>
+                    <div class="message-bubble">
+                        Good morning Sarah! I noticed you crushed yesterday's tempo run. How are your legs feeling today?
+                    </div>
+                    <div class="message-time">Today, 8:15 AM</div>
+                    <div class="quick-actions">
+                        <button class="quick-action-btn">Feeling great!</button>
+                        <button class="quick-action-btn">A bit sore</button>
+                        <button class="quick-action-btn">Need rest</button>
+                    </div>
+                </div>
+
+                <!-- User Message 1 -->
+                <div class="message user">
+                    <div class="message-avatar">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+                            <circle cx="12" cy="8" r="4"/>
+                            <path d="M12 14c-6 0-9 3-9 5v2h18v-2c0-2-3-5-9-5z"/>
+                        </svg>
+                    </div>
+                    <div class="message-bubble">
+                        A bit sore, but nothing major
+                    </div>
+                    <div class="message-time">8:17 AM</div>
+                </div>
+
+                <!-- AI Message 2 -->
+                <div class="message ai">
+                    <div class="message-avatar">⚡</div>
+                    <div class="message-bubble">
+                        Perfect! That's exactly what we want - you're adapting to the training. I've adjusted today's run to keep that progress going.
+                        <div class="insight-card">
+                            <div class="insight-title">⚡ Adjustment Made</div>
+                            <div class="insight-text">Reduced intensity by 10% to optimize recovery while maintaining momentum. Your pace is trending up 8% this week!</div>
+                        </div>
+                    </div>
+                    <div class="message-time">8:18 AM</div>
+                </div>
+
+                <!-- User Message 2 -->
+                <div class="message user">
+                    <div class="message-avatar">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+                            <circle cx="12" cy="8" r="4"/>
+                            <path d="M12 14c-6 0-9 3-9 5v2h18v-2c0-2-3-5-9-5z"/>
+                        </svg>
+                    </div>
+                    <div class="message-bubble">
+                        Should I run in the rain today?
+                    </div>
+                    <div class="message-time">8:45 AM</div>
+                </div>
+
+                <!-- AI Message 3 -->
+                <div class="message ai">
+                    <div class="message-avatar">⚡</div>
+                    <div class="message-bubble">
+                        Light rain is actually great for running! Here's what I recommend:
+                        <br><br>
+                        ✓ Wear a light rain jacket<br>
+                        ✓ Choose routes with good drainage<br>
+                        ✓ Watch for slippery surfaces<br>
+                        ✓ Add 15-30 sec to your pace<br>
+                        <br>
+                        Weather builds mental toughness! 💪
+                    </div>
+                    <div class="message-time">8:46 AM</div>
+                </div>
+
+                <!-- User Message 3 -->
+                <div class="message user">
+                    <div class="message-avatar">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+                            <circle cx="12" cy="8" r="4"/>
+                            <path d="M12 14c-6 0-9 3-9 5v2h18v-2c0-2-3-5-9-5z"/>
+                        </svg>
+                    </div>
+                    <div class="message-bubble">
+                        I only have 20 minutes today, work meeting came up
+                    </div>
+                    <div class="message-time">9:30 AM</div>
+                </div>
+
+                <!-- AI Message 4 -->
+                <div class="message ai">
+                    <div class="message-avatar">⚡</div>
+                    <div class="message-bubble">
+                        No problem! Quality over quantity. Here's your modified workout:
+                        <div class="insight-card">
+                            <div class="insight-title">🏃 Quick Workout</div>
+                            <div class="insight-text">
+                                <strong>5 min warm-up</strong><br>
+                                <strong>10 min tempo</strong> (comfortably hard)<br>
+                                <strong>5 min cool-down</strong><br>
+                                <br>
+                                Short runs still build fitness when done right!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="message-time">9:31 AM</div>
+                    <div class="quick-actions">
+                        <button class="quick-action-btn">Start Workout</button>
+                        <button class="quick-action-btn">Save for Later</button>
+                    </div>
+                </div>
+
+                <!-- Typing Indicator -->
+                <div class="message ai" style="margin-top: 20px;">
+                    <div class="message-avatar">⚡</div>
+                    <div class="message-bubble">
+                        <div class="typing-indicator">
+                            <div class="typing-dot"></div>
+                            <div class="typing-dot"></div>
+                            <div class="typing-dot"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-bar">
+                <div class="input-container">
+                    <button class="voice-button">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z"/>
+                            <path d="M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"/>
+                        </svg>
+                    </button>
+                    <textarea
+                        class="input-field"
+                        placeholder="Ask your coach anything..."
+                        rows="1"
+                    ></textarea>
+                    <button class="send-button">
+                        <svg viewBox="0 0 24 24" fill="#000">
+                            <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="tab-bar">
+                <div class="tab-item">
+                    <svg class="tab-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+                    </svg>
+                    <div class="tab-label">Today</div>
+                </div>
+                <div class="tab-item">
+                    <svg class="tab-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"/>
+                    </svg>
+                    <div class="tab-label">Calendar</div>
+                </div>
+                <div class="tab-item">
+                    <svg class="tab-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M3 13h2v8H3v-8zm4-6h2v14H7V7zm4-4h2v18h-2V3zm4 9h2v9h-2v-9zm4-5h2v14h-2V7z"/>
+                    </svg>
+                    <div class="tab-label">Progress</div>
+                </div>
+                <div class="tab-item active">
+                    <svg class="tab-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/>
+                    </svg>
+                    <div class="tab-label">Coach</div>
+                </div>
+                <div class="tab-item">
+                    <svg class="tab-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M16 11c1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 3-1.34 3-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+                    </svg>
+                    <div class="tab-label">Community</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
