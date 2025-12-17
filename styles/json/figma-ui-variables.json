@@ -1,0 +1,182 @@
+{
+  "colors": [
+    {
+      "name": "color-styles-dark-mode-fill",
+      "value": "#00000080",
+      "category": "foundation",
+      "source": "Color Styles Dark Mode",
+      "usage": 4
+    },
+    {
+      "name": "circle-fill",
+      "value": "#FFFFFFE5",
+      "category": "extracted",
+      "source": "Circle",
+      "usage": 32
+    },
+    {
+      "name": "circle-stroke",
+      "value": "#FFFFFF1A",
+      "category": "extracted",
+      "source": "Circle",
+      "usage": 30
+    },
+    {
+      "name": "circle-fill",
+      "value": "#FFFFFF99",
+      "category": "extracted",
+      "source": "Circle",
+      "usage": 1
+    },
+    {
+      "name": "circle-fill",
+      "value": "#FFFFFF73",
+      "category": "extracted",
+      "source": "Circle",
+      "usage": 2
+    },
+    {
+      "name": "circle-fill",
+      "value": "#000000FF",
+      "category": "foundation",
+      "source": "Circle",
+      "usage": 1
+    },
+    {
+      "name": "circle-fill",
+      "value": "#160918FF",
+      "category": "extracted",
+      "source": "Circle",
+      "usage": 2
+    },
+    {
+      "name": "circle-fill",
+      "value": "#050614FF",
+      "category": "extracted",
+      "source": "Circle",
+      "usage": 1
+    },
+    {
+      "name": "circle-fill",
+      "value": "#0B010DCC",
+      "category": "extracted",
+      "source": "Circle",
+      "usage": 1
+    },
+    {
+      "name": "circle-fill",
+      "value": "#16091899",
+      "category": "extracted",
+      "source": "Circle",
+      "usage": 1
+    },
+    {
+      "name": "circle-fill",
+      "value": "#16090E66",
+      "category": "extracted",
+      "source": "Circle",
+      "usage": 1
+    },
+    {
+      "name": "circle-fill",
+      "value": "#FFFFFF12",
+      "category": "extracted",
+      "source": "Circle",
+      "usage": 1
+    },
+    {
+      "name": "circle-fill",
+      "value": "#7B00FFFF",
+      "category": "extracted",
+      "source": "Circle",
+      "usage": 3
+    },
+    {
+      "name": "circle-fill",
+      "value": "#5AC8FAFF",
+      "category": "accent",
+      "source": "Circle",
+      "usage": 1
+    },
+    {
+      "name": "circle-fill",
+      "value": "#007AFFFF",
+      "category": "extracted",
+      "source": "Circle",
+      "usage": 1
+    },
+    {
+      "name": "circle-fill",
+      "value": "#3B39ECFF",
+      "category": "extracted",
+      "source": "Circle",
+      "usage": 1
+    },
+    {
+      "name": "circle-fill",
+      "value": "#FF9D3FFF",
+      "category": "accent",
+      "source": "Circle",
+      "usage": 1
+    },
+    {
+      "name": "circle-fill",
+      "value": "#FE575EFF",
+      "category": "accent",
+      "source": "Circle",
+      "usage": 1
+    },
+    {
+      "name": "circle-fill",
+      "value": "#D0196BFF",
+      "category": "extracted",
+      "source": "Circle",
+      "usage": 1
+    },
+    {
+      "name": "circle-fill",
+      "value": "#CB30E0FF",
+      "category": "accent",
+      "source": "Circle",
+      "usage": 1
+    },
+    {
+      "name": "circle-fill",
+      "value": "#911EFAFF",
+      "category": "extracted",
+      "source": "Circle",
+      "usage": 1
+    },
+    {
+      "name": "circle-fill",
+      "value": "#34C759FF",
+      "category": "accent",
+      "source": "Circle",
+      "usage": 1
+    },
+    {
+      "name": "circle-fill",
+      "value": "#44009BFF",
+      "category": "extracted",
+      "source": "Circle",
+      "usage": 1
+    },
+    {
+      "name": "circle-fill",
+      "value": "#FFFFFFFF",
+      "category": "extracted",
+      "source": "Circle",
+      "usage": 1
+    },
+    {
+      "name": "circle-fill",
+      "value": "#8C45FFFF",
+      "category": "accent",
+      "source": "Circle",
+      "usage": 1
+    }
+  ],
+  "timestamp": "2025-12-17T07:56:33.159Z",
+  "figmaFileKey": "unknown",
+  "extractedFrom": "Color Styles Dark Mode, Color Styles UI, Color Styles Button"
+}

@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RunSmart Design System | Portfolio Showcase</title>
+    <link rel="stylesheet" href="assets/runsmart-design-system.css">
+    <style>
+        body {
+            background: #000000;
+            padding: 0;
+            margin: 0;
+        }
+
+        .showcase-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 64px 32px;
+        }
+
+        /* Header */
+        .showcase-header {
+            text-align: center;
+            margin-bottom: 64px;
+        }
+
+        .showcase-logo {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #7B00FF, #A0CC00);
+            border-radius: 20px;
+            margin: 0 auto 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            font-weight: 700;
+            color: white;
+        }
+
+        .showcase-title {
+            font-size: 56px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, #FFFFFF, #A0CC00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .showcase-subtitle {
+            font-size: 20px;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 32px;
+            line-height: 1.6;
+        }
+
+        .showcase-meta {
+            display: flex;
+            gap: 24px;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .meta-badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: var(--dark-surface);
+            border: 1px solid var(--border-medium);
+            border-radius: var(--radius-full);
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        .meta-badge svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        /* Section Headers */
+        .section {
+            margin-bottom: 64px;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+
+        .section-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--purple-primary);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .section-title {
+            font-size: 32px;
+            font-weight: 600;
+        }
+
+        .section-subtitle {
+            color: var(--text-secondary);
+            font-size: 16px;
+            margin-top: 4px;
+        }
+
+        /* Screen Grid */
+        .screen-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 32px;
+        }
+
+        .screen-card {
+            background: var(--dark-bg);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-xl);
+            padding: 24px;
+            transition: all var(--transition-base);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .screen-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--purple-primary), var(--lime-primary));
+            opacity: 0;
+            transition: opacity var(--transition-base);
+        }
+
+        .screen-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--purple-primary);
+            box-shadow: var(--shadow-xl), var(--glow-purple-sm);
+        }
+
+        .screen-card:hover::before {
+            opacity: 1;
+        }
+
+        .screen-preview {
+            width: 100%;
+            aspect-ratio: 16 / 10;
+            background: linear-gradient(135deg, #0A0A0A, #1A1A1A);
+            border-radius: var(--radius-md);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--border-subtle);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .screen-preview-icon {
+            font-size: 48px;
+            opacity: 0.3;
+        }
+
+        .screen-card:hover .screen-preview {
+            border-color: var(--purple-primary);
+        }
+
+        .screen-info {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .screen-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .screen-description {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        .screen-tags {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-top: 8px;
+        }
+
+        .tag {
+            padding: 4px 12px;
+            background: var(--dark-surface);
+            border-radius: var(--radius-full);
+            font-size: 12px;
+            color: var(--text-tertiary);
+        }
+
+        .tag.tag-desktop {
+            background: rgba(123, 0, 255, 0.2);
+            color: var(--purple-primary);
+        }
+
+        .tag.tag-mobile {
+            background: rgba(205, 255, 0, 0.2);
+            color: var(--lime-primary);
+        }
+
+        .tag.tag-watch {
+            background: rgba(59, 130, 246, 0.2);
+            color: #3B82F6;
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 24px;
+            background: var(--dark-bg);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-xl);
+            padding: 32px;
+            margin-bottom: 64px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--purple-primary);
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Footer */
+        .showcase-footer {
+            text-align: center;
+            padding: 48px 0;
+            border-top: 1px solid var(--border-subtle);
+            margin-top: 64px;
+        }
+
+        .footer-text {
+            color: var(--text-tertiary);
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .showcase-title {
+                font-size: 36px;
+            }
+
+            .screen-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-bar {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="showcase-container">
+        <!-- Header -->
+        <div class="showcase-header">
+            <div class="showcase-logo">RS</div>
+            <h1 class="showcase-title">RunSmart Design System</h1>
+            <p class="showcase-subtitle">
+                AI-Powered Member Intelligence Platform with Apple HIG-Compliant Quantum-Spatial Design System
+            </p>
+            <div class="showcase-meta">
+                <div class="meta-badge">
+                    <svg class="icon-inline" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 2L6 13.5H10L8 22L18 11.5H14L16 2Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    Neural Engine Accelerated
+                </div>
+                <div class="meta-badge">
+                    <svg class="icon-inline" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 18H15M10 21H14M12 3C8.68629 3 6 5.68629 6 9C6 10.5 6.5 11.5 7 13C7.5 14.5 8 16 8 18H16C16 16 16.5 14.5 17 13C17.5 11.5 18 10.5 18 9C18 5.68629 15.3137 3 12 3Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    Apple Intelligence Ready
+                </div>
+                <div class="meta-badge">14 Screens</div>
+                <div class="meta-badge">Unified Design Tokens</div>
+            </div>
+        </div>
+
+        <!-- Stats Bar -->
+        <div class="stats-bar">
+            <div class="stat-item">
+                <div class="stat-value">14</div>
+                <div class="stat-label">Total Screens</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value">3</div>
+                <div class="stat-label">Platforms</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value">100%</div>
+                <div class="stat-label">HIG Compliant</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value">SF</div>
+                <div class="stat-label">Symbol Icons</div>
+            </div>
+        </div>
+
+        <!-- Desktop Section -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="2" y="3" width="20" height="14" rx="2" stroke="white" stroke-width="2"/>
+                        <path d="M8 21H16M12 17V21" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <div>
+                    <h2 class="section-title">Desktop Dashboard</h2>
+                    <p class="section-subtitle">Executive Member Intelligence & Analytics</p>
+                </div>
+            </div>
+
+            <div class="screen-grid">
+                <a href="dashboard/runsmart-dashboard.html" class="screen-card" style="text-decoration: none; color: inherit;">
+                    <div class="screen-preview">
+                        <div class="screen-preview-icon">📊</div>
+                    </div>
+                    <div class="screen-info">
+                        <h3 class="screen-title">Dashboard Home</h3>
+                        <p class="screen-description">Executive overview with member stats, risk analysis, and AI-powered insights</p>
+                        <div class="screen-tags">
+                            <span class="tag tag-desktop">Desktop</span>
+                            <span class="tag">Analytics</span>
+                            <span class="tag">AI Intelligence</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="dashboard/runsmart-member-detail.html" class="screen-card" style="text-decoration: none; color: inherit;">
+                    <div class="screen-preview">
+                        <div class="screen-preview-icon">👤</div>
+                    </div>
+                    <div class="screen-info">
+                        <h3 class="screen-title">Member Detail</h3>
+                        <p class="screen-description">Deep dive into individual member metrics, training history, and intervention recommendations</p>
+                        <div class="screen-tags">
+                            <span class="tag tag-desktop">Desktop</span>
+                            <span class="tag">Member Intel</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="dashboard/runsmart-email-intelligence.html" class="screen-card" style="text-decoration: none; color: inherit;">
+                    <div class="screen-preview">
+                        <div class="screen-preview-icon">📧</div>
+                    </div>
+                    <div class="screen-info">
+                        <h3 class="screen-title">Email Intelligence</h3>
+                        <p class="screen-description">AI-powered email campaigns with predictive engagement analytics</p>
+                        <div class="screen-tags">
+                            <span class="tag tag-desktop">Desktop</span>
+                            <span class="tag">Campaigns</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="dashboard/mobile-coach-intervention.html" class="screen-card" style="text-decoration: none; color: inherit;">
+                    <div class="screen-preview">
+                        <div class="screen-preview-icon">🎯</div>
+                    </div>
+                    <div class="screen-info">
+                        <h3 class="screen-title">Coach Intervention Center</h3>
+                        <p class="screen-description">iPad-optimized intervention dashboard with risk prioritization</p>
+                        <div class="screen-tags">
+                            <span class="tag tag-desktop">iPad</span>
+                            <span class="tag">Coach Tools</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- Mobile Member Section -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="7" y="2" width="10" height="20" rx="2" stroke="white" stroke-width="2"/>
+                        <path d="M12 18H12.01" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <div>
+                    <h2 class="section-title">Mobile Member App</h2>
+                    <p class="section-subtitle">iPhone App for Running Athletes</p>
+                </div>
+            </div>
+
+            <div class="screen-grid">
+                <a href="mobile/members/mobile-app-today.html" class="screen-card" style="text-decoration: none; color: inherit;">
+                    <div class="screen-preview">
+                        <div class="screen-preview-icon">🏃</div>
+                    </div>
+                    <div class="screen-info">
+                        <h3 class="screen-title">Today View</h3>
+                        <p class="screen-description">Daily training overview with AI-generated workout recommendations</p>
+                        <div class="screen-tags">
+                            <span class="tag tag-mobile">Mobile</span>
+                            <span class="tag">Member</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="mobile/members/mobile-app-calendar.html" class="screen-card" style="text-decoration: none; color: inherit;">
+                    <div class="screen-preview">
+                        <div class="screen-preview-icon">📅</div>
+                    </div>
+                    <div class="screen-info">
+                        <h3 class="screen-title">Training Calendar</h3>
+                        <p class="screen-description">Visual training plan with workout scheduling and progress tracking</p>
+                        <div class="screen-tags">
+                            <span class="tag tag-mobile">Mobile</span>
+                            <span class="tag">Planning</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="mobile/members/mobile-app-progress.html" class="screen-card" style="text-decoration: none; color: inherit;">
+                    <div class="screen-preview">
+                        <div class="screen-preview-icon">📈</div>
+                    </div>
+                    <div class="screen-info">
+                        <h3 class="screen-title">Progress & Stats</h3>
+                        <p class="screen-description">Performance metrics, personal records, and achievement milestones</p>
+                        <div class="screen-tags">
+                            <span class="tag tag-mobile">Mobile</span>
+                            <span class="tag">Analytics</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="mobile/members/mobile-app-community.html" class="screen-card" style="text-decoration: none; color: inherit;">
+                    <div class="screen-preview">
+                        <div class="screen-preview-icon">👥</div>
+                    </div>
+                    <div class="screen-info">
+                        <h3 class="screen-title">Community Feed</h3>
+                        <p class="screen-description">Social features, challenges, and leaderboards for team motivation</p>
+                        <div class="screen-tags">
+                            <span class="tag tag-mobile">Mobile</span>
+                            <span class="tag">Social</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="mobile/members/mobile-app-coach.html" class="screen-card" style="text-decoration: none; color: inherit;">
+                    <div class="screen-preview">
+                        <div class="screen-preview-icon">💬</div>
+                    </div>
+                    <div class="screen-info">
+                        <h3 class="screen-title">AI Coach Chat</h3>
+                        <p class="screen-description">Real-time coaching conversations with AI-powered training adjustments</p>
+                        <div class="screen-tags">
+                            <span class="tag tag-mobile">Mobile</span>
+                            <span class="tag">AI Coach</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- Mobile Coach Section -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="7" y="2" width="10" height="20" rx="2" stroke="white" stroke-width="2"/>
+                        <circle cx="12" cy="12" r="3" stroke="white" stroke-width="2"/>
+                    </svg>
+                </div>
+                <div>
+                    <h2 class="section-title">Mobile Coach App</h2>
+                    <p class="section-subtitle">iPhone App for Running Coaches</p>
+                </div>
+            </div>
+
+            <div class="screen-grid">
+                <a href="mobile/coach/mobile-coach-dashboard.html" class="screen-card" style="text-decoration: none; color: inherit;">
+                    <div class="screen-preview">
+                        <div class="screen-preview-icon">📊</div>
+                    </div>
+                    <div class="screen-info">
+                        <h3 class="screen-title">Coach Dashboard</h3>
+                        <p class="screen-description">Mobile command center with member oversight and intervention alerts</p>
+                        <div class="screen-tags">
+                            <span class="tag tag-mobile">Mobile</span>
+                            <span class="tag">Coach</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="mobile/coach/mobile-coach-member-detail.html" class="screen-card" style="text-decoration: none; color: inherit;">
+                    <div class="screen-preview">
+                        <div class="screen-preview-icon">👤</div>
+                    </div>
+                    <div class="screen-info">
+                        <h3 class="screen-title">Coach Member View</h3>
+                        <p class="screen-description">Mobile-optimized member analysis with quick intervention actions</p>
+                        <div class="screen-tags">
+                            <span class="tag tag-mobile">Mobile</span>
+                            <span class="tag">Member Intel</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- Apple Watch Section -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="8" y="4" width="8" height="16" rx="2" stroke="white" stroke-width="2"/>
+                        <circle cx="12" cy="12" r="2" fill="white"/>
+                    </svg>
+                </div>
+                <div>
+                    <h2 class="section-title">Apple Watch</h2>
+                    <p class="section-subtitle">watchOS Companion App</p>
+                </div>
+            </div>
+
+            <div class="screen-grid">
+                <a href="watch/apple-watch-running-intelligence.html" class="screen-card" style="text-decoration: none; color: inherit;">
+                    <div class="screen-preview">
+                        <div class="screen-preview-icon">⌚</div>
+                    </div>
+                    <div class="screen-info">
+                        <h3 class="screen-title">Running Intelligence</h3>
+                        <p class="screen-description">Real-time workout metrics with AI-powered pacing guidance</p>
+                        <div class="screen-tags">
+                            <span class="tag tag-watch">Apple Watch</span>
+                            <span class="tag">Workout</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="watch/apple-watch-gamification.html" class="screen-card" style="text-decoration: none; color: inherit;">
+                    <div class="screen-preview">
+                        <div class="screen-preview-icon">🏆</div>
+                    </div>
+                    <div class="screen-info">
+                        <h3 class="screen-title">Achievements</h3>
+                        <p class="screen-description">Gamified milestones, streaks, and motivational badges</p>
+                        <div class="screen-tags">
+                            <span class="tag tag-watch">Apple Watch</span>
+                            <span class="tag">Motivation</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="showcase-footer">
+            <p class="footer-text">
+                RunSmart Design System © 2024 | Built with Apple Human Interface Guidelines<br>
+                Quantum-Spatial Design | Neural Engine Accelerated | Portfolio Showcase
+            </p>
+        </div>
+    </div>
+</body>
+</html>

@@ -11,6 +11,7 @@
 :root {
     /* Brand Colors - Primary */
     --purple-primary: #7B00FF;          /* Primary action buttons */
+    --purple-secondary: #9747FF;          /* Secondary accent text  */
     --purple-hover: #8C45FF;            /* Hover state */
     --purple-pressed: #6600D6;          /* Pressed state */
     --purple-disabled: rgba(123, 0, 255, 0.4);
@@ -18,6 +19,7 @@
     /* Brand Colors - Secondary */
     --lime-primary: #CDFF00;            /* RunSmart electric lime */
     --lime-accent: #A0CC00;             /* Darker lime for gradients */
+    --lime-brand: #9FCD2B;             /* Darker lime for gradients */
     --lime-glow: rgba(205, 255, 0, 0.2);
 
     /* Neutral Palette */
@@ -34,7 +36,7 @@
     --text-tertiary: #666666;           /* 3.8:1 contrast - large text only */
     --text-quaternary: #444444;         /* UI elements only */
 
-    /* UI Colors */
+    /* System UI Colors */
     --ui-primary: #007AFF;
     
     /* Status Colors - HIG Semantic */
@@ -68,6 +70,18 @@
     --radius-2xl: 24px;
     --radius-full: 9999px;
 
+    
+    
+    /* Gradients */
+    --lime-gradient: linear-gradient(180deg, #7B00FF, #A0CC00)
+    --conical-fresh: conic-gradient(from 90deg at 50.00% 50.00%, var(--UI-4, #FF9D3F) 97deg, var(--UI-5, #FE575E) 181deg, var(--UI-7, #CB30E0) 221deg, var(--UI-2, #007AFF) 268deg, var(--UI-1, #5AC8FA) 355deg)
+    --conical-spectrum: conic-gradient(from 180deg at 50.00% 50.00%, var(--UI-5, #FE575E) 72deg, var(--UI-4, #FF9D3F) 144deg, var(--Heritage-Accent, #34C759) 216deg, var(--Primary-Action, #7B00FF) 288deg, var(--UI-3, #3B39EC) 360deg)
+    --oksana: linear-gradient(135deg, var(--UI-4, #FF9D3F) 0%, var(--UI-5, #FE575E) 40%, var(--UI-6, #911EFA) 69%, var(--UI-2, #007AFF) 100%)
+    --oksana-vivid: linear-gradient(135deg, var(--UI-4, #FF9D3F) 0%, var(--UI-5, #FE575E) 24%, var(--UI-7, #CB30E0) 50%, var(--Primary-Action, #7B00FF) 68%, var(--UI-3, #3B39EC) 86%)
+
+    /* Shadows - Liquid glass depth */
+    --oksana-gradient:       .background(Color(red: 1, green: 0.62, blue: 0.25));
+
     /* Shadows - Liquid glass depth */
     --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
     --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.2);
@@ -79,7 +93,7 @@
     --glow-purple-md: 0 0 40px rgba(123, 0, 255, 0.4);
     --glow-lime-sm: 0 0 20px rgba(205, 255, 0, 0.2);
 
-    /* Typography Scale - SF Pro Display */
+    /* Typography Scale - Apple fonts priority, Inter fallback for Windows/Linux */
     --font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', system-ui, sans-serif;
     --font-size-xs: 11px;
     --font-size-sm: 12px;
@@ -119,12 +133,84 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    padding: 20px;
     color: var(--text-primary);
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+
+.phone-frame {
+    width: 393px;
+    height: 852px;
+    background: #000;
+    border-radius: 55px;
+    padding: 12px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8),
+                inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.dynamic-island {
+    position: absolute;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 126px;
+    height: 37px;
+    background: #000;
+    border-radius: 20px;
+    z-index: 1001;
+}
+
+.status-bar {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    right: 12px;
+    z-index: 1000;
+    padding: 12px 24px 12px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 600;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    pointer-events: none;
+}
+
+.status-bar > * {
+    pointer-events: auto;
+}
+
+.badge-dot {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    width: 16px;
+    height: 16px;
+    background: #7B00FF;
+    border: 2px solid #000;
+    border-radius: 8px;
+    font-size: 9px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.screen {
+    width: 100%;
+    height: 100%;
+    background: #000;
+    border-radius: 47px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-top: 78px; /* Space for status bar */
+}
+
 
 .app-container {
     display: flex;
@@ -159,16 +245,73 @@ body {
     color: #000;
 }
 
+.logo-mobile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 48px;
+}
+
+.logo-icon-mobile {
+    width: 24px;
+    height: 24px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: #000;
+}
+
 .logo-text {
     font-size: 18px;
     font-weight: 500;
 }
 
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', system-ui, sans-serif;
+    background: #000000;
+    color: #FFFFFF;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.content {
+    padding: 0 24px 24px 24px;
+}
+
+/* Desktop sidebar navigation - horizontal icon + text */
+.sidebar .nav-item {
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.page-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #1A1A1A;
+}
 
 .header-title {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
     letter-spacing: -0.5px;
+    color: var(--text-secondary);
+    flex: 1;
 }
 
 .detail-title {
@@ -198,8 +341,6 @@ body {
     margin-bottom: 2px;
     letter-spacing: -0.5px;
 }
-
-
 
 /* Main Content */
 .main-content {
@@ -341,12 +482,39 @@ button.secondary:hover {
    NAVIGATION SYSTEM
    ======================================== */
 
+.desktop-nav-item {
+    padding: 12px 16px;
+    margin-bottom: 4px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #888;
+    font-size: 14px;
+}
+
+.desktop-nav-item:hover {
+    background: #151515;
+    color: #FFF;
+}
+
+.desktop-nav-item.active {
+    background: #7B00FF;
+    color: #FFFFFF;
+    font-weight: 600;
+}
+
+.desktop-nav-icon {
+    width: 20px;
+    height: 20px;
+}
+
 /* Tab Bar */
 .bottom-nav {
     position: fixed;
     bottom: 12px;
-    left: 50%;
-    transform: translateX(-50%);
     width: 369px;
     background: rgba(10, 10, 10, 0.95);
     backdrop-filter: blur(20px);
@@ -374,15 +542,15 @@ button.secondary:hover {
 }
 
 .nav-item,
-.tab-item {
     padding: 12px 16px;
     margin-bottom: 4px;
     border-radius: var(--radius-sm);
     cursor: pointer;
     transition: all var(--transition-base);
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 12px;
+    gap: 4px;
     color: var(--text-secondary);
     font-size: var(--font-size-base);
     text-decoration: none;
@@ -405,15 +573,7 @@ button.secondary:hover {
 .tab-icon {
     width: 20px;
     height: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.nav-icon,
-.tab-icon {
-    width: 20px;
-    height: 20px;
+    color: #888;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -423,6 +583,7 @@ button.secondary:hover {
     color: #FFFFFF;
     font-weight: 600;
 }
+
 
 /* SF Symbols Icons */
 .nav-icon svg,
@@ -436,6 +597,12 @@ button.secondary:hover {
     width: 20px;
     height: 20px;
 }
+
+.notification-badge {
+    position: relative;
+}
+
+
 
 /* ========================================
    CARD COMPONENTS
@@ -521,7 +688,7 @@ button.secondary:hover {
     align-items: center;
     gap: 4px;
     background: rgba(205, 255, 0, 0.2);
-    border: 1px solid var{--border-medium};
+    border: 1px solid var(--border-medium);
     padding: 4px 10px;
     border-radius: 12px;
     font-size: 10px;
@@ -536,7 +703,7 @@ button.secondary:hover {
     margin-top: 4px;
     gap: 4px;
     background: rgba(205, 255, 0, 0.2);
-    border: 1px solid var{--border-medium};
+    border: 1px solid var(--border-medium);
     padding: 4px 10px;
     border-radius: 12px;
     font-size:9px;
@@ -557,7 +724,7 @@ button.secondary:hover {
     align-items: center;
     gap: 4px;
     background: var(--dark-bg);
-    border: 1px solid var{--border-strong};
+    border: 1px solid var(--border-strong);
     padding: 4px 10px;
     border-radius: 12px;
     font-size: 11px;
@@ -708,7 +875,8 @@ button:focus-visible,
     left: 0;
     width: 100%;
     height: 100%;
-    background: #000000;
+    background: rgba(0, 0, 0, 0.4);
+;
     z-index: 9999;
     display: flex;
     align-items: center;
@@ -726,7 +894,7 @@ button:focus-visible,
 .loader-logo {
     width: 80px;
     height: 80px;
-    background: var{--black};
+    background: var(--black);
     border-radius: 16px;
     display: flex;
     align-items: center;
@@ -921,5 +1089,222 @@ body {
     font-size: 11px;
     color: #888;
     text-align: center;
+}
+
+/* ========================================
+   PAGE TRANSITIONS - iOS Style Slides
+   ======================================== */
+
+/* Base transition on screen container */
+.screen {
+    transition: transform 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+    will-change: transform;
+}
+
+/* Exit Animations - when leaving current page */
+.page-exit-left {
+    transform: translateX(-100%);
+}
+
+.page-exit-right {
+    transform: translateX(100%);
+}
+
+/* Entrance Animations - when entering new page */
+.page-enter-from-right {
+    animation: slideInFromRight 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+.page-enter-from-left {
+    animation: slideInFromLeft 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* ========================================
+   HIG TOUCH TARGETS - 44x44px Minimum
+   ======================================== */
+
+/* Settings Icon - HIG Compliant Touch Target */
+.settings-icon {
+    min-width: 44px;
+    min-height: 44px;
+    background: #0A0A0A;
+    border: 1px solid #1A1A1A;
+    border-radius: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s;
+    flex-shrink: 0;
+    padding: 12px;
+}
+
+.settings-icon:hover {
+    background: #151515;
+}
+
+.settings-icon:active {
+    background: #151515;
+    transform: scale(0.95);
+}
+
+.settings-icon svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Back Button - HIG Compliant Touch Target */
+.back-button {
+    min-width: 44px;
+    min-height: 44px;
+    background: #0A0A0A;
+    border: 1px solid #1A1A1A;
+    border-radius: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s;
+    flex-shrink: 0;
+    padding: 12px;
+    color: var(--text-secondary);
+}
+
+.back-button:hover {
+    background: #151515;
+}
+
+.back-button:active {
+    background: #151515;
+    transform: scale(0.95);
+}
+
+.back-button svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Header layout with back button */
+/* Header with back button */
+.header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.header-with-back {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 0 24px 24px 24px;
+}
+
+.header-title-centered {
+    flex: 1;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.header-spacer {
+    min-width: 44px; /* Same as back button for balanced layout */
+}
+
+/* ========================================
+   BOTTOM NAVIGATION - iOS Style Tab Bar
+   ======================================== */
+
+.bottom-nav,
+.tab-bar {
+    position: sticky;
+    bottom: 12px;
+    width: 369px;
+    max-width: calc(100% - 24px);
+    margin: 0 auto;
+    margin-top: auto;
+    background: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid #1A1A1A;
+    border-radius: 24px;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.nav-item,
+.tab-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s;
+    padding: 8px 12px;
+    border-radius: 12px;
+}
+
+.nav-icon,
+.tab-icon {
+    font-size: 24px;
+    opacity: 0.5;
+    transition: all 0.2s;
+}
+
+.nav-label,
+.tab-label {
+    font-size: 10px;
+    color: #888;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.nav-item.active .nav-icon,
+.tab-item.active .tab-icon {
+    opacity: 1;
+    color: var(--purple-primary);
+    filter: drop-shadow(0 0 8px rgba(123, 0, 255, 0.4));
+}
+
+.nav-item.active .nav-label,
+.tab-item.active .tab-label {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.nav-item:hover,
+.tab-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.nav-item:active,
+.tab-item:active {
+    transform: scale(0.95);
 }
 

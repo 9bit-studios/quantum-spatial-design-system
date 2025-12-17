@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RunSmart Coach - Member Detail</title>
+    <link rel="stylesheet" href="../../assets/runsmart-design-system.css">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
+        
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', system-ui, sans-serif;
             background: #000000;
@@ -20,52 +21,6 @@
             align-items: center;
             min-height: 100vh;
             padding: 20px;
-        }
-
-        .phone-frame {
-            width: 393px;
-            height: 852px;
-            background: #000;
-            border-radius: 55px;
-            padding: 12px;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8),
-                        inset 0 0 0 1px rgba(255, 255, 255, 0.1);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .dynamic-island {
-            position: absolute;
-            top: 12px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 126px;
-            height: 37px;
-            background: #000;
-            border-radius: 20px;
-            z-index: 100;
-        }
-
-        .screen {
-            width: 100%;
-            height: 100%;
-            background: #000;
-            border-radius: 47px;
-            overflow-y: auto;
-            overflow-x: hidden;
-        }
-
-        .status-bar {
-            padding: 54px 24px 12px 24px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 15px;
-            font-weight: 600;
-        }
-
-        .content {
-            padding: 0 24px 100px 24px;
         }
 
         /* Header */
@@ -91,10 +46,204 @@
             font-size: 20px;
         }
 
-        .header-title {
-            flex: 1;
+        /* Mobile Detail Panel */
+        .mobile-detail-panel {
+            background: #0A0A0A;
+            border: 1px solid #1A1A1A;
+            border-radius: 16px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .mobile-detail-header {
+            padding: 24px;
+            border-bottom: 1px solid #1A1A1A;
+        }
+
+        .mobile-detail-member {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        .mobile-member-avatar-large {
+            width: 96px;
+            height: 96px;
+            border-radius: 48px;
+            background: linear-gradient(135deg, #7B00FF 0%, #A0CC00 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            overflow: hidden;
+            margin-bottom: 16px;
+            position: relative;
+        }
+
+        .mobile-member-avatar-large img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .mobile-risk-badge-overlay {
+            position: absolute;
+            bottom: -4px;
+            right: -4px;
+            background: #000;
+            border: 2px solid #0A0A0A;
+            border-radius: 16px;
+            padding: 4px 8px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            overflow: visible;
+        }
+
+        .mobile-risk-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 4px;
+            background: #CDFF00;
+        }
+
+        .mobile-risk-badge-text {
+            font-size: 11px;
+            font-weight: 700;
+            color: #CDFF00;
+        }
+
+        .mobile-member-info {
+            width: 100%;
+        }
+
+        .mobile-member-name-large {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+
+        .mobile-member-meta {
+            font-size: 14px;
+            color: #888;
+            line-height: 1.5;
+            margin-bottom: 16px;
+        }
+
+        .mobile-risk-score-card {
+            width: 100%;
+            background: rgba(205, 255, 0, 0.05);
+            border: 1px solid rgba(205, 255, 0, 0.2);
+            border-radius: 12px;
+            padding: 12px 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .mobile-risk-score-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .mobile-risk-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            background: rgba(205, 255, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mobile-risk-icon svg {
+            width: 20px;
+            height: 20px;
+            color: #CDFF00;
+        }
+
+        .mobile-risk-details {
+            text-align: left;
+        }
+
+        .mobile-risk-label {
+            font-size: 11px;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 2px;
+        }
+
+        .mobile-risk-value {
             font-size: 20px;
             font-weight: 700;
+            color: #CDFF00;
+        }
+
+        .mobile-intervention-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .mobile-intervention-btn {
+            width: 100%;
+            padding: 12px 20px;
+            border-radius: 12px;
+            font-size: 15px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .mobile-intervention-btn.primary {
+            background: #7B00FF;
+            color: #ffffff;
+            border: none;
+        }
+
+        .mobile-intervention-btn.secondary {
+            background: transparent;
+            color: #7B00FF;
+            border: 1px solid #7B00FF;
+        }
+
+        .mobile-intervention-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .mobile-intervention-btn svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        .mobile-detail-content {
+            flex: 1;
+            overflow-y: auto;
+            padding: 12px;
+        }
+
+        .mobile-content-section {
+            margin-bottom: 24px;
+        }
+
+        .mobile-section-title-ai {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
         /* Profile Card */
@@ -194,12 +343,11 @@
         }
 
         /* AI Insights */
-        .insights-card {
-            background: rgba(239, 68, 68, 0.05);
-            border: 1px solid rgba(239, 68, 68, 0.3);
-            border-radius: 20px;
-            padding: 20px;
-            margin-bottom: 20px;
+        .insight-card {
+            background: #000;
+            border: 1px solid #1A1A1A;
+            border-radius: 12px;
+            padding: 16px;
         }
 
         .insights-title {
@@ -231,12 +379,20 @@
 
         .insight-text {
             flex: 1;
-            font-size: 14px;
+            font-size: 12px;
             color: #CCC;
+            line-height: 1.4;
+            padding-bottom: 5px;
+        }
+
+        .insight-desc {
+            font-size: 12px;
+            color: #888;
             line-height: 1.4;
             padding-bottom: 10px;
         }
 
+        
         .recommended-action {
             background: rgba(205, 255, 0, 0.1);
             border: 1px solid #7B00FF;
@@ -282,7 +438,7 @@
             background: #0A0A0A;
             border: 1px solid #1A1A1A;
             border-radius: 20px;
-            padding: 20px;
+            padding: 12px;
             margin-bottom: 20px;
         }
 
@@ -347,8 +503,9 @@
         .view-more {
             text-align: center;
             padding: 12px;
-            color: #7B00FF;
+            color: #FFFFFF;
             font-size: 13px;
+            background: #7B00FF;
             font-weight: 600;
             cursor: pointer;
         }
@@ -358,10 +515,10 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 12px;
-            background: rgba(26, 26, 26, 0.5);
+            background: #000;
+            border: 1px solid #1A1A1A;
             border-radius: 12px;
-            margin-bottom: 8px;
+            padding: 16px;
         }
 
         .comm-info {
@@ -372,6 +529,7 @@
 
         .comm-icon {
             font-size: 20px;
+            color: #7B00FF;
         }
 
         .comm-text {
@@ -434,59 +592,6 @@
             transform: translateY(-1px);
         }
 
-        /* Bottom Nav */
-        .bottom-nav {
-            position: fixed;
-            bottom: 12px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 369px;
-            background: rgba(10, 10, 10, 0.95);
-            backdrop-filter: blur(20px);
-            border: 1px solid #1A1A1A;
-            border-radius: 24px;
-            padding: 12px 20px;
-            display: flex;
-            justify-content: space-around;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-        }
-
-        .nav-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 4px;
-            cursor: pointer;
-            text-decoration: none;
-        }
-
-        .nav-icon {
-            font-size: 24px;
-            opacity: 0.5;
-        }
-
-        .nav-label {
-            font-size: 10px;
-            color: #888;
-            font-weight: 500;
-        }
-
-        .nav-item.active .nav-icon {
-            opacity: 1;
-        }
-
-        .nav-item.active .nav-label {
-            color: #7B00FF;
-            font-weight: 600;
-        }
-
-        /* SF Symbols Icons */
-        .nav-icon svg,
-        .status-icons svg {
-            width: 24px;
-            height: 24px;
-        }
-
         .back-button svg {
             width: 20px;
             height: 20px;
@@ -499,7 +604,6 @@
             height: 20px;
         }
     </style>
-    <link rel="stylesheet" href="../../assets/runsmart-design-system.css">
 </head>
 <body>
     <div class="phone-frame">
@@ -515,6 +619,12 @@
                         <circle cx="10" cy="5" r="1.5" fill="currentColor"/>
                         <circle cx="14" cy="2.5" r="1.5" fill="currentColor"/>
                     </svg>
+                    <span class="notification-badge">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6z"/>
+                        </svg>
+                        <span class="badge-dot">3</span>
+                    </span>
                     <svg width="22" height="12" viewBox="0 0 22 12" fill="none" style="margin-left: 6px;">
                         <rect x="1" y="1" width="18" height="10" rx="2" stroke="currentColor" stroke-width="1.5" fill="none"/>
                         <rect x="3" y="3" width="13" height="6" rx="1" fill="currentColor"/>
@@ -525,89 +635,86 @@
 
             <div class="content">
                 <div class="page-header">
-                    <div class="back-button">
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
-                        </svg>
-                    </div>
                     <div class="header-title">Member Details</div>
                 </div>
+                
+                <!-- Member Detail Panel -->
+                <div class="mobile-detail-panel">
+                    <div class="mobile-detail-header">
+                        <div class="mobile-detail-member">
+                            <div class="mobile-member-avatar-large">
+                                <img src="https://res.cloudinary.com/cloudninestudios/image/upload/v1765009460/penny-platt-2_otynl8.jpg"
+                                     alt="Penny Platt"
+                                     loading="lazy">
+                            </div>
+                            <div class="mobile-member-info">
+                                <div class="mobile-member-name-large">Penny Platt</div>
+                                <div class="mobile-member-meta">Marathon Training • Week 8 of 16<br>Boston Qualifier Goal</div>
+                                <div class="mobile-risk-score-card">
+                                    <div class="mobile-risk-score-info">
+                                        <div class="mobile-risk-icon">
+                                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12 9V13M12 17H12.01M10.29 3.86L1.82 18C1.64537 18.3024 1.55299 18.6453 1.55201 18.9945C1.55103 19.3437 1.64151 19.6871 1.81445 19.9905C1.98738 20.2939 2.23675 20.5467 2.53773 20.7239C2.83871 20.9011 3.18082 20.9962 3.53 21H20.47C20.8192 20.9962 21.1613 20.9011 21.4623 20.7239C21.7633 20.5467 22.0126 20.2939 22.1856 19.9905C22.3585 19.6871 22.449 19.3437 22.448 18.9945C22.447 18.6453 22.3546 18.3024 22.18 18L13.71 3.86C13.5317 3.56611 13.2807 3.32312 12.9812 3.15448C12.6817 2.98585 12.3438 2.89725 12 2.89725C11.6562 2.89725 11.3183 2.98585 11.0188 3.15448C10.7193 3.32312 10.4683 3.56611 10.29 3.86Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </div>
+                                        <div class="mobile-risk-details">
+                                            <div class="mobile-risk-label">Churn Risk</div>
+                                            <div class="mobile-risk-value">72% High Risk</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-                <!-- Profile -->
-                <div class="profile-card">
-                    <div class="profile-header">
-                        <div class="profile-avatar">
-                            <img src="https://res.cloudinary.com/cloudninestudios/image/upload/v1765009460/penny-platt-2_otynl8.jpg"
-                                 alt="Penny Platt"
-                                 loading="eager">
-                        </div>
-                        <div class="profile-info">
-                            <div class="profile-name">Penny Platt</div>
-                            <div class="profile-meta">Member since Jan 2024 • Portland, OR</div>
-                            <div class="risk-score"><svg class="icon icon-inline" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 9V13M12 17H12.01M10.29 3.86L1.82 18C1.64537 18.3024 1.55299 18.6453 1.55201 18.9945C1.55103 19.3437 1.64151 19.6871 1.81445 19.9905C1.98738 20.2939 2.23675 20.5467 2.53773 20.7239C2.83871 20.9011 3.18082 20.9962 3.53 21H20.47C20.8192 20.9962 21.1613 20.9011 21.4623 20.7239C21.7633 20.5467 22.0126 20.2939 22.1856 19.9905C22.3585 19.6871 22.449 19.3437 22.448 18.9945C22.447 18.6453 22.3546 18.3024 22.18 18L13.71 3.86C13.5317 3.56611 13.2807 3.32312 12.9812 3.15448C12.6817 2.98585 12.3438 2.89725 12 2.89725C11.6562 2.89725 11.3183 2.98585 11.0188 3.15448C10.7193 3.32312 10.4683 3.56611 10.29 3.86Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> 72% Risk</div>
-                        </div>
-                    </div>
-                    <div class="profile-actions">
-                        <div class="action-btn">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/>
-                            </svg>
-                            <div class="action-label">Message</div>
-                        </div>
-                        <div class="action-btn">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-                            </svg>
-                            <div class="action-label">Call</div>
-                        </div>
-                        <div class="action-btn">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                            </svg>
-                            <div class="action-label">Email</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- AI Insights -->
-                <div class="insights-card">
-                    <div class="insights-title"><svg class="icon icon-inline" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 2L6 13.5H10L8 22L18 11.5H14L16 2Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/></svg> AI Risk Analysis</div>
-                    <div class="insight-item">
-                        <div class="insight-icon">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"/>
-                            </svg>
-                        </div>
-                        <div class="insight-text">
-                            <strong>5 days without activity</strong> - Last workout was tempo run on Dec 7
-                        </div>
-                    </div>
-                    <div class="insight-item">
-                        <div class="insight-icon"><svg class="icon icon-inline" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="13.5" cy="4" r="2" stroke="currentColor" stroke-width="1.5"/><path d="M8 22L10.5 18L11 13L9 11L5 12M16 11L14 8L11 9L11.5 13L14 16M19 22L16.5 19L14 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-                        <div class="insight-text">
-                            <strong>Missed 3 scheduled workouts</strong> - Pattern suggests schedule conflict
-                        </div>
-                    </div>
-                    <div class="insight-item">
-                        <div class="insight-icon">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                            </svg>
-                        </div>
-                        <div class="insight-text">
-                            <strong>Email engagement: 0%</strong> - Last 3 emails not opened
+                        <div class="mobile-intervention-actions">
+                            <button class="mobile-intervention-btn primary">Deploy Intervention Now</button>
+                            <button class="mobile-intervention-btn secondary">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                                </svg>
+                                Schedule Call
+                            </button>
+                            <button class="mobile-intervention-btn secondary">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                                </svg>
+                                Send Message
+                            </button>
                         </div>
                     </div>
 
-                    <div class="recommended-action">
-                        <div class="recommended-title"><svg class="icon icon-inline" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 18H15M10 21H14M12 3C8.68629 3 6 5.68629 6 9C6 10.5 6.5 11.5 7 13C7.5 14.5 8 16 8 18H16C16 16 16.5 14.5 17 13C17.5 11.5 18 10.5 18 9C18 5.68629 15.3137 3 12 3Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Recommended Intervention</div>
-                        <div class="insight-text">
-                            Deploy "We Miss You" campaign with personalized check-in. Historical success rate: 73% for this member profile.
+                    <div class="mobile-detail-content">
+                        <!-- AI Risk Analysis -->
+                            <div class="mobile-section-title-ai">
+                                <svg class="icon icon-inline" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 2L6 13.5H10L8 22L18 11.5H14L16 2Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                <span>AI Risk Analysis</span>
+                            </div>
+                            <div class="insight-card">
+                                <div class="insight-item">
+                                    <div class="insight-text">
+                                        <strong>5 days without activity</strong>
+                                        <div class="insight-desc">Last workout was tempo run on Dec 7</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="insight-card">
+                                <div class="insight-item">
+                                    <div class="insight-text">
+                                        <strong>Missed 3 scheduled workouts</strong>
+                                        <div class="insight-desc">Pattern suggests schedule conflict</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="insight-card">
+                                <div class="insight-item">
+                                    <div class="insight-text">
+                                        <strong>Email engagement: 0%</strong>
+                                        <div class="insight-desc">Last 3 emails not opened</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <button class="deploy-button">Deploy Intervention Now</button>
-                    </div>
-                </div>
-
+                
                 <!-- Activity Timeline -->
                 <div class="timeline-card">
                     <div class="card-title">Activity Timeline</div>
@@ -643,8 +750,9 @@
                             <div class="timeline-detail">Scheduled but not completed</div>
                         </div>
                     </div>
-                    <div class="view-more">View Full History →</div>
+                    <div class="btn-primary">View Full History →</div>
                 </div>
+            </div>
 
                 <!-- Recent Communications -->
                 <div class="timeline-card">
@@ -692,14 +800,14 @@
                         <div class="comm-status opened">Opened</div>
                     </div>
                 </div>
-
+                
                 <!-- Actions -->
                 <div class="action-buttons">
                     <button class="btn btn-secondary">Schedule Call</button>
                     <button class="btn btn-primary">Send Message</button>
                 </div>
             </div>
-
+            
             <div class="bottom-nav">
                 <a href="mobile-coach-dashboard.html" class="nav-item">
                     <svg class="nav-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
@@ -719,14 +827,26 @@
                     </svg>
                     <div class="nav-label">Messages</div>
                 </a>
-                <a href="mobile-coach-settings.html" class="nav-item">
+                <a href="mobile-coach-studio.html" class="nav-item">
                     <svg class="nav-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/>
+                        <path d="M12.18 2.5l5.5 2c.78.28 1.32 1.03 1.32 1.86V12c0 5.5-3.84 10.66-9 12-5.16-1.34-9-6.5-9-12V6.36c0-.83.54-1.58 1.32-1.86l5.5-2c.5-.18 1.05-.18 1.55 0z"/>
+                        <path d="M9 11.5l2 2 4-4" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
                     </svg>
-                    <div class="nav-label">Settings</div>
+                    <div class="nav-label">Studio</div>
                 </a>
             </div>
         </div>
     </div>
+
+    <!-- Core Scripts -->
+    <script src="../../scripts/core/dom-ready.js"></script>
+    <script src="../../scripts/core/context-detection.js"></script>
+
+    <!-- Feature Scripts -->
+    <script src="../../scripts/transitions/page-transitions.js"></script>
+    <script src="../../scripts/interactions/navigation.js"></script>
+
+    <!-- Init Script -->
+    <script src="../../scripts/init/mobile-coach-init.js"></script>
 </body>
 </html>

@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oksana Control Panel</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* Quantum-Spatial P3 Color Palette */
+            --quantum-primary: color(display-p3 0.4 0.7 1);
+            --quantum-secondary: color(display-p3 0.8 0.4 0.9);
+            --quantum-accent: color(display-p3 0.3 0.9 0.7);
+            --quantum-success: color(display-p3 0.4 0.95 0.6);
+            --quantum-warning: color(display-p3 1 0.8 0.3);
+            --quantum-error: color(display-p3 1 0.4 0.5);
+            
+            /* Liquid Glass Variables */
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.18);
+            --glass-shadow: rgba(0, 0, 0, 0.3);
+            --glass-blur: 20px;
+            
+            /* Spatial Depth */
+            --depth-1: 0 2px 8px rgba(0, 0, 0, 0.1);
+            --depth-2: 0 4px 16px rgba(0, 0, 0, 0.15);
+            --depth-3: 0 8px 32px rgba(0, 0, 0, 0.2);
+            
+            /* Typography */
+            --font-system: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+        }
+
+        @supports (color: color(display-p3 1 1 1)) {
+            :root {
+                color-gamut: p3;
+            }
+        }
+
+        body {
+            font-family: var(--font-system);
+            background: linear-gradient(135deg, 
+                color(display-p3 0.08 0.12 0.2) 0%, 
+                color(display-p3 0.12 0.08 0.18) 100%);
+            color: rgba(255, 255, 255, 0.95);
+            min-height: 100vh;
+            padding: 2rem;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeInDown 0.6s ease-out;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, 
+                var(--quantum-primary), 
+                var(--quantum-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.6);
+            font-weight: 400;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(var(--glass-blur));
+            -webkit-backdrop-filter: blur(var(--glass-blur));
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 2rem;
+            box-shadow: var(--depth-2);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            animation: fadeInUp 0.6s ease-out backwards;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--depth-3);
+            border-color: rgba(255, 255, 255, 0.25);
+        }
+
+        .card h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: rgba(255, 255, 255, 0.95);
+            font-weight: 600;
+        }
+
+        .card p {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .button-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        button {
+            background: linear-gradient(135deg, 
+                rgba(255, 255, 255, 0.1), 
+                rgba(255, 255, 255, 0.05));
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 16px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-family: var(--font-system);
+            position: relative;
+            overflow: hidden;
+        }
+
+        button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        button:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        button:hover {
+            background: linear-gradient(135deg, 
+                rgba(255, 255, 255, 0.15), 
+                rgba(255, 255, 255, 0.08));
+            border-color: rgba(255, 255, 255, 0.3);
+            transform: scale(1.02);
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+
+        button.primary {
+            background: linear-gradient(135deg, 
+                var(--quantum-primary), 
+                var(--quantum-secondary));
+            border: none;
+            box-shadow: 0 4px 12px rgba(100, 150, 255, 0.3);
+        }
+
+        button.primary:hover {
+            box-shadow: 0 6px 20px rgba(100, 150, 255, 0.4);
+        }
+
+        button.success {
+            background: linear-gradient(135deg, 
+                var(--quantum-accent), 
+                var(--quantum-success));
+            border: none;
+        }
+
+        .status-bar {
+            background: var(--glass-bg);
+            backdrop-filter: blur(var(--glass-blur));
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            animation: fadeIn 0.6s ease-out 0.3s backwards;
+        }
+
+        .status-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .status-item {
+            text-align: center;
+        }
+
+        .status-label {
+            font-size: 0.875rem;
+            color: rgba(255, 255, 255, 0.5);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+
+        .status-value {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--quantum-accent);
+        }
+
+        .status-dot {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--quantum-success);
+            margin-right: 0.5rem;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .log-output {
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 1.5rem;
+            font-family: 'SF Mono', 'Monaco', 'Cascadia Code', monospace;
+            font-size: 0.875rem;
+            line-height: 1.6;
+            color: var(--quantum-accent);
+            max-height: 300px;
+            overflow-y: auto;
+            margin-top: 1rem;
+        }
+
+        .log-output::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .log-output::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 4px;
+        }
+
+        .log-output::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 4px;
+        }
+
+        .log-output::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.4;
+            }
+        }
+
+        /* Animation delays for staggered card appearance */
+        .card:nth-child(1) { animation-delay: 0.1s; }
+        .card:nth-child(2) { animation-delay: 0.2s; }
+        .card:nth-child(3) { animation-delay: 0.3s; }
+        .card:nth-child(4) { animation-delay: 0.4s; }
+        .card:nth-child(5) { animation-delay: 0.5s; }
+        .card:nth-child(6) { animation-delay: 0.6s; }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Oksana Control Panel</h1>
+            <p class="subtitle">Privacy-First Creative Intelligence • M4 Neural Engine Powered</p>
+        </header>
+
+        <div class="status-bar">
+            <div class="status-grid">
+                <div class="status-item">
+                    <div class="status-label">System Status</div>
+                    <div class="status-value"><span class="status-dot"></span>Online</div>
+                </div>
+                <div class="status-item">
+                    <div class="status-label">Active Services</div>
+                    <div class="status-value" id="activeServices">0</div>
+                </div>
+                <div class="status-item">
+                    <div class="status-label">Neural Engine</div>
+                    <div class="status-value">M4 Pro</div>
+                </div>
+                <div class="status-item">
+                    <div class="status-label">Grid Analytics</div>
+                    <div class="status-value">Ready</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <h2>🎯 Strategic Director</h2>
+                <p>Apple Intelligence enhanced MCP for daily workflow orchestration</p>
+                <div class="button-group">
+                    <button class="primary" onclick="startService('strategic-director')">Start Strategic Director</button>
+                    <button onclick="runService('strategic-director', 'status')">Check Status</button>
+                    <button onclick="stopService('strategic-director')">Stop Service</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>📊 Grid Analytics</h2>
+                <p>Proprietary analytics engine for pattern discovery and contextual intelligence</p>
+                <div class="button-group">
+                    <button class="primary" onclick="runService('grid', 'analyze')">Run Analysis</button>
+                    <button onclick="runService('grid', 'export')">Export Insights</button>
+                    <button onclick="runService('grid', 'dashboard')">View Dashboard</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>🎨 Design System</h2>
+                <p>Quantum-Spatial design tokens and Liquid Glass component generation</p>
+                <div class="button-group">
+                    <button class="primary" onclick="runService('design', 'generate')">Generate Components</button>
+                    <button onclick="runService('design', 'tokens')">Export Tokens</button>
+                    <button onclick="runService('design', 'preview')">Preview System</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>🔗 MCP Services</h2>
+                <p>Figma, Notion, and custom MCP server management</p>
+                <div class="button-group">
+                    <button class="primary" onclick="runService('mcp', 'start-all')">Start All MCPs</button>
+                    <button onclick="runService('mcp', 'figma')">Connect Figma</button>
+                    <button onclick="runService('mcp', 'notion')">Connect Notion</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>⚡ Rapid Prototyping</h2>
+                <p>HTML prototyping workflows with M4 acceleration</p>
+                <div class="button-group">
+                    <button class="success" onclick="runService('prototype', 'new')">New Prototype</button>
+                    <button onclick="runService('prototype', 'deploy')">Deploy to Cloudflare</button>
+                    <button onclick="runService('prototype', 'screenshot')">Generate Screenshots</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>🔐 Quantum Security</h2>
+                <p>Key management and encrypted environment configuration</p>
+                <div class="button-group">
+                    <button onclick="runService('security', 'rotate-keys')">Rotate Keys</button>
+                    <button onclick="runService('security', 'audit')">Security Audit</button>
+                    <button onclick="runService('security', 'backup')">Backup Config</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>📝 Activity Log</h2>
+            <div class="log-output" id="logOutput">
+                <div>[12:00:00] System initialized</div>
+                <div>[12:00:01] Oksana Control Panel ready</div>
+                <div>[12:00:02] Waiting for commands...</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Service endpoint configuration
+        const API_BASE = 'http://localhost:3000';
+        
+        let activeServiceCount = 0;
+
+        function log(message, type = 'info') {
+            const logOutput = document.getElementById('logOutput');
+            const timestamp = new Date().toLocaleTimeString();
+            const colors = {
+                info: 'color(display-p3 0.3 0.9 0.7)',
+                success: 'color(display-p3 0.4 0.95 0.6)',
+                error: 'color(display-p3 1 0.4 0.5)',
+                warning: 'color(display-p3 1 0.8 0.3)'
+            };
+            
+            const logEntry = document.createElement('div');
+            logEntry.style.color = colors[type] || colors.info;
+            logEntry.textContent = `[${timestamp}] ${message}`;
+            
+            logOutput.appendChild(logEntry);
+            logOutput.scrollTop = logOutput.scrollHeight;
+            
+            // Keep only last 50 entries
+            while (logOutput.children.length > 50) {
+                logOutput.removeChild(logOutput.firstChild);
+            }
+        }
+
+        async function startService(service) {
+            log(`Starting ${service}...`, 'info');
+            
+            try {
+                const response = await fetch(`${API_BASE}/start/${service}`, {
+                    method: 'POST'
+                });
+                
+                if (response.ok) {
+                    activeServiceCount++;
+                    updateActiveServices();
+                    log(`✓ ${service} started successfully`, 'success');
+                } else {
+                    throw new Error(`Failed to start ${service}`);
+                }
+            } catch (error) {
+                log(`✗ Error starting ${service}: ${error.message}`, 'error');
+                // Fallback: show what the service would do
+                log(`→ Would execute: pm2 start ${service}`, 'warning');
+            }
+        }
+
+        async function stopService(service) {
+            log(`Stopping ${service}...`, 'info');
+            
+            try {
+                const response = await fetch(`${API_BASE}/stop/${service}`, {
+                    method: 'POST'
+                });
+                
+                if (response.ok) {
+                    activeServiceCount = Math.max(0, activeServiceCount - 1);
+                    updateActiveServices();
+                    log(`✓ ${service} stopped`, 'success');
+                } else {
+                    throw new Error(`Failed to stop ${service}`);
+                }
+            } catch (error) {
+                log(`✗ Error stopping ${service}: ${error.message}`, 'error');
+                log(`→ Would execute: pm2 stop ${service}`, 'warning');
+            }
+        }
+
+        async function runService(service, action) {
+            log(`Running ${service}/${action}...`, 'info');
+            
+            try {
+                const response = await fetch(`${API_BASE}/${service}/${action}`, {
+                    method: 'POST'
+                });
+                
+                if (response.ok) {
+                    const result = await response.json();
+                    log(`✓ ${service}/${action} completed`, 'success');
+                    if (result.message) {
+                        log(`  → ${result.message}`, 'info');
+                    }
+                } else {
+                    throw new Error(`Failed to run ${service}/${action}`);
+                }
+            } catch (error) {
+                log(`✗ Error: ${error.message}`, 'error');
+                log(`→ Would execute: ${service} ${action}`, 'warning');
+                log(`  (Configure your Services layer to handle this endpoint)`, 'warning');
+            }
+        }
+
+        function updateActiveServices() {
+            document.getElementById('activeServices').textContent = activeServiceCount;
+        }
+
+        // Initialize
+        log('Oksana Control Panel initialized', 'success');
+        log('Ready for creative intelligence workflows', 'info');
+        log('Configure API_BASE to point to your Services layer', 'warning');
+    </script>
+</body>
+</html>

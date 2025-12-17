@@ -1,0 +1,105 @@
+/* Figma Variables → CSS Custom Properties */
+
+:root[data-theme="dark"] {
+  --foreground-primary: #ffffff;
+  --foreground-secondary: #ffffff;
+  --foreground-tertiary: #ffffff;
+  --foreground-quaternary: #ffffff;
+  --container-background-primary: #0b010d;
+  --container-border: var(--primitive-white-a10);
+  --container-divider: var(--primitive-white-a10);
+  --container-background-secondary: #160918;
+  --container-border-secondary: var(--primitive-white-a10);
+  --container-background-tertiary: #16090e;
+  --container-background-recessed: #ffffff;
+  --container-divider-secondary: var(--primitive-white-a20);
+  --instance-mode: Dark;
+  --button-primary: #7b00ff;
+  --button-hover: #8c45ff;
+  --button-primary-inactive: var(--foreground-tertiary);
+  --button-secondary-hover: #150621;
+  --button-foreground-hover: var(--foreground-secondary);
+  --button-secondary-foreground: var(--background-secondary);
+  --button-secondary: #911efa;
+  --button-tertiary: #620cbf;
+  --button-tertiary-hover: #3f0576;
+  --button-primary-foreground: var(--foreground-primary);
+  --button-secondary-foreground-hover: var(--background-secondary);
+  --button-primary-foreground-active: var(--foreground-secondary);
+  --background-secondary: #160918;
+  --background-tertiary: #160918;
+  --background-quanternary: #050614;
+  --gradient-fill-1: var(--primitive-white-a20);
+  --gradient-fill-2: var(--primitive-white-a10);
+  --primary-action: #7b00ff;
+  --ui-1: #5ac8fa;
+  --ui-8: #911efa;
+  --primary-ui-ui-1: var(--ui-1);
+  --primary-ui-ui-2: var(--ui-2);
+  --primary-ui-ui-action-primary: var(--primary-action);
+  --ui-7: #cb30e0;
+  --ui-4: #ff9d3f;
+  --ui-5: #fe575e;
+  --ui-6: #d0196b;
+  --ui-2: #007aff;
+  --ui-3: #3b39ec;
+  --quantum-accent: #44009b;
+  --lime-primary: #cdff00;
+  --lime-accent: #a0cc00;
+}
+
+:root[data-theme="light"] {
+  --foreground-primary: var(--primitive-black);
+  --foreground-secondary: var(--primitive-black-a70);
+  --foreground-tertiary: var(--primitive-black-a50);
+  --foreground-quaternary: var(--primitive-black-a50);
+  --container-background-primary: var(--primitive-white-a60);
+  --container-border: var(--primitive-white-a50);
+  --container-divider: var(--primitive-black-a10);
+  --container-background-secondary: var(--primitive-white-a10);
+  --container-border-secondary: var(--primitive-white-a20);
+  --container-background-tertiary: var(--primitive-white-a90);
+  --container-background-recessed: var(--primitive-white-a90);
+  --container-divider-secondary: var(--primitive-black-a20);
+  --instance-mode: Light;
+  --button-primary: #007aff;
+  --button-primary-inactive: var(--primitive-black-a20);
+  --button-secondary-hover: var(--primitive-blue-500);
+  --button-foreground-hover: #007aff;
+  --button-tertiary-hover: var(--primitive-blue-500);
+  --button-primary-foreground-active: #007aff;
+  --background-secondary: var(--primitive-white-a10);
+  --background-primary-dark: var(--primitive-white);
+  --background-tertiary: var(--primitive-white-a10);
+  --background-quanternary: var(--primitive-white);
+  --gradient-fill-1: var(--primitive-white-a90);
+  --gradient-fill-2: var(--primitive-white-a80);
+  --primary-action: #7b00ff;
+  --ui-1: #5ac8fa;
+  --ui-8: #d0196b;
+  --primary-ui-ui-1: #007aff;
+  --primary-ui-ui-2: var(--ui-1);
+  --primary-ui-ui-action-primary: var(--primary-action);
+  --ui-7: #504cf5;
+  --ui-4: #623fe7;
+  --ui-5: #623fe7;
+  --ui-6: #623fe7;
+  --ui-2: #007aff;
+  --heritage-accent: #007aff;
+  --ui-3: #007aff;
+  --quantum-accent: #007aff;
+  --lime-primary: #ffffff;
+  --lime-accent: #ffffff;
+}
+
+/* P3 Wide-Gamut Support (optional - uncomment for Apple devices) */
+/*
+@supports (color: color(display-p3 1 1 1)) {
+  @media (color-gamut: p3) {
+    :root[data-theme="dark"] {
+      --primary-action: color(display-p3 0.482 0 1);
+      --button-primary: color(display-p3 0.482 0 1);
+    }
+  }
+}
+*/

@@ -1,0 +1,13 @@
+name = "runsmart-prototype"
+compatibility_date = "2025-01-01"
+pages_build_output_dir = "."
+
+# Cloudflare Pages configuration for RunSmart HTML prototype
+# Deploy with: npm run deploy
+# This deploys the current directory as static files
+
+# Custom domain configuration (update after deployment)
+# Pages Dashboard > Custom domains > Add domain
+# Options:
+#   - runsmart.9bitstudios.io
+#   - quantum-spatial-design-system.runsmart.io

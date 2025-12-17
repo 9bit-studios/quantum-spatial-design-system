@@ -1,0 +1,356 @@
+{
+    "collections": [
+        {
+            "name": "Colors",
+            "modes": [
+                "Dark",
+                "Light"
+            ],
+            "variables": {
+                "Foreground": {
+                    "primary": {
+                        "type": "color",
+                        "values": {
+                            "Dark": "rgb(255, 255, 255)",
+                            "Light": "Primitive:Color/black"
+                        }
+                    },
+                    "secondary": {
+                        "type": "color",
+                        "values": {
+                            "Dark": "rgb(255, 255, 255)",
+                            "Light": "Primitive:Color/black-a70"
+                        }
+                    },
+                    "tertiary": {
+                        "type": "color",
+                        "values": {
+                            "Dark": "rgb(255, 255, 255)",
+                            "Light": "Primitive:Color/black-a50"
+                        }
+                    },
+                    "quaternary": {
+                        "type": "color",
+                        "values": {
+                            "Dark": "rgb(255, 255, 255)",
+                            "Light": "Primitive:Color/black-a50"
+                        }
+                    }
+                },
+                "Container": {
+                    "background-primary": {
+                        "type": "color",
+                        "values": {
+                            "Dark": "rgb(11, 1, 13)",
+                            "Light": "Primitive:Color/white-a60"
+                        }
+                    },
+                    "border": {
+                        "type": "color",
+                        "values": {
+                            "Dark": "Primitive:Color/white-a10",
+                            "Light": "Primitive:Color/white-a50"
+                        }
+                    },
+                    "divider": {
+                        "type": "color",
+                        "values": {
+                            "Dark": "Primitive:Color/white-a10",
+                            "Light": "Primitive:Color/black-a10"
+                        }
+                    },
+                    "background-secondary": {
+                        "type": "color",
+                        "values": {
+                            "Dark": "rgb(22, 9, 24)",
+                            "Light": "Primitive:Color/white-a10"
+                        }
+                    },
+                    "border-secondary": {
+                        "type": "color",
+                        "values": {
+                            "Dark": "Primitive:Color/white-a10",
+                            "Light": "Primitive:Color/white-a20"
+                        }
+                    },
+                    "background-tertiary": {
+                        "type": "color",
+                        "values": {
+                            "Dark": "rgb(22, 9, 14)",
+                            "Light": "Primitive:Color/white-a90"
+                        }
+                    },
+                    "background-recessed": {
+                        "type": "color",
+                        "values": {
+                            "Dark": "rgb(255, 255, 255)",
+                            "Light": "Primitive:Color/white-a90"
+                        }
+                    },
+                    "divider-secondary": {
+                        "type": "color",
+                        "values": {
+                            "Dark": "Primitive:Color/white-a20",
+                            "Light": "Primitive:Color/black-a20"
+                        }
+                    }
+                },
+                "Instance": {
+                    "mode": {
+                        "type": "string",
+                        "values": {
+                            "Dark": "Dark",
+                            "Light": "Light"
+                        }
+                    }
+                },
+                "Button": {
+                    "primary": {
+                        "type": "color",
+                        "values": {
+                            "Dark": "rgb(123, 0, 255)",
+                            "Light": "rgb(0, 122, 255)"
+                        }
+                    },
+                    "hover": {
+                        "type": "color",
+                        "values": {
+                            "Dark": "rgb(140, 69, 255)",
+                            "Light": ""
+                        }
+                    },
+                    "primary inactive": {
+                        "type": "color",
+                        "values": {
+                            "Dark": "Colors:Foreground/tertiary",
+                            "Light": "Primitive:Color/black-a20"
+                        }
+                    },
+                    "secondary hover": {
+                        "type": "color",
+                        "values": {
+                            "Dark": "rgb(21, 6, 33)",
+                            "Light": "Primitive:Color/blue-500"
+                        }
+                    },
+                    "foreground hover": {
+                        "type": "color",
+                        "values": {
+                            "Dark": "Colors:Foreground/secondary",
+                            "Light": "rgb(0, 122, 255)"
+                        }
+                    },
+                    "secondary foreground": {
+                        "type": "color",
+                        "values": {
+                            "Dark": "Colors:Background/secondary",
+                            "Light": ""
+                        }
+                    },
+                    "secondary": {
+                        "type": "color",
+                        "values": {
+                            "Dark": "rgb(145, 30, 250)",
+                            "Light": ""
+                        }
+                    },
+                    "tertiary": {
+                        "type": "color",
+                        "values": {
+                            "Dark": "rgb(98, 12, 191)",
+                            "Light": ""
+                        }
+                    },
+                    "tertiary hover": {
+                        "type": "color",
+                        "values": {
+                            "Dark": "rgb(63, 5, 118)",
+                            "Light": "Primitive:Color/blue-500"
+                        }
+                    },
+                    "primary foreground": {
+                        "type": "color",
+                        "values": {
+                            "Dark": "Colors:Foreground/primary",
+                            "Light": ""
+                        }
+                    },
+                    "secondary foreground hover": {
+                        "type": "color",
+                        "values": {
+                            "Dark": "Colors:Background/secondary",
+                            "Light": ""
+                        }
+                    },
+                    "primary foreground active": {
+                        "type": "color",
+                        "values": {
+                            "Dark": "Colors:Foreground/secondary",
+                            "Light": "rgb(0, 122, 255)"
+                        }
+                    }
+                },
+                "Background": {
+                    "secondary": {
+                        "type": "color",
+                        "values": {
+                            "Dark": "rgb(22, 9, 24)",
+                            "Light": "Primitive:Color/white-a10"
+                        }
+                    },
+                    "primary-dark": {
+                        "type": "color",
+                        "values": {
+                            "Dark": "",
+                            "Light": "Primitive:Color/white"
+                        }
+                    },
+                    "tertiary": {
+                        "type": "color",
+                        "values": {
+                            "Dark": "rgb(22, 9, 24)",
+                            "Light": "Primitive:Color/white-a10"
+                        }
+                    },
+                    "quanternary": {
+                        "type": "color",
+                        "values": {
+                            "Dark": "rgb(5, 6, 20)",
+                            "Light": "Primitive:Color/white"
+                        }
+                    }
+                },
+                "Gradient": {
+                    "fill-1": {
+                        "type": "color",
+                        "values": {
+                            "Dark": "Primitive:Color/white-a20",
+                            "Light": "Primitive:Color/white-a90"
+                        }
+                    },
+                    "fill-2": {
+                        "type": "color",
+                        "values": {
+                            "Dark": "Primitive:Color/white-a10",
+                            "Light": "Primitive:Color/white-a80"
+                        }
+                    }
+                },
+                "Primary Action": {
+                    "type": "color",
+                    "values": {
+                        "Dark": "rgb(123, 0, 255)",
+                        "Light": "rgb(123, 0, 255)"
+                    }
+                },
+                "UI 1": {
+                    "type": "color",
+                    "values": {
+                        "Dark": "rgb(90, 200, 250)",
+                        "Light": "rgb(90, 200, 250)"
+                    }
+                },
+                "UI 8": {
+                    "type": "color",
+                    "values": {
+                        "Dark": "rgb(145, 30, 250)",
+                        "Light": "rgb(208, 25, 107)"
+                    }
+                },
+                "Primary UI": {
+                    "UI 1": {
+                        "type": "color",
+                        "values": {
+                            "Dark": "Colors:UI 1",
+                            "Light": "rgb(0, 122, 255)"
+                        }
+                    },
+                    "UI 2": {
+                        "type": "color",
+                        "values": {
+                            "Dark": "Colors:UI 2",
+                            "Light": "Colors:UI 1"
+                        }
+                    },
+                    "UI Action Primary": {
+                        "type": "color",
+                        "values": {
+                            "Dark": "Colors:Primary Action",
+                            "Light": "Colors:Primary Action"
+                        }
+                    }
+                },
+                "UI 7": {
+                    "type": "color",
+                    "values": {
+                        "Dark": "rgb(203, 48, 224)",
+                        "Light": "rgb(80, 76, 245)"
+                    }
+                },
+                "UI 4": {
+                    "type": "color",
+                    "values": {
+                        "Dark": "rgb(255, 157, 63)",
+                        "Light": "rgb(98, 63, 231)"
+                    }
+                },
+                "UI 5": {
+                    "type": "color",
+                    "values": {
+                        "Dark": "rgb(254, 87, 94)",
+                        "Light": "rgb(98, 63, 231)"
+                    }
+                },
+                "UI 6": {
+                    "type": "color",
+                    "values": {
+                        "Dark": "rgb(208, 25, 107)",
+                        "Light": "rgb(98, 63, 231)"
+                    }
+                },
+                "UI 2": {
+                    "type": "color",
+                    "values": {
+                        "Dark": "rgb(0, 122, 255)",
+                        "Light": "rgb(0, 122, 255)"
+                    }
+                },
+                "Heritage Accent": {
+                    "type": "color",
+                    "values": {
+                        "Dark": "",
+                        "Light": "rgb(0, 122, 255)"
+                    }
+                },
+                "UI 3": {
+                    "type": "color",
+                    "values": {
+                        "Dark": "rgb(59, 57, 236)",
+                        "Light": "rgb(0, 122, 255)"
+                    }
+                },
+                "Quantum Accent": {
+                    "type": "color",
+                    "values": {
+                        "Dark": "rgb(68, 0, 155)",
+                        "Light": "rgb(0, 122, 255)"
+                    }
+                },
+                "Lime Primary": {
+                    "type": "color",
+                    "values": {
+                        "Dark": "rgb(205, 255, 0)",
+                        "Light": "rgb(255, 255, 255)"
+                    }
+                },
+                "Lime Accent": {
+                    "type": "color",
+                    "values": {
+                        "Dark": "rgb(160, 204, 0)",
+                        "Light": "rgb(255, 255, 255)"
+                    }
+                }
+            }
+        }
+    ]
+}

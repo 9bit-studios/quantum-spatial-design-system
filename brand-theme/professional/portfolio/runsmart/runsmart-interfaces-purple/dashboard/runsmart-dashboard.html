@@ -135,13 +135,6 @@
             margin-bottom: 32px;
         }
 
-        .card {
-            background: #0A0A0A;
-            border: 1px solid #1A1A1A;
-            border-radius: 16px;
-            padding: 24px;
-        }
-
         .card-header {
             display: flex;
             justify-content: space-between;
@@ -232,6 +225,11 @@
         }
 
         .activity-status {
+            padding: 6px 12px;
+            border-radius: 6px;
+            border: 1px solid #7B00FF;
+            font-size: 12px;
+            font-weight: 500;
             background: #7B00FF;
             color: rgba(255, 255, 255, 0.95);
         }
@@ -282,9 +280,9 @@
         }
 
         .filter-tab.active {
-            background: rgba(205, 255, 0, 0.1);
+            background: #7B00FF;
             border-color: #7B00FF;
-            color: #7B00FF;
+            color: #FFFFFF;
         }
 
         .queue-list {
@@ -309,12 +307,11 @@
         }
 
         .queue-item.selected {
-            border-color: #7B00FF;
             background: rgba(205, 255, 0, 0.05);
         }
 
         .queue-item.critical {
-            border-left: 3px solid #CDFF00;
+            border-left: 3px solid rgba(239, 68, 68, 1.0);
         }
 
         .queue-item.high {
@@ -368,7 +365,7 @@
         }
 
         .queue-metric strong {
-            color: #7B00FF;
+            color: #888;
         }
 
         /* Detail Panel */
@@ -654,7 +651,7 @@
 
         .insight-text {
             font-size: 13px;
-            color: #CCC;
+            color: #8C45FF;
             line-height: 1.5;
         }
 
@@ -701,17 +698,17 @@
                 <div class="logo-text">RunSmart</div>
             </div>
 
-            <nav>
-                <a href="runsmart-dashboard.html" class="nav-item active">
-                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <desktop-nav>
+                <a href="runsmart-dashboard.html" class="desktop-nav-item active">
+                    <svg class="desktop-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
                         <polyline points="9 22 9 12 15 12 15 22"/>
                     </svg>
                     Home
                 </a>
 
-                <a href="members.html" class="nav-item">
-                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <a href="members.html" class="desktop-nav-item">
+                    <svg class="desktop-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
                         <circle cx="9" cy="7" r="4"/>
                         <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
@@ -720,8 +717,8 @@
                     Members
                 </a>
 
-                <a href="analytics.html" class="nav-item">
-                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <a href="analytics.html" class="desktop-nav-item">
+                    <svg class="desktop-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <line x1="12" y1="20" x2="12" y2="10"/>
                         <line x1="18" y1="20" x2="18" y2="4"/>
                         <line x1="6" y1="20" x2="6" y2="16"/>
@@ -729,21 +726,21 @@
                     Analytics
                 </a>
 
-                <a href="insights.html" class="nav-item">
-                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <a href="insights.html" class="desktop-nav-item">
+                    <svg class="desktop-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
                     </svg>
                     Insights
                 </a>
 
-                <a href="campaigns.html" class="nav-item">
-                    <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <a href="campaigns.html" class="desktop-nav-item">
+                    <svg class="desktop-nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
                         <polyline points="22,6 12,13 2,6"/>
                     </svg>
                     Campaigns
                 </a>
-            </nav>
+            </desktop-nav>
         </aside>
 
         <!-- Main Content -->
@@ -929,12 +926,12 @@
                     <div class="detail-header">
                         <div class="detail-member">
                             <div class="member-avatar-large">
-                                <img src="https://res.cloudinary.com/cloudninestudios/image/upload/v1765009462/steve-coach_lmfpam.jpg"
-                                     alt="Steve Gonser"
+                                <img src="https://res.cloudinary.com/cloudninestudios/image/upload/v1765009460/lisa-wong_hclx6d.jpg"
+                                     alt="Penny Platt"
                                      loading="lazy">
                             </div>
                             <div class="member-info">
-                                <div class="member-name-large">Steve Gonser</div>
+                                <div class="member-name-large">Penny Platt</div>
                                 <div class="member-meta">Marathon Training • Week 8 of 16 • Boston Qualifier Goal</div>
                             </div>
                             <div class="risk-score-large">
@@ -1026,14 +1023,14 @@
                                 </div>
 
                                 <div class="deploy-actions">
-                                    <button class="deploy-btn primary"><svg class="icon icon-inline" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.5 16.5C3 18 3.5 20 3.5 20C3.5 20 5.5 20.5 7 19C8.5 17.5 8.5 16 8.5 16C8.5 16 6 15 4.5 16.5ZM12 15L9 12M14.5 4C17.5 4 20 6.5 20 9.5C20 11 19.5 12.5 18.5 13.5L13 19L11 17L13 15L11 13L9 15L7 13L12.5 7.5C13.5 6.5 15 6 16.5 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Deploy Now</button>
-                                    <button class="deploy-btn secondary">💾 Save Draft</button>
-                                    <button class="deploy-btn secondary">🧪 A/B Test</button>
+                                    <button class="deploy-btn primary">Deploy Now</button>
+                                    <button class="deploy-btn secondary">Save Draft</button>
+                                    <button class="deploy-btn secondary">A/B Test</button>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- AI Insights -->
+                        <!-- AI Insights --> 
                         <div class="content-section">
                             <div class="section-title-ai">
                                 <span><svg class="icon icon-inline" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 2L6 13.5H10L8 22L18 11.5H14L16 2Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
@@ -1102,8 +1099,8 @@
         </div>
     </div>
     <script>
-        // Interactive navigation highlighting
-        document.querySelectorAll('.nav-item').forEach(item => {
+        // Interactive desktop-navigation highlighting
+        document.querySelectorAll('.desktop-nav-item').forEach(item => {
             item.addEventListener('click', function(e) {
                 // Navigation will be handled by href
             });

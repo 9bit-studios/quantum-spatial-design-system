@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RunSmart Coach - Settings</title>
+    <link rel="stylesheet" href="../../assets/runsmart-design-system.css">
     <style>
         * {
             margin: 0;
@@ -11,6 +12,11 @@
             box-sizing: border-box;
         }
 
+        .header-subtitle {
+            font-size: 14px;
+            color: #888;
+        }
+        
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', system-ui, sans-serif;
             background: #000000;
@@ -20,68 +26,6 @@
             align-items: center;
             min-height: 100vh;
             padding: 20px;
-        }
-
-        .phone-frame {
-            width: 393px;
-            height: 852px;
-            background: #000;
-            border-radius: 55px;
-            padding: 12px;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8),
-                        inset 0 0 0 1px rgba(255, 255, 255, 0.1);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .dynamic-island {
-            position: absolute;
-            top: 12px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 126px;
-            height: 37px;
-            background: #000;
-            border-radius: 20px;
-            z-index: 100;
-        }
-
-        .screen {
-            width: 100%;
-            height: 100%;
-            background: #000;
-            border-radius: 47px;
-            overflow-y: auto;
-            overflow-x: hidden;
-        }
-
-        .status-bar {
-            padding: 54px 24px 12px 24px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 15px;
-            font-weight: 600;
-        }
-
-        .content {
-            padding: 0 24px 100px 24px;
-        }
-
-        /* Header */
-        .page-header {
-            margin-bottom: 32px;
-        }
-
-        .header-title {
-            font-size: 32px;
-            font-weight: 700;
-            margin-bottom: 4px;
-        }
-
-        .header-subtitle {
-            font-size: 14px;
-            color: #888;
         }
 
         /* View Toggle */
@@ -231,7 +175,7 @@
 
         /* Profile Card */
         .profile-card {
-            background: #0A0A0A;
+            background: linear-gradient(-45deg, rgba(123, 0, 255, 0.09), rgba(205, 255, 0, 0.07));
             border: 1px solid #1A1A1A;
             border-radius: 20px;
             padding: 20px;
@@ -266,62 +210,11 @@
 
         .profile-role {
             font-size: 13px;
-            color: #7B00FF;
+            color: #A0CC00;
             font-weight: 600;
         }
 
-        /* Tab Bar */
-        .tab-bar {
-            position: fixed;
-            bottom: 12px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 369px;
-            background: rgba(10, 10, 10, 0.95);
-            backdrop-filter: blur(20px);
-            border: 1px solid #1A1A1A;
-            border-radius: 24px;
-            padding: 12px 16px;
-            display: flex;
-            justify-content: space-around;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-        }
-
-        .tab-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 4px;
-            cursor: pointer;
-            text-decoration: none;
-        }
-
-        .tab-icon {
-            opacity: 0.5;
-        }
-
-        .tab-label {
-            font-size: 10px;
-            color: #888;
-            font-weight: 500;
-        }
-
-        .tab-item.active .tab-icon {
-            opacity: 1;
-            filter: drop-shadow(0 0 8px #7B00FF);
-        }
-
-        .tab-item.active .tab-label {
-            color: #7B00FF;
-            font-weight: 600;
-        }
-
-        .tab-icon svg {
-            width: 24px;
-            height: 24px;
-        }
     </style>
-    <link rel="stylesheet" href="../../assets/runsmart-design-system.css">
 </head>
 <body>
     <div class="phone-frame">
@@ -346,9 +239,13 @@
             </div>
 
             <div class="content">
-                <div class="page-header">
+                <div class="header">
+                    <a href="mobile-coach-dashboard.html"  class="back-button">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M15 18l-6-6 6-6"/>
+                        </svg>
+                    </a>
                     <div class="header-title">Settings</div>
-                    <div class="header-subtitle">Manage your coaching dashboard</div>
                 </div>
 
                 <!-- Profile -->
@@ -381,7 +278,7 @@
                     </div>
                     <div class="toggle-buttons">
                         <div class="toggle-button active">Coach View</div>
-                        <a href="../members/mobile-app-today.html" class="toggle-button">Member View</a>
+                        <a href="../members/mobile-app-settings.html" class="toggle-button">Member View</a>
                     </div>
                 </div>
 
@@ -499,33 +396,45 @@
                 </div>
             </div>
 
-                        <div class="tab-bar">
-                <a href="mobile-coach-dashboard.html" class="tab-item">
-                    <svg class="tab-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <div class="bottom-nav">
+                <a href="mobile-coach-dashboard.html" class="nav-item">
+                    <svg class="nav-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
                     </svg>
-                    <div class="tab-label">Dashboard</div>
+                    <div class="nav-label">Dashboard</div>
                 </a>
-                <a href="mobile-coach-member-detail.html" class="tab-item">
-                    <svg class="tab-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <a href="mobile-coach-member-detail.html" class="nav-item">
+                    <svg class="nav-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M16 11c1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 3-1.34 3-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
                     </svg>
-                    <div class="tab-label">Members</div>
+                    <div class="nav-label">Members</div>
                 </a>
-                <a href="mobile-coach-messages.html" class="tab-item">
-                    <svg class="tab-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <a href="mobile-coach-messages.html" class="nav-item">
+                    <svg class="nav-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/>
                     </svg>
-                    <div class="tab-label">Messages</div>
+                    <div class="nav-label">Messages</div>
                 </a>
-                <a href="mobile-coach-settings.html" class="tab-item active">
-                    <svg class="tab-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/>
+                <a href="mobile-coach-studio.html" class="nav-item">
+                    <svg class="nav-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12.18 2.5l5.5 2c.78.28 1.32 1.03 1.32 1.86V12c0 5.5-3.84 10.66-9 12-5.16-1.34-9-6.5-9-12V6.36c0-.83.54-1.58 1.32-1.86l5.5-2c.5-.18 1.05-.18 1.55 0z"/>
+                        <path d="M9 11.5l2 2 4-4" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
                     </svg>
-                    <div class="tab-label">Settings</div>
+                    <div class="nav-label">Studio</div>
                 </a>
             </div>
         </div>
     </div>
+
+    <!-- Core Scripts -->
+    <script src="../../scripts/core/dom-ready.js"></script>
+    <script src="../../scripts/core/context-detection.js"></script>
+
+    <!-- Feature Scripts -->
+    <script src="../../scripts/transitions/page-transitions.js"></script>
+    <script src="../../scripts/interactions/navigation.js"></script>
+
+    <!-- Init Script -->
+    <script src="../../scripts/init/mobile-coach-init.js"></script>
 </body>
 </html>
