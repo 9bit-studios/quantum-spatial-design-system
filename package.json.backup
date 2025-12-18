@@ -68,9 +68,7 @@
     "framer:auth": "tsx integrations/framer/oauth-setup.ts",
     "framer:deploy": "tsx integrations/framer/deploy-to-framer.ts",
     "notion:sync": "tsx integrations/notion/sync-design-tokens.ts",
-    "vercel:deploy": "npm run build && vercel --prod",
-    "sync:notion": "node automation/siri-automation-orchestrator/scripts/sync-components-to-notion.js",
-    "sync:notion:install": "npm install @notionhq/client chokidar dotenv"
+    "vercel:deploy": "npm run build && vercel --prod"
   },
   "dependencies": {
     "class-variance-authority": "^0.7.0",
@@ -119,12 +117,7 @@
     "architecture": "unified-design-system",
     "tokens": {
       "sourceOfTruth": "./tokens",
-      "platforms": [
-        "web",
-        "shopify",
-        "nextjs",
-        "react"
-      ],
+      "platforms": ["web", "shopify", "nextjs", "react"],
       "validation": "strict",
       "appleHIGCompliance": true
     },
