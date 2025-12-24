@@ -133,7 +133,7 @@ Mobile Member Header: [⚙️ Settings gear icon]
 
 **To Deploy Changes**:
 ```bash
-cd /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/brand-theme/professional/portfolio/runsmart/runsmart-interfaces-purple
+cd /Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/brand-theme/professional/portfolio/runsmart/runsmart-interfaces-purple
 npm run deploy -- --commit-dirty=true
 ```
 

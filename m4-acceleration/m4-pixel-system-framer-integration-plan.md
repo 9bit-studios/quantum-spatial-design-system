@@ -213,7 +213,7 @@
 
   Steps:
   1. Authenticate Cloudflare:
-  cd /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/cloudflare-workers
+  cd /Users/pennyplatt/Documents//Oksana/quantum-spatial/cloudflare-workers
   npx wrangler login
   2. Create KV namespaces:
   ./setup-kv-namespaces.sh

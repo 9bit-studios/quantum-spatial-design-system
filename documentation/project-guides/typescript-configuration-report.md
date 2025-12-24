@@ -24,7 +24,7 @@ All TypeScript configurations have been validated and unified across the Oksana 
 ## Configuration Hierarchy
 
 ### Root Configuration
-**Location:** `/Users/pennyplatt/Documents/9BitStudios/Oksana/tsconfig.json`
+**Location:** `/Users/pennyplatt/Documents//Oksana/tsconfig.json`
 
 **Purpose:** Primary TypeScript configuration with essential Oksana Platform path mappings
 
@@ -290,7 +290,7 @@ All TypeScript configurations have been validated and unified across the Oksana 
 
 **Approach:** Shared root node_modules with workspace-aware resolution
 
-**Location:** `/Users/pennyplatt/Documents/9BitStudios/Oksana/node_modules`
+**Location:** `/Users/pennyplatt/Documents//Oksana/node_modules`
 
 **Rationale:**
 1. **Reduced Disk Usage**: Single installation of shared dependencies
@@ -336,7 +336,7 @@ All quantum-spatial projects use **relative path resolution** back to Oksana roo
 ```
 quantum-spatial/creative-intelligence-portal/shopify-themes/shopify-vercel/
 └── tsconfig.json extends "../../../../../../tsconfig.json"
-    └── Resolves to: /Users/pennyplatt/Documents/9BitStudios/Oksana/tsconfig.json
+    └── Resolves to: /Users/pennyplatt/Documents//Oksana/tsconfig.json
 ```
 
 ### Path Mapping Classes
@@ -524,7 +524,7 @@ npm run process
 
 **Project:** Oksana Platform & Quantum Spatial Design System
 **Organization:** 9Bit Studios
-**Documentation:** `/Users/pennyplatt/Documents/9BitStudios/Oksana/`
+**Documentation:** `/Users/pennyplatt/Documents//Oksana/`
 
 **Key Files:**
 - Primary Config: `tsconfig.json`

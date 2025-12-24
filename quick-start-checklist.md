@@ -22,7 +22,7 @@
 
 ### 1. Navigate to Design System
 ```bash
-cd /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system
+cd /Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system
 ```
 
 ### 2. Run Migration Script
@@ -147,12 +147,12 @@ Migration is successful when ALL of these are true:
 
 ```bash
 # Verify new location works first
-cd /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/apple-intelligence-agency
+cd /Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/apple-intelligence-agency
 ls -la
 cat INTEGRATION.md
 
 # If everything looks good, remove original
-rm -rf /Users/pennyplatt/Documents/9BitStudios/Oksana/apple-intelligence-agency
+rm -rf /Users/pennyplatt/Documents//Oksana/apple-intelligence-agency
 ```
 
 **DO NOT remove original until you've:**
@@ -168,7 +168,7 @@ rm -rf /Users/pennyplatt/Documents/9BitStudios/Oksana/apple-intelligence-agency
 ### Issue: Script won't run
 ```bash
 # Make executable
-chmod +x /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/tools/scripts/move-apple-intelligence-agency.sh
+chmod +x /Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/tools/scripts/move-apple-intelligence-agency.sh
 ```
 
 ### Issue: Source directory not found
@@ -176,7 +176,7 @@ chmod +x /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-s
 
 **Solution:** Verify path exists
 ```bash
-ls -la /Users/pennyplatt/Documents/9BitStudios/Oksana/apple-intelligence-agency
+ls -la /Users/pennyplatt/Documents//Oksana/apple-intelligence-agency
 ```
 
 ### Issue: Destination already exists
@@ -189,7 +189,7 @@ ls -la /Users/pennyplatt/Documents/9BitStudios/Oksana/apple-intelligence-agency
 ### Issue: Permission denied
 ```bash
 # Run with current user (avoid sudo)
-cd /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system
+cd /Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system
 ./tools/scripts/move-apple-intelligence-agency.sh
 ```
 

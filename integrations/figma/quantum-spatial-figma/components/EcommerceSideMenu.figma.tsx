@@ -1,6 +1,6 @@
 
 import figma from '@figma/code-connect';
-import { EcommerceSideMenu } from '/Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/components/templates/layouts/EcommerceSideMenu.tsx';
+import { EcommerceSideMenu } from '/Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/components/templates/layouts/EcommerceSideMenu.tsx';
 
 // TODO: Map to Figma component
 figma.connect(

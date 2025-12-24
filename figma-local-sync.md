@@ -98,7 +98,7 @@ Automates the sync process:
 4. Plugin exports: /asset-pipeline/figma-extracted-styles.json
 
 # Step 2: In Terminal
-cd /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system
+cd /Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system
 
 # Run validation script
 npm run validate-figma-styles
@@ -138,7 +138,7 @@ npm run sync-figma-to-local
 
 ```bash
 # Step 1: Edit local tokens
-open /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/tokens/brand/quantumSpatialTokens.ts
+open /Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/tokens/brand/quantumSpatialTokens.ts
 
 # Change colors to your preference
 # Save

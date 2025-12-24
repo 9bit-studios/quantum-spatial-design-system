@@ -113,10 +113,10 @@ export class AppleIntelligenceStrategicDirectorCoordinator {
     async initializeValidationFramework() {
         try {
             // Import validation frameworks
-            const { AppleIntelligenceQAFramework } = await import('../../../../foundation-models/apple-intelligence-qa-framework.js');
-            const { SourcesOfTruthAuthenticator } = await import('../../../../foundation-models/sources-of-truth-authenticator.js');
-            const { StrategicDirectorAuthenticator } = await import('../../../../foundation-models/strategic-director-authenticator.js');
-            const { CrossProjectValidationRouter } = await import('../../../../foundation-models/cross-project-validation-router.js');
+            const { AppleIntelligenceQAFramework } = await import('../../../../OksanaFoundationModel/apple-intelligence-qa-framework.js');
+            const { SourcesOfTruthAuthenticator } = await import('../../../../OksanaFoundationModel/sources-of-truth-authenticator.js');
+            const { StrategicDirectorAuthenticator } = await import('../../../../OksanaFoundationModel/strategic-director-authenticator.js');
+            const { CrossProjectValidationRouter } = await import('../../../../OksanaFoundationModel/cross-project-validation-router.js');
             // Initialize frameworks
             this.qaFramework = new AppleIntelligenceQAFramework({
                 m4Acceleration: this.config.m4Acceleration,
@@ -183,15 +183,15 @@ export class AppleIntelligenceStrategicDirectorCoordinator {
     async initializeFoundationTools() {
         try {
             // Design System Deployment Orchestrator
-            const { DesignSystemDeploymentOrchestrator } = await import('../../../../foundation-models/design-system-deployment-orchestrator.js');
+            const { DesignSystemDeploymentOrchestrator } = await import('../../../../OksanaFoundationModel/design-system-deployment-orchestrator.js');
             this.deploymentOrchestrator = new DesignSystemDeploymentOrchestrator();
             console.log('  ✅ Design System Deployment Orchestrator loaded');
             // Framer Deployment Integration
-            const { FramerDeploymentIntegration } = await import('../../../../foundation-models/framer-deployment-integration.js');
+            const { FramerDeploymentIntegration } = await import('../../../../OksanaFoundationModel/framer-deployment-integration.js');
             this.framerIntegration = new FramerDeploymentIntegration();
             console.log('  ✅ Framer Deployment Integration loaded');
             // Vercel Staging Automation
-            const { VercelStagingAutomation } = await import('../../../../foundation-models/vercel-staging-automation.js');
+            const { VercelStagingAutomation } = await import('../../../../OksanaFoundationModel/vercel-staging-automation.js');
             this.vercelAutomation = new VercelStagingAutomation();
             console.log('  ✅ Vercel Staging Automation loaded');
         }
@@ -206,7 +206,7 @@ export class AppleIntelligenceStrategicDirectorCoordinator {
     async initializeOksanaFoundationCoordinator() {
         try {
             // Import enhanced creative intelligence MCP integration
-            const { default: EnhancedCreativeIntelligenceRunner } = await import('../../../../foundation-models/run-enhanced-creative-intelligence-mcp.js');
+            const { default: EnhancedCreativeIntelligenceRunner } = await import('../../../../OksanaFoundationModel/run-enhanced-creative-intelligence-mcp.js');
             this.oksanaFoundationCoordinator = new EnhancedCreativeIntelligenceRunner();
             await this.oksanaFoundationCoordinator.initialize();
             console.log('  ✅ Oksana Foundation Coordinator initialized');

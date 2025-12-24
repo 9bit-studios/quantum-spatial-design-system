@@ -30,7 +30,7 @@ system_profiler SPHardwareDataType | grep "Chip"
 
 # Confirm working directory
 pwd
-# Should be: /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial
+# Should be: /Users/pennyplatt/Documents//Oksana/quantum-spatial
 
 # Verify safety protocols
 cat design-system/FRAMER_SAFETY_PROTOCOL.md

@@ -236,7 +236,7 @@ tokens/themes/enterprise.ts    // Professional variant
 
 **Integration:**
 ```javascript
-import { CreativeDevAccelerator } from '../foundation-models/creative-development-accelerator.mjs';
+import { CreativeDevAccelerator } from '../OksanaFoundationModel/creative-development-accelerator.mjs';
 
 const accelerator = new CreativeDevAccelerator();
 await accelerator.extractStylesFromHTML({

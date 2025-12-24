@@ -125,7 +125,7 @@ The Enhanced Bridge can directly use these for Notion integration without transl
 
 ```bash
 # Instead of creating a new bridge, extend the existing one:
-cd /Users/pennyplatt/Documents/9BitStudios/OksanaPlatform/xcode-model-bridge
+cd /Users/pennyplatt/Documents//OksanaPlatform/xcode-model-bridge
 
 # Add Notion integration folder
 mkdir notion-integration

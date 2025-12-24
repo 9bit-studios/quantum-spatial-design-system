@@ -4,15 +4,15 @@
   ▘▘ ▝▝    ~/…/design-system/brand-theme/professional/portfolio/runsmart/runsmart-interfaces-purple
 ─────────────────────────────────────── Ctrl+E to show 1346 previous messages ──────────────────────────────────────
 
-⏺ Read(~/Documents/9BitStudios/Oksana/apple-intelligence/foundation/creative-queue/development/oksana-creative-intel
+⏺ Read(~/Documents//Oksana/apple-intelligence/foundation/creative-queue/development/oksana-creative-intel
       ligence-accelerator/quantum-spatial-creative-intelligence-accelerator-apple-intelligence-integration.md)
   ⎿  Read 526 lines
 
-⏺ Read(~/Documents/9BitStudios/Oksana/apple-intelligence/foundation/creative-queue/development/oksana-creative-intel
+⏺ Read(~/Documents//Oksana/apple-intelligence/foundation/creative-queue/development/oksana-creative-intel
       ligence-accelerator/m4-neural-engine-apple-vision-pro-optimization-guide.md)
   ⎿  Read 583 lines
 
-⏺ Read(~/Documents/9BitStudios/Oksana/apple-intelligence/foundation/creative-queue/development/oksana-creative-intel
+⏺ Read(~/Documents//Oksana/apple-intelligence/foundation/creative-queue/development/oksana-creative-intel
       ligence-accelerator/creative-intelligence-models-foundation-guide-grid.md)
   ⎿  Read 210 lines
 

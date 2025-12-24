@@ -56,7 +56,7 @@ The extracted JSON contains:
 
 Move the JSON to your project:
 ```bash
-mv ~/Downloads/figma-extracted-styles.json /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/asset-pipeline/
+mv ~/Downloads/figma-extracted-styles.json /Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/asset-pipeline/
 ```
 
 Then compare the hex values against:

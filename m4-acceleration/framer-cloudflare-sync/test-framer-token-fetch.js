@@ -7,7 +7,7 @@ const fs = require('fs');
 const path = require('path');
 
 // Configuration
-const tokensDir = '/Users/pennyplatt/9BitStudios/M4-Optimized Quantum-Spatial Pixel Design System Acceleration/tokens';
+const tokensDir = '/Users/pennyplatt//M4-Optimized Quantum-Spatial Pixel Design System Acceleration/tokens';
 const state = 'transitional';
 const outputDir = './framer-output';
 

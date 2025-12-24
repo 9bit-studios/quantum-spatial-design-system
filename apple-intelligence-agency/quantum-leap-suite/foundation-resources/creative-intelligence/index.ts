@@ -4,7 +4,7 @@
  */
 
 export { CreativeIntelligenceMCPIntegration } from
-  '../../../../../../foundation-models/creative-intelligence-mcp-integration.js';
+  '../../../../../../OksanaFoundationModel/creative-intelligence-mcp-integration.js';
 
 export { CreativeDevelopmentAccelerator } from
-  '../../../../../../foundation-models/creative-development-accelerator.mjs';
+  '../../../../../../OksanaFoundationModel/creative-development-accelerator.mjs';

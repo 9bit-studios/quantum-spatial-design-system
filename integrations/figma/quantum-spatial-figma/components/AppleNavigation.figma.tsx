@@ -1,6 +1,6 @@
 
 import figma from '@figma/code-connect';
-import { AppleNavigation } from '/Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/components/organisms/headers/AppleNavigation.tsx';
+import { AppleNavigation } from '/Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/components/organisms/headers/AppleNavigation.tsx';
 
 // TODO: Map to Figma component
 figma.connect(

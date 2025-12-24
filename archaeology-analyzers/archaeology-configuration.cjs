@@ -482,7 +482,7 @@ if (require.main === module) {
       
       // Save findings to file
       const fs = require('fs');
-      const outputPath = '/Users/pennyplatt/Documents/9bitStudios/Oksana/AppleIntelligenceStrategicDirector/archaeology-findings.json';
+      const outputPath = '/Users/pennyplatt/Documents/Oksana/AppleIntelligenceStrategicDirector/archaeology-findings.json';
       fs.writeFileSync(outputPath, JSON.stringify(archaeologist.findings, null, 2));
       console.log(`💾 Detailed findings saved to: archaeology-findings.json`);
     })

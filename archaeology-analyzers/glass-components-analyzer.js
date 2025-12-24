@@ -11,7 +11,7 @@ const path = require('path');
 
 class GlassComponentsAnalyzer {
   constructor() {
-    this.baseDir = '/Users/pennyplatt/9BitStudios/petersen-portal/fresh-glass-theme/petersen-glass-theme-reverted';
+    this.baseDir = '/Users/pennyplatt//petersen-portal/fresh-glass-theme/petersen-glass-theme-reverted';
     this.glassComponents = new Map();
     this.cssHierarchy = new Map();
     this.inlineJavaScript = new Map();

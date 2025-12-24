@@ -1,6 +1,6 @@
 
 import figma from '@figma/code-connect';
-import { StatCard } from '/Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/components/molecules/cards/StatCard.tsx';
+import { StatCard } from '/Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/components/molecules/cards/StatCard.tsx';
 
 // TODO: Map to Figma component
 figma.connect(

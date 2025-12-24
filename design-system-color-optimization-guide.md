@@ -179,7 +179,7 @@ const premiumColors = {
 **Option A: Quick Test (Framer Component Only)**
 ```bash
 # Edit the Framer component directly for instant preview
-open /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/m4-acceleration/components/framer/PremiumQuantumSpatial.tsx
+open /Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/m4-acceleration/components/framer/PremiumQuantumSpatial.tsx
 
 # Change lines 14-37 (premiumColors object)
 # Save the file
@@ -189,7 +189,7 @@ open /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-syste
 **Option B: Proper Token System (Recommended)**
 ```bash
 # Edit the quantum-spatial brand tokens
-open /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/tokens/brand/quantumSpatialTokens.ts
+open /Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/tokens/brand/quantumSpatialTokens.ts
 
 # Change lines 10-34 (color definitions)
 # Save the file
@@ -210,7 +210,7 @@ open /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-syste
 After editing token files, you need to rebuild the design system:
 
 ```bash
-cd /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system
+cd /Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system
 
 # Rebuild TypeScript tokens to JavaScript
 npm run build
@@ -231,7 +231,7 @@ npx tsc --project tsconfig.json
 Your Framer components fetch tokens from the Cloudflare Worker. After rebuilding, deploy:
 
 ```bash
-cd /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/cloudflare-workers
+cd /Users/pennyplatt/Documents//Oksana/quantum-spatial/cloudflare-workers
 
 # Deploy the unified design system worker
 npx wrangler deploy unified-design-system-worker.js
@@ -270,7 +270,7 @@ const API_ENDPOINT = "https://unified-design-system-staging.your-account.workers
 
 **To Find Your Worker URL**:
 ```bash
-cd /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/cloudflare-workers
+cd /Users/pennyplatt/Documents//Oksana/quantum-spatial/cloudflare-workers
 
 # Check wrangler.toml for your worker name
 cat wrangler.toml
@@ -364,7 +364,7 @@ const API_ENDPOINT = "";
 const API_ENDPOINT = "https://unified-design-system.YOUR_ACCOUNT.workers.dev";
 
 // You can find your worker URL by running:
-// cd /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/cloudflare-workers
+// cd /Users/pennyplatt/Documents//Oksana/quantum-spatial/cloudflare-workers
 // wrangler whoami
 // wrangler deployments list
 ```
@@ -406,11 +406,11 @@ Located in `/quantum-spatial/design-system/components/`:
 **Step 2: Use Creative Intelligence MCP to Regenerate**
 ```bash
 # Run the unified MCP system
-cd /Users/pennyplatt/Documents/9BitStudios/Oksana/foundation-models
+cd /Users/pennyplatt/Documents//Oksana/OksanaFoundationModel
 node run-unified-creative-strategic-intelligence-mcp.js
 
 # Or use the deployment script:
-cd /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/m4-acceleration
+cd /Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/m4-acceleration
 ./DEPLOY-M4-UNIFIED-SYSTEM.sh
 ```
 
@@ -433,7 +433,7 @@ Claude (with MCP): Uses creative_asset_generate tool
 If you want to update existing components directly:
 ```bash
 # Find a component markdown file
-open /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/components/QuantumSpatial_ProductCard.md
+open /Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/components/QuantumSpatial_ProductCard.md
 
 # Inside, you'll find the React component code
 # Replace hardcoded hex colors with your new palette
@@ -464,7 +464,7 @@ You asked: "Are all my index.ts file exports accounted for?"
 
 ### **Validation Command**:
 ```bash
-cd /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system
+cd /Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system
 
 # Check for TypeScript errors in all index files
 npx tsc --noEmit
@@ -487,7 +487,7 @@ node -e "import('./tokens/index.ts').then(() => console.log('✅ tokens/index.ts
 
 ```bash
 # ===== STEP 1: Edit Your Color Preferences =====
-cd /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system
+cd /Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system
 
 # Open the primary color source file
 open tokens/brand/quantumSpatialTokens.ts
@@ -575,7 +575,7 @@ const API_ENDPOINT = "https://unified-design-system.YOUR_ACCOUNT.workers.dev";
 # ===== STEP 7: Regenerate Components (Optional) =====
 
 # If you want to regenerate all QuantumSpatial components with new colors:
-cd /Users/pennyplatt/Documents/9BitStudios/Oksana/foundation-models
+cd /Users/pennyplatt/Documents//Oksana/OksanaFoundationModel
 
 # Start the unified MCP system
 node run-unified-creative-strategic-intelligence-mcp.js
@@ -702,32 +702,32 @@ Follow the "Complete Color Customization Workflow" section above
 
 ### **Source Token Files (Edit Colors Here)**:
 ```
-/Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/tokens/brand/quantumSpatialTokens.ts
-/Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/tokens/brand/unifiedTokens.ts
-/Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/tokens/brand/enhancedGamingTokens.ts
+/Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/tokens/brand/quantumSpatialTokens.ts
+/Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/tokens/brand/unifiedTokens.ts
+/Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/tokens/brand/enhancedGamingTokens.ts
 ```
 
 ### **Framer Components (Quick Override)**:
 ```
-/Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/m4-acceleration/components/framer/PremiumQuantumSpatial.tsx
-/Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/m4-acceleration/components/framer/DesignSystemProvider.tsx
+/Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/m4-acceleration/components/framer/PremiumQuantumSpatial.tsx
+/Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/m4-acceleration/components/framer/DesignSystemProvider.tsx
 ```
 
 ### **Export Chain (Fix Imports)**:
 ```
-/Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/tokens/index.ts
-/Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/tokens/brand/index.ts
-/Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/tokens/themes/index.ts
+/Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/tokens/index.ts
+/Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/tokens/brand/index.ts
+/Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/tokens/themes/index.ts
 ```
 
 ### **Cloudflare Worker (Deploy Tokens)**:
 ```
-/Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/cloudflare-workers/unified-design-system-worker.js
+/Users/pennyplatt/Documents//Oksana/quantum-spatial/cloudflare-workers/unified-design-system-worker.js
 ```
 
 ### **Component Markdown Files (Regenerate)**:
 ```
-/Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/components/QuantumSpatial_*.md
+/Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/components/QuantumSpatial_*.md
 ```
 
 ---
@@ -763,4 +763,4 @@ After following this guide, you should have:
 **Any questions? Start with fixing the 3 critical problems, then customize your colors in quantumSpatialTokens.ts.**
 <function_calls>
 <invoke name="Read">
-<parameter name="file_path">/Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/tokens/index.ts
+<parameter name="file_path">/Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/tokens/index.ts

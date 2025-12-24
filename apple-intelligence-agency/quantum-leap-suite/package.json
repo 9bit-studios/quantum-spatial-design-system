@@ -20,21 +20,25 @@
     "svg-generation",
     "game-development",
     "vision-pro",
+    "foundation-model",
     "m4-neural-engine",
-    "claude-agent",
-    "9bit-studios"
+    "quantum-spatial",
+    "visual-intelligence",
+    "creative-intelligence",
+    "oksana"
   ],
-  "author": "Penny Platt <penny@9bitstudios.io>",
+  "author": "Oksana <hello@oksana.ai>",
   "license": "PROPRIETARY",
   "dependencies": {
-    "@anthropic-ai/sdk": "^0.27.3",
+    "@anthropic-ai/sdk": "^0.71.2",
+    "@notionhq/client": "^5.4.0",
     "@modelcontextprotocol/sdk": "^0.6.1",
     "chalk": "^5.6.2",
     "tsx": "^4.7.0",
     "zod": "^3.22.4"
   },
   "devDependencies": {
-    "@types/node": "^22.0.0",
+    "@types/node": "^24.10.1",
     "typescript": "^5.3.3"
   },
   "engines": {
@@ -48,5 +52,5 @@
   "bugs": {
     "url": "https://github.com/9bitstudios/quantum-leap-suite/issues"
   },
-  "homepage": "https://9bitstudios.io/quantum-leap"
+  "homepage": "https://oksana.ai/quantum-leap"
 }

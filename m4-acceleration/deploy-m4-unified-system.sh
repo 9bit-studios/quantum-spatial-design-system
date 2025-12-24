@@ -25,11 +25,11 @@ echo "━━━━━━━━━━━━━━━━━━━━━━━━�
 echo -e "${NC}"
 
 # Paths
-OKSANA_ROOT="${HOME}/Documents/9BitStudios/Oksana"
+OKSANA_ROOT="${HOME}/Documents//Oksana"
 QUANTUM_SPATIAL="${OKSANA_ROOT}/quantum-spatial"
 CLOUDFLARE_WORKERS="${QUANTUM_SPATIAL}/cloudflare-workers"
 M4_ACCELERATION="${QUANTUM_SPATIAL}/design-system/m4-acceleration"
-FOUNDATION_MODELS="${OKSANA_ROOT}/foundation-models"
+FOUNDATION_MODELS="${OKSANA_ROOT}/OksanaFoundationModel"
 STRATEGIC_DIRECTOR="${OKSANA_ROOT}/strategic-director"
 
 # Environment variables
@@ -99,7 +99,7 @@ BRIDGE_FILE="${OKSANA_ROOT}/types/CreativeIntelligenceBridge.ts"
 
 if [ -f "$BRIDGE_FILE" ]; then
     # Update framerSyncPath
-    sed -i.bak "s|framerSyncPath: '/Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/cloudflare-workers/unified-design-system-worker.js'|framerSyncPath: '/Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/cloudflare-workers'|g" "$BRIDGE_FILE"
+    sed -i.bak "s|framerSyncPath: '/Users/pennyplatt/Documents//Oksana/quantum-spatial/cloudflare-workers/unified-design-system-worker.js'|framerSyncPath: '/Users/pennyplatt/Documents//Oksana/quantum-spatial/cloudflare-workers'|g" "$BRIDGE_FILE"
 
     # Update cloudflareWorkerURL
     sed -i.bak "s|cloudflareWorkerURL: process.env.CLOUDFLARE_FRAMER_WORKER_URL \|\| 'https://quantum-spatial-design-system.9bitstudios.io'|cloudflareWorkerURL: process.env.CLOUDFLARE_FRAMER_WORKER_URL \|\| 'https://design-system-staging.9bitstudios.io'|g" "$BRIDGE_FILE"

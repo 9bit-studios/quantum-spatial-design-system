@@ -58,24 +58,24 @@ ready.
 
 ⏺ Bash(find Documents -name "*.sh" -path "*init-root-git*" -o -name "push-all.sh" 2>/dev/null
        | head -20)
-  ⎿  Documents/9BitStudios/Oksana/push-all.sh     
-     Documents/9BitStudios/Oksana/init-root-git.sh
+  ⎿  Documents//Oksana/push-all.sh     
+     Documents//Oksana/init-root-git.sh
 
-⏺ Found it! The Oksana project is at Documents/9BitStudios/Oksana/. Let me check that
+⏺ Found it! The Oksana project is at Documents//Oksana/. Let me check that
   directory:
 
-⏺ Bash(cd Documents/9BitStudios/Oksana && git status)
+⏺ Bash(cd Documents//Oksana && git status)
   ⎿  On branch main                               
      Your branch is up to date with 'origin/main'.
      … +11 lines (ctrl+o to expand)
 
-⏺ Bash(ls -la Documents/9BitStudios/Oksana/)
+⏺ Bash(ls -la Documents//Oksana/)
   ⎿  total 5552                                                            
      drwxr-xr-x@   5 pennyplatt  staff      160 Nov 26 00:58 _reports-today
      drwxr-xr-x@ 101 pennyplatt  staff     3232 Dec 10 18:30 .
      … +115 lines (ctrl+o to expand)
 
-⏺ Search(pattern: "Documents/9BitStudios/Oksana/**/package.json")
+⏺ Search(pattern: "Documents//Oksana/**/package.json")
   ⎿  Found 16 files (ctrl+o to expand)
 
 ⏺ Read(init-root-git.sh)
@@ -97,9 +97,9 @@ ready.
 ⏺ Read(.gitmodules)
   ⎿  Read 24 lines
 
-⏺ Bash(cd Documents/9BitStudios/Oksana && git submodule status)
+⏺ Bash(cd Documents//Oksana && git submodule status)
   ⎿  Error: Exit code 1
-     (eval):cd:1: no such file or directory: Documents/9BitStudios/Oksana
+     (eval):cd:1: no such file or directory: Documents//Oksana
 
 ⏺ Bash(git submodule status)
   ⎿  Error: Exit code 128
@@ -107,18 +107,18 @@ ready.
 
 ⏺ Found the first error! There's a submodule mapping issue. Let me investigate:
 
-⏺ Bash(ls -la /Users/pennyplatt/Documents/9BitStudios/Oksana/.build/checkouts/)
+⏺ Bash(ls -la /Users/pennyplatt/Documents//Oksana/.build/checkouts/)
   ⎿  total 0                                              
      drwxr-xr-x   4 pennyplatt  staff  128 Nov 12 15:18 .
      drwxr-xr-x  14 pennyplatt  staff  448 Dec  9 19:19 ..
      … +2 lines (ctrl+o to expand)
 
-⏺ Bash(find /Users/pennyplatt/Documents/9BitStudios/Oksana/.build -name ".git" -type d
+⏺ Bash(find /Users/pennyplatt/Documents//Oksana/.build -name ".git" -type d
       2>/dev/null)
-  ⎿  /Users/pennyplatt/Documents/9BitStudios/Oksana/.build/checkouts/swift-crypto/.git
-     /Users/pennyplatt/Documents/9BitStudios/Oksana/.build/checkouts/swift-asn1/.git
+  ⎿  /Users/pennyplatt/Documents//Oksana/.build/checkouts/swift-crypto/.git
+     /Users/pennyplatt/Documents//Oksana/.build/checkouts/swift-asn1/.git
 
-⏺ Bash(cat /Users/pennyplatt/Documents/9BitStudios/Oksana/.gitignore)
+⏺ Bash(cat /Users/pennyplatt/Documents//Oksana/.gitignore)
   ⎿  .env.quantum-secure              
      .env.master-example
      .env.quantum-secure.metadata.json
@@ -126,19 +126,19 @@ ready.
 
 ⏺ Now let me check the submodule states more carefully:
 
-⏺ Bash(cd /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system && git
+⏺ Bash(cd /Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system && git
        status --short)
   ⎿   M apple-intelligence-agency/quantum-leap-suite/design-system-automation/SKILL.md
       D brand-asset-repository/9bit-hex-logo-black.svg
       D brand-asset-repository/9bit-icon-logo.png
      … +108 lines (ctrl+o to expand)
 
-⏺ Bash(cd /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/creative-intelligenc
+⏺ Bash(cd /Users/pennyplatt/Documents//Oksana/quantum-spatial/creative-intelligenc
       e-portal && git status --short)
   ⎿   M vercel/vercel.json
 
 ⏺ Bash(cd
-      /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/typescript-enterprise &&
+      /Users/pennyplatt/Documents//Oksana/quantum-spatial/typescript-enterprise &&
        git status --short)
   ⎿   M package.json     
       M tsconfig.json
@@ -146,7 +146,7 @@ ready.
      ?? package-lock.json
 
 ⏺ Bash(cd
-      /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/johnson-health-hydrogen
+      /Users/pennyplatt/Documents//Oksana/quantum-spatial/johnson-health-hydrogen
       && git status --short)
   ⎿   D .npmrc                    
       D app/.DS_Store
@@ -242,7 +242,7 @@ node:internal/modules/package_json_reader:316
         ^
 
 Error [ERR_MODULE_NOT_FOUND]: Cannot find package 'chalk' imported from 
-/Users/pennyplatt/Documents/9BitStudios/Oksana/xcode-model-bridge/swift-typescript/bridge.js
+/Users/pennyplatt/Documents//Oksana/xcode-model-bridge/swift-typescript/bridge.js
     at Object.getPackageJSONURL (node:internal/modules/package_json_reader:316:9)
     at packageResolve (node:internal/modules/esm/resolve:768:81)
     at moduleResolve (node:internal/modules/esm/resolve:858:18)
@@ -258,7 +258,7 @@ Error [ERR_MODULE_NOT_FOUND]: Cannot find package 'chalk' imported from
 
 Node.js v25.2.0
 ❌ Bridge type generation failed: Command failed: node 
-"/Users/pennyplatt/Documents/9BitStudios/Oksana/xcode-model-bridge/swift-typescript/bridge.js"
+"/Users/pennyplatt/Documents//Oksana/xcode-model-bridge/swift-typescript/bridge.js"
 🔗 Phase 4: Updating swift-ts-cross-reference.json...
 ✅ Cross-reference updated
 ⚙️  Phase 5: Syncing Bridge Configurations...
@@ -268,7 +268,7 @@ node:internal/modules/run_main:107
     triggerUncaughtException(
     ^
 Error [ERR_MODULE_NOT_FOUND]: Cannot find package 'typescript' imported from 
-/Users/pennyplatt/Documents/9BitStudios/Oksana/validation/config-sync-manager.ts
+/Users/pennyplatt/Documents//Oksana/validation/config-sync-manager.ts
     at Object.getPackageJSONURL (node:internal/modules/package_json_reader:316:9)
     at packageResolve (node:internal/modules/esm/resolve:768:81)
     at moduleResolve (node:internal/modules/esm/resolve:858:18)
@@ -302,7 +302,7 @@ Node.js v25.2.0
    ❌ Failed: 2
    📝 Total Changes: 1010
    🗺️  Path Mappings: 505
-   Report saved: /Users/pennyplatt/Documents/9BitStudios/Oksana/reports/daily-sync-report.json
+   Report saved: /Users/pennyplatt/Documents//Oksana/reports/daily-sync-report.json
 🎯 Phase 9: Running Automated Validation Queues...
 node:internal/modules/package_json_reader:316
   throw new ERR_MODULE_NOT_FOUND(packageName, fileURLToPath(base), null);
@@ -387,7 +387,7 @@ Node.js v25.2.0
 ======================================================================
 📅 Timestamp: 2025-12-11T02:17:01.162Z
 📁 Config File: 
-/Users/pennyplatt/Documents/9BitStudios/Oksana/config/siri-xcode-typescript-bridge-sync.json
+/Users/pennyplatt/Documents//Oksana/config/siri-xcode-typescript-bridge-sync.json
 📊 Overall Status: PASS
 📋 Summary:
    Total Checks: 20
@@ -459,10 +459,10 @@ Node.js v25.2.0
 🔧 TypeScript Validation Sync - Initialization
 ======================================================================
 ✅ Cross-reference loaded: v4.0.0
-📁 Source: /Users/pennyplatt/Documents/9BitStudios/Oksana/swift-ts-cross-reference.json
+📁 Source: /Users/pennyplatt/Documents//Oksana/swift-ts-cross-reference.json
 📋 Generating Daily TypeScript Validation Report...
 💾 Report saved: 
-/Users/pennyplatt/Documents/9BitStudios/Oksana/reports/typescript-validation-sync-2025-12-11.json
+/Users/pennyplatt/Documents//Oksana/reports/typescript-validation-sync-2025-12-11.json
 📊 Summary:
    Total Validations: 66
    Issues Found: 2
@@ -484,7 +484,7 @@ node:internal/modules/run_main:107
     triggerUncaughtException(
     ^
 Error [ERR_MODULE_NOT_FOUND]: Cannot find package 'chalk' imported from 
-/Users/pennyplatt/Documents/9BitStudios/Oksana/validation/daily-routing-sync.ts
+/Users/pennyplatt/Documents//Oksana/validation/daily-routing-sync.ts
     at Object.getPackageJSONURL (node:internal/modules/package_json_reader:316:9)
     at packageResolve (node:internal/modules/esm/resolve:768:81)
     at moduleResolve (node:internal/modules/esm/resolve:858:18)
@@ -536,7 +536,7 @@ Node.js v25.2.0
 ======================================================================
 📅 Timestamp: 2025-12-11T02:17:01.769Z
 📁 Config File: 
-/Users/pennyplatt/Documents/9BitStudios/Oksana/config/siri-xcode-typescript-bridge-sync.json
+/Users/pennyplatt/Documents//Oksana/config/siri-xcode-typescript-bridge-sync.json
 📊 Overall Status: PASS
 📋 Summary:
    Total Checks: 20
@@ -577,10 +577,10 @@ To github.com:9bit-studios/oksana-ai.git
 fatal: No url found for submodule path '.build/checkouts/swift-asn1' in .gitmodules
 🍎 oksana/ % 
  There is an apple intelligence startup error 
-/Users/pennyplatt/Documents/9BitStudios/Oksana/reports/apple-intelligence-startup-error.log 
+/Users/pennyplatt/Documents//Oksana/reports/apple-intelligence-startup-error.log 
 /Users/pennyplatt/Library/LaunchAgents/com.9bitstudios.apple-intelligence-startup.plist 
-/Users/pennyplatt/Documents/9BitStudios/Oksana/scripts/launch-oksana.sh 
-/Users/pennyplatt/Documents/9BitStudios/Oksana/scripts/init/oksana-boot-init-functions.sh 
+/Users/pennyplatt/Documents//Oksana/scripts/launch-oksana.sh 
+/Users/pennyplatt/Documents//Oksana/scripts/init/oksana-boot-init-functions.sh 
 /Users/pennyplatt/.zshrc 
 
 ⏺ Perfect! I can see the issues clearly now. The main problems are:
@@ -592,10 +592,10 @@ fatal: No url found for submodule path '.build/checkouts/swift-asn1' in .gitmodu
 
   Let me fix these systematically:
 
-⏺ Read(~/Documents/9BitStudios/Oksana/.gitignore)
+⏺ Read(~/Documents//Oksana/.gitignore)
   ⎿  Read 116 lines
 
-⏺ Update(~/Documents/9BitStudios/Oksana/.gitignore)
+⏺ Update(~/Documents//Oksana/.gitignore)
   ⎿  Updated ../../.gitignore with 1 addition
        46    # Build artifacts
        47    dist/
@@ -605,7 +605,7 @@ fatal: No url found for submodule path '.build/checkouts/swift-asn1' in .gitmodu
        51    *.ipa
        52    *.dSYM
 
-⏺ Bash(cd /Users/pennyplatt/Documents/9BitStudios/Oksana && git rm -r --cached .build)
+⏺ Bash(cd /Users/pennyplatt/Documents//Oksana && git rm -r --cached .build)
   ⎿  rm '.build/.lock'                                            
      rm '.build/arm64-apple-macosx/debug/Crypto.build/AES-GCM.d'
      rm '.build/arm64-apple-macosx/debug/Crypto.build/AES-GCM.dia'
@@ -633,28 +633,28 @@ fatal: No url found for submodule path '.build/checkouts/swift-asn1' in .gitmodu
   ⎿  To github.com:9bit-studios/oksana-ai.git
         9d4ee5c..48de64e  main -> main
 
-⏺ Bash(cd /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/creative-intelligence-portal
+⏺ Bash(cd /Users/pennyplatt/Documents//Oksana/quantum-spatial/creative-intelligence-portal
       && git add . && git commit -m "Update Vercel configuration…)
   ⎿  [main 4830b51] Update Vercel configuration                 
       1 file changed, 1 insertion(+), 1 deletion(-)
      To github.com:9bit-studios/creative-intelligence-portal.git
         d8fbd70..4830b51  main -> main
 
-⏺ Bash(cd /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/typescript-enterprise && git
+⏺ Bash(cd /Users/pennyplatt/Documents//Oksana/quantum-spatial/typescript-enterprise && git
       add . && git commit -m "Update package config and Vercel settings…)
   ⎿  [main 4630423] Update package config and Vercel settings
       4 files changed, 21374 insertions(+), 292 deletions(-)
       create mode 100644 package-lock.json
      … +2 lines (ctrl+o to expand)
 
-⏺ Bash(cd /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/johnson-health-hydrogen && git
+⏺ Bash(cd /Users/pennyplatt/Documents//Oksana/quantum-spatial/johnson-health-hydrogen && git
        add . && git commit -m "Clean DS_Store files and update storefr…)
   ⎿  [main 1b800d1] Clean DS_Store files and update storefrontapi types
       10 files changed, 53 insertions(+), 187 deletions(-)
       delete mode 100644 .npmrc
      … +10 lines (ctrl+o to expand)
 
-⏺ Bash(cd /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system && git add . &&
+⏺ Bash(cd /Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system && git add . &&
       git commit -m "Update brand assets and RunSmart design system…)
   ⎿  [main fbd49d2] Update brand assets and RunSmart design system                  
       178 files changed, 15127 insertions(+), 1050 deletions(-)
@@ -676,21 +676,21 @@ fatal: No url found for submodule path '.build/checkouts/swift-asn1' in .gitmodu
 ⏺ Great! All changes are committed and pushed. Now let me review the Apple Intelligence startup
   error:
 
-⏺ Read(~/Documents/9BitStudios/Oksana/reports/apple-intelligence-startup-error.log)
+⏺ Read(~/Documents//Oksana/reports/apple-intelligence-startup-error.log)
   ⎿  Read 17 lines
 
 ⏺ Read(~/Library/LaunchAgents/com.9bitstudios.apple-intelligence-startup.plist)
   ⎿  Read 161 lines
 
-⏺ Read(~/Documents/9BitStudios/Oksana/scripts/launch-oksana.sh)
+⏺ Read(~/Documents//Oksana/scripts/launch-oksana.sh)
   ⎿  Read 27 lines
 
-⏺ Bash(ls -la /Users/pennyplatt/Documents/9BitStudios/Oksana/scripts/launch-oksana.sh)
-  ⎿ -rwxr-xr-x@ 1 pennyplatt  staff  979 Dec  9 20:32 /Users/pennyplatt/Documents/9BitStudios/Oksa
+⏺ Bash(ls -la /Users/pennyplatt/Documents//Oksana/scripts/launch-oksana.sh)
+  ⎿ -rwxr-xr-x@ 1 pennyplatt  staff  979 Dec  9 20:32 /Users/pennyplatt/Documents//Oksa
     na/scripts/launch-oksana.sh
 
 
-⏺ Bash(xattr -l /Users/pennyplatt/Documents/9BitStudios/Oksana/scripts/launch-oksana.sh)
+⏺ Bash(xattr -l /Users/pennyplatt/Documents//Oksana/scripts/launch-oksana.sh)
   ⎿  com.apple.lastuseddate#PS: ��8i                                                            
      com.apple.macl: @{]�_qMո��$}�R
      com.apple.metadata:kMDLabel_q4ctgatyxznozcy223rjepjwj4: �T��೯�UI��)��6���8R�iV�0W���A_c<�8�
@@ -706,7 +706,7 @@ fatal: No url found for submodule path '.build/checkouts/swift-asn1' in .gitmodu
   ✅ Issues Fixed
 
   1. Swift Package Manager Conflict (RESOLVED)
-  - Added .build/ to .gitignore (/Users/pennyplatt/Documents/9BitStudios/Oksana/.gitignore:49)
+  - Added .build/ to .gitignore (/Users/pennyplatt/Documents//Oksana/.gitignore:49)
   - Removed 2,800 Swift PM build artifacts from git tracking
   - Committed and pushed fix
 
@@ -726,7 +726,7 @@ fatal: No url found for submodule path '.build/checkouts/swift-asn1' in .gitmodu
   Issue: LaunchAgent failing with "Operation not permitted" (Exit code: 126)
 
   Root Cause: The LaunchAgent (com.9bitstudios.apple-intelligence-startup) doesn't have permission
-  to access /Users/pennyplatt/Documents/9BitStudios/Oksana/
+  to access /Users/pennyplatt/Documents//Oksana/
 
   Recommended Fix:
   1. Grant Full Disk Access to the LaunchAgent:
@@ -808,7 +808,7 @@ inside are not ghosted, same with usr/local/bin.
         8        <key>ProgramArguments</key>
         9        <array>
        10 -          <string>/bin/bash</string>
-       11 -          <string>/Users/pennyplatt/Documents/9BitStudios/Oksana/scripts/launch-oksan
+       11 -          <string>/Users/pennyplatt/Documents//Oksana/scripts/launch-oksan
           - a.sh</string>
        10 +          <string>/Users/pennyplatt/Applications/OksanaLauncher.app/Contents/MacOS/la
           + uncher</string>
@@ -852,11 +852,11 @@ inside are not ghosted, same with usr/local/bin.
 > This was almost successful, I may need to log out and log back in. Let's proceed. The daily sync 
 ran successfully. please review all reports generated today at /reports. Next I want to validate 
 package configurations for all workspaces and establish an SDK monitoring sync with auth test and 
-auto update. Here are some resources that should help. /Users/pennyplatt/Documents/9BitStudios/Oksa
+auto update. Here are some resources that should help. /Users/pennyplatt/Documents//Oksa
 na/apple-intelligence/foundation/sources-of-truth/sdk-reference.md 
-/Users/pennyplatt/Documents/9BitStudios/Oksana/apple-intelligence/foundation/creative-queue/develop
+/Users/pennyplatt/Documents//Oksana/apple-intelligence/foundation/creative-queue/develop
 ment/learning-workflow/secure-implementation-guide.md 
-/Users/pennyplatt/Documents/9BitStudios/Oksana/apple-intelligence/foundation/creative-queue/develop
+/Users/pennyplatt/Documents//Oksana/apple-intelligence/foundation/creative-queue/develop
 ment/learning-workflow/6-continuous-sdk-monitoring.py The secure-implementation-guide.md and 
 6-continuous-sdk-monitoring.py were created several months ago so do not reflect actual 
 configurations. At the same time, the sdk-reference.md but needs comprehensive updates to reflect 
@@ -869,48 +869,48 @@ comprehensive guide that will keep APIs and SDKs updated to avoid deprecated dep
 ⏺ Perfect! Let's tackle this systematically. I'll review the reports, validate all workspace
   packages, and create a comprehensive SDK monitoring sync system.
 
-⏺ Bash(ls -lht /Users/pennyplatt/Documents/9BitStudios/Oksana/reports/ | head -20)
+⏺ Bash(ls -lht /Users/pennyplatt/Documents//Oksana/reports/ | head -20)
   ⎿  total 632                                                                                  
      -rw-r--r--@ 1 pennyplatt  staff   5.1K Dec 10 19:45 apple-intelligence-startup-error.log
      -rw-r--r--@ 1 pennyplatt  staff   3.3K Dec 10 19:35 apple-authority-persistence-report.json
      … +20 lines (ctrl+o to expand)
 
-⏺ Search(pattern: "/Users/pennyplatt/Documents/9BitStudios/Oksana/reports/*2025-12-11*.json")
+⏺ Search(pattern: "/Users/pennyplatt/Documents//Oksana/reports/*2025-12-11*.json")
   ⎿  Found 0 files 
 
-⏺ Search(pattern: "/Users/pennyplatt/Documents/9BitStudios/Oksana/reports/*2025-12-10*.json")
+⏺ Search(pattern: "/Users/pennyplatt/Documents//Oksana/reports/*2025-12-10*.json")
   ⎿  Found 0 files 
 
-⏺ Read(~/Documents/9BitStudios/Oksana/reports/daily-sync-report.json)
+⏺ Read(~/Documents//Oksana/reports/daily-sync-report.json)
   ⎿  Read 564 lines
 
-⏺ Read(~/Documents/9BitStudios/Oksana/reports/typescript-validation-sync-2025-12-11.json)
+⏺ Read(~/Documents//Oksana/reports/typescript-validation-sync-2025-12-11.json)
   ⎿  Read 539 lines
 
-⏺ Read(~/Documents/9BitStudios/Oksana/reports/auth-test-report.json)
+⏺ Read(~/Documents//Oksana/reports/auth-test-report.json)
   ⎿  Read 65 lines
 
 ⏺ Excellent! Let me continue reviewing the resources and read the SDK monitoring files:
 
-⏺ Read(~/Documents/9BitStudios/Oksana/apple-intelligence/foundation/sources-of-truth/sdk-reference.md)
+⏺ Read(~/Documents//Oksana/apple-intelligence/foundation/sources-of-truth/sdk-reference.md)
   ⎿  Read 100 lines
 
-⏺ Read(~/Documents/9BitStudios/Oksana/apple-intelligence/foundation/creative-queue/development/learning
+⏺ Read(~/Documents//Oksana/apple-intelligence/foundation/creative-queue/development/learning
       -workflow/6-continuous-sdk-monitoring.py)
   ⎿  Read 100 lines
 
-⏺ Read(~/Documents/9BitStudios/Oksana/apple-intelligence/foundation/creative-queue/development/learning
+⏺ Read(~/Documents//Oksana/apple-intelligence/foundation/creative-queue/development/learning
       -workflow/secure-implementation-guide.md)
   ⎿  Read 150 lines
 
 ⏺ Now let me validate all workspace package.json files and create the comprehensive SDK monitoring
   system. Let me start by finding all package.json files:
 
-⏺ Bash(find /Users/pennyplatt/Documents/9BitStudios/Oksana -name "package.json" -not -path
+⏺ Bash(find /Users/pennyplatt/Documents//Oksana -name "package.json" -not -path
       "*/node_modules/*" -type f | sort)
-  ⎿ /Users/pennyplatt/Documents/9BitStudios/Oksana/package.json                                   
-    /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/cloudflare-workers/package.json
-    /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/creative-intelligence-portal/pa
+  ⎿ /Users/pennyplatt/Documents//Oksana/package.json                                   
+    /Users/pennyplatt/Documents//Oksana/quantum-spatial/cloudflare-workers/package.json
+    /Users/pennyplatt/Documents//Oksana/quantum-spatial/creative-intelligence-portal/pa
     … +19 lines (ctrl+o to expand)
 
 
@@ -918,7 +918,7 @@ comprehensive guide that will keep APIs and SDKs updated to avoid deprecated dep
 ⏺ Perfect! Now let me create a comprehensive SDK monitoring and package validation script. This
   will be our new daily sync tool:
 
-⏺ Write(~/Documents/9BitStudios/Oksana/validation/sdk-package-sync.ts)
+⏺ Write(~/Documents//Oksana/validation/sdk-package-sync.ts)
   ⎿  Wrote 395 lines to ../../validation/sdk-package-sync.ts                     
      #!/usr/bin/env tsx
      /**
@@ -931,10 +931,10 @@ comprehensive guide that will keep APIs and SDKs updated to avoid deprecated dep
      import { execSync } from 'child_process';
      … +385 lines (ctrl+o to expand)
 
-⏺ Bash(chmod +x /Users/pennyplatt/Documents/9BitStudios/Oksana/validation/sdk-package-sync.ts)
+⏺ Bash(chmod +x /Users/pennyplatt/Documents//Oksana/validation/sdk-package-sync.ts)
   ⎿  (No content)
 
-⏺ Bash(cd /Users/pennyplatt/Documents/9BitStudios/Oksana && tsx validation/sdk-package-sync.ts)
+⏺ Bash(cd /Users/pennyplatt/Documents//Oksana && tsx validation/sdk-package-sync.ts)
   ⎿  🔄 SDK & Package Monitoring Sync v1.0.0                               
      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
      … +45 lines (ctrl+o to expand)
@@ -961,7 +961,7 @@ comprehensive guide that will keep APIs and SDKs updated to avoid deprecated dep
      set -e
      … +98 lines (ctrl+o to expand)
 
-⏺ Bash(chmod +x /Users/pennyplatt/Documents/9BitStudios/Oksana/scripts/daily-sdk-auth-sync.sh)
+⏺ Bash(chmod +x /Users/pennyplatt/Documents//Oksana/scripts/daily-sdk-auth-sync.sh)
   ⎿  (No content)
 
 ⏺ Now let me create an updated SDK reference document that reflects the current state of the
@@ -1047,7 +1047,7 @@ comprehensive guide that will keep APIs and SDKs updated to avoid deprecated dep
   - Provides actionable recommendations
 
   Usage:
-  cd /Users/pennyplatt/Documents/9BitStudios/Oksana
+  cd /Users/pennyplatt/Documents//Oksana
   tsx validation/sdk-package-sync.ts
 
   2. Daily SDK & Auth Sync Wrapper (scripts/daily-sdk-auth-sync.sh)
@@ -1064,7 +1064,7 @@ comprehensive guide that will keep APIs and SDKs updated to avoid deprecated dep
   Add to your workflow:
   # Add to .zshrc for easy access
   daily_sdk_auth() {
-    cd /Users/pennyplatt/Documents/9BitStudios/Oksana
+    cd /Users/pennyplatt/Documents//Oksana
     ./scripts/daily-sdk-auth-sync.sh
   }
 
@@ -1099,7 +1099,7 @@ comprehensive guide that will keep APIs and SDKs updated to avoid deprecated dep
   🎯 How to Use Daily
 
   Run the comprehensive sync:
-  cd /Users/pennyplatt/Documents/9BitStudios/Oksana
+  cd /Users/pennyplatt/Documents//Oksana
   ./scripts/daily-sdk-auth-sync.sh
 
   What it does:
@@ -1140,7 +1140,7 @@ comprehensive guide that will keep APIs and SDKs updated to avoid deprecated dep
   2. Review: Zod v4.x migration guide before updating (breaking changes)
   3. Monitor: TypeScript compilation warnings (non-blocking)
 Also there is this 🍎 oksana/ % cd 
-/Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/creative-intelligence-portal/notion/
+/Users/pennyplatt/Documents//Oksana/quantum-spatial/creative-intelligence-portal/notion/
                          
 🍎 oksana/quantum-spatial/creative-intelligence-portal/notion % node notion-workspace-mapper.js
 node:internal/modules/esm/resolve:313
@@ -1148,8 +1148,8 @@ node:internal/modules/esm/resolve:313
          ^
 
 Error [ERR_PACKAGE_PATH_NOT_EXPORTED]: Package subpath './source/index.js' is not defined by 
-"exports" in /Users/pennyplatt/Documents/9BitStudios/Oksana/node_modules/chalk/package.json 
-imported from /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/creative-intelligence-
+"exports" in /Users/pennyplatt/Documents//Oksana/node_modules/chalk/package.json 
+imported from /Users/pennyplatt/Documents//Oksana/quantum-spatial/creative-intelligence-
 portal/notion/notion-workspace-mapper.js
     at exportsNotFound (node:internal/modules/esm/resolve:313:10)
     at packageExportsResolve (node:internal/modules/esm/resolve:661:9)
@@ -1194,7 +1194,7 @@ Node.js v25.2.0
 ⏺ Search(pattern: "chalk/source")
   ⎿  Found 1 file (ctrl+o to expand)
 
-⏺ Bash(cd /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/creative-intelligence-portal/n
+⏺ Bash(cd /Users/pennyplatt/Documents//Oksana/quantum-spatial/creative-intelligence-portal/n
       otion && node notion-workspace-mapper.js 2>&1 | head -20)
   ⎿  ✅ Workspace Mapper: Loaded unified configuration index
      ✅ Workspace Mapper: Loaded project configuration
@@ -1210,24 +1210,24 @@ Node.js v25.2.0
        "_rev": "816-355336ae82957999404b8880cafd6803",
      … +27 lines (ctrl+o to expand)
 
-⏺ Bash(grep -r "zod" /Users/pennyplatt/Documents/9BitStudios/Oksana/package.json)
-  ⎿  /Users/pennyplatt/Documents/9BitStudios/Oksana/package.json:    "zod": "^3.25.76"
+⏺ Bash(grep -r "zod" /Users/pennyplatt/Documents//Oksana/package.json)
+  ⎿  /Users/pennyplatt/Documents//Oksana/package.json:    "zod": "^3.25.76"
 
 ⏺ Bash(npm ls zod 2>/dev/null | head -20)
-  ⎿  quantum-spatial@2.0.0 /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial
+  ⎿  quantum-spatial@2.0.0 /Users/pennyplatt/Documents//Oksana/quantum-spatial
      └── (empty)
 
 ⏺ Search(pattern: "import.*z.*from.*zod|require.*zod")
   ⎿  Found 0 files 
 
 ⏺ Bash(npm ls zod --all 2>/dev/null | grep -v "└──" | head -30)
-  ⎿  quantum-spatial@2.0.0 /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial
+  ⎿  quantum-spatial@2.0.0 /Users/pennyplatt/Documents//Oksana/quantum-spatial
 
-⏺ Bash(cd /Users/pennyplatt/Documents/9BitStudios/Oksana && tsc --noEmit 2>&1 | head -50)
+⏺ Bash(cd /Users/pennyplatt/Documents//Oksana && tsc --noEmit 2>&1 | head -50)
   ⎿  (eval):1: command not found: tsc
 
 ⏺ Bash(npx tsc --noEmit 2>&1 | head -100)
-  ⎿ ======== Resolving module 'react/jsx-runtime' from '/Users/pennyplatt/Documents/9BitStudios/Ok
+  ⎿ ======== Resolving module 'react/jsx-runtime' from '/Users/pennyplatt/Documents//Ok
     sana/utils/complete-migration-orchestrator.js'. ========
     Explicitly specified module resolution kind: 'Bundler'.
     … +167 lines (ctrl+o to expand)
@@ -1240,9 +1240,9 @@ Node.js v25.2.0
      … +7 lines (ctrl+o to expand)
 
 ⏺ Bash(npx tsc --noEmit 2>&1 | grep "\.ts\|\.tsx" | head -20)
-  ⎿ File '/Users/pennyplatt/Documents/9BitStudios/Oksana/node_modules/react/jsx-runtime.ts' does n
+  ⎿ File '/Users/pennyplatt/Documents//Oksana/node_modules/react/jsx-runtime.ts' does n
     ot exist.
-    File '/Users/pennyplatt/Documents/9BitStudios/Oksana/node_modules/react/jsx-runtime.tsx' does
+    File '/Users/pennyplatt/Documents//Oksana/node_modules/react/jsx-runtime.tsx' does
     … +37 lines (ctrl+o to expand)
 
 
@@ -1252,7 +1252,7 @@ Node.js v25.2.0
      fatal: Pathspec 'quantum-spatial/creative-intelligence-portal/notion/notion-workspace-mapper.js' is
       in submodule 'quantum-spatial/creative-intelligence-portal'
 
-⏺ Bash(cd /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/creative-intelligence-portal
+⏺ Bash(cd /Users/pennyplatt/Documents//Oksana/quantum-spatial/creative-intelligence-portal
       && git add notion/notion-workspace-mapper.js && git commit -m "Fi…)
   ⎿  [main fdabc46] Fix deprecated chalk import in notion-workspace-mapper
       1 file changed, 2 insertions(+), 2 deletions(-)
@@ -1306,7 +1306,7 @@ Node.js v25.2.0
   - Changed to: import chalk from 'chalk'
 
   Verification:
-  cd /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/creative-intelligence-portal/no
+  cd /Users/pennyplatt/Documents//Oksana/quantum-spatial/creative-intelligence-portal/no
   tion
   node notion-workspace-mapper.js
   # ✅ Now runs successfully!
@@ -1366,7 +1366,7 @@ Node.js v25.2.0
   📈 Recommendations Going Forward
 
   1. Run daily sync regularly:
-  cd /Users/pennyplatt/Documents/9BitStudios/Oksana
+  cd /Users/pennyplatt/Documents//Oksana
   ./scripts/daily-sdk-auth-sync.sh
   2. Monitor SDK updates weekly with:
   tsx validation/sdk-package-sync.ts
@@ -1381,18 +1381,18 @@ Node.js v25.2.0
 > great. Now, I am migrating to a new Notion workspace. I have copied over most of the content to 
 the new workspace. I have updated the Notion API key. I need my Notion MCP and all Notion mappers 
 and tools to route to the new workspace. I ran the notion-workspace-mapper.js and I think it mapped
- the old workspace. /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/creative-intelli
-gence-portal/notion/notion-workspace-mapper.js /Users/pennyplatt/Documents/9BitStudios/Oksana/quant
+ the old workspace. /Users/pennyplatt/Documents//Oksana/quantum-spatial/creative-intelli
+gence-portal/notion/notion-workspace-mapper.js /Users/pennyplatt/Documents//Oksana/quant
 um-spatial/creative-intelligence-portal/notion/enhanced-notion-intelligence-mcp-server.js 
-/Users/pennyplatt/Documents/9BitStudios/Oksana/apple-intelligence/m4-neural-engine/notion_workspace
-_bridge.py /Users/pennyplatt/Documents/9BitStudios/Oksana/apple-intelligence/m4-neural-engine/apple
+/Users/pennyplatt/Documents//Oksana/apple-intelligence/m4-neural-engine/notion_workspace
+_bridge.py /Users/pennyplatt/Documents//Oksana/apple-intelligence/m4-neural-engine/apple
 _intelligence_mcp_bridge.py 
-/Users/pennyplatt/Documents/9BitStudios/Oksana/notion-m4-phase-1-integration-complete.md 
-/Users/pennyplatt/Documents/9BitStudios/Oksana/notion-m4-accelerated-integration-plan.md 
-/Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/creative-intelligence-portal/notion/
+/Users/pennyplatt/Documents//Oksana/notion-m4-phase-1-integration-complete.md 
+/Users/pennyplatt/Documents//Oksana/notion-m4-accelerated-integration-plan.md 
+/Users/pennyplatt/Documents//Oksana/quantum-spatial/creative-intelligence-portal/notion/
 enhanced-notion-mcp-connector.js If we can get the main scripts integrated I can find and replace 
 and update the rest. 
-/Users/pennyplatt/Documents/9BitStudios/Oksana/validation/wrappers/notion-quantum-secure-wrapper.js
+/Users/pennyplatt/Documents//Oksana/validation/wrappers/notion-quantum-secure-wrapper.js
  
 
 ⏺ Perfect! Let's migrate your Notion integration to the new workspace. I'll help you map the new
@@ -1410,20 +1410,20 @@ and update the rest.
 ⏺ Search(pattern: "2c39456fb22d8147a4b8fee8796f95fd")
   ⎿  Found 1 file (ctrl+o to expand)
 
-⏺ Bash(cd /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/creative-intellig  timeout: 1m 
+⏺ Bash(cd /Users/pennyplatt/Documents//Oksana/quantum-spatial/creative-intellig  timeout: 1m 
       ence-portal/notion && node notion-workspace-mapper.js 2>&1 | grep -A 5 "works…)       0s
 
-  ⎿    Bridge Path: /Users/pennyplatt/Documents/9BitStudios/Oksana/apple-intelligence/m4-neural-en
+  ⎿    Bridge Path: /Users/pennyplatt/Documents//Oksana/apple-intelligence/m4-neural-en
     gine/notion_workspace_bridge.py
        Cores: 16
     … +56 lines (ctrl+o to expand)
 
 
-⏺ Bash(find /Users/pennyplatt/Documents/9BitStudios/Oksana -name "*workspace-mapping*" -o -name
+⏺ Bash(find /Users/pennyplatt/Documents//Oksana -name "*workspace-mapping*" -o -name
       "*notion-mapping*" 2>/dev/null | head -10)
-  ⎿ /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/creative-intelligence-portal/no
+  ⎿ /Users/pennyplatt/Documents//Oksana/quantum-spatial/creative-intelligence-portal/no
     tion/notion-workspace-mapping-report-2025-12-11.json
-    /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/creative-intelligence-portal/no
+    /Users/pennyplatt/Documents//Oksana/quantum-spatial/creative-intelligence-portal/no
     … +9 lines (ctrl+o to expand)
 
 
@@ -1434,7 +1434,7 @@ and update the rest.
 ⏺ Perfect! The new workspace has been mapped (90 databases discovered). Now let me create a
   comprehensive migration script to update all Notion references:
 
-⏺ Write(~/Documents/9BitStudios/Oksana/scripts/notion-workspace-migration.js)
+⏺ Write(~/Documents//Oksana/scripts/notion-workspace-migration.js)
   ⎿  Wrote 279 lines to ../../../scripts/notion-workspace-migration.js    
      #!/usr/bin/env node
      /**
@@ -1446,12 +1446,12 @@ and update the rest.
       */
      … +269 lines (ctrl+o to expand)
 
-⏺ Bash(chmod +x /Users/pennyplatt/Documents/9BitStudios/Oksana/scripts/notion-workspace-migration.js)
+⏺ Bash(chmod +x /Users/pennyplatt/Documents//Oksana/scripts/notion-workspace-migration.js)
   ⎿  (No content)
 
 ⏺ Now let me create a helper script to detect your new workspace ID automatically:
 
-⏺ Write(~/Documents/9BitStudios/Oksana/scripts/detect-notion-workspace.js)
+⏺ Write(~/Documents//Oksana/scripts/detect-notion-workspace.js)
   ⎿  Wrote 143 lines to ../../../scripts/detect-notion-workspace.js
      #!/usr/bin/env node
      /**
@@ -1463,13 +1463,13 @@ and update the rest.
      import { readFileSync } from 'fs';
      … +133 lines (ctrl+o to expand)
 
-⏺ Bash(chmod +x /Users/pennyplatt/Documents/9BitStudios/Oksana/scripts/detect-notion-workspace.js &&
-      node /Users/pennyplatt/Documents/9BitStudios/Oksana/scripts/detect…)
+⏺ Bash(chmod +x /Users/pennyplatt/Documents//Oksana/scripts/detect-notion-workspace.js &&
+      node /Users/pennyplatt/Documents//Oksana/scripts/detect…)
   ⎿  🔍 Notion Workspace Detector                      
      ══════════════════════════════════════════════════
      … +2 lines (ctrl+o to expand)
 
-⏺ Update(~/Documents/9BitStudios/Oksana/scripts/detect-notion-workspace.js)
+⏺ Update(~/Documents//Oksana/scripts/detect-notion-workspace.js)
   ⎿  Updated ../../../scripts/detect-notion-workspace.js with 3 additions and 2 removals     
        49    `;
        50    
@@ -1490,7 +1490,7 @@ and update the rest.
        63        const jsonStart = result.indexOf('{');
        64        const jsonResult = jsonStart >= 0 ? result.substring(jsonStart) : result;
 
-⏺ Update(~/Documents/9BitStudios/Oksana/scripts/detect-notion-workspace.js)
+⏺ Update(~/Documents//Oksana/scripts/detect-notion-workspace.js)
   ⎿  Updated ../../../scripts/detect-notion-workspace.js with 4 additions and 1 removal
        67    
        68        return decrypted.NOTION_API_KEY;
@@ -1504,7 +1504,7 @@ and update the rest.
        75      }
        76    }
 
-⏺ Bash(node /Users/pennyplatt/Documents/9BitStudios/Oksana/scripts/detect-notion-workspace.js)
+⏺ Bash(node /Users/pennyplatt/Documents//Oksana/scripts/detect-notion-workspace.js)
   ⎿  🔍 Notion Workspace Detector                      
      ══════════════════════════════════════════════════
      … +20 lines (ctrl+o to expand)
@@ -1512,7 +1512,7 @@ and update the rest.
 ⏺ Great news! Your Notion integration is already connected to the new workspace. Let me create a
   comprehensive guide and summary:
 
-⏺ Write(~/Documents/9BitStudios/Oksana/NOTION-MIGRATION-GUIDE.md)
+⏺ Write(~/Documents//Oksana/NOTION-MIGRATION-GUIDE.md)
   ⎿  Wrote 210 lines to ../../../NOTION-MIGRATION-GUIDE.md
      # Notion Workspace Migration Guide
      **Date**: December 11, 2025
@@ -1527,7 +1527,7 @@ and update the rest.
   ⎿  Error: Exit code 128
      fatal: pathspec 'scripts/notion-workspace-migration.js' did not match any files
 
-⏺ Bash(cd /Users/pennyplatt/Documents/9BitStudios/Oksana && git add
+⏺ Bash(cd /Users/pennyplatt/Documents//Oksana && git add
       scripts/notion-workspace-migration.js scripts/detect-notion-workspace.js
       NOTION-MIGRATION-GUIDE.md…)
   ⎿ A  NOTION-MIGRATION-GUIDE.md                                                                  
@@ -1619,7 +1619,7 @@ and update the rest.
 
   If you want to update the hardcoded ID:
 
-  cd /Users/pennyplatt/Documents/9BitStudios/Oksana
+  cd /Users/pennyplatt/Documents//Oksana
   node scripts/notion-workspace-migration.js
 
   The script will:
@@ -1655,18 +1655,18 @@ and update the rest.
   ✅ Verification Tests
 
   Test 1: Workspace Mapper
-  cd /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/creative-intelligence-portal/no
+  cd /Users/pennyplatt/Documents//Oksana/quantum-spatial/creative-intelligence-portal/no
   tion
   node notion-workspace-mapper.js
   Expected: ✅ 90 databases found, mapping complete
 
   Test 2: Detect Workspace
-  cd /Users/pennyplatt/Documents/9BitStudios/Oksana
+  cd /Users/pennyplatt/Documents//Oksana
   node scripts/detect-notion-workspace.js
   Expected: ✅ Lists your databases
 
   Test 3: MCP Server
-  cd /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/creative-intelligence-portal/no
+  cd /Users/pennyplatt/Documents//Oksana/quantum-spatial/creative-intelligence-portal/no
   tion
   node enhanced-notion-intelligence-mcp-server.js
   Expected: ✅ Server starts, connects to Notion
@@ -1675,7 +1675,7 @@ and update the rest.
   📊 Migration Report
 
   Latest mapping saved to:
-  /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/creative-intelligence-portal/notio
+  /Users/pennyplatt/Documents//Oksana/quantum-spatial/creative-intelligence-portal/notio
   n/notion-workspace-mapping-report-2025-12-11.json
 
   Contains:
@@ -1764,13 +1764,13 @@ is resolved. 🍎 oksana/validation/wrappers % node notion-quantum-secure-wrappe
   ⎿  Found 53 lines (ctrl+o to expand)
 
 ⏺ Bash(grep -r "logging.warning.*Strategic Intelligence Engine"
-      /Users/pennyplatt/Documents/9BitStudios/Oksana --include="*.py" 2>/dev/null)
-  ⎿ /Users/pennyplatt/Documents/9BitStudios/Oksana/apple-intelligence/m4-neural-engine/m4_orchestr
+      /Users/pennyplatt/Documents//Oksana --include="*.py" 2>/dev/null)
+  ⎿ /Users/pennyplatt/Documents//Oksana/apple-intelligence/m4-neural-engine/m4_orchestr
     ator.py:    logging.warning("Strategic Intelligence Engine not available")
 
 
 ⏺ Bash(grep -r "WARNING.*Strategic Intelligence Engine not available"
-      /Users/pennyplatt/Documents/9BitStudios/Oksana --include="*.py" -B 3 -A 1 2>/dev/null | head -30)
+      /Users/pennyplatt/Documents//Oksana --include="*.py" -B 3 -A 1 2>/dev/null | head -30)
   ⎿  (No content)
 
 ⏺ Found it! Let me check the m4_orchestrator.py file:
@@ -1795,7 +1795,7 @@ is resolved. 🍎 oksana/validation/wrappers % node notion-quantum-secure-wrappe
        60        from strategic_intelligence_engine import StrategicIntelligenceEngine
        61        STRATEGIC_ENGINE_AVAILABLE = True
 
-⏺ Bash(cd /Users/pennyplatt/Documents/9BitStudios/Oksana/validation/wrappers && timeout 10 node
+⏺ Bash(cd /Users/pennyplatt/Documents//Oksana/validation/wrappers && timeout 10 node
       notion-quantum-secure-wrapper.js 2>&1 | head -30)
   ⎿  (eval):1: command not found: timeout
 
@@ -1805,23 +1805,23 @@ is resolved. 🍎 oksana/validation/wrappers % node notion-quantum-secure-wrappe
      🧠 Apple Intelligence + Full Workspace Intelligence enabled
      … +37 lines (ctrl+o to expand)
 
-⏺ Bash(ls -la /Users/pennyplatt/Documents/9BitStudios/Oksana/apple-intelligence/decision-engine/strateg
+⏺ Bash(ls -la /Users/pennyplatt/Documents//Oksana/apple-intelligence/decision-engine/strateg
       ic_intelligence_engine.py)
-  ⎿ -rw-r--r--@ 1 pennyplatt  staff  16586 Nov 13 17:03 /Users/pennyplatt/Documents/9BitStudios/Ok
+  ⎿ -rw-r--r--@ 1 pennyplatt  staff  16586 Nov 13 17:03 /Users/pennyplatt/Documents//Ok
     sana/apple-intelligence/decision-engine/strategic_intelligence_engine.py
 
 
-⏺ Search(pattern: "class StrategicIntelligenceEngine", path: "~/Documents/9BitStudios/Oksana/apple-inte
+⏺ Search(pattern: "class StrategicIntelligenceEngine", path: "~/Documents//Oksana/apple-inte
         lligence/decision-engine/strategic_intelligence_engine.py", output_mode: "content")
   ⎿  Found 0 lines 
 
-⏺ Bash(grep "^class " /Users/pennyplatt/Documents/9BitStudios/Oksana/apple-intelligence/decision-engine
+⏺ Bash(grep "^class " /Users/pennyplatt/Documents//Oksana/apple-intelligence/decision-engine
       /strategic_intelligence_engine.py)
   ⎿  class AppleAuthorityValidator:            
      class QuantumSecurityProtocol:
      class StrategicIntelligenceDecisionEngine:
 
-⏺ Update(~/Documents/9BitStudios/Oksana/apple-intelligence/m4-neural-engine/m4_orchestrator.py)
+⏺ Update(~/Documents//Oksana/apple-intelligence/m4-neural-engine/m4_orchestrator.py)
   ⎿  Updated ../../apple-intelligence/m4-neural-engine/m4_orchestrator.py with 1 addition and 1   
      removal
        57    sys.path.insert(0, str(decision_engine_path))
@@ -1842,7 +1842,7 @@ is resolved. 🍎 oksana/validation/wrappers % node notion-quantum-secure-wrappe
     ngine' object has no attribute 'get_engine_status'
     … +5 lines (ctrl+o to expand)
 
-⏺ Bash(grep "def " /Users/pennyplatt/Documents/9BitStudios/Oksana/apple-intelligence/decision-engine/st
+⏺ Bash(grep "def " /Users/pennyplatt/Documents//Oksana/apple-intelligence/decision-engine/st
       rategic_intelligence_engine.py | head -20)
   ⎿      def validate() -> Dict[str, Any]:   
          def __init__(self):
@@ -1850,11 +1850,11 @@ is resolved. 🍎 oksana/validation/wrappers % node notion-quantum-secure-wrappe
      … +11 lines (ctrl+o to expand)
 
 ⏺ Search(pattern: "get_engine_status", path:
-        "~/Documents/9BitStudios/Oksana/apple-intelligence/m4-neural-engine/m4_orchestrator.py",
+        "~/Documents//Oksana/apple-intelligence/m4-neural-engine/m4_orchestrator.py",
         output_mode: "content")
   ⎿  Found 23 lines (ctrl+o to expand)
 
-⏺ Update(~/Documents/9BitStudios/Oksana/apple-intelligence/m4-neural-engine/m4_orchestrator.py)
+⏺ Update(~/Documents//Oksana/apple-intelligence/m4-neural-engine/m4_orchestrator.py)
   ⎿  Updated ../../apple-intelligence/m4-neural-engine/m4_orchestrator.py with 2 additions and 2 
      removals
        179                # Phase 4: Strategic Intelligence Engine (optional)
@@ -1896,7 +1896,7 @@ is resolved. 🍎 oksana/validation/wrappers % node notion-quantum-secure-wrappe
      such file or directory
      fatal: pathspec 'apple-intelligence/m4-neural-engine/m4_orchestrator.py' did not match any files
 
-⏺ Bash(cd /Users/pennyplatt/Documents/9BitStudios/Oksana && git add
+⏺ Bash(cd /Users/pennyplatt/Documents//Oksana && git add
       apple-intelligence/m4-neural-engine/m4_orchestrator.py && git commit -m "Fix Strategic
       Intelligence…)
   ⎿  [main f7d4d68] Fix Strategic Intelligence Engine import in M4 Orchestrator
@@ -2003,7 +2003,7 @@ oksana/quantum-spatial/creative-intelligence-portal/notion % node notion-workspa
    • Apple Intelligence: true
    • Notion Integration: false
 🧠 M4 Neural Engine: ENABLED (from unified config)
-   Bridge Path: /Users/pennyplatt/Documents/9BitStudios/Oksana/apple-intelligence/m4-neural-engine/
+   Bridge Path: /Users/pennyplatt/Documents//Oksana/apple-intelligence/m4-neural-engine/
 notion_workspace_bridge.py
    Cores: 16
 🗺️  Routing: 3 config files loaded
@@ -2199,7 +2199,7 @@ INFO:m4_orchestrator:   ✅ Apple Authority: 100% compliance
 INFO:m4_orchestrator:✅ M4 Orchestrator initialization complete (modern pattern)
 INFO:m4_orchestrator:🧮 Orchestrating workspace_intelligence analysis with M4 acceleration
 Traceback (most recent call last):
-  File "/Users/pennyplatt/Documents/9BitStudios/Oksana/apple-intelligence/m4-neural-engine/notion_w
+  File "/Users/pennyplatt/Documents//Oksana/apple-intelligence/m4-neural-engine/notion_w
 orkspace_bridge.py", line 113, in <module>
     asyncio.run(main())
   File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.
@@ -2208,7 +2208,7 @@ orkspace_bridge.py", line 113, in <module>
   File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.
 9/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
     return future.result()
-  File "/Users/pennyplatt/Documents/9BitStudios/Oksana/apple-intelligence/m4-neural-engine/notion_w
+  File "/Users/pennyplatt/Documents//Oksana/apple-intelligence/m4-neural-engine/notion_w
 orkspace_bridge.py", line 105, in main
     print(json.dumps(result))
   File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.
@@ -2287,11 +2287,11 @@ code 1:
   "workspace_intelligence_score": 0,
   "integration_readiness_score": 0.8
 }
-📄 Comprehensive report saved: /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/creat
+📄 Comprehensive report saved: /Users/pennyplatt/Documents//Oksana/quantum-spatial/creat
 ive-intelligence-portal/notion/notion-workspace-mapping-report-2025-12-11.json
 ✨ Notion workspace mapping completed successfully!
 🍎 oksana/quantum-spatial/creative-intelligence-portal/notion % 
- /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/creative-intelligence-portal/config
+ /Users/pennyplatt/Documents//Oksana/quantum-spatial/creative-intelligence-portal/config
 /notion-mcp-config.json 
 
 ⏺ The issue is a JSON serialization error with numpy boolean types. Let me fix the
@@ -2302,7 +2302,7 @@ ive-intelligence-portal/notion/notion-workspace-mapping-report-2025-12-11.json
 
 ▗ ▗   ▖ ▖  Claude Code v2.0.62
            Sonnet 4.5 · Claude Pro
-  ▘▘ ▝▝    ~/Documents/9BitStudios/Oksana
+  ▘▘ ▝▝    ~/Documents//Oksana
 ═════════════════════════════ Conversation compacted · ctrl+o for history ═════════════════════════════
   ⎿  Referenced file apple-intelligence/m4-neural-engine/m4_orchestrator.py
   ⎿  Read NOTION-MIGRATION-GUIDE.md (210 lines)
@@ -2422,7 +2422,7 @@ ive-intelligence-portal/notion/notion-workspace-mapping-report-2025-12-11.json
 ⏺ Perfect! I've added a custom JSON encoder to handle numpy types. Now let's test the fix by
   running the notion-workspace-mapper:
 
-⏺ Bash(cd /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/creative-intellig  timeout: 1m 
+⏺ Bash(cd /Users/pennyplatt/Documents//Oksana/quantum-spatial/creative-intellig  timeout: 1m 
       ence-portal/notion && node notion-workspace-mapper.js)                                0s
 
   ⎿  ✅ Workspace Mapper: Loaded unified configuration index
@@ -2435,7 +2435,7 @@ ive-intelligence-portal/notion/notion-workspace-mapping-report-2025-12-11.json
    check what's causing the initialization failure:
 
 ⏺ Bash(cd                                                                                   timeout: 
-      /Users/pennyplatt/Documents/9BitStudios/Oksana/apple-intelligence/m4-neural-engine    30s
+      /Users/pennyplatt/Documents//Oksana/apple-intelligence/m4-neural-engine    30s
       && /opt/homebrew/bin/python3.11 notion_workspace_bridge.py initialize)
   ⎿  Error: Exit code 127
      (eval):1: no such file or directory: /opt/homebrew/bin/python3.11
@@ -2443,7 +2443,7 @@ ive-intelligence-portal/notion/notion-workspace-mapping-report-2025-12-11.json
 ⏺ Bash(which python3)
   ⎿  /usr/bin/python3
 
-⏺ Update(~/Documents/9BitStudios/Oksana/apple-intelligence/m4-neural-engine/notion_workspace_bridge.py)
+⏺ Update(~/Documents//Oksana/apple-intelligence/m4-neural-engine/notion_workspace_bridge.py)
   ⎿  Updated ../../../apple-intelligence/m4-neural-engine/notion_workspace_bridge.py with 1       
      addition and 1 removal
        1 -  #!/opt/homebrew/bin/python3.11
@@ -2452,7 +2452,7 @@ ive-intelligence-portal/notion/notion-workspace-mapping-report-2025-12-11.json
        3    Notion Workspace M4 Neural Engine Bridge
        4    Provides CLI interface for notion-workspace-mapper.js
 
-⏺ Bash(cd /Users/pennyplatt/Documents/9BitStudios/Oksana/apple-intelligence/m4-neural-engine timeout: 
+⏺ Bash(cd /Users/pennyplatt/Documents//Oksana/apple-intelligence/m4-neural-engine timeout: 
        && python3 notion_workspace_bridge.py initialize)                                     30s
 
 
@@ -2464,7 +2464,7 @@ ive-intelligence-portal/notion/notion-workspace-mapping-report-2025-12-11.json
 ⏺ Perfect! The Neural Engine is now initializing successfully. Let me run the workspace mapper
   again to verify the complete integration:
 
-⏺ Bash(cd /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/creative-intellig  timeout: 1m 
+⏺ Bash(cd /Users/pennyplatt/Documents//Oksana/quantum-spatial/creative-intellig  timeout: 1m 
       ence-portal/notion && node notion-workspace-mapper.js 2>&1 | tail -50)                0s
 
   ⎿    🔍 Analyzing client_portal...                         
@@ -2478,7 +2478,7 @@ ive-intelligence-portal/notion/notion-workspace-mapping-report-2025-12-11.json
    for campaign enhancements:
 
 ⏺ Search(pattern: "Neural enhancement failed", path:
-        "~/Documents/9BitStudios/Oksana/quantum-spatial/creative-intelligence-portal/notion", glob:
+        "~/Documents//Oksana/quantum-spatial/creative-intelligence-portal/notion", glob:
         "*.js", output_mode: "content")
   ⎿  Found 8 lines (ctrl+o to expand)
 
@@ -2486,7 +2486,7 @@ ive-intelligence-portal/notion/notion-workspace-mapping-report-2025-12-11.json
   ⎿  Read 30 lines
 
 ⏺ Search(pattern: "async enhanceCampaignWithNeuralEngine", path:
-        "~/Documents/9BitStudios/Oksana/quantum-spatial/creative-intelligence-portal/notion", glob:
+        "~/Documents//Oksana/quantum-spatial/creative-intelligence-portal/notion", glob:
         "*.js", output_mode: "content")
   ⎿  Found 0 lines 
 
@@ -2503,10 +2503,10 @@ ive-intelligence-portal/notion/notion-workspace-mapping-report-2025-12-11.json
 ⏺ I found the issue! The workspace mapper is calling generate_brand_intelligence command, but the
   Python bridge doesn't have a handler for it. Let me add that command handler:
 
-⏺ Read(~/Documents/9BitStudios/Oksana/apple-intelligence/m4-neural-engine/notion_workspace_bridge.py)
+⏺ Read(~/Documents//Oksana/apple-intelligence/m4-neural-engine/notion_workspace_bridge.py)
   ⎿  Read 75 lines
 
-⏺ Update(~/Documents/9BitStudios/Oksana/apple-intelligence/m4-neural-engine/notion_workspace_bridge.py)
+⏺ Update(~/Documents//Oksana/apple-intelligence/m4-neural-engine/notion_workspace_bridge.py)
   ⎿  Updated ../../../apple-intelligence/m4-neural-engine/notion_workspace_bridge.py with 41      
      additions
         85                    "error": str(e)
@@ -2559,7 +2559,7 @@ ive-intelligence-portal/notion/notion-workspace-mapping-report-2025-12-11.json
 
 ⏺ Now I'll add the command handler for generate_brand_intelligence:
 
-⏺ Update(~/Documents/9BitStudios/Oksana/apple-intelligence/m4-neural-engine/notion_workspace_bridge.py)
+⏺ Update(~/Documents//Oksana/apple-intelligence/m4-neural-engine/notion_workspace_bridge.py)
   ⎿  Updated ../../../apple-intelligence/m4-neural-engine/notion_workspace_bridge.py with 22      
      additions and 1 removal
        158            print(json.dumps(result, cls=NumpyJSONEncoder))
@@ -2598,7 +2598,7 @@ ive-intelligence-portal/notion/notion-workspace-mapping-report-2025-12-11.json
 
 ⏺ Perfect! Now let's test the brand intelligence command directly:
 
-⏺ Bash(cd /Users/pennyplatt/Documents/9BitStudios/Oksana/apple-intelligence/m4-neural-engine timeout: 
+⏺ Bash(cd /Users/pennyplatt/Documents//Oksana/apple-intelligence/m4-neural-engine timeout: 
        && python3 notion_workspace_bridge.py generate_brand_intelligence '{"clien…)          30s
 
 
@@ -2613,7 +2613,7 @@ ive-intelligence-portal/notion/notion-workspace-mapping-report-2025-12-11.json
 ⏺ Excellent! The brand intelligence generation is working. Now let's run the complete workspace
   mapper to verify the neural enhancement works end-to-end:
 
-⏺ Bash(cd /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/creative-intellig  timeout: 1m 
+⏺ Bash(cd /Users/pennyplatt/Documents//Oksana/quantum-spatial/creative-intellig  timeout: 1m 
       ence-portal/notion && node notion-workspace-mapper.js 2>&1 | tail -60)                0s
 
   ⎿    ✅ creative-queue/development: 79 files, 0 Notion matches    
@@ -2631,7 +2631,7 @@ ive-intelligence-portal/notion/notion-workspace-mapping-report-2025-12-11.json
   - Problem: TypeError: Object of type bool is not JSON serializable
   - Root Cause: M4 orchestrator returns numpy bool types that aren't JSON serializable
   - Fix: Added NumpyJSONEncoder class to handle numpy types (bool, int, float, ndarray)
-  - Files Modified: /Users/pennyplatt/Documents/9BitStudios/Oksana/apple-intelligence/m4-neural-eng
+  - Files Modified: /Users/pennyplatt/Documents//Oksana/apple-intelligence/m4-neural-eng
   ine/notion_workspace_bridge.py
 
   2. Python Shebang Path Error
@@ -2677,7 +2677,7 @@ enhanced-notion-intelligence-mcp-server.js and when I try with the notion-quantu
 
 ⏺ Bash(ps aux | grep -E "(notion|python3)" | grep -v grep)
   ⎿ pennyplatt       35095   0.0  0.0 444568976   6288   ??  S     8:12PM   0:00.28 node /Users/pe
-    nnyplatt/Documents/9BitStudios/Oksana/quantum-spatial/creative-intelligence-portal/notion/enha
+    nnyplatt/Documents//Oksana/quantum-spatial/creative-intelligence-portal/notion/enha
     nced-notion-intelligence-mcp-server.js
     … +11 lines (ctrl+o to expand)
 
@@ -2693,7 +2693,7 @@ enhanced-notion-intelligence-mcp-server.js and when I try with the notion-quantu
 ⏺ Read(enhanced-notion-intelligence-mcp-server.js)
   ⎿  Read 50 lines
 
-⏺ Bash(tail -30 /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/creative-intelligence-po
+⏺ Bash(tail -30 /Users/pennyplatt/Documents//Oksana/quantum-spatial/creative-intelligence-po
       rtal/notion/enhanced-notion-intelligence-mcp-server.js)
   ⎿      const transport = new StdioServerTransport();                
          await this.mcpServer.connect(transport);
@@ -2713,10 +2713,10 @@ enhanced-notion-intelligence-mcp-server.js and when I try with the notion-quantu
 ⏺ I understand - you need the CLI status output to verify the scripts are working. Let me check the
    quantum-secure wrapper since you mentioned it stalls halfway:
 
-⏺ Read(~/Documents/9BitStudios/Oksana/validation/wrappers/notion-quantum-secure-wrapper.js)
+⏺ Read(~/Documents//Oksana/validation/wrappers/notion-quantum-secure-wrapper.js)
   ⎿  Read 80 lines
 
-⏺ Read(~/Documents/9BitStudios/Oksana/validation/wrappers/notion-quantum-secure-wrapper.js)
+⏺ Read(~/Documents//Oksana/validation/wrappers/notion-quantum-secure-wrapper.js)
   ⎿  Read 91 lines
 
 ⏺ I see the issue now! The notion-quantum-secure-wrapper.js and
@@ -2775,14 +2775,14 @@ enhanced-notion-intelligence-mcp-server.js and when I try with the notion-quantu
 ⏺ There's still a chalk import issue! Let me find all the incorrect chalk imports:
 
 ⏺ Search(pattern: "import.*chalk", path:
-        "~/Documents/9BitStudios/Oksana/quantum-spatial/creative-intelligence-portal/notion", glob:
+        "~/Documents//Oksana/quantum-spatial/creative-intelligence-portal/notion", glob:
         "*.js", output_mode: "content")
   ⎿  Found 13 lines (ctrl+o to expand)
 
 ⏺ The imports look correct. The issue is that chalk might not be installed in the notion workspace.
    Let me check:
 
-⏺ Bash(cd /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/creative-intelligence-portal
+⏺ Bash(cd /Users/pennyplatt/Documents//Oksana/quantum-spatial/creative-intelligence-portal
       && ls -la node_modules/ | head -20)
   ⎿  total 0                                                
      drwx------  107 pennyplatt  staff  3424 Nov 17 21:59 .
@@ -2863,19 +2863,19 @@ enhanced-notion-intelligence-mcp-server.js and when I try with the notion-quantu
 ⏺ Kill Shell(Kill shell: 4846a4)
   ⎿  Shell 4846a4 killed
 
-⏺ Bash(cd /Users/pennyplatt/Documents/9BitStudios/Oksana && ls -la node_modules/chalk/ | head -10)
+⏺ Bash(cd /Users/pennyplatt/Documents//Oksana && ls -la node_modules/chalk/ | head -10)
   ⎿  total 40                                                
      drwxr-xr-x    6 pennyplatt  staff    192 Dec 10 18:54 .
      drwxr-xr-x  843 pennyplatt  staff  26976 Dec 10 22:49 ..
      … +4 lines (ctrl+o to expand)
 
-⏺ Bash(cp -R /Users/pennyplatt/Documents/9BitStudios/Oksana/node_modules/chalk
-      /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/creative-intelligence-por…)
+⏺ Bash(cp -R /Users/pennyplatt/Documents//Oksana/node_modules/chalk
+      /Users/pennyplatt/Documents//Oksana/quantum-spatial/creative-intelligence-por…)
   ⎿  Chalk copied successfully
 
 ⏺ Perfect! Now let's test the workspace mapper:
 
-⏺ Bash(cd /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/creative-intellig  timeout: 1m 
+⏺ Bash(cd /Users/pennyplatt/Documents//Oksana/quantum-spatial/creative-intellig  timeout: 1m 
       ence-portal/notion && node notion-workspace-mapper.js 2>&1 | head -40)                0s
 
   ⎿  ✅ Workspace Mapper: Loaded unified configuration index
@@ -2949,43 +2949,43 @@ enhanced-notion-intelligence-mcp-server.js and when I try with the notion-quantu
 runsmart.9bitstudios.io OR quantum-spatial-design-system.runsmart.io. The files are included in the
  main oksana-ai git but we may need to create a submodule. My guide says to copy the files but 
 maybe we should deploy directly from the project. Here is the status. 
-/Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/brand-theme/profession
+/Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/brand-theme/profession
 al/portfolio/runsmart/runsmart-interfaces-purple/README.md I will still be making changes and 
 developing so will need an easy deployment script. I also need to confirm that non-Apple systems 
 will load attractive system fonts, or add @import for a web font for windows systems. 
-/Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/brand-theme/profession
+/Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/brand-theme/profession
 al/portfolio/runsmart/runsmart-interfaces-purple/documentation/runsmart-quick-deploy.md 
-/Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/brand-theme/profession
+/Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/brand-theme/profession
 al/portfolio/runsmart/runsmart-interfaces-purple/documentation/runsmart-deployment-prompt.md 
-/Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/brand-theme/profession
+/Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/brand-theme/profession
 al/portfolio/runsmart/runsmart-interfaces-purple/scripts/deploy-runsmart.sh I am logged in to 
 CLoudflare and Github, we probably need a quick package config and install wrangler at 
-/Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/brand-theme/profession
+/Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/brand-theme/profession
 al/portfolio/runsmart/runsmart-interfaces-purple 
 
 ⏺ I'll help you deploy RunSmart to Cloudflare Pages with a streamlined workflow. Let me first
   review the existing documentation and setup:
 
-⏺ Read(~/Documents/9BitStudios/Oksana/quantum-spatial/design-system/brand-theme/professional/portfolio/
+⏺ Read(~/Documents//Oksana/quantum-spatial/design-system/brand-theme/professional/portfolio/
       runsmart/runsmart-interfaces-purple/README.md)
   ⎿  Read 383 lines
 
-⏺ Read(~/Documents/9BitStudios/Oksana/quantum-spatial/design-system/brand-theme/professional/portfolio/
+⏺ Read(~/Documents//Oksana/quantum-spatial/design-system/brand-theme/professional/portfolio/
       runsmart/runsmart-interfaces-purple/documentation/runsmart-quick-deploy.md)
   ⎿  Read 155 lines
 
-⏺ Read(~/Documents/9BitStudios/Oksana/quantum-spatial/design-system/brand-theme/professional/portfolio/
+⏺ Read(~/Documents//Oksana/quantum-spatial/design-system/brand-theme/professional/portfolio/
       runsmart/runsmart-interfaces-purple/documentation/runsmart-deployment-prompt.md)
   ⎿  Read 109 lines
 
-⏺ Read(~/Documents/9BitStudios/Oksana/quantum-spatial/design-system/brand-theme/professional/portfolio/
+⏺ Read(~/Documents//Oksana/quantum-spatial/design-system/brand-theme/professional/portfolio/
       runsmart/runsmart-interfaces-purple/scripts/deploy-runsmart.sh)
   ⎿  Read 98 lines
 
 ⏺ Perfect! I can see the deployment plan is already outlined. Let me check the current directory
   and font configuration, then set up the deployment workflow:
 
-⏺ Bash(cd /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/brand-theme/prof
+⏺ Bash(cd /Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/brand-theme/prof
       essional/portfolio/runsmart/runsmart-interfaces-purple && ls -la)
   ⎿  total 104                                              
      drwxr-xr-x  12 pennyplatt  staff    384 Dec 11 06:32 .
@@ -3105,7 +3105,7 @@ al/portfolio/runsmart/runsmart-interfaces-purple
         6    
         7 -  echo "🚀 RunSmart Prototype → Cloudflare Pages"
         8 -  echo "========================================="
-        7 +  PROJECT_DIR="/Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-
+        7 +  PROJECT_DIR="/Users/pennyplatt/Documents//Oksana/quantum-spatial/design-
           + system/brand-theme/professional/portfolio/runsmart/runsmart-interfaces-purple"
         8 +  
         9 +  echo "🚀 RunSmart → Cloudflare Pages Deployment"
@@ -3274,7 +3274,7 @@ al/portfolio/runsmart/runsmart-interfaces-purple
      ▲ [WARNING] Pages now has wrangler.toml support.
 
        We detected a configuration file at 
-     /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/brand-theme/profession
+     /Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/brand-theme/profession
      al/portfolio/runsmart/runsmart-interfaces-purple/wrangler.toml but it is missing the 
      "pages_build_output_dir" field, required by Pages.
        If you would like to use this configuration file to deploy your project, please use 
@@ -3408,7 +3408,7 @@ al/portfolio/runsmart/runsmart-interfaces-purple
 
   After making changes to HTML/CSS:
 
-  cd /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/brand-theme/profe
+  cd /Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/brand-theme/profe
   ssional/portfolio/runsmart/runsmart-interfaces-purple
 
   # Quick deploy
@@ -3490,7 +3490,7 @@ al/portfolio/runsmart/runsmart-interfaces-purple
 
   Live at: https://23fe460c.runsmart-prototype.pages.dev
 
-  All files at: /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/brand-
+  All files at: /Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/brand-
   theme/professional/portfolio/runsmart/runsmart-interfaces-purple/
 
 > Great. There is just a little design dilemma on the mobile app. On the mobile/coach/mobile-coach-settings.html
@@ -3832,19 +3832,19 @@ the footer nav for coach app and move it to the top right of the 'dashboard' scr
  I would like you to consider the full app feature package as well as best prqactices, and HIG standards to 
 determine what should go here. I think that a creative center where Steve can create video and training content 
 on the fly and even share to social media would be a super great enhancement. Please review this along with the 
-full system: /Users/pennyplatt/Documents/9BitStudios/Oksana/apple-intelligence/foundation/validated-foundation/b
+full system: /Users/pennyplatt/Documents//Oksana/apple-intelligence/foundation/validated-foundation/b
 rand-alignment/brand-content/content-strategy/runsmart-analytics-case-study-article.md 
-/Users/pennyplatt/Documents/9BitStudios/Oksana/apple-intelligence/foundation/validated-foundation/brand-alignmen
+/Users/pennyplatt/Documents//Oksana/apple-intelligence/foundation/validated-foundation/brand-alignmen
 t/brand-content/blogs/runsmart-analytics-blog.md 
-/Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/brand-theme/professional/portfolio/
+/Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/brand-theme/professional/portfolio/
 runsmart/runsmart-interfaces-purple/documentation/dashboard-complete.md I think the Oksana Creative Intelligence
- Accelerator should be integrated -- /Users/pennyplatt/Documents/9BitStudios/Oksana/apple-intelligence/foundatio
+ Accelerator should be integrated -- /Users/pennyplatt/Documents//Oksana/apple-intelligence/foundatio
 n/validated-foundation/brand-alignment/brand-content/content-strategy/content-acceleration-pipeline-article.md 
-/Users/pennyplatt/Documents/9BitStudios/Oksana/apple-intelligence/foundation/validated-foundation/brand-alignmen
+/Users/pennyplatt/Documents//Oksana/apple-intelligence/foundation/validated-foundation/brand-alignmen
 t/brand-content/website-content/oksana-homepage-9BitStudios.md 
-/Users/pennyplatt/Documents/9BitStudios/Oksana/apple-intelligence/foundation/validated-foundation/brand-alignmen
+/Users/pennyplatt/Documents//Oksana/apple-intelligence/foundation/validated-foundation/brand-alignmen
 t/brand-content/content-strategy/complete-content-strategy.md 
-/Users/pennyplatt/Documents/9BitStudios/Oksana/apple-intelligence/foundation/validated-foundation/brand-alignmen
+/Users/pennyplatt/Documents//Oksana/apple-intelligence/foundation/validated-foundation/brand-alignmen
 t/brand-content/content-strategy/who-is-oksana-actual-intelligence-article.md Please create an enhancement plan 
 but do not yet implement or deploy. I want to see the plan and share a couple of more articles, and then add the
  new features. 
@@ -3852,30 +3852,30 @@ but do not yet implement or deploy. I want to see the plan and share a couple of
 ⏺ I'll create a comprehensive Apple Intelligence Strategic Director enhancement plan for you. Let me first read
   all the referenced documents to understand the full context:
 
-⏺ Read(~/Documents/9BitStudios/Oksana/apple-intelligence/foundation/validated-foundation/brand-alignment/brand-conte
+⏺ Read(~/Documents//Oksana/apple-intelligence/foundation/validated-foundation/brand-alignment/brand-conte
       nt/content-strategy/runsmart-analytics-case-study-article.md)
   ⎿  Read 291 lines
 
-⏺ Read(~/Documents/9BitStudios/Oksana/apple-intelligence/foundation/validated-foundation/brand-alignment/brand-conte
+⏺ Read(~/Documents//Oksana/apple-intelligence/foundation/validated-foundation/brand-alignment/brand-conte
       nt/blogs/runsmart-analytics-blog.md)
   ⎿  Read 144 lines
 
 ⏺ Read(documentation/dashboard-complete.md)
   ⎿  Read 397 lines
 
-⏺ Read(~/Documents/9BitStudios/Oksana/apple-intelligence/foundation/validated-foundation/brand-alignment/brand-conte
+⏺ Read(~/Documents//Oksana/apple-intelligence/foundation/validated-foundation/brand-alignment/brand-conte
       nt/content-strategy/content-acceleration-pipeline-article.md)
   ⎿  Read 430 lines
 
-⏺ Read(~/Documents/9BitStudios/Oksana/apple-intelligence/foundation/validated-foundation/brand-alignment/brand-conte
+⏺ Read(~/Documents//Oksana/apple-intelligence/foundation/validated-foundation/brand-alignment/brand-conte
       nt/website-content/oksana-homepage-9BitStudios.md)
   ⎿  Read 528 lines
 
-⏺ Read(~/Documents/9BitStudios/Oksana/apple-intelligence/foundation/validated-foundation/brand-alignment/brand-conte
+⏺ Read(~/Documents//Oksana/apple-intelligence/foundation/validated-foundation/brand-alignment/brand-conte
       nt/content-strategy/complete-content-strategy.md)
   ⎿  Read 408 lines
 
-⏺ Read(~/Documents/9BitStudios/Oksana/apple-intelligence/foundation/validated-foundation/brand-alignment/brand-conte
+⏺ Read(~/Documents//Oksana/apple-intelligence/foundation/validated-foundation/brand-alignment/brand-conte
       nt/content-strategy/who-is-oksana-actual-intelligence-article.md)
   ⎿  Read 505 lines
 
@@ -4088,13 +4088,13 @@ but do not yet implement or deploy. I want to see the plan and share a couple of
   Ready to review the plan and share those additional articles! 🚀
 
 > I just thought it might be a good idea to review the enhanced creative accelerator guides -- 
-/Users/pennyplatt/Documents/9BitStudios/Oksana/apple-intelligence/foundation/creative-queue/development/oksana-c
+/Users/pennyplatt/Documents//Oksana/apple-intelligence/foundation/creative-queue/development/oksana-c
 reative-intelligence-accelerator/content-intelligence-system-apple-intelligence-enhanced.md /Users/pennyplatt/Do
-cuments/9BitStudios/Oksana/apple-intelligence/foundation/creative-queue/development/oksana-creative-intelligence
+cuments//Oksana/apple-intelligence/foundation/creative-queue/development/oksana-creative-intelligence
 -accelerator/quantum-spatial-creative-intelligence-accelerator-apple-intelligence-integration.md 
-/Users/pennyplatt/Documents/9BitStudios/Oksana/apple-intelligence/foundation/creative-queue/development/oksana-c
+/Users/pennyplatt/Documents//Oksana/apple-intelligence/foundation/creative-queue/development/oksana-c
 reative-intelligence-accelerator/m4-neural-engine-apple-vision-pro-optimization-guide.md 
-/Users/pennyplatt/Documents/9BitStudios/Oksana/apple-intelligence/foundation/creative-queue/development/oksana-c
+/Users/pennyplatt/Documents//Oksana/apple-intelligence/foundation/creative-queue/development/oksana-c
 reative-intelligence-accelerator/creative-intelligence-models-foundation-guide-grid.md We could also integrate 
 Notion as backend CMS and automation station, and / or Apple Watch biometrics with Grid analytics intelligence. 
 Can you create a comprehenaive next level roadmap exploring these features, and a plan for phase 1 - creator 
@@ -4105,19 +4105,19 @@ development and neural engine acceleration to get a lot more done faster.
 ⏺ Perfect! Let me read the enhanced creative accelerator guides to understand the full system capabilities, then
    create a comprehensive next-level roadmap with phased implementation.
 
-⏺ Read(~/Documents/9BitStudios/Oksana/apple-intelligence/foundation/creative-queue/development/oksana-creative-intel
+⏺ Read(~/Documents//Oksana/apple-intelligence/foundation/creative-queue/development/oksana-creative-intel
       ligence-accelerator/content-intelligence-system-apple-intelligence-enhanced.md)
   ⎿  Read 378 lines
 
-⏺ Read(~/Documents/9BitStudios/Oksana/apple-intelligence/foundation/creative-queue/development/oksana-creative-intel
+⏺ Read(~/Documents//Oksana/apple-intelligence/foundation/creative-queue/development/oksana-creative-intel
       ligence-accelerator/quantum-spatial-creative-intelligence-accelerator-apple-intelligence-integration.md)
   ⎿  Read 526 lines
 
-⏺ Read(~/Documents/9BitStudios/Oksana/apple-intelligence/foundation/creative-queue/development/oksana-creative-intel
+⏺ Read(~/Documents//Oksana/apple-intelligence/foundation/creative-queue/development/oksana-creative-intel
       ligence-accelerator/m4-neural-engine-apple-vision-pro-optimization-guide.md)
   ⎿  Read 583 lines
 
-⏺ Read(~/Documents/9BitStudios/Oksana/apple-intelligence/foundation/creative-queue/development/oksana-creative-intel
+⏺ Read(~/Documents//Oksana/apple-intelligence/foundation/creative-queue/development/oksana-creative-intel
       ligence-accelerator/creative-intelligence-models-foundation-guide-grid.md)
   ⎿  Read 210 lines
 
@@ -4130,15 +4130,15 @@ development and neural engine acceleration to get a lot more done faster.
   ▘▘ ▝▝    ~/…/design-system/brand-theme/professional/portfolio/runsmart/runsmart-interfaces-purple
 ─────────────────────────────────────── Ctrl+E to show 1346 previous messages ──────────────────────────────────────
 
-⏺ Read(~/Documents/9BitStudios/Oksana/apple-intelligence/foundation/creative-queue/development/oksana-creative-intel
+⏺ Read(~/Documents//Oksana/apple-intelligence/foundation/creative-queue/development/oksana-creative-intel
       ligence-accelerator/quantum-spatial-creative-intelligence-accelerator-apple-intelligence-integration.md)
   ⎿  Read 526 lines
 
-⏺ Read(~/Documents/9BitStudios/Oksana/apple-intelligence/foundation/creative-queue/development/oksana-creative-intel
+⏺ Read(~/Documents//Oksana/apple-intelligence/foundation/creative-queue/development/oksana-creative-intel
       ligence-accelerator/m4-neural-engine-apple-vision-pro-optimization-guide.md)
   ⎿  Read 583 lines
 
-⏺ Read(~/Documents/9BitStudios/Oksana/apple-intelligence/foundation/creative-queue/development/oksana-creative-intel
+⏺ Read(~/Documents//Oksana/apple-intelligence/foundation/creative-queue/development/oksana-creative-intel
       ligence-accelerator/creative-intelligence-models-foundation-guide-grid.md)
   ⎿  Read 210 lines
 
@@ -4226,12 +4226,12 @@ development and neural engine acceleration to get a lot more done faster.
 
   Let me read the file first to see the current implementation:
 
-⏺ Read(~/Documents/9BitStudios/Oksana/apple-intelligence/m4-neural-engine/notion_workspace_bridge.py)
+⏺ Read(~/Documents//Oksana/apple-intelligence/m4-neural-engine/notion_workspace_bridge.py)
   ⎿  Read 114 lines
 
 ⏺ Now I'll fix the JSON serialization error by adding a custom JSON encoder to handle numpy types:
 
-⏺ Update(~/Documents/9BitStudios/Oksana/apple-intelligence/m4-neural-engine/notion_workspace_bridge.py)
+⏺ Update(~/Documents//Oksana/apple-intelligence/m4-neural-engine/notion_workspace_bridge.py)
   ⎿  Updated ../../../../../../../apple-intelligence/m4-neural-engine/notion_workspace_bridge.py with 1 additio
 
         8    import sys
@@ -4242,7 +4242,7 @@ development and neural engine acceleration to get a lot more done faster.
        13    
        14    class NotionWorkspaceBridge:
 
-⏺ Update(~/Documents/9BitStudios/Oksana/apple-intelligence/m4-neural-engine/notion_workspace_bridge.py)
+⏺ Update(~/Documents//Oksana/apple-intelligence/m4-neural-engine/notion_workspace_bridge.py)
   ⎿  Updated ../../../../../../../apple-intelligence/m4-neural-engine/notion_workspace_bridge.py with 11       
      additions
        11    import numpy as np
@@ -4263,12 +4263,12 @@ development and neural engine acceleration to get a lot more done faster.
        26        """Bridge for Notion workspace analysis with M4 Neural Engine"""
        27    
 
-⏺ Read(~/Documents/9BitStudios/Oksana/apple-intelligence/m4-neural-engine/notion_workspace_bridge.py)
+⏺ Read(~/Documents//Oksana/apple-intelligence/m4-neural-engine/notion_workspace_bridge.py)
   ⎿  Read 50 lines
 
 ⏺ Now I'll update all the json.dumps() calls to use the custom encoder:
 
-⏺ Update(~/Documents/9BitStudios/Oksana/apple-intelligence/m4-neural-engine/notion_workspace_bridge.py)
+⏺ Update(~/Documents//Oksana/apple-intelligence/m4-neural-engine/notion_workspace_bridge.py)
   ⎿  Updated ../../../../../../../apple-intelligence/m4-neural-engine/notion_workspace_bridge.py with 1 additio
       and 1 removal
         96    
@@ -4280,7 +4280,7 @@ development and neural engine acceleration to get a lot more done faster.
        101    
        102        elif command in ["analyze", "analyze_teamspace"]:
 
-⏺ Update(~/Documents/9BitStudios/Oksana/apple-intelligence/m4-neural-engine/notion_workspace_bridge.py)
+⏺ Update(~/Documents//Oksana/apple-intelligence/m4-neural-engine/notion_workspace_bridge.py)
   ⎿  Updated ../../../../../../../apple-intelligence/m4-neural-engine/notion_workspace_bridge.py with 2        
      additions and 2 removals
        110    
@@ -4297,7 +4297,7 @@ development and neural engine acceleration to get a lot more done faster.
        119    
        120        else:
 
-⏺ Update(~/Documents/9BitStudios/Oksana/apple-intelligence/m4-neural-engine/notion_workspace_bridge.py)
+⏺ Update(~/Documents//Oksana/apple-intelligence/m4-neural-engine/notion_workspace_bridge.py)
   ⎿  Updated ../../../../../../../apple-intelligence/m4-neural-engine/notion_workspace_bridge.py with 1 additio
       and 1 removal
        88    async def main():
@@ -4314,7 +4314,7 @@ development and neural engine acceleration to get a lot more done faster.
 
 > continue 
 
-⏺ Update(~/Documents/9BitStudios/Oksana/apple-intelligence/m4-neural-engine/notion_workspace_bridge.py)
+⏺ Update(~/Documents//Oksana/apple-intelligence/m4-neural-engine/notion_workspace_bridge.py)
   ⎿  Updated ../../../../../../../apple-intelligence/m4-neural-engine/notion_workspace_bridge.py with 1 additio
       and 1 removal
        118            sys.exit(0 if result['status'] == 'success' else 1)
@@ -4331,7 +4331,7 @@ development and neural engine acceleration to get a lot more done faster.
 ⏺ Perfect! I've added a custom JSON encoder to handle numpy types. Now let's test the fix by running the
   notion-workspace-mapper:
 
-⏺ Bash(cd /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/creative-intelligence-portal/  timeout: 1m 
+⏺ Bash(cd /Users/pennyplatt/Documents//Oksana/quantum-spatial/creative-intelligence-portal/  timeout: 1m 
       notion && node notion-workspace-mapper.js)                                                        0s
   ⎿  ✅ Workspace Mapper: Loaded unified configuration index
      ✅ Workspace Mapper: Loaded project configuration
@@ -4342,7 +4342,7 @@ development and neural engine acceleration to get a lot more done faster.
   databases. However, I notice the Neural Engine initialization is still failing. Let me check what's causing
   the initialization failure:
 
-⏺ Bash(cd /Users/pennyplatt/Documents/9BitStudios/Oksana/apple-intelligence/m4-neural-engine &&  timeout: 30s
+⏺ Bash(cd /Users/pennyplatt/Documents//Oksana/apple-intelligence/m4-neural-engine &&  timeout: 30s
       /opt/homebrew/bin/python3.11 notion_workspace_bridge.py initialize)
   ⎿  Error: Exit code 127
      (eval):1: no such file or directory: /opt/homebrew/bin/python3.11
@@ -4350,7 +4350,7 @@ development and neural engine acceleration to get a lot more done faster.
 ⏺ Bash(which python3)
   ⎿  /usr/bin/python3
 
-⏺ Update(~/Documents/9BitStudios/Oksana/apple-intelligence/m4-neural-engine/notion_workspace_bridge.py)
+⏺ Update(~/Documents//Oksana/apple-intelligence/m4-neural-engine/notion_workspace_bridge.py)
   ⎿  Updated ../../../../../../../apple-intelligence/m4-neural-engine/notion_workspace_bridge.py with 1 additio
       and 1 removal
        1 -  #!/opt/homebrew/bin/python3.11
@@ -4359,7 +4359,7 @@ development and neural engine acceleration to get a lot more done faster.
        3    Notion Workspace M4 Neural Engine Bridge
        4    Provides CLI interface for notion-workspace-mapper.js
 
-⏺ Bash(cd /Users/pennyplatt/Documents/9BitStudios/Oksana/apple-intelligence/m4-neural-engine && python3 timeout: 
+⏺ Bash(cd /Users/pennyplatt/Documents//Oksana/apple-intelligence/m4-neural-engine && python3 timeout: 
       notion_workspace_bridge.py initialize)                                                            30s
 
   ⎿  🔐 Validating Modern Environment Pattern...
@@ -4370,7 +4370,7 @@ development and neural engine acceleration to get a lot more done faster.
 ⏺ Perfect! The Neural Engine is now initializing successfully. Let me run the workspace mapper again to verify
   the complete integration:
 
-⏺ Bash(cd /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/creative-intelligence-portal/  timeout: 1m 
+⏺ Bash(cd /Users/pennyplatt/Documents//Oksana/quantum-spatial/creative-intelligence-portal/  timeout: 1m 
       notion && node notion-workspace-mapper.js 2>&1 | tail -50)                                        0s
   ⎿    🔍 Analyzing client_portal...                         
          ✅ client_portal: 0 DBs, 1 guides, needs_development
@@ -4382,38 +4382,38 @@ development and neural engine acceleration to get a lot more done faster.
   enhancement feature. Let me check what's causing the exit code 1 for campaign enhancements:
 
 ⏺ Search(pattern: "Neural enhancement failed", path:
-        "~/Documents/9BitStudios/Oksana/quantum-spatial/creative-intelligence-portal/notion", glob: "*.js",
+        "~/Documents//Oksana/quantum-spatial/creative-intelligence-portal/notion", glob: "*.js",
         output_mode: "content")
   ⎿  Found 8 lines (ctrl+o to expand)
 
-⏺ Read(~/Documents/9BitStudios/Oksana/quantum-spatial/creative-intelligence-portal/notion/notion-workspace-mapper.js
+⏺ Read(~/Documents//Oksana/quantum-spatial/creative-intelligence-portal/notion/notion-workspace-mapper.js
       )
   ⎿  Read 30 lines
 
 ⏺ Search(pattern: "async enhanceCampaignWithNeuralEngine", path:
-        "~/Documents/9BitStudios/Oksana/quantum-spatial/creative-intelligence-portal/notion", glob: "*.js",
+        "~/Documents//Oksana/quantum-spatial/creative-intelligence-portal/notion", glob: "*.js",
         output_mode: "content")
   ⎿  Found 0 lines 
 
-⏺ Search(pattern: "enhanceCampaignWithNeuralEngine", path: "~/Documents/9BitStudios/Oksana/quantum-spatial/creative-
+⏺ Search(pattern: "enhanceCampaignWithNeuralEngine", path: "~/Documents//Oksana/quantum-spatial/creative-
         intelligence-portal/notion/notion-workspace-mapper.js", output_mode: "content")
   ⎿  Found 0 lines 
 
-⏺ Read(~/Documents/9BitStudios/Oksana/quantum-spatial/creative-intelligence-portal/notion/notion-workspace-mapper.js
+⏺ Read(~/Documents//Oksana/quantum-spatial/creative-intelligence-portal/notion/notion-workspace-mapper.js
       )
   ⎿  Read 40 lines
 
-⏺ Search(pattern: "callNeuralEngine\(", path: "~/Documents/9BitStudios/Oksana/quantum-spatial/creative-intelligence-
+⏺ Search(pattern: "callNeuralEngine\(", path: "~/Documents//Oksana/quantum-spatial/creative-intelligence-
         portal/notion/notion-workspace-mapper.js", output_mode: "content")
   ⎿  Found 115 lines (ctrl+o to expand)
 
 ⏺ I found the issue! The workspace mapper is calling generate_brand_intelligence command, but the Python bridge
   doesn't have a handler for it. Let me add that command handler:
 
-⏺ Read(~/Documents/9BitStudios/Oksana/apple-intelligence/m4-neural-engine/notion_workspace_bridge.py)
+⏺ Read(~/Documents//Oksana/apple-intelligence/m4-neural-engine/notion_workspace_bridge.py)
   ⎿  Read 75 lines
 
-⏺ Update(~/Documents/9BitStudios/Oksana/apple-intelligence/m4-neural-engine/notion_workspace_bridge.py)
+⏺ Update(~/Documents//Oksana/apple-intelligence/m4-neural-engine/notion_workspace_bridge.py)
   ⎿  Updated ../../../../../../../apple-intelligence/m4-neural-engine/notion_workspace_bridge.py with 41       
      additions
         85                    "error": str(e)
@@ -4466,7 +4466,7 @@ development and neural engine acceleration to get a lot more done faster.
 
 ⏺ Now I'll add the command handler for generate_brand_intelligence:
 
-⏺ Update(~/Documents/9BitStudios/Oksana/apple-intelligence/m4-neural-engine/notion_workspace_bridge.py)
+⏺ Update(~/Documents//Oksana/apple-intelligence/m4-neural-engine/notion_workspace_bridge.py)
   ⎿  Updated ../../../../../../../apple-intelligence/m4-neural-engine/notion_workspace_bridge.py with 22       
      additions and 1 removal
        158            print(json.dumps(result, cls=NumpyJSONEncoder))
@@ -4504,7 +4504,7 @@ development and neural engine acceleration to get a lot more done faster.
 
 ⏺ Perfect! Now let's test the brand intelligence command directly:
 
-⏺ Bash(cd /Users/pennyplatt/Documents/9BitStudios/Oksana/apple-intelligence/m4-neural-engine && python3 timeout: 
+⏺ Bash(cd /Users/pennyplatt/Documents//Oksana/apple-intelligence/m4-neural-engine && python3 timeout: 
       notion_workspace_bridge.py generate_brand_intelligence '{"clien…)                                 30s
 
   ⎿ {"status": "success", "brand_intelligence_score": 85, "neural_cores_used": 4, "m4_accelerated": true, "bran
@@ -4518,7 +4518,7 @@ development and neural engine acceleration to get a lot more done faster.
 ⏺ Excellent! The brand intelligence generation is working. Now let's run the complete workspace mapper to verify
    the neural enhancement works end-to-end:
 
-⏺ Bash(cd /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/creative-intelligence-portal/  timeout: 1m 
+⏺ Bash(cd /Users/pennyplatt/Documents//Oksana/quantum-spatial/creative-intelligence-portal/  timeout: 1m 
       notion && node notion-workspace-mapper.js 2>&1 | tail -60)                                        0s
   ⎿    ✅ creative-queue/development: 79 files, 0 Notion matches    
        ✅ creative-queue/product-planning: 0 files, 0 Notion matches
@@ -4535,7 +4535,7 @@ development and neural engine acceleration to get a lot more done faster.
   - Root Cause: M4 orchestrator returns numpy bool types that aren't JSON serializable
   - Fix: Added NumpyJSONEncoder class to handle numpy types (bool, int, float, ndarray)
   - Files Modified:
-  /Users/pennyplatt/Documents/9BitStudios/Oksana/apple-intelligence/m4-neural-engine/notion_workspace_bridge.py
+  /Users/pennyplatt/Documents//Oksana/apple-intelligence/m4-neural-engine/notion_workspace_bridge.py
 
   2. Python Shebang Path Error
 
@@ -4580,7 +4580,7 @@ halfway. The notion-workspace-mapper.js doesn't really do anything.
 
 ⏺ Bash(ps aux | grep -E "(notion|python3)" | grep -v grep)
   ⎿ pennyplatt       35095   0.0  0.0 444568976   6288   ??  S     8:12PM   0:00.28 node /Users/pennyplatt/Docu
-    ments/9BitStudios/Oksana/quantum-spatial/creative-intelligence-portal/notion/enhanced-notion-intelligence-m
+    ments//Oksana/quantum-spatial/creative-intelligence-portal/notion/enhanced-notion-intelligence-m
     cp-server.js
     … +10 lines (ctrl+o to expand)
 
@@ -4593,11 +4593,11 @@ halfway. The notion-workspace-mapper.js doesn't really do anything.
 
 ⏺ Now let me check what type of scripts these are:
 
-⏺ Read(~/Documents/9BitStudios/Oksana/quantum-spatial/creative-intelligence-portal/notion/enhanced-notion-intelligen
+⏺ Read(~/Documents//Oksana/quantum-spatial/creative-intelligence-portal/notion/enhanced-notion-intelligen
       ce-mcp-server.js)
   ⎿  Read 50 lines
 
-⏺ Bash(tail -30 /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/creative-intelligence-portal/notion/e
+⏺ Bash(tail -30 /Users/pennyplatt/Documents//Oksana/quantum-spatial/creative-intelligence-portal/notion/e
       nhanced-notion-intelligence-mcp-server.js)
   ⎿      const transport = new StdioServerTransport();                
          await this.mcpServer.connect(transport);
@@ -4617,10 +4617,10 @@ halfway. The notion-workspace-mapper.js doesn't really do anything.
 ⏺ I understand - you need the CLI status output to verify the scripts are working. Let me check the
   quantum-secure wrapper since you mentioned it stalls halfway:
 
-⏺ Read(~/Documents/9BitStudios/Oksana/validation/wrappers/notion-quantum-secure-wrapper.js)
+⏺ Read(~/Documents//Oksana/validation/wrappers/notion-quantum-secure-wrapper.js)
   ⎿  Read 80 lines
 
-⏺ Read(~/Documents/9BitStudios/Oksana/validation/wrappers/notion-quantum-secure-wrapper.js)
+⏺ Read(~/Documents//Oksana/validation/wrappers/notion-quantum-secure-wrapper.js)
   ⎿  Read 91 lines
 
 ⏺ I see the issue now! The notion-quantum-secure-wrapper.js and enhanced-notion-intelligence-mcp-server.js are
@@ -4638,11 +4638,11 @@ halfway. The notion-workspace-mapper.js doesn't really do anything.
 ⏺ I found the issue! The workspace mapper doesn't explicitly exit after completion, and there may be open
   handles (like the Notion client or neural engine subprocess) keeping the process alive. Let me fix this:
 
-⏺ Read(~/Documents/9BitStudios/Oksana/quantum-spatial/creative-intelligence-portal/notion/notion-workspace-mapper.js
+⏺ Read(~/Documents//Oksana/quantum-spatial/creative-intelligence-portal/notion/notion-workspace-mapper.js
       )
   ⎿  Read 20 lines
 
-⏺ Update(~/Documents/9BitStudios/Oksana/quantum-spatial/creative-intelligence-portal/notion/notion-workspace-mapper.
+⏺ Update(~/Documents//Oksana/quantum-spatial/creative-intelligence-portal/notion/notion-workspace-mapper.
         js)
   ⎿  Updated ../../../../../../creative-intelligence-portal/notion/notion-workspace-mapper.js with 4 additions 
      and 1 removal
@@ -4679,14 +4679,14 @@ halfway. The notion-workspace-mapper.js doesn't really do anything.
 ⏺ There's still a chalk import issue! Let me find all the incorrect chalk imports:
 
 ⏺ Search(pattern: "import.*chalk", path:
-        "~/Documents/9BitStudios/Oksana/quantum-spatial/creative-intelligence-portal/notion", glob: "*.js",
+        "~/Documents//Oksana/quantum-spatial/creative-intelligence-portal/notion", glob: "*.js",
         output_mode: "content")
   ⎿  Found 13 lines (ctrl+o to expand)
 
 ⏺ The imports look correct. The issue is that chalk might not be installed in the notion workspace. Let me
   check:
 
-⏺ Bash(cd /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/creative-intelligence-portal && ls -la
+⏺ Bash(cd /Users/pennyplatt/Documents//Oksana/quantum-spatial/creative-intelligence-portal && ls -la
       node_modules/ | head -20)
   ⎿  total 0                                                
      drwx------  107 pennyplatt  staff  3424 Nov 17 21:59 .
@@ -4720,11 +4720,11 @@ halfway. The notion-workspace-mapper.js doesn't really do anything.
 
 ⏺ Let me check the package.json to see what's configured:
 
-⏺ Read(~/Documents/9BitStudios/Oksana/quantum-spatial/creative-intelligence-portal/package.json)
+⏺ Read(~/Documents//Oksana/quantum-spatial/creative-intelligence-portal/package.json)
   ⎿  Read 50 lines
 
 ⏺ Search(pattern: "chalk", path:
-        "~/Documents/9BitStudios/Oksana/quantum-spatial/creative-intelligence-portal/package.json", output_mode:
+        "~/Documents//Oksana/quantum-spatial/creative-intelligence-portal/package.json", output_mode:
         "content")
   ⎿  Found 0 lines 
 
@@ -4733,10 +4733,10 @@ halfway. The notion-workspace-mapper.js doesn't really do anything.
 ⏺ Kill Shell(Kill shell: 4f132e)
   ⎿  Shell 4f132e killed
 
-⏺ Read(~/Documents/9BitStudios/Oksana/quantum-spatial/creative-intelligence-portal/package.json)
+⏺ Read(~/Documents//Oksana/quantum-spatial/creative-intelligence-portal/package.json)
   ⎿  Read 30 lines
 
-⏺ Update(~/Documents/9BitStudios/Oksana/quantum-spatial/creative-intelligence-portal/package.json)
+⏺ Update(~/Documents//Oksana/quantum-spatial/creative-intelligence-portal/package.json)
   ⎿  Updated ../../../../../../creative-intelligence-portal/package.json with 1 addition
        34        "@testing-library/react": "^16.3.0",
        35        "@testing-library/user-event": "^14.6.1",
@@ -4769,19 +4769,19 @@ halfway. The notion-workspace-mapper.js doesn't really do anything.
 ⏺ Kill Shell(Kill shell: 4846a4)
   ⎿  Shell 4846a4 killed
 
-⏺ Bash(cd /Users/pennyplatt/Documents/9BitStudios/Oksana && ls -la node_modules/chalk/ | head -10)
+⏺ Bash(cd /Users/pennyplatt/Documents//Oksana && ls -la node_modules/chalk/ | head -10)
   ⎿  total 40                                                
      drwxr-xr-x    6 pennyplatt  staff    192 Dec 10 18:54 .
      drwxr-xr-x  843 pennyplatt  staff  26976 Dec 10 22:49 ..
      … +4 lines (ctrl+o to expand)
 
-⏺ Bash(cp -R /Users/pennyplatt/Documents/9BitStudios/Oksana/node_modules/chalk
-      /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/creative-intelligence-por…)
+⏺ Bash(cp -R /Users/pennyplatt/Documents//Oksana/node_modules/chalk
+      /Users/pennyplatt/Documents//Oksana/quantum-spatial/creative-intelligence-por…)
   ⎿  Chalk copied successfully
 
 ⏺ Perfect! Now let's test the workspace mapper:
 
-⏺ Bash(cd /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/creative-intelligence-portal/  timeout: 1m 
+⏺ Bash(cd /Users/pennyplatt/Documents//Oksana/quantum-spatial/creative-intelligence-portal/  timeout: 1m 
       notion && node notion-workspace-mapper.js 2>&1 | head -40)                                        0s
   ⎿  ✅ Workspace Mapper: Loaded unified configuration index
      ✅ Workspace Mapper: Loaded project configuration
@@ -4801,7 +4801,7 @@ halfway. The notion-workspace-mapper.js doesn't really do anything.
 ⏺ Perfect! The workspace mapper now works correctly and exits with proper CLI output! Let me create a quick
   reference guide for you:
 
-⏺ Write(~/Documents/9BitStudios/Oksana/quantum-spatial/creative-intelligence-portal/notion/NOTION-SCRIPTS-GUIDE.md)
+⏺ Write(~/Documents//Oksana/quantum-spatial/creative-intelligence-portal/notion/NOTION-SCRIPTS-GUIDE.md)
   ⎿  Wrote 130 lines to ../../../../../../creative-intelligence-portal/notion/NOTION-SCRIPTS-GUIDE.md
      # Notion Scripts Guide
      ## ✅ CLI Scripts (Run Directly)
@@ -4849,17 +4849,17 @@ halfway. The notion-workspace-mapper.js doesn't really do anything.
 > great. Now, I want to deploy the RunSmart html prototype to Cloudflare pages and configure 
 runsmart.9bitstudios.io OR quantum-spatial-design-system.runsmart.io. The files are included in the main 
 oksana-ai git but we may need to create a submodule. My guide says to copy the files but maybe we should deploy 
-directly from the project. Here is the status. /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/de
+directly from the project. Here is the status. /Users/pennyplatt/Documents//Oksana/quantum-spatial/de
 sign-system/brand-theme/professional/portfolio/runsmart/runsmart-interfaces-purple/README.md I will still be 
 making changes and developing so will need an easy deployment script. I also need to confirm that non-Apple 
 systems will load attractive system fonts, or add @import for a web font for windows systems. 
-/Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/brand-theme/professional/portfolio/
+/Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/brand-theme/professional/portfolio/
 runsmart/runsmart-interfaces-purple/documentation/runsmart-quick-deploy.md 
-/Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/brand-theme/professional/portfolio/
+/Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/brand-theme/professional/portfolio/
 runsmart/runsmart-interfaces-purple/documentation/runsmart-deployment-prompt.md 
-/Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/brand-theme/professional/portfolio/
+/Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/brand-theme/professional/portfolio/
 runsmart/runsmart-interfaces-purple/scripts/deploy-runsmart.sh I am logged in to CLoudflare and Github, we 
-probably need a quick package config and install wrangler at /Users/pennyplatt/Documents/9BitStudios/Oksana/quan
+probably need a quick package config and install wrangler at /Users/pennyplatt/Documents//Oksana/quan
 tum-spatial/design-system/brand-theme/professional/portfolio/runsmart/runsmart-interfaces-purple 
 
 ⏺ I'll help you deploy RunSmart to Cloudflare Pages with a streamlined workflow. Let me first review the
@@ -4880,7 +4880,7 @@ tum-spatial/design-system/brand-theme/professional/portfolio/runsmart/runsmart-i
 ⏺ Perfect! I can see the deployment plan is already outlined. Let me check the current directory and font
   configuration, then set up the deployment workflow:
 
-⏺ Bash(cd /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/brand-theme/professional/port
+⏺ Bash(cd /Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/brand-theme/professional/port
       folio/runsmart/runsmart-interfaces-purple && ls -la)
   ⎿  total 104                                              
      drwxr-xr-x  12 pennyplatt  staff    384 Dec 11 06:32 .
@@ -4995,7 +4995,7 @@ tum-spatial/design-system/brand-theme/professional/portfolio/runsmart/runsmart-i
         6    
         7 -  echo "🚀 RunSmart Prototype → Cloudflare Pages"
         8 -  echo "========================================="
-        7 +  PROJECT_DIR="/Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/brand-
+        7 +  PROJECT_DIR="/Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/brand-
           + theme/professional/portfolio/runsmart/runsmart-interfaces-purple"
         8 +  
         9 +  echo "🚀 RunSmart → Cloudflare Pages Deployment"
@@ -5162,7 +5162,7 @@ tum-spatial/design-system/brand-theme/professional/portfolio/runsmart/runsmart-i
   ⎿  Error: Exit code 1
      ▲ [WARNING] Pages now has wrangler.toml support.
 
-       We detected a configuration file at /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-syst
+       We detected a configuration file at /Users/pennyplatt/Documents//Oksana/quantum-spatial/design-syst
      em/brand-theme/professional/portfolio/runsmart/runsmart-interfaces-purple/wrangler.toml but it is missing the 
      "pages_build_output_dir" field, required by Pages.
        If you would like to use this configuration file to deploy your project, please use "pages_build_output_dir" 
@@ -5293,7 +5293,7 @@ tum-spatial/design-system/brand-theme/professional/portfolio/runsmart/runsmart-i
 
   After making changes to HTML/CSS:
 
-  cd /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/brand-theme/professional/portf
+  cd /Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/brand-theme/professional/portf
   olio/runsmart/runsmart-interfaces-purple
 
   # Quick deploy
@@ -5375,7 +5375,7 @@ tum-spatial/design-system/brand-theme/professional/portfolio/runsmart/runsmart-i
 
   Live at: https://23fe460c.runsmart-prototype.pages.dev
 
-  All files at: /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/brand-theme/profess
+  All files at: /Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/brand-theme/profess
   ional/portfolio/runsmart/runsmart-interfaces-purple/
 
 > Great. There is just a little design dilemma on the mobile app. On the mobile/coach/mobile-coach-settings.html
@@ -5717,19 +5717,19 @@ the footer nav for coach app and move it to the top right of the 'dashboard' scr
  I would like you to consider the full app feature package as well as best prqactices, and HIG standards to 
 determine what should go here. I think that a creative center where Steve can create video and training content 
 on the fly and even share to social media would be a super great enhancement. Please review this along with the 
-full system: /Users/pennyplatt/Documents/9BitStudios/Oksana/apple-intelligence/foundation/validated-foundation/b
+full system: /Users/pennyplatt/Documents//Oksana/apple-intelligence/foundation/validated-foundation/b
 rand-alignment/brand-content/content-strategy/runsmart-analytics-case-study-article.md 
-/Users/pennyplatt/Documents/9BitStudios/Oksana/apple-intelligence/foundation/validated-foundation/brand-alignmen
+/Users/pennyplatt/Documents//Oksana/apple-intelligence/foundation/validated-foundation/brand-alignmen
 t/brand-content/blogs/runsmart-analytics-blog.md 
-/Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/brand-theme/professional/portfolio/
+/Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/brand-theme/professional/portfolio/
 runsmart/runsmart-interfaces-purple/documentation/dashboard-complete.md I think the Oksana Creative Intelligence
- Accelerator should be integrated -- /Users/pennyplatt/Documents/9BitStudios/Oksana/apple-intelligence/foundatio
+ Accelerator should be integrated -- /Users/pennyplatt/Documents//Oksana/apple-intelligence/foundatio
 n/validated-foundation/brand-alignment/brand-content/content-strategy/content-acceleration-pipeline-article.md 
-/Users/pennyplatt/Documents/9BitStudios/Oksana/apple-intelligence/foundation/validated-foundation/brand-alignmen
+/Users/pennyplatt/Documents//Oksana/apple-intelligence/foundation/validated-foundation/brand-alignmen
 t/brand-content/website-content/oksana-homepage-9BitStudios.md 
-/Users/pennyplatt/Documents/9BitStudios/Oksana/apple-intelligence/foundation/validated-foundation/brand-alignmen
+/Users/pennyplatt/Documents//Oksana/apple-intelligence/foundation/validated-foundation/brand-alignmen
 t/brand-content/content-strategy/complete-content-strategy.md 
-/Users/pennyplatt/Documents/9BitStudios/Oksana/apple-intelligence/foundation/validated-foundation/brand-alignmen
+/Users/pennyplatt/Documents//Oksana/apple-intelligence/foundation/validated-foundation/brand-alignmen
 t/brand-content/content-strategy/who-is-oksana-actual-intelligence-article.md Please create an enhancement plan 
 but do not yet implement or deploy. I want to see the plan and share a couple of more articles, and then add the
  new features. 
@@ -5737,30 +5737,30 @@ but do not yet implement or deploy. I want to see the plan and share a couple of
 ⏺ I'll create a comprehensive Apple Intelligence Strategic Director enhancement plan for you. Let me first read
   all the referenced documents to understand the full context:
 
-⏺ Read(~/Documents/9BitStudios/Oksana/apple-intelligence/foundation/validated-foundation/brand-alignment/brand-conte
+⏺ Read(~/Documents//Oksana/apple-intelligence/foundation/validated-foundation/brand-alignment/brand-conte
       nt/content-strategy/runsmart-analytics-case-study-article.md)
   ⎿  Read 291 lines
 
-⏺ Read(~/Documents/9BitStudios/Oksana/apple-intelligence/foundation/validated-foundation/brand-alignment/brand-conte
+⏺ Read(~/Documents//Oksana/apple-intelligence/foundation/validated-foundation/brand-alignment/brand-conte
       nt/blogs/runsmart-analytics-blog.md)
   ⎿  Read 144 lines
 
 ⏺ Read(documentation/dashboard-complete.md)
   ⎿  Read 397 lines
 
-⏺ Read(~/Documents/9BitStudios/Oksana/apple-intelligence/foundation/validated-foundation/brand-alignment/brand-conte
+⏺ Read(~/Documents//Oksana/apple-intelligence/foundation/validated-foundation/brand-alignment/brand-conte
       nt/content-strategy/content-acceleration-pipeline-article.md)
   ⎿  Read 430 lines
 
-⏺ Read(~/Documents/9BitStudios/Oksana/apple-intelligence/foundation/validated-foundation/brand-alignment/brand-conte
+⏺ Read(~/Documents//Oksana/apple-intelligence/foundation/validated-foundation/brand-alignment/brand-conte
       nt/website-content/oksana-homepage-9BitStudios.md)
   ⎿  Read 528 lines
 
-⏺ Read(~/Documents/9BitStudios/Oksana/apple-intelligence/foundation/validated-foundation/brand-alignment/brand-conte
+⏺ Read(~/Documents//Oksana/apple-intelligence/foundation/validated-foundation/brand-alignment/brand-conte
       nt/content-strategy/complete-content-strategy.md)
   ⎿  Read 408 lines
 
-⏺ Read(~/Documents/9BitStudios/Oksana/apple-intelligence/foundation/validated-foundation/brand-alignment/brand-conte
+⏺ Read(~/Documents//Oksana/apple-intelligence/foundation/validated-foundation/brand-alignment/brand-conte
       nt/content-strategy/who-is-oksana-actual-intelligence-article.md)
   ⎿  Read 505 lines
 
@@ -5973,13 +5973,13 @@ but do not yet implement or deploy. I want to see the plan and share a couple of
   Ready to review the plan and share those additional articles! 🚀
 
 > I just thought it might be a good idea to review the enhanced creative accelerator guides -- 
-/Users/pennyplatt/Documents/9BitStudios/Oksana/apple-intelligence/foundation/creative-queue/development/oksana-c
+/Users/pennyplatt/Documents//Oksana/apple-intelligence/foundation/creative-queue/development/oksana-c
 reative-intelligence-accelerator/content-intelligence-system-apple-intelligence-enhanced.md /Users/pennyplatt/Do
-cuments/9BitStudios/Oksana/apple-intelligence/foundation/creative-queue/development/oksana-creative-intelligence
+cuments//Oksana/apple-intelligence/foundation/creative-queue/development/oksana-creative-intelligence
 -accelerator/quantum-spatial-creative-intelligence-accelerator-apple-intelligence-integration.md 
-/Users/pennyplatt/Documents/9BitStudios/Oksana/apple-intelligence/foundation/creative-queue/development/oksana-c
+/Users/pennyplatt/Documents//Oksana/apple-intelligence/foundation/creative-queue/development/oksana-c
 reative-intelligence-accelerator/m4-neural-engine-apple-vision-pro-optimization-guide.md 
-/Users/pennyplatt/Documents/9BitStudios/Oksana/apple-intelligence/foundation/creative-queue/development/oksana-c
+/Users/pennyplatt/Documents//Oksana/apple-intelligence/foundation/creative-queue/development/oksana-c
 reative-intelligence-accelerator/creative-intelligence-models-foundation-guide-grid.md We could also integrate 
 Notion as backend CMS and automation station, and / or Apple Watch biometrics with Grid analytics intelligence. 
 Can you create a comprehenaive next level roadmap exploring these features, and a plan for phase 1 - creator 
@@ -5990,19 +5990,19 @@ development and neural engine acceleration to get a lot more done faster.
 ⏺ Perfect! Let me read the enhanced creative accelerator guides to understand the full system capabilities, then
    create a comprehensive next-level roadmap with phased implementation.
 
-⏺ Read(~/Documents/9BitStudios/Oksana/apple-intelligence/foundation/creative-queue/development/oksana-creative-intel
+⏺ Read(~/Documents//Oksana/apple-intelligence/foundation/creative-queue/development/oksana-creative-intel
       ligence-accelerator/content-intelligence-system-apple-intelligence-enhanced.md)
   ⎿  Read 378 lines
 
-⏺ Read(~/Documents/9BitStudios/Oksana/apple-intelligence/foundation/creative-queue/development/oksana-creative-intel
+⏺ Read(~/Documents//Oksana/apple-intelligence/foundation/creative-queue/development/oksana-creative-intel
       ligence-accelerator/quantum-spatial-creative-intelligence-accelerator-apple-intelligence-integration.md)
   ⎿  Read 526 lines
 
-⏺ Read(~/Documents/9BitStudios/Oksana/apple-intelligence/foundation/creative-queue/development/oksana-creative-intel
+⏺ Read(~/Documents//Oksana/apple-intelligence/foundation/creative-queue/development/oksana-creative-intel
       ligence-accelerator/m4-neural-engine-apple-vision-pro-optimization-guide.md)
   ⎿  Read 583 lines
 
-⏺ Read(~/Documents/9BitStudios/Oksana/apple-intelligence/foundation/creative-queue/development/oksana-creative-intel
+⏺ Read(~/Documents//Oksana/apple-intelligence/foundation/creative-queue/development/oksana-creative-intel
       ligence-accelerator/creative-intelligence-models-foundation-guide-grid.md)
   ⎿  Read 210 lines
 
@@ -6068,7 +6068,7 @@ development and neural engine acceleration to get a lot more done faster.
   📂 Files Location
 
   All strategic planning documents are in:
-  /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/brand-theme/professional/portfoli
+  /Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/brand-theme/professional/portfoli
   o/runsmart/runsmart-interfaces-purple/
 
   - RUNSMART-NEXT-LEVEL-ROADMAP.md
@@ -6211,11 +6211,11 @@ features and optimized settings placement and flow please.
        689                </div>
        690            </div>
 
-⏺ Search(pattern: "mobile/coach/mobile-coach-*.html", path: "~/Documents/9BitStudios/Oksana/quantum-spatial/design-s
+⏺ Search(pattern: "mobile/coach/mobile-coach-*.html", path: "~/Documents//Oksana/quantum-spatial/design-s
         ystem/brand-theme/professional/portfolio/runsmart/runsmart-interfaces-purple")
   ⎿  Found 0 files 
 
-⏺ Search(pattern: "**/mobile-coach-*.html", path: "~/Documents/9BitStudios/Oksana/quantum-spatial/design-system/bran
+⏺ Search(pattern: "**/mobile-coach-*.html", path: "~/Documents//Oksana/quantum-spatial/design-system/bran
         d-theme/professional/portfolio/runsmart/runsmart-interfaces-purple")
   ⎿  Found 6 files (ctrl+o to expand)
 
@@ -6501,7 +6501,7 @@ could get tricky if we don't get the Dom loading established now and correctly s
 
 ⏺ Perfect! Now let me implement the script architecture. Starting with the core scripts:
 
-⏺ Bash(mkdir -p /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/brand-theme/professiona
+⏺ Bash(mkdir -p /Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/brand-theme/professiona
       l/portfolio/runsmart/runsmart-interfaces-purple/scr…)
   ⎿  (No content)
 
@@ -6667,7 +6667,7 @@ could get tricky if we don't get the Dom loading established now and correctly s
 ⏺ Now let me update mobile-app-settings.html with the context-aware back button:
 
 ⏺ Search(pattern: "page-header|header-title|<head>|</body>|</html>"
-        <parameter name="path">/Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/brand-th
+        <parameter name="path">/Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/brand-th
         eme/professional/portfolio/runsmart/runsmart-interfaces-purple/mobile/members/mobile-app-settings.html",
         output_mode: "content")
   ⎿  Found 0 lines 

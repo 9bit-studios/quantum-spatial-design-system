@@ -1,6 +1,6 @@
 
 import figma from '@figma/code-connect';
-import { ModularUIComponents } from '/Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/components/molecules/ModularUIComponents.tsx';
+import { ModularUIComponents } from '/Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/components/molecules/ModularUIComponents.tsx';
 
 // TODO: Map to Figma component
 figma.connect(

@@ -8,8 +8,8 @@
  * @purpose Accelerate design system development with AI-powered services
  */
 
-const FrontendDesignService = require('/Users/pennyplatt/9BitStudios/AppleIntelligenceStrategicDirector/services/frontend-design-service');
-const ContentAccelerationService = require('/Users/pennyplatt/9BitStudios/AppleIntelligenceStrategicDirector/services/content-acceleration-service');
+const FrontendDesignService = require('/Users/pennyplatt//AppleIntelligenceStrategicDirector/services/frontend-design-service');
+const ContentAccelerationService = require('/Users/pennyplatt//AppleIntelligenceStrategicDirector/services/content-acceleration-service');
 
 class QuantumSpatialAccelerator {
   constructor() {

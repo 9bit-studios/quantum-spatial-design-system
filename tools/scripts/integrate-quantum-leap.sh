@@ -26,7 +26,7 @@ echo ""
 # Get directories
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 DESIGN_SYSTEM_DIR="$(dirname "$(dirname "$SCRIPT_DIR")")"
-QUANTUM_LEAP_SOURCE="/Users/pennyplatt/Documents/9BitStudios/Oksana/apple-intelligence-agency/quantum-leap-suite"
+QUANTUM_LEAP_SOURCE="/Users/pennyplatt/Documents//Oksana/apple-intelligence-agency/quantum-leap-suite"
 
 echo -e "${YELLOW}📍 Design System: $DESIGN_SYSTEM_DIR${NC}"
 echo -e "${YELLOW}📍 Source: $QUANTUM_LEAP_SOURCE${NC}"

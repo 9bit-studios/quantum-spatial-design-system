@@ -22,13 +22,13 @@ Transform Notion Fantasy Worldbuilding Suite into interactive Framer game experi
 
 **Core Documents (MUST READ FIRST):**
 ```
-/Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/m4-acceleration/m4-framer-game-ecosystem/integration-workflow-fantasy-worldbuilding-to-game.md
+/Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/m4-acceleration/m4-framer-game-ecosystem/integration-workflow-fantasy-worldbuilding-to-game.md
 
-/Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/m4-acceleration/m4-framer-game-ecosystem/enhanced-quantum-spatial-game-design-templates.md
+/Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/m4-acceleration/m4-framer-game-ecosystem/enhanced-quantum-spatial-game-design-templates.md
 
-/Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/m4-acceleration/m4-framer-game-ecosystem/ui-narrative-flow-design-document.md
+/Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/m4-acceleration/m4-framer-game-ecosystem/ui-narrative-flow-design-document.md
 
-/Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/m4-acceleration/m4-framer-game-ecosystem/narrative-logic-testing-framework.md
+/Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/m4-acceleration/m4-framer-game-ecosystem/narrative-logic-testing-framework.md
 ```
 
 ## Worldbuilding to Game Pipeline

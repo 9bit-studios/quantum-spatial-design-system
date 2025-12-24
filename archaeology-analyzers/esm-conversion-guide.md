@@ -10,7 +10,7 @@
 
 ### Preview Changes First (Recommended)
 ```bash
-cd /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system
+cd /Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system
 
 # Dry run - see what will be converted
 ./scripts/convert-to-esm.sh --dry-run
@@ -489,7 +489,7 @@ After ES Module conversion:
 **Ready to convert?** 🔄
 
 ```bash
-cd /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system
+cd /Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system
 ./scripts/convert-to-esm.sh --dry-run  # Preview first!
 ```
 

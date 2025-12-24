@@ -2,7 +2,7 @@
 
 ## ✅ What's Installed
 
-All dependencies are ready in `/Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/validation`:
+All dependencies are ready in `/Users/pennyplatt/Documents//Oksana/quantum-spatial/validation`:
 
 - framer@2.4.1
 - framer-motion@12.23.24
@@ -14,7 +14,7 @@ All dependencies are ready in `/Users/pennyplatt/Documents/9BitStudios/Oksana/qu
 ## 🚀 Quick Commands
 
 ```bash
-cd /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/validation
+cd /Users/pennyplatt/Documents//Oksana/quantum-spatial/validation
 
 # Build everything
 npm run build

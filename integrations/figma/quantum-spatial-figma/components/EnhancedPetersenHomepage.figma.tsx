@@ -1,6 +1,6 @@
 
 import figma from '@figma/code-connect';
-import { EnhancedPetersenHomepage } from '/Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/components/templates/layouts/EnhancedPetersenHomepage.tsx';
+import { EnhancedPetersenHomepage } from '/Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/components/templates/layouts/EnhancedPetersenHomepage.tsx';
 
 // TODO: Map to Figma component
 figma.connect(

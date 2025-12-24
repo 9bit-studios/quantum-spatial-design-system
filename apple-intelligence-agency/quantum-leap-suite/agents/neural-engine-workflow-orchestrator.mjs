@@ -232,8 +232,8 @@ class NeuralEngineWorkflowOrchestrator {
     this.contentLearned.mcpConfigurations.push(notionMCPConfig);
     console.log(chalk.green('    ✅ Notion MCP configured with 3 brand intelligence tools'));
 
-    // Save configuration
-    const configPath = path.join(__dirname, '../strategic-director/config/notion-brand-intelligence-mcp-config.json');
+    // Save configuration to /config directory (strategic-director path has been flattened)
+    const configPath = path.join(__dirname, '../../../../../config/notion-brand-intelligence-mcp-config.json');
     await fs.writeFile(configPath, JSON.stringify(notionMCPConfig, null, 2));
     console.log(chalk.green(`    💾 Configuration saved: ${path.basename(configPath)}`));
   }

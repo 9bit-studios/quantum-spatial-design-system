@@ -217,7 +217,7 @@
     },
 
     "foundationModels": {
-      "scriptDirectory": "/foundation-models/",
+      "scriptDirectory": "/OksanaFoundationModel/",
       "orchestrationEnabled": true
     }
   }

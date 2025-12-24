@@ -297,7 +297,7 @@ route = { pattern = "design-system.9bitstudios.io/*", zone_name = "9bitstudios.i
 
 3. **Generate Framer Package**
    ```javascript
-   import { FramerDeploymentIntegration } from './foundation-models/framer-deployment-integration.js';
+   import { FramerDeploymentIntegration } from './OksanaFoundationModel/framer-deployment-integration.js';
    const framer = new FramerDeploymentIntegration();
    await framer.initialize();
    await framer.createFramerPackage('quantum');

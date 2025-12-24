@@ -20,7 +20,7 @@ Based on comprehensive analysis of the quantum-spatial ecosystem, **YES - you sh
 
 ### Existing Workspace Configuration
 
-**Location:** `/Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/package.json`
+**Location:** `/Users/pennyplatt/Documents//Oksana/quantum-spatial/package.json`
 
 **Current Workspaces:**
 ```json
@@ -309,7 +309,7 @@ You've identified key similarities between:
 **Next Steps:**
 ```bash
 # 1. Add M4 exports to design-system package.json
-cd /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system
+cd /Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system
 
 # Add to package.json exports:
 {
@@ -340,7 +340,7 @@ cd /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system
 
 **Actions:**
 ```bash
-cd /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system
+cd /Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system
 
 # 1. Create integrations/framer structure
 mkdir -p integrations/framer/{components,code-overrides,packages,sync}

@@ -3,7 +3,7 @@
 # This script automates the deployment of your Oksana Creator Portal Accelerator to Vercel
 
 # Configuration
-PROJECT_DIR="/Users/pennyplatt/Documents/9BitStudios/Oksana-creator-portal"
+PROJECT_DIR="/Users/pennyplatt/Documents//Oksana-creator-portal"
 GITHUB_REPO="9-bit-studios/oksana-creator-portal"
 
 # Colors for output

@@ -21,7 +21,7 @@ TEMP_DIR=$(mktemp -d)
 echo -e "Using temporary directory: $TEMP_DIR"
 
 # Copy HTML demo file to the temp directory
-cp "/Users/pennyplatt/9BitStudios/quantum-spatial-design-demo.html" "$TEMP_DIR/index.html"
+cp "/Users/pennyplatt//quantum-spatial-design-demo.html" "$TEMP_DIR/index.html"
 
 # Create a basic package.json for the demo
 cat > "$TEMP_DIR/package.json" << EOF

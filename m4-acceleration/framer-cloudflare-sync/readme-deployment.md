@@ -29,7 +29,7 @@ Since the Cloudflare API token format needs updating, you have several options:
 
 ### Option 1: Update API Token
 1. Get a new Cloudflare API token from: https://dash.cloudflare.com/profile/api-tokens
-2. Update `/Users/pennyplatt/Documents/9BitStudios/Oksana/.env.master`
+2. Update `/Users/pennyplatt/Documents//Oksana/.env.master`
 3. Run deployment: `CLOUDFLARE_API_TOKEN=new_token npx wrangler deploy --env staging`
 
 ### Option 2: Use Existing Infrastructure

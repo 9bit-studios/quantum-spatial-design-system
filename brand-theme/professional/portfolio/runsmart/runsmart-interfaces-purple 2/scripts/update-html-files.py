@@ -95,7 +95,7 @@ def process_html_file(filepath, css_link):
     print(f"✓ Completed: {filepath}")
 
 def main():
-    base_dir = Path('/Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/brand-theme/professional/portfolio/runsmart/runsmart-interfaces-purple')
+    base_dir = Path('/Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/brand-theme/professional/portfolio/runsmart/runsmart-interfaces-purple')
 
     # Process dashboard files
     dashboard_dir = base_dir / 'dashboard'

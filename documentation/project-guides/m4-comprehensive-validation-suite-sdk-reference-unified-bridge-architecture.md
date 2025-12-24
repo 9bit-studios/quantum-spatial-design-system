@@ -588,17 +588,17 @@ Context-Aware Code Completions
 ## 🛠️ Resources & References
 
 **Documentation**:
-- `/Users/pennyplatt/Documents/9BitStudios/Oksana/apple-intelligence/foundation/sources-of-truth/sdk-reference.md`
-- `/Users/pennyplatt/Documents/9BitStudios/Oksana/apple-intelligence/foundation/creative-queue/development/integration-architecture/unified-bridge-architecture.md`
-- `/Users/pennyplatt/Documents/9BitStudios/Oksana/apple-intelligence/foundation/creative-queue/development/xcode-model-bridge-enhanced-learning-pipeline-integration-guide.md`
-- `/Users/pennyplatt/Documents/9BitStudios/Oksana/OksanaPlatform/OksanaPlatform/APPLE_INTELLIGENCE_M4_SETUP_VALIDATION.md`
+- `/Users/pennyplatt/Documents//Oksana/apple-intelligence/foundation/sources-of-truth/sdk-reference.md`
+- `/Users/pennyplatt/Documents//Oksana/apple-intelligence/foundation/creative-queue/development/integration-architecture/unified-bridge-architecture.md`
+- `/Users/pennyplatt/Documents//Oksana/apple-intelligence/foundation/creative-queue/development/xcode-model-bridge-enhanced-learning-pipeline-integration-guide.md`
+- `/Users/pennyplatt/Documents//Oksana/OksanaPlatform/OksanaPlatform/APPLE_INTELLIGENCE_M4_SETUP_VALIDATION.md`
 
 **Current Implementation**:
-- `/Users/pennyplatt/Documents/9BitStudios/Oksana/run-strategic-intelligence-mcp.js`
-- `/Users/pennyplatt/Documents/9BitStudios/Oksana/run-creative-intelligence-mcp.js`
-- `/Users/pennyplatt/Documents/9BitStudios/Oksana/CreativeIntelligenceBridge.js`
-- `/Users/pennyplatt/Documents/9BitStudios/Oksana/OksanaPlatform/OksanaPlatform/Sources/UnifiedBridgeProtocol.swift`
-- `/Users/pennyplatt/Documents/9BitStudios/Oksana/OksanaPlatform/OksanaPlatform/Sources/AppleIntelligenceIntegration.swift`
+- `/Users/pennyplatt/Documents//Oksana/run-strategic-intelligence-mcp.js`
+- `/Users/pennyplatt/Documents//Oksana/run-creative-intelligence-mcp.js`
+- `/Users/pennyplatt/Documents//Oksana/CreativeIntelligenceBridge.js`
+- `/Users/pennyplatt/Documents//Oksana/OksanaPlatform/OksanaPlatform/Sources/UnifiedBridgeProtocol.swift`
+- `/Users/pennyplatt/Documents//Oksana/OksanaPlatform/OksanaPlatform/Sources/AppleIntelligenceIntegration.swift`
 
 **Apple Developer Resources** (User to provide in Creative Queue):
 - Foundation Models API reference

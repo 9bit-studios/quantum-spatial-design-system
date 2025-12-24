@@ -1,4 +1,4 @@
-#!/opt/homebrew/bin/python3.11"""
+#!/usr/bin/env python3"""
 Enhanced Oksana Platform Project Analyzer - Apple Accelerate Priority
 M4 Neural Engine acceleration with Apple Accelerate framework priority
 Version: 4.0.0 - M4 Neural Engine Enhanced with Accelerate Priority

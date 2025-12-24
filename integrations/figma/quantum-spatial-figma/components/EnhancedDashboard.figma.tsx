@@ -1,6 +1,6 @@
 
 import figma from '@figma/code-connect';
-import { EnhancedDashboard } from '/Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/components/templates/layouts/EnhancedDashboard.tsx';
+import { EnhancedDashboard } from '/Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/components/templates/layouts/EnhancedDashboard.tsx';
 
 // TODO: Map to Figma component
 figma.connect(

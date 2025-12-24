@@ -2,7 +2,7 @@
 // Using M4-Optimized design tokens
 
 // Import design tokens
-const designTokens = require('../Documents/9BitStudios/foundation/design-tokens.js');
+const designTokens = require('../Documents//foundation/design-tokens.js');
 
 addEventListener('fetch', event => {
   event.respondWith(handleRequest(event.request))

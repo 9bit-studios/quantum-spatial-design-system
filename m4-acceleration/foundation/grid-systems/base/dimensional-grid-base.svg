@@ -16,9 +16,9 @@
   <!-- Import styles from pixel system -->
   <defs>
     <style>
-      @import url('/Users/pennyplatt/Documents/9BitStudios//Oksana/quantum-spatial/design-system/m4-acceleration/foundation/quantum-pixels/quantum-spatial-colors.svg');
-      @import url('/Users/pennyplatt/Documents/9BitStudios//Oksana/quantum-spatial/design-system/m4-acceleration/foundation/quantum-pixels/quantum-spatial-filters.svg');
-      @import url('/Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/m4-acceleration/foundation/quantum-pixels/quantum-spatial-animations.svg');
+      @import url('/Users/pennyplatt/Documents///Oksana/quantum-spatial/design-system/m4-acceleration/foundation/quantum-pixels/quantum-spatial-colors.svg');
+      @import url('/Users/pennyplatt/Documents///Oksana/quantum-spatial/design-system/m4-acceleration/foundation/quantum-pixels/quantum-spatial-filters.svg');
+      @import url('/Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/m4-acceleration/foundation/quantum-pixels/quantum-spatial-animations.svg');
     </style>
     
     <!-- ==================== GRID LINE DEFINITIONS ==================== -->

@@ -5,7 +5,7 @@ const fs = require('fs');
 const path = require('path');
 class SearchJSONStyleMapper {
     constructor() {
-        this.themePath = '/Users/pennyplatt/9BitStudios/petersen-portal/petersen-glass-theme/';
+        this.themePath = '/Users/pennyplatt//petersen-portal/petersen-glass-theme/';
         this.searchJsonPath = path.join(this.themePath, 'templates/search.json');
         this.cssFiles = [];
         this.inlineStyles = [];

@@ -12,8 +12,8 @@ Execute M4-optimized game development workflows using pre-built architecture, te
 ## System Context (Auto-Load)
 
 **What Exists:**
-- Complete Hexecute Swift game code at `/Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/apple-intelligence-agency/quantum-leap-suite/hexecute-game/`
-- Framer Cloudflare sync templates at `/Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/m4-acceleration/quantum-spatial-framer/`
+- Complete Hexecute Swift game code at `/Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/apple-intelligence-agency/quantum-leap-suite/hexecute-game/`
+- Framer Cloudflare sync templates at `/Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/m4-acceleration/quantum-spatial-framer/`
 - Quantum pixel generation system + M4 viewers
 - Complete Notion worldbuilding database (Fantasy Worldbuilding Suite)
 - Grid API integration (needs connection)
@@ -22,15 +22,15 @@ Execute M4-optimized game development workflows using pre-built architecture, te
 
 **Strategic Roadmaps (MUST READ FIRST):**
 ```
-/Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/m4-acceleration/m4-framer-game-ecosystem/strategic-product-roadmap-apple-intelligence-enhanced-creative-intelligence-portal-and-game-ecosystem.md
+/Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/m4-acceleration/m4-framer-game-ecosystem/strategic-product-roadmap-apple-intelligence-enhanced-creative-intelligence-portal-and-game-ecosystem.md
 
-/Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/m4-acceleration/m4-framer-game-ecosystem/M4-optimized-game-developmentt-toolkit-apple-Intelligence-enhanced.md
+/Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/m4-acceleration/m4-framer-game-ecosystem/M4-optimized-game-developmentt-toolkit-apple-Intelligence-enhanced.md
 
-/Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/m4-acceleration/m4-framer-game-ecosystem/strategic-product-roadmap-framer-creative-saas-&-game-ecosystem.md
+/Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/m4-acceleration/m4-framer-game-ecosystem/strategic-product-roadmap-framer-creative-saas-&-game-ecosystem.md
 
-/Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/m4-acceleration/m4-framer-game-ecosystem/strategic-integration-of-three-js-for-framer-to-io.md
+/Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/m4-acceleration/m4-framer-game-ecosystem/strategic-integration-of-three-js-for-framer-to-io.md
 
-/Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/m4-acceleration/m4-framer-game-ecosystem/optimized-workspace-architecture-for-ai-assisted-game-development.md
+/Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/m4-acceleration/m4-framer-game-ecosystem/optimized-workspace-architecture-for-ai-assisted-game-development.md
 ```
 
 **Core Constraint:** NO Vercel. Framer web apps ONLY.
@@ -48,43 +48,43 @@ Execute M4-optimized game development workflows using pre-built architecture, te
 
 2. **Framer Game Ecosystem** (45 min):
 ```
-   /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/m4-acceleration/m4-framer-game-ecosystem/
+   /Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/m4-acceleration/m4-framer-game-ecosystem/
 ```
    - Extract: Intended features, enhancement patterns, API integration plans
    - Output: `phase2-framer-ecosystem.json`
 
 3. **Quantum Spatial Framer Templates** (30 min):
 ```
-   /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/m4-acceleration/quantum-spatial-framer/
+   /Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/m4-acceleration/quantum-spatial-framer/
 ```
    - Extract: Cloudflare worker patterns, M4 optimization techniques, pixel generation logic
    - Output: `phase3-framer-templates.json`
 
 4. **Pixel Generation System** (45 min):
 ```
-   /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/m4-acceleration/quantum-pixel-games/
+   /Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/m4-acceleration/quantum-pixel-games/
 ```
    - Extract: Pixel states (Heritage, Transitional, Quantum, Superposition), generation algorithms, viewer implementations
    - Output: `phase4-pixel-system.json`
 
 5. **Hexecute Game Code** (1 hour):
 ```
-   /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/apple-intelligence-agency/quantum-leap-suite/hexecute-game/
+   /Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/apple-intelligence-agency/quantum-leap-suite/hexecute-game/
 ```
    - Extract: Swift game mechanics, hexagonal grid logic, particle systems, interaction patterns
    - Output: `phase5-hexecute-mechanics.json`
 
 6. **Workspace Intelligence Interfaces** (30 min):
 ```
-   /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/asset-pipeline/batch-processing/svg-queue/intelligence-portal-interface/
-   /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/asset-pipeline/batch-processing/svg-queue/m4-optimized-game-design-suite/
+   /Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/asset-pipeline/batch-processing/svg-queue/intelligence-portal-interface/
+   /Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/asset-pipeline/batch-processing/svg-queue/m4-optimized-game-design-suite/
 ```
    - Extract: Dashboard features, navigation patterns, analytics displays, game design tools
    - Output: `phase6-workspace-interfaces.json`
 
 7. **Foundation Tokens** (15 min):
 ```
-   /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/m4-acceleration/tokens/QuantumSpatialFoundationSystem.tsx
+   /Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/m4-acceleration/tokens/QuantumSpatialFoundationSystem.tsx
 ```
    - Extract: Color system, typography, spacing, animation tokens
    - Output: `phase7-design-tokens.json`
@@ -92,7 +92,7 @@ Execute M4-optimized game development workflows using pre-built architecture, te
 ### Learning Protocol:
 ```python
 # Use this analyzer for each directory
-/Users/pennyplatt/Documents/9BitStudios/Oksana/apple-intelligence/learning-pipeline/apple_foundation_models_deep_analyzer.py
+/Users/pennyplatt/Documents//Oksana/apple-intelligence/learning-pipeline/apple_foundation_models_deep_analyzer.py
 
 # Parameters for each scan:
 {
@@ -122,7 +122,7 @@ Execute M4-optimized game development workflows using pre-built architecture, te
 
 **Source:**
 ```
-/Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/m4-acceleration/Design System Implementation Automation Toolkit
+/Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/m4-acceleration/Design System Implementation Automation Toolkit
 ```
 
 **Tasks:**
@@ -145,7 +145,7 @@ Execute M4-optimized game development workflows using pre-built architecture, te
 
 **Source:**
 ```
-/Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/m4-acceleration/quantum-pixel-games/
+/Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/m4-acceleration/quantum-pixel-games/
 ```
 
 **Tasks:**
@@ -181,7 +181,7 @@ Execute M4-optimized game development workflows using pre-built architecture, te
 
 **Source Templates:**
 ```
-/Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/m4-acceleration/quantum-spatial-framer/
+/Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/m4-acceleration/quantum-spatial-framer/
 ```
 
 **Tasks:**
@@ -191,7 +191,7 @@ Execute M4-optimized game development workflows using pre-built architecture, te
 
 2. **Implement Hexecute Mechanics** (adapt from Swift):
 ```
-   /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/apple-intelligence-agency/quantum-leap-suite/hexecute-game/
+   /Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/apple-intelligence-agency/quantum-leap-suite/hexecute-game/
 ```
    - Hexagonal grid system
    - Quantum particle navigation
@@ -236,7 +236,7 @@ Execute M4-optimized game development workflows using pre-built architecture, te
 
 **Source:**
 ```
-/Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/asset-pipeline/batch-processing/svg-queue/intelligence-portal-interface/
+/Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/asset-pipeline/batch-processing/svg-queue/intelligence-portal-interface/
 ```
 
 **Dashboard Modules:**
@@ -275,7 +275,7 @@ Execute M4-optimized game development workflows using pre-built architecture, te
 
 **Source:**
 ```
-/Users/pennyplatt/Documents/9BitStudios/Oksana/apple-intelligence/foundation/creative-queue/development/notion-workspace-automation/content-intelligence-system/
+/Users/pennyplatt/Documents//Oksana/apple-intelligence/foundation/creative-queue/development/notion-workspace-automation/content-intelligence-system/
 ```
 
 **Tasks:**
@@ -323,10 +323,10 @@ Execute M4-optimized game development workflows using pre-built architecture, te
 
 ## M4 Neural Engine Utilities (Use When Directed)
 ```
-/Users/pennyplatt/Documents/9BitStudios/Oksana/apple-intelligence/decision-engine/grid-claude-hybrid-processor.js
-/Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/m4-acceleration/scripts/grid-utilities.js
-/Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/m4-acceleration/cloudflare-workers/quantum-pixel-api.js
-/Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/m4-acceleration/cloudflare-workers/m4-optimization-api.js
+/Users/pennyplatt/Documents//Oksana/apple-intelligence/decision-engine/grid-claude-hybrid-processor.js
+/Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/m4-acceleration/scripts/grid-utilities.js
+/Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/m4-acceleration/cloudflare-workers/quantum-pixel-api.js
+/Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/m4-acceleration/cloudflare-workers/m4-optimization-api.js
 ```
 
 ## Quality Standards (Non-Negotiable)

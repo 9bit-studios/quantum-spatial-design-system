@@ -4,13 +4,13 @@
  */
 
 export { StrategicIntelligenceMCP } from
-  '../../../../../../foundation-models/strategic-intelligence-mcp.js';
+  '../../../../../../OksanaFoundationModel/strategic-intelligence-mcp.js';
 
 export { AppleIntelligenceQAFramework } from
-  '../../../../../../foundation-models/apple-intelligence-qa-framework.js';
+  '../../../../../../OksanaFoundationModel/apple-intelligence-qa-framework.js';
 
 export { StrategicDirectorAuthenticator } from
-  '../../../../../../foundation-models/strategic-director-authenticator.js';
+  '../../../../../../OksanaFoundationModel/strategic-director-authenticator.js';
 
 export { SourcesOfTruthAuthenticator } from
-  '../../../../../../foundation-models/sources-of-truth-authenticator.js';
+  '../../../../../../OksanaFoundationModel/sources-of-truth-authenticator.js';

@@ -17,7 +17,7 @@ PURPLE='\033[0;35m'
 NC='\033[0m'
 
 # Configuration
-REPO_PATH="/Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system"
+REPO_PATH="/Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system"
 AUTOMATION_PATH="${REPO_PATH}/automation/siri-automation-orchestrator"
 GITHUB_REMOTE="https://github.com/9bit-studios/quantum-spatial-design-system"
 
@@ -266,7 +266,7 @@ const __dirname = path.dirname(__filename);
 // Configuration
 const NOTION_API_KEY = process.env.NOTION_API_KEY;
 const DESIGN_SYSTEM_DB_ID = process.env.DESIGN_SYSTEM_DB_ID;
-const REPO_PATH = process.env.REPO_PATH || '/Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system';
+const REPO_PATH = process.env.REPO_PATH || '/Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system';
 const GITHUB_BASE = 'https://github.com/9bit-studios/quantum-spatial-design-system/blob/main';
 
 if (!NOTION_API_KEY || !DESIGN_SYSTEM_DB_ID) {
@@ -588,7 +588,7 @@ NOTION_API_KEY=your-notion-api-key-here
 DESIGN_SYSTEM_DB_ID=your-database-id-here
 
 # Repository Configuration
-REPO_PATH=/Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system
+REPO_PATH=/Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system
 
 # Quantum-Secure Protocol (existing)
 QUANTUM_SECURE_PROTOCOL=enabled

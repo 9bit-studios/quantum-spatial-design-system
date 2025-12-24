@@ -82,7 +82,7 @@ Framer Components (DesignSystemProvider, PremiumQuantumSpatial)
 To deploy to production:
 
 ```bash
-cd /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/cloudflare-workers
+cd /Users/pennyplatt/Documents//Oksana/quantum-spatial/cloudflare-workers
 wrangler deploy --env production
 ```
 

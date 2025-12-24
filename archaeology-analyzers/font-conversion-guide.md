@@ -10,7 +10,7 @@
 
 ### Option 1: Preview Changes (Recommended First)
 ```bash
-cd /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/asset-pipeline
+cd /Users/pennyplatt/Documents//Oksana/quantum-spatial/asset-pipeline
 
 # Preview what will be changed (dry run)
 ./scripts/convert-fonts.sh --dry-run
@@ -167,7 +167,7 @@ const Title = styled.h1`
 2. Open Terminal (`` Ctrl+` `` or `Cmd+` `` on Mac)
 3. Navigate to design-system:
 ```bash
-cd /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system
+cd /Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system
 ```
 4. Run dry-run first:
 ```bash
@@ -317,7 +317,7 @@ done
 
 Make sure you're in the design-system directory:
 ```bash
-cd /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system
+cd /Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system
 ```
 
 ### Error: "Permission denied"
@@ -415,7 +415,7 @@ After font conversion:
 **Ready to convert?** 🍎
 
 ```bash
-cd /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system
+cd /Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system
 ./scripts/convert-fonts.sh --dry-run  # Preview first!
 ```
 

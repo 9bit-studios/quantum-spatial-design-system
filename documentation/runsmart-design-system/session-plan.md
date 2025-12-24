@@ -251,7 +251,7 @@ By end of session, you'll have:
 - Content files accessible
 
 ### Resources Available
-- `/Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/creative-intelligence-portal/clients/runsmart/`
+- `/Users/pennyplatt/Documents//Oksana/quantum-spatial/creative-intelligence-portal/clients/runsmart/`
   - `runsmart-figma-guide.md` (detailed instructions)
   - `figma-deployment-workflow.md` (45-minute workflow)
   - `mobile-app-complete-system.md` (all screens documented)

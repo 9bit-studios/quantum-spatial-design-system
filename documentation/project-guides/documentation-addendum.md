@@ -103,14 +103,14 @@ These existing guides remain valid and are supplemented by the new documentation
 
 **Code Connect**
 ```
-Location: /Users/pennyplatt/Documents/9BitStudios/Oksana/QuantumSpatialDesignSystem/shared-frameworks/code-connect-main
+Location: /Users/pennyplatt/Documents//Oksana/QuantumSpatialDesignSystem/shared-frameworks/code-connect-main
 GitHub: https://github.com/figma/code-connect
 Purpose: Component-to-code linking
 ```
 
 **Simple Design System**
 ```
-Location: /Users/pennyplatt/Documents/9BitStudios/Oksana/QuantumSpatialDesignSystem/shared-frameworks/sds-main
+Location: /Users/pennyplatt/Documents//Oksana/QuantumSpatialDesignSystem/shared-frameworks/sds-main
 GitHub: https://github.com/figma/sds
 Purpose: Foundation template for Quantum-Spatial design system
 ```
@@ -202,8 +202,8 @@ FIGMA_FILE_KEY=rr48z6oKp9I5HWIVwjcYXL
 FIGMA_QUANTUM_SPATIAL_FILE_KEY=ea62L4ZTyQilGYZK1zJ148
 
 # Paths
-CODE_CONNECT_CLI_PATH=/Users/pennyplatt/Documents/9BitStudios/Oksana/QuantumSpatialDesignSystem/shared-frameworks/code-connect-main
-SDS_PATH=/Users/pennyplatt/Documents/9BitStudios/Oksana/QuantumSpatialDesignSystem/shared-frameworks/sds-main
+CODE_CONNECT_CLI_PATH=/Users/pennyplatt/Documents//Oksana/QuantumSpatialDesignSystem/shared-frameworks/code-connect-main
+SDS_PATH=/Users/pennyplatt/Documents//Oksana/QuantumSpatialDesignSystem/shared-frameworks/sds-main
 
 # Anthropic
 ANTHROPIC_API_KEY=sk-ant-xxxxxxxxxxxxxxxxxxxxx

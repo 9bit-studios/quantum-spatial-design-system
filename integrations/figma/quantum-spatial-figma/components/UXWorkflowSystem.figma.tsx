@@ -1,6 +1,6 @@
 
 import figma from '@figma/code-connect';
-import { UXWorkflowSystem } from '/Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/components/templates/layouts/UXWorkflowSystem.tsx';
+import { UXWorkflowSystem } from '/Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/components/templates/layouts/UXWorkflowSystem.tsx';
 
 // TODO: Map to Figma component
 figma.connect(

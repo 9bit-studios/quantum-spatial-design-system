@@ -10,7 +10,7 @@
 
 **ALL operations in the following path are RESTRICTED:**
 ```
-/Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/framer/**
+/Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/framer/**
 ```
 
 ### Prohibited Operations

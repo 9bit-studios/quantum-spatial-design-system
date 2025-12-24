@@ -12,7 +12,7 @@
 ## 🚀 Quick Redeploy (After Making Changes)
 
 ```bash
-cd /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/brand-theme/professional/portfolio/runsmart/runsmart-interfaces-purple
+cd /Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/brand-theme/professional/portfolio/runsmart/runsmart-interfaces-purple
 
 # Option 1: Use npm script (recommended)
 npm run deploy -- --commit-dirty=true

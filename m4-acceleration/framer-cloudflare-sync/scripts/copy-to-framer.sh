@@ -31,7 +31,7 @@ if [ ! -d "$TARGET_DIR" ]; then
 fi
 
 # Source directories
-SOURCE_DIR="/Users/pennyplatt/9BitStudios/framer-project-test/design-system"
+SOURCE_DIR="/Users/pennyplatt//framer-project-test/design-system"
 COMPONENTS_DIR="$SOURCE_DIR/components"
 TOKENS_DIR="$SOURCE_DIR/tokens"
 

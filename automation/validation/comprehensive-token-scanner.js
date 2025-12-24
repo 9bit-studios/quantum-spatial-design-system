@@ -20,7 +20,7 @@ import { execSync } from 'child_process';
 
 class ComprehensiveTokenScanner {
   constructor() {
-    this.projectRoot = '/Users/pennyplatt/Documents/9BitStudios/Oksana/';
+    this.projectRoot = '/Users/pennyplatt/Documents//Oksana/';
     
     // Define all scan locations based on your project structure
     this.scanLocations = {

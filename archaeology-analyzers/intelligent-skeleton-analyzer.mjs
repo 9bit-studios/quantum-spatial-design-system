@@ -29,11 +29,11 @@ class IntelligentSkeletonAnalyzer {
   constructor(options = {}) {
     // Configure for design-system directory with docs exclusion
     this.designSystemPath = options.targetPath ||
-      '/Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system';
+      '/Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system';
 
     // Additional scan paths
     this.additionalPaths = options.additionalPaths || [
-      '/Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/fresh-glass-theme'
+      '/Users/pennyplatt/Documents//Oksana/quantum-spatial/fresh-glass-theme'
     ];
 
     // M4 Neural Engine configuration
@@ -2114,7 +2114,7 @@ ${this.generateCommonChecks(higFiles)}`;
 // Main execution
 async function main() {
   const analyzer = new IntelligentSkeletonAnalyzer({
-    targetPath: process.argv[2] || '/Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system'
+    targetPath: process.argv[2] || '/Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system'
   });
 
   try {

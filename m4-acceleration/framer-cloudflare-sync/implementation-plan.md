@@ -63,7 +63,7 @@ curl -s "https://design-system.9bitstudios.io/design-system/tokens?state=superpo
 
 1. **Update Framer sync script to use the new custom domains**
    ```bash
-   cd /Users/pennyplatt/9BitStudios/cloudflare-worker
+   cd /Users/pennyplatt//cloudflare-worker
    ./scripts/framer-sync.sh -p ./framer-test -e staging
    ```
 
@@ -118,7 +118,7 @@ export FRAMER_PROJECT_ID="your-framer-project-id"
 ### Framer Integration
 ```bash
 # Sync with staging environment
-cd /Users/pennyplatt/9BitStudios/cloudflare-worker
+cd /Users/pennyplatt//cloudflare-worker
 ./scripts/framer-sync.sh -p ./framer-test -e staging
 
 # Sync with production environment

@@ -41,7 +41,7 @@ echo ""
 echo "   With contents:"
 echo "   NOTION_API_KEY=your-key-here"
 echo "   DESIGN_SYSTEM_DB_ID=your-db-id-here"
-echo "   REPO_PATH=/Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system"
+echo "   REPO_PATH=/Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system"
 echo ""
 echo "4. Update package.json (add to scripts section):"
 echo '   "sync:notion": "node automation/siri-automation-orchestrator/scripts/sync-components-to-notion.js",'

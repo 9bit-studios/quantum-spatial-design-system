@@ -114,7 +114,7 @@ From `design-system-demo.js`, you already have:
 
 **Option A: Symlink (Fastest for iteration)**
 ```bash
-cd /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/creative-intelligence-portal/vercel
+cd /Users/pennyplatt/Documents//Oksana/quantum-spatial/creative-intelligence-portal/vercel
 npm link ../../QuantumSpatialDesignSystem/QuantumSpatial
 
 # Add to package.json
@@ -127,7 +127,7 @@ npm link ../../QuantumSpatialDesignSystem/QuantumSpatial
 
 **Option B: Git Submodule (More stable)**
 ```bash
-cd /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/creative-intelligence-portal/vercel
+cd /Users/pennyplatt/Documents//Oksana/quantum-spatial/creative-intelligence-portal/vercel
 git submodule add ../../QuantumSpatialDesignSystem design-system
 ```
 

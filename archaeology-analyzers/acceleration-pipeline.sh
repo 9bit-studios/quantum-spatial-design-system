@@ -31,11 +31,11 @@ echo -e "${GREEN}  ✅ Backup created successfully${NC}"
 echo -e "${PURPLE}🏗️ Phase 1: Creating Optimal Directory Structure${NC}"
 
 # Create new optimized structure
-mkdir -p FoundationModelCore/{AppleIntelligenceFramework,strategic-director-framework,foundation-models,quantum-data-layer,xcode-model-bridge}
+mkdir -p FoundationModelCore/{AppleIntelligenceFramework,strategic-director-framework,foundation-models,quantum-acceleration,xcode-model-bridge}
 mkdir -p FoundationModelCore/AppleIntelligenceFramework/{core-frameworks,neural-engine,data-language-bridge}
 mkdir -p FoundationModelCore/strategic-director-framework/{decision-engine,claude-bridge,foundation-enhanced}
-mkdir -p FoundationModelCore/foundation-models/{learning-pipeline,grid-processor,api-integration}
-mkdir -p FoundationModelCore/quantum-data-layer/{python,crypto-processing,secure-distribution}
+mkdir -p FoundationModelCore/OksanaFoundationModel/{learning-pipeline,grid-processor,api-integration}
+mkdir -p FoundationModelCore/quantum-acceleration/{python,crypto-processing,secure-distribution}
 mkdir -p FoundationModelCore/xcode-model-bridge/{swift-typescript,swift-python,api-bridges}
 
 mkdir -p AccelerationPipeline/{validation,setup,testing,deployment,discovery}
@@ -65,13 +65,13 @@ fi
 
 # Foundation Models
 if [ -d "foundation-models" ]; then
-    mv foundation-models/* FoundationModelCore/foundation-models/ 2>/dev/null || true
+    mv foundation-models/* FoundationModelCore/OksanaFoundationModel/ 2>/dev/null || true
     echo -e "${GREEN}  ✅ Migrated Foundation Models${NC}"
 fi
 
 # Quantum Data Layer (preserve complex Python integrations)
-if [ -d "quantum-data-layer" ]; then
-    mv quantum-data-layer/* FoundationModelCore/quantum-data-layer/ 2>/dev/null || true
+if [ -d "quantum-acceleration" ]; then
+    mv quantum-acceleration/* FoundationModelCore/quantum-acceleration/ 2>/dev/null || true
     echo -e "${GREEN}  ✅ Migrated Quantum Data Layer${NC}"
 fi
 
@@ -344,7 +344,7 @@ async function testAccelerationPipeline() {
     
     // Test 5: Multi-Language Support
     console.log('🌐 Test 5: Multi-Language Integration');
-    const pythonExists = await pathExists('FoundationModelCore/quantum-data-layer/python');
+    const pythonExists = await pathExists('FoundationModelCore/quantum-acceleration/python');
     const swiftExists = await pathExists('StrategicDirectorFramework');
     const tsExists = await pathExists('FoundationModelCore/xcode-model-bridge');
     
@@ -410,7 +410,7 @@ cat > ACCELERATION_MIGRATION_SUMMARY.md << 'EOF'
 ### **M4 Acceleration Optimizations:**
 - Neural Engine components centralized in `FoundationModelCore/AppleIntelligenceFramework/neural-engine/`
 - Multi-language bridge optimized in `FoundationModelCore/xcode-model-bridge/`
-- Python quantum processing in `FoundationModelCore/quantum-data-layer/python/`
+- Python quantum processing in `FoundationModelCore/quantum-acceleration/python/`
 
 ### **Next Steps:**
 1. Run: `bash Scripts/setup-complete-pipeline.sh`

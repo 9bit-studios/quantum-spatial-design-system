@@ -1,6 +1,6 @@
 
 import figma from '@figma/code-connect';
-import { index } from '/Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/components/quantum-pixels/index.ts';
+import { index } from '/Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/components/quantum-pixels/index.ts';
 
 // TODO: Map to Figma component
 figma.connect(

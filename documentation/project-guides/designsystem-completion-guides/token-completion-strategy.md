@@ -5,7 +5,7 @@
 
 ### **Primary System**: Claude Quantum Design Framework
 ```bash
-cd /Users/pennyplatt/Documents/9BitStudios/claude-quantum-design-framework/design-system
+cd /Users/pennyplatt/Documents//claude-quantum-design-framework/design-system
 ```
 
 **Why This System:**
@@ -231,7 +231,7 @@ export const UnifiedDesignSystemProvider = ({
 
 ### **Today: Complete Core Token Files**
 ```bash
-cd /Users/pennyplatt/Documents/9BitStudios/claude-quantum-design-framework/design-system
+cd /Users/pennyplatt/Documents//claude-quantum-design-framework/design-system
 
 # 1. Complete M4Tokens.tsx (Apple Neural Engine optimization)
 # 2. Complete quantumTokens.tsx (your 682KB sophisticated system)

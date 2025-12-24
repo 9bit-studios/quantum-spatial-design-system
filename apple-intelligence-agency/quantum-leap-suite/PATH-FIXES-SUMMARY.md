@@ -8,7 +8,7 @@
 **Location**: Root of quantum-leap-suite
 
 **Fixes**:
-- `../foundation-models/` → `../../../../foundation-models/` (4 levels)
+- `../OksanaFoundationModel/` → `../../../../OksanaFoundationModel/` (4 levels)
 - `../apple-intelligence/` → `../../../../apple-intelligence/` (4 levels)
 - `./quantum-leap-suite/vision-pro-ui-kit/` → `../../../../strategic-director/` (4 levels)
 
@@ -18,7 +18,7 @@
 **Location**: `foundation-resources/*/index.ts` (4 subdirectories)
 
 **Fixes**:
-- `../../../../foundation-models/` → `../../../../../../foundation-models/` (6 levels)
+- `../../../../OksanaFoundationModel/` → `../../../../../../OksanaFoundationModel/` (6 levels)
 
 **Files Updated**:
 - ✅ `creative-intelligence/index.ts`
@@ -107,7 +107,7 @@ Some foundation-resources index files reference files that don't exist in founda
 ### ✅ RECOMMENDED: Use run.sh wrapper
 
 ```bash
-cd /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/apple-intelligence-agency/quantum-leap-suite/
+cd /Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/apple-intelligence-agency/quantum-leap-suite/
 
 ./run.sh list-skills.ts
 ./run.sh AppleIntelligenceStrategicDirectorCoordinator.js
@@ -116,7 +116,7 @@ cd /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/
 ### Alternative: Use absolute paths
 
 ```bash
-npx tsx /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/apple-intelligence-agency/quantum-leap-suite/list-skills.ts
+npx tsx /Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/apple-intelligence-agency/quantum-leap-suite/list-skills.ts
 ```
 
 ### For .js files: Use node directly

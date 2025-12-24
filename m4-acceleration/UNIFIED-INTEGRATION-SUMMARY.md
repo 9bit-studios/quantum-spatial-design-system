@@ -27,14 +27,14 @@ Successfully unified **four major systems** into a single coherent architecture:
 | **CreativeIntelligenceBridge.ts** | `/types/` | 2.0.0 | TypeScript bridge to Swift components | ✅ PRIMARY |
 | **creative-intelligence-mcp-integration.js** | `/strategic-director/` | 1.0.0 | **Advanced MCP routing configuration** | ✅ **KEEP - Most sophisticated** |
 | **oksana-foundation-mcp-orchestrator.js** | `/strategic-director/` | 1.0.0 | MCP authority layer + M4 Neural Engine | ✅ KEEP |
-| **run-enhanced-creative-intelligence-mcp.js** | `/foundation-models/` | 4.0.0 | Entry point runner script | ✅ KEEP (updated) |
-| **framer-deployment-integration.js** | `/foundation-models/` | 1.0.0 | Framer component packaging | ✅ KEEP |
+| **run-enhanced-creative-intelligence-mcp.js** | `/OksanaFoundationModel/` | 4.0.0 | Entry point runner script | ✅ KEEP (updated) |
+| **framer-deployment-integration.js** | `/OksanaFoundationModel/` | 1.0.0 | Framer component packaging | ✅ KEEP |
 
 ### **Archive/Reference (Not Primary)**
 
 | File | Location | Action | Reason |
 |------|----------|--------|--------|
-| **creative-intelligence-mcp-integration.js** | `/foundation-models/` | Archive | Less sophisticated than strategic-director version |
+| **creative-intelligence-mcp-integration.js** | `/OksanaFoundationModel/` | Archive | Less sophisticated than strategic-director version |
 | **CreativeIntelligenceBridge.js** | `/types/` | Delete | Compiled JS - use TypeScript source |
 
 ---
@@ -181,7 +181,7 @@ Successfully unified **four major systems** into a single coherent architecture:
 ### **1. Run the Unified Deployment Script**
 
 ```bash
-cd /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/m4-acceleration
+cd /Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/m4-acceleration
 
 ./DEPLOY-M4-UNIFIED-SYSTEM.sh
 ```
@@ -222,7 +222,7 @@ cd /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/
 ### **3. Environment Variables**
 
 ```bash
-export OKSANA_ROOT="/Users/pennyplatt/Documents/9BitStudios/Oksana"
+export OKSANA_ROOT="/Users/pennyplatt/Documents//Oksana"
 export NODE_ENV="production"
 export M4_ACCELERATION_ENABLED="true"
 export APPLE_INTELLIGENCE_M4_OPTIMIZATION="true"
@@ -307,7 +307,7 @@ When ready to deploy to production:
 
 ```bash
 # 1. Deploy worker to production
-cd /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/cloudflare-workers
+cd /Users/pennyplatt/Documents//Oksana/quantum-spatial/cloudflare-workers
 wrangler deploy --env production
 
 # 2. Update environment variable
@@ -317,7 +317,7 @@ export CLOUDFLARE_WORKER_URL="https://design-system.9bitstudios.io"
 # Change API_ENDPOINT to production URL
 
 # 4. Re-run MCP initialization
-cd /Users/pennyplatt/Documents/9BitStudios/Oksana/foundation-models
+cd /Users/pennyplatt/Documents//Oksana/OksanaFoundationModel
 USE_STRATEGIC_DIRECTOR_MCP=true node run-enhanced-creative-intelligence-mcp.js
 ```
 
@@ -369,8 +369,8 @@ USE_STRATEGIC_DIRECTOR_MCP=true node run-enhanced-creative-intelligence-mcp.js
 
 ```bash
 # Check routing configuration exists
-ls -la /Users/pennyplatt/Documents/9BitStudios/Oksana/config/figma-mcp-paths.json
-ls -la /Users/pennyplatt/Documents/9BitStudios/Oksana/routing/unified-routing-index.json
+ls -la /Users/pennyplatt/Documents//Oksana/config/figma-mcp-paths.json
+ls -la /Users/pennyplatt/Documents//Oksana/routing/unified-routing-index.json
 
 # Check unified-path-resolver
 node -e "import { getResolver } from './validation/unified-path-resolver.js'; console.log(getResolver())"
@@ -383,7 +383,7 @@ echo $USE_STRATEGIC_DIRECTOR_MCP  # Should be "true"
 
 ```bash
 # Check deployment
-cd /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/cloudflare-workers
+cd /Users/pennyplatt/Documents//Oksana/quantum-spatial/cloudflare-workers
 wrangler deployments list --env staging
 
 # Test endpoints manually
@@ -395,7 +395,7 @@ curl https://design-system-staging.9bitstudios.io/m4/detect
 
 ```bash
 # Check DesignSystemProvider URL
-grep "API_ENDPOINT" /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/m4-acceleration/components/framer/DesignSystemProvider.tsx
+grep "API_ENDPOINT" /Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/m4-acceleration/components/framer/DesignSystemProvider.tsx
 
 # Should show: const API_ENDPOINT = "https://design-system-staging.9bitstudios.io"
 ```

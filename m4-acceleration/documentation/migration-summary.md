@@ -16,12 +16,12 @@ Move the entire `/apple-intelligence-agency/` directory into `/design-system/app
 
 ### Source Directory
 ```
-/Users/pennyplatt/Documents/9BitStudios/Oksana/apple-intelligence-agency/
+/Users/pennyplatt/Documents//Oksana/apple-intelligence-agency/
 ```
 
 ### Destination Directory
 ```
-/Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/apple-intelligence-agency/
+/Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/apple-intelligence-agency/
 ```
 
 ### Complete Structure (11 Skills + Core Files)
@@ -80,7 +80,7 @@ apple-intelligence-agency/
 ### Step 2: Execute Migration
 
 ```bash
-cd /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system
+cd /Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system
 
 # Run the migration script
 ./tools/scripts/move-apple-intelligence-agency.sh
@@ -211,12 +211,12 @@ ls -la ../m4-acceleration/vision-pro/
 
 ```bash
 # Verify migration succeeded first
-cd /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/apple-intelligence-agency
+cd /Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/apple-intelligence-agency
 ls -la
 cat INTEGRATION.md
 
 # If everything looks good, remove original
-rm -rf /Users/pennyplatt/Documents/9BitStudios/Oksana/apple-intelligence-agency
+rm -rf /Users/pennyplatt/Documents//Oksana/apple-intelligence-agency
 ```
 
 ---
@@ -440,7 +440,7 @@ Migration is successful when:
 **The migration script is ready. Execute when you're ready:**
 
 ```bash
-cd /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system
+cd /Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system
 ./tools/scripts/move-apple-intelligence-agency.sh
 ```
 

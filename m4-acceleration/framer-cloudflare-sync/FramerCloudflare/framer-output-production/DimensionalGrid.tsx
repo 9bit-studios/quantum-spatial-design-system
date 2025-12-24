@@ -15,7 +15,7 @@ import {
   perspectiveOffset, 
   calculateDistanceOpacity,
   alignToGrid
-} from '../../Documents/9BitStudios/foundation/grid-systems/grid-utilities';
+} from '../../Documents//foundation/grid-systems/grid-utilities';
 
 // Types for the DimensionalGrid component
 export type GridType = 'background' | 'interface' | 'feature';

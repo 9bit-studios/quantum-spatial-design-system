@@ -336,7 +336,7 @@ export class PseudoOrchestrator {
 
 ### Step 1: Create Creative Services Structure
 ```bash
-cd /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system
+cd /Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system
 
 # Create directory structure
 mkdir -p creative-services/skills
@@ -347,8 +347,8 @@ mkdir -p creative-services/deliverables/{svg-components,vision-pro-components,de
 ### Step 2: Copy Skills (WITHOUT SDK dependencies)
 ```bash
 # Copy skill documentation
-cp -r /Users/pennyplatt/Documents/9BitStudios/Oksana/apple-intelligence-agency/quantum-leap-suite/svg-generation creative-services/skills/
-cp -r /Users/pennyplatt/Documents/9BitStudios/Oksana/apple-intelligence-agency/quantum-leap-suite/vision-pro-ui-kit creative-services/skills/
+cp -r /Users/pennyplatt/Documents//Oksana/apple-intelligence-agency/quantum-leap-suite/svg-generation creative-services/skills/
+cp -r /Users/pennyplatt/Documents//Oksana/apple-intelligence-agency/quantum-leap-suite/vision-pro-ui-kit creative-services/skills/
 
 # Remove SDK dependencies from copied files
 # (We'll create pseudo-skill implementations)

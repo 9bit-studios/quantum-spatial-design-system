@@ -4,7 +4,7 @@
 
 set -e
 
-PROJECT_DIR="/Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/brand-theme/professional/portfolio/runsmart/runsmart-interfaces-purple"
+PROJECT_DIR="/Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/brand-theme/professional/portfolio/runsmart/runsmart-interfaces-purple"
 
 echo "🚀 RunSmart → Cloudflare Pages Deployment"
 echo "=========================================="

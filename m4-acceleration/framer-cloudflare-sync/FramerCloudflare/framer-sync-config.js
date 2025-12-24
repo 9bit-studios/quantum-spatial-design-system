@@ -18,8 +18,8 @@ module.exports = {
   
   // Design System Paths
   paths: {
-    tokensPath: '/Users/pennyplatt/9BitStudios/M4-Optimized Quantum-Spatial Pixel Design System Acceleration/tokens',
-    componentsPath: '/Users/pennyplatt/9BitStudios/M4-Optimized Quantum-Spatial Pixel Design System Acceleration/components/core'
+    tokensPath: '/Users/pennyplatt//M4-Optimized Quantum-Spatial Pixel Design System Acceleration/tokens',
+    componentsPath: '/Users/pennyplatt//M4-Optimized Quantum-Spatial Pixel Design System Acceleration/components/core'
   },
   
   // Design System States

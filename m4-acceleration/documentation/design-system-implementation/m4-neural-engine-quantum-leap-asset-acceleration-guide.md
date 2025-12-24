@@ -544,7 +544,7 @@ function setupAssetRepositories(baseDir) {
 }
 
 // Execute with your desired base directory
-const baseDirectory = './9BitStudios/AssetSystem';
+const baseDirectory = './/AssetSystem';
 setupAssetRepositories(baseDirectory);
 
 ```

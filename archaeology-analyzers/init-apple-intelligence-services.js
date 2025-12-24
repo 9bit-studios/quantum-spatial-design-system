@@ -9,7 +9,7 @@
  */
 
 const path = require('path');
-const AppleIntelligenceServiceManager = require('/Users/pennyplatt/9BitStudios/AppleIntelligenceStrategicDirector/services/service-manager');
+const AppleIntelligenceServiceManager = require('/Users/pennyplatt//AppleIntelligenceStrategicDirector/services/service-manager');
 
 /**
  * Initialize and demonstrate real service capabilities

@@ -5,7 +5,7 @@
 ### Step 1: Install Claude Agent SDK
 
 ```bash
-cd ~/Documents/9BitStudios/Oksana
+cd ~/Documents//Oksana
 npm install @anthropic-ai/claude-agent-sdk
 ```
 

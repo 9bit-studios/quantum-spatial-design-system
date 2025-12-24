@@ -11,7 +11,7 @@
 
 ### Step 1.1: Migrate Priority Scripts to ESM
 ```bash
-cd /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/asset-pipeline
+cd /Users/pennyplatt/Documents//Oksana/quantum-spatial/asset-pipeline
 
 # Convert these 5 critical scripts
 node ../design-system/scripts/convert-to-esm.mjs \
@@ -243,7 +243,7 @@ Priority Components:
 
 ### Step 6.1: Quick Portfolio Site Structure
 ```bash
-cd /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system
+cd /Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system
 
 # Create portfolio structure
 mkdir -p portfolio/{components,assets,pages,themes}
@@ -295,7 +295,7 @@ vercel --prod
 ### Hour 1: Foundation (Scripts + SVG Processing)
 ```bash
 # Terminal 1
-cd /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/asset-pipeline
+cd /Users/pennyplatt/Documents//Oksana/quantum-spatial/asset-pipeline
 
 # Convert scripts
 node ../design-system/scripts/convert-to-esm.mjs --path ./scripts
@@ -369,7 +369,7 @@ vercel --prod
 
 ### Terminal 1: Convert Scripts
 ```bash
-cd /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/asset-pipeline
+cd /Users/pennyplatt/Documents//Oksana/quantum-spatial/asset-pipeline
 node ../design-system/scripts/convert-to-esm.mjs --path ./scripts --dry-run
 node ../design-system/scripts/convert-to-esm.mjs --path ./scripts
 ```
@@ -411,7 +411,7 @@ By end of day:
 
 **First Command** (run this NOW):
 ```bash
-cd /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/asset-pipeline
+cd /Users/pennyplatt/Documents//Oksana/quantum-spatial/asset-pipeline
 node ../design-system/scripts/convert-to-esm.mjs --path ./scripts --dry-run
 ```
 

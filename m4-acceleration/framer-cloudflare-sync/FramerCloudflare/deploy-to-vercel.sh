@@ -3,7 +3,7 @@
 # This script automatically deploys to Vercel without requiring interaction
 
 # Configuration
-PROJECT_DIR="/Users/pennyplatt/9BitStudios/oksana-creator-portal"
+PROJECT_DIR="/Users/pennyplatt//oksana-creator-portal"
 PROJECT_NAME="oksana-creator-portal"
 
 # Colors for output

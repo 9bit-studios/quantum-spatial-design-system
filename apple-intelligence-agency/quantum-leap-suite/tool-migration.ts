@@ -368,15 +368,15 @@ class QuantumPixelGenerator {
 
     pixels.forEach(pixel => {
       svg += \`  <circle cx="\${pixel.x}" cy="\${pixel.y}" r="\${pixel.size}" \`;
-      svg += \`fill="\${pixel.color}" opacity="\${pixel.opacity}">\\`;
-      
+      svg += \`fill="\${pixel.color}" opacity="\${pixel.opacity}">\`;
+
       if (animation === 'pulse') {
         svg += \`    <animate attributeName="opacity" \`;
         svg += \`values="\${pixel.opacity};1;\${pixel.opacity}" \`;
-        svg += \`dur="3s" repeatCount="indefinite"/>\\`;
+        svg += \`dur="3s" repeatCount="indefinite"/>\`;
       }
-      
-      svg += '  </circle>\';
+
+      svg += \`  </circle>\`;
     });
 
     svg += '</svg>';
@@ -392,7 +392,7 @@ class QuantumPixelGenerator {
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
-  </defs>\\`;
+  </defs>\`;
   }
 }
 

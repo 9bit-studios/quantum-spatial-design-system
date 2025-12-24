@@ -21,7 +21,7 @@ import * as fs from 'fs/promises';
 import * as path from 'path';
 import chalk from 'chalk';
 
-const OKSANA_ROOT = '/Users/pennyplatt/Documents/9BitStudios/Oksana';
+const OKSANA_ROOT = '/Users/pennyplatt/Documents//Oksana';
 
 // Load quantum-secured environment
 const NOTION_API_KEY = process.env.NOTION_API_KEY;

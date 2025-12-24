@@ -29,7 +29,7 @@ cat > tsconfig.universal.json << 'EOF'
       "@apple-intelligence/*": ["../apple-intelligence/*"],
       "@strategic-director/*": ["../strategic-director/*"],
       "@quantum/*": ["../quantum-secure*"]
-      "@foundation-model/*": ["../foundation-models/*"]
+      "@foundation-model/*": ["../OksanaFoundationModel/*"]
       "@xcode-model-bridgr/*": ["../xcode-model-bridge/*"]
     }
   },
@@ -78,11 +78,11 @@ import type { ValidationResult, PetersenGamesValidation } from './types/apple-in
 
 class UniversalProjectValidator {
   private projects = [
-    '/Users/pennyplatt/Documents/9BitStudios/Oksana',
-    '/Users/pennyplatt/Documents/9BitStudios/quantum-spatial/fresh-glass-theme',
-    '/Users/pennyplatt/Documents/9BitStudios/quantum-spatial/design-system',
-    '/Users/pennyplatt/Documents/9BitStudios/quantum-spatial/source-tokens',
-    '/Users/pennyplatt/Documents/9BitStudios/quantum-spatial/creative-intelligence-portal',
+    '/Users/pennyplatt/Documents//Oksana',
+    '/Users/pennyplatt/Documents//quantum-spatial/fresh-glass-theme',
+    '/Users/pennyplatt/Documents//quantum-spatial/design-system',
+    '/Users/pennyplatt/Documents//quantum-spatial/source-tokens',
+    '/Users/pennyplatt/Documents//quantum-spatial/creative-intelligence-portal',
   ];
 
   async validateAll(): Promise<ValidationResult[]> {
@@ -186,7 +186,7 @@ class UniversalProjectValidator {
   
   private async checkQuantumSecurity(projectPath: string): Promise<boolean> {
     return await this.pathExists(
-      path.join(projectPath, 'foundation-models/quantum-data-layer')
+      path.join(projectPath, 'foundation-models/quantum-acceleration')
     );
   }
   

@@ -7,7 +7,7 @@
 
 ## Validation Authority & Framework
 
-✅ **Sources-of-Truth Authentication**: Complete validation against `/Documents/9BitStudios/foundation/sources-of-truth/`
+✅ **Sources-of-Truth Authentication**: Complete validation against `/Documents//foundation/sources-of-truth/`
 - `apple-hig-validation-framework.md` - Primary validation framework
 - `apple-intelligence-standards.md` - Privacy-first development compliance
 - `framer-integration-standards.md` - Design system integration standards

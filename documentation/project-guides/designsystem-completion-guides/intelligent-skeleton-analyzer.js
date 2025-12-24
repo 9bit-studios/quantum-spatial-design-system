@@ -13,7 +13,7 @@ const { execSync } = require('child_process');
 
 class IntelligentSkeletonAnalyzer {
   constructor() {
-    this.designSystemPath = '/Users/pennyplatt/Documents/9BitStudios/quantum-spatial/design-system';
+    this.designSystemPath = '/Users/pennyplatt/Documents//quantum-spatial/design-system';
     
     this.architecture = {
       discovered: {},      // What exists with content

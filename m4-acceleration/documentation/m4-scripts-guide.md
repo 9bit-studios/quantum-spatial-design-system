@@ -400,7 +400,7 @@ renderVolumetricPixelToCanvas(canvas, {
 ### Step 1: Generate Base Assets (One-Time)
 
 ```bash
-cd /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/m4-acceleration/scripts
+cd /Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/m4-acceleration/scripts
 
 # Generate all base assets
 node index.js generate-all ../foundation
@@ -466,7 +466,7 @@ animateVolumetricPixel(canvas, { state: 'superposition' }, 60);
 
 **Move command:**
 ```bash
-cd /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system
+cd /Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system
 
 mkdir -p asset-pipeline/processors
 mv m4-acceleration/scripts/svg-batch-processor.js asset-pipeline/processors/
@@ -582,7 +582,7 @@ node scripts/index.js generate-all ../fresh-glass-theme/assets/quantum-pixels
 ### 1. Generate Base Assets (If Needed)
 
 ```bash
-cd /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/m4-acceleration/scripts
+cd /Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/m4-acceleration/scripts
 
 # Option A: Generate all at once
 node index.js generate-all ../foundation
@@ -595,7 +595,7 @@ node dimensional-grid-generator.js ../foundation/grid-systems
 ### 2. Move SVG-Batch-Processor
 
 ```bash
-cd /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system
+cd /Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system
 
 mkdir -p asset-pipeline/processors
 mv m4-acceleration/scripts/svg-batch-processor.js asset-pipeline/processors/

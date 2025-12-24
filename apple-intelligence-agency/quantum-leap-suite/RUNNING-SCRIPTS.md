@@ -26,12 +26,12 @@ Examples:
 ### Method 2: Use absolute paths directly
 
 ```bash
-npx tsx /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/apple-intelligence-agency/quantum-leap-suite/<script-name.ts>
+npx tsx /Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/apple-intelligence-agency/quantum-leap-suite/<script-name.ts>
 ```
 
 Example:
 ```bash
-npx tsx /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/design-system/apple-intelligence-agency/quantum-leap-suite/list-skills.ts
+npx tsx /Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/apple-intelligence-agency/quantum-leap-suite/list-skills.ts
 ```
 
 ### Method 3: Use node directly (for .js files)
@@ -86,7 +86,7 @@ Expected output:
 ## What Was Fixed
 
 1. **Import paths in AppleIntelligenceStrategicDirectorCoordinator.js**:
-   - Changed `../foundation-models/` → `../../../../foundation-models/`
+   - Changed `../OksanaFoundationModel/` → `../../../../OksanaFoundationModel/`
    - Changed `../apple-intelligence/` → `../../../../apple-intelligence/`
    - Changed `./quantum-leap-suite/vision-pro-ui-kit/` → `../../../../strategic-director/`
 

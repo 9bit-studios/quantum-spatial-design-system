@@ -196,10 +196,10 @@ All foundation resources use:
 ## 📚 Documentation
 
 ### Resource Documentation
-- Shopify workflows: `/foundation-models/shopify-liquid-brand-aware-workflow.js`
-- Deployment automation: `/foundation-models/framer-deployment-integration.js`
-- Creative intelligence: `/foundation-models/creative-intelligence-mcp-integration.js`
-- Strategic intelligence: `/foundation-models/strategic-intelligence-mcp.js`
+- Shopify workflows: `/OksanaFoundationModel/shopify-liquid-brand-aware-workflow.js`
+- Deployment automation: `/OksanaFoundationModel/framer-deployment-integration.js`
+- Creative intelligence: `/OksanaFoundationModel/creative-intelligence-mcp-integration.js`
+- Strategic intelligence: `/OksanaFoundationModel/strategic-intelligence-mcp.js`
 
 ### Integration Examples
 - See `/quantum-leap-suite/AGENCY-HUB.md`

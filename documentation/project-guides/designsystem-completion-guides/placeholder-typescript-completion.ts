@@ -11,7 +11,7 @@ const path = require('path');
 
 class PlaceholderTypeScriptCompletion {
   constructor() {
-    this.designSystemPath = '/Users/pennyplatt/Documents/9BitStudios/claude-quantum-design-framework/design-system';
+    this.designSystemPath = '/Users/pennyplatt/Documents//claude-quantum-design-framework/design-system';
     this.tokensPath = path.join(this.designSystemPath, 'tokens');
     
     // API Sources of Truth structure to establish

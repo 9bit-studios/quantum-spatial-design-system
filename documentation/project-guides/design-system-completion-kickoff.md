@@ -42,7 +42,7 @@ Complete the Quantum-Spatial Design System with:
 
 ```bash
 # 1. Check Code Connect installed
-cd /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial/shared-frameworks/code-connect-main
+cd /Users/pennyplatt/Documents//Oksana/quantum-spatial/shared-frameworks/code-connect-main
 ls -la  # Should see package.json, CLI, docs
 
 # 2. Check SDS cloned
@@ -50,7 +50,7 @@ cd ../sds-main
 ls -la  # Should see src/, public/, package.json
 
 # 3. Verify environment variables
-cd /Users/pennyplatt/Documents/9BitStudios/Oksana
+cd /Users/pennyplatt/Documents//Oksana
 cat .env.quantum-secure  # Should contain FIGMA_ACCESS_TOKEN
 
 # 4. Confirm Figma file keys
@@ -74,7 +74,7 @@ echo "Quantum-Spatial File: ea62L4ZTyQilGYZK1zJ148"
 **Script**: `skeleton-analyzer.js` (if exists) or manual validation
 
 ```bash
-cd /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial
+cd /Users/pennyplatt/Documents//Oksana/quantum-spatial
 
 # Option A: If skeleton analyzer exists
 node skeleton-analyzer.js --full-scan
@@ -105,7 +105,7 @@ ls -R assets/  # Verify SVG/icon assets
 **Authority**: `foundation/sources-of-truth/sdk-reference.md` (lines 42-62)
 
 ```bash
-cd /Users/pennyplatt/Documents/9BitStudios/Oksana
+cd /Users/pennyplatt/Documents//Oksana
 
 # Initialize environment (REQUIRED - run ONCE per session)
 node scripts/services/foundation-model-bridge.js
@@ -564,7 +564,7 @@ npx tsc src/tokens/*.ts --noEmit --strict
 
 **Locate SVGs**:
 ```bash
-cd /Users/pennyplatt/Documents/9BitStudios/Oksana/quantum-spatial
+cd /Users/pennyplatt/Documents//Oksana/quantum-spatial
 
 # Find all SVGs
 find . -name "*.svg" -type f > reports/svg-inventory.txt
@@ -1025,7 +1025,7 @@ Figma Design → Code Connect → TypeScript → Build → Deploy
 ### Morning Startup
 ```bash
 # 1. Navigate to project
-cd /Users/pennyplatt/Documents/9BitStudios/Oksana
+cd /Users/pennyplatt/Documents//Oksana
 
 # 2. Initialize environment
 node scripts/services/foundation-model-bridge.js
