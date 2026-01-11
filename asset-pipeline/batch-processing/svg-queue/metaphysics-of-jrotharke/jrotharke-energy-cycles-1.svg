@@ -1,0 +1,300 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600">
+  <!-- Background -->
+  <rect width="900" height="600" fill="#0A0621" />
+  
+  <!-- Dimensional grid background -->
+  <g opacity="0.12">
+    <!-- Horizontal grid lines with energy distortion -->
+    <path d="M150,550 Q450,530 750,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M125,500 Q450,490 775,500" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M100,450 Q450,430 800,450" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M75,400 Q450,380 825,400" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M65,350 Q450,330 835,350" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M55,300 Q450,280 845,300" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M45,250 Q450,230 855,250" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M35,200 Q450,180 865,200" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M25,150 Q450,130 875,150" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M20,100 Q450,80 880,100" stroke="#5AC8FA" stroke-width="1" />
+    
+    <!-- Vertical grid lines with energy distortion -->
+    <path d="M150,100 Q160,300 150,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M225,100 Q235,300 225,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M300,100 Q310,300 300,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M375,100 Q385,300 375,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M450,100 Q460,300 450,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M525,100 Q535,300 525,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M600,100 Q610,300 600,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M675,100 Q685,300 675,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M750,100 Q760,300 750,550" stroke="#5AC8FA" stroke-width="1" />
+  </g>
+  
+  <!-- Title -->
+  <text x="450" y="50" font-family="'SF Pro Display', sans-serif" font-size="28" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Jrotharke Energy Cycles</text>
+  <text x="450" y="85" font-family="'SF Pro Display', sans-serif" font-size="20" fill="#5AC8FA" text-anchor="middle">Quantum-Temporal Flow Mechanics</text>
+  
+  <!-- Central Energy Cyclic System -->
+  <g transform="translate(450, 300)">
+    <!-- Outer Timestream Ring -->
+    <circle cx="0" cy="0" r="185" fill="none" stroke="#331F4A" stroke-width="4" />
+    <circle cx="0" cy="0" r="180" fill="none" stroke="#6A3093" stroke-width="2" />
+    
+    <!-- Main Energy Cycle Rings -->
+    <g>
+      <!-- Full Circle Paths -->
+      <circle cx="0" cy="0" r="150" fill="none" stroke="#5AC8FA" stroke-width="1.5" opacity="0.8" />
+      <circle cx="0" cy="0" r="110" fill="none" stroke="#BF4080" stroke-width="1.5" opacity="0.8" />
+      <circle cx="0" cy="0" r="70" fill="none" stroke="#5AC8FA" stroke-width="1.5" opacity="0.8" />
+      
+      <!-- Energy Particles -->
+      <g id="outer-particles">
+        <!-- Outer Ring Particles -->
+        <circle cx="0" cy="-150" r="4" fill="#5AC8FA" />
+        <circle cx="106" cy="-106" r="4" fill="#5AC8FA" />
+        <circle cx="150" cy="0" r="4" fill="#5AC8FA" />
+        <circle cx="106" cy="106" r="4" fill="#5AC8FA" />
+        <circle cx="0" cy="150" r="4" fill="#5AC8FA" />
+        <circle cx="-106" cy="106" r="4" fill="#5AC8FA" />
+        <circle cx="-150" cy="0" r="4" fill="#5AC8FA" />
+        <circle cx="-106" cy="-106" r="4" fill="#5AC8FA" />
+        
+        <!-- Quantum Pixel Energy particles -->
+        <rect x="-155" y="-5" width="10" height="10" fill="#5AC8FA" opacity="0.7" />
+        <rect x="-5" y="145" width="10" height="10" fill="#5AC8FA" opacity="0.7" />
+        <rect x="145" y="-5" width="10" height="10" fill="#5AC8FA" opacity="0.7" />
+        <rect x="-5" y="-155" width="10" height="10" fill="#5AC8FA" opacity="0.7" />
+      </g>
+      
+      <g id="middle-particles">
+        <!-- Middle Ring Particles -->
+        <circle cx="0" cy="-110" r="4" fill="#BF4080" />
+        <circle cx="77.78" cy="-77.78" r="4" fill="#BF4080" />
+        <circle cx="110" cy="0" r="4" fill="#BF4080" />
+        <circle cx="77.78" cy="77.78" r="4" fill="#BF4080" />
+        <circle cx="0" cy="110" r="4" fill="#BF4080" />
+        <circle cx="-77.78" cy="77.78" r="4" fill="#BF4080" />
+        <circle cx="-110" cy="0" r="4" fill="#BF4080" />
+        <circle cx="-77.78" cy="-77.78" r="4" fill="#BF4080" />
+        
+        <!-- Quantum Pixel Energy particles -->
+        <rect x="-115" y="-5" width="10" height="10" fill="#BF4080" opacity="0.7" />
+        <rect x="-5" y="105" width="10" height="10" fill="#BF4080" opacity="0.7" />
+        <rect x="105" y="-5" width="10" height="10" fill="#BF4080" opacity="0.7" />
+        <rect x="-5" y="-115" width="10" height="10" fill="#BF4080" opacity="0.7" />
+      </g>
+      
+      <g id="inner-particles">
+        <!-- Inner Ring Particles -->
+        <circle cx="0" cy="-70" r="4" fill="#5AC8FA" />
+        <circle cx="49.5" cy="-49.5" r="4" fill="#5AC8FA" />
+        <circle cx="70" cy="0" r="4" fill="#5AC8FA" />
+        <circle cx="49.5" cy="49.5" r="4" fill="#5AC8FA" />
+        <circle cx="0" cy="70" r="4" fill="#5AC8FA" />
+        <circle cx="-49.5" cy="49.5" r="4" fill="#5AC8FA" />
+        <circle cx="-70" cy="0" r="4" fill="#5AC8FA" />
+        <circle cx="-49.5" cy="-49.5" r="4" fill="#5AC8FA" />
+        
+        <!-- Quantum Pixel Energy particles -->
+        <rect x="-75" y="-5" width="10" height="10" fill="#5AC8FA" opacity="0.7" />
+        <rect x="-5" y="65" width="10" height="10" fill="#5AC8FA" opacity="0.7" />
+        <rect x="65" y="-5" width="10" height="10" fill="#5AC8FA" opacity="0.7" />
+        <rect x="-5" y="-75" width="10" height="10" fill="#5AC8FA" opacity="0.7" />
+      </g>
+      
+      <!-- Animate energy flow -->
+      <animateTransform 
+        xlink:href="#outer-particles"
+        attributeName="transform" 
+        type="rotate"
+        from="0 0 0" 
+        to="360 0 0" 
+        dur="40s" 
+        repeatCount="indefinite" />
+        
+      <animateTransform 
+        xlink:href="#middle-particles"
+        attributeName="transform" 
+        type="rotate"
+        from="0 0 0" 
+        to="-360 0 0" 
+        dur="30s" 
+        repeatCount="indefinite" />
+        
+      <animateTransform 
+        xlink:href="#inner-particles"
+        attributeName="transform" 
+        type="rotate"
+        from="0 0 0" 
+        to="360 0 0" 
+        dur="20s" 
+        repeatCount="indefinite" />
+    </g>
+    
+    <!-- Core Energy Nexus -->
+    <circle cx="0" cy="0" r="40" fill="#131A36" stroke="#6A3093" stroke-width="2" />
+    
+    <!-- Core Energy Patterns -->
+    <g id="core-pattern">
+      <path d="M-20,0 C-10,-15 10,-15 20,0 C10,15 -10,15 -20,0" fill="none" stroke="#BF4080" stroke-width="1.5" />
+      <path d="M0,-20 C15,-10 15,10 0,20 C-15,10 -15,-10 0,-20" fill="none" stroke="#5AC8FA" stroke-width="1.5" />
+      
+      <!-- Quantum entanglement nodes -->
+      <circle cx="-10" cy="-10" r="3" fill="#FFFFFF" />
+      <circle cx="10" cy="-10" r="3" fill="#FFFFFF" />
+      <circle cx="10" cy="10" r="3" fill="#FFFFFF" />
+      <circle cx="-10" cy="10" r="3" fill="#FFFFFF" />
+    </g>
+    
+    <animateTransform 
+      xlink:href="#core-pattern"
+      attributeName="transform" 
+      type="rotate"
+      from="0 0 0" 
+      to="360 0 0" 
+      dur="10s" 
+      repeatCount="indefinite" />
+    
+    <!-- Energy Cycle Types -->
+    <g>
+      <!-- Heartbeat Cycle (Jrotite Magic) -->
+      <g transform="translate(-160, -160)">
+        <circle cx="0" cy="0" r="35" fill="#131A36" stroke="#5AC8FA" stroke-width="1.5" />
+        <text x="0" y="-15" font-family="'SF Pro Display', sans-serif" font-size="11" fill="#FFFFFF" text-anchor="middle">Jrotite</text>
+        <text x="0" y="0" font-family="'SF Pro Display', sans-serif" font-size="11" fill="#FFFFFF" text-anchor="middle">Cycle</text>
+        <path d="M-20,15 L-10,15 L-5,5 L5,25 L10,15 L20,15" fill="none" stroke="#5AC8FA" stroke-width="1.5" />
+      </g>
+      
+      <!-- Breath Cycle (Hacrothite Magic) -->
+      <g transform="translate(0, -195)">
+        <circle cx="0" cy="0" r="35" fill="#131A36" stroke="#6A3093" stroke-width="1.5" />
+        <text x="0" y="-15" font-family="'SF Pro Display', sans-serif" font-size="11" fill="#FFFFFF" text-anchor="middle">Hacrothite</text>
+        <text x="0" y="0" font-family="'SF Pro Display', sans-serif" font-size="11" fill="#FFFFFF" text-anchor="middle">Cycle</text>
+        <path d="M-20,15 C-10,5 10,25 20,15" fill="none" stroke="#6A3093" stroke-width="1.5" />
+      </g>
+      
+      <!-- Step Cycle (Cholashite Magic) -->
+      <g transform="translate(160, -160)">
+        <circle cx="0" cy="0" r="35" fill="#131A36" stroke="#BF4080" stroke-width="1.5" />
+        <text x="0" y="-15" font-family="'SF Pro Display', sans-serif" font-size="11" fill="#FFFFFF" text-anchor="middle">Cholashite</text>
+        <text x="0" y="0" font-family="'SF Pro Display', sans-serif" font-size="11" fill="#FFFFFF" text-anchor="middle">Cycle</text>
+        <path d="M-20,15 L-10,15 M0,15 L10,15 M15,15 L25,15" fill="none" stroke="#BF4080" stroke-width="1.5" />
+      </g>
+    </g>
+    
+    <!-- Time-Matter Compression Zones -->
+    <g>
+      <!-- Connectivity lines with dimensional physics -->
+      <path d="M-150,0 C-120,-20 -80,-10 -40,0" stroke="#5AC8FA" stroke-width="1" stroke-dasharray="4,2" />
+      <path d="M40,0 C80,-10 120,-20 150,0" stroke="#5AC8FA" stroke-width="1" stroke-dasharray="4,2" />
+      <path d="M0,-150 C-20,-120 -10,-80 0,-40" stroke="#5AC8FA" stroke-width="1" stroke-dasharray="4,2" />
+      <path d="M0,40 C-10,80 -20,120 0,150" stroke="#5AC8FA" stroke-width="1" stroke-dasharray="4,2" />
+      
+      <!-- Compression zone indicators -->
+      <g transform="translate(150, 0)">
+        <circle cx="0" cy="0" r="15" fill="#131A36" stroke="#BF4080" stroke-width="1.5" />
+        <text x="0" y="4" font-family="'SF Pro Display', sans-serif" font-size="9" fill="#FFFFFF" text-anchor="middle">T+</text>
+      </g>
+      
+      <g transform="translate(-150, 0)">
+        <circle cx="0" cy="0" r="15" fill="#131A36" stroke="#BF4080" stroke-width="1.5" />
+        <text x="0" y="4" font-family="'SF Pro Display', sans-serif" font-size="9" fill="#FFFFFF" text-anchor="middle">T-</text>
+      </g>
+      
+      <g transform="translate(0, -150)">
+        <circle cx="0" cy="0" r="15" fill="#131A36" stroke="#BF4080" stroke-width="1.5" />
+        <text x="0" y="4" font-family="'SF Pro Display', sans-serif" font-size="9" fill="#FFFFFF" text-anchor="middle">M+</text>
+      </g>
+      
+      <g transform="translate(0, 150)">
+        <circle cx="0" cy="0" r="15" fill="#131A36" stroke="#BF4080" stroke-width="1.5" />
+        <text x="0" y="4" font-family="'SF Pro Display', sans-serif" font-size="9" fill="#FFFFFF" text-anchor="middle">M-</text>
+      </g>
+    </g>
+  </g>
+  
+  <!-- Mathematical Formula Display -->
+  <g transform="translate(450, 530)">
+    <rect x="-375" y="-30" width="750" height="60" rx="10" fill="#131A36" opacity="0.8" />
+    
+    <text x="-310" y="0" font-family="'SF Mono', monospace" font-size="16" fill="#5AC8FA">E(j) = ∮</text>
+    <text x="-270" y="-10" font-family="'SF Mono', monospace" font-size="12" fill="#FFFFFF">T</text>
+    <text x="-260" y="0" font-family="'SF Mono', monospace" font-size="16" fill="#5AC8FA">∫</text>
+    <text x="-240" y="-10" font-family="'SF Mono', monospace" font-size="12" fill="#FFFFFF">θ</text>
+    <text x="-220" y="0" font-family="'SF Mono', monospace" font-size="16" fill="#5AC8FA">∫</text>
+    <text x="-200" y="-10" font-family="'SF Mono', monospace" font-size="12" fill="#FFFFFF">ϕ</text>
+    <text x="-170" y="0" font-family="'SF Mono', monospace" font-size="16" fill="#5AC8FA">[ψ(r,t) · v(r,θ,ϕ)]</text>
+    <text x="-20" y="10" font-family="'SF Mono', monospace" font-size="12" fill="#BF4080">n</text>
+    <text x="0" y="0" font-family="'SF Mono', monospace" font-size="16" fill="#5AC8FA">× Ω</text>
+    <text x="35" y="10" font-family="'SF Mono', monospace" font-size="12" fill="#BF4080">H</text>
+    <text x="50" y="0" font-family="'SF Mono', monospace" font-size="16" fill="#5AC8FA">dt</text>
+    
+    <text x="100" y="0" font-family="'SF Mono', monospace" font-size="16" fill="#FFFFFF">|</text>
+    
+    <text x="150" y="0" font-family="'SF Mono', monospace" font-size="16" fill="#BF4080">λ</text>
+    <text x="165" y="0" font-family="'SF Mono', monospace" font-size="16" fill="#FFFFFF">∝</text>
+    <text x="190" y="0" font-family="'SF Mono', monospace" font-size="16" fill="#5AC8FA">ħ/√(tₘₚ)</text>
+    
+    <text x="260" y="0" font-family="'SF Mono', monospace" font-size="16" fill="#FFFFFF">|</text>
+    
+    <text x="300" y="0" font-family="'SF Mono', monospace" font-size="16" fill="#6A3093">C</text>
+    <text x="315" y="10" font-family="'SF Mono', monospace" font-size="12" fill="#FFFFFF">β</text>
+    <text x="330" y="0" font-family="'SF Mono', monospace" font-size="16" fill="#FFFFFF">=</text>
+    <text x="350" y="0" font-family="'SF Mono', monospace" font-size="16" fill="#5AC8FA">η̃</text>
+    <text x="360" y="10" font-family="'SF Mono', monospace" font-size="12" fill="#BF4080">Δs</text>
+  </g>
+  
+  <!-- Quantum-Spatial Energy Relationships -->
+  <g transform="translate(160, 150)">
+    <rect x="-150" y="-30" width="300" height="110" rx="10" fill="#131A36" opacity="0.8" />
+    
+    <text x="0" y="-10" font-family="'SF Pro Display', sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Primary Energy Cycle</text>
+    
+    <text x="-130" y="15" font-family="'SF Pro Text', sans-serif" font-size="12" fill="#5AC8FA" text-anchor="start">• Quantum Resonance:</text>
+    <text x="-10" y="15" font-family="'SF Pro Text', sans-serif" font-size="12" fill="#FFFFFF" text-anchor="start">10¹⁶ Hz</text>
+    
+    <text x="-130" y="40" font-family="'SF Pro Text', sans-serif" font-size="12" fill="#5AC8FA" text-anchor="start">• Temporal Dilation:</text>
+    <text x="-10" y="40" font-family="'SF Pro Text', sans-serif" font-size="12" fill="#FFFFFF" text-anchor="start">1:14.3 ratio</text>
+    
+    <text x="-130" y="65" font-family="'SF Pro Text', sans-serif" font-size="12" fill="#5AC8FA" text-anchor="start">• Matter Compression:</text>
+    <text x="-10" y="65" font-family="'SF Pro Text', sans-serif" font-size="12" fill="#FFFFFF" text-anchor="start">η = 0.87</text>
+  </g>
+  
+  <g transform="translate(740, 150)">
+    <rect x="-150" y="-30" width="300" height="110" rx="10" fill="#131A36" opacity="0.8" />
+    
+    <text x="0" y="-10" font-family="'SF Pro Display', sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Energy Transference Rates</text>
+    
+    <text x="-130" y="15" font-family="'SF Pro Text', sans-serif" font-size="12" fill="#BF4080" text-anchor="start">• Human → Jrotharke:</text>
+    <text x="20" y="15" font-family="'SF Pro Text', sans-serif" font-size="12" fill="#FFFFFF" text-anchor="start">8.1 x 10⁷ J/s</text>
+    
+    <text x="-130" y="40" font-family="'SF Pro Text', sans-serif" font-size="12" fill="#BF4080" text-anchor="start">• Jrotharke → Human:</text>
+    <text x="20" y="40" font-family="'SF Pro Text', sans-serif" font-size="12" fill="#FFFFFF" text-anchor="start">2.4 x 10⁶ J/s</text>
+    
+    <text x="-130" y="65" font-family="'SF Pro Text', sans-serif" font-size="12" fill="#BF4080" text-anchor="start">• Planar Equilibrium:</text>
+    <text x="20" y="65" font-family="'SF Pro Text', sans-serif" font-size="12" fill="#FFFFFF" text-anchor="start">3.4 : 1 imbalance</text>
+  </g>
+  
+  <!-- Region-Specific Energy Potentials -->
+  <g transform="translate(160, 430)">
+    <rect x="-150" y="-30" width="300" height="70" rx="10" fill="#131A36" opacity="0.8" />
+    
+    <text x="0" y="-10" font-family="'SF Pro Display', sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Hacroth Mountain Energy</text>
+    
+    <text x="-130" y="15" font-family="'SF Pro Text', sans-serif" font-size="12" fill="#6A3093" text-anchor="start">• Energy Density:</text>
+    <text x="0" y="15" font-family="'SF Pro Text', sans-serif" font-size="12" fill="#FFFFFF" text-anchor="start">4.7 x 10¹² J/m³</text>
+    
+    <text x="-130" y="40" font-family="'SF Pro Text', sans-serif" font-size="12" fill="#6A3093" text-anchor="start">• Harmonic Frequency:</text>
+    <text x="0" y="40" font-family="'SF Pro Text', sans-serif" font-size="12" fill="#FFFFFF" text-anchor="start">3.2 x 10⁸ Hz</text>
+  </g>
+  
+  <g transform="translate(740, 430)">
+    <rect x="-150" y="-30" width="300" height="70" rx="10" fill="#131A36" opacity="0.8" />
+    
+    <text x="0" y="-10" font-family="'SF Pro Display', sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Sea of Cholash Energy</text>
+    
+    <text x="-130" y="15" font-family="'SF Pro Text', sans-serif" font-size="12" fill="#BF4080" text-anchor="start">• Energy Density:</text>
+    <text x="0" y="15" font-family="'SF Pro Text', sans-serif" font-size="12" fill="#FFFFFF" text-anchor="start">8.3 x 10¹³ J/m³</text>
+    
+    <text x="-130" y="40" font-family="'SF Pro Text', sans-serif" font-size="12" fill="#BF4080" text-anchor="start">• Harmonic Frequency:</text>
+    <text x="0" y="40" font-family="'SF Pro Text', sans-serif" font-size="12" fill="#FFFFFF" text-anchor="start">1.7 x 10⁹ Hz</text>
+  </g>
+</svg>

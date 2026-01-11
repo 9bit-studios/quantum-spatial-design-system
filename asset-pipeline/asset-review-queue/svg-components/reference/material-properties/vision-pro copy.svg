@@ -1,0 +1,332 @@
+<!-- Quantum Combat System Interface -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 800">
+  <!-- Reusing the same defs setup from the original SVG for consistency -->
+  <defs>
+    <!-- Main background gradient -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A0621" />
+      <stop offset="100%" stop-color="#131A36" />
+    </linearGradient>
+    
+    <!-- Depth gradient for panels -->
+    <linearGradient id="depthGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#131A36" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#331F4A" stop-opacity="0.7" />
+    </linearGradient>
+    
+    <!-- Energy transition gradient -->
+    <linearGradient id="energyGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2C5F2D" />
+      <stop offset="50%" stop-color="#131A36" />
+      <stop offset="100%" stop-color="#5AC8FA" />
+    </linearGradient>
+    
+    <!-- Spiritual transition gradient -->
+    <linearGradient id="spiritualGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6A3093" />
+      <stop offset="50%" stop-color="#BF4080" />
+      <stop offset="100%" stop-color="#5AC8FA" />
+    </linearGradient>
+    
+    <!-- Combat energy gradient -->
+    <linearGradient id="combatEnergyGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#BF4080" />
+      <stop offset="60%" stop-color="#FF6B6B" />
+      <stop offset="100%" stop-color="#FFD700" opacity="0.8" />
+    </linearGradient>
+    
+    <!-- Quantum shield gradient -->
+    <linearGradient id="shieldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5AC8FA" opacity="0.2" />
+      <stop offset="50%" stop-color="#5AC8FA" opacity="0.5" />
+      <stop offset="100%" stop-color="#5AC8FA" opacity="0.2" />
+    </linearGradient>
+    
+    <!-- Dark matter gradient -->
+    <linearGradient id="darkMatterGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#131A36" opacity="0.4" />
+      <stop offset="50%" stop-color="#331F4A" opacity="0.6" />
+      <stop offset="100%" stop-color="#0A0621" opacity="0.4" />
+    </linearGradient>
+    
+    <!-- Health helix gradient -->
+    <linearGradient id="healthGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF6B6B" />
+      <stop offset="100%" stop-color="#BF4080" />
+    </linearGradient>
+    
+    <!-- Mana helix gradient -->
+    <linearGradient id="manaGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#5AC8FA" />
+      <stop offset="100%" stop-color="#6A3093" />
+    </linearGradient>
+    
+    <!-- Quantum gradient for active elements -->
+    <linearGradient id="quantumGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#131A36" />
+      <stop offset="50%" stop-color="#331F4A" />
+      <stop offset="100%" stop-color="#6A3093" />
+    </linearGradient>
+    
+    <!-- Supernova gradient -->
+    <radialGradient id="supernovaGradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="20%" stop-color="#FFD700" />
+      <stop offset="40%" stop-color="#FF6B6B" />
+      <stop offset="60%" stop-color="#BF4080" />
+      <stop offset="80%" stop-color="#6A3093" />
+      <stop offset="100%" stop-color="#131A36" opacity="0" />
+    </radialGradient>
+    
+    <!-- Light glow effect -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur" />
+      <feColorMatrix in="blur" mode="matrix" values="
+          1 0 0 0 0
+          0 1 0 0 0 
+          0 0 1 0 0
+          0 0 0 0.5 0" result="glow" />
+      <feComposite in="SourceGraphic" in2="glow" operator="over" />
+    </filter>
+    
+    <!-- Energy attack glow -->
+    <filter id="attackGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur" />
+      <feColorMatrix in="blur" mode="matrix" values="
+          1 0 0 0 0.8
+          0 0 0 0 0.2 
+          0 0 0 0 0.2
+          0 0 0 1 0" result="glow" />
+      <feComposite in="SourceGraphic" in2="glow" operator="over" />
+    </filter>
+    
+    <!-- Cosmic energy glow -->
+    <filter id="cosmicGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur" />
+      <feColorMatrix in="blur" mode="matrix" values="
+          0.3 0 0 0 0
+          0 0.4 0 0 0 
+          0 0 1 0 0
+          0 0 0 1 0" result="glow" />
+      <feComposite in="SourceGraphic" in2="glow" operator="over" />
+    </filter>
+    
+    <!-- Shield blur effect -->
+    <filter id="shieldBlur" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2" />
+    </filter>
+    
+    <!-- Shield distortion effect -->
+    <filter id="shieldDistortion" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="2" result="noise" seed="5" />
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="5" xChannelSelector="R" yChannelSelector="G" />
+    </filter>
+    
+    <!-- Spatial grid pattern -->
+    <pattern id="spatialGrid" patternUnits="userSpaceOnUse" width="100" height="100" patternTransform="rotate(15) scale(0.5)">
+      <path d="M 0 0 L 100 0" stroke="#5AC8FA" stroke-width="0.5" stroke-opacity="0.05" />
+      <path d="M 0 20 L 100 20" stroke="#5AC8FA" stroke-width="0.5" stroke-opacity="0.05" />
+      <path d="M 0 40 L 100 40" stroke="#5AC8FA" stroke-width="0.5" stroke-opacity="0.05" />
+      <path d="M 0 60 L 100 60" stroke="#5AC8FA" stroke-width="0.5" stroke-opacity="0.05" />
+      <path d="M 0 80 L 100 80" stroke="#5AC8FA" stroke-width="0.5" stroke-opacity="0.05" />
+      <path d="M 0 0 L 0 100" stroke="#5AC8FA" stroke-width="0.5" stroke-opacity="0.05" />
+      <path d="M 20 0 L 20 100" stroke="#5AC8FA" stroke-width="0.5" stroke-opacity="0.05" />
+      <path d="M 40 0 L 40 100" stroke="#5AC8FA" stroke-width="0.5" stroke-opacity="0.05" />
+      <path d="M 60 0 L 60 100" stroke="#5AC8FA" stroke-width="0.5" stroke-opacity="0.05" />
+      <path d="M 80 0 L 80 100" stroke="#5AC8FA" stroke-width="0.5" stroke-opacity="0.05" />
+    </pattern>
+    
+    <!-- Glass effect for Vision Pro UI -->
+    <linearGradient id="glassGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.08" />
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.04" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.02" />
+    </linearGradient>
+    
+    <!-- Glass surface reflection -->
+    <linearGradient id="glassReflection" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.15" />
+      <stop offset="20%" stop-color="#ffffff" stop-opacity="0.05" />
+      <stop offset="60%" stop-color="#ffffff" stop-opacity="0.02" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Main Background with Space-time grid -->
+  <rect width="900" height="800" fill="url(#bgGradient)" />
+  <rect width="900" height="800" fill="url(#spatialGrid)" />
+  
+  <!-- Title Section -->
+  <g transform="translate(450, 50)">
+    <text x="0" y="0" font-family="'SF Pro Display', -apple-system, sans-serif" font-size="32" font-weight="bold" fill="#FFFFFF" text-anchor="middle" filter="url(#glow)">Quantum Combat System</text>
+    <text x="0" y="40" font-family="'SF Pro Display', -apple-system, sans-serif" font-size="18" fill="#5AC8FA" text-anchor="middle">Astrophysical Battle Interface</text>
+  </g>
+  
+  <!-- Cosmic Energy Background Effects -->
+  <g transform="translate(450, 400)">
+    <!-- Nebula-like cosmic energy fields -->
+    <ellipse cx="0" cy="0" rx="400" ry="300" fill="url(#darkMatterGradient)" opacity="0.4" filter="url(#shieldDistortion)" />
+    
+    <!-- Distant stars -->
+    <g>
+      <circle cx="-350" cy="-160" r="1.5" fill="#FFFFFF" opacity="0.6" />
+      <circle cx="-280" cy="-220" r="1" fill="#FFFFFF" opacity="0.5" />
+      <circle cx="-150" cy="-190" r="2" fill="#FFFFFF" opacity="0.7" />
+      <circle cx="-50" cy="-250" r="1" fill="#FFFFFF" opacity="0.4" />
+      <circle cx="70" cy="-210" r="1.5" fill="#FFFFFF" opacity="0.6" />
+      <circle cx="180" cy="-180" r="1" fill="#FFFFFF" opacity="0.5" />
+      <circle cx="250" cy="-220" r="2" fill="#FFFFFF" opacity="0.7" />
+      <circle cx="320" cy="-170" r="1" fill="#FFFFFF" opacity="0.4" />
+      
+      <circle cx="-330" cy="160" r="1" fill="#FFFFFF" opacity="0.5" />
+      <circle cx="-240" cy="190" r="1.5" fill="#FFFFFF" opacity="0.6" />
+      <circle cx="-120" cy="220" r="1" fill="#FFFFFF" opacity="0.4" />
+      <circle cx="30" cy="190" r="2" fill="#FFFFFF" opacity="0.7" />
+      <circle cx="150" cy="210" r="1" fill="#FFFFFF" opacity="0.5" />
+      <circle cx="270" cy="180" r="1.5" fill="#FFFFFF" opacity="0.6" />
+      <circle cx="350" cy="220" r="1" fill="#FFFFFF" opacity="0.4" />
+    </g>
+  </g>
+  
+  <!-- Combat Arena -->
+  <g transform="translate(450, 400)">
+    <!-- Player Area -->
+    <g transform="translate(-200, 0)">
+      <!-- Player Character Representation -->
+      <circle cx="0" cy="0" r="50" fill="#131A36" opacity="0.7" stroke="#5AC8FA" stroke-width="1" stroke-opacity="0.8" />
+      
+      <!-- Player Quantum Shield -->
+      <circle cx="0" cy="0" r="60" fill="none" stroke="url(#shieldGradient)" stroke-width="3" filter="url(#shieldBlur)" />
+      
+      <!-- Player Silhouette -->
+      <g transform="translate(0, 10) scale(2)">
+        <!-- Character silhouette with quantum effect -->
+        <path d="M0,-15 C-2.5,-20 -7.5,-20 -5,-15 S0,-17.5 5,-15 S2.5,-20 0,-15" fill="#896878" />
+        <rect x="-7.5" y="-15" width="15" height="20" rx="5" fill="#896878" />
+        <rect x="-12.5" y="-7.5" width="5" height="15" rx="2" fill="#896878" />
+        <rect x="7.5" y="-7.5" width="5" height="15" rx="2" fill="#896878" />
+        <rect x="-6" y="5" width="5" height="17.5" rx="2" fill="#896878" />
+        <rect x="1" y="5" width="5" height="17.5" rx="2" fill="#896878" />
+        
+        <!-- Quantum particle effects -->
+        <rect x="-10" y="-12" width="4" height="4" fill="#5AC8FA" opacity="0.7" />
+        <rect x="6" y="-5" width="4" height="4" fill="#5AC8FA" opacity="0.7" />
+        <rect x="-4" y="8" width="4" height="4" fill="#5AC8FA" opacity="0.7" />
+      </g>
+      
+      <!-- Player Attack Indicator -->
+      <path d="M60,0 C70,-20 90,-10 110,0 C90,10 70,20 60,0 Z" fill="url(#combatEnergyGradient)" filter="url(#attackGlow)" opacity="0.9" />
+      <line x1="60" y1="0" x2="170" y2="0" stroke="#FF6B6B" stroke-width="2" stroke-opacity="0.7" stroke-dasharray="5,3" filter="url(#attackGlow)" />
+    </g>
+    
+    <!-- Enemy Area -->
+    <g transform="translate(200, 0)">
+      <!-- Enemy as Celestial Body -->
+      <circle cx="0" cy="0" r="40" fill="#331F4A" opacity="0.8" stroke="#BF4080" stroke-width="1" stroke-opacity="0.8" />
+      
+      <!-- Enemy Orbital Shields -->
+      <g filter="url(#shieldDistortion)">
+        <ellipse cx="0" cy="0" rx="60" ry="50" fill="none" stroke="#BF4080" stroke-width="1" stroke-opacity="0.4" />
+        <ellipse cx="0" cy="0" rx="70" ry="50" fill="none" stroke="#BF4080" stroke-width="1" stroke-opacity="0.3" transform="rotate(30)" />
+        <ellipse cx="0" cy="0" rx="55" ry="65" fill="none" stroke="#BF4080" stroke-width="1" stroke-opacity="0.3" transform="rotate(60)" />
+      </g>
+      
+      <!-- Enemy Core -->
+      <g>
+        <path d="M0,-15 L15,15 L-15,15 Z" fill="#BF4080" opacity="0.9" />
+        <path d="M-15,-15 L15,-15 L0,15 Z" fill="#BF4080" opacity="0.7" transform="rotate(45)" />
+      </g>
+      
+      <!-- Hit Impact Effect -->
+      <circle cx="-15" cy="10" r="25" fill="url(#supernovaGradient)" opacity="0.8" filter="url(#cosmicGlow)" />
+      
+      <!-- Space-time Distortion around Enemy -->
+      <path d="M-70,-70 C-40,-60 -30,-30 -60,-40 C-30,-10 -10,-30 -20,-60 C10,-30 30,-40 20,-70" 
+            stroke="#6A3093" stroke-width="1" stroke-opacity="0.3" fill="none" />
+      <path d="M70,70 C40,60 30,30 60,40 C30,10 10,30 20,60 C-10,30 -30,40 -20,70" 
+            stroke="#BF4080" stroke-width="1" stroke-opacity="0.3" fill="none" />
+    </g>
+    
+    <!-- Energy Wave Attack Visualization -->
+    <g>
+      <path d="M-140,0 C-120,-15 -100,15 -80,0 C-60,-15 -40,15 -20,0 C0,-15 20,15 40,0 C60,-15 80,15 100,0 C120,-15 140,15 160,0" 
+            stroke="#FF6B6B" stroke-width="2" stroke-opacity="0.7" fill="none" filter="url(#attackGlow)" />
+    </g>
+  </g>
+  
+  <!-- Player Stats Interface -->
+  <g transform="translate(450, 650)">
+    <!-- Intertwined Health and Mana Helixes -->
+    <g>
+      <!-- Health Helix -->
+      <path d="M-300,0 C-280,-20 -260,0 -240,-20 C-220,0 -200,-20 -180,0 C-160,-20 -140,0 -120,-20 C-100,0 -80,-20 -60,0 C-40,-20 -20,0 0,-20 C20,0 40,-20 60,0" 
+            stroke="url(#healthGradient)" stroke-width="4" fill="none" stroke-opacity="0.8" filter="url(#glow)" />
+      
+      <!-- Mana Helix -->
+      <path d="M-300,-20 C-280,0 -260,-20 -240,0 C-220,-20 -200,0 -180,-20 C-160,0 -140,-20 -120,0 C-100,-20 -80,0 -60,-20 C-40,0 -20,-20 0,0 C20,-20 40,0 60,-20" 
+            stroke="url(#manaGradient)" stroke-width="4" fill="none" stroke-opacity="0.8" filter="url(#glow)" />
+      
+      <!-- Health Text -->
+      <text x="-290" y="20" font-family="'SF Pro Display', -apple-system, sans-serif" font-size="14" fill="#FF6B6B" filter="url(#glow)">Health: 78/100</text>
+      
+      <!-- Mana Text -->
+      <text x="-120" y="20" font-family="'SF Pro Display', -apple-system, sans-serif" font-size="14" fill="#5AC8FA" filter="url(#glow)">Mana: 64/100</text>
+    </g>
+    
+    <!-- Combat Actions Panel -->
+    <g transform="translate(200, 0)">
+      <rect x="-150" y="-30" width="300" height="60" rx="10" fill="#131A36" opacity="0.6" stroke="#5AC8FA" stroke-width="1" />
+      <rect x="-145" y="-25" width="290" height="50" rx="8" fill="url(#glassGradient)" />
+      
+      <!-- Quantum Attack Buttons -->
+      <g transform="translate(-100, 0)">
+        <circle cx="0" cy="0" r="20" fill="#0D0D15" stroke="#FF6B6B" stroke-width="1" filter="url(#attackGlow)" />
+        <text x="0" y="4" font-family="'SF Pro Display', -apple-system, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">Energy</text>
+        <text x="0" y="-5" font-family="'SF Pro Display', -apple-system, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">Wave</text>
+      </g>
+      
+      <g transform="translate(0, 0)">
+        <circle cx="0" cy="0" r="20" fill="#0D0D15" stroke="#6A3093" stroke-width="1" />
+        <text x="0" y="4" font-family="'SF Pro Display', -apple-system, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">Quantum</text>
+        <text x="0" y="-5" font-family="'SF Pro Display', -apple-system, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">Shift</text>
+      </g>
+      
+      <g transform="translate(100, 0)">
+        <circle cx="0" cy="0" r="20" fill="#0D0D15" stroke="#5AC8FA" stroke-width="1" />
+        <text x="0" y="4" font-family="'SF Pro Display', -apple-system, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">Spatial</text>
+        <text x="0" y="-5" font-family="'SF Pro Display', -apple-system, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">Rift</text>
+      </g>
+    </g>
+  </g>
+  
+  <!-- Combat Log & Notifications -->
+  <g transform="translate(450, 100)">
+    <!-- Quantum Combat Log -->
+    <g>
+      <rect x="-200" y="0" width="400" height="40" rx="8" fill="#131A36" opacity="0.7" stroke="#5AC8FA" stroke-width="1" />
+      <rect x="-195" y="5" width="390" height="30" rx="5" fill="url(#glassGradient)" />
+      <text x="0" y="25" font-family="'SF Pro Display', -apple-system, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle" filter="url(#glow)">Critical hit! Enemy shields destabilizing...</text>
+    </g>
+  </g>
+  
+  <!-- Hand and Eye Tracking Indicators -->
+  <g transform="translate(450, 740)">
+    <!-- Hand Tracking Visualization -->
+    <g transform="translate(-100, 0)">
+      <path d="M-15,-5 C-10,-15 -5,-20 0,-15 C5,-20 10,-15 15,-5 C20,0 25,10 20,15 C15,20 10,25 5,20 C0,25 -5,20 -10,15 C-15,10 -20,0 -15,-5 Z" 
+            fill="none" stroke="#5AC8FA" stroke-width="1" stroke-dasharray="4,2" />
+      <text x="0" y="35" font-family="'SF Pro Text', -apple-system, sans-serif" font-size="12" fill="#5AC8FA" text-anchor="middle">Left Hand</text>
+    </g>
+    
+    <g transform="translate(100, 0)">
+      <path d="M-15,-5 C-10,-15 -5,-20 0,-15 C5,-20 10,-15 15,-5 C20,0 25,10 20,15 C15,20 10,25 5,20 C0,25 -5,20 -10,15 C-15,10 -20,0 -15,-5 Z" 
+            fill="none" stroke="#5AC8FA" stroke-width="1" stroke-dasharray="4,2" />
+      <text x="0" y="35" font-family="'SF Pro Text', -apple-system, sans-serif" font-size="12" fill="#5AC8FA" text-anchor="middle">Right Hand</text>
+    </g>
+    
+    <!-- Gaze Tracking Indicator -->
+    <circle cx="0" cy="-10" r="5" fill="none" stroke="#5AC8FA" stroke-width="1" stroke-opacity="0.7" />
+    <circle cx="0" cy="-10" r="1" fill="#5AC8FA" fill-opacity="0.9" />
+    <text x="0" y="-25" font-family="'SF Pro Text', -apple-system, sans-serif" font-size="12" fill="#5AC8FA" text-anchor="middle">Focus</text>
+  </g>
+</svg>

@@ -1,0 +1,1468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quantum-Spatial Pixel System Viewer</title>
+  <style>
+    :root {
+      /* Color: Primary Foundation */
+      --color-void-black: #0A0621;
+      --color-deep-space-indigo: #131A36;
+      --color-ultra-indigo: #1E1F5C;
+      --color-dimensional-eggplant: #331F4A;
+      --color-midnight-richness: #0D0D15;
+      --color-quantum-violet: #6A3093;
+      
+      /* Color: Secondary Accents */
+      --color-subtle-aqua: #29B6F6;
+      --color-subtle-cyan: #5AC8FA;
+      --color-dimensional-teal: #126D71;
+      --color-rose-energy: #BF4080;
+      --color-quantum-pulse-pink: #FF2D55;
+    }
+    
+    body {
+      background-color: var(--color-void-black);
+      color: white;
+      font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif;
+      padding: 2rem;
+      line-height: 1.6;
+    }
+    
+    h1, h2, h3 {
+      font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-weight: 600;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .intro {
+      margin-bottom: 2rem;
+    }
+    
+    .pixel-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    
+    .pixel-example {
+      background-color: rgba(19, 26, 54, 0.6);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(90, 200, 250, 0.2);
+      border-radius: 12px;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+    
+    .pixel-display {
+      width: 100%;
+      height: 120px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .pixel-label {
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.8);
+      text-align: center;
+    }
+    
+    .color-variants {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+    
+    .color-variant {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .color-label {
+      font-size: 0.75rem;
+      color: rgba(255, 255, 255, 0.7);
+    }
+    
+    /* Animation classes */
+    @keyframes opacityPulse {
+      0%, 100% { opacity: 0.7; }
+      50% { opacity: 1; }
+    }
+    
+    @keyframes scalePulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.08); }
+    }
+    
+    @keyframes combinedPulse {
+      0%, 100% { 
+        opacity: 0.7; 
+        transform: scale(1);
+      }
+      50% { 
+        opacity: 1;
+        transform: scale(1.08);
+      }
+    }
+    
+    .pulse-opacity {
+      animation: opacityPulse 4s ease-in-out infinite;
+    }
+    
+    .pulse-scale {
+      animation: scalePulse 3s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+    }
+    
+    .pulse-combined {
+      animation: combinedPulse 3s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+    }
+    
+    .delay-xs { animation-delay: 0.3s; }
+    .delay-sm { animation-delay: 0.7s; }
+    .delay-md { animation-delay: 1.4s; }
+    
+    /* Tabs */
+    .tabs {
+      display: flex;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid rgba(90, 200, 250, 0.3);
+    }
+    
+    .tab {
+      padding: 0.75rem 1.5rem;
+      margin-right: 0.5rem;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+      font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 0.95rem;
+      opacity: 0.7;
+      transition: opacity 0.2s, border-color 0.2s;
+      border-bottom: 3px solid transparent;
+    }
+    
+    .tab.active {
+      opacity: 1;
+      border-bottom: 3px solid var(--color-subtle-cyan);
+    }
+    
+    .tab:hover:not(.active) {
+      opacity: 0.9;
+      border-bottom: 3px solid rgba(90, 200, 250, 0.5);
+    }
+    
+    .tab-content {
+      display: none;
+    }
+    
+    .tab-content.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="intro">
+      <h1>Quantum-Spatial Pixel System</h1>
+      <p>Interactive viewer for the core pixel states in the Quantum-Spatial design system, optimized for M4 processors.</p>
+    </div>
+    
+    <div class="tabs">
+      <button class="tab active" data-tab="pixel-states">Pixel States</button>
+      <button class="tab" data-tab="color-variants">Color Variants</button>
+      <button class="tab" data-tab="size-variants">Size Variants</button>
+      <button class="tab" data-tab="implementation">Implementation</button>
+    </div>
+    
+    <div id="pixel-states" class="tab-content active">
+      <h2>Quantum Pixel States</h2>
+      <p>The quantum-spatial pixel system includes four primary states representing different energy and materialization conditions.</p>
+      
+      <div class="pixel-grid">
+        <!-- Materialized Pixel Example -->
+        <div class="pixel-example">
+          <div class="pixel-display">
+            <svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <filter id="glow-materialized-1" x="-50%" y="-50%" width="200%" height="200%">
+                  <feGaussianBlur stdDeviation="1.5" result="blur"/>
+                  <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+                </filter>
+                <linearGradient id="materializedGradient-1" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#331F4A" stop-opacity="0.9"/>
+                  <stop offset="100%" stop-color="#331F4A" stop-opacity="1"/>
+                </linearGradient>
+              </defs>
+              
+              <!-- Main pixel shape -->
+              <rect
+                x="0"
+                y="0"
+                width="64"
+                height="64"
+                rx="4"
+                fill="url(#materializedGradient-1)"
+                filter="url(#glow-materialized-1)"
+                class="quantum-pixel materialized-state"
+              />
+              
+              <!-- Highlight edge -->
+              <rect
+                x="3"
+                y="3"
+                width="58"
+                height="58"
+                rx="3"
+                stroke="#5AC8FA"
+                stroke-width="1"
+                fill="none"
+                opacity="0.3"
+                class="pixel-highlight"
+              />
+            </svg>
+          </div>
+          <h3>Materialized</h3>
+          <p class="pixel-label">Fully materialized state with solid appearance and subtle accent highlight.</p>
+        </div>
+        
+        <!-- Partial Pixel Example -->
+        <div class="pixel-example">
+          <div class="pixel-display">
+            <svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <filter id="glow-partial-1" x="-50%" y="-50%" width="200%" height="200%">
+                  <feGaussianBlur stdDeviation="2.5" result="blur"/>
+                  <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+                </filter>
+                <linearGradient id="partialGradient-1" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#5AC8FA" stop-opacity="0.05"/>
+                  <stop offset="80%" stop-color="#331F4A" stop-opacity="0.7"/>
+                  <stop offset="100%" stop-color="#331F4A" stop-opacity="0.8"/>
+                </linearGradient>
+              </defs>
+              
+              <!-- Main pixel shape with partial materialization -->
+              <rect
+                x="2"
+                y="2"
+                width="60"
+                height="60"
+                rx="4"
+                fill="url(#partialGradient-1)"
+                filter="url(#glow-partial-1)"
+                class="quantum-pixel partial-state"
+              />
+              
+              <!-- Edge detail to suggest partial materialization -->
+              <rect
+                x="1"
+                y="1"
+                width="62"
+                height="62"
+                rx="4"
+                stroke="#5AC8FA"
+                stroke-width="0.5"
+                stroke-dasharray="4 2"
+                fill="none"
+                opacity="0.6"
+                class="partial-edge"
+              />
+              
+              <!-- Energy highlights -->
+              <circle
+                cx="16"
+                cy="16"
+                r="4"
+                fill="#5AC8FA"
+                opacity="0.6"
+                class="energy-particle pulse-opacity"
+              />
+              
+              <circle
+                cx="48"
+                cy="40"
+                r="4"
+                fill="#5AC8FA"
+                opacity="0.4"
+                class="energy-particle pulse-opacity delay-xs"
+              />
+            </svg>
+          </div>
+          <h3>Partial</h3>
+          <p class="pixel-label">Partially materialized state with translucency and energy particles.</p>
+        </div>
+        
+        <!-- Energy Pixel Example -->
+        <div class="pixel-example">
+          <div class="pixel-display">
+            <svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <filter id="glow-energy-1" x="-50%" y="-50%" width="200%" height="200%">
+                  <feGaussianBlur stdDeviation="3.5" result="blur"/>
+                  <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+                </filter>
+                <radialGradient id="energyGradient-1" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                  <stop offset="0%" stop-color="#5AC8FA" stop-opacity="0.9"/>
+                  <stop offset="80%" stop-color="#331F4A" stop-opacity="0.7"/>
+                  <stop offset="100%" stop-color="#331F4A" stop-opacity="0.5"/>
+                </radialGradient>
+                <mask id="energy-mask-1">
+                  <rect x="0" y="0" width="64" height="64" fill="white"/>
+                  <circle class="energy-ripple" cx="32" cy="32" r="16" fill="black">
+                    <animate attributeName="r" from="5" to="20" dur="3s" repeatCount="indefinite"/>
+                    <animate attributeName="opacity" from="1" to="0" dur="3s" repeatCount="indefinite"/>
+                  </circle>
+                </mask>
+              </defs>
+              
+              <!-- Energy background -->
+              <rect
+                x="2"
+                y="2"
+                width="60"
+                height="60"
+                rx="4"
+                fill="url(#energyGradient-1)"
+                filter="url(#glow-energy-1)"
+                mask="url(#energy-mask-1)"
+                class="quantum-pixel energy-state pulse-opacity"
+              />
+              
+              <!-- Inner energy pulse -->
+              <rect
+                x="16"
+                y="16"
+                width="32"
+                height="32"
+                rx="3"
+                stroke="#5AC8FA"
+                stroke-width="1.5"
+                fill="none"
+                opacity="0.8"
+                class="energy-pulse pulse-scale"
+              />
+              
+              <!-- Energy particles -->
+              <circle cx="13" cy="19" r="3" fill="#5AC8FA" class="energy-particle pulse-opacity">
+                <animate attributeName="cx" from="13" to="45" dur="2s" repeatCount="indefinite" />
+                <animate attributeName="cy" from="19" to="25" dur="2s" repeatCount="indefinite" />
+              </circle>
+              
+              <circle cx="45" cy="19" r="3" fill="#5AC8FA" class="energy-particle pulse-opacity delay-sm">
+                <animate attributeName="cx" from="45" to="19" dur="3s" repeatCount="indefinite" />
+                <animate attributeName="cy" from="19" to="38" dur="3s" repeatCount="indefinite" />
+              </circle>
+              
+              <circle cx="32" cy="45" r="3" fill="#5AC8FA" class="energy-particle pulse-opacity delay-md">
+                <animate attributeName="cx" from="32" to="38" dur="4s" repeatCount="indefinite" />
+                <animate attributeName="cy" from="45" to="13" dur="4s" repeatCount="indefinite" />
+              </circle>
+            </svg>
+          </div>
+          <h3>Energy</h3>
+          <p class="pixel-label">Pure energy state with dynamic particles, glow effects, and ripple animations.</p>
+        </div>
+        
+        <!-- Superposition Pixel Example -->
+        <div class="pixel-example">
+          <div class="pixel-display">
+            <svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <filter id="glow-superposition-1" x="-50%" y="-50%" width="200%" height="200%">
+                  <feGaussianBlur stdDeviation="3" result="blur"/>
+                  <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+                </filter>
+                <filter id="displace-1" x="-20%" y="-20%" width="140%" height="140%">
+                  <feTurbulence type="turbulence" baseFrequency="0.03" numOctaves="2" result="turbulence">
+                    <animate attributeName="baseFrequency" from="0.03" to="0.05" dur="10s" repeatCount="indefinite"/>
+                  </feTurbulence>
+                  <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="3" xChannelSelector="R" yChannelSelector="G"/>
+                </filter>
+                <linearGradient id="superpositionGradient-1" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#5AC8FA" stop-opacity="0.3"/>
+                  <stop offset="50%" stop-color="#331F4A" stop-opacity="0.7"/>
+                  <stop offset="100%" stop-color="#BF4080" stop-opacity="0.3"/>
+                </linearGradient>
+              </defs>
+              
+              <!-- Layer 3 (background layer) -->
+              <rect
+                x="19"
+                y="19"
+                width="26"
+                height="26"
+                rx="4"
+                fill="#BF4080"
+                opacity="0.2"
+                class="superposition-layer3"
+              />
+              
+              <!-- Layer 2 (middle layer) -->
+              <rect
+                x="10"
+                y="10"
+                width="44"
+                height="44"
+                rx="4"
+                fill="#5AC8FA"
+                opacity="0.3"
+                filter="url(#displace-1)"
+                class="superposition-layer2"
+              />
+              
+              <!-- Layer 1 (primary layer) -->
+              <rect
+                x="0"
+                y="0"
+                width="64"
+                height="64"
+                rx="4"
+                fill="url(#superpositionGradient-1)"
+                filter="url(#glow-superposition-1)"
+                class="superposition-layer1 quantum-pixel"
+              />
+              
+              <!-- Position indicator lines -->
+              <line
+                x1="13"
+                y1="13"
+                x2="51"
+                y2="51"
+                stroke="#5AC8FA"
+                stroke-width="0.5"
+                stroke-dasharray="2 1"
+                opacity="0.6"
+                class="position-line"
+              />
+              
+              <line
+                x1="51"
+                y1="13"
+                x2="13"
+                y2="51"
+                stroke="#5AC8FA"
+                stroke-width="0.5"
+                stroke-dasharray="2 1"
+                opacity="0.6"
+                class="position-line"
+              />
+              
+              <!-- Quantum state indicators -->
+              <circle
+                cx="13"
+                cy="13"
+                r="5"
+                fill="#5AC8FA"
+                class="quantum-indicator pulse-combined"
+              />
+              
+              <circle
+                cx="51"
+                cy="51"
+                r="5"
+                fill="#BF4080"
+                class="quantum-indicator pulse-combined delay-sm"
+              />
+            </svg>
+          </div>
+          <h3>Superposition</h3>
+          <p class="pixel-label">Multiple states simultaneously existing with dimensional displacement effects.</p>
+        </div>
+      </div>
+    </div>
+    
+    <div id="color-variants" class="tab-content">
+      <h2>Color Variants</h2>
+      <p>Each pixel state can be rendered in different color schemes from the quantum-spatial palette.</p>
+      
+      <div class="pixel-example" style="margin-bottom: 2rem;">
+        <h3>Materialized State Color Variants</h3>
+        <div class="color-variants">
+          <!-- Deep Space Indigo Variant -->
+          <div class="color-variant">
+            <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <filter id="glow-materialized-2" x="-50%" y="-50%" width="200%" height="200%">
+                  <feGaussianBlur stdDeviation="1.5" result="blur"/>
+                  <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+                </filter>
+                <linearGradient id="materializedGradient-2" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#131A36" stop-opacity="0.9"/>
+                  <stop offset="100%" stop-color="#131A36" stop-opacity="1"/>
+                </linearGradient>
+              </defs>
+              
+              <rect
+                x="0"
+                y="0"
+                width="48"
+                height="48"
+                rx="3"
+                fill="url(#materializedGradient-2)"
+                filter="url(#glow-materialized-2)"
+              />
+              
+              <rect
+                x="2"
+                y="2"
+                width="44"
+                height="44"
+                rx="2"
+                stroke="#5AC8FA"
+                stroke-width="1"
+                fill="none"
+                opacity="0.3"
+              />
+            </svg>
+            <span class="color-label">Deep Space Indigo</span>
+          </div>
+          
+          <!-- Dimensional Eggplant Variant -->
+          <div class="color-variant">
+            <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <filter id="glow-materialized-3" x="-50%" y="-50%" width="200%" height="200%">
+                  <feGaussianBlur stdDeviation="1.5" result="blur"/>
+                  <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+                </filter>
+                <linearGradient id="materializedGradient-3" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#331F4A" stop-opacity="0.9"/>
+                  <stop offset="100%" stop-color="#331F4A" stop-opacity="1"/>
+                </linearGradient>
+              </defs>
+              
+              <rect
+                x="0"
+                y="0"
+                width="48"
+                height="48"
+                rx="3"
+                fill="url(#materializedGradient-3)"
+                filter="url(#glow-materialized-3)"
+              />
+              
+              <rect
+                x="2"
+                y="2"
+                width="44"
+                height="44"
+                rx="2"
+                stroke="#BF4080"
+                stroke-width="1"
+                fill="none"
+                opacity="0.3"
+              />
+            </svg>
+            <span class="color-label">Dimensional Eggplant</span>
+          </div>
+          
+          <!-- Midnight Richness Variant -->
+          <div class="color-variant">
+            <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <filter id="glow-materialized-4" x="-50%" y="-50%" width="200%" height="200%">
+                  <feGaussianBlur stdDeviation="1.5" result="blur"/>
+                  <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+                </filter>
+                <linearGradient id="materializedGradient-4" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#0D0D15" stop-opacity="0.9"/>
+                  <stop offset="100%" stop-color="#0D0D15" stop-opacity="1"/>
+                </linearGradient>
+              </defs>
+              
+              <rect
+                x="0"
+                y="0"
+                width="48"
+                height="48"
+                rx="3"
+                fill="url(#materializedGradient-4)"
+                filter="url(#glow-materialized-4)"
+              />
+              
+              <rect
+                x="2"
+                y="2"
+                width="44"
+                height="44"
+                rx="2"
+                stroke="#6A3093"
+                stroke-width="1"
+                fill="none"
+                opacity="0.3"
+              />
+            </svg>
+            <span class="color-label">Midnight Richness</span>
+          </div>
+          
+          <!-- Heritage Green Variant -->
+          <div class="color-variant">
+            <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <filter id="glow-materialized-5" x="-50%" y="-50%" width="200%" height="200%">
+                  <feGaussianBlur stdDeviation="1.5" result="blur"/>
+                  <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+                </filter>
+                <linearGradient id="materializedGradient-5" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#2C5F2D" stop-opacity="0.9"/>
+                  <stop offset="100%" stop-color="#2C5F2D" stop-opacity="1"/>
+                </linearGradient>
+              </defs>
+              
+              <rect
+                x="0"
+                y="0"
+                width="48"
+                height="48"
+                rx="3"
+                fill="url(#materializedGradient-5)"
+                filter="url(#glow-materialized-5)"
+              />
+              
+              <rect
+                x="2"
+                y="2"
+                width="44"
+                height="44"
+                rx="2"
+                stroke="#3DFF74"
+                stroke-width="1"
+                fill="none"
+                opacity="0.3"
+              />
+            </svg>
+            <span class="color-label">Heritage Green</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="pixel-example">
+        <h3>Energy State Color Variants</h3>
+        <div class="color-variants">
+          <!-- Deep Space Indigo Energy Variant -->
+          <div class="color-variant">
+            <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <filter id="glow-energy-2" x="-50%" y="-50%" width="200%" height="200%">
+                  <feGaussianBlur stdDeviation="3" result="blur"/>
+                  <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+                </filter>
+                <radialGradient id="energyGradient-2" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                  <stop offset="0%" stop-color="#5AC8FA" stop-opacity="0.9"/>
+                  <stop offset="80%" stop-color="#131A36" stop-opacity="0.7"/>
+                  <stop offset="100%" stop-color="#131A36" stop-opacity="0.5"/>
+                </radialGradient>
+              </defs>
+              
+              <rect
+                x="2"
+                y="2"
+                width="44"
+                height="44"
+                rx="3"
+                fill="url(#energyGradient-2)"
+                filter="url(#glow-energy-2)"
+                class="pulse-opacity"
+              />
+              
+              <rect
+                x="12"
+                y="12"
+                width="24"
+                height="24"
+                rx="2"
+                stroke="#5AC8FA"
+                stroke-width="1.5"
+                fill="none"
+                opacity="0.8"
+                class="pulse-scale"
+              />
+              
+              <circle cx="10" cy="14" r="2" fill="#5AC8FA" class="pulse-opacity"></circle>
+              <circle cx="38" cy="14" r="2" fill="#5AC8FA" class="pulse-opacity delay-sm"></circle>
+              <circle cx="24" cy="34" r="2" fill="#5AC8FA" class="pulse-opacity delay-md"></circle>
+            </svg>
+            <span class="color-label">Cyan / Indigo</span>
+          </div>
+          
+          <!-- Rose Energy Variant -->
+          <div class="color-variant">
+            <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <filter id="glow-energy-3" x="-50%" y="-50%" width="200%" height="200%">
+                  <feGaussianBlur stdDeviation="3" result="blur"/>
+                  <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+                </filter>
+                <radialGradient id="energyGradient-3" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                  <stop offset="0%" stop-color="#BF4080" stop-opacity="0.9"/>
+                  <stop offset="80%" stop-color="#331F4A" stop-opacity="0.7"/>
+                  <stop offset="100%" stop-color="#331F4A" stop-opacity="0.5"/>
+                </radialGradient>
+              </defs>
+              
+              <rect
+                x="2"
+                y="2"
+                width="44"
+                height="44"
+                rx="3"
+                fill="url(#energyGradient-3)"
+                filter="url(#glow-energy-3)"
+                class="pulse-opacity"
+              />
+              
+              <rect
+                x="12"
+                y="12"
+                width="24"
+                height="24"
+                rx="2"
+                stroke="#BF4080"
+                stroke-width="1.5"
+                fill="none"
+                opacity="0.8"
+                class="pulse-scale"
+              />
+              
+              <circle cx="10" cy="14" r="2" fill="#BF4080" class="pulse-opacity"></circle>
+              <circle cx="38" cy="14" r="2" fill="#BF4080" class="pulse-opacity delay-sm"></circle>
+              <circle cx="24" cy="34" r="2" fill="#BF4080" class="pulse-opacity delay-md"></circle>
+            </svg>
+            <span class="color-label">Rose / Eggplant</span>
+          </div>
+          
+          <!-- Quantum Violet Variant -->
+          <div class="color-variant">
+            <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <filter id="glow-energy-4" x="-50%" y="-50%" width="200%" height="200%">
+                  <feGaussianBlur stdDeviation="3" result="blur"/>
+                  <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+                </filter>
+                <radialGradient id="energyGradient-4" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                  <stop offset="0%" stop-color="#6A3093" stop-opacity="0.9"/>
+                  <stop offset="80%" stop-color="#0D0D15" stop-opacity="0.7"/>
+                  <stop offset="100%" stop-color="#0D0D15" stop-opacity="0.5"/>
+                </radialGradient>
+              </defs>
+              
+              <rect
+                x="2"
+                y="2"
+                width="44"
+                height="44"
+                rx="3"
+                fill="url(#energyGradient-4)"
+                filter="url(#glow-energy-4)"
+                class="pulse-opacity"
+              />
+              
+              <rect
+                x="12"
+                y="12"
+                width="24"
+                height="24"
+                rx="2"
+                stroke="#6A3093"
+                stroke-width="1.5"
+                fill="none"
+                opacity="0.8"
+                class="pulse-scale"
+              />
+              
+              <circle cx="10" cy="14" r="2" fill="#6A3093" class="pulse-opacity"></circle>
+              <circle cx="38" cy="14" r="2" fill="#6A3093" class="pulse-opacity delay-sm"></circle>
+              <circle cx="24" cy="34" r="2" fill="#6A3093" class="pulse-opacity delay-md"></circle>
+            </svg>
+            <span class="color-label">Violet / Midnight</span>
+          </div>
+          
+          <!-- Heritage Pixel Variant -->
+          <div class="color-variant">
+            <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <filter id="glow-energy-5" x="-50%" y="-50%" width="200%" height="200%">
+                  <feGaussianBlur stdDeviation="3" result="blur"/>
+                  <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+                </filter>
+                <radialGradient id="energyGradient-5" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                  <stop offset="0%" stop-color="#3DFF74" stop-opacity="0.9"/>
+                  <stop offset="80%" stop-color="#2C5F2D" stop-opacity="0.7"/>
+                  <stop offset="100%" stop-color="#2C5F2D" stop-opacity="0.5"/>
+                </radialGradient>
+              </defs>
+              
+              <rect
+                x="2"
+                y="2"
+                width="44"
+                height="44"
+                rx="3"
+                fill="url(#energyGradient-5)"
+                filter="url(#glow-energy-5)"
+                class="pulse-opacity"
+              />
+              
+              <rect
+                x="12"
+                y="12"
+                width="24"
+                height="24"
+                rx="2"
+                stroke="#3DFF74"
+                stroke-width="1.5"
+                fill="none"
+                opacity="0.8"
+                class="pulse-scale"
+              />
+              
+              <circle cx="10" cy="14" r="2" fill="#3DFF74" class="pulse-opacity"></circle>
+              <circle cx="38" cy="14" r="2" fill="#3DFF74" class="pulse-opacity delay-sm"></circle>
+              <circle cx="24" cy="34" r="2" fill="#3DFF74" class="pulse-opacity delay-md"></circle>
+            </svg>
+            <span class="color-label">Pixel Green / Heritage</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div id="size-variants" class="tab-content">
+      <h2>Size Variants</h2>
+      <p>Each pixel state can be generated in multiple size variants while maintaining proportional visual characteristics.</p>
+      
+      <div class="pixel-example">
+        <h3>Materialized Pixel Sizes</h3>
+        <div class="color-variants">
+          <!-- Size 1x -->
+          <div class="color-variant">
+            <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <filter id="glow-materialized-s1" x="-50%" y="-50%" width="200%" height="200%">
+                  <feGaussianBlur stdDeviation="0.5" result="blur"/>
+                  <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+                </filter>
+                <linearGradient id="materializedGradient-s1" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#331F4A" stop-opacity="0.9"/>
+                  <stop offset="100%" stop-color="#331F4A" stop-opacity="1"/>
+                </linearGradient>
+              </defs>
+              
+              <rect
+                x="0"
+                y="0"
+                width="16"
+                height="16"
+                rx="1"
+                fill="url(#materializedGradient-s1)"
+                filter="url(#glow-materialized-s1)"
+              />
+              
+              <rect
+                x="1"
+                y="1"
+                width="14"
+                height="14"
+                rx="1"
+                stroke="#5AC8FA"
+                stroke-width="0.5"
+                fill="none"
+                opacity="0.3"
+              />
+            </svg>
+            <span class="color-label">1x (16px)</span>
+          </div>
+          
+          <!-- Size 2x -->
+          <div class="color-variant">
+            <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <filter id="glow-materialized-s2" x="-50%" y="-50%" width="200%" height="200%">
+                  <feGaussianBlur stdDeviation="1" result="blur"/>
+                  <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+                </filter>
+                <linearGradient id="materializedGradient-s2" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#331F4A" stop-opacity="0.9"/>
+                  <stop offset="100%" stop-color="#331F4A" stop-opacity="1"/>
+                </linearGradient>
+              </defs>
+              
+              <rect
+                x="0"
+                y="0"
+                width="32"
+                height="32"
+                rx="2"
+                fill="url(#materializedGradient-s2)"
+                filter="url(#glow-materialized-s2)"
+              />
+              
+              <rect
+                x="2"
+                y="2"
+                width="28"
+                height="28"
+                rx="2"
+                stroke="#5AC8FA"
+                stroke-width="0.75"
+                fill="none"
+                opacity="0.3"
+              />
+            </svg>
+            <span class="color-label">2x (32px)</span>
+          </div>
+          
+          <!-- Size 3x -->
+          <div class="color-variant">
+            <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <filter id="glow-materialized-s3" x="-50%" y="-50%" width="200%" height="200%">
+                  <feGaussianBlur stdDeviation="1.5" result="blur"/>
+                  <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+                </filter>
+                <linearGradient id="materializedGradient-s3" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#331F4A" stop-opacity="0.9"/>
+                  <stop offset="100%" stop-color="#331F4A" stop-opacity="1"/>
+                </linearGradient>
+              </defs>
+              
+              <rect
+                x="0"
+                y="0"
+                width="48"
+                height="48"
+                rx="3"
+                fill="url(#materializedGradient-s3)"
+                filter="url(#glow-materialized-s3)"
+              />
+              
+              <rect
+                x="2"
+                y="2"
+                width="44"
+                height="44"
+                rx="2"
+                stroke="#5AC8FA"
+                stroke-width="1"
+                fill="none"
+                opacity="0.3"
+              />
+            </svg>
+            <span class="color-label">3x (48px)</span>
+          </div>
+          
+          <!-- Size 4x -->
+          <div class="color-variant">
+            <svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <filter id="glow-materialized-s4" x="-50%" y="-50%" width="200%" height="200%">
+                  <feGaussianBlur stdDeviation="1.5" result="blur"/>
+                  <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+                </filter>
+                <linearGradient id="materializedGradient-s4" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#331F4A" stop-opacity="0.9"/>
+                  <stop offset="100%" stop-color="#331F4A" stop-opacity="1"/>
+                </linearGradient>
+              </defs>
+              
+              <rect
+                x="0"
+                y="0"
+                width="64"
+                height="64"
+                rx="4"
+                fill="url(#materializedGradient-s4)"
+                filter="url(#glow-materialized-s4)"
+              />
+              
+              <rect
+                x="3"
+                y="3"
+                width="58"
+                height="58"
+                rx="3"
+                stroke="#5AC8FA"
+                stroke-width="1"
+                fill="none"
+                opacity="0.3"
+              />
+            </svg>
+            <span class="color-label">4x (64px)</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="pixel-example">
+        <h3>Superposition Pixel Sizes</h3>
+        <div class="color-variants">
+          <!-- Size 1x -->
+          <div class="color-variant">
+            <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <filter id="glow-superposition-s1" x="-50%" y="-50%" width="200%" height="200%">
+                  <feGaussianBlur stdDeviation="0.75" result="blur"/>
+                  <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+                </filter>
+                <linearGradient id="superpositionGradient-s1" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#5AC8FA" stop-opacity="0.3"/>
+                  <stop offset="50%" stop-color="#331F4A" stop-opacity="0.7"/>
+                  <stop offset="100%" stop-color="#BF4080" stop-opacity="0.3"/>
+                </linearGradient>
+              </defs>
+              
+              <rect
+                x="5"
+                y="5"
+                width="6"
+                height="6"
+                rx="1"
+                fill="#BF4080"
+                opacity="0.2"
+              />
+              
+              <rect
+                x="3"
+                y="3"
+                width="10"
+                height="10"
+                rx="1"
+                fill="#5AC8FA"
+                opacity="0.3"
+              />
+              
+              <rect
+                x="0"
+                y="0"
+                width="16"
+                height="16"
+                rx="1"
+                fill="url(#superpositionGradient-s1)"
+                filter="url(#glow-superposition-s1)"
+              />
+              
+              <line
+                x1="3"
+                y1="3"
+                x2="13"
+                y2="13"
+                stroke="#5AC8FA"
+                stroke-width="0.25"
+                stroke-dasharray="1 0.5"
+                opacity="0.6"
+              />
+              
+              <line
+                x1="13"
+                y1="3"
+                x2="3"
+                y2="13"
+                stroke="#5AC8FA"
+                stroke-width="0.25"
+                stroke-dasharray="1 0.5"
+                opacity="0.6"
+              />
+              
+              <circle
+                cx="3"
+                cy="3"
+                r="1.5"
+                fill="#5AC8FA"
+                class="pulse-combined"
+              />
+              
+              <circle
+                cx="13"
+                cy="13"
+                r="1.5"
+                fill="#BF4080"
+                class="pulse-combined delay-sm"
+              />
+            </svg>
+            <span class="color-label">1x (16px)</span>
+          </div>
+          
+          <!-- Size 2x -->
+          <div class="color-variant">
+            <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <filter id="glow-superposition-s2" x="-50%" y="-50%" width="200%" height="200%">
+                  <feGaussianBlur stdDeviation="1.5" result="blur"/>
+                  <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+                </filter>
+                <linearGradient id="superpositionGradient-s2" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#5AC8FA" stop-opacity="0.3"/>
+                  <stop offset="50%" stop-color="#331F4A" stop-opacity="0.7"/>
+                  <stop offset="100%" stop-color="#BF4080" stop-opacity="0.3"/>
+                </linearGradient>
+              </defs>
+              
+              <rect
+                x="9"
+                y="9"
+                width="14"
+                height="14"
+                rx="2"
+                fill="#BF4080"
+                opacity="0.2"
+              />
+              
+              <rect
+                x="5"
+                y="5"
+                width="22"
+                height="22"
+                rx="2"
+                fill="#5AC8FA"
+                opacity="0.3"
+              />
+              
+              <rect
+                x="0"
+                y="0"
+                width="32"
+                height="32"
+                rx="2"
+                fill="url(#superpositionGradient-s2)"
+                filter="url(#glow-superposition-s2)"
+              />
+              
+              <line
+                x1="7"
+                y1="7"
+                x2="25"
+                y2="25"
+                stroke="#5AC8FA"
+                stroke-width="0.5"
+                stroke-dasharray="1 0.5"
+                opacity="0.6"
+              />
+              
+              <line
+                x1="25"
+                y1="7"
+                x2="7"
+                y2="25"
+                stroke="#5AC8FA"
+                stroke-width="0.5"
+                stroke-dasharray="1 0.5"
+                opacity="0.6"
+              />
+              
+              <circle
+                cx="7"
+                cy="7"
+                r="2.5"
+                fill="#5AC8FA"
+                class="pulse-combined"
+              />
+              
+              <circle
+                cx="25"
+                cy="25"
+                r="2.5"
+                fill="#BF4080"
+                class="pulse-combined delay-sm"
+              />
+            </svg>
+            <span class="color-label">2x (32px)</span>
+          </div>
+          
+          <!-- Size 3x -->
+          <div class="color-variant">
+            <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <filter id="glow-superposition-s3" x="-50%" y="-50%" width="200%" height="200%">
+                  <feGaussianBlur stdDeviation="2" result="blur"/>
+                  <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+                </filter>
+                <linearGradient id="superpositionGradient-s3" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#5AC8FA" stop-opacity="0.3"/>
+                  <stop offset="50%" stop-color="#331F4A" stop-opacity="0.7"/>
+                  <stop offset="100%" stop-color="#BF4080" stop-opacity="0.3"/>
+                </linearGradient>
+              </defs>
+              
+              <rect
+                x="14"
+                y="14"
+                width="20"
+                height="20"
+                rx="3"
+                fill="#BF4080"
+                opacity="0.2"
+              />
+              
+              <rect
+                x="7"
+                y="7"
+                width="34"
+                height="34"
+                rx="3"
+                fill="#5AC8FA"
+                opacity="0.3"
+              />
+              
+              <rect
+                x="0"
+                y="0"
+                width="48"
+                height="48"
+                rx="3"
+                fill="url(#superpositionGradient-s3)"
+                filter="url(#glow-superposition-s3)"
+              />
+              
+              <line
+                x1="10"
+                y1="10"
+                x2="38"
+                y2="38"
+                stroke="#5AC8FA"
+                stroke-width="0.5"
+                stroke-dasharray="2 1"
+                opacity="0.6"
+              />
+              
+              <line
+                x1="38"
+                y1="10"
+                x2="10"
+                y2="38"
+                stroke="#5AC8FA"
+                stroke-width="0.5"
+                stroke-dasharray="2 1"
+                opacity="0.6"
+              />
+              
+              <circle
+                cx="10"
+                cy="10"
+                r="4"
+                fill="#5AC8FA"
+                class="pulse-combined"
+              />
+              
+              <circle
+                cx="38"
+                cy="38"
+                r="4"
+                fill="#BF4080"
+                class="pulse-combined delay-sm"
+              />
+            </svg>
+            <span class="color-label">3x (48px)</span>
+          </div>
+          
+          <!-- Size 4x -->
+          <div class="color-variant">
+            <svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <filter id="glow-superposition-s4" x="-50%" y="-50%" width="200%" height="200%">
+                  <feGaussianBlur stdDeviation="3" result="blur"/>
+                  <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+                </filter>
+                <linearGradient id="superpositionGradient-s4" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#5AC8FA" stop-opacity="0.3"/>
+                  <stop offset="50%" stop-color="#331F4A" stop-opacity="0.7"/>
+                  <stop offset="100%" stop-color="#BF4080" stop-opacity="0.3"/>
+                </linearGradient>
+              </defs>
+              
+              <rect
+                x="19"
+                y="19"
+                width="26"
+                height="26"
+                rx="4"
+                fill="#BF4080"
+                opacity="0.2"
+              />
+              
+              <rect
+                x="10"
+                y="10"
+                width="44"
+                height="44"
+                rx="4"
+                fill="#5AC8FA"
+                opacity="0.3"
+              />
+              
+              <rect
+                x="0"
+                y="0"
+                width="64"
+                height="64"
+                rx="4"
+                fill="url(#superpositionGradient-s4)"
+                filter="url(#glow-superposition-s4)"
+              />
+              
+              <line
+                x1="13"
+                y1="13"
+                x2="51"
+                y2="51"
+                stroke="#5AC8FA"
+                stroke-width="0.5"
+                stroke-dasharray="2 1"
+                opacity="0.6"
+              />
+              
+              <line
+                x1="51"
+                y1="13"
+                x2="13"
+                y2="51"
+                stroke="#5AC8FA"
+                stroke-width="0.5"
+                stroke-dasharray="2 1"
+                opacity="0.6"
+              />
+              
+              <circle
+                cx="13"
+                cy="13"
+                r="5"
+                fill="#5AC8FA"
+                class="pulse-combined"
+              />
+              
+              <circle
+                cx="51"
+                cy="51"
+                r="5"
+                fill="#BF4080"
+                class="pulse-combined delay-sm"
+              />
+            </svg>
+            <span class="color-label">4x (64px)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div id="implementation" class="tab-content">
+      <h2>Implementation Guide</h2>
+      <p>The Quantum-Spatial Pixel System is implemented through parameterized SVG templates that can be used to generate all needed variants.</p>
+      
+      <div class="pixel-example">
+        <h3>Using the Pixel Generator</h3>
+        <pre style="background-color: #0D0D15; padding: 1.5rem; border-radius: 8px; overflow-x: auto; color: #5AC8FA; font-family: 'SF Mono', monospace; font-size: 14px;">
+// Import the pixel generator
+const { generateQuantumPixel } = require('./pixel-generator.js');
+
+// Generate a materialized pixel
+const materializedPixel = generateQuantumPixel({
+  size: 32,
+  state: 'materialized',
+  color: '#331F4A', // Dimensional Eggplant
+  accentColor: '#5AC8FA', // Subtle Cyan
+  borderRadius: 2
+});
+
+// Generate an energy pixel with custom colors
+const energyPixel = generateQuantumPixel({
+  size: 48,
+  state: 'energy',
+  color: '#2C5F2D', // Heritage Green
+  accentColor: '#3DFF74', // Heritage Pixel Green
+  borderRadius: 3
+});
+
+// Generate a superposition pixel
+const superpositionPixel = generateQuantumPixel({
+  size: 64,
+  state: 'superposition',
+  color: '#0D0D15', // Midnight Richness
+  accentColor: '#6A3093', // Quantum Violet
+  secondaryAccentColor: '#FF2D55', // Quantum Pulse Pink
+  borderRadius: 4
+});
+
+// Generate the entire system with all variations
+const pixelSystem = generateQuantumPixelSystem();</pre>
+      </div>
+      
+      <div class="pixel-example">
+        <h3>Using CSS with the Pixel System</h3>
+        <pre style="background-color: #0D0D15; padding: 1.5rem; border-radius: 8px; overflow-x: auto; color: #5AC8FA; font-family: 'SF Mono', monospace; font-size: 14px;">
+/* Animation Classes */
+@keyframes opacityPulse {
+  0%, 100% { opacity: var(--opacity-subtle); }
+  50% { opacity: 1; }
+}
+
+@keyframes scalePulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+}
+
+.pulse-opacity {
+  animation: opacityPulse var(--pulse-duration-medium) 
+    var(--ease-standard) infinite;
+}
+
+.pulse-scale {
+  animation: scalePulse var(--pulse-duration-medium) 
+    var(--ease-quantum) infinite;
+}
+
+.pulse-combined {
+  animation: 
+    opacityPulse var(--pulse-duration-medium) var(--ease-standard) infinite,
+    scalePulse var(--pulse-duration-medium) var(--ease-quantum) infinite;
+}
+
+/* Glassmorphism with Pixels */
+.quantum-pixel-container {
+  background: var(--glass-background-medium);
+  backdrop-filter: blur(var(--glass-blur-medium));
+  border-radius: var(--radius-lg);
+  padding: var(--space-md);
+  display: flex;
+  gap: var(--space-sm);
+}</pre>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Tab functionality
+      const tabs = document.querySelectorAll('.tab');
+      const tabContents = document.querySelectorAll('.tab-content');
+      
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          // Remove active class from all tabs
+          tabs.forEach(t => t.classList.remove('active'));
+          tabContents.forEach(content => content.classList.remove('active'));
+          
+          // Add active class to clicked tab
+          tab.classList.add('active');
+          
+          // Show corresponding tab content
+          const tabId = tab.getAttribute('data-tab');
+          document.getElementById(tabId).classList.add('active');
+        });
+      });
+    });
+  </script>
+</body>
+</html>

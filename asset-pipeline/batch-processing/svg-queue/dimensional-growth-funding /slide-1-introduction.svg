@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <!-- Background with quantum grid -->
+  <rect width="1200" height="800" fill="#0A0621" />
+  
+  <!-- Dimensional grid with perspective effect -->
+  <g opacity="0.1">
+    <!-- Horizontal grid lines -->
+    <path d="M100,700 Q600,680 1100,700" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M150,650 Q600,630 1050,650" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M200,600 Q600,580 1000,600" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M250,550 Q600,530 950,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M300,500 Q600,480 900,500" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M350,450 Q600,430 850,450" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M400,400 Q600,380 800,400" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M450,350 Q600,330 750,350" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M500,300 Q600,280 700,300" stroke="#5AC8FA" stroke-width="1" />
+    
+    <!-- Vertical grid lines -->
+    <path d="M400,300 L400,700" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M500,300 L500,700" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M600,300 L600,700" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M700,300 L700,700" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M800,300 L800,700" stroke="#5AC8FA" stroke-width="1" />
+  </g>
+  
+  <!-- Title with quantum-spatial effect -->
+  <g>
+    <text x="600" y="120" font-family="'SF Pro Display', sans-serif" font-size="80" font-weight="bold" fill="#FFFFFF" text-anchor="middle">INTRODUCTION</text>
+    <!-- Quantum pixels on title -->
+    <rect x="450" y="90" width="10" height="10" fill="#5AC8FA" opacity="0.8" />
+    <rect x="740" y="110" width="8" height="8" fill="#6A3093" opacity="0.8" />
+    <rect x="460" y="130" width="12" height="12" fill="#BF4080" opacity="0.8" />
+    <rect x="730" y="90" width="14" height="14" fill="#5AC8FA" opacity="0.7" />
+  </g>
+  
+  <!-- Left panel: Company Overview -->
+  <g transform="translate(350, 320)">
+    <rect x="-200" y="-80" width="400" height="300" rx="15" fill="#131A36" opacity="0.8" stroke="#5AC8FA" stroke-width="2" />
+    <text x="0" y="-45" font-family="'SF Pro Display', sans-serif" font-size="32" fill="#FFFFFF" text-anchor="middle">9BIT STUDIOS</text>
+    
+    <!-- Core Products -->
+    <g transform="translate(0, 20)">
+      <!-- Jrotharke icon -->
+      <g transform="translate(-120, 0)">
+        <circle cx="0" cy="0" r="40" fill="#331F4A" stroke="#5AC8FA" stroke-width="1.5" />
+        <text x="0" y="5" font-family="'SF Pro Text', sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">Jrotharke</text>
+        <text x="0" y="25" font-family="'SF Pro Text', sans-serif" font-size="12" fill="#5AC8FA" text-anchor="middle">Narrative Game</text>
+        <!-- Quantum pixel effect -->
+        <rect x="-25" y="-25" width="8" height="8" fill="#5AC8FA" opacity="0.8" />
+        <rect x="15" y="15" width="8" height="8" fill="#BF4080" opacity="0.8" />
+      </g>
+      
+      <!-- Oksana icon -->
+      <g transform="translate(120, 0)">
+        <circle cx="0" cy="0" r="40" fill="#331F4A" stroke="#6A3093" stroke-width="1.5" />
+        <text x="0" y="5" font-family="'SF Pro Text', sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">Oksana</text>
+        <text x="0" y="25" font-family="'SF Pro Text', sans-serif" font-size="12" fill="#6A3093" text-anchor="middle">Creative Platform</text>
+        <!-- Quantum pixel effect -->
+        <rect x="-15" y="-25" width="8" height="8" fill="#6A3093" opacity="0.8" />
+        <rect x="20" y="10" width="8" height="8" fill="#5AC8FA" opacity="0.8" />
+      </g>
+      
+      <!-- Connecting line -->
+      <line x1="-75" y1="0" x2="75" y2="0" stroke="#5AC8FA" stroke-width="1.5" stroke-dasharray="4,4" />
+    </g>
+    
+    <!-- Design Foundation -->
+    <g transform="translate(0, 100)">
+      <rect x="-150" y="-15" width="300" height="50" rx="8" fill="#0D0D15" stroke="#BF4080" stroke-width="1" />
+      <text x="0" y="10" font-family="'SF Pro Text', sans-serif" font-size="18" fill="#FFFFFF" text-anchor="middle">Quantum-Spatial Design System</text>
+      
+      <!-- Dimensional pixels -->
+      <rect x="-140" y="-12" width="10" height="10" fill="#5AC8FA" opacity="0.7" />
+      <rect x="135" y="-8" width="8" height="8" fill="#BF4080" opacity="0.8" />
+    </g>
+    
+    <!-- Current Stage -->
+    <text x="0" y="170" font-family="'SF Pro Text', sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">Design system and worldbuilding complete</text>
+    <text x="0" y="195" font-family="'SF Pro Text', sans-serif" font-size="16" fill="#5AC8FA" text-anchor="middle">Ready for technical implementation</text>
+  </g>
+  
+  <!-- Right panel: Meeting Goals -->
+  <g transform="translate(850, 320)">
+    <rect x="-150" y="-80" width="300" height="300" rx="15" fill="#131A36" opacity="0.8" stroke="#6A3093" stroke-width="2" />
+    <text x="0" y="-45" font-family="'SF Pro Display', sans-serif" font-size="28" fill="#FFFFFF" text-anchor="middle">MEETING GOALS</text>
+    
+    <!-- Goals with dimensional effect -->
+    <g transform="translate(0, 20)">
+      <path d="M-100,0 L100,0" stroke="#6A3093" stroke-width="1" stroke-dasharray="3,3" />
+      <circle cx="-80" cy="0" r="8" fill="#331F4A" stroke="#5AC8FA" stroke-width="1" />
+      <text x="0" y="5" font-family="'SF Pro Text', sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">Explore Strategic Integration</text>
+    </g>
+    
+    <g transform="translate(0, 70)">
+      <path d="M-100,0 L100,0" stroke="#6A3093" stroke-width="1" stroke-dasharray="3,3" />
+      <circle cx="-80" cy="0" r="8" fill="#331F4A" stroke="#BF4080" stroke-width="1" />
+      <text x="0" y="5" font-family="'SF Pro Text', sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">Identify Implementation Paths</text>
+    </g>
+    
+    <g transform="translate(0, 120)">
+      <path d="M-100,0 L100,0" stroke="#6A3093" stroke-width="1" stroke-dasharray="3,3" />
+      <circle cx="-80" cy="0" r="8" fill="#331F4A" stroke="#5AC8FA" stroke-width="1" />
+      <text x="0" y="5" font-family="'SF Pro Text', sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">Establish Collaboration Framework</text>
+    </g>
+    
+    <!-- Dimensional quantum pixels -->
+    <rect x="-130" y="150" width="12" height="12" fill="#5AC8FA" opacity="0.7" />
+    <rect x="100" y="160" width="8" height="8" fill="#BF4080" opacity="0.8" />
+    <rect x="-50" y="170" width="10" height="10" fill="#6A3093" opacity="0.7" />
+    <rect x="80" y="175" width="15" height="15" fill="#5AC8FA" opacity="0.6" />
+  </g>
+  
+  <!-- Connecting elements -->
+  <g>
+    <path d="M350,320 L850,320" stroke="#5AC8FA" stroke-width="1" stroke-dasharray="15,10" />
+    <circle cx="600" cy="320" r="5" fill="#BF4080" />
+  </g>
+  
+  <!-- 9Bit Studios Logo suggesting in top corner -->
+  <g transform="translate(120, 120)">
+    <rect x="-40" y="-40" width="80" height="80" rx="10" fill="#131A36" stroke="#5AC8FA" stroke-width="2" />
+    <text x="0" y="0" font-family="'SF Pro Display', sans-serif" font-size="24" font-weight="bold" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle">9B</text>
+    <rect x="-25" y="-25" width="8" height="8" fill="#BF4080" opacity="0.8" />
+    <rect x="15" y="15" width="10" height="10" fill="#5AC8FA" opacity="0.7" />
+  </g>
+  
+  <!-- Time indicator -->
+  <g transform="translate(1080, 120)">
+    <rect x="-80" y="-30" width="160" height="60" rx="30" fill="#0D0D15" stroke="#6A3093" stroke-width="1.5" />
+    <text x="0" y="8" font-family="'SF Pro Text', sans-serif" font-size="24" fill="#FFFFFF" text-anchor="middle">3 minutes</text>
+  </g>
+</svg>

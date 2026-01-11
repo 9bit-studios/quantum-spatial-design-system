@@ -1,0 +1,34 @@
+name = "quantum-spatial-design-system-staging"
+main = "src/fixed-worker.js"
+compatibility_date = "2025-05-01"
+account_id = "7082db633f378f09d2706f247a1a721d"
+workers_dev = true
+
+# Custom domains for staging environment
+routes = [
+  { pattern = "design-system-staging.9bitstudios.io/*", zone_id = "2e917cabaf679a764a195b69a568090b" }
+]
+
+[vars]
+ENVIRONMENT = "staging"
+
+# Enable worker logs for debugging
+[observability.logs]
+enabled = true
+
+[env.staging]
+# Custom domains for staging environment
+routes = [
+  { pattern = "design-system-staging.9bitstudios.io/*", zone_id = "2e917cabaf679a764a195b69a568090b" }
+]
+workers_dev = true
+vars = { ENVIRONMENT = "staging" }
+
+[env.production]
+name = "quantum-spatial-design-system"
+# Custom domains for production environment
+routes = [
+  { pattern = "design-system.9bitstudios.io/*", zone_id = "2e917cabaf679a764a195b69a568090b" }
+]
+workers_dev = true
+vars = { ENVIRONMENT = "production" }

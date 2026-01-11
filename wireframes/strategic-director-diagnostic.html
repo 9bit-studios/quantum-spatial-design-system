@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strategic Intelligence Director - Diagnostic Decision Tree</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #000;
+            color: #fff;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .diagnostic-flow {
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .decision-node {
+            background: rgba(0,122,255,0.1);
+            border: 1px solid rgba(0,122,255,0.3);
+            border-radius: 12px;
+            padding: 16px;
+            margin: 12px 0;
+            position: relative;
+        }
+        
+        .action-node {
+            background: rgba(52,199,89,0.1);
+            border: 1px solid rgba(52,199,89,0.3);
+            border-radius: 12px;
+            padding: 16px;
+            margin: 12px 0;
+        }
+        
+        .warning-node {
+            background: rgba(255,59,48,0.1);
+            border: 1px solid rgba(255,59,48,0.3);
+            border-radius: 12px;
+            padding: 16px;
+            margin: 12px 0;
+        }
+        
+        .flow-arrow {
+            text-align: center;
+            font-size: 24px;
+            color: rgba(255,255,255,0.5);
+            margin: 8px 0;
+        }
+        
+        .status-indicator {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+        
+        .status-active { background: #34C759; }
+        .status-warning { background: #FF9500; }
+        .status-error { background: #FF3B30; }
+        
+        .quick-check {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 16px;
+            margin: 20px 0;
+        }
+        
+        .check-item {
+            background: rgba(255,255,255,0.05);
+            border-radius: 8px;
+            padding: 12px;
+            font-size: 14px;
+        }
+        
+        .recommendation {
+            background: rgba(191,64,128,0.1);
+            border: 1px solid rgba(191,64,128,0.3);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .timeline {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(255,255,255,0.02);
+            border-radius: 8px;
+            padding: 12px;
+            font-size: 14px;
+        }
+        
+        .button {
+            background: rgba(0,122,255,0.2);
+            border: 1px solid rgba(0,122,255,0.4);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .button:hover {
+            background: rgba(0,122,255,0.3);
+            transform: translateY(-1px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧠 Strategic Intelligence Director - Diagnostic Protocol</h1>
+        
+        <div class="recommendation">
+            <h2>⚡ IMMEDIATE RECOMMENDATION: QA First</h2>
+            <p><strong>Perform QA validation before processor trace submission</strong></p>
+            <div class="timeline">
+                <span>QA Validation (2-3 min)</span>
+                <span>→</span>
+                <span>Issue Classification</span>
+                <span>→</span>
+                <span>Trace Analysis (if needed)</span>
+            </div>
+        </div>
+
+        <div class="diagnostic-flow">
+            <h3>📋 Quick QA Validation Checklist</h3>
+            
+            <div class="quick-check">
+                <div class="check-item">
+                    <div class="status-indicator status-warning"></div>
+                    <strong>Foundation Authentication</strong><br>
+                    Check `/Documents//foundation/sources-of-truth/` accessibility
+                </div>
+                
+                <div class="check-item">
+                    <div class="status-indicator status-warning"></div>
+                    <strong>Apple Intelligence Integration</strong><br>
+                    Verify M4 Neural Engine + Siri integration status
+                </div>
+                
+                <div class="check-item">
+                    <div class="status-indicator status-warning"></div>
+                    <strong>Strategic Director Framework</strong><br>
+                    Test conditional logic and vulnerability mitigation
+                </div>
+                
+                <div class="check-item">
+                    <div class="status-indicator status-warning"></div>
+                    <strong>Cross-Project Integration</strong><br>
+                    Validate `/strategic-director/` coordination
+                </div>
+            </div>
+        </div>
+
+        <div class="decision-node">
+            <h3>🔍 QA Results → Action Decision Tree</h3>
+            
+            <div class="action-node">
+                <strong>✅ IF: All systems operational</strong><br>
+                → Continue with Strategic Intelligence session<br>
+                → Processor trace = baseline performance data
+            </div>
+            
+            <div class="flow-arrow">↓</div>
+            
+            <div class="warning-node">
+                <strong>⚠️ IF: Partial functionality</strong><br>
+                → Document specific issues<br>
+                → Continue with workarounds<br>
+                → Trace analysis for optimization
+            </div>
+            
+            <div class="flow-arrow">↓</div>
+            
+            <div class="warning-node">
+                <strong>🚨 IF: Critical failures</strong><br>
+                → STOP session<br>
+                → Submit processor trace + detailed bug report<br>
+                → Revert to validated-foundation baseline
+            </div>
+        </div>
+
+        <div class="diagnostic-flow">
+            <h3>⚡ 2-Minute QA Validation Protocol</h3>
+            
+            <div class="action-node">
+                <strong>Test 1: Foundation Access (30 sec)</strong>
+                <pre style="background: rgba(0,0,0,0.3); padding: 8px; border-radius: 4px; font-size: 12px;">
+# Check if sources-of-truth accessible
+ls /Documents//foundation/sources-of-truth/
+echo "Status: Foundation authentication test"</pre>
+            </div>
+            
+            <div class="action-node">
+                <strong>Test 2: Apple Intelligence Status (30 sec)</strong>
+                <pre style="background: rgba(0,0,0,0.3); padding: 8px; border-radius: 4px; font-size: 12px;">
+# Verify M4 Neural Engine integration
+system_profiler SPHardwareDataType | grep "Apple M"
+echo "Status: Apple Intelligence framework test"</pre>
+            </div>
+            
+            <div class="action-node">
+                <strong>Test 3: Strategic Director Response (60 sec)</strong>
+                <pre style="background: rgba(0,0,0,0.3); padding: 8px; border-radius: 4px; font-size: 12px;">
+# Test enhanced conditional logic
+echo "Strategic Intelligence Director: Process test validation request"
+echo "Expected: Enhanced analysis with vulnerability mitigation"</pre>
+            </div>
+        </div>
+
+        <div class="diagnostic-flow">
+            <h3>🤓 Why QA First?</h3>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                <div class="action-node">
+                    <strong>Strategic Benefits</strong>
+                    <ul>
+                        <li>Identifies if trace needed</li>
+                        <li>Classifies issue severity</li>
+                        <li>Preserves session momentum</li>
+                        <li>Provides context for bug reports</li>
+                    </ul>
+                </div>
+                
+                <div class="warning-node">
+                    <strong>Trace Submission Risks</strong>
+                    <ul>
+                        <li>May be user configuration issue</li>
+                        <li>Could interrupt session flow</li>
+                        <li>Trace without context less valuable</li>
+                        <li>Premature escalation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="recommendation">
+            <h3>📋 Execute QA Protocol Now</h3>
+            <p>Run the 2-minute validation, then determine next steps based on results.</p>
+            
+            <div style="display: flex; gap: 16px; margin-top: 16px;">
+                <button class="button" onclick="alert('Execute QA validation tests first')">
+                    🔍 Start QA Validation
+                </button>
+                <button class="button" onclick="alert('Only if QA reveals critical issues')">
+                    📊 Processor Trace (If Needed)
+                </button>
+            </div>
+        </div>
+
+        <div class="diagnostic-flow">
+            <h3>⏰ Strategic Timeline</h3>
+            <div class="timeline">
+                <span><strong>Now:</strong> QA Validation (2-3 min)</span>
+                <span>→</span>
+                <span><strong>Next:</strong> Strategic Session OR Bug Report</span>
+                <span>→</span>
+                <span><strong>Goal:</strong> Enhanced Intelligence Active</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

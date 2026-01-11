@@ -1,0 +1,505 @@
+/**
+ * Quantum-Spatial Design System Variables v3.0
+ * CSS Custom Properties - Onyx + Eggplant Dual Theme
+ * Extracted from Figma & Apple HIG Compliant
+ * Last Updated: 2025-12-03
+ */
+
+:root {
+  /* ============================================
+     ONYX THEME (Pure Black)
+     ============================================ */
+  --onyx-black: #000000;
+  --onyx-near-black: #050505;
+  --onyx-midnight: #0a0a0f;
+
+  /* ============================================
+     EGGPLANT THEME (Deep Purple-Black)
+     ============================================ */
+  --eggplant-deepnight: #160918;
+  --eggplant-void-violet: #0b010d;
+  --eggplant-warm: #16090e;
+  --eggplant-slate: #09021a;
+  --eggplant-multidimensional: #110413;
+  --eggplant-mystic: #170e22;
+  --eggplant-ultra-void: #0a0621;
+  --eggplant-ultradimensional: #150621;
+
+  /* ============================================
+     BACKGROUND HIERARCHY
+     ============================================ */
+  /* Onyx Backgrounds */
+  --bg-onyx-primary: #000000;
+  --bg-onyx-secondary: #0b010d;
+  --bg-onyx-tertiary: #160918;
+
+  /* Eggplant Backgrounds */
+  --bg-eggplant-primary: #160918;
+  --bg-eggplant-secondary: #0b010d;
+  --bg-eggplant-tertiary: #16090e;
+  --bg-eggplant-quaternary: #160918;
+  --bg-eggplant-slate: #09021a;
+
+  /* Additional Background Variants */
+  --bg-near-black: #050505;
+  --bg-midnight-richness: #0a0a0f;
+  --bg-deep-space-indigo: #1e1f5c;
+  --bg-ultra-indigo: #15151d;
+
+  /* HTML Showcase Approved Colors */
+  --void-black: #000000;
+  --void-violet: #0b010d;
+  --deep-space-violet: #160918;
+  --background-color: #050505;
+  --background-color-60: #160918;
+  --background-color-80: #0b010d;
+  --midnight-richness: #0a0a0f;
+  --deep-space-indigo: #1e1f5c;
+  --ultra-indigo: #15151d;
+
+  /* Legacy Color Names (for backward compatibility) */
+  --color-void-black: #0a0621;
+  --color-deep-space-indigo: #131a36;
+  --color-ultra-indigo: #1e1f5c;
+  --color-dimensional-eggplant: #331f4a;
+  --color-midnight-richness: #0d0d15;
+  --color-quantum-violet: #6a3093;
+  --color-ultra-marine: #405de5;
+  --color-ultra-violet: #613fe7;
+
+  /* ============================================
+     CONTAINER SYSTEM (Figma Variables)
+     ============================================ */
+  --container-bg-primary: #0b010d;
+  --container-bg-primary-daybreak: rgba(255, 255, 255, 0.6);
+
+  --container-bg-secondary: #160918;
+  --container-bg-secondary-daybreak: rgba(255, 255, 255, 0.1);
+
+  --container-bg-tertiary: #16090e;
+  --container-bg-tertiary-void: #ffffff;
+  --container-bg-tertiary-marine: #ffffff;
+  --container-bg-tertiary-daybreak: rgba(255, 255, 255, 0.9);
+
+  --container-bg-recessed: #ffffff;
+  --container-bg-recessed-void: rgba(0, 0, 0, 0.2);
+  --container-bg-recessed-marine: rgba(0, 0, 0, 0.2);
+  --container-bg-recessed-daybreak: rgba(255, 255, 255, 0.9);
+
+  /* ============================================
+     BUTTON SYSTEM (Figma Extractions)
+     ============================================ */
+  /* Primary Buttons */
+  --button-primary-dark: #7b00ff;
+  --button-primary-void: #007aff;
+  --button-primary-marine: #007aff;
+  --button-primary-daybreak: #007aff;
+
+  /* Button Backgrounds */
+  --button-bg-primary: #160918;
+  --button-bg-secondary: #0b010d;
+
+  /* Button Hover States */
+  --button-hover: #150621;
+  --button-hover-stroke: rgba(255, 255, 255, 0.2);
+
+  /* Secondary Buttons */
+  --button-secondary: #150621;
+  --button-secondary-hover: #7b00ff;
+  --button-secondary-hover-void: #5b9cff;
+  --button-secondary-hover-daybreak: #0063d1;
+
+  /* Tertiary Buttons */
+  --button-tertiary: #4e177c;
+  --button-tertiary-void: #007aff;
+  --button-tertiary-hover: #4e177c;
+  --button-tertiary-hover-void: #5b9cff;
+
+  /* Ghost Buttons */
+  --button-ghost-stroke: #9747ff;
+  --button-ghost-fill: rgba(255, 255, 255, 0.5);
+
+  /* Inactive Buttons */
+  --button-inactive: rgba(255, 255, 255, 0.2);
+  --button-inactive-daybreak: rgba(0, 0, 0, 0.2);
+
+  /* Button Text */
+  --button-text-primary-dark: #ffffff;
+  --button-text-primary-void: #007aff;
+
+  /* ============================================
+     BUTTON SHADOWS & EFFECTS (Figma)
+     ============================================ */
+  --button-shadow-subtle: 0 2px 4px rgba(0, 0, 0, 0.03), 0 1px 2px rgba(0, 0, 0, 0.05);
+  --button-shadow-medium: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.05);
+  --button-shadow-strong: 0 8px 16px rgba(0, 0, 0, 0.16), 0 4px 8px rgba(0, 0, 0, 0.08);
+  --button-shadow-heavy: 0 12px 24px rgba(0, 0, 0, 0.25), 0 6px 12px rgba(0, 0, 0, 0.12);
+
+  /* Button Glows */
+  --button-glow-purple: 0 0 20px rgba(123, 0, 255, 0.26), 0 4px 12px rgba(0, 0, 0, 0.2);
+  --button-glow-blue: 0 0 20px rgba(88, 70, 246, 0.25), 0 4px 12px rgba(0, 0, 0, 0.2);
+  --button-glow-violet: 0 0 24px rgba(78, 90, 194, 0.2), 0 4px 12px rgba(0, 0, 0, 0.2);
+
+  /* ============================================
+     APPLE HIG SYSTEM COLORS
+     ============================================ */
+  --system-blue-dark: #0b4fd7;
+  --system-blue: #007aff;
+  --system-cyan: #5ac8fa;
+  --system-purple-dark: #3b39ec;
+  --system-purple-daybreak: #504cf5;
+  --system-violet-dark: #6e00ff;
+  --system-violet-daybreak: #7b00ff;
+  --system-pink: #d0196b;
+  --system-red: #ff3b30;
+  --system-orange: #ff9500;
+  --system-green: #34c759;
+
+  /* Apple Semantic Colors */
+  --apple-red: #ff3b30;
+  --apple-orange: #ff9500;
+  --apple-green: #34c759;
+
+  /* ============================================
+     FOREGROUND/TEXT SYSTEM (Figma Variables)
+     ============================================ */
+  --foreground-primary: #ffffff;
+  --foreground-primary-daybreak: #000000;
+  --foreground-secondary: #ffffff;
+  --foreground-secondary-daybreak: rgba(0, 0, 0, 0.7);
+  --foreground-tertiary: #ffffff;
+  --foreground-tertiary-daybreak: rgba(0, 0, 0, 0.5);
+
+  /* Text Hierarchy */
+  --text-primary: rgba(255, 255, 255, 0.9);
+  --text-secondary: rgba(255, 255, 255, 0.7);
+  --text-tertiary: rgba(255, 255, 255, 0.55);
+  --text-quaternary: rgba(255, 255, 255, 0.3);
+  --text-muted: rgba(255, 255, 255, 0.45);
+  --text-vibrant: #999999;
+
+  /* Text from Figma Typography */
+  --text-heading: rgba(255, 255, 255, 0.9);
+  --text-body: rgba(255, 255, 255, 0.6);
+  --text-caption: rgba(255, 255, 255, 0.5);
+  --text-disabled: rgba(255, 255, 255, 0.2);
+
+  /* ============================================
+     BORDERS & DIVIDERS (Figma Variables)
+     ============================================ */
+  --border-primary: rgba(255, 255, 255, 0.1);
+  --border-primary-daybreak: rgba(255, 255, 255, 0.5);
+  --border-secondary: rgba(255, 255, 255, 0.1);
+  --border-secondary-daybreak: rgba(255, 255, 255, 0.2);
+
+  --divider-primary: rgba(255, 255, 255, 0.1);
+  --divider-primary-daybreak: rgba(0, 0, 0, 0.1);
+  --divider-secondary: rgba(255, 255, 255, 0.2);
+  --divider-secondary-daybreak: rgba(0, 0, 0, 0.2);
+
+  /* Border Subtle (HTML Showcase) */
+  --border-subtle: rgba(252, 253, 242, 0.08);
+  --border-medium: rgba(252, 253, 242, 0.12);
+  --border-focus: rgba(90, 200, 250, 0.6);
+
+  /* ============================================
+     GLASS/TRANSPARENCY SYSTEM
+     ============================================ */
+  /* Black Glass (for light backgrounds) */
+  --glass-ultra-thin: rgba(0, 0, 0, 0.1);
+  --glass-thin: rgba(0, 0, 0, 0.2);
+  --glass-medium: rgba(0, 0, 0, 0.29);
+  --glass-thick: rgba(0, 0, 0, 0.4);
+  --glass-ultra-thick: rgba(0, 0, 0, 0.5);
+
+  /* White Glass (for dark backgrounds) */
+  --glass-white-subtle: rgba(255, 255, 255, 0.02);
+  --glass-white-light: rgba(255, 255, 255, 0.05);
+  --glass-white-medium: rgba(255, 255, 255, 0.08);
+  --glass-white-elevated: rgba(255, 255, 255, 0.12);
+  --glass-white-active: rgba(255, 255, 255, 0.15);
+
+  /* Standard Glass (HTML Showcase) */
+  --glass-base: rgba(255, 255, 255, 0.02);
+  --glass-elevated: rgba(255, 255, 255, 0.05);
+  --glass-active: rgba(255, 255, 255, 0.08);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-shimmer: rgba(255, 255, 255, 0.15);
+
+  /* Legacy Glass Names */
+  --glass-ultra-light: rgba(255, 255, 255, 0.12);
+  --glass-light: rgba(255, 255, 255, 0.08);
+  --glass-dark: rgba(255, 255, 255, 0.02);
+
+  /* ============================================
+     GRADIENT SYSTEM
+     ============================================ */
+  --gradient-fill-1: rgba(255, 255, 255, 0.2);
+  --gradient-fill-1-daybreak: rgba(255, 255, 255, 0.9);
+  --gradient-fill-2: rgba(255, 255, 255, 0.1);
+  --gradient-fill-2-daybreak: rgba(255, 255, 255, 0.8);
+
+  /* Oil Slick Gradient (HTML Showcase) */
+  --oil-gradient: linear-gradient(135deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.05) 25%,
+    rgba(90, 200, 250, 0.03) 50%,
+    rgba(191, 64, 128, 0.03) 75%,
+    rgba(255, 255, 255, 0.08) 100%);
+
+  /* State Gradients */
+  --gradient-heritage-state: linear-gradient(135deg, #1b3d1a, #2c5f2d, #3d8b40);
+  --gradient-transitional-state: linear-gradient(135deg, #331f4a, #1e1f5c, #613fe7);
+  --gradient-quantum-state: linear-gradient(135deg, #6a3093, #bf4080, #ff2d55);
+  --gradient-quantum-depth: linear-gradient(135deg, #131a36, #331f4a, #6a3093);
+  --gradient-spatial-background: linear-gradient(180deg, #0a0621, #131a36);
+  --gradient-energy-flow: linear-gradient(90deg, #2c5f2d, #5ac8fa, #ff2d55);
+
+  /* ============================================
+     HERITAGE GREEN (Legacy/Special States)
+     ============================================ */
+  --heritage-green: #2c5f2d;
+  --heritage-green-light: #357139;
+  --heritage-green-dark: #1b3d1a;
+  --heritage-pixel: #3dff74;
+  --heritage-pixel-aqua: #00ffc8;
+
+  /* Heritage Glass Variants */
+  --glass-heritage-10: rgba(44, 95, 45, 0.1);
+  --glass-heritage-15: rgba(44, 95, 45, 0.15);
+  --glass-heritage-30: rgba(44, 95, 45, 0.3);
+  --glass-heritage-50: rgba(44, 95, 45, 0.5);
+  --glass-heritage-70: rgba(44, 95, 45, 0.7);
+  --glass-heritage-85: rgba(44, 95, 45, 0.85);
+  --glass-heritage-100: rgba(44, 95, 45, 1);
+
+  /* Legacy Heritage Names */
+  --color-heritage-green: #2c5f2d;
+  --color-heritage-green-light: #3d8b40;
+  --color-heritage-green-dark: #1b3d1a;
+  --color-heritage-pixel-green: #3dff74;
+  --color-heritage-pixel-aqua: #00ffc8;
+  --color-ultra-heritage-pixel-green: #94fe00;
+
+  /* ============================================
+     ADDITIONAL ACCENT COLORS
+     ============================================ */
+  --accent-subtle-cyan: #5ac8fa;
+  --accent-dimensional-teal: #126d71;
+  --accent-rose-energy: #bf4080;
+  --accent-quantum-pulse-pink: #ff2d55;
+  --accent-pink-vibrant: #ff375f;
+  --accent-pink-dimensional: #d0196b;
+  --accent-pink-pixel: #ec4899;
+  --accent-pink-liquid: #ff66e3;
+  --accent-dimensional-orange: #ff6b6b;
+  --accent-orange-pixel: #ff4f52;
+
+  /* Legacy Accent Names */
+  --color-subtle-aqua: #29b6f6;
+  --color-subtle-cyan: #5ac8fa;
+  --color-dimensional-teal: #126d71;
+  --color-rose-energy: #bf4080;
+  --color-quantum-pulse-pink: #ff2d55;
+  --color-dimensional-orange: #ff6b6b;
+
+  /* ============================================
+     FUNCTIONAL COLORS
+     ============================================ */
+  --color-primary-action: var(--accent-subtle-cyan);
+  --color-secondary-action: var(--accent-dimensional-teal);
+  --color-tertiary-action: var(--system-violet-dark);
+  --color-destructive: var(--accent-rose-energy);
+  --color-success: var(--heritage-green);
+  --color-warning: var(--system-orange);
+  --color-info: var(--system-cyan);
+
+  /* ============================================
+     SHADOW SYSTEM
+     ============================================ */
+  /* Glass Shadows (Gelatinous Effect) */
+  --shadow-glass-subtle:
+    0 4px 16px rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    0 1px 0 rgba(255, 255, 255, 0.05);
+
+  --shadow-glass-medium:
+    0 8px 32px rgba(0, 0, 0, 0.16),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12),
+    0 1px 0 rgba(255, 255, 255, 0.06);
+
+  --shadow-glass-strong:
+    0 12px 48px rgba(0, 0, 0, 0.24),
+    inset 0 2px 0 rgba(255, 255, 255, 0.14),
+    0 2px 0 rgba(255, 255, 255, 0.08);
+
+  /* Standard Shadows */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.16);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.20);
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.25);
+
+  /* Quantum Glow */
+  --shadow-quantum-glow: 0 0 24px rgba(90, 200, 250, 0.3), 0 8px 32px rgba(0, 0, 0, 0.2);
+
+  /* ============================================
+     BACKDROP FILTERS
+     ============================================ */
+  --quantum-backdrop: saturate(180%) blur(20px);
+  --quantum-glass-effect: blur(20px) saturate(150%);
+  --backdrop-blur-sm: blur(8px);
+  --backdrop-blur-md: blur(16px);
+  --backdrop-blur-lg: blur(24px);
+  --backdrop-blur-xl: blur(32px);
+
+  /* ============================================
+     SPACING SYSTEM (8pt Grid - Apple HIG)
+     ============================================ */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-xxl: 48px;
+  --space-xxxl: 64px;
+
+  /* ============================================
+     BORDER RADIUS
+     ============================================ */
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-xxl: 24px;
+  --radius-full: 9999px;
+
+  /* ============================================
+     TOUCH TARGETS (Apple HIG)
+     ============================================ */
+  --touch-min: 44px;
+  --touch-comfortable: 48px;
+
+  /* ============================================
+     CONTAINER WIDTHS
+     ============================================ */
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1280px;
+  --container-xxl: 1536px;
+
+  /* ============================================
+     TYPOGRAPHY SYSTEM
+     ============================================ */
+  /* Font Families (Apple HIG) */
+  --font-display: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  --font-text: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  --font-compact: 'SF Compact', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  --font-mono: 'SF Mono', 'Monaco', 'Courier New', monospace;
+
+  /* Font Weights (Apple HIG) */
+  --weight-ultra-light: 200;
+  --weight-light: 300;
+  --weight-regular: 350;
+  --weight-medium: 400;
+  --weight-semibold: 500;
+  --weight-bold: 600;
+  --weight-heavy: 700;
+
+  /* Font Sizes - Desktop (from Figma) */
+  --heading-1-desktop: 60px;
+  --heading-2-desktop: 50px;
+  --heading-3-desktop: 40px;
+  --heading-4-desktop: 30px;
+  --heading-5-desktop: 24px;
+
+  /* Font Sizes - Tablet */
+  --heading-1-tablet: 40px;
+  --heading-2-tablet: 30px;
+  --heading-3-tablet: 28px;
+  --heading-4-tablet: 24px;
+  --heading-5-tablet: 20px;
+
+  /* Font Sizes - Mobile */
+  --heading-1-mobile: 34px;
+  --heading-2-mobile: 28px;
+  --heading-3-mobile: 24px;
+  --heading-4-mobile: 22px;
+  --heading-5-mobile: 20px;
+
+  /* Body Sizes (all breakpoints) */
+  --headline: 20px;
+  --body-large: 18px;
+  --body: 16px;
+  --footnote: 14px;
+  --caption: 13px;
+  --small: 12px;
+
+  /* Line Heights */
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.47059;
+  --line-height-relaxed: 1.6;
+
+  /* Letter Spacing */
+  --letter-spacing-tight: -0.022em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.05em;
+
+  /* ============================================
+     TRANSITIONS & EASING
+     ============================================ */
+  --duration-instant: 100ms;
+  --duration-fast: 200ms;
+  --duration-normal: 300ms;
+  --duration-slow: 500ms;
+  --duration-slower: 700ms;
+
+  /* Easing Functions (HTML Showcase) */
+  --ease-gentle: cubic-bezier(0.25, 0.1, 0.25, 1);
+  --ease-snap: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  --ease-silk: cubic-bezier(0.165, 0.84, 0.44, 1);
+  --ease-magnetic: cubic-bezier(0.2, 0, 0.38, 0.9);
+
+  /* Standard Easings */
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ============================================
+   DAYBREAK MODE (Light Theme)
+   ============================================ */
+body.daybreak {
+  --bg-primary: #1e2a3a;
+  --bg-secondary: #2a3b4d;
+  --bg-tertiary: #3d4f63;
+  --accent-primary: #8fb8d3;
+  --accent-secondary: #7a95b5;
+  --glass-base: rgba(255, 255, 255, 0.08);
+  --glass-elevated: rgba(255, 255, 255, 0.12);
+  --glass-active: rgba(255, 255, 255, 0.16);
+  --glass-border: rgba(255, 255, 255, 0.2);
+  color: #e8f4fd;
+}
+
+/* ============================================
+   GOLDEN LIGHT THEME
+   ============================================ */
+body.golden {
+  --bg-primary: #2a1810;
+  --bg-secondary: #3d2a1f;
+  --bg-tertiary: #4f3a2d;
+  --accent-primary: #ffb800;
+  --accent-secondary: #ff9400;
+  --glass-base: rgba(255, 220, 150, 0.03);
+  --glass-elevated: rgba(255, 220, 150, 0.06);
+  --glass-active: rgba(255, 220, 150, 0.1);
+  --glass-border: rgba(255, 220, 150, 0.15);
+  --oil-gradient: linear-gradient(135deg,
+    rgba(255, 220, 150, 0.1) 0%,
+    rgba(255, 184, 0, 0.05) 25%,
+    rgba(255, 149, 0, 0.03) 50%,
+    rgba(255, 220, 150, 0.08) 100%);
+  color: #fff8e7;
+}

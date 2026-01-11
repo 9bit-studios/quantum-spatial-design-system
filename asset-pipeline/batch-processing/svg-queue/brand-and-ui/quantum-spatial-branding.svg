@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600">
+  <!-- Background -->
+  <rect width="900" height="600" fill="#0A0621" />
+  
+  <!-- Dimensional grid with perspective effect -->
+  <g opacity="0.12">
+    <!-- Horizontal grid lines with perspective warp -->
+    <path d="M200,550 L700,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M150,500 L750,500" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M125,450 L775,450" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M100,400 L800,400" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M90,350 L810,350" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M80,300 L820,300" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M70,250 L830,250" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M65,200 L835,200" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M60,150 L840,150" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M55,100 L845,100" stroke="#5AC8FA" stroke-width="1" />
+    
+    <!-- Vertical grid lines with warp -->
+    <path d="M200,100 L200,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M250,95 L250,555" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M300,90 L300,560" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M350,85 L350,565" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M400,80 L400,570" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M450,80 L450,570" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M500,80 L500,570" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M550,85 L550,565" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M600,90 L600,560" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M650,95 L650,555" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M700,100 L700,550" stroke="#5AC8FA" stroke-width="1" />
+  </g>
+  
+  <!-- Title -->
+  <text x="450" y="60" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" font-size="28" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Quantum-Spatial Brand Identity</text>
+  <text x="450" y="95" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" font-size="20" fill="#5AC8FA" text-anchor="middle">M4-Accelerated Visualization Framework</text>
+  
+  <!-- Central 4D Brand Visualization -->
+  <g transform="translate(450, 300)">
+    <!-- 4D Hypercube representation (tesseract) -->
+    <g>
+      <!-- Outer cube -->
+      <path d="M-100,-100 L100,-100 L100,100 L-100,100 Z" fill="none" stroke="#331F4A" stroke-width="2" />
+      <path d="M-100,-100 L-60,-140 L140,-140 L100,-100" fill="none" stroke="#331F4A" stroke-width="2" />
+      <path d="M100,-100 L140,-140 L140,60 L100,100" fill="none" stroke="#331F4A" stroke-width="2" />
+      <path d="M100,100 L140,60 L-60,60 L-100,100" fill="none" stroke="#331F4A" stroke-width="2" />
+      <path d="M-100,-100 L-60,-140 L-60,60 L-100,100" fill="none" stroke="#331F4A" stroke-width="2" />
+      
+      <!-- Inner cube -->
+      <path d="M-50,-50 L50,-50 L50,50 L-50,50 Z" fill="none" stroke="#6A3093" stroke-width="2" />
+      <path d="M-50,-50 L-30,-70 L70,-70 L50,-50" fill="none" stroke="#6A3093" stroke-width="2" />
+      <path d="M50,-50 L70,-70 L70,30 L50,50" fill="none" stroke="#6A3093" stroke-width="2" />
+      <path d="M50,50 L70,30 L-30,30 L-50,50" fill="none" stroke="#6A3093" stroke-width="2" />
+      <path d="M-50,-50 L-30,-70 L-30,30 L-50,50" fill="none" stroke="#6A3093" stroke-width="2" />
+      
+      <!-- Connecting lines between cubes -->
+      <path d="M-100,-100 L-50,-50" fill="none" stroke="#BF4080" stroke-width="1.5" />
+      <path d="M100,-100 L50,-50" fill="none" stroke="#BF4080" stroke-width="1.5" />
+      <path d="M100,100 L50,50" fill="none" stroke="#BF4080" stroke-width="1.5" />
+      <path d="M-100,100 L-50,50" fill="none" stroke="#BF4080" stroke-width="1.5" />
+      <path d="M-60,-140 L-30,-70" fill="none" stroke="#BF4080" stroke-width="1.5" />
+      <path d="M140,-140 L70,-70" fill="none" stroke="#BF4080" stroke-width="1.5" />
+      <path d="M140,60 L70,30" fill="none" stroke="#BF4080" stroke-width="1.5" />
+      <path d="M-60,60 L-30,30" fill="none" stroke="#BF4080" stroke-width="1.5" />
+    </g>
+    
+    <!-- Quantum pixel elements (representing brand identity components) -->
+    <g>
+      <!-- Core identity elements (center) -->
+      <rect x="-15" y="-15" width="30" height="30" fill="#131A36" stroke="#5AC8FA" stroke-width="1" />
+      <rect x="-10" y="-10" width="20" height="20" fill="#331F4A" stroke="#5AC8FA" stroke-width="1" />
+      <rect x="-5" y="-5" width="10" height="10" fill="#6A3093" stroke="#5AC8FA" stroke-width="1" />
+    </g>
+
+    <!-- Quantum states of transition -->
+    <g opacity="0.8">
+      <!-- Heritage state (flat pixel) -->
+      <rect x="-80" y="-80" width="20" height="20" fill="#331F4A" />
+      <text x="-70" y="-50" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">Heritage</text>
+    </g>
+
+    <!-- Transitional state (pixel with some dimension) -->
+    <g transform="translate(70, -70)">
+      <rect x="-10" y="-10" width="20" height="20" fill="#6A3093" />
+      <path d="M10,-10 L15,-15 L15,5 L10,10" fill="#6A3093" stroke="#5AC8FA" stroke-width="0.5" />
+      <path d="M-10,-10 L-5,-15 L15,-15 L10,-10" fill="#6A3093" stroke="#5AC8FA" stroke-width="0.5" />
+    </g>
+  </g>
+</svg>

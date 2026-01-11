@@ -1,0 +1,293 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600">
+  <!-- Background -->
+  <rect width="900" height="600" fill="#0A0621" />
+  
+  <!-- 4D Grid System - multidimensional perspective with intersecting planes -->
+  <g opacity="0.15">
+    <!-- Primary Plane (3D reference) with quantum distortions -->
+    <path d="M100,530 C300,510 600,550 800,530" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M120,480 C320,460 580,500 780,480" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M140,430 C340,410 560,450 760,430" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M160,380 C360,360 540,400 740,380" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M180,330 C380,310 520,350 720,330" stroke="#5AC8FA" stroke-width="1" />
+    
+    <path d="M100,530 C120,440 160,320 200,280" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M300,510 C320,420 360,300 400,260" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M500,540 C520,450 560,330 600,290" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M700,520 C720,430 760,310 800,270" stroke="#5AC8FA" stroke-width="1" />
+    
+    <!-- Perpendicular Plane (4D reference) -->
+    <path d="M200,280 C300,305 500,265 600,290" stroke="#BF4080" stroke-width="1" />
+    <path d="M220,230 C320,255 480,215 580,240" stroke="#BF4080" stroke-width="1" />
+    <path d="M240,180 C340,205 460,165 560,190" stroke="#BF4080" stroke-width="1" />
+    <path d="M260,130 C360,155 440,115 540,140" stroke="#BF4080" stroke-width="1" />
+    <path d="M280,80 C380,105 420,65 520,90" stroke="#BF4080" stroke-width="1" />
+    
+    <path d="M200,280 C240,235 270,160 290,120" stroke="#BF4080" stroke-width="1" />
+    <path d="M300,305 C340,260 370,185 390,145" stroke="#BF4080" stroke-width="1" />
+    <path d="M400,290 C440,245 470,170 490,130" stroke="#BF4080" stroke-width="1" />
+    <path d="M500,265 C540,220 570,145 590,105" stroke="#BF4080" stroke-width="1" />
+    <path d="M600,290 C640,245 670,170 690,130" stroke="#BF4080" stroke-width="1" />
+    
+    <!-- Transverse Plane (Orthogonal to both 3D and 4D primary planes) -->
+    <path d="M290,120 C320,150 390,70 420,100" stroke="#6A3093" stroke-width="1" />
+    <path d="M320,150 C350,180 420,100 450,130" stroke="#6A3093" stroke-width="1" />
+    <path d="M350,180 C380,210 450,130 480,160" stroke="#6A3093" stroke-width="1" />
+    <path d="M380,210 C410,240 480,160 510,190" stroke="#6A3093" stroke-width="1" />
+    <path d="M410,240 C440,270 510,190 540,220" stroke="#6A3093" stroke-width="1" />
+    
+    <path d="M390,145 C420,175 490,95 520,125" stroke="#6A3093" stroke-width="1" />
+    <path d="M420,175 C450,205 520,125 550,155" stroke="#6A3093" stroke-width="1" />
+    <path d="M450,205 C480,235 550,155 580,185" stroke="#6A3093" stroke-width="1" />
+    <path d="M480,235 C510,265 580,185 610,215" stroke="#6A3093" stroke-width="1" />
+    <path d="M510,265 C540,295 610,215 640,245" stroke="#6A3093" stroke-width="1" />
+  </g>
+  
+  <!-- Random stars in background -->
+  <g>
+    <circle cx="70" cy="50" r="1.5" fill="#FFFFFF" />
+    <circle cx="150" cy="80" r="1" fill="#FFFFFF" />
+    <circle cx="250" cy="40" r="1.2" fill="#FFFFFF" />
+    <circle cx="350" cy="60" r="1" fill="#FFFFFF" />
+    <circle cx="450" cy="30" r="1.5" fill="#FFFFFF" />
+    <circle cx="550" cy="70" r="1" fill="#FFFFFF" />
+    <circle cx="650" cy="50" r="1.3" fill="#FFFFFF" />
+    <circle cx="750" cy="90" r="1" fill="#FFFFFF" />
+    <circle cx="830" cy="40" r="1.5" fill="#FFFFFF" />
+    
+    <!-- The moons of Jrotharke with different colors as per lore -->
+    <circle cx="100" cy="80" r="10" fill="#D10056" opacity="0.6" /> <!-- Ruby moon -->
+    <circle cx="750" cy="60" r="8" fill="#A0E6BB" opacity="0.5" /> <!-- Pale green moon -->
+    <circle cx="450" cy="80" r="12" fill="#9932CC" opacity="0.4" /> <!-- Purple moon -->
+    <polygon points="250,50 265,60 260,75 240,70" fill="#E6E6FA" opacity="0.5" /> <!-- Irregular moon -->
+  </g>
+  
+  <!-- Title -->
+  <text x="450" y="60" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" font-size="28" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Jrotharke 4D Quantum-Spatial Planes</text>
+  <text x="450" y="90" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" font-size="16" fill="#BF4080" text-anchor="middle">Multidimensional Reality Structure</text>
+  
+  <!-- Main Visualization: 4D Planes intersection -->
+  <g transform="translate(450, 320)">
+    <!-- The Fourth-Dimensional Nexus -->
+    <g>
+      <!-- 3D Spatial Plane (material realm) -->
+      <path d="M-200,-100 L200,-100 L200,100 L-200,100 Z" fill="#131A36" opacity="0.5" stroke="#5AC8FA" stroke-width="1.5" />
+      <text x="0" y="-80" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" font-size="16" font-weight="bold" fill="#5AC8FA" text-anchor="middle">Material Plane</text>
+      <text x="0" y="-60" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle">(3-Dimensional Space)</text>
+      
+      <!-- 4D Time-Spirit Plane -->
+      <path d="M-180,-80 L-180,120 L220,120 L220,-80 Z" fill="#331F4A" opacity="0.5" stroke="#BF4080" stroke-width="1.5" transform="skewX(-15)" />
+      <text x="-20" y="140" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" font-size="16" font-weight="bold" fill="#BF4080" text-anchor="middle">Time-Spirit Plane</text>
+      <text x="-20" y="160" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle">(4-Dimensional Spectrum)</text>
+      
+      <!-- Thought-Energy Plane -->
+      <path d="M-220,-120 L180,-120 L220,80 L-180,80 Z" fill="#131A36" opacity="0.5" stroke="#6A3093" stroke-width="1.5" transform="skewY(-15)" />
+      <text x="150" y="0" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" font-size="16" font-weight="bold" fill="#6A3093" text-anchor="middle">Thought-Energy Plane</text>
+      <text x="150" y="20" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle">(Perpendicular Reality)</text>
+      
+      <!-- Interdimensional Intersections -->
+      <path d="M-180,0 L180,0" stroke="#FFFFFF" stroke-width="1.5" stroke-dasharray="5,3" />
+      <path d="M0,-100 L0,120" stroke="#FFFFFF" stroke-width="1.5" stroke-dasharray="5,3" />
+      <path d="M-150,-75 L150,75" stroke="#FFFFFF" stroke-width="1" stroke-dasharray="5,3" />
+      <path d="M-150,75 L150,-75" stroke="#FFFFFF" stroke-width="1" stroke-dasharray="5,3" />
+      
+      <!-- Nexus Points - where dimensions intersect -->
+      <circle cx="0" cy="0" r="20" fill="none" stroke="#FFFFFF" stroke-width="1" />
+      <circle cx="0" cy="0" r="15" fill="none" stroke="#FFFFFF" stroke-width="1" stroke-dasharray="3,2" />
+      <circle cx="0" cy="0" r="10" fill="none" stroke="#FFFFFF" stroke-width="1" />
+      <circle cx="0" cy="0" r="5" fill="#FFFFFF" opacity="0.5" />
+      
+      <circle cx="-150" cy="-75" r="7" fill="#5AC8FA" opacity="0.5" />
+      <circle cx="150" cy="-75" r="7" fill="#6A3093" opacity="0.5" />
+      <circle cx="-150" cy="75" r="7" fill="#BF4080" opacity="0.5" />
+      <circle cx="150" cy="75" r="7" fill="#5AC8FA" opacity="0.5" />
+      
+      <!-- 4D Energy Flow -->
+      <path d="M-150,-75 C-75,-25 75,-25 150,-75" fill="none" stroke="#6A3093" stroke-width="1.5" stroke-dasharray="2,2" />
+      <path d="M-150,75 C-75,25 75,25 150,75" fill="none" stroke="#BF4080" stroke-width="1.5" stroke-dasharray="2,2" />
+      <path d="M-150,-75 C-200,0 -200,0 -150,75" fill="none" stroke="#5AC8FA" stroke-width="1.5" stroke-dasharray="2,2" />
+      <path d="M150,-75 C200,0 200,0 150,75" fill="none" stroke="#5AC8FA" stroke-width="1.5" stroke-dasharray="2,2" />
+      
+      <!-- Quantum Particles traversing the dimensions -->
+      <g>
+        <!-- 3D Plane Particles -->
+        <rect x="-50" y="-20" width="6" height="6" fill="#5AC8FA" opacity="0.8" transform="rotate(30, -47, -17)" />
+        <rect x="30" y="-80" width="8" height="8" fill="#5AC8FA" opacity="0.8" transform="rotate(15, 34, -76)" />
+        <rect x="-100" y="60" width="7" height="7" fill="#5AC8FA" opacity="0.8" transform="rotate(45, -96.5, 63.5)" />
+        <rect x="80" y="40" width="5" height="5" fill="#5AC8FA" opacity="0.8" transform="rotate(60, 82.5, 42.5)" />
+        
+        <!-- 4D Plane Particles -->
+        <rect x="-30" y="50" width="6" height="6" fill="#BF4080" opacity="0.8" transform="rotate(20, -27, 53)" />
+        <rect x="100" y="-40" width="8" height="8" fill="#BF4080" opacity="0.8" transform="rotate(75, 104, -36)" />
+        <rect x="-90" y="-50" width="7" height="7" fill="#BF4080" opacity="0.8" transform="rotate(40, -86.5, -46.5)" />
+        <rect x="50" y="90" width="5" height="5" fill="#BF4080" opacity="0.8" transform="rotate(55, 52.5, 92.5)" />
+        
+        <!-- Thought Plane Particles -->
+        <rect x="40" y="-30" width="6" height="6" fill="#6A3093" opacity="0.8" transform="rotate(25, 43, -27)" />
+        <rect x="-70" y="30" width="7" height="7" fill="#6A3093" opacity="0.8" transform="rotate(50, -66.5, 33.5)" />
+        <rect x="110" y="30" width="5" height="5" fill="#6A3093" opacity="0.8" transform="rotate(35, 112.5, 32.5)" />
+        <rect x="-120" y="-30" width="8" height="8" fill="#6A3093" opacity="0.8" transform="rotate(65, -116, -26)" />
+      </g>
+      
+      <!-- Central Nexus - 4D to 3D Gateway -->
+      <g>
+        <ellipse cx="0" cy="0" rx="45" ry="25" fill="none" stroke="#FFFFFF" stroke-width="1" stroke-dasharray="10,5" transform="rotate(30, 0, 0)" opacity="0.5" />
+        <ellipse cx="0" cy="0" rx="45" ry="25" fill="none" stroke="#FFFFFF" stroke-width="1" stroke-dasharray="10,5" transform="rotate(90, 0, 0)" opacity="0.5" />
+        <ellipse cx="0" cy="0" rx="45" ry="25" fill="none" stroke="#FFFFFF" stroke-width="1" stroke-dasharray="10,5" transform="rotate(150, 0, 0)" opacity="0.5" />
+        
+        <!-- Portal Energy -->
+        <circle cx="0" cy="0" r="30" fill="url(#portalGradient)" opacity="0.4" />
+      </g>
+    </g>
+    
+    <!-- Gradient for portal energy effect -->
+    <defs>
+      <radialGradient id="portalGradient" cx="0.5" cy="0.5" r="0.5" fx="0.5" fy="0.5">
+        <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.8" />
+        <stop offset="40%" stop-color="#BF4080" stop-opacity="0.6" />
+        <stop offset="70%" stop-color="#6A3093" stop-opacity="0.4" />
+        <stop offset="100%" stop-color="#5AC8FA" stop-opacity="0.2" />
+      </radialGradient>
+    </defs>
+  </g>
+  
+  <!-- 4D Phenomena Description -->
+  <g transform="translate(160, 140)">
+    <rect x="-110" y="-20" width="220" height="140" rx="10" fill="#131A36" opacity="0.8" />
+    <text x="0" y="0" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">4D Phenomena</text>
+    
+    <!-- List of 4D phenomena -->
+    <g transform="translate(-90, 25)">
+      <rect x="-5" y="-5" width="6" height="6" fill="#BF4080" />
+      <text x="10" y="0" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="start">Time Dilation Zones</text>
+    </g>
+    
+    <g transform="translate(-90, 50)">
+      <rect x="-5" y="-5" width="6" height="6" fill="#BF4080" />
+      <text x="10" y="0" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="start">Spatial Fold Points</text>
+    </g>
+    
+    <g transform="translate(-90, 75)">
+      <rect x="-5" y="-5" width="6" height="6" fill="#BF4080" />
+      <text x="10" y="0" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="start">Quantum Entanglements</text>
+    </g>
+    
+    <g transform="translate(-90, 100)">
+      <rect x="-5" y="-5" width="6" height="6" fill="#BF4080" />
+      <text x="10" y="0" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="start">Spirit Nexus Anchors</text>
+    </g>
+  </g>
+  
+  <!-- Practical Applications -->
+  <g transform="translate(740, 140)">
+    <rect x="-110" y="-20" width="220" height="140" rx="10" fill="#131A36" opacity="0.8" />
+    <text x="0" y="0" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Practical Applications</text>
+    
+    <!-- List of applications -->
+    <g transform="translate(-90, 25)">
+      <rect x="-5" y="-5" width="6" height="6" fill="#5AC8FA" />
+      <text x="10" y="0" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="start">Interdimensional Travel</text>
+    </g>
+    
+    <g transform="translate(-90, 50)">
+      <rect x="-5" y="-5" width="6" height="6" fill="#5AC8FA" />
+      <text x="10" y="0" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="start">Enhanced Magic Casting</text>
+    </g>
+    
+    <g transform="translate(-90, 75)">
+      <rect x="-5" y="-5" width="6" height="6" fill="#5AC8FA" />
+      <text x="10" y="0" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="start">Spirit Communication</text>
+    </g>
+    
+    <g transform="translate(-90, 100)">
+      <rect x="-5" y="-5" width="6" height="6" fill="#5AC8FA" />
+      <text x="10" y="0" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="start">Reality Manipulation</text>
+    </g>
+  </g>
+  
+  <!-- Properties of 4D Space -->
+  <g transform="translate(450, 140)">
+    <rect x="-150" y="-20" width="300" height="140" rx="10" fill="#131A36" opacity="0.8" />
+    <text x="0" y="0" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Properties of 4D Quantum-Spatial Planes</text>
+    
+    <!-- Property Descriptions -->
+    <text x="0" y="25" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#BF4080" text-anchor="middle">Non-Euclidean geometry with hyperspatial properties</text>
+    
+    <text x="0" y="50" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#6A3093" text-anchor="middle">Fluid interaction between thought and physical matter</text>
+    
+    <text x="0" y="75" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#5AC8FA" text-anchor="middle">Spirit entities exist as native inhabitants</text>
+    
+    <text x="0" y="100" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle">Time flows non-linearly, allowing causal manipulation</text>
+  </g>
+  
+  <!-- Gameplay Implementation -->
+  <g transform="translate(450, 530)">
+    <rect x="-375" y="-30" width="750" height="80" rx="10" fill="#131A36" opacity="0.9" />
+    <text x="0" y="-5" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Gameplay Implementation of 4D Quantum-Spatial Mechanics</text>
+    
+    <!-- Four columns of gameplay implications -->
+    <g transform="translate(-281.25, 25)">
+      <rect x="-10" y="-7" width="6" height="6" fill="#5AC8FA" />
+      <rect x="-4" y="-7" width="6" height="6" fill="#BF4080" />
+      <text x="7" y="0" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="start">Neural Engine Simulation</text>
+      <text x="7" y="18" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="start">M4-powered spatial distortion</text>
+    </g>
+    
+    <g transform="translate(-93.75, 25)">
+      <rect x="-10" y="-7" width="6" height="6" fill="#5AC8FA" />
+      <rect x="-4" y="-7" width="6" height="6" fill="#BF4080" />
+      <text x="7" y="0" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="start">4D Portal Puzzles</text>
+      <text x="7" y="18" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="start">Multi-dimensional navigation</text>
+    </g>
+    
+    <g transform="translate(93.75, 25)">
+      <rect x="-10" y="-7" width="6" height="6" fill="#5AC8FA" />
+      <rect x="-4" y="-7" width="6" height="6" fill="#BF4080" />
+      <text x="7" y="0" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="start">Timeline Manipulation</text>
+      <text x="7" y="18" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="start">Causality-based game mechanics</text>
+    </g>
+    
+    <g transform="translate(281.25, 25)">
+      <rect x="-10" y="-7" width="6" height="6" fill="#5AC8FA" />
+      <rect x="-4" y="-7" width="6" height="6" fill="#BF4080" />
+      <text x="7" y="0" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="start">Vision Pro Optimization</text>
+      <text x="7" y="18" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="start">Spatial computing integration</text>
+    </g>
+  </g>
+  
+  <!-- 4D Human Figure -->
+  <g transform="translate(450, 385)">
+    <!-- 3D human figure projection with 4D elements -->
+    <g opacity="0.8">
+      <!-- 3D body (simplified) -->
+      <path d="M0,-45 C-5,-55 -15,-55 -10,-45 S0,-50 10,-45 S5,-55 0,-45" fill="#708090" /> <!-- Head -->
+      <rect x="-15" y="-45" width="30" height="40" rx="5" fill="#708090" /> <!-- Torso -->
+      <rect x="-25" y="-30" width="10" height="30" rx="3" fill="#708090" /> <!-- Left arm -->
+      <rect x="15" y="-30" width="10" height="30" rx="3" fill="#708090" /> <!-- Right arm -->
+      <rect x="-12" y="-5" width="10" height="35" rx="3" fill="#708090" /> <!-- Left leg -->
+      <rect x="2" y="-5" width="10" height="35" rx="3" fill="#708090" /> <!-- Right leg -->
+      
+      <!-- 4D projections/shadows - the parts of the being that exist in higher dimensions -->
+      <ellipse cx="0" cy="-45" rx="25" ry="15" fill="none" stroke="#BF4080" stroke-width="1" opacity="0.5" transform="rotate(30, 0, -45)" />
+      <ellipse cx="0" cy="-25" rx="30" ry="20" fill="none" stroke="#BF4080" stroke-width="1" opacity="0.5" transform="rotate(-15, 0, -25)" />
+      
+      <!-- 4D energy connections -->
+      <path d="M-25,-15 C-45,-5 -45,10 -25,20" fill="none" stroke="#BF4080" stroke-width="1" stroke-dasharray="3,3" />
+      <path d="M25,-15 C45,-5 45,10 25,20" fill="none" stroke="#BF4080" stroke-width="1" stroke-dasharray="3,3" />
+      <path d="M-5,-45 C-25,-65 -45,-55 -65,-35" fill="none" stroke="#BF4080" stroke-width="1" stroke-dasharray="3,3" />
+      <path d="M5,-45 C25,-65 45,-55 65,-35" fill="none" stroke="#BF4080" stroke-width="1" stroke-dasharray="3,3" />
+      
+      <!-- 4D dimensional anchors - how the being connects to higher dimensions -->
+      <circle cx="-25" cy="20" r="3" fill="#BF4080" />
+      <circle cx="25" cy="20" r="3" fill="#BF4080" />
+      <circle cx="-65" cy="-35" r="3" fill="#BF4080" />
+      <circle cx="65" cy="-35" r="3" fill="#BF4080" />
+      
+      <!-- 4D energy field -->
+      <ellipse cx="0" cy="-10" rx="50" ry="70" fill="none" stroke="#BF4080" stroke-width="1" stroke-dasharray="5,5" opacity="0.4" />
+    </g>
+    
+    <!-- Label -->
+    <text x="0" y="60" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle">Human With 4D Projection</text>
+  </g>
+</svg>

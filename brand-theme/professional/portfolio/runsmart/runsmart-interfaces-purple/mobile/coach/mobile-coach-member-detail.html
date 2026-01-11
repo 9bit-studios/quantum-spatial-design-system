@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RunSmart Coach - Member Detail</title>
+    <link rel="stylesheet" href="../../assets/runsmart-design-system.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', system-ui, sans-serif;
+            background: #000000;
+            color: #FFFFFF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Header */
+        .page-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #1A1A1A;
+        }
+
+        .back-button {
+            width: 40px;
+            height: 40px;
+            background: #0A0A0A;
+            border: 1px solid #1A1A1A;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        /* Mobile Detail Panel */
+        .mobile-detail-panel {
+            background: #0A0A0A;
+            border: 1px solid #1A1A1A;
+            border-radius: 16px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .mobile-detail-header {
+            padding: 24px;
+            border-bottom: 1px solid #1A1A1A;
+        }
+
+        .mobile-detail-member {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        .mobile-member-avatar-large {
+            width: 96px;
+            height: 96px;
+            border-radius: 48px;
+            background: linear-gradient(135deg, #7B00FF 0%, #A0CC00 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            overflow: hidden;
+            margin-bottom: 16px;
+            position: relative;
+        }
+
+        .mobile-member-avatar-large img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .mobile-risk-badge-overlay {
+            position: absolute;
+            bottom: -4px;
+            right: -4px;
+            background: #000;
+            border: 2px solid #0A0A0A;
+            border-radius: 16px;
+            padding: 4px 8px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            overflow: visible;
+        }
+
+        .mobile-risk-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 4px;
+            background: #CDFF00;
+        }
+
+        .mobile-risk-badge-text {
+            font-size: 11px;
+            font-weight: 700;
+            color: #CDFF00;
+        }
+
+        .mobile-member-info {
+            width: 100%;
+        }
+
+        .mobile-member-name-large {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+
+        .mobile-member-meta {
+            font-size: 14px;
+            color: #888;
+            line-height: 1.5;
+            margin-bottom: 16px;
+        }
+
+        .mobile-risk-score-card {
+            width: 100%;
+            background: rgba(205, 255, 0, 0.05);
+            border: 1px solid rgba(205, 255, 0, 0.2);
+            border-radius: 12px;
+            padding: 12px 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .mobile-risk-score-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .mobile-risk-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            background: rgba(205, 255, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mobile-risk-icon svg {
+            width: 20px;
+            height: 20px;
+            color: #CDFF00;
+        }
+
+        .mobile-risk-details {
+            text-align: left;
+        }
+
+        .mobile-risk-label {
+            font-size: 11px;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 2px;
+        }
+
+        .mobile-risk-value {
+            font-size: 20px;
+            font-weight: 700;
+            color: #CDFF00;
+        }
+
+        .mobile-intervention-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .mobile-intervention-btn {
+            width: 100%;
+            padding: 12px 20px;
+            border-radius: 12px;
+            font-size: 15px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .mobile-intervention-btn.primary {
+            background: #7B00FF;
+            color: #ffffff;
+            border: none;
+        }
+
+        .mobile-intervention-btn.secondary {
+            background: transparent;
+            color: #7B00FF;
+            border: 1px solid #7B00FF;
+        }
+
+        .mobile-intervention-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .mobile-intervention-btn svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        .mobile-detail-content {
+            flex: 1;
+            overflow-y: auto;
+            padding: 12px;
+        }
+
+        .mobile-content-section {
+            margin-bottom: 24px;
+        }
+
+        .mobile-section-title-ai {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Profile Card */
+        .profile-card {
+            background: linear-gradient(135deg, #0A0A0A 0%, #0A1A0A 100%);
+            border: 1px solid #1A1A1A;
+            border-radius: 24px;
+            padding: 24px;
+            margin-bottom: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .profile-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #CDFF00 0%, #F59E0B 100%);
+        }
+
+        .profile-header {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        .profile-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 40px;
+            background: linear-gradient(135deg, #333 0%, #1A1A1A 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            flex-shrink: 0;
+        }
+
+        .profile-info {
+            flex: 1;
+        }
+
+        .profile-name {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .profile-meta {
+            font-size: 13px;
+            color: #888;
+            margin-bottom: 12px;
+        }
+
+        .risk-score {
+            display: inline-block;
+            padding: 8px 16px;
+            background: rgba(239, 68, 68, 0.2);
+            border: 2px solid #CDFF00;
+            border-radius: 16px;
+            font-size: 14px;
+            font-weight: 700;
+            color: #CDFF00;
+        }
+
+        .profile-actions {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+        }
+
+        .action-btn {
+            padding: 10px;
+            background: #0A0A0A;
+            border: 1px solid #1A1A1A;
+            border-radius: 12px;
+            font-size: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .action-btn:active {
+            background: #151515;
+        }
+
+        .action-label {
+            font-size: 10px;
+            color: #888;
+            font-weight: 600;
+        }
+
+        /* AI Insights */
+        .insight-card {
+            background: #000;
+            border: 1px solid #1A1A1A;
+            border-radius: 12px;
+            padding: 16px;
+        }
+
+        .insights-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: #CDFF00;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .insight-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 12px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid rgba(239, 68, 68, 0.1);
+        }
+
+        .insight-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .insight-icon {
+            font-size: 20px;
+        }
+
+        .insight-text {
+            flex: 1;
+            font-size: 12px;
+            color: #CCC;
+            line-height: 1.4;
+            padding-bottom: 5px;
+        }
+
+        .insight-desc {
+            font-size: 12px;
+            color: #888;
+            line-height: 1.4;
+            padding-bottom: 10px;
+        }
+
+        
+        .recommended-action {
+            background: rgba(205, 255, 0, 0.1);
+            border: 1px solid #7B00FF;
+            border-radius: 16px;
+            padding: 16px;
+            margin-top: 16px;
+        }
+
+        .recommended-title {
+            font-size: 12px;
+            font-weight: 700;
+            color: #7B00FF;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .deploy-button {
+            width: 100%;
+            padding: 12px;
+            border-radius: var(--radius-sm);
+            border: none;
+            cursor: pointer;
+            font-weight: var(--font-weight-medium);
+            font-size: var(--font-size-base);
+            transition: all var(--transition-base);
+            font-family: var(--font-family);
+            background: var(--purple-primary);
+            color: var(--text-primary);
+        }
+
+        .deploy-button:hover {
+            background: var(--purple-hover);
+            transform: translateY(-1px);
+            box-shadow: var(--glow-purple-sm);
+        }
+
+        .deploy-button:active {
+            transform: scale(0.98);
+        }
+
+        /* Timeline */
+        .timeline-card {
+            background: #0A0A0A;
+            border: 1px solid #1A1A1A;
+            border-radius: 20px;
+            padding: 12px;
+            margin-bottom: 20px;
+        }
+
+        .card-title {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .timeline-item {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 16px;
+            padding-left: 12px;
+            border-left: 2px solid #1A1A1A;
+        }
+
+        .timeline-item.success {
+            border-left-color: #4ADE80;
+        }
+
+        .timeline-item.skip {
+            border-left-color: #CDFF00;
+        }
+
+        .timeline-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 6px;
+            margin-top: 4px;
+            flex-shrink: 0;
+        }
+
+        .timeline-item.success .timeline-dot {
+            background: #4ADE80;
+        }
+
+        .timeline-item.skip .timeline-dot {
+            background: #CDFF00;
+        }
+
+        .timeline-content {
+            flex: 1;
+        }
+
+        .timeline-date {
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 4px;
+        }
+
+        .timeline-text {
+            font-size: 14px;
+            margin-bottom: 4px;
+        }
+
+        .timeline-detail {
+            font-size: 12px;
+            color: #888;
+        }
+
+        .view-more {
+            text-align: center;
+            padding: 12px;
+            color: #FFFFFF;
+            font-size: 13px;
+            background: #7B00FF;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        /* Communications */
+        .comm-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #000;
+            border: 1px solid #1A1A1A;
+            border-radius: 12px;
+            padding: 16px;
+        }
+
+        .comm-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .comm-icon {
+            font-size: 20px;
+            color: #7B00FF;
+        }
+
+        .comm-text {
+            font-size: 14px;
+        }
+
+        .comm-date {
+            font-size: 12px;
+            color: #666;
+        }
+
+        .comm-status {
+            font-size: 11px;
+            color: #888;
+        }
+
+        .comm-status.opened {
+            color: #4ADE80;
+        }
+
+        .comm-status.not-opened {
+            color: #CDFF00;
+        }
+
+        /* Action Buttons */
+        .action-buttons {
+            display: flex;
+            gap: 8px;
+            margin-top: 20px;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 14px;
+            border-radius: 12px;
+            border: none;
+            font-size: 14px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: #7B00FF;
+            color: #FFFFFF;
+        }
+
+        .btn-primary:hover {
+            background: #8C45FF;
+            transform: translateY(-1px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 1px solid #7B00FF;
+            color: #FFFFFF;
+        }
+        
+        .btn-secondary:hover {
+            background: #8C45FF;
+            transform: translateY(-1px);
+        }
+
+        .back-button svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .action-btn svg,
+        .insight-icon svg,
+        .comm-icon svg {
+            width: 20px;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="phone-frame">
+        <div class="dynamic-island"></div>
+
+        <div class="screen">
+            <div class="status-bar">
+                <div class="time">9:41</div>
+                <div class="status-icons">
+                    <svg width="18" height="12" viewBox="0 0 18 12" fill="currentColor" style="opacity: 0.8;">
+                        <circle cx="2" cy="10" r="1.5" fill="currentColor"/>
+                        <circle cx="6" cy="7.5" r="1.5" fill="currentColor"/>
+                        <circle cx="10" cy="5" r="1.5" fill="currentColor"/>
+                        <circle cx="14" cy="2.5" r="1.5" fill="currentColor"/>
+                    </svg>
+                    <span class="notification-badge">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6z"/>
+                        </svg>
+                        <span class="badge-dot">3</span>
+                    </span>
+                    <svg width="22" height="12" viewBox="0 0 22 12" fill="none" style="margin-left: 6px;">
+                        <rect x="1" y="1" width="18" height="10" rx="2" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                        <rect x="3" y="3" width="13" height="6" rx="1" fill="currentColor"/>
+                        <rect x="19.5" y="4" width="1.5" height="4" rx="0.75" fill="currentColor"/>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="content">
+                <div class="page-header">
+                    <div class="header-title">Member Details</div>
+                </div>
+                
+                <!-- Member Detail Panel -->
+                <div class="mobile-detail-panel">
+                    <div class="mobile-detail-header">
+                        <div class="mobile-detail-member">
+                            <div class="mobile-member-avatar-large">
+                                <img src="https://res.cloudinary.com/cloudninestudios/image/upload/v1765009460/penny-platt-2_otynl8.jpg"
+                                     alt="Penny Platt"
+                                     loading="lazy">
+                            </div>
+                            <div class="mobile-member-info">
+                                <div class="mobile-member-name-large">Penny Platt</div>
+                                <div class="mobile-member-meta">Marathon Training • Week 8 of 16<br>Boston Qualifier Goal</div>
+                                <div class="mobile-risk-score-card">
+                                    <div class="mobile-risk-score-info">
+                                        <div class="mobile-risk-icon">
+                                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12 9V13M12 17H12.01M10.29 3.86L1.82 18C1.64537 18.3024 1.55299 18.6453 1.55201 18.9945C1.55103 19.3437 1.64151 19.6871 1.81445 19.9905C1.98738 20.2939 2.23675 20.5467 2.53773 20.7239C2.83871 20.9011 3.18082 20.9962 3.53 21H20.47C20.8192 20.9962 21.1613 20.9011 21.4623 20.7239C21.7633 20.5467 22.0126 20.2939 22.1856 19.9905C22.3585 19.6871 22.449 19.3437 22.448 18.9945C22.447 18.6453 22.3546 18.3024 22.18 18L13.71 3.86C13.5317 3.56611 13.2807 3.32312 12.9812 3.15448C12.6817 2.98585 12.3438 2.89725 12 2.89725C11.6562 2.89725 11.3183 2.98585 11.0188 3.15448C10.7193 3.32312 10.4683 3.56611 10.29 3.86Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </div>
+                                        <div class="mobile-risk-details">
+                                            <div class="mobile-risk-label">Churn Risk</div>
+                                            <div class="mobile-risk-value">72% High Risk</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mobile-intervention-actions">
+                            <button class="mobile-intervention-btn primary">Deploy Intervention Now</button>
+                            <button class="mobile-intervention-btn secondary">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                                </svg>
+                                Schedule Call
+                            </button>
+                            <button class="mobile-intervention-btn secondary">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                                </svg>
+                                Send Message
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="mobile-detail-content">
+                        <!-- AI Risk Analysis -->
+                            <div class="mobile-section-title-ai">
+                                <svg class="icon icon-inline" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 2L6 13.5H10L8 22L18 11.5H14L16 2Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                <span>AI Risk Analysis</span>
+                            </div>
+                            <div class="insight-card">
+                                <div class="insight-item">
+                                    <div class="insight-text">
+                                        <strong>5 days without activity</strong>
+                                        <div class="insight-desc">Last workout was tempo run on Dec 7</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="insight-card">
+                                <div class="insight-item">
+                                    <div class="insight-text">
+                                        <strong>Missed 3 scheduled workouts</strong>
+                                        <div class="insight-desc">Pattern suggests schedule conflict</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="insight-card">
+                                <div class="insight-item">
+                                    <div class="insight-text">
+                                        <strong>Email engagement: 0%</strong>
+                                        <div class="insight-desc">Last 3 emails not opened</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                
+                <!-- Activity Timeline -->
+                <div class="timeline-card">
+                    <div class="card-title">Activity Timeline</div>
+                    <div class="timeline-item success">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">Dec 7</div>
+                            <div class="timeline-text">Completed Tempo Run</div>
+                            <div class="timeline-detail">5.2 mi • 8:15 pace • PR!</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item skip">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">Dec 8</div>
+                            <div class="timeline-text">Skipped Easy Run</div>
+                            <div class="timeline-detail">Scheduled but not completed</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item skip">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">Dec 9</div>
+                            <div class="timeline-text">Skipped Recovery Run</div>
+                            <div class="timeline-detail">Scheduled but not completed</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item skip">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">Dec 10</div>
+                            <div class="timeline-text">Skipped Long Run</div>
+                            <div class="timeline-detail">Scheduled but not completed</div>
+                        </div>
+                    </div>
+                    <div class="btn-primary">View Full History →</div>
+                </div>
+            </div>
+
+                <!-- Recent Communications -->
+                <div class="timeline-card">
+                    <div class="card-title">Recent Communications</div>
+                    <div class="comm-item">
+                        <div class="comm-info">
+                            <div class="comm-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="comm-text">Weekly Progress Email</div>
+                                <div class="comm-date">Dec 8</div>
+                            </div>
+                        </div>
+                        <div class="comm-status not-opened">Not opened</div>
+                    </div>
+                    <div class="comm-item">
+                        <div class="comm-info">
+                            <div class="comm-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="comm-text">SMS Check-in</div>
+                                <div class="comm-date">Dec 6</div>
+                            </div>
+                        </div>
+                        <div class="comm-status">Delivered</div>
+                    </div>
+                    <div class="comm-item">
+                        <div class="comm-info">
+                            <div class="comm-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="comm-text">Training Plan Update</div>
+                                <div class="comm-date">Dec 3</div>
+                            </div>
+                        </div>
+                        <div class="comm-status opened">Opened</div>
+                    </div>
+                </div>
+                
+                <!-- Actions -->
+                <div class="action-buttons">
+                    <button class="btn btn-secondary">Schedule Call</button>
+                    <button class="btn btn-primary">Send Message</button>
+                </div>
+            </div>
+            
+            <div class="bottom-nav">
+                <a href="mobile-coach-dashboard.html" class="nav-item">
+                    <svg class="nav-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M3 13h2v8H3v-8zm4-6h2v14H7V7zm4-4h2v18h-2V3zm4 9h2v9h-2v-9zm4-5h2v14h-2V7z"/>
+                    </svg>
+                    <div class="nav-label">Dashboard</div>
+                </a>
+                <a href="mobile-coach-member-detail.html" class="nav-item active">
+                    <svg class="nav-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M16 11c1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 3-1.34 3-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+                    </svg>
+                    <div class="nav-label">Members</div>
+                </a>
+                <a href="mobile-coach-messages.html" class="nav-item">
+                    <svg class="nav-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/>
+                    </svg>
+                    <div class="nav-label">Messages</div>
+                </a>
+                <a href="mobile-coach-studio.html" class="nav-item">
+                    <svg class="nav-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12.18 2.5l5.5 2c.78.28 1.32 1.03 1.32 1.86V12c0 5.5-3.84 10.66-9 12-5.16-1.34-9-6.5-9-12V6.36c0-.83.54-1.58 1.32-1.86l5.5-2c.5-.18 1.05-.18 1.55 0z"/>
+                        <path d="M9 11.5l2 2 4-4" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                    </svg>
+                    <div class="nav-label">Studio</div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Core Scripts -->
+    <script src="../../scripts/core/dom-ready.js"></script>
+    <script src="../../scripts/core/context-detection.js"></script>
+
+    <!-- Feature Scripts -->
+    <script src="../../scripts/transitions/page-transitions.js"></script>
+    <script src="../../scripts/interactions/navigation.js"></script>
+
+    <!-- Init Script -->
+    <script src="../../scripts/init/mobile-coach-init.js"></script>
+</body>
+</html>

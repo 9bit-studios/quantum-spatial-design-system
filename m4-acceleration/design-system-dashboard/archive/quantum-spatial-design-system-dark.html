@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Spatial Design System - Dark Mode</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* Foundation Colors - From Quantum Spatial Source of Truth */
+            --void-black: #000000;
+            --void-violet: #0B010D;
+            --multidimensional-violet: #110413;
+            --deep-space-violet: #160918;
+            --mystic-midnight: #170E22;
+            --background-primary: #13141C;
+            --deep-space-indigo: #0A0A0F;
+            --ultra-indigo: #15151D;
+
+            /* Marine Spectrum */
+            --ultradimensional-marine: #0A0621;
+            --dimensional-marine: #1E1F5C;
+            --ultra-marine: #512CF9;
+            --pixel-marine: #504CF5;
+            --system-marine: #4169E1;
+
+            /* Primary Action */
+            --subtle-cyan: #5AC8FA;
+
+            /* Pink Spectrum */
+            --system-pink: #FF2D92;
+            --dimensional-pink: #BF4080;
+            --pixel-pink: #E91E63;
+
+            /* Heritage */
+            --heritage-green: #2C5F2D;
+            --heritage-green-light: #357139;
+
+            /* Text Hierarchy */
+            --text-primary: rgba(255, 255, 255, 0.96);
+            --text-secondary: rgba(255, 255, 255, 0.85);
+            --text-tertiary: rgba(255, 255, 255, 0.7);
+            --text-quaternary: rgba(255, 255, 255, 0.6);
+            --text-muted: rgba(255, 255, 255, 0.45);
+            --text-vibrant: #999999;
+
+            /* Glass Effects - Translucent Gelatinous */
+            --glass-ultra-light: rgba(255, 255, 255, 0.12);
+            --glass-light: rgba(255, 255, 255, 0.08);
+            --glass-medium: rgba(255, 255, 255, 0.05);
+            --glass-dark: rgba(255, 255, 255, 0.02);
+
+            /* Borders - Ultra Subtle */
+            --border-subtle: rgba(252, 253, 242, 0.08);
+            --border-medium: rgba(252, 253, 242, 0.12);
+            --border-focus: rgba(90, 200, 250, 0.6);
+
+            /* Shadows with Inset Highlights - Gelatinous Effect */
+            --shadow-glass-subtle:
+                0 4px 16px rgba(0, 0, 0, 0.12),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1),
+                0 1px 0 rgba(255, 255, 255, 0.05);
+
+            --shadow-glass-medium:
+                0 8px 32px rgba(0, 0, 0, 0.16),
+                inset 0 1px 0 rgba(255, 255, 255, 0.12),
+                0 1px 0 rgba(255, 255, 255, 0.06);
+
+            --shadow-glass-strong:
+                0 12px 48px rgba(0, 0, 0, 0.24),
+                inset 0 2px 0 rgba(255, 255, 255, 0.14),
+                0 2px 0 rgba(255, 255, 255, 0.08);
+
+            /* Quantum Filter - Liquid Glass */
+            --quantum-backdrop: saturate(180%) blur(20px);
+            --quantum-glass-effect: blur(20px) saturate(150%);
+
+            /* Typography - SF Compact */
+            --font-compact: 'SF Compact', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            --font-mono: 'SF Mono', 'Monaco', 'Courier New', monospace;
+
+            /* Font Weights */
+            --weight-ultra-light: 200;
+            --weight-regular: 400;
+            --weight-medium: 457;
+            --weight-semibold: 556;
+
+            /* Spacing (8pt grid) */
+            --space-xs: 4px;
+            --space-sm: 8px;
+            --space-md: 16px;
+            --space-lg: 24px;
+            --space-xl: 32px;
+            --space-xxl: 48px;
+
+            /* Touch Targets */
+            --touch-min: 44px;
+
+            /* Border Radius */
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+        }
+
+        body {
+            font-family: var(--font-compact);
+            background: linear-gradient(180deg, var(--void-black) 0%, var(--background-primary) 100%);
+            color: var(--text-primary);
+            min-height: 100vh;
+            line-height: 1.47059;
+            letter-spacing: -0.022em;
+            font-weight: var(--weight-regular);
+        }
+
+        /* Header */
+        .header {
+            background: rgba(10, 10, 15, 0.85);
+            backdrop-filter: var(--quantum-backdrop);
+            -webkit-backdrop-filter: var(--quantum-backdrop);
+            border-bottom: 1px solid var(--border-subtle);
+            padding: var(--space-lg) var(--space-xl);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: var(--shadow-glass-subtle);
+        }
+
+        .header-content {
+            max-width: 1440px;
+            margin: 0 auto;
+        }
+
+        .header-title {
+            font-size: 34px;
+            font-weight: var(--weight-ultra-light);
+            color: var(--text-primary);
+            margin-bottom: var(--space-sm);
+        }
+
+        .header-subtitle {
+            font-size: 14px;
+            color: var(--text-tertiary);
+            font-weight: var(--weight-regular);
+        }
+
+        /* Navigation */
+        .nav {
+            margin-top: var(--space-lg);
+            display: flex;
+            gap: var(--space-sm);
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .nav-tab {
+            padding: var(--space-md) var(--space-lg);
+            background: transparent;
+            border: none;
+            color: var(--text-secondary);
+            font-size: 14px;
+            font-weight: var(--weight-medium);
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s ease;
+            font-family: var(--font-compact);
+            min-height: var(--touch-min);
+        }
+
+        .nav-tab:hover {
+            color: var(--text-primary);
+            background: var(--glass-dark);
+        }
+
+        .nav-tab.active {
+            color: var(--subtle-cyan);
+            border-bottom-color: var(--subtle-cyan);
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: var(--space-xl);
+        }
+
+        /* State Selector */
+        .state-selector {
+            display: flex;
+            gap: var(--space-md);
+            margin-bottom: var(--space-xl);
+            padding: var(--space-lg);
+            background: rgba(10, 10, 15, 0.6);
+            backdrop-filter: var(--quantum-backdrop);
+            -webkit-backdrop-filter: var(--quantum-backdrop);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-glass-subtle);
+        }
+
+        .state-btn {
+            padding: 12px 24px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-sm);
+            color: var(--text-secondary);
+            font-size: 14px;
+            font-weight: var(--weight-medium);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-family: var(--font-compact);
+            min-width: 120px;
+            min-height: var(--touch-min);
+        }
+
+        .state-btn:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .state-btn.active {
+            background: var(--glass-ultra-light);
+            border-color: var(--border-medium);
+            color: var(--text-primary);
+            box-shadow: var(--shadow-glass-medium);
+        }
+
+        .state-btn.heritage {
+            background: var(--heritage-green);
+            color: var(--text-primary);
+        }
+
+        .state-btn.heritage:hover {
+            background: var(--heritage-green-light);
+        }
+
+        /* Grid Layout */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: var(--space-lg);
+            margin-bottom: var(--space-xl);
+        }
+
+        /* Glass Cards */
+        .card {
+            background: rgba(10, 10, 15, 0.85);
+            backdrop-filter: var(--quantum-backdrop);
+            -webkit-backdrop-filter: var(--quantum-backdrop);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            padding: var(--space-lg);
+            box-shadow: var(--shadow-glass-subtle);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            background: rgba(10, 10, 15, 0.9);
+            border-color: var(--border-medium);
+            box-shadow: var(--shadow-glass-medium);
+            transform: translateY(-2px);
+        }
+
+        .card-icon {
+            width: 48px;
+            height: 48px;
+            margin-bottom: var(--space-md);
+            color: var(--text-secondary);
+            opacity: 0.85;
+        }
+
+        .card-title {
+            font-size: 20px;
+            font-weight: var(--weight-semibold);
+            color: var(--text-primary);
+            margin-bottom: var(--space-sm);
+        }
+
+        .card-description {
+            font-size: 14px;
+            color: var(--text-tertiary);
+            line-height: 1.5;
+            margin-bottom: var(--space-md);
+        }
+
+        .card-meta {
+            font-size: 12px;
+            color: var(--text-muted);
+            font-family: var(--font-mono);
+        }
+
+        /* Buttons */
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: var(--radius-sm);
+            font-size: 14px;
+            font-weight: var(--weight-medium);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-family: var(--font-compact);
+            min-height: var(--touch-min);
+            min-width: var(--touch-min);
+        }
+
+        .btn-primary {
+            background: var(--subtle-cyan);
+            color: var(--void-black);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.24);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.08);
+            color: var(--text-primary);
+            border: 1px solid var(--border-subtle);
+            backdrop-filter: var(--quantum-backdrop);
+            -webkit-backdrop-filter: var(--quantum-backdrop);
+            box-shadow: var(--shadow-glass-subtle);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.12);
+            border-color: var(--border-medium);
+            transform: translateY(-1px);
+        }
+
+        /* Color Showcase */
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: var(--space-md);
+            margin-bottom: var(--space-xl);
+        }
+
+        .color-swatch {
+            background: rgba(10, 10, 15, 0.6);
+            backdrop-filter: var(--quantum-backdrop);
+            -webkit-backdrop-filter: var(--quantum-backdrop);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-glass-subtle);
+            transition: all 0.2s ease;
+        }
+
+        .color-swatch:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-glass-medium);
+        }
+
+        .color-sample {
+            height: 120px;
+            width: 100%;
+        }
+
+        .color-info {
+            padding: var(--space-md);
+        }
+
+        .color-name {
+            font-size: 14px;
+            font-weight: var(--weight-semibold);
+            color: var(--text-primary);
+            margin-bottom: var(--space-xs);
+        }
+
+        .color-value {
+            font-size: 12px;
+            color: var(--text-tertiary);
+            font-family: var(--font-mono);
+        }
+
+        /* Section Headers */
+        .section {
+            margin-bottom: var(--space-xxl);
+        }
+
+        .section-title {
+            font-size: 28px;
+            font-weight: var(--weight-ultra-light);
+            color: var(--text-primary);
+            margin-bottom: var(--space-lg);
+            padding-bottom: var(--space-md);
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        /* Token Table */
+        .token-table {
+            background: rgba(10, 10, 15, 0.6);
+            backdrop-filter: var(--quantum-backdrop);
+            -webkit-backdrop-filter: var(--quantum-backdrop);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-glass-subtle);
+        }
+
+        .token-row {
+            display: grid;
+            grid-template-columns: 2fr 1fr 3fr;
+            padding: var(--space-md);
+            border-bottom: 1px solid var(--border-subtle);
+            transition: background 0.2s ease;
+        }
+
+        .token-row:hover {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .token-row:last-child {
+            border-bottom: none;
+        }
+
+        .token-name {
+            font-size: 14px;
+            font-weight: var(--weight-semibold);
+            color: var(--text-primary);
+        }
+
+        .token-value {
+            font-size: 12px;
+            color: var(--subtle-cyan);
+            font-family: var(--font-mono);
+        }
+
+        .token-description {
+            font-size: 12px;
+            color: var(--text-tertiary);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <h1 class="header-title">Quantum Spatial Design System</h1>
+            <p class="header-subtitle">Apple Intelligence Design Authority • M4 Neural Engine Optimized</p>
+
+            <nav class="nav">
+                <button class="nav-tab active">Overview</button>
+                <button class="nav-tab">Components</button>
+                <button class="nav-tab">Tokens</button>
+                <button class="nav-tab">Guidelines</button>
+                <button class="nav-tab">Resources</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="container">
+        <!-- State Selector -->
+        <div class="state-selector">
+            <button class="state-btn heritage">Heritage</button>
+            <button class="state-btn active">Transitional</button>
+            <button class="state-btn">Quantum</button>
+        </div>
+
+        <!-- Component Cards -->
+        <section class="section">
+            <h2 class="section-title">Design Foundation</h2>
+            <div class="grid">
+                <!-- Design Tokens Card -->
+                <div class="card">
+                    <svg class="card-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="4" y="4" width="40" height="40" rx="8" stroke="currentColor" stroke-width="2" opacity="0.6"/>
+                        <rect x="12" y="12" width="8" height="8" rx="2" fill="#5AC8FA" opacity="0.8"/>
+                        <rect x="28" y="12" width="8" height="8" rx="2" fill="#512CF9" opacity="0.8"/>
+                        <rect x="12" y="28" width="8" height="8" rx="2" fill="#504CF5" opacity="0.8"/>
+                        <rect x="28" y="28" width="8" height="8" rx="2" fill="currentColor" opacity="0.4"/>
+                    </svg>
+                    <h3 class="card-title">Design Tokens</h3>
+                    <p class="card-description">Quantum-spatial color system with Display P3 support, glassmorphic effects, and M4-optimized rendering.</p>
+                    <p class="card-meta">tokens/brand/M4Tokens.tsx</p>
+                </div>
+
+                <!-- Components Card -->
+                <div class="card">
+                    <svg class="card-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 12C8 9.79086 9.79086 8 12 8H36C38.2091 8 40 9.79086 40 12V16H8V12Z" fill="currentColor" opacity="0.3"/>
+                        <rect x="8" y="16" width="32" height="24" rx="4" stroke="currentColor" stroke-width="2" opacity="0.6"/>
+                        <circle cx="16" cy="28" r="3" fill="#5AC8FA" opacity="0.8"/>
+                        <rect x="22" y="25" width="10" height="2" rx="1" fill="currentColor" opacity="0.4"/>
+                        <rect x="22" y="29" width="14" height="2" rx="1" fill="currentColor" opacity="0.4"/>
+                    </svg>
+                    <h3 class="card-title">Components</h3>
+                    <p class="card-description">Apple HIG-compliant UI elements with 44px touch targets, SF Pro typography, and liquid glass aesthetics.</p>
+                    <p class="card-meta">components/ui/</p>
+                </div>
+
+                <!-- M4 Acceleration Card -->
+                <div class="card">
+                    <svg class="card-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M24 8L28 20H40L30 28L34 40L24 32L14 40L18 28L8 20H20L24 8Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" opacity="0.6"/>
+                        <circle cx="24" cy="24" r="4" fill="#5AC8FA" opacity="0.8"/>
+                        <path d="M24 16V20M24 28V32M32 24H28M20 24H16" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+                    </svg>
+                    <h3 class="card-title">M4 Optimization</h3>
+                    <p class="card-description">16-core Neural Engine acceleration for design parsing, token processing, and quantum spatial rendering.</p>
+                    <p class="card-meta">m4-acceleration/</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Color System -->
+        <section class="section">
+            <h2 class="section-title">Core Color System</h2>
+            <div class="color-grid">
+                <div class="color-swatch">
+                    <div class="color-sample" style="background: #0A0621;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Ultradimensional Marine</div>
+                        <div class="color-value">#0A0621</div>
+                    </div>
+                </div>
+
+                <div class="color-swatch">
+                    <div class="color-sample" style="background: #1E1F5C;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Dimensional Marine</div>
+                        <div class="color-value">#1E1F5C</div>
+                    </div>
+                </div>
+
+                <div class="color-swatch">
+                    <div class="color-sample" style="background: #512CF9;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Ultra Marine</div>
+                        <div class="color-value">#512CF9</div>
+                    </div>
+                </div>
+
+                <div class="color-swatch">
+                    <div class="color-sample" style="background: #5AC8FA;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Subtle Cyan</div>
+                        <div class="color-value">#5AC8FA</div>
+                    </div>
+                </div>
+
+                <div class="color-swatch">
+                    <div class="color-sample" style="background: #160918;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Deep Space Violet</div>
+                        <div class="color-value">#160918</div>
+                    </div>
+                </div>
+
+                <div class="color-swatch">
+                    <div class="color-sample" style="background: #170E22;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Mystic Midnight</div>
+                        <div class="color-value">#170E22</div>
+                    </div>
+                </div>
+
+                <div class="color-swatch">
+                    <div class="color-sample" style="background: #2C5F2D;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Heritage Green</div>
+                        <div class="color-value">#2C5F2D</div>
+                    </div>
+                </div>
+
+                <div class="color-swatch">
+                    <div class="color-sample" style="background: #BF4080;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Dimensional Pink</div>
+                        <div class="color-value">#BF4080</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Design Tokens -->
+        <section class="section">
+            <h2 class="section-title">Design Tokens</h2>
+            <div class="token-table">
+                <div class="token-row">
+                    <div class="token-name">Background Primary</div>
+                    <div class="token-value">#13141C</div>
+                    <div class="token-description">Primary background for all interfaces</div>
+                </div>
+                <div class="token-row">
+                    <div class="token-name">Text Primary</div>
+                    <div class="token-value">rgba(255, 255, 255, 0.96)</div>
+                    <div class="token-description">Primary text color with 96% opacity</div>
+                </div>
+                <div class="token-row">
+                    <div class="token-name">Glass Light</div>
+                    <div class="token-value">rgba(255, 255, 255, 0.08)</div>
+                    <div class="token-description">Light glass surface overlay</div>
+                </div>
+                <div class="token-row">
+                    <div class="token-name">Quantum Backdrop</div>
+                    <div class="token-value">saturate(180%) blur(20px)</div>
+                    <div class="token-description">Backdrop filter for liquid glass effects</div>
+                </div>
+                <div class="token-row">
+                    <div class="token-name">Border Subtle</div>
+                    <div class="token-value">rgba(252, 253, 242, 0.08)</div>
+                    <div class="token-description">Ultra-subtle border for glass surfaces</div>
+                </div>
+                <div class="token-row">
+                    <div class="token-name">Shadow Glass Subtle</div>
+                    <div class="token-value">multi-layer with inset highlights</div>
+                    <div class="token-description">Gelatinous glass shadow effect</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Actions -->
+        <section class="section">
+            <h2 class="section-title">Actions</h2>
+            <div style="display: flex; gap: var(--space-md); flex-wrap: wrap;">
+                <button class="btn btn-primary">View Full Documentation</button>
+                <button class="btn btn-secondary">Component Library</button>
+                <button class="btn btn-secondary">Design Guidelines</button>
+                <button class="btn btn-secondary">Apple HIG Compliance</button>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

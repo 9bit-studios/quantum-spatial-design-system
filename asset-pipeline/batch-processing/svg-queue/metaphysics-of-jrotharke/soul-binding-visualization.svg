@@ -1,0 +1,335 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600">
+  <!-- Background -->
+  <rect width="900" height="600" fill="#0A0621" />
+  
+  <!-- Dimensional grid with perspective effect -->
+  <g opacity="0.12">
+    <!-- Horizontal grid lines with dimensional warp -->
+    <path d="M150,550 L750,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M100,500 L800,500" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M75,450 L825,450" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M50,400 L850,400" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M40,350 L860,350" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M30,300 L870,300" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M25,250 L875,250" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M20,200 L880,200" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M15,150 L885,150" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M10,100 L890,100" stroke="#5AC8FA" stroke-width="1" />
+    
+    <!-- Vertical grid lines with distortion -->
+    <path d="M150,100 Q155,300 150,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M225,100 Q230,300 225,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M300,100 Q305,300 300,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M375,100 Q380,300 375,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M450,100 Q455,300 450,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M525,100 Q530,300 525,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M600,100 Q605,300 600,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M675,100 Q680,300 675,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M750,100 Q755,300 750,550" stroke="#5AC8FA" stroke-width="1" />
+  </g>
+
+  <!-- Starfield effect -->
+  <g>
+    <!-- Stars -->
+    <circle cx="130" cy="85" r="1.2" fill="#FFFFFF" />
+    <circle cx="210" cy="65" r="1" fill="#FFFFFF" />
+    <circle cx="290" cy="120" r="1.5" fill="#FFFFFF" />
+    <circle cx="350" cy="50" r="1" fill="#FFFFFF" />
+    <circle cx="450" cy="90" r="1.3" fill="#FFFFFF" />
+    <circle cx="520" cy="70" r="1" fill="#FFFFFF" />
+    <circle cx="590" cy="85" r="1.5" fill="#FFFFFF" />
+    <circle cx="650" cy="55" r="1" fill="#FFFFFF" />
+    <circle cx="730" cy="95" r="1.2" fill="#FFFFFF" />
+    <circle cx="810" cy="75" r="1" fill="#FFFFFF" />
+    
+    <!-- Distant moons (from Jrotharke lore) -->
+    <circle cx="180" cy="70" r="6" fill="#D10056" opacity="0.5" /> <!-- Ruby moon -->
+    <circle cx="620" cy="85" r="7" fill="#9932CC" opacity="0.4" /> <!-- Violet moon -->
+    <circle cx="420" cy="80" r="5" fill="#A0E6BB" opacity="0.4" /> <!-- Pale green moon -->
+    
+    <!-- Non-circular moon -->
+    <polygon points="750,80 765,85 760,95 748,90" fill="#E6E6FA" opacity="0.6" />
+  </g>
+  
+  <!-- Title -->
+  <text x="450" y="60" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" font-size="28" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Soul Binding: The Metaphysics of Identity</text>
+  <text x="450" y="90" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" font-size="18" fill="#5AC8FA" text-anchor="middle">Quantum-Spatial Realm Transition</text>
+  
+  <!-- Main visualization: Earth side, transition, and Jrotharke side -->
+  <g>
+    <!-- Earth side -->
+    <g transform="translate(225, 300)">
+      <!-- Earth realm boundary -->
+      <ellipse cx="0" cy="0" rx="175" ry="200" fill="none" stroke="#331F4A" stroke-width="2" stroke-dasharray="5,3" />
+      
+      <!-- Earth side label -->
+      <text x="0" y="-170" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" font-size="18" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Earth Realm</text>
+      
+      <!-- Human silhouette - Heritage state (more solid, defined) -->
+      <g transform="translate(-50, 0)">
+        <!-- Body -->
+        <path d="M0,-40 C-5,-45 -15,-45 -10,-40 S0,-42 10,-40 S5,-45 0,-40" fill="#708090" /> <!-- Head -->
+        <rect x="-15" y="-40" width="30" height="50" rx="5" fill="#708090" /> <!-- Torso -->
+        <rect x="-25" y="-30" width="10" height="40" rx="3" fill="#708090" /> <!-- Left arm -->
+        <rect x="15" y="-30" width="10" height="40" rx="3" fill="#708090" /> <!-- Right arm -->
+        <rect x="-12" y="10" width="10" height="40" rx="3" fill="#708090" /> <!-- Left leg -->
+        <rect x="2" y="10" width="10" height="40" rx="3" fill="#708090" /> <!-- Right leg -->
+        
+        <!-- Soul representation (contained) -->
+        <ellipse cx="0" cy="-15" rx="12" ry="15" fill="none" stroke="#5AC8FA" stroke-width="1" opacity="0.8" />
+        
+        <!-- Identity Signature (tightly packed pixels) -->
+        <g transform="translate(0, -15)">
+          <rect x="-6" y="-6" width="3" height="3" fill="#5AC8FA" opacity="0.8" />
+          <rect x="-2" y="-6" width="3" height="3" fill="#5AC8FA" opacity="0.8" />
+          <rect x="2" y="-6" width="3" height="3" fill="#5AC8FA" opacity="0.8" />
+          <rect x="-6" y="-2" width="3" height="3" fill="#5AC8FA" opacity="0.8" />
+          <rect x="-2" y="-2" width="3" height="3" fill="#BF4080" opacity="0.8" />
+          <rect x="2" y="-2" width="3" height="3" fill="#5AC8FA" opacity="0.8" />
+          <rect x="-6" y="2" width="3" height="3" fill="#5AC8FA" opacity="0.8" />
+          <rect x="-2" y="2" width="3" height="3" fill="#5AC8FA" opacity="0.8" />
+          <rect x="2" y="2" width="3" height="3" fill="#5AC8FA" opacity="0.8" />
+        </g>
+        
+        <!-- Memory packets (organized, compact) -->
+        <g>
+          <rect x="-35" y="-30" width="5" height="5" rx="1" fill="#FFFFFF" opacity="0.6" />
+          <rect x="-32" y="-20" width="5" height="5" rx="1" fill="#FFFFFF" opacity="0.6" />
+          <rect x="-36" y="-10" width="5" height="5" rx="1" fill="#FFFFFF" opacity="0.6" />
+          <rect x="-33" y="0" width="5" height="5" rx="1" fill="#FFFFFF" opacity="0.6" />
+          <rect x="-37" y="10" width="5" height="5" rx="1" fill="#FFFFFF" opacity="0.6" />
+        </g>
+      </g>
+      
+      <!-- Earth-specific identity anchors (structured) -->
+      <g transform="translate(40, 0)">
+        <!-- Physical anchor -->
+        <polygon points="0,-60 15,-45 0,-30 -15,-45" fill="none" stroke="#BF4080" stroke-width="2" />
+        <text x="30" y="-45" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#FFFFFF">Physical Anchor</text>
+        
+        <!-- Social anchor -->
+        <polygon points="30,0 45,15 30,30 15,15" fill="none" stroke="#BF4080" stroke-width="2" />
+        <text x="60" y="15" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#FFFFFF">Social Anchor</text>
+        
+        <!-- Memory anchor -->
+        <polygon points="0,60 15,75 0,90 -15,75" fill="none" stroke="#BF4080" stroke-width="2" />
+        <text x="30" y="75" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#FFFFFF">Memory Anchor</text>
+        
+        <!-- Connection lines to human -->
+        <path d="M0,-45 L-30,-15" stroke="#BF4080" stroke-width="1" stroke-dasharray="3,2" />
+        <path d="M30,15 L-30,-10" stroke="#BF4080" stroke-width="1" stroke-dasharray="3,2" />
+        <path d="M0,75 L-30,-5" stroke="#BF4080" stroke-width="1" stroke-dasharray="3,2" />
+      </g>
+      
+      <!-- Earth consciousness limitation (bounded) -->
+      <ellipse cx="-50" cy="0" rx="60" ry="70" fill="none" stroke="#6A3093" stroke-width="1" stroke-dasharray="5,3" opacity="0.6" />
+    </g>
+    
+    <!-- Transition Zone -->
+    <g transform="translate(450, 300)">
+      <!-- Transition zone boundary -->
+      <path d="M-175,200 C-100,220 100,220 175,200" fill="none" stroke="#BF4080" stroke-width="2" />
+      <path d="M-175,-200 C-100,-220 100,-220 175,-200" fill="none" stroke="#BF4080" stroke-width="2" />
+      
+      <!-- Transition zone label -->
+      <text x="0" y="-240" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" font-size="18" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Dimensional Transition Zone</text>
+      
+      <!-- Transitioning silhouette - Multiple states -->
+      <g>
+        <!-- Heritage body (fading) -->
+        <path d="M-10,-40 C-15,-45 -25,-45 -20,-40 S-10,-42 0,-40 S-5,-45 -10,-40" fill="#708090" opacity="0.4" /> <!-- Head -->
+        <rect x="-25" y="-40" width="30" height="50" rx="5" fill="#708090" opacity="0.4" /> <!-- Torso -->
+        <rect x="-35" y="-30" width="10" height="40" rx="3" fill="#708090" opacity="0.4" /> <!-- Left arm -->
+        <rect x="5" y="-30" width="10" height="40" rx="3" fill="#708090" opacity="0.4" /> <!-- Right arm -->
+        <rect x="-22" y="10" width="10" height="40" rx="3" fill="#708090" opacity="0.4" /> <!-- Left leg -->
+        <rect x="-8" y="10" width="10" height="40" rx="3" fill="#708090" opacity="0.4" /> <!-- Right leg -->
+        
+        <!-- Transitioning body (emerging) -->
+        <path d="M10,-35 C5,-40 -5,-40 0,-35 S10,-37 20,-35 S15,-40 10,-35" fill="#896878" opacity="0.6" /> <!-- Head -->
+        <rect x="-5" y="-35" width="30" height="50" rx="5" fill="#896878" opacity="0.6" /> <!-- Torso -->
+        <rect x="-15" y="-25" width="10" height="40" rx="3" fill="#896878" opacity="0.6" /> <!-- Left arm -->
+        <rect x="25" y="-25" width="10" height="40" rx="3" fill="#896878" opacity="0.6" /> <!-- Right arm -->
+        <rect x="-2" y="15" width="10" height="40" rx="3" fill="#896878" opacity="0.6" /> <!-- Left leg -->
+        <rect x="12" y="15" width="10" height="40" rx="3" fill="#896878" opacity="0.6" /> <!-- Right leg -->
+        
+        <!-- Soul in transition (expanding) -->
+        <ellipse cx="0" cy="-15" rx="25" ry="30" fill="none" stroke="#5AC8FA" stroke-width="1.5" opacity="0.8" stroke-dasharray="3,2" />
+        
+        <!-- Expanding Identity Signature (pixels separating) -->
+        <g transform="translate(0, -15)">
+          <rect x="-12" y="-12" width="4" height="4" fill="#5AC8FA" opacity="0.8" />
+          <rect x="-3" y="-10" width="4" height="4" fill="#5AC8FA" opacity="0.8" />
+          <rect x="7" y="-11" width="4" height="4" fill="#5AC8FA" opacity="0.8" />
+          <rect x="-10" y="-2" width="4" height="4" fill="#5AC8FA" opacity="0.8" />
+          <rect x="0" y="0" width="6" height="6" fill="#BF4080" opacity="0.8" />
+          <rect x="9" y="-3" width="4" height="4" fill="#5AC8FA" opacity="0.8" />
+          <rect x="-9" y="10" width="4" height="4" fill="#5AC8FA" opacity="0.8" />
+          <rect x="0" y="8" width="4" height="4" fill="#5AC8FA" opacity="0.8" />
+          <rect x="10" y="7" width="4" height="4" fill="#5AC8FA" opacity="0.8" />
+        </g>
+        
+        <!-- Memory packets in transformation -->
+        <g>
+          <path d="M-35,-25 L-30,-20 L-35,-15 L-40,-20 Z" fill="#FFFFFF" opacity="0.6" />
+          <path d="M-32,-10 L-27,-5 L-32,0 L-37,-5 Z" fill="#FFFFFF" opacity="0.6" />
+          <path d="M-37,5 L-32,10 L-37,15 L-42,10 Z" fill="#FFFFFF" opacity="0.6" />
+          <circle cx="30" cy="-25" r="3" fill="#FFFFFF" opacity="0.6" />
+          <circle cx="32" cy="-10" r="3" fill="#FFFFFF" opacity="0.6" />
+          <circle cx="28" cy="5" r="3" fill="#FFFFFF" opacity="0.6" />
+        </g>
+        
+        <!-- Soul Anchors in transition (metamorphosing) -->
+        <g>
+          <!-- Physical anchor transitioning -->
+          <path d="M-40,-60 C-30,-70 -20,-70 -10,-60 C0,-70 10,-70 20,-60" fill="none" stroke="#BF4080" stroke-width="2" opacity="0.5" />
+          
+          <!-- Social anchor transitioning -->
+          <path d="M-20,60 C-10,70 0,70 10,60 C20,70 30,70 40,60" fill="none" stroke="#BF4080" stroke-width="2" opacity="0.5" />
+          
+          <!-- New metaphysical anchor forming -->
+          <path d="M60,-20 C70,-10 70,0 60,10 C70,20 70,30 60,40" fill="none" stroke="#BF4080" stroke-width="2" opacity="0.8" />
+          
+          <!-- Anchor connections in flux -->
+          <path d="M0,-60 C-5,-40 -10,-20 0,-15" stroke="#BF4080" stroke-width="1" stroke-dasharray="2,3" opacity="0.7" />
+          <path d="M10,60 C5,40 0,20 0,-15" stroke="#BF4080" stroke-width="1" stroke-dasharray="2,3" opacity="0.7" />
+          <path d="M60,10 C40,5 20,0 0,-15" stroke="#BF4080" stroke-width="1" stroke-dasharray="2,3" opacity="0.7" />
+        </g>
+        
+        <!-- Consciousness expansion visualization -->
+        <ellipse cx="0" cy="-15" rx="90" ry="100" fill="none" stroke="#6A3093" stroke-width="1.5" stroke-dasharray="5,5" opacity="0.7" />
+        <path d="M-70,-90 C-35,-60 0,-50 35,-60 C70,-70 90,-50 90,-20 C90,10 70,50 35,80 C0,95 -35,95 -70,80 C-90,60 -90,20 -90,-20 C-90,-60 -80,-80 -70,-90" fill="none" stroke="#6A3093" stroke-width="1" opacity="0.5" />
+      </g>
+      
+      <!-- Quantum entanglement visualization -->
+      <g>
+        <!-- Entanglement particles -->
+        <circle cx="-70" cy="0" r="3" fill="#5AC8FA" />
+        <circle cx="70" cy="0" r="3" fill="#5AC8FA" />
+        
+        <!-- Entanglement waves -->
+        <path d="M-70,0 C-50,20 -30,-20 -10,10 C10,-10 30,20 50,-20 C60,-30 65,-10 70,0" fill="none" stroke="#5AC8FA" stroke-width="1" opacity="0.7" />
+        <path d="M-70,0 C-50,-10 -30,10 -10,-15 C10,15 30,-10 50,10 C60,15 65,5 70,0" fill="none" stroke="#5AC8FA" stroke-width="1" opacity="0.7" />
+      </g>
+    </g>
+    
+    <!-- Jrotharke side -->
+    <g transform="translate(675, 300)">
+      <!-- Jrotharke realm boundary -->
+      <ellipse cx="0" cy="0" rx="175" ry="200" fill="none" stroke="#331F4A" stroke-width="2" stroke-dasharray="5,3" />
+      
+      <!-- Jrotharke side label -->
+      <text x="0" y="-170" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" font-size="18" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Jrotharke Realm</text>
+      
+      <!-- Jrotharke human silhouette - Quantum state (dimensional, energetic) -->
+      <g transform="translate(-50, 0)">
+        <!-- Body with quantum properties -->
+        <path d="M0,-40 C-5,-45 -15,-45 -10,-40 S0,-42 10,-40 S5,-45 0,-40" fill="#896878" /> <!-- Head with mauve tint -->
+        <rect x="-15" y="-40" width="30" height="50" rx="5" fill="#896878" /> <!-- Torso with mauve tint -->
+        <rect x="-25" y="-30" width="10" height="40" rx="3" fill="#896878" /> <!-- Left arm -->
+        <rect x="15" y="-30" width="10" height="40" rx="3" fill="#896878" /> <!-- Right arm -->
+        <rect x="-12" y="10" width="10" height="40" rx="3" fill="#896878" /> <!-- Left leg -->
+        <rect x="2" y="10" width="10" height="40" rx="3" fill="#896878" /> <!-- Right leg -->
+        
+        <!-- Quantum pixel effect on body -->
+        <rect x="-6" y="-35" width="4" height="4" fill="#5AC8FA" opacity="0.8" />
+        <rect x="2" y="-34" width="4" height="4" fill="#5AC8FA" opacity="0.8" />
+        <rect x="-8" y="-15" width="4" height="4" fill="#5AC8FA" opacity="0.8" />
+        <rect x="12" y="-25" width="4" height="4" fill="#5AC8FA" opacity="0.8" />
+        <rect x="7" y="5" width="4" height="4" fill="#5AC8FA" opacity="0.8" />
+        <rect x="-16" y="20" width="4" height="4" fill="#5AC8FA" opacity="0.8" />
+        
+        <!-- Soul representation (expanded) -->
+        <ellipse cx="0" cy="-15" rx="25" ry="30" fill="none" stroke="#5AC8FA" stroke-width="2" opacity="0.9" />
+        <ellipse cx="0" cy="-15" rx="28" ry="33" fill="none" stroke="#5AC8FA" stroke-width="1" opacity="0.5" />
+        
+        <!-- Identity Signature (dimensional, floating) -->
+        <g transform="translate(0, -15)">
+          <rect x="-18" y="-18" width="6" height="6" fill="#5AC8FA" opacity="0.8" transform="rotate(15, -15, -15)" />
+          <rect x="-5" y="-15" width="6" height="6" fill="#5AC8FA" opacity="0.8" transform="rotate(-10, -2, -12)" />
+          <rect x="10" y="-18" width="6" height="6" fill="#5AC8FA" opacity="0.8" transform="rotate(20, 13, -15)" />
+          <rect x="-15" y="-2" width="6" height="6" fill="#5AC8FA" opacity="0.8" transform="rotate(-15, -12, 1)" />
+          <rect x="0" y="0" width="8" height="8" fill="#BF4080" opacity="0.9" />
+          <rect x="15" y="-5" width="6" height="6" fill="#5AC8FA" opacity="0.8" transform="rotate(30, 18, -2)" />
+          <rect x="-12" y="15" width="6" height="6" fill="#5AC8FA" opacity="0.8" transform="rotate(25, -9, 18)" />
+          <rect x="0" y="12" width="6" height="6" fill="#5AC8FA" opacity="0.8" transform="rotate(-5, 3, 15)" />
+          <rect x="14" y="10" width="6" height="6" fill="#5AC8FA" opacity="0.8" transform="rotate(-25, 17, 13)" />
+        </g>
+        
+        <!-- Memory transformation (energetic, dimensional) -->
+        <g>
+          <path d="M-45,-30 C-40,-35 -35,-35 -30,-30 C-25,-35 -20,-35 -15,-30" fill="none" stroke="#FFFFFF" stroke-width="1" opacity="0.7" />
+          <path d="M-45,-10 C-40,-15 -35,-15 -30,-10 C-25,-15 -20,-15 -15,-10" fill="none" stroke="#FFFFFF" stroke-width="1" opacity="0.7" />
+          <path d="M-45,10 C-40,5 -35,5 -30,10 C-25,5 -20,5 -15,10" fill="none" stroke="#FFFFFF" stroke-width="1" opacity="0.7" />
+          <path d="M-45,30 C-40,25 -35,25 -30,30 C-25,25 -20,25 -15,30" fill="none" stroke="#FFFFFF" stroke-width="1" opacity="0.7" />
+        </g>
+      </g>
+      
+      <!-- Jrotharke soul anchors (metaphysical) -->
+      <g transform="translate(40, 0)">
+        <!-- Spiritual anchor -->
+        <circle cx="0" cy="-60" r="15" fill="none" stroke="#BF4080" stroke-width="2" />
+        <path d="M-10,-65 C-5,-70 5,-70 10,-65 C15,-60 15,-50 10,-45 C5,-40 -5,-40 -10,-45 C-15,-50 -15,-60 -10,-65" fill="none" stroke="#BF4080" stroke-width="1" />
+        <text x="30" y="-60" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#FFFFFF">Spiritual Anchor</text>
+        
+        <!-- Consciousness anchor -->
+        <circle cx="30" cy="0" r="15" fill="none" stroke="#BF4080" stroke-width="2" />
+        <path d="M20,-5 C25,-10 35,-10 40,-5 C45,0 45,10 40,15 C35,20 25,20 20,15 C15,10 15,0 20,-5" fill="none" stroke="#BF4080" stroke-width="1" />
+        <text x="60" y="0" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#FFFFFF">Consciousness Anchor</text>
+        
+        <!-- Dimensional anchor -->
+        <circle cx="0" cy="60" r="15" fill="none" stroke="#BF4080" stroke-width="2" />
+        <path d="M-10,55 C-5,50 5,50 10,55 C15,60 15,70 10,75 C5,80 -5,80 -10,75 C-15,70 -15,60 -10,55" fill="none" stroke="#BF4080" stroke-width="1" />
+        <text x="30" y="60" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#FFFFFF">Dimensional Anchor</text>
+        
+        <!-- Connection lines to human -->
+        <path d="M0,-60 L-30,-15" stroke="#BF4080" stroke-width="1.5" />
+        <path d="M30,0 L-30,-15" stroke="#BF4080" stroke-width="1.5" />
+        <path d="M0,60 L-30,-15" stroke="#BF4080" stroke-width="1.5" />
+        
+        <!-- Energy flow along connections -->
+        <circle cx="-20" cy="-30" r="2" fill="#BF4080" opacity="0.8">
+          <animate attributeName="cx" from="-5" to="-45" dur="3s" repeatCount="indefinite" />
+          <animate attributeName="cy" from="-55" to="-20" dur="3s" repeatCount="indefinite" />
+        </circle>
+        
+        <circle cx="10" cy="-5" r="2" fill="#BF4080" opacity="0.8">
+          <animate attributeName="cx" from="25" to="-20" dur="4s" repeatCount="indefinite" />
+          <animate attributeName="cy" from="-5" to="-15" dur="4s" repeatCount="indefinite" />
+        </circle>
+        
+        <circle cx="-10" cy="30" r="2" fill="#BF4080" opacity="0.8">
+          <animate attributeName="cx" from="-5" to="-45" dur="3.5s" repeatCount="indefinite" />
+          <animate attributeName="cy" from="50" to="-5" dur="3.5s" repeatCount="indefinite" />
+        </circle>
+      </g>
+      
+      <!-- Enhanced consciousness visualization (multidimensional) -->
+      <ellipse cx="-50" cy="0" rx="100" ry="120" fill="none" stroke="#6A3093" stroke-width="2" stroke-dasharray="3,2" opacity="0.8" />
+      <path d="M-120,-80 C-80,-100 -20,-110 40,-80 C80,-60 110,-20 120,30 C110,80 80,100 30,110 C-30,100 -90,90 -130,30 C-150,-10 -140,-60 -120,-80" fill="none" stroke="#6A3093" stroke-width="1" opacity="0.6" />
+    </g>
+  </g>
+  
+  <!-- Four key feature callouts -->
+  <g>
+    <!-- Soul Anchoring System -->
+    <g transform="translate(225, 520)">
+      <rect x="-125" y="0" width="250" height="60" rx="10" fill="#131A36" opacity="0.9" />
+      <text x="0" y="20" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Soul Anchoring System</text>
+      <text x="0" y="40" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle">Physical anchors transform to metaphysical tethers</text>
+    </g>
+    
+    <!-- Identity Signature -->
+    <g transform="translate(450, 520)">
+      <rect x="-125" y="0" width="250" height="60" rx="10" fill="#131A36" opacity="0.9" />
+      <text x="0" y="20" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Identity Signature</text>
+      <text x="0" y="40" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle">Core quantum pattern that persists across realms</text>
+    </g>
+    
+    <!-- Consciousness Expansion -->
+    <g transform="translate(675, 520)">
+      <rect x="-125" y="0" width="250" height="60" rx="10" fill="#131A36" opacity="0.9" />
+      <text x="0" y="20" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Consciousness Expansion</text>
+      <text x="0" y="40" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle">Enhanced awareness beyond 3D constraints</text>
+    </g>
+  </g>
+</svg>

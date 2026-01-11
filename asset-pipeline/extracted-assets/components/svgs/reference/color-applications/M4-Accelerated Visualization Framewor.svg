@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="Spatial_Background_Gradient" data-name="Spatial Background Gradient" x1="0" y1="540" x2="1920" y2="540" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0a0621"/>
+      <stop offset=".3" stop-color="#131a36"/>
+      <stop offset=".7" stop-color="#331f4a"/>
+      <stop offset="1" stop-color="#0d0d15"/>
+    </linearGradient>
+    <linearGradient id="Spatial_Background_Gradient-2" data-name="Spatial Background Gradient" y1="542.157" y2="542.157" xlink:href="#Spatial_Background_Gradient"/>
+    <radialGradient id="radial-gradient" cx="960" cy="537" fx="960" fy="537" r="778.845" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#131a36" stop-opacity=".2"/>
+      <stop offset="1" stop-color="#050008" stop-opacity=".8"/>
+    </radialGradient>
+    <radialGradient id="radial-gradient-2" cx="-5319.403" cy="115.966" fx="-5319.403" fy="115.966" r="442.457" gradientTransform="translate(5605.256 408.804) scale(1.167 1.3)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#126d71" stop-opacity="0"/>
+      <stop offset=".134" stop-color="#331f4a" stop-opacity="0"/>
+      <stop offset=".4" stop-color="#331f4a"/>
+      <stop offset=".874" stop-color="#bf4080" stop-opacity=".2"/>
+      <stop offset=".983" stop-color="#bf4080" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="radial-gradient-3" cx="-1206.055" cy="-919.461" fx="-1206.055" fy="-919.461" r="446.612" gradientTransform="translate(2085.077 1364.383) scale(1.167 .938)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#bf4080" stop-opacity=".9"/>
+      <stop offset=".459" stop-color="#331f4a"/>
+      <stop offset=".766" stop-color="#126d71" stop-opacity="0"/>
+      <stop offset=".874" stop-color="#bf4080" stop-opacity=".2"/>
+    </radialGradient>
+    <radialGradient id="radial-gradient-4" cx="-3685.509" cy="692.695" fx="-3685.509" fy="692.695" r="442.457" gradientTransform="translate(5747.444 -341.148) scale(1.167 1.3)" xlink:href="#radial-gradient-2"/>
+    <radialGradient id="radial-gradient-5" cy="539.157" fy="539.157" r="779.594" xlink:href="#radial-gradient"/>
+    <linearGradient id="Accent_Highlight_Gradient" data-name="Accent Highlight Gradient" x1="661.509" y1="789.852" x2="1141.509" y2="789.852" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5ac8fa"/>
+      <stop offset=".5" stop-color="#126d71"/>
+      <stop offset="1" stop-color="#36eae8"/>
+    </linearGradient>
+    <linearGradient id="Accent_Highlight_Gradient-2" data-name="Accent Highlight Gradient" x1="601.509" y1="729.852" x2="1201.509" y2="729.852" xlink:href="#Accent_Highlight_Gradient"/>
+    <linearGradient id="Accent_Highlight_Gradient-3" data-name="Accent Highlight Gradient" x1="571.509" y1="669.852" x2="1231.509" y2="669.852" xlink:href="#Accent_Highlight_Gradient"/>
+    <linearGradient id="Accent_Highlight_Gradient-4" data-name="Accent Highlight Gradient" x1="541.509" y1="609.852" x2="1261.509" y2="609.852" xlink:href="#Accent_Highlight_Gradient"/>
+    <linearGradient id="Accent_Highlight_Gradient-5" data-name="Accent Highlight Gradient" x1="529.509" y1="549.852" x2="1273.509" y2="549.852" xlink:href="#Accent_Highlight_Gradient"/>
+    <linearGradient id="Accent_Highlight_Gradient-6" data-name="Accent Highlight Gradient" x1="517.509" y1="489.852" x2="1285.509" y2="489.852" xlink:href="#Accent_Highlight_Gradient"/>
+    <linearGradient id="Accent_Highlight_Gradient-7" data-name="Accent Highlight Gradient" x1="505.509" y1="429.852" x2="1297.509" y2="429.852" xlink:href="#Accent_Highlight_Gradient"/>
+    <linearGradient id="Accent_Highlight_Gradient-8" data-name="Accent Highlight Gradient" x1="493.509" y1="369.852" x2="1309.509" y2="369.852" xlink:href="#Accent_Highlight_Gradient"/>
+    <linearGradient id="Accent_Highlight_Gradient-9" data-name="Accent Highlight Gradient" x1="661.009" y1="579.852" x2="662.009" y2="579.852" xlink:href="#Accent_Highlight_Gradient"/>
+    <linearGradient id="Accent_Highlight_Gradient-10" data-name="Accent Highlight Gradient" x1="721.009" y1="579.852" x2="722.009" y2="579.852" xlink:href="#Accent_Highlight_Gradient"/>
+    <linearGradient id="Accent_Highlight_Gradient-11" data-name="Accent Highlight Gradient" x1="781.009" y1="579.852" x2="782.009" y2="579.852" xlink:href="#Accent_Highlight_Gradient"/>
+    <linearGradient id="Accent_Highlight_Gradient-12" data-name="Accent Highlight Gradient" x1="841.009" y1="579.852" x2="842.009" y2="579.852" xlink:href="#Accent_Highlight_Gradient"/>
+    <linearGradient id="Accent_Highlight_Gradient-13" data-name="Accent Highlight Gradient" x1="901.009" y1="579.852" x2="902.009" y2="579.852" xlink:href="#Accent_Highlight_Gradient"/>
+    <linearGradient id="Accent_Highlight_Gradient-14" data-name="Accent Highlight Gradient" x1="961.009" y1="579.852" x2="962.009" y2="579.852" xlink:href="#Accent_Highlight_Gradient"/>
+    <linearGradient id="Accent_Highlight_Gradient-15" data-name="Accent Highlight Gradient" x1="1021.009" y1="579.852" x2="1022.009" y2="579.852" xlink:href="#Accent_Highlight_Gradient"/>
+    <linearGradient id="Accent_Highlight_Gradient-16" data-name="Accent Highlight Gradient" x1="1081.009" y1="579.852" x2="1082.009" y2="579.852" xlink:href="#Accent_Highlight_Gradient"/>
+    <linearGradient id="Accent_Highlight_Gradient-17" data-name="Accent Highlight Gradient" x1="1141.009" y1="579.852" x2="1142.009" y2="579.852" xlink:href="#Accent_Highlight_Gradient"/>
+    <linearGradient id="Accent_Highlight_Gradient-18" data-name="Accent Highlight Gradient" x1="540.509" y1="549.852" x2="1262.509" y2="549.852" xlink:href="#Accent_Highlight_Gradient"/>
+    <linearGradient id="Accent_Highlight_Gradient-19" data-name="Accent Highlight Gradient" x1="963.209" y1="549.852" x2="1199.809" y2="549.852" xlink:href="#Accent_Highlight_Gradient"/>
+    <linearGradient id="Accent_Highlight_Gradient-20" data-name="Accent Highlight Gradient" x1="991.509" y1="453.852" x2="1171.509" y2="453.852" xlink:href="#Accent_Highlight_Gradient"/>
+    <linearGradient id="Accent_Highlight_Gradient-21" data-name="Accent Highlight Gradient" x1="991.509" y1="549.852" x2="1171.509" y2="549.852" xlink:href="#Accent_Highlight_Gradient"/>
+    <linearGradient id="Accent_Highlight_Gradient-22" data-name="Accent Highlight Gradient" x1="991.509" y1="645.852" x2="1171.509" y2="645.852" xlink:href="#Accent_Highlight_Gradient"/>
+    <linearGradient id="Accent_Highlight_Gradient-23" data-name="Accent Highlight Gradient" x1="991.259" y1="549.852" x2="991.759" y2="549.852" xlink:href="#Accent_Highlight_Gradient"/>
+    <linearGradient id="Accent_Highlight_Gradient-24" data-name="Accent Highlight Gradient" x1="1081.259" y1="549.852" x2="1081.759" y2="549.852" xlink:href="#Accent_Highlight_Gradient"/>
+    <linearGradient id="Accent_Highlight_Gradient-25" data-name="Accent Highlight Gradient" x1="1171.259" y1="549.852" x2="1171.759" y2="549.852" xlink:href="#Accent_Highlight_Gradient"/>
+    <linearGradient id="Accent_Highlight_Gradient-26" data-name="Accent Highlight Gradient" x1="1212.802" y1="387.852" x2="1226.216" y2="387.852" xlink:href="#Accent_Highlight_Gradient"/>
+    <linearGradient id="Accent_Highlight_Gradient-27" data-name="Accent Highlight Gradient" x1="1266.802" y1="321.852" x2="1304.509" y2="321.852" xlink:href="#Accent_Highlight_Gradient"/>
+    <radialGradient id="New_Gradient_Swatch" data-name="New Gradient Swatch" cx="334.985" cy="84.78" fx="334.985" fy="84.78" r="227.389" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#131a36" stop-opacity=".2"/>
+      <stop offset="1" stop-color="#050008" stop-opacity=".8"/>
+    </radialGradient>
+    <linearGradient id="Accent_Highlight_Gradient-28" data-name="Accent Highlight Gradient" x1="19.625" y1="84.78" x2="650.345" y2="84.78" xlink:href="#Accent_Highlight_Gradient"/>
+  </defs>
+  <g isolation="isolate">
+    <g id="Background_logo_footer" data-name="Background + logo footer">
+      <rect y="0" width="1920" height="1080" fill="url(#Spatial_Background_Gradient)"/>
+      <rect y="0" width="1920" height="1084.314" fill="url(#Spatial_Background_Gradient-2)"/>
+    </g>
+    <g id="Depth_Layers" data-name="Depth Layers">
+      <rect y="-3" width="1920" height="1080" fill="url(#radial-gradient)"/>
+      <rect x="-1239.468" y="162.291" width="1274.455" height="794.621" transform="translate(-246.627 -181.605) rotate(-21.471)" fill="url(#radial-gradient-2)" mix-blend-mode="color" opacity=".28"/>
+      <rect x="34.456" y="212.518" width="1286.421" height="578.637" transform="translate(87.014 -99.995) rotate(9.016)" fill="url(#radial-gradient-3)" mix-blend-mode="color" opacity=".28"/>
+      <rect x="809.398" y="162.291" width="1274.455" height="794.621" transform="translate(-104.439 568.348) rotate(-21.471)" fill="url(#radial-gradient-4)" mix-blend-mode="color" opacity=".28"/>
+      <rect y="-3" width="1920" height="1084.314" fill="url(#radial-gradient-5)"/>
+    </g>
+    <g id="Content">
+      <g opacity=".1">
+        <path d="M661.509,789.852h480" stroke="url(#Accent_Highlight_Gradient)"/>
+        <path d="M601.509,729.852h600" stroke="url(#Accent_Highlight_Gradient-2)"/>
+        <path d="M571.509,669.852h660" stroke="url(#Accent_Highlight_Gradient-3)"/>
+        <path d="M541.509,609.852h720" stroke="url(#Accent_Highlight_Gradient-4)"/>
+        <path d="M529.509,549.852h744" stroke="url(#Accent_Highlight_Gradient-5)"/>
+        <path d="M517.509,489.852h768" stroke="url(#Accent_Highlight_Gradient-6)"/>
+        <path d="M505.509,429.852h792" stroke="url(#Accent_Highlight_Gradient-7)"/>
+        <path d="M493.509,369.852h816" stroke="url(#Accent_Highlight_Gradient-8)"/>
+        <path d="M661.509,369.852v420" stroke="url(#Accent_Highlight_Gradient-9)"/>
+        <path d="M721.509,369.852v420" stroke="url(#Accent_Highlight_Gradient-10)"/>
+        <path d="M781.509,369.852v420" stroke="url(#Accent_Highlight_Gradient-11)"/>
+        <path d="M841.509,369.852v420" stroke="url(#Accent_Highlight_Gradient-12)"/>
+        <path d="M901.509,369.852v420" stroke="url(#Accent_Highlight_Gradient-13)"/>
+        <path d="M961.509,369.852v420" stroke="url(#Accent_Highlight_Gradient-14)"/>
+        <path d="M1021.509,369.852v420" stroke="url(#Accent_Highlight_Gradient-15)"/>
+        <path d="M1081.509,369.852v420" stroke="url(#Accent_Highlight_Gradient-16)"/>
+        <path d="M1141.509,369.852v420" stroke="url(#Accent_Highlight_Gradient-17)"/>
+      </g>
+      <text transform="translate(538.394 309.853)" fill="#fff" font-family="SF Pro Semibold, &apos;SF Pro &apos;" font-size="28.8" font-weight="600" isolation="isolate"><tspan x="0" y="0" letter-spacing="-.025em">R</tspan><tspan x="17.712" y="0" letter-spacing="-.002em">e</tspan><tspan x="33.581" y="0" letter-spacing="-.003em">a</tspan><tspan x="49.162" y="0" letter-spacing="-.01em">c</tspan><tspan x="64.742" y="0" letter-spacing="0em">t </tspan><tspan x="81.733" y="0" letter-spacing="-.004em">T</tspan><tspan x="98.495" y="0">h</tspan><tspan x="115.458" y="0" letter-spacing="-.004em">r</tspan><tspan x="129.542" y="0">ee </tspan><tspan x="166.865" y="0" letter-spacing="-.005em">F</tspan><tspan x="183.311" y="0">ib</tspan><tspan x="206.955" y="0" letter-spacing="-.006em">e</tspan><tspan x="222.708" y="0">r + </tspan><tspan x="262.394" y="0" letter-spacing="-.005em">F</tspan><tspan x="278.838" y="0" letter-spacing="-.016em">r</tspan><tspan x="292.576" y="0">a</tspan><tspan x="308.243" y="0" letter-spacing="-.003em">m</tspan><tspan x="334.682" y="0" letter-spacing="-.006em">e</tspan><tspan x="350.435" y="0">r: </tspan><tspan x="377.362" y="0" letter-spacing="-.005em">S</tspan><tspan x="395.045" y="0" letter-spacing="-.002em">e</tspan><tspan x="410.914" y="0">am</tspan><tspan x="453.105" y="0" letter-spacing="-.005em">l</tspan><tspan x="459.902" y="0" letter-spacing="0em">ess C</tspan><tspan x="530.26" y="0" letter-spacing="-.004em">r</tspan><tspan x="544.343" y="0" letter-spacing="-.002em">e</tspan><tspan x="560.211" y="0" letter-spacing="-.004em">a</tspan><tspan x="575.763" y="0" letter-spacing="-.003em">t</tspan><tspan x="587.196" y="0" letter-spacing="-.015em">i</tspan><tspan x="593.331" y="0" letter-spacing="-.028em">v</tspan><tspan x="609.401" y="0" letter-spacing="0em">e P</tspan><tspan x="648.626" y="0" letter-spacing="-.006em">l</tspan><tspan x="655.395" y="0" letter-spacing="-.004em">a</tspan><tspan x="670.946" y="0" letter-spacing="-.025em">t</tspan><tspan x="681.746" y="0" letter-spacing="-.019em">f</tspan><tspan x="691.221" y="0" letter-spacing="-.006em">or</tspan><tspan x="721.461" y="0">m</tspan></text>
+      <g>
+        <rect x="541.509" y="357.852" width="720" height="384" rx="10" ry="10" fill="#131a36" stroke="url(#Accent_Highlight_Gradient-18)" stroke-width="2"/>
+        <g>
+          <rect x="541.509" y="357.852" width="360" height="384" rx="10" ry="10" fill="#0d0d15"/>
+          <rect x="541.509" y="357.852" width="360" height="36" rx="10" ry="10" fill="#331f4a"/>
+          <text transform="translate(669.152 381.853)" fill="#fff" font-family="SF Pro Regular, &apos;SF Pro &apos;" font-size="16.8" isolation="isolate"><tspan x="0" y="0" letter-spacing="-.075em">T</tspan><tspan x="8.35" y="0">a</tspan><tspan x="16.767" y="0" letter-spacing="-.009em">r</tspan><tspan x="23.839" y="0" letter-spacing="-.01em">o</tspan><tspan x="32.877" y="0">t</tspan><tspan x="38.605" y="0" letter-spacing=".001em">C</tspan><tspan x="49.644" y="0" letter-spacing="0em">a</tspan><tspan x="58.06" y="0" letter-spacing="-.009em">r</tspan><tspan x="65.133" y="0" letter-spacing="0em">d</tspan><tspan x="74.372" y="0" letter-spacing=".024em">.</tspan><tspan x="77.296" y="0" letter-spacing="-.003em">j</tspan><tspan x="80.37" y="0" letter-spacing="-.017em">s</tspan><tspan x="88.216" y="0" letter-spacing="0em">x</tspan></text>
+          <g>
+            <text transform="translate(559.509 411.853)" fill="#bf4080" font-family="SFMono-RegularItalic, &apos;SF Mono&apos;" font-size="14.4" font-style="italic" isolation="isolate"><tspan x="0" y="0">import</tspan></text>
+            <text transform="translate(619.509 411.853)" fill="#fff" font-family="SFMono-RegularItalic, &apos;SF Mono&apos;" font-size="14.4" font-style="italic" isolation="isolate"><tspan x="0" y="0">React, { useRef }</tspan></text>
+            <text transform="translate(775.509 411.853)" fill="#bf4080" font-family="SFMono-RegularItalic, &apos;SF Mono&apos;" font-size="14.4" font-style="italic" isolation="isolate"><tspan x="0" y="0">from</tspan></text>
+            <text transform="translate(811.509 411.853)" fill="#2d854d" font-family="SFMono-RegularItalic, &apos;SF Mono&apos;" font-size="14.4" font-style="italic" isolation="isolate"><tspan x="0" y="0">&apos;react&apos;</tspan></text>
+            <text transform="translate(559.509 435.853)" fill="#bf4080" font-family="SFMono-RegularItalic, &apos;SF Mono&apos;" font-size="14.4" font-style="italic" isolation="isolate"><tspan x="0" y="0">import</tspan></text>
+            <text transform="translate(619.509 435.853)" fill="#fff" font-family="SFMono-RegularItalic, &apos;SF Mono&apos;" font-size="14.4" font-style="italic" isolation="isolate"><tspan x="0" y="0">{ useFrame }</tspan></text>
+            <text transform="translate(739.509 435.853)" fill="#bf4080" font-family="SFMono-RegularItalic, &apos;SF Mono&apos;" font-size="14.4" font-style="italic" isolation="isolate"><tspan x="0" y="0">from</tspan></text>
+            <text transform="translate(775.509 435.853)" fill="#2d854d" font-family="SFMono-RegularItalic, &apos;SF Mono&apos;" font-size="14.4" font-style="italic" isolation="isolate"><tspan x="0" y="0">&apos;@react-three/fiber&apos;</tspan></text>
+            <text transform="translate(559.509 459.853)" fill="#bf4080" font-family="SFMono-RegularItalic, &apos;SF Mono&apos;" font-size="14.4" font-style="italic" isolation="isolate"><tspan x="0" y="0">import</tspan></text>
+            <text transform="translate(619.509 459.853)" fill="#fff" font-family="SFMono-RegularItalic, &apos;SF Mono&apos;" font-size="14.4" font-style="italic" isolation="isolate"><tspan x="0" y="0">{ Text, useTexture }</tspan></text>
+            <text transform="translate(781.509 459.853)" fill="#bf4080" font-family="SFMono-RegularItalic, &apos;SF Mono&apos;" font-size="14.4" font-style="italic" isolation="isolate"><tspan x="0" y="0">from</tspan></text>
+            <text transform="translate(817.509 459.853)" fill="#2d854d" font-family="SFMono-RegularItalic, &apos;SF Mono&apos;" font-size="14.4" font-style="italic" isolation="isolate"><tspan x="0" y="0">&apos;@react-three/drei&apos;</tspan></text>
+            <text transform="translate(559.509 489.853)" fill="#bf4080" font-family="SFMono-RegularItalic, &apos;SF Mono&apos;" font-size="14.4" font-style="italic" isolation="isolate"><tspan x="0" y="0">export default function</tspan></text>
+            <text transform="translate(739.509 489.853)" fill="#5ac8fa" font-family="SFMono-RegularItalic, &apos;SF Mono&apos;" font-size="14.4" font-style="italic" isolation="isolate"><tspan x="0" y="0">TarotCard</tspan></text>
+            <text transform="translate(811.509 489.853)" fill="#fff" font-family="SFMono-RegularItalic, &apos;SF Mono&apos;" font-size="14.4" font-style="italic" isolation="isolate"><tspan x="0" y="0">({ name, texture }) {</tspan></text>
+            <text transform="translate(577.509 513.853)" fill="#bf4080" font-family="SFMono-RegularItalic, &apos;SF Mono&apos;" font-size="14.4" font-style="italic" isolation="isolate"><tspan x="0" y="0">const</tspan></text>
+            <text transform="translate(613.509 513.853)" fill="#fff" font-family="SFMono-RegularItalic, &apos;SF Mono&apos;" font-size="14.4" font-style="italic" isolation="isolate"><tspan x="0" y="0">card = useRef()</tspan></text>
+            <text transform="translate(577.509 537.853)" fill="#bf4080" font-family="SFMono-RegularItalic, &apos;SF Mono&apos;" font-size="14.4" font-style="italic" isolation="isolate"><tspan x="0" y="0">const</tspan></text>
+            <text transform="translate(613.509 537.853)" fill="#fff" font-family="SFMono-RegularItalic, &apos;SF Mono&apos;" font-size="14.4" font-style="italic" isolation="isolate"><tspan x="0" y="0">textures = useTexture({</tspan></text>
+            <text transform="translate(595.509 561.853)" fill="#fff" font-family="SFMono-RegularItalic, &apos;SF Mono&apos;" font-size="14.4" font-style="italic" isolation="isolate"><tspan x="0" y="0">map: texture,</tspan></text>
+            <text transform="translate(595.509 585.853)" fill="#fff" font-family="SFMono-RegularItalic, &apos;SF Mono&apos;" font-size="14.4" font-style="italic" isolation="isolate"><tspan x="0" y="0">normalMap: `${texture.replace(&apos;.jpg&apos;, &apos;_normal.jpg&apos;)}`</tspan></text>
+            <text transform="translate(577.509 609.853)" fill="#fff" font-family="SFMono-RegularItalic, &apos;SF Mono&apos;" font-size="14.4" font-style="italic" isolation="isolate"><tspan x="0" y="0">})</tspan></text>
+            <text transform="translate(577.509 633.853)" fill="#5ac8fa" font-family="SFMono-RegularItalic, &apos;SF Mono&apos;" font-size="14.4" font-style="italic" isolation="isolate"><tspan x="0" y="0">useFrame</tspan></text>
+            <text transform="translate(637.509 633.853)" fill="#fff" font-family="SFMono-RegularItalic, &apos;SF Mono&apos;" font-size="14.4" font-style="italic" isolation="isolate"><tspan x="0" y="0">((state) =&gt; {</tspan></text>
+            <text transform="translate(595.509 657.853)" fill="#fff" font-family="SFMono-RegularItalic, &apos;SF Mono&apos;" font-size="14.4" font-style="italic" isolation="isolate"><tspan x="0" y="0">card.current.rotation.y = Math.sin(state.clock.elapsedTime / 3) * 0.3</tspan></text>
+            <text transform="translate(577.509 681.853)" fill="#fff" font-family="SFMono-RegularItalic, &apos;SF Mono&apos;" font-size="14.4" font-style="italic" isolation="isolate"><tspan x="0" y="0">})</tspan></text>
+            <text transform="translate(577.509 705.853)" fill="#bf4080" font-family="SFMono-RegularItalic, &apos;SF Mono&apos;" font-size="14.4" font-style="italic" isolation="isolate"><tspan x="0" y="0">return</tspan></text>
+            <text transform="translate(619.509 705.853)" fill="#fff" font-family="SFMono-RegularItalic, &apos;SF Mono&apos;" font-size="14.4" font-style="italic" isolation="isolate"><tspan x="0" y="0">(</tspan></text>
+            <text transform="translate(595.509 729.853)" fill="#5ac8fa" font-family="SFMono-RegularItalic, &apos;SF Mono&apos;" font-size="14.4" font-style="italic" isolation="isolate"><tspan x="0" y="0">&lt;mesh</tspan></text>
+            <text transform="translate(643.509 729.853)" fill="#bf4080" font-family="SFMono-RegularItalic, &apos;SF Mono&apos;" font-size="14.4" font-style="italic" isolation="isolate"><tspan x="0" y="0">ref</tspan></text>
+            <text transform="translate(667.509 729.853)" fill="#fff" font-family="SFMono-RegularItalic, &apos;SF Mono&apos;" font-size="14.4" font-style="italic" isolation="isolate"><tspan x="0" y="0">={card}&gt;</tspan></text>
+            <text transform="translate(559.509 753.853)" fill="#fff" font-family="SFMono-RegularItalic, &apos;SF Mono&apos;" font-size="14.4" font-style="italic" isolation="isolate"><tspan x="0" y="0">// More component JSX</tspan></text>
+          </g>
+        </g>
+        <g>
+          <g>
+            <g>
+              <path d="M1072.731,423.267l120.548,32.301c5.121,1.372,7.428,6.44,5.153,11.319l-94.754,203.2c-2.275,4.879-8.271,7.722-13.393,6.35l-120.548-32.301c-5.121-1.372-7.428-6.44-5.153-11.319l94.754-203.2c2.275-4.879,8.271-7.722,13.393-6.35Z" fill="#331f4a" stroke="url(#Accent_Highlight_Gradient-19)" stroke-miterlimit="4" stroke-width="1"/>
+              <polygon points="1069.9 434.932 1185.811 465.99 1093.117 664.773 977.206 633.714 1069.9 434.932" fill="#131a36"/>
+              <path d="M1120.131,467.026c16.004,4.288,23.214,20.125,16.104,35.373-7.11,15.248-25.848,24.132-41.852,19.844-16.004-4.288-23.214-20.125-16.104-35.373,7.11-15.248,25.848-24.132,41.852-19.844Z" fill="#6a3093"/>
+              <path d="M1114.981,478.07c9.602,2.573,13.928,12.075,9.662,21.224-4.266,9.149-15.509,14.479-25.111,11.906-9.602-2.573-13.928-12.075-9.662-21.224,4.266-9.149,15.509-14.479,25.111-11.906Z" fill="#bf4080"/>
+              <g>
+                <polygon points="1019.695 570.559 1031.286 573.665 1026.137 584.709 1014.546 581.603 1019.695 570.559" fill="#5ac8fa" isolation="isolate" opacity=".7"/>
+                <polygon points="1126.581 537.083 1138.172 540.189 1133.023 551.232 1121.432 548.126 1126.581 537.083" fill="#5ac8fa" isolation="isolate" opacity=".7"/>
+                <polygon points="1027.429 609.901 1039.02 613.007 1033.87 624.051 1022.279 620.945 1027.429 609.901" fill="#5ac8fa" isolation="isolate" opacity=".7"/>
+              </g>
+              <path d="M1004.892,616.286l81.138,21.741c3.201.858,4.643,4.025,3.221,7.075l-2.575,5.522c-1.422,3.05-5.17,4.826-8.37,3.969l-81.138-21.741c-3.201-.858-4.643-4.025-3.221-7.075l2.575-5.522c1.422-3.05,5.17-4.826,8.37-3.969Z" fill="#331f4a"/>
+              <text transform="translate(1002.827 630.662) rotate(15) scale(.985) skewX(-10)" fill="#fff" font-family="SF Pro Regular, &apos;SF Pro &apos;" font-size="12.185" isolation="isolate"><tspan x="0" y="0" letter-spacing="-.009em">T</tspan><tspan x="6.86" y="0" letter-spacing="-.002em">h</tspan><tspan x="13.489" y="0">e M</tspan><tspan x="32.242" y="0" letter-spacing="-.002em">a</tspan><tspan x="38.321" y="0" letter-spacing="0em">g</tspan><tspan x="45.024" y="0" letter-spacing="-.005em">ic</tspan><tspan x="53.37" y="0">ian</tspan></text>
+            </g>
+            <ellipse cx="1081.509" cy="681.852" rx="84" ry="18" fill="#5ac8fa" isolation="isolate" opacity=".2"/>
+          </g>
+          <g opacity=".3">
+            <path d="M991.509,453.852h180" stroke="url(#Accent_Highlight_Gradient-20)" stroke-width=".5"/>
+            <path d="M991.509,549.852h180" stroke="url(#Accent_Highlight_Gradient-21)" stroke-width=".5"/>
+            <path d="M991.509,645.852h180" stroke="url(#Accent_Highlight_Gradient-22)" stroke-width=".5"/>
+            <path d="M991.509,453.852v192" stroke="url(#Accent_Highlight_Gradient-23)" stroke-width=".5"/>
+            <path d="M1081.509,453.852v192" stroke="url(#Accent_Highlight_Gradient-24)" stroke-width=".5"/>
+            <path d="M1171.509,453.852v192" stroke="url(#Accent_Highlight_Gradient-25)" stroke-width=".5"/>
+          </g>
+          <g>
+            <circle cx="1219.509" cy="387.852" r="18" fill="#331f4a"/>
+            <path d="M1213.509,381.852l12,12M1213.509,393.852l12-12" stroke="url(#Accent_Highlight_Gradient-26)" stroke-width="2"/>
+          </g>
+        </g>
+      </g>
+      <g>
+        <text transform="translate(601.509 765.853)" fill="#fff" font-family="SF Pro Semibold, &apos;SF Pro &apos;" font-size="19.2" font-weight="600" isolation="isolate"><tspan x="0" y="0" letter-spacing="-.051em">K</tspan><tspan x="11.559" y="0" letter-spacing="-.032em">e</tspan><tspan x="21.562" y="0" letter-spacing="0em">y </tspan><tspan x="36.326" y="0" letter-spacing="-.009em">B</tspan><tspan x="48.634" y="0" letter-spacing="-.006em">e</tspan><tspan x="59.136" y="0" letter-spacing="-.003em">n</tspan><tspan x="70.387" y="0" letter-spacing="-.01em">e</tspan><tspan x="80.812" y="0" letter-spacing="-.003em">fit</tspan><tspan x="99.398" y="0">s</tspan></text>
+        <g>
+          <rect x="601.509" y="780.252" width="9.6" height="9.6" fill="#5ac8fa"/>
+          <rect x="611.109" y="780.252" width="9.6" height="9.6" fill="#6a3093"/>
+          <text transform="translate(631.509 789.853)" fill="#fff" font-family="SF Pro Regular, &apos;SF Pro &apos;" font-size="16.8" isolation="isolate"><tspan x="0" y="0">3D </tspan><tspan x="23.771" y="0" letter-spacing=".002em">U</tspan><tspan x="35.195" y="0">I C</tspan><tspan x="52.634" y="0" letter-spacing="-.005em">o</tspan><tspan x="61.756" y="0">mp</tspan><tspan x="85.746" y="0" letter-spacing="-.005em">o</tspan><tspan x="94.868" y="0" letter-spacing="-.002em">n</tspan><tspan x="103.89" y="0" letter-spacing="-.005em">e</tspan><tspan x="112.609" y="0" letter-spacing="-.008em">n</tspan><tspan x="121.529" y="0" letter-spacing="-.013em">t</tspan><tspan x="127.04" y="0">s </tspan><tspan x="138.279" y="0" letter-spacing="-.026em">f</tspan><tspan x="142.781" y="0" letter-spacing="-.005em">o</tspan><tspan x="151.904" y="0">r </tspan><tspan x="162.235" y="0" letter-spacing="-.023em">A</tspan><tspan x="173.155" y="0">I </tspan><tspan x="179.573" y="0" letter-spacing=".003em">B</tspan><tspan x="189.922" y="0" letter-spacing="-.021em">r</tspan><tspan x="196.793" y="0" letter-spacing="0em">a</tspan><tspan x="205.209" y="0" letter-spacing="-.002em">n</tspan><tspan x="214.23" y="0">di</tspan><tspan x="226.444" y="0" letter-spacing="-.002em">n</tspan><tspan x="235.465" y="0">g Qu</tspan><tspan x="268.527" y="0" letter-spacing="-.017em">i</tspan><tspan x="271.215" y="0">z</tspan></text>
+        </g>
+        <g>
+          <rect x="601.509" y="810.252" width="9.6" height="9.6" fill="#5ac8fa"/>
+          <rect x="611.109" y="810.252" width="9.6" height="9.6" fill="#6a3093"/>
+          <text transform="translate(631.509 819.853)" fill="#fff" font-family="SF Pro Regular, &apos;SF Pro &apos;" font-size="16.8" isolation="isolate"><tspan x="0" y="0" letter-spacing=".003em">I</tspan><tspan x="3.359" y="0" letter-spacing="-.008em">n</tspan><tspan x="12.28" y="0" letter-spacing="-.022em">t</tspan><tspan x="17.64" y="0" letter-spacing="-.005em">e</tspan><tspan x="26.358" y="0" letter-spacing="-.021em">r</tspan><tspan x="33.229" y="0" letter-spacing="-.002em">a</tspan><tspan x="41.613" y="0" letter-spacing="-.01em">c</tspan><tspan x="50.147" y="0" letter-spacing="-.006em">t</tspan><tspan x="55.775" y="0" letter-spacing="-.01em">i</tspan><tspan x="58.58" y="0" letter-spacing="-.025em">v</tspan><tspan x="66.712" y="0">e </tspan><tspan x="78.623" y="0" letter-spacing="-.075em">T</tspan><tspan x="86.972" y="0">a</tspan><tspan x="95.389" y="0" letter-spacing="-.009em">r</tspan><tspan x="102.462" y="0" letter-spacing="-.01em">o</tspan><tspan x="111.5" y="0">t </tspan><tspan x="120.337" y="0" letter-spacing="0em">C</tspan><tspan x="131.374" y="0" letter-spacing="0em">a</tspan><tspan x="139.79" y="0" letter-spacing="-.009em">r</tspan><tspan x="146.863" y="0" letter-spacing="-.003em">d</tspan><tspan x="156.053" y="0">s </tspan><tspan x="167.292" y="0" letter-spacing="-.026em">f</tspan><tspan x="171.794" y="0" letter-spacing="-.005em">o</tspan><tspan x="180.917" y="0">r </tspan><tspan x="191.249" y="0" letter-spacing="-.025em">P</tspan><tspan x="200.808" y="0">o</tspan><tspan x="210.014" y="0" letter-spacing="-.004em">c</tspan><tspan x="218.649" y="0" letter-spacing="-.027em">k</tspan><tspan x="226.562" y="0" letter-spacing="-.01em">e</tspan><tspan x="235.197" y="0">t O</tspan><tspan x="255.575" y="0" letter-spacing="-.021em">r</tspan><tspan x="262.446" y="0" letter-spacing="-.002em">a</tspan><tspan x="270.829" y="0" letter-spacing="-.004em">cl</tspan><tspan x="282.488" y="0">e</tspan></text>
+        </g>
+        <g>
+          <rect x="1081.509" y="780.252" width="9.6" height="9.6" fill="#5ac8fa"/>
+          <rect x="1091.109" y="780.252" width="9.6" height="9.6" fill="#6a3093"/>
+          <text transform="translate(1111.509 789.853)" fill="#fff" font-family="SF Pro Regular, &apos;SF Pro &apos;" font-size="16.8" isolation="isolate"><tspan x="0" y="0" letter-spacing="-.034em">L</tspan><tspan x="8.098" y="0" letter-spacing="-.025em">ev</tspan><tspan x="24.611" y="0" letter-spacing="-.005em">e</tspan><tspan x="33.331" y="0" letter-spacing="-.021em">r</tspan><tspan x="40.202" y="0" letter-spacing="-.002em">a</tspan><tspan x="48.585" y="0" letter-spacing="-.005em">g</tspan><tspan x="57.741" y="0">es </tspan><tspan x="77.783" y="0" letter-spacing="-.027em">e</tspan><tspan x="86.133" y="0" letter-spacing="-.009em">x</tspan><tspan x="94.566" y="0" letter-spacing="-.003em">i</tspan><tspan x="97.489" y="0" letter-spacing="-.006em">st</tspan><tspan x="111.147" y="0">i</tspan><tspan x="114.121" y="0" letter-spacing="-.002em">n</tspan><tspan x="123.143" y="0" letter-spacing="0em">g </tspan><tspan x="135.49" y="0" letter-spacing="-.007em">F</tspan><tspan x="144.461" y="0" letter-spacing="-.021em">r</tspan><tspan x="151.332" y="0">a</tspan><tspan x="159.749" y="0" letter-spacing="-.002em">m</tspan><tspan x="174.466" y="0" letter-spacing="-.005em">e</tspan><tspan x="183.185" y="0">r </tspan><tspan x="193.517" y="0" letter-spacing="-.027em">e</tspan><tspan x="201.866" y="0" letter-spacing="-.014em">x</tspan><tspan x="210.216" y="0" letter-spacing="0em">p</tspan><tspan x="219.455" y="0" letter-spacing="-.005em">e</tspan><tspan x="228.175" y="0" letter-spacing="0em">r</tspan><tspan x="235.382" y="0" letter-spacing="-.006em">t</tspan><tspan x="241.01" y="0" letter-spacing="-.003em">i</tspan><tspan x="243.933" y="0">se</tspan></text>
+        </g>
+        <g>
+          <rect x="1081.509" y="810.252" width="9.6" height="9.6" fill="#5ac8fa"/>
+          <rect x="1091.109" y="810.252" width="9.6" height="9.6" fill="#6a3093"/>
+          <text transform="translate(1111.509 819.853)" fill="#fff" font-family="SF Pro Regular, &apos;SF Pro &apos;" font-size="16.8" isolation="isolate"><tspan x="0" y="0">C</tspan><tspan x="11.021" y="0" letter-spacing="-.009em">r</tspan><tspan x="18.094" y="0" letter-spacing="0em">e</tspan><tspan x="26.913" y="0" letter-spacing="-.008em">a</tspan><tspan x="35.195" y="0" letter-spacing="-.022em">t</tspan><tspan x="40.555" y="0">e </tspan><tspan x="52.466" y="0" letter-spacing="-.005em">o</tspan><tspan x="61.588" y="0" letter-spacing="-.002em">n</tspan><tspan x="70.609" y="0">c</tspan><tspan x="79.312" y="0" letter-spacing="-.01em">e</tspan><tspan x="87.946" y="0" letter-spacing="0em">, </tspan><tspan x="93.574" y="0" letter-spacing="-.004em">d</tspan><tspan x="102.747" y="0" letter-spacing="-.005em">e</tspan><tspan x="111.467" y="0" letter-spacing="-.004em">pl</tspan><tspan x="123.663" y="0" letter-spacing="-.031em">o</tspan><tspan x="132.349" y="0">y </tspan><tspan x="144.008" y="0" letter-spacing="-.025em">ev</tspan><tspan x="160.521" y="0" letter-spacing="-.005em">e</tspan><tspan x="169.241" y="0" letter-spacing="-.011em">r</tspan><tspan x="176.28" y="0" letter-spacing="-.009em">y</tspan><tspan x="184.68" y="0" letter-spacing="-.01em">w</tspan><tspan x="197.465" y="0" letter-spacing="-.002em">h</tspan><tspan x="206.604" y="0" letter-spacing="-.005em">e</tspan><tspan x="215.323" y="0" letter-spacing="-.009em">r</tspan><tspan x="222.396" y="0" letter-spacing="0em">e</tspan></text>
+        </g>
+      </g>
+      <g>
+        <circle cx="1285.509" cy="321.852" r="36" fill="#331f4a"/>
+        <path d="M1267.509,303.852l18,18-18,18M1285.509,321.852l18-18v36l-18-18" stroke="url(#Accent_Highlight_Gradient-27)" stroke-width="2"/>
+        <rect x="1278.309" y="314.652" width="4.8" height="4.8" fill="#5ac8fa" isolation="isolate" opacity=".8"/>
+        <rect x="1287.909" y="324.252" width="4.8" height="4.8" fill="#5ac8fa" isolation="isolate" opacity=".8"/>
+      </g>
+    </g>
+    <g id="Titles">
+      <rect x="20" y="20" width="629.97" height="129.56" rx="18.441" ry="18.441" fill="url(#New_Gradient_Swatch)" isolation="isolate" opacity=".8" stroke="url(#Accent_Highlight_Gradient-28)" stroke-width=".75"/>
+      <g isolation="isolate">
+        <g isolation="isolate">
+          <text transform="translate(58.126 75.84)" fill="#fff" font-family="SF Pro Semibold, &apos;SF Pro &apos;" font-size="30" font-weight="600" isolation="isolate"><tspan x="0" y="0" letter-spacing=".002em">C</tspan><tspan x="20.76" y="0">l</tspan><tspan x="27.99" y="0" letter-spacing="-.006em">ie</tspan><tspan x="51.059" y="0" letter-spacing="-.004em">n</tspan><tspan x="68.609" y="0">t </tspan><tspan x="86.309" y="0" letter-spacing="-.007em">Ex</tspan><tspan x="120.659" y="0">p</tspan><tspan x="138.448" y="0" letter-spacing="-.006em">e</tspan><tspan x="154.858" y="0" letter-spacing="-.01em">r</tspan><tspan x="169.348" y="0" letter-spacing="-.006em">ie</tspan><tspan x="192.418" y="0" letter-spacing="-.003em">n</tspan><tspan x="209.998" y="0">ce </tspan><tspan x="248.817" y="0" letter-spacing=".002em">H</tspan><tspan x="269.457" y="0">ub</tspan></text>
+        </g>
+      </g>
+      <g isolation="isolate">
+        <text transform="translate(58.126 114.106)" fill="#5ac8fa" font-family="SF Pro Regular, &apos;SF Pro &apos;" font-size="20" isolation="isolate"><tspan x="0" y="0" letter-spacing="-.008em">P</tspan><tspan x="11.72" y="0" letter-spacing="-.009em">r</tspan><tspan x="20.14" y="0" letter-spacing="-.005em">e</tspan><tspan x="30.52" y="0">mium </tspan><tspan x="83.799" y="0" letter-spacing=".003em">C</tspan><tspan x="96.979" y="0" letter-spacing="0em">l</tspan><tspan x="100.658" y="0" letter-spacing="-.005em">ie</tspan><tspan x="114.479" y="0" letter-spacing="-.008em">n</tspan><tspan x="125.098" y="0" letter-spacing="0em">t </tspan><tspan x="135.618" y="0" letter-spacing="-.025em">P</tspan><tspan x="146.998" y="0" letter-spacing="-.005em">o</tspan><tspan x="157.858" y="0" letter-spacing="0em">r</tspan><tspan x="166.438" y="0" letter-spacing="-.006em">t</tspan><tspan x="173.138" y="0">al </tspan><tspan x="190.537" y="0" letter-spacing="-.01em">w</tspan><tspan x="205.758" y="0" letter-spacing="-.006em">i</tspan><tspan x="209.177" y="0" letter-spacing=".003em">t</tspan><tspan x="216.057" y="0" letter-spacing="0em">h </tspan><tspan x="230.677" y="0" letter-spacing="-.023em">A</tspan><tspan x="243.677" y="0" letter-spacing="0em">I-En</tspan><tspan x="275.976" y="0" letter-spacing="-.002em">h</tspan><tspan x="286.856" y="0" letter-spacing="0em">a</tspan><tspan x="296.875" y="0" letter-spacing="-.002em">n</tspan><tspan x="307.615" y="0">ced </tspan><tspan x="343.155" y="0" letter-spacing="-.008em">P</tspan><tspan x="354.874" y="0" letter-spacing="-.009em">r</tspan><tspan x="363.294" y="0" letter-spacing="0em">es</tspan><tspan x="383.454" y="0" letter-spacing="-.005em">e</tspan><tspan x="393.834" y="0" letter-spacing="-.008em">n</tspan><tspan x="404.454" y="0" letter-spacing="-.006em">t</tspan><tspan x="411.154" y="0" letter-spacing="-.008em">a</tspan><tspan x="421.013" y="0" letter-spacing="-.006em">t</tspan><tspan x="427.713" y="0" letter-spacing="-.005em">io</tspan><tspan x="442.013" y="0">n</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>

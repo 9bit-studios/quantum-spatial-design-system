@@ -1,0 +1,224 @@
+{
+  "$schema": "./agent-registry-schema.json",
+  "version": "1.0.0",
+  "lastUpdated": "2025-11-03",
+  "description": "Apple Intelligence Strategic Director Multi-Agent Registry",
+
+  "agents": [
+    {
+      "id": "strategic-director",
+      "name": "Strategic Director Agent",
+      "description": "Product design & development planning with validation/QA coordination",
+      "role": "Executive decision-making, workflow orchestration, technical validation",
+      "priority": 1,
+      "m4Pathway": "strategic_intelligence",
+      "enabled": true,
+
+      "capabilities": {
+        "planning": ["product-roadmaps", "technical-architecture", "priority-management"],
+        "validation": ["apple-hig-compliance", "type-safety", "security-audit", "performance"],
+        "orchestration": ["cross-agent-coordination", "workflow-management", "deployment-approval"]
+      },
+
+      "allowedTools": [
+        "Read",
+        "Write",
+        "Edit",
+        "Grep",
+        "Glob",
+        "Bash",
+        "Task"
+      ],
+
+      "skills": [
+        {
+          "name": "strategic-planning",
+          "path": "./skills/strategic-planning/",
+          "enabled": true
+        },
+        {
+          "name": "technical-validation",
+          "path": "./skills/technical-validation/",
+          "enabled": true
+        },
+        {
+          "name": "workflow-orchestration",
+          "path": "./skills/workflow-orchestration/",
+          "enabled": true
+        }
+      ],
+
+      "systemPromptPath": "./agents/prompts/strategic-director-prompt.md",
+      "model": "claude-sonnet-4-5-20250929",
+      "maxTurns": 10,
+      "settingSources": ["project"]
+    },
+
+    {
+      "id": "oksana-creative",
+      "name": "Oksana Creative Intelligence Agent",
+      "description": "Brand & content intelligence with thematic vision and agency-level copywriting",
+      "role": "Brand voice mastery, content optimization, thematic consistency",
+      "priority": 2,
+      "m4Pathway": "creative_intelligence",
+      "enabled": true,
+
+      "capabilities": {
+        "brandVoice": ["petersen-games-validation", "9bit-studios-validation", "tone-analysis"],
+        "copywriting": ["product-descriptions", "landing-pages", "email-campaigns", "seo-optimization"],
+        "contentIntelligence": ["brand-consistency-scoring", "competitive-positioning", "ab-testing"]
+      },
+
+      "allowedTools": [
+        "Read",
+        "Grep",
+        "Search",
+        "Task"
+      ],
+
+      "skills": [
+        {
+          "name": "brand-voice-validation",
+          "path": "./skills/brand-voice-validation/",
+          "enabled": true
+        },
+        {
+          "name": "agency-copywriting",
+          "path": "./skills/agency-copywriting/",
+          "enabled": true
+        },
+        {
+          "name": "seo-optimization",
+          "path": "./skills/seo-optimization/",
+          "enabled": true
+        }
+      ],
+
+      "systemPromptPath": "./agents/prompts/Oksana-creative-prompt.md",
+      "model": "claude-sonnet-4-5-20250929",
+      "maxTurns": 10,
+      "settingSources": ["project"]
+    },
+
+    {
+      "id": "figma-visual",
+      "name": "Figma Framer Swift Visual Intelligence Agent",
+      "description": "Frontend & interactive design with Figma-to-code automation",
+      "role": "Design-to-code automation, Apple HIG compliance, visual excellence",
+      "priority": 1,
+      "m4Pathway": "quantum_spatial",
+      "enabled": true,
+
+      "capabilities": {
+        "designExtraction": ["figma-parsing", "token-extraction", "component-identification"],
+        "codeGeneration": ["swiftui", "react-nextjs", "shopify-liquid"],
+        "validation": ["apple-hig-compliance", "accessibility", "performance-optimization"],
+        "designSystem": ["quantum-spatial-tokens", "glassmorphism", "responsive-design"]
+      },
+
+      "allowedTools": [
+        "Read",
+        "Write",
+        "Edit",
+        "Grep",
+        "Glob",
+        "Bash"
+      ],
+
+      "skills": [
+        {
+          "name": "design-system-automation",
+          "path": "./skills/design-system-automation/",
+          "enabled": true
+        },
+        {
+          "name": "hig-compliance",
+          "path": "./skills/hig-compliance/",
+          "enabled": true
+        },
+        {
+          "name": "component-generation",
+          "path": "./skills/component-generation/",
+          "enabled": true
+        }
+      ],
+
+      "systemPromptPath": "./agents/prompts/figma-visual-prompt.md",
+      "model": "claude-sonnet-4-5-20250929",
+      "maxTurns": 10,
+      "settingSources": ["project"]
+    }
+  ],
+
+  "coordination": {
+    "multiAgentTasks": {
+      "featurePlanning": ["strategic-director", "oksana-creative", "figma-visual"],
+      "contentValidation": ["oksana-creative", "strategic-director"],
+      "componentGeneration": ["figma-visual", "strategic-director"],
+      "brandAlignedDesign": ["oksana-creative", "figma-visual"],
+      "productLaunch": ["strategic-director", "oksana-creative", "figma-visual"]
+    },
+
+    "approvalWorkflow": {
+      "deployment": {
+        "requiredAgents": ["strategic-director"],
+        "optionalAgents": ["oksana-creative", "figma-visual"],
+        "validationChecklist": [
+          "apple-hig-compliance",
+          "type-safety",
+          "security-audit",
+          "brand-consistency",
+          "performance-targets"
+        ]
+      }
+    }
+  },
+
+  "m4Optimization": {
+    "strategicIntelligencePathway": {
+      "enabled": true,
+      "targetPerformance": {
+        "roadmapGeneration": "<30 seconds",
+        "technicalValidation": "<5 seconds",
+        "priorityCalculation": "<1 second"
+      }
+    },
+
+    "creativeIntelligencePathway": {
+      "enabled": true,
+      "targetPerformance": {
+        "brandVoiceAnalysis": "<5 seconds",
+        "copyGeneration": "<10 seconds",
+        "seoOptimization": "<3 seconds"
+      }
+    },
+
+    "quantumSpatialPathway": {
+      "enabled": true,
+      "targetPerformance": {
+        "designParsing": "<2 seconds",
+        "codeGeneration": "<30 seconds",
+        "tokenProcessing": "<1 second"
+      }
+    }
+  },
+
+  "integration": {
+    "notionDatabases": {
+      "connected": 91,
+      "primaryUse": "oksana-creative",
+      "syncEnabled": true
+    },
+
+    "figmaMCP": {
+      "serverPath": "/strategic-director/enhanced-figma-mcp-server.js",
+      "primaryUse": "figma-visual",
+      "designExtractionEnabled": true
+    },
+
+    "foundationModels": {
+      "scriptDirectory": "/OksanaFoundationModel/",
+      "orchestrationEnabled": true
+    }
+  }
+}

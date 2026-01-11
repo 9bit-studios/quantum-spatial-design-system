@@ -1,0 +1,38 @@
+{
+  "content-to-deployment": {
+    "name": "Content to Deployment Pipeline",
+    "steps": [
+      "Extract content from Notion (via MCP)",
+      "Apply brand voice alignment",
+      "Generate Framer components",
+      "Deploy to Vercel",
+      "Collect analytics feedback"
+    ],
+    "m4Accelerated": true,
+    "brandAware": true
+  },
+  "design-system-sync": {
+    "name": "Design System Synchronization",
+    "steps": [
+      "Read Quantum-Spatial tokens",
+      "Sync to Notion database (via MCP)",
+      "Generate TypeScript interfaces",
+      "Update Framer components",
+      "Validate HIG compliance"
+    ],
+    "m4Accelerated": true,
+    "strategicDirector": true
+  },
+  "narrative-content-pipeline": {
+    "name": "Interactive Narrative Pipeline",
+    "steps": [
+      "Extract narrative from Notion",
+      "Validate character consistency",
+      "Generate Ink scripts",
+      "Create Framer narrative UI",
+      "Deploy interactive experience"
+    ],
+    "m4Accelerated": true,
+    "creativeIntelligence": true
+  }
+}

@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple Dark Mode E-commerce Navigation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: #000;
+            color: #f5f5f7;
+            line-height: 1.47059;
+            font-weight: 400;
+            letter-spacing: -.022em;
+        }
+        
+        /* Main Navigation */
+        .nav-container {
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: saturate(180%) blur(20px);
+            border-bottom: 0.5px solid rgba(255, 255, 255, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .nav-main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 44px;
+        }
+        
+        .logo {
+            font-size: 20px;
+            font-weight: 600;
+            color: #f5f5f7;
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 32px;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            color: #f5f5f7;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 400;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+            letter-spacing: -0.01em;
+        }
+        
+        .nav-links a:hover {
+            opacity: 1;
+        }
+        
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .search-container {
+            position: relative;
+        }
+        
+        .search-input {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 6px;
+            padding: 6px 12px 6px 32px;
+            font-size: 12px;
+            color: #f5f5f7;
+            width: 200px;
+            transition: all 0.3s ease;
+        }
+        
+        .search-input:focus {
+            outline: none;
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1);
+        }
+        
+        .search-icon {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 14px;
+            height: 14px;
+            opacity: 0.6;
+        }
+        
+        .icon-button {
+            background: none;
+            border: none;
+            color: #f5f5f7;
+            opacity: 0.8;
+            cursor: pointer;
+            padding: 8px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .icon-button:hover {
+            opacity: 1;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .cart-badge {
+            position: absolute;
+            top: 2px;
+            right: 2px;
+            background: #ff3b30;
+            color: white;
+            border-radius: 50%;
+            width: 16px;
+            height: 16px;
+            font-size: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+        }
+        
+        /* Secondary Navigation */
+        .nav-secondary {
+            background: rgba(10, 10, 10, 0.9);
+            border-bottom: 0.5px solid rgba(255, 255, 255, 0.05);
+            padding: 12px 0;
+        }
+        
+        .nav-secondary-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+        
+        .breadcrumb {
+            font-size: 11px;
+            color: rgba(245, 245, 247, 0.6);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .breadcrumb a {
+            color: rgba(245, 245, 247, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .breadcrumb a:hover {
+            color: #f5f5f7;
+        }
+        
+        .filter-pills {
+            display: flex;
+            gap: 8px;
+            flex: 1;
+        }
+        
+        .filter-pill {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 16px;
+            padding: 4px 12px;
+            font-size: 11px;
+            color: #f5f5f7;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+        
+        .filter-pill:hover,
+        .filter-pill.active {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Mobile Navigation */
+        .mobile-nav {
+            display: none;
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: saturate(180%) blur(20px);
+            border-bottom: 0.5px solid rgba(255, 255, 255, 0.1);
+            padding: 12px 20px;
+        }
+        
+        .mobile-nav-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 44px;
+        }
+        
+        .mobile-menu-button {
+            background: none;
+            border: none;
+            color: #f5f5f7;
+            font-size: 18px;
+            cursor: pointer;
+            padding: 8px;
+        }
+        
+        .mobile-search {
+            flex: 1;
+            margin: 0 16px;
+        }
+        
+        .mobile-search .search-input {
+            width: 100%;
+        }
+        
+        /* Content Area for Demo */
+        .content {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .demo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 24px;
+        }
+        
+        .demo-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .demo-card:hover {
+            background: rgba(255, 255, 255, 0.06);
+            border-color: rgba(255, 255, 255, 0.15);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+        
+        .card-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #f5f5f7;
+        }
+        
+        .card-description {
+            font-size: 13px;
+            color: rgba(245, 245, 247, 0.7);
+            line-height: 1.5;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-main {
+                display: none;
+            }
+            
+            .nav-secondary {
+                display: none;
+            }
+            
+            .mobile-nav {
+                display: block;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 1024px) {
+            .nav-links {
+                gap: 20px;
+            }
+            
+            .search-input {
+                width: 160px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Desktop Navigation -->
+    <nav class="nav-container">
+        <div class="nav-main">
+            <a href="#" class="logo">Store</a>
+            
+            <ul class="nav-links">
+                <li><a href="#">Mac</a></li>
+                <li><a href="#">iPad</a></li>
+                <li><a href="#">iPhone</a></li>
+                <li><a href="#">Watch</a></li>
+                <li><a href="#">AirPods</a></li>
+                <li><a href="#">Accessories</a></li>
+                <li><a href="#">Support</a></li>
+            </ul>
+            
+            <div class="nav-actions">
+                <div class="search-container">
+                    <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <input type="text" class="search-input" placeholder="Search">
+                </div>
+                
+                <button class="icon-button">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                </button>
+                
+                <button class="icon-button">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                        <polyline points="16,17 21,12 16,7"></polyline>
+                        <line x1="21" y1="12" x2="9" y2="12"></line>
+                    </svg>
+                    <span class="cart-badge">3</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Secondary Navigation -->
+    <nav class="nav-secondary">
+        <div class="nav-secondary-content">
+            <div class="breadcrumb">
+                <a href="#">Home</a>
+                <span>›</span>
+                <a href="#">Electronics</a>
+                <span>›</span>
+                <span>Laptops</span>
+            </div>
+            
+            <div class="filter-pills">
+                <a href="#" class="filter-pill active">All Products</a>
+                <a href="#" class="filter-pill">MacBook Air</a>
+                <a href="#" class="filter-pill">MacBook Pro</a>
+                <a href="#" class="filter-pill">iMac</a>
+                <a href="#" class="filter-pill">Mac Studio</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav">
+        <div class="mobile-nav-top">
+            <button class="mobile-menu-button">☰</button>
+            <div class="mobile-search">
+                <div class="search-container">
+                    <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <input type="text" class="search-input" placeholder="Search">
+                </div>
+            </div>
+            <button class="icon-button">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                    <polyline points="16,17 21,12 16,7"></polyline>
+                    <line x1="21" y1="12" x2="9" y2="12"></line>
+                </svg>
+                <span class="cart-badge">3</span>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Demo Content -->
+    <div class="content">
+        <h1 style="font-size: 32px; font-weight: 600; margin-bottom: 16px;">Navigation System Features</h1>
+        <p style="color: rgba(245, 245, 247, 0.8); font-size: 16px; margin-bottom: 32px;">
+            Clean Apple-inspired navigation with proper visual hierarchy, depth, and responsive design.
+        </p>
+        
+        <div class="demo-grid">
+            <div class="demo-card">
+                <h3 class="card-title">Visual Hierarchy</h3>
+                <p class="card-description">Proper line weights, spacing, and typography scale create clear information hierarchy and improved readability.</p>
+            </div>
+            
+            <div class="demo-card">
+                <h3 class="card-title">Depth & Layers</h3>
+                <p class="card-description">Subtle shadows, backdrop blur, and layered transparency create depth without overwhelming the interface.</p>
+            </div>
+            
+            <div class="demo-card">
+                <h3 class="card-title">Responsive Design</h3>
+                <p class="card-description">Adaptive navigation that works seamlessly across desktop, tablet, and mobile devices with touch-friendly interactions.</p>
+            </div>
+            
+            <div class="demo-card">
+                <h3 class="card-title">E-commerce Ready</h3>
+                <p class="card-description">Built-in search, cart, account access, and product filtering for complete e-commerce functionality.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Simple interactions
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInputs = document.querySelectorAll('.search-input');
+            
+            searchInputs.forEach(input => {
+                input.addEventListener('focus', function() {
+                    this.parentElement.style.transform = 'scale(1.02)';
+                });
+                
+                input.addEventListener('blur', function() {
+                    this.parentElement.style.transform = 'scale(1)';
+                });
+            });
+            
+            // Filter pills interaction
+            const filterPills = document.querySelectorAll('.filter-pill');
+            filterPills.forEach(pill => {
+                pill.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    filterPills.forEach(p => p.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

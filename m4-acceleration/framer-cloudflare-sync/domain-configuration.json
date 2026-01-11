@@ -1,0 +1,16 @@
+{
+  "9bitstudios.io": {
+    "target": "Framer",
+    "ssl": "automatic",
+    "redirects": []
+  },
+  "oksana.ai": {
+    "target": "Vercel",
+    "ssl": "automatic",
+    "subdomains": {
+      "app": "CreatrixPortal",
+      "automation": "Landing page",
+      "ghostwriting": "Landing page"
+    }
+  }
+}

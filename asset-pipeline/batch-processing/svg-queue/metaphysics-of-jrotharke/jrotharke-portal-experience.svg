@@ -1,0 +1,227 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600">
+  <!-- Background with starfield and dimensional grid -->
+  <rect width="900" height="600" fill="#0A0621" />
+  
+  <!-- Dimensional grid with perspective effect - represents 4D quantum-spatial plane -->
+  <g opacity="0.12">
+    <!-- Horizontal grid lines with dimensional warp -->
+    <path d="M150,550 L750,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M100,500 L800,500" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M75,450 L825,450" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M50,400 L850,400" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M40,350 L860,350" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M30,300 L870,300" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M25,250 L875,250" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M20,200 L880,200" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M15,150 L885,150" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M10,100 L890,100" stroke="#5AC8FA" stroke-width="1" />
+    
+    <!-- Vertical grid lines -->
+    <path d="M150,100 L150,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M225,100 L225,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M300,100 L300,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M375,100 L375,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M450,100 L450,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M525,100 L525,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M600,100 L600,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M675,100 L675,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M750,100 L750,550" stroke="#5AC8FA" stroke-width="1" />
+  </g>
+  
+  <!-- Random stars in background -->
+  <g>
+    <circle cx="50" cy="120" r="1.5" fill="#FFFFFF" />
+    <circle cx="180" cy="80" r="1" fill="#FFFFFF" />
+    <circle cx="250" cy="160" r="1.2" fill="#FFFFFF" />
+    <circle cx="320" cy="60" r="1" fill="#FFFFFF" />
+    <circle cx="450" cy="40" r="1.5" fill="#FFFFFF" />
+    <circle cx="520" cy="180" r="1" fill="#FFFFFF" />
+    <circle cx="620" cy="90" r="1.3" fill="#FFFFFF" />
+    <circle cx="750" cy="120" r="1" fill="#FFFFFF" />
+    <circle cx="800" cy="60" r="1.5" fill="#FFFFFF" />
+    <circle cx="130" cy="230" r="1" fill="#FFFFFF" />
+    <circle cx="280" cy="270" r="1.2" fill="#FFFFFF" />
+    <circle cx="720" cy="240" r="1" fill="#FFFFFF" />
+    <circle cx="830" cy="180" r="1.4" fill="#FFFFFF" />
+    
+    <!-- Colorful moons as described in lore -->
+    <circle cx="140" cy="85" r="8" fill="#D10056" opacity="0.8" /> <!-- Ruby moon -->
+    <circle cx="780" cy="110" r="12" fill="#A0E6BB" opacity="0.6" /> <!-- Pale green moon -->
+    <circle cx="690" cy="70" r="10" fill="#FF4500" opacity="0.7" /> <!-- Deep red-orange moon -->
+    <circle cx="580" cy="65" r="9" fill="#9932CC" opacity="0.6" /> <!-- Violet moon -->
+    
+    <!-- Non-circular moon (as mentioned in lore) -->
+    <polygon points="240,60 260,68 255,85 235,82" fill="#E6E6FA" opacity="0.7" />
+  </g>
+  
+  <!-- Title -->
+  <text x="450" y="60" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" font-size="28" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Jrotharke Portal Experience</text>
+  <text x="450" y="95" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" font-size="20" fill="#5AC8FA" text-anchor="middle">M4-Optimized 4D Transit Visualization</text>
+  
+  <!-- Central Portal with Earth side and Jrotharke side -->
+  <g transform="translate(450, 320)">
+    <!-- Earth side outer rim with quantum-spatial transitions -->
+    <ellipse cx="-120" cy="0" rx="110" ry="170" fill="none" stroke="#331F4A" stroke-width="5" />
+    <ellipse cx="-120" cy="0" rx="105" ry="165" fill="none" stroke="#6A3093" stroke-width="3" />
+    <ellipse cx="-120" cy="0" rx="100" ry="160" fill="none" stroke="#BF4080" stroke-width="2" />
+    
+    <!-- Earth interior (stylized) -->
+    <ellipse cx="-120" cy="0" rx="95" ry="155" fill="#131A36" />
+    
+    <!-- Earth environments - simplified representation -->
+    <path d="M-170,-80 Q-140,-95 -110,-70 Q-80,-100 -50,-60" fill="none" stroke="#2D854D" stroke-width="2" /> <!-- Mountains -->
+    <path d="M-190,40 Q-140,55 -95,35 Q-80,60 -45,50" fill="none" stroke="#5AC8FA" stroke-width="4" opacity="0.7" /> <!-- Water -->
+    <path d="M-180,-30 Q-140,-20 -120,-25 Q-100,-20 -60,-30" fill="none" stroke="#7E6551" stroke-width="2" /> <!-- Land -->
+    
+    <!-- Magical energetic activation profile on earth side -->
+    <g>
+      <path d="M-180,0 Q-150,-40 -120,-20 Q-90,-45 -60,0" fill="none" stroke="#5AC8FA" stroke-width="1.5" />
+      <path d="M-180,0 Q-150,-30 -120,-10 Q-90,-35 -60,0" fill="none" stroke="#BF4080" stroke-width="1.5" />
+      <path d="M-180,0 Q-150,-20 -120,0 Q-90,-25 -60,0" fill="none" stroke="#6A3093" stroke-width="1.5" />
+      
+      <!-- Energy activation points -->
+      <circle cx="-160" cy="-15" r="3" fill="#5AC8FA" />
+      <circle cx="-140" cy="-25" r="3" fill="#BF4080" />
+      <circle cx="-120" cy="-10" r="3" fill="#5AC8FA" />
+      <circle cx="-100" cy="-20" r="3" fill="#BF4080" />
+      <circle cx="-80" cy="-10" r="3" fill="#5AC8FA" />
+    </g>
+    
+    <!-- Portal transition zone - ethereal tunnel -->
+    <g>
+      <!-- Transition tunnel effect -->
+      <path d="M-25,-100 C 0,-50 0,50 -25,100" fill="none" stroke="#331F4A" stroke-width="10" stroke-opacity="0.7" />
+      <path d="M-20,-95 C 5,-50 5,50 -20,95" fill="none" stroke="#6A3093" stroke-width="8" stroke-opacity="0.7" />
+      <path d="M-15,-90 C 10,-50 10,50 -15,90" fill="none" stroke="#BF4080" stroke-width="6" stroke-opacity="0.7" />
+      <path d="M-10,-85 C 15,-50 15,50 -10,85" fill="none" stroke="#5AC8FA" stroke-width="4" stroke-opacity="0.7" />
+      <path d="M-5,-80 C 20,-50 20,50 -5,80" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-opacity="0.7" />
+      
+      <!-- Dark matter liquid effect -->
+      <g opacity="0.8">
+        <path d="M-60,-40 C -40,-30 -20,-45 0,-30" fill="none" stroke="#331F4A" stroke-width="8" />
+        <path d="M-60,-20 C -40,-10 -20,-25 0,-10" fill="none" stroke="#331F4A" stroke-width="8" />
+        <path d="M-60,0 C -40,10 -20,-5 0,10" fill="none" stroke="#331F4A" stroke-width="8" />
+        <path d="M-60,20 C -40,30 -20,15 0,30" fill="none" stroke="#331F4A" stroke-width="8" />
+        <path d="M-60,40 C -40,50 -20,35 0,50" fill="none" stroke="#331F4A" stroke-width="8" />
+      </g>
+      
+      <!-- Quantum energy particles traveling through portal -->
+      <g>
+        <rect x="-50" y="-60" width="8" height="8" fill="#5AC8FA" opacity="0.9" transform="rotate(45, -46, -56)" />
+        <rect x="-30" y="40" width="10" height="10" fill="#BF4080" opacity="0.9" transform="rotate(30, -25, 45)" />
+        <rect x="-20" y="-30" width="6" height="6" fill="#FFFFFF" opacity="0.9" transform="rotate(15, -17, -27)" />
+        <rect x="-15" y="15" width="7" height="7" fill="#6A3093" opacity="0.9" transform="rotate(60, -11.5, 18.5)" />
+        <rect x="-40" y="10" width="9" height="9" fill="#5AC8FA" opacity="0.9" transform="rotate(75, -35.5, 14.5)" />
+      </g>
+    </g>
+    
+    <!-- Jrotharke side outer rim with quantum-spatial aesthetics -->
+    <ellipse cx="120" cy="0" rx="110" ry="170" fill="none" stroke="#331F4A" stroke-width="5" />
+    <ellipse cx="120" cy="0" rx="105" ry="165" fill="none" stroke="#6A3093" stroke-width="3" />
+    <ellipse cx="120" cy="0" rx="100" ry="160" fill="none" stroke="#BF4080" stroke-width="2" />
+    
+    <!-- Jrotharke interior - based on lore -->
+    <ellipse cx="120" cy="0" rx="95" ry="155" fill="#0A0621" />
+    
+    <!-- Jrotharke environment based on lore -->
+    <!-- Hacroth Mountain (30 miles high) -->
+    <path d="M80,-100 L120,-130 L160,-90" fill="none" stroke="#444444" stroke-width="5" />
+    <path d="M90,-80 L120,-120 L150,-70" fill="none" stroke="#555555" stroke-width="3" />
+    
+    <!-- Colorful sky regions as described in lore -->
+    <path d="M60,-40 Q90,-60 120,-40 Q150,-60 180,-40" fill="none" stroke="#9370DB" stroke-width="3" opacity="0.5" /> <!-- Northern purple-blue sky -->
+    <path d="M60,-20 Q90,-40 120,-20 Q150,-40 180,-20" fill="none" stroke="#87CEEB" stroke-width="3" opacity="0.5" /> <!-- Blue sky -->
+    <path d="M50,40 Q90,20 120,40 Q160,20 190,40" fill="none" stroke="#9ACD32" stroke-width="3" opacity="0.5" /> <!-- Yellowish-green southwestern sky -->
+    
+    <!-- Spirits (small glowing entities) as described in lore -->
+    <g>
+      <circle cx="70" cy="-50" r="3" fill="#FFFFFF" />
+      <circle cx="70" cy="-50" r="5" fill="#FFFFFF" opacity="0.3" />
+      
+      <circle cx="100" cy="10" r="2" fill="#FFFFFF" />
+      <circle cx="100" cy="10" r="4" fill="#FFFFFF" opacity="0.3" />
+      
+      <circle cx="150" cy="-30" r="2.5" fill="#FFFFFF" />
+      <circle cx="150" cy="-30" r="4.5" fill="#FFFFFF" opacity="0.3" />
+      
+      <circle cx="130" cy="60" r="3" fill="#FFFFFF" />
+      <circle cx="130" cy="60" r="5" fill="#FFFFFF" opacity="0.3" />
+      
+      <circle cx="160" cy="10" r="2" fill="#FFFFFF" />
+      <circle cx="160" cy="10" r="4" fill="#FFFFFF" opacity="0.3" />
+    </g>
+    
+    <!-- Gray flesh human silhouette (as described in lore) -->
+    <g>
+      <path d="M110,50 C105,40 100,35 100,25 C100,15 110,15 115,25 C120,15 130,15 130,25 C130,35 125,40 120,50" fill="#708090" /> <!-- Head and body -->
+      <path d="M105,35 L95,55" stroke="#708090" stroke-width="2" /> <!-- Left arm -->
+      <path d="M125,35 L135,55" stroke="#708090" stroke-width="2" /> <!-- Right arm -->
+      <path d="M110,50 L105,70" stroke="#708090" stroke-width="2" /> <!-- Left leg -->
+      <path d="M120,50 L125,70" stroke="#708090" stroke-width="2" /> <!-- Right leg -->
+    </g>
+  </g>
+  
+  <!-- Feature Callouts -->
+  <g transform="translate(150, 180)">
+    <rect x="-120" y="-30" width="240" height="60" rx="10" fill="#131A36" stroke="#5AC8FA" stroke-width="1" />
+    <text x="0" y="-10" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Earth-Side Interface</text>
+    <text x="0" y="15" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle">Magical Energy Activation Profiles</text>
+    
+    <!-- Connection line to relevant visual element -->
+    <path d="M0,30 L-170,140" stroke="#5AC8FA" stroke-width="1" stroke-dasharray="3,3" />
+  </g>
+  
+  <g transform="translate(450, 180)">
+    <rect x="-120" y="-30" width="240" height="60" rx="10" fill="#131A36" stroke="#5AC8FA" stroke-width="1" />
+    <text x="0" y="-10" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Interdimensional Transit</text>
+    <text x="0" y="15" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle">Dense Liquid Dark Matter Traversal</text>
+    
+    <!-- Connection line to relevant visual element -->
+    <path d="M0,30 L0,100" stroke="#5AC8FA" stroke-width="1" stroke-dasharray="3,3" />
+  </g>
+  
+  <g transform="translate(750, 180)">
+    <rect x="-120" y="-30" width="240" height="60" rx="10" fill="#131A36" stroke="#5AC8FA" stroke-width="1" />
+    <text x="0" y="-10" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Jrotharke Realm</text>
+    <text x="0" y="15" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle">Colored Skies and Spiritual Essence</text>
+    
+    <!-- Connection line to relevant visual element -->
+    <path d="M0,30 L170,140" stroke="#5AC8FA" stroke-width="1" stroke-dasharray="3,3" />
+  </g>
+  
+  <!-- M4 Development Toolkit Benefits -->
+  <g transform="translate(450, 500)">
+    <rect x="-400" y="-30" width="800" height="110" rx="10" fill="#131A36" opacity="0.9" />
+    
+    <text x="0" y="0" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" font-size="20" font-weight="bold" fill="#FFFFFF" text-anchor="middle">M4-Optimized Development Benefits</text>
+    
+    <!-- 4-column layout for benefits -->
+    <g transform="translate(-300, 40)">
+      <rect x="-40" y="-15" width="8" height="8" fill="#5AC8FA" />
+      <rect x="-32" y="-15" width="8" height="8" fill="#6A3093" />
+      <text x="-15" y="-7" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="13" fill="#FFFFFF" text-anchor="start">Neural Engine-Powered</text>
+      <text x="-15" y="9" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="11" fill="#FFFFFF" text-anchor="start">Portal Transitions</text>
+    </g>
+    
+    <g transform="translate(-100, 40)">
+      <rect x="-40" y="-15" width="8" height="8" fill="#5AC8FA" />
+      <rect x="-32" y="-15" width="8" height="8" fill="#6A3093" />
+      <text x="-15" y="-7" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="13" fill="#FFFFFF" text-anchor="start">Metal-Accelerated</text>
+      <text x="-15" y="9" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="11" fill="#FFFFFF" text-anchor="start">Dimensional Rendering</text>
+    </g>
+    
+    <g transform="translate(100, 40)">
+      <rect x="-40" y="-15" width="8" height="8" fill="#5AC8FA" />
+      <rect x="-32" y="-15" width="8" height="8" fill="#6A3093" />
+      <text x="-15" y="-7" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="13" fill="#FFFFFF" text-anchor="start">60-90 FPS Even in</text>
+      <text x="-15" y="9" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="11" fill="#FFFFFF" text-anchor="start">Spirit-Rich Environments</text>
+    </g>
+    
+    <g transform="translate(300, 40)">
+      <rect x="-40" y="-15" width="8" height="8" fill="#5AC8FA" />
+      <rect x="-32" y="-15" width="8" height="8" fill="#6A3093" />
+      <text x="-15" y="-7" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="13" fill="#FFFFFF" text-anchor="start">On-Device ML for</text>
+      <text x="-15" y="9" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="11" fill="#FFFFFF" text-anchor="start">Local Spirit Behaviors</text>
+    </g>
+  </g>
+</svg>

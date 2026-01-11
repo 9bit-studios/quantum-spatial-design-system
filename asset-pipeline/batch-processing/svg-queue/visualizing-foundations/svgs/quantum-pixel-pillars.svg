@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="deepSpaceGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A0621" />
+      <stop offset="100%" stop-color="#131A36" />
+    </linearGradient>
+    
+    <linearGradient id="eggplantGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#331F4A" />
+      <stop offset="100%" stop-color="#6A3093" />
+    </linearGradient>
+    
+    <linearGradient id="cyanGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5AC8FA" />
+      <stop offset="100%" stop-color="#29B6F6" />
+    </linearGradient>
+    
+    <linearGradient id="energyGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#BF4080" />
+      <stop offset="100%" stop-color="#FF2D55" />
+    </linearGradient>
+    
+    <!-- Filters -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+    <filter id="particleGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+    <!-- Animation -->
+    <animate 
+      xlink:href="#centralCore"
+      attributeName="r"
+      values="20;25;20"
+      dur="3s"
+      repeatCount="indefinite" />
+      
+    <!-- Singularity pulse -->
+    <radialGradient id="singularityGradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.9" />
+      <stop offset="20%" stop-color="#5AC8FA" stop-opacity="0.7" />
+      <stop offset="40%" stop-color="#613FE7" stop-opacity="0.5" />
+      <stop offset="60%" stop-color="#BF4080" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#131A36" stop-opacity="0" />
+    </radialGradient>
+    
+    <!-- Patterns -->
+    <pattern id="gridPattern" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <rect width="40" height="40" fill="none" stroke="#5AC8FA" stroke-width="0.5" stroke-opacity="0.1" />
+      <line x1="0" y1="20" x2="40" y2="20" stroke="#5AC8FA" stroke-width="0.3" stroke-opacity="0.1" />
+      <line x1="20" y1="0" x2="20" y2="40" stroke="#5AC8FA" stroke-width="0.3" stroke-opacity="0.1" />
+    </pattern>
+    
+    <!-- Code texture -->
+    <pattern id="codePattern" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse">
+      <text x="10" y="20" fill="#5AC8FA" opacity="0.15" font-family="monospace" font-size="10">function quantum() {</text>
+      <text x="20" y="35" fill="#5AC8FA" opacity="0.15" font-family="monospace" font-size="10">  const pixel = new Pixel(4);</text>
+      <text x="20" y="50" fill="#5AC8FA" opacity="0.15" font-family="monospace" font-size="10">  pixel.createPlane();</text>
+      <text x="20" y="65" fill="#5AC8FA" opacity="0.15" font-family="monospace" font-size="10">  return pixel.singularity;</text>
+      <text x="10" y="80" fill="#5AC8FA" opacity="0.15" font-family="monospace" font-size="10">}</text>
+      <text x="10" y="105" fill="#BF4080" opacity="0.15" font-family="monospace" font-size="10">class Universe extends Quanta {</text>
+      <text x="20" y="120" fill="#BF4080" opacity="0.15" font-family="monospace" font-size="10">  constructor(dimensions) {</text>
+      <text x="30" y="135" fill="#BF4080" opacity="0.15" font-family="monospace" font-size="10">super(dimensions);</text>
+      <text x="30" y="150" fill="#BF4080" opacity="0.15" font-family="monospace" font-size="10">this.initialize();</text>
+      <text x="20" y="165" fill="#BF4080" opacity="0.15" font-family="monospace" font-size="10">  }</text>
+      <text x="10" y="180" fill="#BF4080" opacity="0.15" font-family="monospace" font-size="10">}</text>
+    </pattern>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#deepSpaceGradient)" />
+  <rect width="800" height="600" fill="url(#codePattern)" />
+  <rect width="800" height="600" fill="url(#gridPattern)" />
+  
+  <!-- Central Singularity -->
+  <circle id="centralCore" cx="400" cy="300" r="20" fill="url(#singularityGradient)" filter="url(#glow)">
+    <animate attributeName="r" values="20;25;20" dur="3s" repeatCount="indefinite" />
+  </circle>
+  
+  <!-- The 4 Pixel Points (Pillars) -->
+  <!-- Top Left Pixel Point -->
+  <g id="pillar1" transform="translate(280, 180)">
+    <circle cx="0" cy="0" r="15" fill="url(#eggplantGradient)" stroke="#5AC8FA" stroke-width="1.5" filter="url(#glow)" />
+    <text x="0" y="40" text-anchor="middle" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="12">Multi-State</text>
+    <text x="0" y="55" text-anchor="middle" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="12">Identities</text>
+  </g>
+  
+  <!-- Top Right Pixel Point -->
+  <g id="pillar2" transform="translate(520, 180)">
+    <circle cx="0" cy="0" r="15" fill="url(#cyanGradient)" stroke="#5AC8FA" stroke-width="1.5" filter="url(#glow)" />
+    <text x="0" y="40" text-anchor="middle" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="12">Non-Linear</text>
+    <text x="0" y="55" text-anchor="middle" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="12">Growth</text>
+  </g>
+  
+  <!-- Bottom Left Pixel Point -->
+  <g id="pillar3" transform="translate(280, 420)">
+    <circle cx="0" cy="0" r="15" fill="url(#energyGradient)" stroke="#5AC8FA" stroke-width="1.5" filter="url(#glow)" />
+    <text x="0" y="40" text-anchor="middle" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="12">Edge</text>
+    <text x="0" y="55" text-anchor="middle" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="12">Computing</text>
+  </g>
+  
+  <!-- Bottom Right Pixel Point -->
+  <g id="pillar4" transform="translate(520, 420)">
+    <circle cx="0" cy="0" r="15" fill="url(#eggplantGradient)" stroke="#5AC8FA" stroke-width="1.5" filter="url(#glow)" />
+    <text x="0" y="40" text-anchor="middle" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="12">Singularity</text>
+  </g>
+  
+  <!-- Connection Lines with Pulse Animation -->
+  <!-- Top horizontal connection -->
+  <line x1="280" y1="180" x2="520" y2="180" stroke="url(#cyanGradient)" stroke-width="2" stroke-opacity="0.6">
+    <animate attributeName="stroke-opacity" values="0.2;0.8;0.2" dur="4s" repeatCount="indefinite" />
+  </line>
+  
+  <!-- Bottom horizontal connection -->
+  <line x1="280" y1="420" x2="520" y2="420" stroke="url(#energyGradient)" stroke-width="2" stroke-opacity="0.6">
+    <animate attributeName="stroke-opacity" values="0.2;0.8;0.2" dur="4s" repeatCount="indefinite" />
+  </line>
+  
+  <!-- Left vertical connection -->
+  <line x1="280" y1="180" x2="280" y2="420" stroke="url(#eggplantGradient)" stroke-width="2" stroke-opacity="0.6">
+    <animate attributeName="stroke-opacity" values="0.2;0.8;0.2" dur="4s" repeatCount="indefinite" />
+  </line>
+  
+  <!-- Right vertical connection -->
+  <line x1="520" y1="180" x2="520" y2="420" stroke="url(#cyanGradient)" stroke-width="2" stroke-opacity="0.6">
+    <animate attributeName="stroke-opacity" values="0.2;0.8;0.2" dur="4s" repeatCount="indefinite" />
+  </line>
+  
+  <!-- Diagonal connections to center -->
+  <line x1="280" y1="180" x2="400" y2="300" stroke="url(#eggplantGradient)" stroke-width="2" stroke-opacity="0.6">
+    <animate attributeName="stroke-opacity" values="0.2;0.8;0.2" dur="3.5s" repeatCount="indefinite" />
+  </line>
+  <line x1="520" y1="180" x2="400" y2="300" stroke="url(#cyanGradient)" stroke-width="2" stroke-opacity="0.6">
+    <animate attributeName="stroke-opacity" values="0.2;0.8;0.2" dur="3.5s" repeatCount="indefinite" />
+  </line>
+  <line x1="280" y1="420" x2="400" y2="300" stroke="url(#energyGradient)" stroke-width="2" stroke-opacity="0.6">
+    <animate attributeName="stroke-opacity" values="0.2;0.8;0.2" dur="3.5s" repeatCount="indefinite" />
+  </line>
+  <line x1="520" y1="420" x2="400" y2="300" stroke="url(#eggplantGradient)" stroke-width="2" stroke-opacity="0.6">
+    <animate attributeName="stroke-opacity" values="0.2;0.8;0.2" dur="3.5s" repeatCount="indefinite" />
+  </line>
+  
+  <!-- Quantum Particles -->
+  <g id="particles">
+    <!-- Random particles across the canvas -->
+    <circle cx="350" cy="220" r="1.5" fill="#5AC8FA" opacity="0.7" filter="url(#particleGlow)">
+      <animate attributeName="opacity" values="0.3;0.9;0.3" dur="2s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="450" cy="380" r="1.5" fill="#29B6F6" opacity="0.7" filter="url(#particleGlow)">
+      <animate attributeName="opacity" values="0.3;0.9;0.3" dur="3s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="310" cy="350" r="1.5" fill="#BF4080" opacity="0.7" filter="url(#particleGlow)">
+      <animate attributeName="opacity" values="0.3;0.9;0.3" dur="2.5s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="430" cy="200" r="1.5" fill="#FF2D55" opacity="0.7" filter="url(#particleGlow)">
+      <animate attributeName="opacity" values="0.3;0.9;0.3" dur="1.5s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="370" cy="270" r="1.5" fill="#5AC8FA" opacity="0.7" filter="url(#particleGlow)">
+      <animate attributeName="opacity" values="0.3;0.9;0.3" dur="3s" repeatCount="indefinite" />
+    </circle>
+    
+    <!-- Particles around the central singularity -->
+    <circle cx="410" cy="310" r="2" fill="#FFFFFF" opacity="0.9" filter="url(#particleGlow)">
+      <animate attributeName="cx" values="410;415;410" dur="2s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="310;305;310" dur="2s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="390" cy="290" r="2" fill="#FFFFFF" opacity="0.9" filter="url(#particleGlow)">
+      <animate attributeName="cx" values="390;385;390" dur="2.2s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="290;295;290" dur="2.2s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="420" cy="290" r="2" fill="#FFFFFF" opacity="0.9" filter="url(#particleGlow)">
+      <animate attributeName="cx" values="420;425;420" dur="1.8s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="290;285;290" dur="1.8s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="380" cy="310" r="2" fill="#FFFFFF" opacity="0.9" filter="url(#particleGlow)">
+      <animate attributeName="cx" values="380;375;380" dur="2.5s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="310;315;310" dur="2.5s" repeatCount="indefinite" />
+    </circle>
+  </g>
+  
+  <!-- Title -->
+  <text x="400" y="50" text-anchor="middle" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="20" font-weight="bold">The 4 Quantum Pixel Pillars</text>
+  <text x="400" y="80" text-anchor="middle" fill="#5AC8FA" font-family="Arial, sans-serif" font-size="14" font-style="italic">"In the space between improbability and absolutes"</text>
+  
+  <!-- Subtle descriptor text -->
+  <text x="400" y="530" text-anchor="middle" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="12" opacity="0.8">The singularity of innovation at the nucleus of a 4-point pixel plane</text>
+  <text x="400" y="550" text-anchor="middle" fill="#5AC8FA" font-family="Arial, sans-serif" font-size="10" opacity="0.6">9Bit Studios Universal Framework</text>
+</svg>

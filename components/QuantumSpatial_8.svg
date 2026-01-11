@@ -1,0 +1,194 @@
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Quantum Gradient - Liquid Glass Effect -->
+    <linearGradient id="quantumGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E85D75;stop-opacity:0.8">
+        <animate attributeName="stop-color"
+          values="#E85D75;#4ECDC4;#A78BFA;#E85D75"
+          dur="6s"
+          repeatCount="indefinite"/>
+      </stop>
+      <stop offset="50%" style="stop-color:#4ECDC4;stop-opacity:0.9">
+        <animate attributeName="stop-color"
+          values="#4ECDC4;#A78BFA;#E85D75;#4ECDC4"
+          dur="6s"
+          repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" style="stop-color:#A78BFA;stop-opacity:0.8">
+        <animate attributeName="stop-color"
+          values="#A78BFA;#E85D75;#4ECDC4;#A78BFA"
+          dur="6s"
+          repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+
+    <!-- Glassmorphism Blur Filter -->
+    <filter id="glassBlur">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2"/>
+      <feComponentTransfer>
+        <feFuncA type="discrete" tableValues="0.7"/>
+      </feComponentTransfer>
+    </filter>
+
+    <!-- Glow Effect for Quantum Particles -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Radial Gradient for Particles -->
+    <radialGradient id="particleGradient">
+      <stop offset="0%" style="stop-color:#4ECDC4;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#4ECDC4;stop-opacity:0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background - Dark Mysterious -->
+  <rect width="400" height="400" fill="#0A0E27"/>
+
+  <!-- Quantum Spatial Figure-8 / Infinity Symbol -->
+  <g id="quantumEight">
+    <!-- Outer Glow Ring -->
+    <path d="M 200 80
+             C 260 80, 300 120, 300 170
+             C 300 220, 260 260, 200 260
+             C 140 260, 100 220, 100 170
+             C 100 120, 140 80, 200 80
+
+             M 200 140
+             C 260 140, 300 180, 300 230
+             C 300 280, 260 320, 200 320
+             C 140 320, 100 280, 100 230
+             C 100 180, 140 140, 200 140"
+          fill="none"
+          stroke="url(#quantumGradient)"
+          stroke-width="2"
+          opacity="0.3"
+          filter="url(#glow)">
+      <animate attributeName="stroke-width"
+        values="2;4;2"
+        dur="3s"
+        repeatCount="indefinite"/>
+    </path>
+
+    <!-- Main Figure-8 Structure -->
+    <path id="mainEight" d="M 200 100
+             C 250 100, 280 130, 280 170
+             C 280 210, 250 240, 200 240
+             C 150 240, 120 210, 120 170
+             C 120 130, 150 100, 200 100
+
+             M 200 160
+             C 250 160, 280 190, 280 230
+             C 280 270, 250 300, 200 300
+             C 150 300, 120 270, 120 230
+             C 120 190, 150 160, 200 160"
+          fill="rgba(255, 255, 255, 0.05)"
+          stroke="url(#quantumGradient)"
+          stroke-width="3"
+          filter="url(#glassBlur)">
+      <!-- Rotation Animation -->
+      <animateTransform
+        attributeName="transform"
+        type="rotate"
+        from="0 200 200"
+        to="360 200 200"
+        dur="20s"
+        repeatCount="indefinite"/>
+    </path>
+
+    <!-- Inner Glass Layer -->
+    <path d="M 200 120
+             C 240 120, 260 140, 260 170
+             C 260 200, 240 220, 200 220
+             C 160 220, 140 200, 140 170
+             C 140 140, 160 120, 200 120
+
+             M 200 180
+             C 240 180, 260 200, 260 230
+             C 260 260, 240 280, 200 280
+             C 160 280, 140 260, 140 230
+             C 140 200, 160 180, 200 180"
+          fill="rgba(255, 255, 255, 0.08)"
+          stroke="rgba(255, 255, 255, 0.3)"
+          stroke-width="1"
+          filter="url(#glassBlur)">
+      <!-- Counter-rotation for depth -->
+      <animateTransform
+        attributeName="transform"
+        type="rotate"
+        from="0 200 200"
+        to="-360 200 200"
+        dur="15s"
+        repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- Quantum Particles - Orbiting Elements -->
+  <g id="particles">
+    <!-- Particle 1 -->
+    <circle r="4" fill="url(#particleGradient)" filter="url(#glow)">
+      <animateMotion dur="8s" repeatCount="indefinite"
+        path="M 200 100
+              C 250 100, 280 130, 280 170
+              C 280 210, 250 240, 200 240
+              C 150 240, 120 210, 120 170
+              C 120 130, 150 100, 200 100"/>
+    </circle>
+
+    <!-- Particle 2 -->
+    <circle r="3" fill="#E85D75" opacity="0.8" filter="url(#glow)">
+      <animateMotion dur="10s" repeatCount="indefinite"
+        path="M 200 160
+              C 250 160, 280 190, 280 230
+              C 280 270, 250 300, 200 300
+              C 150 300, 120 270, 120 230
+              C 120 190, 150 160, 200 160"/>
+    </circle>
+
+    <!-- Particle 3 -->
+    <circle r="5" fill="#A78BFA" opacity="0.6" filter="url(#glow)">
+      <animateMotion dur="12s" repeatCount="indefinite"
+        path="M 200 120
+              C 240 120, 260 140, 260 170
+              C 260 200, 240 220, 200 220
+              C 160 220, 140 200, 140 170
+              C 140 140, 160 120, 200 120"/>
+    </circle>
+
+    <!-- Particle 4 -->
+    <circle r="3.5" fill="#4ECDC4" opacity="0.9" filter="url(#glow)">
+      <animateMotion dur="14s" repeatCount="indefinite"
+        path="M 200 180
+              C 240 180, 260 200, 260 230
+              C 260 260, 240 280, 200 280
+              C 160 280, 140 260, 140 230
+              C 140 200, 160 180, 200 180"/>
+    </circle>
+  </g>
+
+  <!-- Center Focal Point - Quantum Nexus -->
+  <circle cx="200" cy="200" r="8"
+          fill="rgba(255, 255, 255, 0.9)"
+          filter="url(#glow)">
+    <animate attributeName="r"
+      values="8;12;8"
+      dur="2s"
+      repeatCount="indefinite"/>
+    <animate attributeName="opacity"
+      values="0.9;1;0.9"
+      dur="2s"
+      repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Subtle Grid Lines - Spatial Context -->
+  <g opacity="0.1" stroke="rgba(255, 255, 255, 0.3)" stroke-width="0.5">
+    <line x1="0" y1="200" x2="400" y2="200"/>
+    <line x1="200" y1="0" x2="200" y2="400"/>
+    <circle cx="200" cy="200" r="100" fill="none"/>
+    <circle cx="200" cy="200" r="150" fill="none"/>
+  </g>
+</svg>

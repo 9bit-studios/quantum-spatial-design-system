@@ -1,0 +1,132 @@
+/* QuantumSpatial_9 Component Styles
+ * Quantum Spatial Design System - 9Bit Studios
+ * M4-optimized rendering with hardware acceleration
+ */
+
+:root {
+  /* Quantum Spatial Color Tokens */
+  --quantum-pink: #E85D75;
+  --quantum-cyan: #4ECDC4;
+  --quantum-dark: #0A0E27;
+  --quantum-glass-border: rgba(255, 255, 255, 0.18);
+  --quantum-glass-bg: rgba(255, 255, 255, 0.05);
+}
+
+/* Container Wrapper */
+.quantumContainer {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Performance Optimization */
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+
+  /* Accessibility */
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* Glassmorphism Background Panel */
+.glassmorphismPanel {
+  position: absolute;
+  inset: -20px;
+  background: var(--quantum-glass-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--quantum-glass-border);
+  border-radius: 24px;
+  z-index: -1;
+
+  /* Shadow Layers */
+  box-shadow:
+    0 8px 32px rgba(232, 93, 117, 0.15),
+    0 4px 16px rgba(78, 205, 196, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Quantum Glow Effect */
+.quantumGlow {
+  position: absolute;
+  inset: -40px;
+  background: radial-gradient(
+    circle at center,
+    rgba(232, 93, 117, 0.2) 0%,
+    rgba(78, 205, 196, 0.1) 40%,
+    transparent 70%
+  );
+  z-index: -2;
+  animation: quantumPulse 4s ease-in-out infinite;
+}
+
+@keyframes quantumPulse {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.1);
+  }
+}
+
+/* Interactive Hover States */
+.quantumContainer:hover .glassmorphismPanel {
+  border-color: rgba(232, 93, 117, 0.4);
+  box-shadow:
+    0 12px 48px rgba(232, 93, 117, 0.25),
+    0 6px 24px rgba(78, 205, 196, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.quantumContainer:hover svg {
+  transform: scale(1.05);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Reduced Motion Support (Accessibility) */
+@media (prefers-reduced-motion: reduce) {
+  .quantumGlow {
+    animation: none;
+  }
+
+  .quantumContainer:hover svg {
+    transform: none;
+  }
+
+  .glassmorphismPanel {
+    transition: none;
+  }
+}
+
+/* Dark Mode Optimization */
+@media (prefers-color-scheme: dark) {
+  .glassmorphismPanel {
+    background: rgba(10, 14, 39, 0.6);
+    border-color: rgba(255, 255, 255, 0.12);
+  }
+}
+
+/* Mobile Optimization (M4-accelerated) */
+@media (max-width: 768px) {
+  /* Reduce complexity for mobile performance */
+  .glassmorphismPanel {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  .quantumGlow {
+    display: none; /* Disable glow on mobile for performance */
+  }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+  .glassmorphismPanel {
+    border-width: 2px;
+    border-color: var(--quantum-pink);
+  }
+}

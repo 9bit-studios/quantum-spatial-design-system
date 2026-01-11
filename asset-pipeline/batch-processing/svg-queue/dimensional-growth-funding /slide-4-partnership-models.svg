@@ -1,0 +1,190 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <!-- Background with quantum grid -->
+  <rect width="1200" height="800" fill="#0A0621" />
+  
+  <!-- Dimensional grid with perspective effect -->
+  <g opacity="0.1">
+    <!-- Horizontal grid lines -->
+    <path d="M100,700 Q600,680 1100,700" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M150,650 Q600,630 1050,650" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M200,600 Q600,580 1000,600" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M250,550 Q600,530 950,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M300,500 Q600,480 900,500" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M350,450 Q600,430 850,450" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M400,400 Q600,380 800,400" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M450,350 Q600,330 750,350" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M500,300 Q600,280 700,300" stroke="#5AC8FA" stroke-width="1" />
+    
+    <!-- Vertical grid lines -->
+    <path d="M400,300 L400,700" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M500,300 L500,700" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M600,300 L600,700" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M700,300 L700,700" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M800,300 L800,700" stroke="#5AC8FA" stroke-width="1" />
+  </g>
+  
+  <!-- Title with quantum-spatial effect -->
+  <g>
+    <text x="600" y="120" font-family="'SF Pro Display', sans-serif" font-size="80" font-weight="bold" fill="#FFFFFF" text-anchor="middle">PARTNERSHIP MODELS</text>
+    <!-- Quantum pixels on title -->
+    <rect x="420" y="90" width="10" height="10" fill="#5AC8FA" opacity="0.8" />
+    <rect x="780" y="110" width="8" height="8" fill="#6A3093" opacity="0.8" />
+    <rect x="430" y="130" width="12" height="12" fill="#BF4080" opacity="0.8" />
+    <rect x="770" y="90" width="14" height="14" fill="#5AC8FA" opacity="0.7" />
+  </g>
+  
+  <!-- Partnership models in 4 columns -->
+  <!-- Full Joint Venture -->
+  <g transform="translate(250, 380)">
+    <rect x="-150" y="-150" width="300" height="300" rx="15" fill="#131A36" opacity="0.9" stroke="#5AC8FA" stroke-width="2" />
+    
+    <!-- Top section -->
+    <rect x="-150" y="-150" width="300" height="75" rx="15" fill="#0D0D15" opacity="0.9" stroke="#5AC8FA" stroke-width="0" />
+    <text x="0" y="-115" font-family="'SF Pro Display', sans-serif" font-size="24" fill="#FFFFFF" text-anchor="middle">FULL JOINT VENTURE</text>
+    
+    <!-- Investment amount -->
+    <g transform="translate(0, -60)">
+      <path d="M-70,0 L70,0" stroke="#5AC8FA" stroke-width="1" />
+      <text x="0" y="25" font-family="'SF Pro Display', sans-serif" font-size="26" fill="#5AC8FA" text-anchor="middle">$7-10M</text>
+      
+      <!-- Quantum pixels -->
+      <rect x="-60" y="-10" width="8" height="8" fill="#5AC8FA" opacity="0.8" />
+      <rect x="50" y="-5" width="6" height="6" fill="#5AC8FA" opacity="0.8" />
+    </g>
+    
+    <!-- Content -->
+    <g transform="translate(0, 0)">
+      <circle cx="0" cy="0" r="40" fill="#0D0D15" stroke="#5AC8FA" stroke-width="1.5" />
+      
+      <!-- Stylized icon for Joint Venture -->
+      <path d="M-20,-20 L20,20 M-20,20 L20,-20" stroke="#5AC8FA" stroke-width="2" />
+      <circle cx="0" cy="0" r="15" fill="none" stroke="#5AC8FA" stroke-width="2" />
+    </g>
+    
+    <text x="0" y="60" font-family="'SF Pro Text', sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">Complete IP</text>
+    <text x="0" y="83" font-family="'SF Pro Text', sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">adaptation pipeline</text>
+    
+    <!-- Bottom flourish -->
+    <rect x="-80" y="110" width="160" height="4" rx="2" fill="#5AC8FA" opacity="0.9" />
+    
+    <!-- Quantum pixel decoration -->
+    <rect x="-130" y="130" width="12" height="12" fill="#5AC8FA" opacity="0.7" />
+    <rect x="120" y="130" width="8" height="8" fill="#5AC8FA" opacity="0.7" />
+  </g>
+  
+  <!-- Targeted Investment -->
+  <g transform="translate(450, 380)">
+    <rect x="-110" y="-150" width="220" height="300" rx="15" fill="#131A36" opacity="0.9" stroke="#6A3093" stroke-width="2" />
+    
+    <!-- Top section -->
+    <rect x="-110" y="-150" width="220" height="75" rx="15" fill="#0D0D15" opacity="0.9" stroke="#6A3093" stroke-width="0" />
+    <text x="0" y="-115" font-family="'SF Pro Display', sans-serif" font-size="22" fill="#FFFFFF" text-anchor="middle">TARGETED</text>
+    <text x="0" y="-90" font-family="'SF Pro Display', sans-serif" font-size="22" fill="#FFFFFF" text-anchor="middle">INVESTMENT</text>
+    
+    <!-- Investment amount -->
+    <g transform="translate(0, -60)">
+      <path d="M-70,0 L70,0" stroke="#6A3093" stroke-width="1" />
+      <text x="0" y="25" font-family="'SF Pro Display', sans-serif" font-size="24" fill="#6A3093" text-anchor="middle">$3-5M</text>
+      
+      <!-- Quantum pixels -->
+      <rect x="-60" y="-10" width="8" height="8" fill="#6A3093" opacity="0.8" />
+      <rect x="50" y="-5" width="6" height="6" fill="#6A3093" opacity="0.8" />
+    </g>
+    
+    <!-- Content -->
+    <g transform="translate(0, 0)">
+      <circle cx="0" cy="0" r="35" fill="#0D0D15" stroke="#6A3093" stroke-width="1.5" />
+      
+      <!-- Stylized icon for Targeted Investment -->
+      <path d="M-15,-15 L15,15 M-15,15 L15,-15" stroke="#6A3093" stroke-width="1.5" />
+      <circle cx="0" cy="0" r="10" fill="none" stroke="#6A3093" stroke-width="1.5" />
+    </g>
+    
+    <text x="0" y="60" font-family="'SF Pro Text', sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">Technology</text>
+    <text x="0" y="83" font-family="'SF Pro Text', sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">development focus</text>
+    
+    <!-- Bottom flourish -->
+    <rect x="-60" y="110" width="120" height="4" rx="2" fill="#6A3093" opacity="0.9" />
+    
+    <!-- Quantum pixel decoration -->
+    <rect x="-90" y="130" width="12" height="12" fill="#6A3093" opacity="0.7" />
+    <rect x="80" y="130" width="8" height="8" fill="#6A3093" opacity="0.7" />
+  </g>
+  
+  <!-- Innovation Lab -->
+  <g transform="translate(750, 380)">
+    <rect x="-110" y="-150" width="220" height="300" rx="15" fill="#131A36" opacity="0.9" stroke="#BF4080" stroke-width="2" />
+    
+    <!-- Top section -->
+    <rect x="-110" y="-150" width="220" height="75" rx="15" fill="#0D0D15" opacity="0.9" stroke="#BF4080" stroke-width="0" />
+    <text x="0" y="-115" font-family="'SF Pro Display', sans-serif" font-size="22" fill="#FFFFFF" text-anchor="middle">INNOVATION</text>
+    <text x="0" y="-90" font-family="'SF Pro Display', sans-serif" font-size="22" fill="#FFFFFF" text-anchor="middle">LAB</text>
+    
+    <!-- Investment amount -->
+    <g transform="translate(0, -60)">
+      <path d="M-70,0 L70,0" stroke="#BF4080" stroke-width="1" />
+      <text x="0" y="25" font-family="'SF Pro Display', sans-serif" font-size="24" fill="#BF4080" text-anchor="middle">$1.5-2.5M</text>
+      
+      <!-- Quantum pixels -->
+      <rect x="-60" y="-10" width="8" height="8" fill="#BF4080" opacity="0.8" />
+      <rect x="50" y="-5" width="6" height="6" fill="#BF4080" opacity="0.8" />
+    </g>
+    
+    <!-- Content -->
+    <g transform="translate(0, 0)">
+      <circle cx="0" cy="0" r="35" fill="#0D0D15" stroke="#BF4080" stroke-width="1.5" />
+      
+      <!-- Stylized icon for Innovation Lab -->
+      <path d="M-15,-15 L15,15 M-15,15 L15,-15" stroke="#BF4080" stroke-width="1.5" />
+      <rect x="-10" y="-10" width="20" height="20" fill="none" stroke="#BF4080" stroke-width="1.5" />
+    </g>
+    
+    <text x="0" y="60" font-family="'SF Pro Text', sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">On-site collaborative</text>
+    <text x="0" y="83" font-family="'SF Pro Text', sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">development</text>
+    
+    <!-- Bottom flourish -->
+    <rect x="-60" y="110" width="120" height="4" rx="2" fill="#BF4080" opacity="0.9" />
+    
+    <!-- Quantum pixel decoration -->
+    <rect x="-90" y="130" width="12" height="12" fill="#BF4080" opacity="0.7" />
+    <rect x="80" y="130" width="8" height="8" fill="#BF4080" opacity="0.7" />
+  </g>
+  
+  <!-- MVP Partnership -->
+  <g transform="translate(950, 380)">
+    <rect x="-150" y="-150" width="300" height="300" rx="15" fill="#131A36" opacity="0.9" stroke="#5AC8FA" stroke-width="2" />
+    
+    <!-- Top section with highlight -->
+    <rect x="-150" y="-150" width="300" height="75" rx="15" fill="#0D0D15" opacity="0.9" stroke="#5AC8FA" stroke-width="0" />
+    <text x="0" y="-115" font-family="'SF Pro Display', sans-serif" font-size="24" fill="#FFFFFF" text-anchor="middle">MVP PARTNERSHIP</text>
+    
+    <!-- Investment amount -->
+    <g transform="translate(0, -60)">
+      <path d="M-70,0 L70,0" stroke="#5AC8FA" stroke-width="1" />
+      <text x="0" y="25" font-family="'SF Pro Display', sans-serif" font-size="26" fill="#5AC8FA" text-anchor="middle">$500-750K</text>
+      
+      <!-- Quantum pixels -->
+      <rect x="-60" y="-10" width="8" height="8" fill="#5AC8FA" opacity="0.8" />
+      <rect x="50" y="-5" width="6" height="6" fill="#5AC8FA" opacity="0.8" />
+    </g>
+    
+    <!-- Content -->
+    <g transform="translate(0, 0)">
+      <circle cx="0" cy="0" r="40" fill="#0D0D15" stroke="#5AC8FA" stroke-width="1.5" />
+      
+      <!-- Stylized icon for MVP Partnership -->
+      <path d="M-20,-20 L20,20 M-20,20 L20,-20" stroke="#5AC8FA" stroke-width="2" />
+      <rect x="-15" y="-15" width="30" height="30" fill="none" stroke="#5AC8FA" stroke-width="2" />
+    </g>
+    
+    <text x="0" y="60" font-family="'SF Pro Text', sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">Single IP</text>
+    <text x="0" y="83" font-family="'SF Pro Text', sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">proof-of-concept</text>
+    
+    <!-- Bottom flourish -->
+    <rect x="-80" y="110" width="160" height="4" rx="2" fill="#5AC8FA" opacity="0.9" />
+    
+    <!-- Quantum pixel decoration -->
+    <rect x="-130" y="130" width="12" height="12" fill="#5AC8FA" opacity="0.7" />
+    <rect x="120" y="130" width="8" height="8" fill="#5AC8FA" opacity="0.7" />
+  </g>
+</svg>

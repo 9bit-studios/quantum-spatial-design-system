@@ -1,0 +1,71 @@
+# Updated for TypeScript, React, Shopify, Framer
+
+# DEPENDENCIES & PACKAGE MANAGERS
+node_modules/
+yarn-debug.log*
+yarn-error.log*
+
+# BUILD OUTPUTS & DIST
+dist/
+build/
+out/
+.next/
+.cache/
+
+# TYPESCRIPT CORRUPTION ISSUES
+*.d.ts.map
+tsconfig.json
+
+# ENVIRONMENT & SECRETS
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# LOGS & DEBUGGING
+logs
+*.log
+debug.log
+
+# NEXT.JS SPECIFIC
+.next/
+
+# FRAMER & DESIGN TOOLS
+framer-output/
+.framer/
+
+# EDITORS & IDES
+.cursor/
+.idea/
+
+# OPERATING SYSTEM
+.DS_Store
+Thumbs.db
+
+# DATABASES
+*.sqlite
+*.db
+
+# CERTIFICATES & KEYS
+*.pem
+*.key
+*.crt
+
+# CUSTOM PROJECT FILES
+apple-authority-config.json
+native-frameworks-integration-report.json
+*.backup
+*.bak
+
+# Sensitive configs
+apple-intelligence-config.json
+apple-intelligence-env.sh
+
+# Removed .archived - archives should be visible and tracked
+.env.local
+.env.master
+.env.secure.example
+.env.secure
+.env.validated
+

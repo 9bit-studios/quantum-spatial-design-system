@@ -1,0 +1,136 @@
+{
+  "name": "9Bit Studios Design System",
+  "version": "2.1.0",
+  "colors": {
+    "primaryQuantum": "#BF4080",
+    "primaryUltraMarine": "#5AC8FA",
+    "primaryViolet": "#6A3093",
+    "foundationHeritage": "#331F4A",
+    "foundationDarkMatter": "#131A36",
+    "foundationCosmicDust": "#1A0D26",
+    "glassFrosted": "rgba(255, 255, 255, 0.1)",
+    "glassShimmer": "rgba(191, 64, 128, 0.2)",
+    "glassGlow": "rgba(90, 200, 250, 0.3)",
+    "semanticSuccess": "#34C759",
+    "semanticWarning": "#FF9500",
+    "semanticError": "#FF3B30",
+    "semanticInfo": "#007AFF"
+  },
+  "textStyles": {
+    "xs": {
+      "font": {
+        "size": 11,
+        "family": "SF Pro Text",
+        "weight": 400,
+        "lineHeight": "1.5em"
+      }
+    },
+    "sm": {
+      "font": {
+        "size": 13,
+        "family": "SF Pro Text",
+        "weight": 400,
+        "lineHeight": "1.5em"
+      }
+    },
+    "body": {
+      "font": {
+        "size": 15,
+        "family": "SF Pro Text",
+        "weight": 400,
+        "lineHeight": "1.5em"
+      }
+    },
+    "md": {
+      "font": {
+        "size": 17,
+        "family": "SF Pro Text",
+        "weight": 400,
+        "lineHeight": "1.5em"
+      }
+    },
+    "lg": {
+      "font": {
+        "size": 20,
+        "family": "SF Pro Text",
+        "weight": 400,
+        "lineHeight": "1.5em"
+      }
+    },
+    "xl": {
+      "font": {
+        "size": 24,
+        "family": "SF Pro Text",
+        "weight": 400,
+        "lineHeight": "1.5em"
+      }
+    },
+    "xxl": {
+      "font": {
+        "size": 28,
+        "family": "SF Pro Text",
+        "weight": 400,
+        "lineHeight": "1.5em"
+      }
+    },
+    "display": {
+      "font": {
+        "size": 34,
+        "family": "SF Pro Text",
+        "weight": 400,
+        "lineHeight": "1.5em"
+      }
+    },
+    "hero": {
+      "font": {
+        "size": 48,
+        "family": "SF Pro Text",
+        "weight": 400,
+        "lineHeight": "1.5em"
+      }
+    }
+  },
+  "effects": {
+    "shadows": {
+      "sm": {
+        "value": "0 1px 3px rgba(0, 0, 0, 0.12)",
+        "description": "Small shadow for cards"
+      },
+      "md": {
+        "value": "0 4px 6px rgba(0, 0, 0, 0.16)",
+        "description": "Medium shadow for modals"
+      },
+      "lg": {
+        "value": "0 10px 20px rgba(0, 0, 0, 0.2)",
+        "description": "Large shadow for dropdowns"
+      },
+      "quantum": {
+        "value": "0 0 40px rgba(191, 64, 128, 0.4)",
+        "description": "Quantum glow effect"
+      }
+    },
+    "blur": {
+      "subtle": 8,
+      "medium": 16,
+      "strong": 24,
+      "intense": 32
+    }
+  },
+  "spacing": {
+    "xs": 4,
+    "sm": 8,
+    "md": 16,
+    "lg": 24,
+    "xl": 32,
+    "xxl": 48,
+    "xxxl": 64
+  },
+  "breakpoints": {
+    "xs": 320,
+    "sm": 640,
+    "md": 768,
+    "lg": 1024,
+    "xl": 1280,
+    "xxl": 1536
+  }
+}

@@ -1,0 +1,192 @@
+<svg width="1500" height="500" viewBox="0 0 1500 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background with cosmic void gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A0621" />
+      <stop offset="40%" stop-color="#131A36" />
+      <stop offset="70%" stop-color="#1E1F5C" />
+      <stop offset="100%" stop-color="#0D0D15" />
+    </linearGradient>
+    
+    <!-- Dimensional grid pattern -->
+    <pattern id="dimensionalGrid" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse" patternTransform="skewX(10) skewY(5)">
+      <line x1="0" y1="0" x2="100" y2="0" stroke="#5AC8FA" stroke-width="0.3" stroke-opacity="0.1"/>
+      <line x1="0" y1="0" x2="0" y2="100" stroke="#5AC8FA" stroke-width="0.3" stroke-opacity="0.1"/>
+    </pattern>
+    
+    <!-- Energy glow filters -->
+    <filter id="spiritualGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    
+    <filter id="quantumGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="7" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    
+    <!-- Fragment backgrounds with depth -->
+    <linearGradient id="fragmentOne" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#331F4A" />
+      <stop offset="100%" stop-color="#1E1F5C" />
+    </linearGradient>
+    
+    <linearGradient id="fragmentTwo" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E1F5C" />
+      <stop offset="100%" stop-color="#613FE7" />
+    </linearGradient>
+    
+    <linearGradient id="fragmentThree" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6A3093" />
+      <stop offset="100%" stop-color="#BF4080" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1500" height="500" fill="url(#bgGradient)"/>
+  <rect width="1500" height="500" fill="url(#dimensionalGrid)" opacity="0.1"/>
+  
+  <!-- Dimensional stars/particles in background -->
+  <g opacity="0.4">
+    <circle cx="200" cy="100" r="1" fill="#5AC8FA" opacity="0.7"/>
+    <circle cx="350" cy="150" r="1.5" fill="#00FFC8" opacity="0.6"/>
+    <circle cx="500" cy="80" r="1" fill="#FF2D55" opacity="0.5"/>
+    <circle cx="700" cy="180" r="2" fill="#5AC8FA" opacity="0.8"/>
+    <circle cx="900" cy="120" r="1.5" fill="#BF4080" opacity="0.6"/>
+    <circle cx="1100" cy="90" r="1" fill="#00FFC8" opacity="0.7"/>
+    <circle cx="1300" cy="160" r="2" fill="#FF2D55" opacity="0.5"/>
+    <circle cx="1450" cy="100" r="1" fill="#5AC8FA" opacity="0.8"/>
+    <circle cx="250" cy="420" r="1.5" fill="#BF4080" opacity="0.6"/>
+    <circle cx="450" cy="380" r="1" fill="#00FFC8" opacity="0.7"/>
+    <circle cx="650" cy="450" r="2" fill="#5AC8FA" opacity="0.5"/>
+    <circle cx="850" cy="400" r="1" fill="#FF2D55" opacity="0.8"/>
+    <circle cx="1050" cy="430" r="1.5" fill="#BF4080" opacity="0.6"/>
+    <circle cx="1250" cy="390" r="1" fill="#00FFC8" opacity="0.7"/>
+    <circle cx="1400" cy="410" r="2" fill="#5AC8FA" opacity="0.5"/>
+  </g>
+  
+  <!-- Cosmic Fragment One: Vaclond's Lightning -->
+  <g transform="translate(300, 150) rotate(-5)">
+    <!-- 3D fragment shape with lighting effects -->
+    <path d="M0,0 L150,-30 L240,50 L120,120 L0,80 Z" fill="url(#fragmentOne)" stroke="#5AC8FA" stroke-width="1.5" opacity="0.9"/>
+    <path d="M0,0 L150,-30 L240,50 L120,120 L0,80 Z" fill="none" stroke="#FF2D55" stroke-width="0.5" opacity="0.7" transform="translate(0, -5)"/>
+    
+    <!-- Inner content: Vaclond's Lightning -->
+    <text x="70" y="40" font-family="SF Mono, monospace" font-size="10" fill="#5AC8FA" opacity="0.9">VACLOND'S LIGHTNING</text>
+    
+    <!-- Magic runes/symbols -->
+    <path d="M40,60 L60,40 L80,60 L60,80 Z" fill="none" stroke="#FF2D55" stroke-width="1" opacity="0.8"/>
+    <path d="M100,50 L130,50 L130,80 L100,80 Z" fill="none" stroke="#00FFC8" stroke-width="1" opacity="0.8"/>
+    <circle cx="160" cy="65" r="10" fill="none" stroke="#5AC8FA" stroke-width="1" opacity="0.8"/>
+    
+    <!-- Lightning effect -->
+    <path d="M30,30 L60,50 L45,60 L80,80" fill="none" stroke="#FF2D55" stroke-width="2" opacity="0.9" filter="url(#spiritualGlow)">
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="2s" repeatCount="indefinite"/>
+    </path>
+  </g>
+  
+  <!-- Cosmic Fragment Two: Jro's Hidden Courts -->
+  <g transform="translate(650, 120) rotate(10)">
+    <!-- 3D fragment shape with lighting effects -->
+    <path d="M0,0 L160,20 L200,100 L100,150 L-20,80 Z" fill="url(#fragmentTwo)" stroke="#00FFC8" stroke-width="1.5" opacity="0.9"/>
+    <path d="M0,0 L160,20 L200,100 L100,150 L-20,80 Z" fill="none" stroke="#613FE7" stroke-width="0.5" opacity="0.7" transform="translate(0, -5)"/>
+    
+    <!-- Inner content: Jro's Hidden Courts -->
+    <text x="50" y="70" font-family="SF Mono, monospace" font-size="10" fill="#00FFC8" opacity="0.9">JRO'S HIDDEN COURTS</text>
+    
+    <!-- Mystical elements -->
+    <circle cx="60" cy="100" r="15" fill="none" stroke="#5AC8FA" stroke-width="1" opacity="0.6"/>
+    <circle cx="60" cy="100" r="8" fill="none" stroke="#FF2D55" stroke-width="1" opacity="0.6"/>
+    <path d="M110,80 L140,80 L140,110 L110,110 Z" fill="none" stroke="#613FE7" stroke-width="1" opacity="0.6"/>
+    <path d="M110,80 L140,110 M110,110 L140,80" fill="none" stroke="#613FE7" stroke-width="1" opacity="0.6"/>
+    
+    <!-- Court symbols with glow -->
+    <path d="M30,40 C60,10 100,10 130,40" fill="none" stroke="#00FFC8" stroke-width="1.5" opacity="0.8" filter="url(#spiritualGlow)">
+      <animate attributeName="opacity" values="0.6;0.9;0.6" dur="3s" repeatCount="indefinite"/>
+    </path>
+  </g>
+  
+  <!-- Cosmic Fragment Three: Spirit Abyss -->
+  <g transform="translate(950, 160) rotate(-8)">
+    <!-- 3D fragment shape with lighting effects -->
+    <path d="M0,0 L180,10 L220,90 L100,140 L-20,60 Z" fill="url(#fragmentThree)" stroke="#BF4080" stroke-width="1.5" opacity="0.9"/>
+    <path d="M0,0 L180,10 L220,90 L100,140 L-20,60 Z" fill="none" stroke="#FF2D55" stroke-width="0.5" opacity="0.7" transform="translate(0, -5)"/>
+    
+    <!-- Inner content: Spirit Abyss -->
+    <text x="60" y="60" font-family="SF Mono, monospace" font-size="10" fill="#FF2D55" opacity="0.9">SPIRIT ABYSS</text>
+    
+    <!-- Abyss visualization -->
+    <path d="M60,80 C90,70 120,70 150,80 C120,110 90,110 60,80 Z" fill="none" stroke="#BF4080" stroke-width="1" opacity="0.8"/>
+    <circle cx="105" cy="95" r="5" fill="#FF2D55" opacity="0.6">
+      <animate attributeName="r" values="5;7;5" dur="4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;0.9;0.6" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Spirit swirls -->
+    <path d="M40,40 C60,30 80,40 70,60 C60,80 40,70 40,40 Z" fill="none" stroke="#00FFC8" stroke-width="1" opacity="0.6" filter="url(#spiritualGlow)">
+      <animate attributeName="opacity" values="0.4;0.7;0.4" dur="5s" repeatCount="indefinite"/>
+    </path>
+    <path d="M130,40 C150,30 170,40 160,60 C150,80 130,70 130,40 Z" fill="none" stroke="#00FFC8" stroke-width="1" opacity="0.6" filter="url(#spiritualGlow)">
+      <animate attributeName="opacity" values="0.4;0.7;0.4" dur="5s" repeatCount="indefinite" begin="1s"/>
+    </path>
+  </g>
+  
+  <!-- Energy connections between fragments -->
+  <g opacity="0.7">
+    <!-- Connection 1-2 -->
+    <path d="M460,180 C550,150 600,150 650,170" fill="none" stroke="#5AC8FA" stroke-width="1.5" opacity="0.8" filter="url(#spiritualGlow)">
+      <animate attributeName="opacity" values="0.6;0.9;0.6" dur="4s" repeatCount="indefinite"/>
+    </path>
+    
+    <!-- Connection 2-3 -->
+    <path d="M820,200 C870,190 920,190 950,200" fill="none" stroke="#FF2D55" stroke-width="1.5" opacity="0.8" filter="url(#spiritualGlow)">
+      <animate attributeName="opacity" values="0.6;0.9;0.6" dur="4s" repeatCount="indefinite" begin="1s"/>
+    </path>
+    
+    <!-- Connection 3-1 (completing the triangle) -->
+    <path d="M960,310 C800,370 600,370 460,310" fill="none" stroke="#BF4080" stroke-width="1.5" opacity="0.6" filter="url(#spiritualGlow)">
+      <animate attributeName="opacity" values="0.4;0.7;0.4" dur="6s" repeatCount="indefinite" begin="2s"/>
+    </path>
+  </g>
+  
+  <!-- Quantum particles flowing along connections -->
+  <circle cx="550" cy="165" r="3" fill="#00FFC8" opacity="0.9" filter="url(#quantumGlow)">
+    <animate attributeName="cx" values="460;650" dur="4s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.7;1;0.7" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  
+  <circle cx="870" cy="195" r="3" fill="#FF2D55" opacity="0.9" filter="url(#quantumGlow)">
+    <animate attributeName="cx" values="820;950" dur="5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.7;1;0.7" dur="5s" repeatCount="indefinite"/>
+  </circle>
+  
+  <circle cx="700" cy="340" r="3" fill="#BF4080" opacity="0.9" filter="url(#quantumGlow)">
+    <animate attributeName="cx" values="960;460" dur="7s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Central convergence point - The Cosmic Monster's shattered essence -->
+  <g transform="translate(700, 240)">
+    <circle cx="0" cy="0" r="25" fill="#0A0621" opacity="0.8"/>
+    <circle cx="0" cy="0" r="20" fill="none" stroke="#5AC8FA" stroke-width="0.5" opacity="0.6">
+      <animate attributeName="r" values="20;22;20" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="0" cy="0" r="15" fill="none" stroke="#FF2D55" stroke-width="0.5" opacity="0.7">
+      <animate attributeName="r" values="15;17;15" dur="3s" repeatCount="indefinite" begin="1s"/>
+    </circle>
+    <circle cx="0" cy="0" r="10" fill="none" stroke="#00FFC8" stroke-width="0.5" opacity="0.8">
+      <animate attributeName="r" values="10;12;10" dur="3s" repeatCount="indefinite" begin="2s"/>
+    </circle>
+    
+    <!-- Cosmic Monster essence -->
+    <path d="M-8,-8 L8,8 M-8,8 L8,-8" stroke="#BF4080" stroke-width="1.5" opacity="0.9" filter="url(#quantumGlow)">
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="2s" repeatCount="indefinite"/>
+    </path>
+  </g>
+  
+  <!-- Text overlay with title -->
+  <g transform="translate(700, 400)">
+    <text x="-200" y="0" font-family="SF Pro Display, sans-serif" text-anchor="middle" font-size="28" fill="#FFFFFF" opacity="0.9">WORLD OF JROTHARKE</text>
+    <text x="200" y="0" font-family="SF Pro Display, sans-serif" text-anchor="middle" font-size="18" fill="#5AC8FA" opacity="0.8">THE COSMIC FRAGMENTS</text>
+  </g>
+</svg>

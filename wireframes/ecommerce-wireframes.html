@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petersen Games E-commerce Wireframes</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #000;
+            color: #fff;
+            line-height: 1.5;
+        }
+
+        .wireframe-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .wireframe-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .wireframe-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #007AFF, #5AC8FA);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .wireframe-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(800px, 1fr));
+            gap: 3rem;
+            margin-bottom: 4rem;
+        }
+
+        .wireframe {
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: 2rem;
+            backdrop-filter: blur(20px);
+        }
+
+        .wireframe h2 {
+            color: #5AC8FA;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 0.5rem;
+        }
+
+        .device-frame {
+            background: #111;
+            border: 2px solid #333;
+            border-radius: 12px;
+            padding: 1rem;
+            margin: 1rem 0;
+            position: relative;
+        }
+
+        .device-frame::before {
+            content: attr(data-device);
+            position: absolute;
+            top: -0.75rem;
+            left: 1rem;
+            background: #000;
+            padding: 0 0.5rem;
+            font-size: 0.8rem;
+            color: #666;
+        }
+
+        /* Layout Components */
+        .layout {
+            border: 1px dashed rgba(255,255,255,0.3);
+            margin: 0.5rem 0;
+            position: relative;
+        }
+
+        .header {
+            height: 60px;
+            background: rgba(255,255,255,0.05);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 1rem;
+        }
+
+        .nav-tabs {
+            height: 50px;
+            background: rgba(255,255,255,0.03);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0 1rem;
+            overflow-x: auto;
+        }
+
+        .nav-tab {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 8px;
+            padding: 0.5rem 1rem;
+            white-space: nowrap;
+            font-size: 0.8rem;
+        }
+
+        .hero {
+            height: 200px;
+            background: linear-gradient(135deg, rgba(0,122,255,0.3) 0%, rgba(0,0,0,0.8) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::after {
+            content: 'HERO SECTION\A"Legendary Horror. Strategic Mastery."';
+            white-space: pre-line;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .main-content {
+            display: flex;
+            gap: 1rem;
+            min-height: 400px;
+        }
+
+        .sidebar {
+            width: 250px;
+            background: rgba(255,255,255,0.02);
+            border-right: 1px solid rgba(255,255,255,0.1);
+            padding: 1rem;
+        }
+
+        .content-area {
+            flex: 1;
+            padding: 1rem;
+        }
+
+        .filter-section {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .filter-title {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .filter-option {
+            display: block;
+            margin: 0.25rem 0;
+            font-size: 0.8rem;
+            opacity: 0.8;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .product-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 1rem;
+            aspect-ratio: 0.8;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-image {
+            background: rgba(255,255,255,0.1);
+            height: 120px;
+            border-radius: 8px;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            opacity: 0.6;
+        }
+
+        .product-info {
+            flex: 1;
+        }
+
+        .product-title {
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .product-meta {
+            font-size: 0.7rem;
+            opacity: 0.7;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-price {
+            font-weight: 700;
+            color: #5AC8FA;
+            margin-bottom: 0.5rem;
+        }
+
+        .add-to-cart {
+            background: rgba(0,122,255,0.3);
+            border: 1px solid rgba(0,122,255,0.5);
+            border-radius: 8px;
+            padding: 0.5rem;
+            color: white;
+            font-size: 0.8rem;
+            cursor: pointer;
+        }
+
+        .product-detail {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            padding: 1rem;
+        }
+
+        .product-images {
+            background: rgba(255,255,255,0.05);
+            border-radius: 12px;
+            aspect-ratio: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            opacity: 0.6;
+        }
+
+        .product-details {
+            padding: 1rem 0;
+        }
+
+        .breadcrumb {
+            background: rgba(255,255,255,0.02);
+            padding: 0.5rem 1rem;
+            font-size: 0.8rem;
+            opacity: 0.7;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .mobile-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 60px;
+            background: rgba(0,0,0,0.9);
+            backdrop-filter: blur(20px);
+            border-top: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 0 1rem;
+        }
+
+        .mobile-nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 0.7rem;
+            opacity: 0.7;
+        }
+
+        .mobile-only {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .wireframe-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .main-content {
+                flex-direction: column;
+            }
+            
+            .sidebar {
+                width: 100%;
+                order: 2;
+            }
+            
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .product-detail {
+                grid-template-columns: 1fr;
+            }
+            
+            .mobile-only {
+                display: block;
+            }
+        }
+
+        .annotation {
+            background: rgba(255,149,0,0.2);
+            border-left: 3px solid #FF9500;
+            padding: 0.5rem;
+            margin: 1rem 0;
+            font-size: 0.8rem;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .improvement {
+            background: rgba(52,199,89,0.2);
+            border-left: 3px solid #34C759;
+            padding: 0.5rem;
+            margin: 1rem 0;
+            font-size: 0.8rem;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .issue {
+            background: rgba(255,59,48,0.2);
+            border-left: 3px solid #FF3B30;
+            padding: 0.5rem;
+            margin: 1rem 0;
+            font-size: 0.8rem;
+            border-radius: 0 8px 8px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="wireframe-container">
+        <div class="wireframe-header">
+            <h1>Petersen Games E-commerce Wireframes</h1>
+            <p>Mobile-first, Apple HIG compliant design solutions</p>
+        </div>
+
+        <div class="wireframe-grid">
+            <!-- Homepage Wireframe -->
+            <div class="wireframe">
+                <h2>1. Homepage - Desktop & Mobile</h2>
+                
+                <div class="device-frame" data-device="Desktop">
+                    <div class="layout">
+                        <div class="header">
+                            <div style="font-weight: 600;">PETERSEN GAMES</div>
+                            <div style="display: flex; gap: 1rem; font-size: 0.8rem;">
+                                <span>Search</span>
+                                <span>Account</span>
+                                <span>Cart (0)</span>
+                            </div>
+                        </div>
+                        
+                        <div class="nav-tabs">
+                            <div class="nav-tab">Cthulhu Wars</div>
+                            <div class="nav-tab">Planet Apocalypse</div>
+                            <div class="nav-tab">Hyperspace</div>
+                            <div class="nav-tab">Evil High Priest</div>
+                            <div class="nav-tab">Expansions</div>
+                            <div class="nav-tab">Miniatures</div>
+                            <div class="nav-tab">New</div>
+                        </div>
+                        
+                        <div class="hero"></div>
+                        
+                        <div style="padding: 2rem 1rem;">
+                            <h3 style="margin-bottom: 1rem; text-align: center;">Featured Game Lines</h3>
+                            <div class="product-grid">
+                                <div class="product-card">
+                                    <div class="product-image">Game Image</div>
+                                    <div class="product-title">Cthulhu Wars</div>
+                                    <div class="product-meta">Epic cosmic horror strategy</div>
+                                </div>
+                                <div class="product-card">
+                                    <div class="product-image">Game Image</div>
+                                    <div class="product-title">Planet Apocalypse</div>
+                                    <div class="product-meta">Cooperative demon hunting</div>
+                                </div>
+                                <div class="product-card">
+                                    <div class="product-image">Game Image</div>
+                                    <div class="product-title">Hyperspace</div>
+                                    <div class="product-meta">Fast 4X space strategy</div>
+                                </div>
+                                <div class="product-card">
+                                    <div class="product-image">Game Image</div>
+                                    <div class="product-title">Evil High Priest</div>
+                                    <div class="product-meta">Dark magic strategy</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="improvement">
+                    <strong>Improvements:</strong> Single navigation, prominent hero with flash sale, clear game line showcase
+                </div>
+            </div>
+
+            <!-- Collection/Shop View -->
+            <div class="wireframe">
+                <h2>2. Collection View - Improved Layout</h2>
+                
+                <div class="device-frame" data-device="Desktop">
+                    <div class="layout">
+                        <div class="header">
+                            <div style="font-weight: 600;">PETERSEN GAMES</div>
+                            <div style="display: flex; gap: 1rem; font-size: 0.8rem;">
+                                <span>🔍</span>
+                                <span>👤</span>
+                                <span>🛒 (0)</span>
+                            </div>
+                        </div>
+                        
+                        <div class="breadcrumb">
+                            Home > All Games
+                        </div>
+                        
+                        <div class="nav-tabs">
+                            <div class="nav-tab" style="background: rgba(0,122,255,0.3);">All Games</div>
+                            <div class="nav-tab">Core Games</div>
+                            <div class="nav-tab">Expansions</div>
+                            <div class="nav-tab">Miniatures</div>
+                            <div class="nav-tab">New Releases</div>
+                            <div class="nav-tab">On Sale</div>
+                        </div>
+                        
+                        <div class="main-content">
+                            <div class="sidebar">
+                                <div class="filter-section">
+                                    <div class="filter-title">Game Lines</div>
+                                    <label class="filter-option"><input type="checkbox"> Cthulhu Wars</label>
+                                    <label class="filter-option"><input type="checkbox"> Planet Apocalypse</label>
+                                    <label class="filter-option"><input type="checkbox"> Hyperspace</label>
+                                    <label class="filter-option"><input type="checkbox"> Evil High Priest</label>
+                                </div>
+                                
+                                <div class="filter-section">
+                                    <div class="filter-title">Player Count</div>
+                                    <label class="filter-option"><input type="checkbox"> 1-2 Players</label>
+                                    <label class="filter-option"><input type="checkbox"> 2-4 Players</label>
+                                    <label class="filter-option"><input type="checkbox"> 3+ Players</label>
+                                </div>
+                                
+                                <div class="filter-section">
+                                    <div class="filter-title">Price Range</div>
+                                    <div style="margin: 0.5rem 0; font-size: 0.8rem;">$0 - $200</div>
+                                    <input type="range" style="width: 100%;">
+                                </div>
+                            </div>
+                            
+                            <div class="content-area">
+                                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                                    <span style="font-size: 0.9rem; opacity: 0.8;">5 products</span>
+                                    <select style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 6px; padding: 0.5rem; color: white;">
+                                        <option>Sort by: Featured</option>
+                                        <option>Price: Low to High</option>
+                                        <option>Price: High to Low</option>
+                                        <option>Newest</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="product-grid">
+                                    <div class="product-card">
+                                        <div class="product-image">1:1 Image</div>
+                                        <div class="product-info">
+                                            <div class="product-title">Cthulhu Wars Core Set</div>
+                                            <div class="product-meta">👥 2-4 | ⏱️ 90-120 min | 🎯 14+</div>
+                                            <div class="product-price">$179.99</div>
+                                            <button class="add-to-cart">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="product-card">
+                                        <div class="product-image">1:1 Image</div>
+                                        <div class="product-info">
+                                            <div class="product-title">Planet Apocalypse</div>
+                                            <div class="product-meta">👥 1-5 | ⏱️ 45-75 min | 🎯 13+</div>
+                                            <div class="product-price">$129.99</div>
+                                            <button class="add-to-cart">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="product-card">
+                                        <div class="product-image">1:1 Image</div>
+                                        <div class="product-info">
+                                            <div class="product-title">Evil High Priest</div>
+                                            <div class="product-meta">👥 2-4 | ⏱️ 60-90 min | 🎯 14+</div>
+                                            <div class="product-price">$129.99</div>
+                                            <button class="add-to-cart">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="product-card">
+                                        <div class="product-image">1:1 Image</div>
+                                        <div class="product-info">
+                                            <div class="product-title">Hyperspace</div>
+                                            <div class="product-meta">👥 2-4 | ⏱️ 60-90 min | 🎯 12+</div>
+                                            <div class="product-price">$89.99</div>
+                                            <button class="add-to-cart">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="product-card">
+                                        <div class="product-image">1:1 Image</div>
+                                        <div class="product-info">
+                                            <div class="product-title">Orcs Must Die!</div>
+                                            <div class="product-meta">👥 1-4 | ⏱️ 45-75 min | 🎯 10+</div>
+                                            <div class="product-price">$79.99</div>
+                                            <button class="add-to-cart">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="issue">
+                    <strong>Current Issues Fixed:</strong> Removed double filtering, cleaner navigation tabs, consistent product cards
+                </div>
+            </div>
+
+            <!-- Mobile Collection View -->
+            <div class="wireframe">
+                <h2>3. Mobile Collection View</h2>
+                
+                <div class="device-frame" data-device="Mobile" style="max-width: 375px; margin: 0 auto;">
+                    <div class="layout">
+                        <div class="header">
+                            <div style="font-weight: 600;">PETERSEN</div>
+                            <div style="display: flex; gap: 0.5rem;">
+                                <span>🔍</span>
+                                <span>🛒</span>
+                            </div>
+                        </div>
+                        
+                        <div class="nav-tabs">
+                            <div class="nav-tab">All</div>
+                            <div class="nav-tab">Core</div>
+                            <div class="nav-tab">Expand</div>
+                            <div class="nav-tab">Mini</div>
+                            <div class="nav-tab">New</div>
+                            <div class="nav-tab">Sale</div>
+                        </div>
+                        
+                        <div style="padding: 0.5rem;">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                                <button style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 8px; padding: 0.5rem 1rem; color: white; font-size: 0.8rem;">
+                                    🔽 Filter & Sort
+                                </button>
+                                <span style="font-size: 0.8rem; opacity: 0.7;">5 products</span>
+                            </div>
+                            
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;">
+                                <div class="product-card" style="aspect-ratio: 0.75;">
+                                    <div class="product-image" style="height: 80px;">Image</div>
+                                    <div class="product-title" style="font-size: 0.8rem;">Cthulhu Wars</div>
+                                    <div class="product-meta" style="font-size: 0.7rem;">👥 2-4 | ⏱️ 90min</div>
+                                    <div class="product-price" style="font-size: 0.9rem;">$179.99</div>
+                                    <button class="add-to-cart" style="padding: 0.4rem; font-size: 0.7rem;">Add to Cart</button>
+                                </div>
+                                
+                                <div class="product-card" style="aspect-ratio: 0.75;">
+                                    <div class="product-image" style="height: 80px;">Image</div>
+                                    <div class="product-title" style="font-size: 0.8rem;">Planet Apocalypse</div>
+                                    <div class="product-meta" style="font-size: 0.7rem;">👥 1-5 | ⏱️ 60min</div>
+                                    <div class="product-price" style="font-size: 0.9rem;">$129.99</div>
+                                    <button class="add-to-cart" style="padding: 0.4rem; font-size: 0.7rem;">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mobile-nav mobile-only">
+                            <div class="mobile-nav-item">
+                                <span>🏠</span>
+                                <span>Home</span>
+                            </div>
+                            <div class="mobile-nav-item">
+                                <span>🎮</span>
+                                <span>Games</span>
+                            </div>
+                            <div class="mobile-nav-item">
+                                <span>🔍</span>
+                                <span>Search</span>
+                            </div>
+                            <div class="mobile-nav-item">
+                                <span>👤</span>
+                                <span>Account</span>
+                            </div>
+                            <div class="mobile-nav-item">
+                                <span>🛒</span>
+                                <span>Cart</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="improvement">
+                    <strong>Mobile Improvements:</strong> Simplified navigation, collapsible filters, 2-column grid, bottom navigation
+                </div>
+            </div>
+
+            <!-- Product Detail Page -->
+            <div class="wireframe">
+                <h2>4. Product Detail Page</h2>
+                
+                <div class="device-frame" data-device="Desktop">
+                    <div class="layout">
+                        <div class="header">
+                            <div style="font-weight: 600;">PETERSEN GAMES</div>
+                            <div style="display: flex; gap: 1rem; font-size: 0.8rem;">
+                                <span>🔍</span>
+                                <span>👤</span>
+                                <span>🛒 (0)</span>
+                            </div>
+                        </div>
+                        
+                        <div class="breadcrumb">
+                            Home > Games > Cthulhu Wars > Core Set
+                        </div>
+                        
+                        <div class="product-detail">
+                            <div class="product-images">
+                                <div style="text-align: center;">
+                                    <div style="margin-bottom: 1rem;">MAIN PRODUCT IMAGE</div>
+                                    <div style="display: flex; gap: 0.5rem; justify-content: center;">
+                                        <div style="width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 4px;"></div>
+                                        <div style="width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 4px;"></div>
+                                        <div style="width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 4px;"></div>
+                                        <div style="width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 4px;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="product-details">
+                                <h1 style="font-size: 1.8rem; margin-bottom: 0.5rem;">Cthulhu Wars: Core Set</h1>
+                                <div style="opacity: 0.8; margin-bottom: 1rem;">Command cosmic horrors in asymmetric warfare</div>
+                                
+                                <div style="display: flex; gap: 1rem; margin-bottom: 1rem; font-size: 0.9rem;">
+                                    <span>👥 2-4 Players</span>
+                                    <span>⏱️ 90-120 min</span>
+                                    <span>🎯 Ages 14+</span>
+                                    <span>🎲 Strategy</span>
+                                </div>
+                                
+                                <div style="font-size: 2rem; font-weight: 700; color: #5AC8FA; margin-bottom: 1rem;">$179.99</div>
+                                
+                                <div style="margin-bottom: 1.5rem;">
+                                    <button style="background: rgb(0,122,255); border: none; border-radius: 12px; padding: 1rem 2rem; color: white; font-weight: 600; font-size: 1rem; margin-right: 1rem; min-height: 48px;">
+                                        Add to Cart
+                                    </button>
+                                    <button style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 12px; padding: 1rem 2rem; color: white; font-weight: 600; font-size: 1rem; min-height: 48px;">
+                                        Add to Wishlist
+                                    </button>
+                                </div>
+                                
+                                <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1rem;">
+                                    <h3 style="margin-bottom: 0.5rem;">What makes this legendary:</h3>
+                                    <ul style="margin-left: 1rem; opacity: 0.9;">
+                                        <li>Four completely asymmetric factions</li>
+                                        <li>64 high-quality miniatures</li>
+                                        <li>Direct conflict encouraged</li>
+                                        <li>From Sandy Petersen, creator of Call of Cthulhu RPG</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div style="padding: 2rem 1rem; border-top: 1px solid rgba(255,255,255,0.1);">
+                            <h3 style="text-align: center; margin-bottom: 1rem;">You might also like</h3>
+                            <div class="product-grid">
+                                <div class="product-card">
+                                    <div class="product-image">Related</div>
+                                    <div class="product-title">Planet Apocalypse</div>
+                                    <div class="product-price">$129.99</div>
+                                </div>
+                                <div class="product-card">
+                                    <div class="product-image">Related</div>
+                                    <div class="product-title">Evil High Priest</div>
+                                    <div class="product-price">$129.99</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="improvement">
+                    <strong>Product Page Features:</strong> Large image gallery, clear meta info, prominent CTA, related products
+                </div>
+            </div>
+
+            <!-- Mobile Product Detail -->
+            <div class="wireframe">
+                <h2>5. Mobile Product Detail</h2>
+                
+                <div class="device-frame" data-device="Mobile" style="max-width: 375px; margin: 0 auto;">
+                    <div class="layout">
+                        <div class="header">
+                            <div>← Back</div>
+                            <div style="font-weight: 600;">Product</div>
+                            <div>🛒</div>
+                        </div>
+                        
+                        <div style="padding: 1rem;">
+                            <div style="background: rgba(255,255,255,0.05); height: 250px; border-radius: 12px; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center;">
+                                PRODUCT IMAGE
+                            </div>
+                            
+                            <h1 style="font-size: 1.4rem; margin-bottom: 0.5rem;">Cthulhu Wars: Core Set</h1>
+                            <div style="opacity: 0.8; margin-bottom: 1rem; font-size: 0.9rem;">Command cosmic horrors in asymmetric warfare</div>
+                            
+                            <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem; font-size: 0.8rem; flex-wrap: wrap;">
+                                <span style="background: rgba(255,255,255,0.1); padding: 0.25rem 0.5rem; border-radius: 6px;">👥 2-4</span>
+                                <span style="background: rgba(255,255,255,0.1); padding: 0.25rem 0.5rem; border-radius: 6px;">⏱️ 90-120m</span>
+                                <span style="background: rgba(255,255,255,0.1); padding: 0.25rem 0.5rem; border-radius: 6px;">🎯 14+</span>
+                            </div>
+                            
+                            <div style="font-size: 1.5rem; font-weight: 700; color: #5AC8FA; margin-bottom: 1rem;">$179.99</div>
+                            
+                            <button style="background: rgb(0,122,255); border: none; border-radius: 12px; padding: 1rem; color: white; font-weight: 600; font-size: 1rem; width: 100%; margin-bottom: 1rem; min-height: 48px;">
+                                Add to Cart
+                            </button>
+                            
+                            <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1rem;">
+                                <h3 style="margin-bottom: 0.5rem; font-size: 1rem;">Key Features:</h3>
+                                <ul style="margin-left: 1rem; opacity: 0.9; font-size: 0.9rem;">
+                                    <li>Four asymmetric factions</li>
+                                    <li>64 premium miniatures</li>
+                                    <li>Sandy Petersen design</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="mobile-nav mobile-only">
+                            <div class="mobile-nav-item">🏠</div>
+                            <div class="mobile-nav-item">🎮</div>
+                            <div class="mobile-nav-item">🔍</div>
+                            <div class="mobile-nav-item">👤</div>
+                            <div class="mobile-nav-item">🛒</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="improvement">
+                    <strong>Mobile Product:</strong> Single column, large images, sticky add to cart, simplified info
+                </div>
+            </div>
+        </div>
+
+        <!-- Summary Section -->
+        <div class="wireframe" style="margin-top: 2rem;">
+            <h2>Key Design Solutions</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 1rem;">
+                <div class="improvement">
+                    <strong>Navigation Improvements</strong>
+                    <ul style="margin-top: 0.5rem;">
+                        <li>Single sliding tab navigation</li>
+                        <li>Clear category hierarchy</li>
+                        <li>Consolidated filters in sidebar</li>
+                        <li>Mobile bottom navigation</li>
+                    </ul>
+                </div>
+                
+                <div class="improvement">
+                    <strong>Product Display</strong>
+                    <ul style="margin-top: 0.5rem;">
+                        <li>1:1 aspect ratio images</li>
+                        <li>Game stats in meta info</li>
+                        <li>Apple HIG touch targets (48px+)</li>
+                        <li>Glassmorphic cards</li>
+                    </ul>
+                </div>
+                
+                <div class="improvement">
+                    <strong>Mobile Optimization</strong>
+                    <ul style="margin-top: 0.5rem;">
+                        <li>2-column product grid</li>
+                        <li>Collapsible filters</li>
+                        <li>Sticky bottom navigation</li>
+                        <li>Touch-friendly spacing</li>
+                    </ul>
+                </div>
+                
+                <div class="issue">
+                    <strong>Fixed Issues</strong>
+                    <ul style="margin-top: 0.5rem;">
+                        <li>❌ Double filtering removed</li>
+                        <li>❌ WordPress feel eliminated</li>
+                        <li>❌ Inconsistent navigation fixed</li>
+                        <li>❌ Poor mobile experience improved</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

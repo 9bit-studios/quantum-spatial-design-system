@@ -1,0 +1,18 @@
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="glow-materialized-teal-base" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="0" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  <rect 
+    x="2" 
+    y="2" 
+    width="28" 
+    height="28" 
+    rx="2" 
+    fill="#126D71" 
+    opacity="1"
+    filter="url(#glow-materialized-teal-base)"
+  />
+</svg>

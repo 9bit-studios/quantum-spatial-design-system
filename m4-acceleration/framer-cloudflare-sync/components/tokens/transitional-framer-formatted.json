@@ -1,0 +1,88 @@
+{
+  "$schema": "https://framer.com/schema/design-system.json",
+  "name": "9Bit Studios Quantum-Spatial Design System (Transitional)",
+  "version": "1.0.0",
+  "tokens": {
+    "colors": {
+      "primary": {
+        "value": "#131A36"
+      },
+      "secondary": {
+        "value": "#331F4A"
+      },
+      "accent": {
+        "value": "#5AC8FA"
+      },
+      "background": {
+        "value": "#FFFFFF"
+      },
+      "text": {
+        "value": "#121212"
+      },
+      "surface": {
+        "value": "#F8F9FA"
+      },
+      "border": {
+        "value": "#E4E7EB"
+      },
+      "success": {
+        "value": "#00C170"
+      },
+      "warning": {
+        "value": "#FFC400"
+      },
+      "error": {
+        "value": "#FF4C4C"
+      }
+    },
+    "typography": {
+      "fontFamily": {
+        "value": "SF Pro, Inter, system-ui, sans-serif"
+      },
+      "baseSize": {
+        "value": "16px"
+      },
+      "scale": {
+        "value": 1.333
+      }
+    },
+    "spacing": {
+      "xs": {
+        "value": "4px"
+      },
+      "sm": {
+        "value": "8px"
+      },
+      "md": {
+        "value": "16px"
+      },
+      "lg": {
+        "value": "32px"
+      },
+      "xl": {
+        "value": "48px"
+      },
+      "xxl": {
+        "value": "64px"
+      },
+      "xxxl": {
+        "value": "96px"
+      }
+    },
+    "borderRadius": {
+      "small": {
+        "value": "6px"
+      },
+      "medium": {
+        "value": "10px"
+      },
+      "large": {
+        "value": "16px"
+      },
+      "pill": {
+        "value": "999px"
+      }
+    },
+    "shadows": {}
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "uptime_monitoring": [
+    "9bitstudios.io",
+    "oksana.ai",
+    "app.oksana.ai"
+  ],
+  "performance_tracking": "Vercel Analytics + Cloudflare Analytics",
+  "error_tracking": "Built-in platform monitoring",
+  "user_analytics": "Privacy-compliant tracking",
+  "alerts": {
+    "downtime": "immediate",
+    "performance_degradation": "5 minutes",
+    "high_error_rate": "immediate"
+  }
+}

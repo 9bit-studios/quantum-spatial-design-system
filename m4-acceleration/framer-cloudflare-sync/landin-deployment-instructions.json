@@ -1,0 +1,116 @@
+{
+  "manual_deployment": {
+    "title": "Manual Framer Template Rebranding",
+    "steps": [
+      {
+        "step": 1,
+        "action": "Access Framer Template",
+        "details": "Navigate to https://fantastic-frictionless-063460.framer.app and duplicate/remix the template"
+      },
+      {
+        "step": 2,
+        "action": "Replace Hero Section",
+        "details": {
+          "headline": "Transform Your Digital Vision with Quantum-Spatial Innovation",
+          "subheadline": "We create immersive experiences that bridge possibility and reality through Apple Intelligence and quantum-spatial design.",
+          "cta_primary": "Start Your Quantum Journey",
+          "cta_secondary": "Explore Our Portfolio"
+        }
+      },
+      {
+        "step": 3,
+        "action": "Update Services Section",
+        "details": {
+          "headline": "Our Quantum-Spatial Services",
+          "services": [
+            {
+              "title": "Vision Pro Innovation",
+              "description": "Next-generation spatial computing experiences",
+              "features": [
+                "Immersive interfaces",
+                "Spatial design systems",
+                "Apple Intelligence integration"
+              ]
+            },
+            {
+              "title": "iOS Game Development",
+              "description": "Narrative-driven mobile experiences with quantum aesthetics",
+              "features": [
+                "Interactive storytelling",
+                "M4 optimization",
+                "CloudKit integration"
+              ]
+            },
+            {
+              "title": "AI-Powered Automation",
+              "description": "Privacy-first intelligent workflows",
+              "features": [
+                "Brand-aware content",
+                "Workflow automation",
+                "Apple Intelligence"
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "step": 4,
+        "action": "Rebrand About Section",
+        "details": {
+          "headline": "Pioneering Quantum-Spatial Innovation",
+          "story": "9Bit Studios emerges from the intersection of possibility and reality, where quantum-spatial innovation meets Apple Intelligence. Founded by creative visionaries who understand that technology should amplify human creativity rather than replace it, we specialize in crafting digital experiences that feel both familiar and revolutionary.Our approach combines the precision of quantum-spatial design with the intuitive nature of Apple's ecosystem, creating solutions that are not just functional, but transformative. Every project we undertake reflects our commitment to privacy-first principles, sophisticated aesthetics, and meaningful innovation.",
+          "founder": {
+            "name": "Penny Platt",
+            "title": "Creative Director & Strategic Visionary",
+            "bio": "Co-founder of 9Bit Studios, pioneering the intersection of Apple Intelligence and quantum-spatial design."
+          }
+        }
+      },
+      {
+        "step": 5,
+        "action": "Apply Color Scheme",
+        "details": {}
+      },
+      {
+        "step": 6,
+        "action": "Update Typography",
+        "details": {
+          "font_family": "SF Pro Display system font stack",
+          "apply_to": "all headings and body text"
+        }
+      },
+      {
+        "step": 7,
+        "action": "Configure Navigation",
+        "details": {
+          "menu_items": [
+            "Services",
+            "Portfolio",
+            "About",
+            "Blog",
+            "Contact"
+          ]
+        }
+      },
+      {
+        "step": 8,
+        "action": "Update Footer",
+        "details": {
+          "tagline": "Transforming possibility into reality through quantum-spatial innovation"
+        }
+      }
+    ]
+  },
+  "automated_deployment": {
+    "title": "Automated Cloudflare Worker Deployment",
+    "description": "Deploy Cloudflare Worker to automatically rebrand template content",
+    "worker_script_ready": true,
+    "deployment_url": "https://9bitstudios-landin-rebrander.workers.dev"
+  },
+  "framer_overrides": {
+    "title": "Framer Code Component Overrides",
+    "description": "Use generated override functions for systematic rebranding",
+    "override_script_ready": true,
+    "components_count": 9
+  }
+}

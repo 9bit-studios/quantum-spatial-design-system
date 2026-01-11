@@ -1,0 +1,35 @@
+{
+  "metadata": {
+    "analysisDate": "2025-11-28T00:08:07.851Z",
+    "designSystemPath": "/Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system",
+    "m4Enabled": true,
+    "appleIntelligence": true
+  },
+  "metrics": {
+    "totalFiles": 4727,
+    "filesWithContent": 4708,
+    "skeletonFiles": 19,
+    "averageHIGScore": 25.728934462773072
+  },
+  "m4Stats": {
+    "filesProcessed": 4727,
+    "parallelBatches": 815,
+    "neuralEngineTime": 75,
+    "totalTime": 0
+  },
+  "patterns": {
+    "token": 308,
+    "component": 1255,
+    "style": 64,
+    "utility": 26,
+    "validation": 45,
+    "designSystem": 308,
+    "appleHIG": 181
+  },
+  "completionPlan": {
+    "phase1": 1,
+    "phase2": 0,
+    "phase3": 18,
+    "phase4": 0
+  }
+}

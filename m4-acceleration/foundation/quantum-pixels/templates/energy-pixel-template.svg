@@ -1,0 +1,63 @@
+<svg width="{{size}}" height="{{size}}" viewBox="0 0 {{size}} {{size}}" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="glow-energy" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="{{glowIntensity}}" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <radialGradient id="energyGradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="{{accentColor}}" stop-opacity="0.9"/>
+      <stop offset="80%" stop-color="{{color}}" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="{{color}}" stop-opacity="0.5"/>
+    </radialGradient>
+    <mask id="energy-mask">
+      <rect x="0" y="0" width="{{size}}" height="{{size}}" fill="white"/>
+      <circle class="energy-ripple" cx="{{size/2}}" cy="{{size/2}}" r="{{size/4}}" fill="black">
+        <animate attributeName="r" from="{{size/12}}" to="{{size/3}}" dur="3s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" from="1" to="0" dur="3s" repeatCount="indefinite"/>
+      </circle>
+    </mask>
+  </defs>
+  
+  <!-- Energy background -->
+  <rect
+    x="2"
+    y="2"
+    width="{{innerSize}}"
+    height="{{innerSize}}"
+    rx="{{borderRadius}}"
+    fill="url(#energyGradient)"
+    filter="url(#glow-energy)"
+    mask="url(#energy-mask)"
+    class="quantum-pixel energy-state pulse-opacity"
+  />
+  
+  <!-- Inner energy pulse -->
+  <rect
+    x="{{innerPulseOffset}}"
+    y="{{innerPulseOffset}}"
+    width="{{innerPulseSize}}"
+    height="{{innerPulseSize}}"
+    rx="{{innerPulseRadius}}"
+    stroke="{{accentColor}}"
+    stroke-width="1.5"
+    fill="none"
+    opacity="0.8"
+    class="energy-pulse pulse-scale"
+  />
+  
+  <!-- Energy particles -->
+  <circle cx="{{particleX1}}" cy="{{particleY1}}" r="{{particleSize}}" fill="{{accentColor}}" class="energy-particle pulse-opacity">
+    <animate attributeName="cx" from="{{particleX1}}" to="{{particleX1Move}}" dur="2s" repeatCount="indefinite" />
+    <animate attributeName="cy" from="{{particleY1}}" to="{{particleY1Move}}" dur="2s" repeatCount="indefinite" />
+  </circle>
+  
+  <circle cx="{{particleX2}}" cy="{{particleY2}}" r="{{particleSize}}" fill="{{accentColor}}" class="energy-particle pulse-opacity delay-sm">
+    <animate attributeName="cx" from="{{particleX2}}" to="{{particleX2Move}}" dur="3s" repeatCount="indefinite" />
+    <animate attributeName="cy" from="{{particleY2}}" to="{{particleY2Move}}" dur="3s" repeatCount="indefinite" />
+  </circle>
+  
+  <circle cx="{{particleX3}}" cy="{{particleY3}}" r="{{particleSize}}" fill="{{accentColor}}" class="energy-particle pulse-opacity delay-md">
+    <animate attributeName="cx" from="{{particleX3}}" to="{{particleX3Move}}" dur="4s" repeatCount="indefinite" />
+    <animate attributeName="cy" from="{{particleY3}}" to="{{particleY3Move}}" dur="4s" repeatCount="indefinite" />
+  </circle>
+</svg>

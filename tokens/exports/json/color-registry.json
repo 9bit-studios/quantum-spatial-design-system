@@ -1,0 +1,497 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2025-11-27",
+  "description": "Master color registry mapping Figma, Framer, and CSS variables to quantum-spatial base pixels",
+  "sources": {
+    "css": "fresh-glass-theme/tokens/variables.css",
+    "figma": "fresh-glass-theme/tokens/variables-colors.css",
+    "framer": "design-tokens/exports/framer-tokens.json"
+  },
+  "colors": {
+    "foundation": {
+      "void-black": {
+        "primary": "#0A0621",
+        "dark": "#000000",
+        "gradient": {
+          "start": "#0A0621",
+          "end": "#000000"
+        },
+        "sources": ["css", "figma"],
+        "usage": "Primary background, deepest depth layer"
+      },
+      "deep-space-indigo": {
+        "primary": "#131A36",
+        "gradient": {
+          "start": "#131A36",
+          "end": "#10142A"
+        },
+        "sources": ["css", "figma", "framer"],
+        "framerToken": "foundationDarkMatter",
+        "usage": "Heritage state background, medium depth"
+      },
+      "ultra-indigo": {
+        "primary": "#1E1F5C",
+        "gradient": {
+          "start": "#1E1F5C",
+          "end": "#171849"
+        },
+        "sources": ["css", "figma"],
+        "figmaName": "Dimensional Marine",
+        "usage": "Transitional state foundation"
+      },
+      "dimensional-eggplant": {
+        "primary": "#331F4A",
+        "gradient": {
+          "start": "#331F4A",
+          "end": "#27183A"
+        },
+        "sources": ["css", "figma", "framer"],
+        "framerToken": "foundationHeritage",
+        "figmaName": "Quaternary",
+        "usage": "Quantum state background, primary quantum layer"
+      },
+      "midnight-richness": {
+        "primary": "#0D0D15",
+        "gradient": {
+          "start": "#0D0D15",
+          "end": "#0A0A10"
+        },
+        "sources": ["css", "figma"],
+        "figmaName": "Deep Space Night",
+        "usage": "Base canvas, spatial background"
+      },
+      "cosmic-dust": {
+        "primary": "#1A0D26",
+        "sources": ["framer"],
+        "framerToken": "foundationCosmicDust",
+        "usage": "Framer-specific foundation variant"
+      }
+    },
+    "quantum-states": {
+      "heritage": {
+        "core": "#2C5F2D",
+        "light": "#3D8B40",
+        "dark": "#1B3D1A",
+        "pixel": "#3DFF74",
+        "pixelAqua": "#00FFC8",
+        "ultraPixel": "#94FE00",
+        "plasmaGreen": "#3DFF74",
+        "gradient": {
+          "primary": ["#1B3D1A", "#2C5F2D", "#3D8B40"],
+          "edge": ["#2C5F2D", "#3D8B40"],
+          "glow": ["#3D8B40", "#3DFF74"]
+        },
+        "sources": ["css", "figma"],
+        "figmaNames": {
+          "core": "Pixel Green",
+          "plasma": "Plasma Green"
+        },
+        "usage": "Legacy/established features, stable systems"
+      },
+      "transitional": {
+        "core": "#405DE5",
+        "light": "#5AC8FA",
+        "dark": "#1F2C58",
+        "pixel": "#512CF9",
+        "liquidMarine": "#6366F1",
+        "gradient": {
+          "primary": ["#1F2C58", "#5AC8FA"],
+          "edge": ["#3D8B40", "#5AC8FA", "#6A3093"],
+          "glow": ["#3DFF74", "#5AC8FA", "#BF4080"]
+        },
+        "sources": ["css", "figma", "framer"],
+        "framerToken": "primaryUltraMarine",
+        "figmaNames": {
+          "core": "Ultra Marine",
+          "pixel": "Pixel Marine",
+          "liquid": "Liquid Marine"
+        },
+        "usage": "In-progress features, migration states"
+      },
+      "quantum": {
+        "core": "#6A3093",
+        "light": "#BF4080",
+        "dark": "#331F4A",
+        "pixel": "#613FE7",
+        "ultraViolet": "#6E00FF",
+        "liquidViolet": "#BF5AF2",
+        "systemViolet": "#9151F1",
+        "pulsePink": "#FF2D55",
+        "gradient": {
+          "primary": ["#331F4A", "#6A3093"],
+          "edge": ["#6A3093", "#BF4080"],
+          "glow": ["#6A3093", "#BF4080"]
+        },
+        "sources": ["css", "figma", "framer"],
+        "framerToken": "primaryViolet",
+        "figmaNames": {
+          "pixel": "Pixel Violet",
+          "ultra": "Ultra Violet",
+          "liquid": "Liquid Violet",
+          "system": "System Violet"
+        },
+        "usage": "Future features, experimental systems, quantum effects"
+      }
+    },
+    "accents": {
+      "subtle-cyan": {
+        "primary": "#5AC8FA",
+        "vibrant": "#3CD3FE",
+        "hover": "#29B6F6",
+        "sources": ["css", "figma", "framer"],
+        "framerToken": "primaryUltraMarine",
+        "figmaName": "Primary UI Action Color",
+        "usage": "Primary action color, interactive elements"
+      },
+      "dimensional-teal": {
+        "primary": "#126D71",
+        "sources": ["css"],
+        "usage": "Secondary action, complementary accent"
+      },
+      "rose-energy": {
+        "primary": "#BF4080",
+        "sources": ["css", "figma", "framer"],
+        "framerToken": "primaryQuantum",
+        "usage": "Destructive actions, quantum accent"
+      },
+      "quantum-pulse-pink": {
+        "primary": "#FF2D55",
+        "vibrant": "#FF375F",
+        "dimensional": "#D0196B",
+        "pixel": "#EC4899",
+        "liquid": "#FF66E3",
+        "sources": ["css", "figma"],
+        "figmaNames": {
+          "system": "System Pink",
+          "dimensional": "Dimensional Pink",
+          "pixel": "Pixel Pink",
+          "liquid": "Liquid Pink"
+        },
+        "usage": "High-energy indicators, quantum pulse effects"
+      },
+      "dimensional-orange": {
+        "primary": "#FF6B6B",
+        "pixel": "#FF4F52",
+        "sources": ["css", "figma"],
+        "figmaNames": {
+          "pixel": "Pixel Orange",
+          "liquid": "Liquid Orange"
+        },
+        "usage": "Warning states, energy indicators"
+      },
+      "ultra-marine": {
+        "primary": "#405DE5",
+        "sources": ["css"],
+        "usage": "Tertiary action color, marine theme"
+      },
+      "ultra-violet": {
+        "primary": "#613FE7",
+        "sources": ["css"],
+        "usage": "Secondary violet accent"
+      }
+    },
+    "glass": {
+      "frosted": {
+        "value": "rgba(255, 255, 255, 0.1)",
+        "sources": ["framer"],
+        "framerToken": "glassFrosted",
+        "usage": "Subtle glass background"
+      },
+      "shimmer": {
+        "value": "rgba(191, 64, 128, 0.2)",
+        "sources": ["framer"],
+        "framerToken": "glassShimmer",
+        "usage": "Quantum shimmer effect"
+      },
+      "glow": {
+        "value": "rgba(90, 200, 250, 0.3)",
+        "sources": ["framer"],
+        "framerToken": "glassGlow",
+        "usage": "Cyan glow effect"
+      },
+      "background-subtle": {
+        "value": "rgba(19, 26, 54, 0.4)",
+        "sources": ["css"],
+        "cssVar": "--glass-background-subtle",
+        "usage": "Light glass panels"
+      },
+      "background-medium": {
+        "value": "rgba(19, 26, 54, 0.6)",
+        "sources": ["css"],
+        "cssVar": "--glass-background-medium",
+        "usage": "Medium glass panels"
+      },
+      "background-prominent": {
+        "value": "rgba(19, 26, 54, 0.8)",
+        "sources": ["css"],
+        "cssVar": "--glass-background-prominent",
+        "usage": "Strong glass panels"
+      },
+      "background-heritage": {
+        "value": "rgba(44, 95, 45, 0.4)",
+        "sources": ["css"],
+        "cssVar": "--glass-background-heritage",
+        "usage": "Heritage state glass"
+      },
+      "background-quantum": {
+        "value": "rgba(106, 48, 147, 0.4)",
+        "sources": ["css"],
+        "cssVar": "--glass-background-quantum",
+        "usage": "Quantum state glass"
+      },
+      "border-color": {
+        "value": "rgba(90, 200, 250, 0.2)",
+        "sources": ["css"],
+        "cssVar": "--glass-border-color",
+        "usage": "Default glass borders"
+      },
+      "border-heritage": {
+        "value": "rgba(61, 255, 116, 0.2)",
+        "sources": ["css"],
+        "cssVar": "--glass-border-color-heritage",
+        "usage": "Heritage glass borders"
+      },
+      "border-quantum": {
+        "value": "rgba(191, 64, 128, 0.2)",
+        "sources": ["css"],
+        "cssVar": "--glass-border-color-quantum",
+        "usage": "Quantum glass borders"
+      }
+    },
+    "semantic": {
+      "success": {
+        "primary": "#2C5F2D",
+        "vibrant": "#34C759",
+        "sources": ["css", "framer"],
+        "cssVar": "--color-success",
+        "framerToken": "semanticSuccess",
+        "usage": "Success states, heritage system"
+      },
+      "warning": {
+        "primary": "#FF6B6B",
+        "vibrant": "#FF9500",
+        "sources": ["css", "framer"],
+        "cssVar": "--color-warning",
+        "framerToken": "semanticWarning",
+        "usage": "Warning states"
+      },
+      "error": {
+        "primary": "#BF4080",
+        "vibrant": "#FF3B30",
+        "sources": ["css", "framer"],
+        "cssVar": "--color-destructive",
+        "framerToken": "semanticError",
+        "usage": "Error states, destructive actions"
+      },
+      "info": {
+        "primary": "#5AC8FA",
+        "vibrant": "#007AFF",
+        "sources": ["css", "figma", "framer"],
+        "cssVar": "--color-info",
+        "framerToken": "semanticInfo",
+        "figmaName": "Pixel Blue",
+        "usage": "Information states, links"
+      }
+    },
+    "figma-specific": {
+      "void-violet": {
+        "primary": "#0B010D",
+        "sources": ["figma"],
+        "figmaName": "Void Violet"
+      },
+      "multidimensional-violet": {
+        "primary": "#110413",
+        "sources": ["figma"],
+        "figmaName": "Multidimensional Violet"
+      },
+      "deep-space-violet": {
+        "primary": "#160918",
+        "sources": ["figma"],
+        "figmaName": "Deep Space Violet"
+      },
+      "mystic-midnight": {
+        "primary": "#$A0A0F",
+        "sources": ["figma"],
+        "figmaName": "Mystic Midnight",
+        "note": "Possible typo in Figma export - verify actual value"
+      },
+      "mystic-deepspace": {
+        "primary": "#$A0A0F",
+        "sources": ["figma"],
+        "figmaName": "Mystic Deepspace",
+        "note": "Possible typo in Figma export - verify actual value"
+      },
+      "ultradimensional-marine": {
+        "primary": "#0A0621",
+        "sources": ["figma"],
+        "figmaName": "Ultradimensional Marine"
+      },
+      "ultradimensional-violet": {
+        "primary": "#150621",
+        "sources": ["figma"],
+        "figmaName": "Ultradimensional Violet"
+      },
+      "dimensional-violet": {
+        "primary": "#480F92",
+        "sources": ["figma"],
+        "figmaName": "Dimensional Violet"
+      },
+      "button-hover": {
+        "primary": "#0B4FD7",
+        "sources": ["figma"],
+        "figmaName": "Button Hover"
+      }
+    },
+    "gradients": {
+      "heritage-state": {
+        "type": "linear",
+        "angle": "135deg",
+        "stops": [
+          { "color": "#1B3D1A", "position": "0%" },
+          { "color": "#2C5F2D", "position": "50%" },
+          { "color": "#3D8B40", "position": "100%" }
+        ],
+        "sources": ["css"],
+        "cssVar": "--gradient-heritage-state"
+      },
+      "transitional-state": {
+        "type": "linear",
+        "angle": "135deg",
+        "stops": [
+          { "color": "#331F4A", "position": "0%" },
+          { "color": "#1E1F5C", "position": "33%" },
+          { "color": "#613FE7", "position": "100%" }
+        ],
+        "sources": ["css"],
+        "cssVar": "--gradient-transitional-state"
+      },
+      "quantum-state": {
+        "type": "linear",
+        "angle": "135deg",
+        "stops": [
+          { "color": "#6A3093", "position": "0%" },
+          { "color": "#BF4080", "position": "50%" },
+          { "color": "#FF2D55", "position": "100%" }
+        ],
+        "sources": ["css"],
+        "cssVar": "--gradient-quantum-state"
+      },
+      "quantum-depth": {
+        "type": "linear",
+        "angle": "135deg",
+        "stops": [
+          { "color": "#131A36", "position": "0%" },
+          { "color": "#331F4A", "position": "50%" },
+          { "color": "#6A3093", "position": "100%" }
+        ],
+        "sources": ["css"],
+        "cssVar": "--gradient-quantum-depth"
+      },
+      "spatial-background": {
+        "type": "linear",
+        "angle": "180deg",
+        "stops": [
+          { "color": "#0A0621", "position": "0%" },
+          { "color": "#131A36", "position": "100%" }
+        ],
+        "sources": ["css"],
+        "cssVar": "--gradient-spatial-background"
+      },
+      "energy-flow": {
+        "type": "linear",
+        "angle": "90deg",
+        "stops": [
+          { "color": "#2C5F2D", "position": "0%" },
+          { "color": "#5AC8FA", "position": "50%" },
+          { "color": "#FF2D55", "position": "100%" }
+        ],
+        "sources": ["css"],
+        "cssVar": "--gradient-energy-flow"
+      },
+      "material-state-variation": {
+        "type": "linear",
+        "angle": "90deg",
+        "stops": [
+          { "color": "rgba(51, 31, 74, 0.6)", "position": "0%" },
+          { "color": "#331F4A", "position": "41%" },
+          { "color": "rgba(191, 64, 128, 0.2)", "position": "94%" },
+          { "color": "rgba(18, 109, 113, 0.5)", "position": "100%" }
+        ],
+        "border": "1px solid rgba(54, 234, 232, 0.3)",
+        "sources": ["figma"],
+        "figmaName": "Material State Variation"
+      },
+      "deep-spatial-background": {
+        "type": "linear",
+        "angle": "90deg",
+        "stops": [
+          { "color": "#0A0621", "position": "0%" },
+          { "color": "#131A36", "position": "27%" },
+          { "color": "#331F4A", "position": "68%" },
+          { "color": "#0D0D15", "position": "100%" }
+        ],
+        "border": "1px solid rgba(90, 200, 250, 0.3)",
+        "sources": ["figma"],
+        "figmaName": "Deep Spatial Background Gradient"
+      }
+    }
+  },
+  "mappings": {
+    "svg-base-to-sources": {
+      "void-black": "foundation.void-black",
+      "deep-space-indigo": "foundation.deep-space-indigo",
+      "ultra-indigo": "foundation.ultra-indigo",
+      "dimensional-eggplant": "foundation.dimensional-eggplant",
+      "midnight-richness": "foundation.midnight-richness",
+      "heritage-green-core": "quantum-states.heritage.core",
+      "heritage-green-light": "quantum-states.heritage.light",
+      "heritage-green-dark": "quantum-states.heritage.dark",
+      "heritage-pixel-green": "quantum-states.heritage.pixel",
+      "heritage-pixel-aqua": "quantum-states.heritage.pixelAqua",
+      "ultra-heritage-pixel-green": "quantum-states.heritage.ultraPixel",
+      "subtle-cyan": "accents.subtle-cyan.primary",
+      "dimensional-teal": "accents.dimensional-teal.primary",
+      "rose-energy": "accents.rose-energy.primary",
+      "quantum-pulse-pink": "accents.quantum-pulse-pink.primary",
+      "dimensional-orange": "accents.dimensional-orange.primary",
+      "quantum-violet": "quantum-states.quantum.core",
+      "ultra-marine": "accents.ultra-marine.primary",
+      "ultra-violet": "accents.ultra-violet.primary"
+    },
+    "framer-component-to-base": {
+      "heritage.bg": "foundation.midnight-richness.primary",
+      "heritage.surface": "#1A1E1A",
+      "heritage.text": "#E8F4E8",
+      "heritage.accent": "quantum-states.heritage.core",
+      "heritage.border": "quantum-states.heritage.dark",
+      "transitional.bg": "#0A0C15",
+      "transitional.surface": "#151825",
+      "transitional.text": "#E8EDF8",
+      "transitional.accent": "quantum-states.transitional.core",
+      "transitional.border": "#1E1F3A",
+      "quantum.bg": "foundation.midnight-richness.primary",
+      "quantum.surface": "#1A1A25",
+      "quantum.text": "#F0F0F5",
+      "quantum.accent": "#5A4B93",
+      "quantum.border": "#2A1F3A"
+    }
+  },
+  "notes": {
+    "conflicts": [
+      "Figma 'Mystic Midnight' and 'Mystic Deepspace' have placeholder values (#$A0A0F) - need verification",
+      "Framer component uses custom surface colors not in base registry - may need addition",
+      "CSS Ultra Marine (#405DE5) differs from Figma Ultra Marine (#512CF9) - CSS takes precedence"
+    ],
+    "missing-from-base": [
+      "Framer surface colors (heritage.surface, transitional.surface, quantum.surface)",
+      "Framer text colors (heritage.text, transitional.text, quantum.text)",
+      "Figma-specific void variants (void-violet, multidimensional-violet)"
+    ],
+    "recommendations": [
+      "Add Framer surface/text colors to foundation layer",
+      "Verify Figma export for placeholder color values",
+      "Create 'surfaces' category for component background layers",
+      "Add 'typography' category for text color hierarchy"
+    ]
+  }
+}

@@ -1,0 +1,250 @@
+<svg width="1500" height="500" viewBox="0 0 1500 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background with dimensional gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="20%" x2="100%" y2="80%">
+      <stop offset="0%" stop-color="#0A0621" />
+      <stop offset="30%" stop-color="#131A36" />
+      <stop offset="60%" stop-color="#331F4A" />
+      <stop offset="100%" stop-color="#0D0D15" />
+    </linearGradient>
+    
+    <!-- Dimensional grid pattern with perspective -->
+    <pattern id="dimensionalGrid" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse" patternTransform="skewY(15) scale(0.9, 1.5)">
+      <line x1="0" y1="0" x2="100" y2="0" stroke="#5AC8FA" stroke-width="0.2" stroke-opacity="0.1"/>
+      <line x1="0" y1="0" x2="0" y2="100" stroke="#5AC8FA" stroke-width="0.2" stroke-opacity="0.1"/>
+    </pattern>
+    
+    <!-- Glow filters -->
+    <filter id="evolutionGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    
+    <filter id="quantumGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    
+    <!-- 3D evolution stages with material gradients -->
+    <linearGradient id="heritageStage" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2C5F2D" />
+      <stop offset="100%" stop-color="#3D8B40" />
+    </linearGradient>
+    
+    <linearGradient id="transitionStage" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#331F4A" />
+      <stop offset="100%" stop-color="#613FE7" />
+    </linearGradient>
+    
+    <linearGradient id="quantumStage" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6A3093" />
+      <stop offset="100%" stop-color="#BF4080" />
+    </linearGradient>
+    
+    <!-- Evolutionary energy flow -->
+    <linearGradient id="energyFlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2C5F2D" />
+      <stop offset="50%" stop-color="#00FFC8" />
+      <stop offset="100%" stop-color="#FF2D55" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1500" height="500" fill="url(#bgGradient)"/>
+  <rect width="1500" height="500" fill="url(#dimensionalGrid)" opacity="0.12"/>
+  
+  <!-- Evolutionary path -->
+  <path d="M250,250 C500,150 700,350 900,200 S1100,100 1250,250" fill="none" stroke="url(#energyFlow)" stroke-width="3" opacity="0.7" filter="url(#evolutionGlow)">
+    <animate attributeName="opacity" values="0.6;0.8;0.6" dur="5s" repeatCount="indefinite"/>
+  </path>
+  
+  <!-- Heritage Stage: 8-bit foundation -->
+  <g transform="translate(250, 250)">
+    <!-- 3D pixel cube with perspective -->
+    <g transform="skewX(-15) skewY(10)">
+      <!-- Top face -->
+      <rect x="-30" y="-50" width="60" height="60" fill="#1B3D1A" stroke="#3DFF74" stroke-width="1" opacity="0.9"/>
+      
+      <!-- Side face -->
+      <rect x="30" y="-50" width="20" height="60" fill="#2C5F2D" stroke="#3DFF74" stroke-width="1" opacity="0.9" transform="skewY(45)"/>
+      
+      <!-- Front face -->
+      <rect x="-30" y="10" width="60" height="20" fill="#3D8B40" stroke="#3DFF74" stroke-width="1" opacity="0.9" transform="skewX(45)"/>
+    </g>
+    
+    <!-- Heritage pixel content -->
+    <rect x="-15" y="-15" width="8" height="8" fill="#3DFF74" opacity="0.9"/>
+    <rect x="7" y="-15" width="8" height="8" fill="#3DFF74" opacity="0.9"/>
+    <rect x="-15" y="7" width="8" height="8" fill="#3DFF74" opacity="0.9"/>
+    <rect x="7" y="7" width="8" height="8" fill="#3DFF74" opacity="0.9"/>
+    
+    <!-- Heritage label -->
+    <text x="0" y="50" font-family="SF Mono, monospace" font-size="12" fill="#3DFF74" text-anchor="middle" opacity="0.9">HERITAGE</text>
+  </g>
+  
+  <!-- Transition Stage: Dimensional emergence -->
+  <g transform="translate(750, 250)">
+    <!-- 3D transitional form with depth -->
+    <g transform="skewX(-15) skewY(10)">
+      <!-- Top face -->
+      <rect x="-40" y="-60" width="80" height="80" fill="#1E1F5C" stroke="#5AC8FA" stroke-width="1" opacity="0.85" rx="10" ry="10"/>
+      
+      <!-- Side face -->
+      <rect x="40" y="-60" width="20" height="80" fill="#331F4A" stroke="#5AC8FA" stroke-width="1" opacity="0.85" transform="skewY(45)" rx="5" ry="10"/>
+      
+      <!-- Front face -->
+      <rect x="-40" y="20" width="80" height="20" fill="#613FE7" stroke="#5AC8FA" stroke-width="1" opacity="0.85" transform="skewX(45)" rx="10" ry="5"/>
+    </g>
+    
+    <!-- Transitional content -->
+    <rect x="-15" y="-15" width="10" height="10" fill="#5AC8FA" opacity="0.9" rx="2" ry="2"/>
+    <rect x="5" y="-15" width="10" height="10" fill="#5AC8FA" opacity="0.9" rx="2" ry="2"/>
+    <rect x="-15" y="5" width="10" height="10" fill="#5AC8FA" opacity="0.9" rx="2" ry="2"/>
+    <rect x="5" y="5" width="10" height="10" fill="#5AC8FA" opacity="0.9" rx="2" ry="2"/>
+    
+    <!-- Evolutionary particles -->
+    <circle cx="-20" cy="-20" r="2" fill="#00FFC8" opacity="0.9" filter="url(#evolutionGlow)">
+      <animate attributeName="r" values="2;3;2" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="20" cy="-20" r="2" fill="#00FFC8" opacity="0.9" filter="url(#evolutionGlow)">
+      <animate attributeName="r" values="2;3;2" dur="3s" repeatCount="indefinite" begin="1s"/>
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="3s" repeatCount="indefinite" begin="1s"/>
+    </circle>
+    <circle cx="-20" cy="20" r="2" fill="#00FFC8" opacity="0.9" filter="url(#evolutionGlow)">
+      <animate attributeName="r" values="2;3;2" dur="3s" repeatCount="indefinite" begin="1.5s"/>
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="3s" repeatCount="indefinite" begin="1.5s"/>
+    </circle>
+    <circle cx="20" cy="20" r="2" fill="#00FFC8" opacity="0.9" filter="url(#evolutionGlow)">
+      <animate attributeName="r" values="2;3;2" dur="3s" repeatCount="indefinite" begin="2s"/>
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="3s" repeatCount="indefinite" begin="2s"/>
+    </circle>
+    
+    <!-- Transition label -->
+    <text x="0" y="50" font-family="SF Mono, monospace" font-size="12" fill="#00FFC8" text-anchor="middle" opacity="0.9">TRANSITION</text>
+  </g>
+  
+  <!-- Quantum Stage: Full evolution -->
+  <g transform="translate(1250, 250)">
+    <!-- 3D quantum form with advanced material -->
+    <g transform="skewX(-15) skewY(10)">
+      <!-- Top face - with rounded corners suggesting advanced form -->
+      <rect x="-45" y="-70" width="90" height="90" fill="#331F4A" stroke="#FF2D55" stroke-width="1" opacity="0.8" rx="20" ry="20"/>
+      
+      <!-- Side face -->
+      <rect x="45" y="-70" width="25" height="90" fill="#6A3093" stroke="#FF2D55" stroke-width="1" opacity="0.8" transform="skewY(45)" rx="10" ry="20"/>
+      
+      <!-- Front face -->
+      <rect x="-45" y="20" width="90" height="25" fill="#BF4080" stroke="#FF2D55" stroke-width="1" opacity="0.8" transform="skewX(45)" rx="20" ry="10"/>
+    </g>
+    
+    <!-- Quantum content - evolved beyond pixels into organic energy form -->
+    <circle cx="0" cy="0" r="25" fill="none" stroke="#FF2D55" stroke-width="1" opacity="0.9" filter="url(#quantumGlow)">
+      <animate attributeName="r" values="25;27;25" dur="4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.8;1;0.8" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    
+    <circle cx="0" cy="0" r="15" fill="none" stroke="#FF2D55" stroke-width="1.5" opacity="0.9" filter="url(#quantumGlow)">
+      <animate attributeName="r" values="15;17;15" dur="4s" repeatCount="indefinite" begin="1s"/>
+      <animate attributeName="opacity" values="0.8;1;0.8" dur="4s" repeatCount="indefinite" begin="1s"/>
+    </circle>
+    
+    <!-- Energy core -->
+    <circle cx="0" cy="0" r="8" fill="#FF2D55" opacity="0.9" filter="url(#quantumGlow)">
+      <animate attributeName="r" values="8;10;8" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.8;1;0.8" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Quantum particles -->
+    <g filter="url(#quantumGlow)">
+      <circle cx="15" cy="-15" r="3" fill="#FF2D55" opacity="0.9">
+        <animate attributeName="cx" values="15;18;15" dur="3s" repeatCount="indefinite"/>
+        <animate attributeName="cy" values="-15;-18;-15" dur="3s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="-15" cy="-15" r="3" fill="#FF2D55" opacity="0.9">
+        <animate attributeName="cx" values="-15;-18;-15" dur="3s" repeatCount="indefinite" begin="1s"/>
+        <animate attributeName="cy" values="-15;-18;-15" dur="3s" repeatCount="indefinite" begin="1s"/>
+      </circle>
+      <circle cx="-15" cy="15" r="3" fill="#FF2D55" opacity="0.9">
+        <animate attributeName="cx" values="-15;-18;-15" dur="3s" repeatCount="indefinite" begin="1.5s"/>
+        <animate attributeName="cy" values="15;18;15" dur="3s" repeatCount="indefinite" begin="1.5s"/>
+      </circle>
+      <circle cx="15" cy="15" r="3" fill="#FF2D55" opacity="0.9">
+        <animate attributeName="cx" values="15;18;15" dur="3s" repeatCount="indefinite" begin="2s"/>
+        <animate attributeName="cy" values="15;18;15" dur="3s" repeatCount="indefinite" begin="2s"/>
+      </circle>
+    </g>
+    
+    <!-- Quantum label -->
+    <text x="0" y="50" font-family="SF Mono, monospace" font-size="12" fill="#FF2D55" text-anchor="middle" opacity="0.9">QUANTUM</text>
+  </g>
+  
+  <!-- Energy particles flowing along path -->
+  <circle cx="400" cy="200" r="3" fill="#3DFF74" opacity="0.9" filter="url(#evolutionGlow)">
+    <animate attributeName="cx" values="250;750" dur="8s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="250;200" dur="8s" repeatCount="indefinite"/>
+    <animate attributeName="fill" values="#3DFF74;#00FFC8;#5AC8FA" dur="8s" repeatCount="indefinite"/>
+  </circle>
+  
+  <circle cx="600" cy="250" r="3" fill="#00FFC8" opacity="0.9" filter="url(#evolutionGlow)">
+    <animate attributeName="cx" values="250;750" dur="7s" repeatCount="indefinite" begin="1s"/>
+    <animate attributeName="cy" values="250;200" dur="7s" repeatCount="indefinite" begin="1s"/>
+    <animate attributeName="fill" values="#3DFF74;#00FFC8;#5AC8FA" dur="7s" repeatCount="indefinite" begin="1s"/>
+  </circle>
+  
+  <circle cx="900" cy="180" r="3" fill="#5AC8FA" opacity="0.9" filter="url(#evolutionGlow)">
+    <animate attributeName="cx" values="750;1250" dur="6s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="200;250" dur="6s" repeatCount="indefinite"/>
+    <animate attributeName="fill" values="#5AC8FA;#BF4080;#FF2D55" dur="6s" repeatCount="indefinite"/>
+  </circle>
+  
+  <circle cx="1050" cy="150" r="3" fill="#BF4080" opacity="0.9" filter="url(#evolutionGlow)">
+    <animate attributeName="cx" values="750;1250" dur="5s" repeatCount="indefinite" begin="1.5s"/>
+    <animate attributeName="cy" values="200;250" dur="5s" repeatCount="indefinite" begin="1.5s"/>
+    <animate attributeName="fill" values="#5AC8FA;#BF4080;#FF2D55" dur="5s" repeatCount="indefinite" begin="1.5s"/>
+  </circle>
+  
+  <!-- Brand Design Intelligence overlay -->
+  <g transform="translate(750, 400)">
+    <text x="0" y="0" font-family="SF Pro Display, sans-serif" font-size="28" fill="#FFFFFF" text-anchor="middle" opacity="0.9">OKSANA</text>
+    <text x="0" y="30" font-family="SF Pro Display, sans-serif" font-size="14" fill="#00FFC8" text-anchor="middle" opacity="0.8">ACTIVATED EVOLUTION</text>
+  </g>
+  
+  <!-- Data point callouts -->
+  <g opacity="0.8">
+    <!-- Heritage data -->
+    <line x1="250" y1="320" x2="250" y2="350" stroke="#3DFF74" stroke-width="1" opacity="0.7"/>
+    <text x="250" y="365" font-family="SF Mono, monospace" font-size="9" fill="#3DFF74" text-anchor="middle" opacity="0.9">BRAND FOUNDATION</text>
+    
+    <!-- Transition data -->
+    <line x1="750" y1="320" x2="750" y2="350" stroke="#00FFC8" stroke-width="1" opacity="0.7"/>
+    <text x="750" y="365" font-family="SF Mono, monospace" font-size="9" fill="#00FFC8" text-anchor="middle" opacity="0.9">BRAND INTELLIGENCE</text>
+    
+    <!-- Quantum data -->
+    <line x1="1250" y1="320" x2="1250" y2="350" stroke="#FF2D55" stroke-width="1" opacity="0.7"/>
+    <text x="1250" y="365" font-family="SF Mono, monospace" font-size="9" fill="#FF2D55" text-anchor="middle" opacity="0.9">BRAND TRANSCENDENCE</text>
+  </g>
+  
+  <!-- Subtle background datapoints -->
+  <g opacity="0.3">
+    <circle cx="350" cy="110" r="1" fill="#00FFC8"/>
+    <circle cx="420" cy="90" r="1" fill="#00FFC8"/>
+    <circle cx="500" cy="130" r="1" fill="#00FFC8"/>
+    <circle cx="650" cy="80" r="1" fill="#00FFC8"/>
+    <circle cx="720" cy="120" r="1" fill="#00FFC8"/>
+    <circle cx="850" cy="90" r="1" fill="#FF2D55"/>
+    <circle cx="950" cy="110" r="1" fill="#FF2D55"/>
+    <circle cx="1050" cy="70" r="1" fill="#FF2D55"/>
+    <circle cx="1150" cy="120" r="1" fill="#FF2D55"/>
+    <circle cx="1225" cy="90" r="1" fill="#FF2D55"/>
+    
+    <circle cx="350" cy="410" r="1" fill="#00FFC8"/>
+    <circle cx="450" cy="430" r="1" fill="#00FFC8"/>
+    <circle cx="550" cy="390" r="1" fill="#00FFC8"/>
+    <circle cx="650" cy="420" r="1" fill="#00FFC8"/>
+    <circle cx="850" cy="440" r="1" fill="#FF2D55"/>
+    <circle cx="950" cy="400" r="1" fill="#FF2D55"/>
+    <circle cx="1050" cy="430" r="1" fill="#FF2D55"/>
+    <circle cx="1150" cy="410" r="1" fill="#FF2D55"/>
+  </g>
+</svg>

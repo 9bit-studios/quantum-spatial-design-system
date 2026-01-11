@@ -1,0 +1,124 @@
+{
+  "_meta": {
+    "name": "Superposition",
+    "description": "M4-optimized quantum state uncertainty design system",
+    "version": "1.1.0"
+  },
+  "colors": {
+    "primary": "#6A3093",
+    "secondary": "#BF4080",
+    "accent": "#5AC8FA",
+    "vibrant": "#FF2D55",
+    "background": {
+      "light": "#FFFFFF",
+      "dark": "#121212",
+      "gradient": "linear-gradient(135deg, #1A1A2E 0%, #16213E 50%, #0F3460 100%)"
+    },
+    "text": {
+      "light": "#0A0A0A",
+      "dark": "#F5F5F7",
+      "accent": "#5AC8FA"
+    },
+    "surface": {
+      "light": "#F8F9FC",
+      "dark": "#1A1A2E",
+      "glass": "rgba(255, 255, 255, 0.08)"
+    },
+    "border": {
+      "light": "#DFE2E6",
+      "dark": "#2A2A3C",
+      "accent": "rgba(90, 200, 250, 0.3)"
+    },
+    "success": "#00D26A",
+    "warning": "#FFB800",
+    "error": "#FF4D4F",
+    "energy": {
+      "low": "#5856D6",
+      "medium": "#BF4080",
+      "high": "#FF2D55"
+    }
+  },
+  "typography": {
+    "fontFamily": "SF Pro Display, SF Pro, system-ui, sans-serif",
+    "baseSize": "16px",
+    "scale": 1.5
+  },
+  "spacing": {
+    "unit": "4px",
+    "grid": 4,
+    "scale": {
+      "3xs": "1px",
+      "2xs": "2px",
+      "xs": "4px",
+      "sm": "8px",
+      "md": "16px",
+      "lg": "32px",
+      "xl": "64px",
+      "2xl": "96px",
+      "3xl": "128px",
+      "4xl": "192px"
+    }
+  },
+  "borderRadius": {
+    "none": "0px",
+    "xs": "4px",
+    "small": "8px",
+    "medium": "16px",
+    "large": "24px",
+    "xl": "32px",
+    "pill": "999px",
+    "circle": "50%"
+  },
+  "m4": {
+    "optimizations": {
+      "useNeuralEngine": true,
+      "useMetal": true,
+      "useProMotion": true,
+      "memoryOptimization": "performance",
+      "renderQuality": "maximum",
+      "useHDR": true,
+      "useAdvancedShaders": true,
+      "preferredThreadCount": "auto"
+    },
+    "rendering": {
+      "preferredAPI": "metal",
+      "fallbackAPI": "webgl2",
+      "antialiasing": true,
+      "msaaSamples": 4,
+      "pixelRatio": "device",
+      "precision": "high",
+      "colorSpace": "display-p3",
+      "hdr": true,
+      "dynamicResolution": true
+    },
+    "neural": {
+      "upscaling": {
+        "enabled": true,
+        "algorithm": "neuralNetwork",
+        "quality": "high"
+      },
+      "effects": {
+        "bloom": {
+          "enabled": true,
+          "intensity": 0.3,
+          "threshold": 0.7,
+          "radius": 4
+        },
+        "chromaticAberration": {
+          "enabled": true,
+          "strength": 0.015
+        },
+        "depthOfField": {
+          "enabled": true,
+          "focusDistance": 10,
+          "aperture": 5.6,
+          "bokehShape": "hexagon"
+        },
+        "motionBlur": {
+          "enabled": true,
+          "strength": 0.4
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600">
+  <!-- Deep space background with dimensional grid -->
+  <rect width="900" height="600" fill="#0A0621" />
+  
+  <!-- Dimensional grid with perspective effect -->
+  <g opacity="0.12">
+    <!-- Horizontal grid lines with quantum distortion -->
+    <path d="M150,550 Q450,530 750,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M125,500 Q450,490 775,500" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M100,450 Q450,440 800,450" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M75,400 Q450,390 825,400" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M65,350 Q450,340 835,350" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M55,300 Q450,290 845,300" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M45,250 Q450,240 855,250" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M35,200 Q450,190 865,200" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M25,150 Q450,140 875,150" stroke="#5AC8FA" stroke-width="1" />
+    
+    <!-- Vertical grid lines with subtle distortion -->
+    <path d="M150,100 Q160,300 150,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M225,100 Q235,300 225,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M300,100 Q310,300 300,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M375,100 Q385,300 375,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M450,100 Q460,300 450,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M525,100 Q535,300 525,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M600,100 Q610,300 600,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M675,100 Q685,300 675,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M750,100 Q760,300 750,550" stroke="#5AC8FA" stroke-width="1" />
+  </g>
+  
+  <!-- Title with quantum pixel effect -->
+  <text x="450" y="60" font-family="'SF Pro Display', sans-serif" font-size="32" font-weight="bold" fill="#FFFFFF" text-anchor="middle">M4-Optimized Performance Metrics</text>
+  
+  <!-- Quantum pixels around title -->
+  <rect x="200" y="40" width="10" height="10" fill="#5AC8FA" opacity="0.7" />
+  <rect x="690" y="40" width="10" height="10" fill="#6A3093" opacity="0.7" />
+  <rect x="705" y="55" width="8" height="8" fill="#BF4080" opacity="0.5" />
+  <rect x="185" y="55" width="8" height="8" fill="#BF4080" opacity="0.5" />
+  
+  <!-- Main visualization area -->
+  <g transform="translate(450, 320)">
+    <!-- Circular performance chart -->
+    <circle cx="0" cy="0" r="220" fill="#131A36" opacity="0.8" stroke="#331F4A" stroke-width="3" />
+    <circle cx="0" cy="0" r="216" fill="#0D0D15" opacity="0.8" />
+    
+    <!-- Metric segments -->
+    <!-- Rendering Performance -->
+    <path d="M0,0 L0,-200 A200,200 0 0,1 173.2,100 z" fill="#5AC8FA" opacity="0.3" stroke="#5AC8FA" stroke-width="1" />
+    <line x1="0" y1="0" x2="0" y2="-200" stroke="#5AC8FA" stroke-width="1" />
+    <line x1="0" y1="0" x2="173.2" y2="100" stroke="#5AC8FA" stroke-width="1" />
+    
+    <!-- Battery Life -->
+    <path d="M0,0 L173.2,100 A200,200 0 0,1 0,200 z" fill="#6A3093" opacity="0.3" stroke="#6A3093" stroke-width="1" />
+    <line x1="0" y1="0" x2="173.2" y2="100" stroke="#6A3093" stroke-width="1" />
+    <line x1="0" y1="0" x2="0" y2="200" stroke="#6A3093" stroke-width="1" />
+    
+    <!-- AI Processing -->
+    <path d="M0,0 L0,200 A200,200 0 0,1 -173.2,100 z" fill="#BF4080" opacity="0.3" stroke="#BF4080" stroke-width="1" />
+    <line x1="0" y1="0" x2="0" y2="200" stroke="#BF4080" stroke-width="1" />
+    <line x1="0" y1="0" x2="-173.2" y2="100" stroke="#BF4080" stroke-width="1" />
+    
+    <!-- Development Time -->
+    <path d="M0,0 L-173.2,100 A200,200 0 0,1 -173.2,-100 z" fill="#2D854D" opacity="0.3" stroke="#2D854D" stroke-width="1" />
+    <line x1="0" y1="0" x2="-173.2" y2="100" stroke="#2D854D" stroke-width="1" />
+    <line x1="0" y1="0" x2="-173.2" y2="-100" stroke="#2D854D" stroke-width="1" />
+    
+    <!-- Asset Loading -->
+    <path d="M0,0 L-173.2,-100 A200,200 0 0,1 0,-200 z" fill="#FF6B57" opacity="0.3" stroke="#FF6B57" stroke-width="1" />
+    <line x1="0" y1="0" x2="-173.2" y2="-100" stroke="#FF6B57" stroke-width="1" />
+    <line x1="0" y1="0" x2="0" y2="-200" stroke="#FF6B57" stroke-width="1" />
+    
+    <!-- Standard vs M4 Performance Comparison -->
+    <!-- Standard Performance - Inner circle -->
+    <circle cx="0" cy="0" r="80" fill="none" stroke="#FFFFFF" stroke-width="1" stroke-dasharray="5,5" />
+    
+    <!-- M4 Performance - Outer shape -->
+    <path d="M0,-180 L156,-90 L156,90 L0,180 L-156,90 L-156,-90 Z" fill="none" stroke="#5AC8FA" stroke-width="2" />
+    
+    <!-- Performance indicators - Standard -->
+    <circle cx="0" cy="-80" r="6" fill="#FFFFFF" />
+    <circle cx="69.3" cy="40" r="6" fill="#FFFFFF" />
+    <circle cx="0" cy="80" r="6" fill="#FFFFFF" />
+    <circle cx="-69.3" cy="40" r="6" fill="#FFFFFF" />
+    <circle cx="-69.3" cy="-40" r="6" fill="#FFFFFF" />
+    
+    <!-- Performance indicators - M4 Optimized -->
+    <circle cx="0" cy="-180" r="8" fill="#5AC8FA" />
+    <circle cx="156" cy="90" r="8" fill="#5AC8FA" />
+    <circle cx="0" cy="180" r="8" fill="#5AC8FA" />
+    <circle cx="-156" cy="90" r="8" fill="#5AC8FA" />
+    <circle cx="-156" cy="-90" r="8" fill="#5AC8FA" />
+    
+    <!-- Center hub with M4 logo -->
+    <circle cx="0" cy="0" r="40" fill="#131A36" stroke="#5AC8FA" stroke-width="2" />
+    <text x="0" y="5" font-family="'SF Pro Display', sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">M4</text>
+    <text x="0" y="25" font-family="'SF Pro Text', sans-serif" font-size="10" fill="#5AC8FA" text-anchor="middle">OPTIMIZED</text>
+  </g>
+  
+  <!-- Metric Labels -->
+  <g transform="translate(450, 320)">
+    <!-- Rendering Performance -->
+    <text x="0" y="-230" font-family="'SF Pro Display', sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Rendering Performance</text>
+    <text x="0" y="-210" font-family="'SF Pro Text', sans-serif" font-size="14" fill="#5AC8FA" text-anchor="middle">+125% (60-90 FPS)</text>
+    
+    <!-- Battery Life -->
+    <text x="200" y="120" font-family="'SF Pro Display', sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Battery Life</text>
+    <text x="200" y="140" font-family="'SF Pro Text', sans-serif" font-size="14" fill="#6A3093" text-anchor="middle">+80% Efficiency</text>
+    
+    <!-- AI Processing -->
+    <text x="0" y="230" font-family="'SF Pro Display', sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">AI Processing Speed</text>
+    <text x="0" y="250" font-family="'SF Pro Text', sans-serif" font-size="14" fill="#BF4080" text-anchor="middle">+125% (Neural Engine)</text>
+    
+    <!-- Development Time -->
+    <text x="-200" y="120" font-family="'SF Pro Display', sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Development Time</text>
+    <text x="-200" y="140" font-family="'SF Pro Text', sans-serif" font-size="14" fill="#2D854D" text-anchor="middle">-40% (Faster Cycles)</text>
+    
+    <!-- Asset Loading -->
+    <text x="-200" y="-120" font-family="'SF Pro Display', sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Asset Loading</text>
+    <text x="-200" y="-100" font-family="'SF Pro Text', sans-serif" font-size="14" fill="#FF6B57" text-anchor="middle">+95% Faster</text>
+  </g>
+  
+  <!-- Legend -->
+  <g transform="translate(450, 550)">
+    <rect x="-150" y="-25" width="300" height="50" rx="10" fill="#131A36" opacity="0.8" />
+    
+    <circle cx="-100" cy="0" r="6" fill="#FFFFFF" />
+    <text x="-80" y="5" font-family="'SF Pro Text', sans-serif" font-size="14" fill="#FFFFFF">Standard Performance</text>
+    
+    <circle cx="50" cy="0" r="8" fill="#5AC8FA" />
+    <text x="70" y="5" font-family="'SF Pro Text', sans-serif" font-size="14" fill="#5AC8FA">M4-Optimized</text>
+  </g>
+</svg>

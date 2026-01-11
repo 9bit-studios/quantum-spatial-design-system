@@ -1,0 +1,67 @@
+{
+  "version": "1.0.0",
+  "description": "Pseudo-skills registry (NO Claude Agent SDK required)",
+  "skills": [
+    {
+      "id": "svg-generation",
+      "name": "SVG Generation",
+      "type": "pseudo-skill",
+      "path": "../skills/svg-generation/",
+      "enabled": true,
+      "capabilities": [
+        "quantum-spatial-svg",
+        "heritage-svg",
+        "animated-components",
+        "cloudinary-deployment"
+      ]
+    },
+    {
+      "id": "vision-pro-ui-kit",
+      "name": "Vision Pro UI Kit",
+      "type": "pseudo-skill",
+      "path": "../../m4-acceleration/vision-pro/",
+      "enabled": true,
+      "capabilities": [
+        "spatial-components",
+        "realitykit-integration",
+        "volumetric-visualization"
+      ]
+    },
+    {
+      "id": "design-system-automation",
+      "name": "Design System Automation",
+      "type": "pseudo-skill",
+      "path": "../skills/design-system-automation/",
+      "enabled": true,
+      "capabilities": [
+        "figma-extraction",
+        "hig-validation",
+        "code-generation"
+      ]
+    },
+    {
+      "id": "brand-voice-validation",
+      "name": "Brand Voice Validation",
+      "type": "pseudo-skill",
+      "path": "../skills/brand-voice-validation/",
+      "enabled": true,
+      "capabilities": [
+        "tone-analysis",
+        "brand-consistency-scoring"
+      ]
+    },
+    {
+      "id": "strategic-planning",
+      "name": "Strategic Planning",
+      "type": "pseudo-skill",
+      "path": "../skills/strategic-planning/",
+      "enabled": true,
+      "capabilities": [
+        "roadmap-generation",
+        "priority-matrix",
+        "resource-allocation"
+      ]
+    }
+  ],
+  "note": "These are pseudo-skills - TypeScript functions that mimic skill behavior WITHOUT Claude Agent SDK"
+}

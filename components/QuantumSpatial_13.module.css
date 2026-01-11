@@ -1,0 +1,107 @@
+/**
+ * QuantumSpatial_13 Styles
+ * Quantum-spatial aesthetic enhancements
+ * M4-optimized rendering with reduced glassmorphism for mobile
+ */
+
+.quantumContainer {
+  position: relative;
+  display: inline-block;
+  isolation: isolate;
+}
+
+.quantumSvg {
+  display: block;
+  width: 100%;
+  height: auto;
+  /* M4-accelerated rendering */
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Glassmorphism wrapper for enhanced depth */
+.glassWrapper {
+  position: relative;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow:
+    0 8px 32px 0 rgba(232, 93, 117, 0.15),
+    0 4px 16px 0 rgba(78, 205, 196, 0.1),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.1);
+  padding: var(--space-lg, 24px);
+}
+
+/* Quantum glow effect on hover */
+.quantumSvg:hover {
+  filter: drop-shadow(0 0 20px rgba(78, 205, 196, 0.4));
+  transition: filter 0.3s ease;
+}
+
+/* Responsive sizing */
+.sizeSmall {
+  width: 200px;
+  height: 200px;
+}
+
+.sizeMedium {
+  width: 400px;
+  height: 400px;
+}
+
+.sizeLarge {
+  width: 600px;
+  height: 600px;
+}
+
+/* Dark mode optimization */
+@media (prefers-color-scheme: dark) {
+  .glassWrapper {
+    background: rgba(10, 14, 39, 0.8);
+    border-color: rgba(78, 205, 196, 0.2);
+  }
+}
+
+/* Reduced motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .quantumSvg * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* Mobile optimization - reduce glassmorphism for performance */
+@media (max-width: 768px) {
+  .glassWrapper {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  .quantumSvg {
+    /* Reduce complexity on mobile */
+    filter: none;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .glassWrapper {
+    border: 2px solid rgba(78, 205, 196, 0.8);
+    background: rgba(10, 14, 39, 0.95);
+  }
+}
+
+/* Print styles */
+@media print {
+  .glassWrapper {
+    background: white;
+    border: 1px solid #000;
+  }
+
+  .quantumSvg {
+    filter: grayscale(100%);
+  }
+}

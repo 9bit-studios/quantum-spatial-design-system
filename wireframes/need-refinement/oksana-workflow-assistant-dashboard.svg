@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background with quantum grid -->
+    <rect width="800" height="600" fill="#131A36"/>
+    <g opacity="0.1">
+        <path d="M0 20H800" stroke="#5AC8FA" stroke-width="1"/>
+        <path d="M0 40H800" stroke="#5AC8FA" stroke-width="1"/>
+        <path d="M0 60H800" stroke="#5AC8FA" stroke-width="1"/>
+        <path d="M0 80H800" stroke="#5AC8FA" stroke-width="1"/>
+        <path d="M0 100H800" stroke="#5AC8FA" stroke-width="1"/>
+        <path d="M0 120H800" stroke="#5AC8FA" stroke-width="1"/>
+        <path d="M0 140H800" stroke="#5AC8FA" stroke-width="1"/>
+        <path d="M0 160H800" stroke="#5AC8FA" stroke-width="1"/>
+        <path d="M0 180H800" stroke="#5AC8FA" stroke-width="1"/>
+        <path d="M0 200H800" stroke="#5AC8FA" stroke-width="1"/>
+        <path d="M0 220H800" stroke="#5AC8FA" stroke-width="1"/>
+        <path d="M0 240H800" stroke="#5AC8FA" stroke-width="1"/>
+        <path d="M0 260H800" stroke="#5AC8FA" stroke-width="1"/>
+        <path d="M0 280H800" stroke="#5AC8FA" stroke-width="1"/>
+        <path d="M0 300H800" stroke="#5AC8FA" stroke-width="1"/>
+        <path d="M0 320H800" stroke="#5AC8FA" stroke-width="1"/>
+        <path d="M0 340H800" stroke="#5AC8FA" stroke-width="1"/>
+        <path d="M0 360H800" stroke="#5AC8FA" stroke-width="1"/>
+        <path d="M0 380H800" stroke="#5AC8FA" stroke-width="1"/>
+        <path d="M0 400H800" stroke="#5AC8FA" stroke-width="1"/>
+        <path d="M0 420H800" stroke="#5AC8FA" stroke-width="1"/>
+        <path d="M0 440H800" stroke="#5AC8FA" stroke-width="1"/>
+        <path d="M0 460H800" stroke="#5AC8FA" stroke-width="1"/>
+        <path d="M0 480H800" stroke="#5AC8FA" stroke-width="1"/>
+        <path d="M0 500H800" stroke="#5AC8FA" stroke-width="1"/>
+        <path d="M0 520H800" stroke="#5AC8FA" stroke-width="1"/>
+        <path d="M0 540H800" stroke="#5AC8FA" stroke-width="1"/>
+        <path d="M0 560H800" stroke="#5AC8FA" stroke-width="1"/>
+        <path d="M0 580H800" stroke="#5AC8FA" stroke-width="1"/>
+        <path d="M0 600H800" stroke="#5AC8FA" stroke-width="1"/>
+        
+        <path d="M20 0V600" stroke="#5AC8FA" stroke-width="1"/>
+        <path d="M40 0V600" stroke="#5AC8FA" stroke-width="1"/>
+        <path d="M60 0V600" stroke="#5AC8FA" stroke-width="1"/>
+        <path d="M80 0V600" stroke="#5AC8FA" stroke-width="1"/>
+        <path d="M100 0V600" stroke="#5AC8FA" stroke-width="1"/>
+        <path d="M120 0V600" stroke="#5AC8FA" stroke-width="1"/>
+        <path d="M140 0V600" stroke="#5AC8FA" stroke-width="1"/>
+        <path d="M160 0V600" stroke="#5AC8FA" stroke-width="1"/>
+        <path d="M180 0V600" stroke="#5AC8FA" stroke-width="1"/>
+        <path d="M200 0V600" stroke="#5AC8FA" stroke-width="1"/>
+        <path d="M220 0V600" stroke="#5AC8FA" stroke-width="1"/>
+        <path d="M240 0V600" stroke="#5AC8FA" stroke-width="1"/>
+        <path d="M260 0V600" stroke="#5AC8FA" stroke-width="1"/>
+        <path d="M280 0V600" stroke="#5AC8FA" stroke-width="1"/>
+        <path d="M300 0V600" stroke="#5AC8FA" stroke-width="1"/>
+        <path d="M320 0V600" stroke="#5AC8FA" stroke-width="1"/>
+        <path d="M340 0V600" stroke="#5AC8FA" stroke-width="1"/>
+        <path d="M360 0V600" stroke="#5AC8FA" stroke-width="1"/>
+        <path d="M380 0V600" stroke="#5AC8FA" stroke-width="1"/>
+        <path d="M400 0V600" stroke="#5AC8FA" stroke-width="1"/>
+        <path d="M420 0V600" stroke="#5AC8FA" stroke-width="1"/>
+        <path d="M440 0V600" stroke="#5AC8FA" stroke-width="1"/>
+        <path d="M460 0V600" stroke="#5AC8FA" stroke-width="1"/>
+        <path d="M480 0V600" stroke="#5AC8FA" stroke-width="1"/>
+        <path d="M500 0V600" stroke="#5AC8FA" stroke-width="1"/>
+        <path d="M520 0V600" stroke="#5AC8FA" stroke-width="1"/>
+        <path d="M540 0V600" stroke="#5AC8FA" stroke-width="1"/>
+        <path d="M560 0V600" stroke="#5AC8FA" stroke-width="1"/>
+        <path d="M580 0V600" stroke="#5AC8FA" stroke-width="1"/>
+        <path d="M600 0V600" stroke="#5AC8FA" stroke-width="1"/>
+        <path d="M620 0V600" stroke="#5AC8FA" stroke-width="1"/>
+        <path d="M640 0V600" stroke="#5AC8FA" stroke-width="1"/>
+        <path d="M660 0V600" stroke="#5AC8FA" stroke-width="1"/>
+        <path d="M680 0V600" stroke="#5AC8FA" stroke-width="1"/>
+        <path d="M700 0V600" stroke="#5AC8FA" stroke-width="1"/>
+        <path d="M720 0V600" stroke="#5AC8FA" stroke-width="1"/>
+        <path d="M740 0V600" stroke="#5AC8FA" stroke-width="1"/>
+        <path d="M760 0V600" stroke="#5AC8FA" stroke-width="1"/>
+        <path d="M780 0V600" stroke="#5AC8FA" stroke-width="1"/>
+        <path d="M800 0V600" stroke="#5AC8FA" stroke-width="1"/>
+    </g>
+    
+    <!-- Main container -->
+    <rect x="40" y="40" width="720" height="520" rx="12" fill="#0D0D15" fill-opacity="0.7"/>
+    
+    <!-- Header bar -->
+    <rect x="40" y="40" width="720" height="60" rx="12" fill="#331F4A"/>
+    <text x="72" y="77" font-family="SF Pro Display, sans-serif" font-size="24" font-weight="600" fill="white">Oksana Workflow Assistant</text>
+    
+    <!-- System/Spirit visualization -->
+    <circle cx="680" cy="70" r="20" fill="#BF4080"/>
+    <g opacity="0.7">
+        <circle cx="680" cy="70" r="30" stroke="#BF4080" stroke-width="2" stroke-opacity="0.6"/>
+        <circle cx="680" cy="70" r="40" stroke="#BF4080" stroke-width="1.5" stroke-opacity="0.4"/>
+        <circle cx="680" cy="70" r="50" stroke="#BF4080" stroke-width="1" stroke-opacity="0.2"/>
+    </g>
+    
+    <!-- Left column - Core Action Hub -->
+    <rect x="60" y="120" width="220" height="420" rx="8" fill="#1A1E43" fill-opacity="0.7"/>
+    <text x="80" y="150" font-family="SF Pro Display, sans-serif" font-size="18" font-weight="600" fill="white">Core Action Hub</text>
+    
+    <!-- Hub items -->
+    <rect x="70" y="165" width="200" height="50" rx="6" fill="#331F4A" fill-opacity="0.8"/>
+    <text x="88" y="195" font-family="SF Pro Text, sans-serif" font-size="14" fill="white">Current Projects</text>
+    <circle cx="250" cy="190" r="10" fill="#5AC8FA"/>
+    <text x="246" y="195" font-family="SF Pro Text, sans-serif" font-size="14" font-weight="bold" fill="#0D0D15">3</text>
+    
+    <rect x="70" y="225" width="200" height="50" rx="6" fill="#331F4A" fill-opacity="0.8"/>
+    <text x="88" y="255" font-family="SF Pro Text, sans-serif" font-size="14" fill="white">Design System</text>
+    <circle cx="250" cy="250" r="10" fill="#5AC8FA"/>
+    <text x="246" y="255" font-family="SF Pro Text, sans-serif" font-size="14" font-weight="bold" fill="#0D0D15">1</text>
+    
+    <rect x="70" y="285" width="200" height="50" rx="6" fill="#6A3093" fill-opacity="0.8"/>
+    <text x="88" y="315" font-family="SF Pro Text, sans-serif" font-size="14" fill="white">Workflow Editor</text>
+    <circle cx="250" cy="310" r="10" fill="#BF4080"/>
+    <text x="250" y="315" font-family="SF Pro Text, sans-serif" font-size="14" font-weight="bold" fill="white" text-anchor="middle">+</text>
+    
+    <rect x="70" y="345" width="200" height="50" rx="6" fill="#331F4A" fill-opacity="0.8"/>
+    <text x="88" y="375" font-family="SF Pro Text, sans-serif" font-size="14" fill="white">Asset Generator</text>
+    <circle cx="250" cy="370" r="10" fill="#5AC8FA"/>
+    <text x="246" y="375" font-family="SF Pro Text, sans-serif" font-size="14" font-weight="bold" fill="#0D0D15">2</text>
+    
+    <rect x="70" y="405" width="200" height="50" rx="6" fill="#331F4A" fill-opacity="0.8"/>
+    <text x="88" y="435" font-family="SF Pro Text, sans-serif" font-size="14" fill="white">Documentation</text>
+    <circle cx="250" cy="430" r="10" fill="#5AC8FA"/>
+    <text x="246" y="435" font-family="SF Pro Text, sans-serif" font-size="14" font-weight="bold" fill="#0D0D15">7</text>
+    
+    <rect x="70" y="465" width="200" height="50" rx="6" stroke="#5AC8FA" stroke-width="2" fill="#131A36" fill-opacity="0.4"/>
+    <text x="88" y="495" font-family="SF Pro Text, sans-serif" font-size="14" fill="#5AC8FA">+ Add New Module</text>
+    
+    <!-- Main section - Workflow Editor -->
+    <rect x="300" y="120" width="440" height="420" rx="8" fill="#0D0D15" fill-opacity="0.8"/>
+    
+    <!-- Workflow Editor Header -->
+    <rect x="300" y="120" width="440" height="50" rx="8" fill="#6A3093" fill-opacity="0.7"/>
+    <text x="320" y="150" font-family="SF Pro Display, sans-serif" font-size="18" font-weight="600" fill="white">Workflow Editor</text>
+    <circle cx="710" cy="145" r="15" fill="#331F4A" fill-opacity="0.8"/>
+    <text x="705" y="151" font-family="SF Pro Text, sans-serif" font-size="20" font-weight="600" fill="white">?</text>
+    
+    <!-- Workflow Canvas -->
+    <rect x="320" y="180" width="400" height="260" rx="8" fill="#131A36" fill-opacity="0.9"/>
+    
+    <!-- Workflow Nodes -->
+    <!-- Start Node -->
+    <circle cx="370" cy="230" r="30" fill="#331F4A"/>
+    <circle cx="370" cy="230" r="24" fill="#131A36"/>
+    <text x="370" y="235" font-family="SF Pro Text, sans-serif" font-size="12" font-weight="bold" fill="white" text-anchor="middle">START</text>
+    
+    <!-- Process Node 1 -->
+    <rect x="460" y="210" width="100" height="40" rx="6" fill="#331F4A"/>
+    <text x="510" y="235" font-family="SF Pro Text, sans-serif" font-size="12" fill="white" text-anchor="middle">Design Review</text>
+    
+    <!-- Process Node 2 -->
+    <rect x="460" y="310" width="100" height="40" rx="6" fill="#331F4A"/>
+    <text x="510" y="335" font-family="SF Pro Text, sans-serif" font-size="12" fill="white" text-anchor="middle">Asset Creation</text>
+    
+    <!-- End Node -->
+    <circle cx="620" cy="260" r="30" fill="#BF4080"/>
+    <circle cx="620" cy="260" r="24" fill="#131A36"/>
+    <text x="620" y="265" font-family="SF Pro Text, sans-serif" font-size="12" font-weight="bold" fill="white" text-anchor="middle">DEPLOY</text>
+    
+    <!-- Workflow Connections -->
+    <path d="M400 230 L460 230" stroke="#5AC8FA" stroke-width="2"/>
+    <path d="M560 230 C580 230, 580 260, 590 260" stroke="#5AC8FA" stroke-width="2"/>
+    <path d="M400 230 C420 230, 440 310, 460 330" stroke="#5AC8FA" stroke-width="2" stroke-dasharray="4"/>
+    <path d="M560 330 C580 330, 600 280, 590 260" stroke="#5AC8FA" stroke-width="2" stroke-dasharray="4"/>
+    
+    <!-- Quantum Elements -->
+    <rect x="400" y="220" width="10" height="10" fill="#BF4080"/>
+    <rect x="570" y="250" width="10" height="10" fill="#BF4080"/>
+    <rect x="440" y="300" width="10" height="10" fill="#5AC8FA"/>
+    <rect x="580" y="300" width="10" height="10" fill="#5AC8FA"/>
+    
+    <!-- Workflow Properties Panel -->
+    <rect x="320" y="450" width="400" height="70" rx="8" fill="#1A1E43" fill-opacity="0.7"/>
+    <text x="340" y="480" font-family="SF Pro Text, sans-serif" font-size="14" font-weight="600" fill="white">Properties</text>
+    
+    <!-- Workflow Properties Controls -->
+    <rect x="340" y="490" width="80" height="20" rx="4" fill="#331F4A"/>
+    <text x="380" y="504" font-family="SF Pro Text, sans-serif" font-size="12" fill="white" text-anchor="middle">Edit</text>
+    
+    <rect x="430" y="490" width="80" height="20" rx="4" fill="#331F4A"/>
+    <text x="470" y="504" font-family="SF Pro Text, sans-serif" font-size="12" fill="white" text-anchor="middle">Script</text>
+    
+    <rect x="520" y="490" width="80" height="20" rx="4" fill="#BF4080"/>
+    <text x="560" y="504" font-family="SF Pro Text, sans-serif" font-size="12" fill="white" text-anchor="middle">Save</text>
+    
+    <!-- Small branding -->
+    <text x="700" y="550" font-family="SF Pro Text, sans-serif" font-size="10" fill="#5AC8FA" text-anchor="end">9Bit Studios</text>
+</svg>

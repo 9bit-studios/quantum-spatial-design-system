@@ -1,0 +1,792 @@
+/* QuantumSpatial_8 Examples - Styling */
+/* Design System: Quantum Spatial - 9Bit Studios */
+
+/* ============================================================================
+   Design Tokens
+   ========================================================================= */
+
+:root {
+  /* Typography */
+  --font-display: 'SF Pro Display', -apple-system, system-ui, sans-serif;
+  --font-text: 'SF Pro Text', -apple-system, system-ui, sans-serif;
+
+  /* Spacing (8px grid) */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+
+  /* Colors */
+  --primary: #E85D75;
+  --secondary: #4ECDC4;
+  --tertiary: #A78BFA;
+  --background: #0A0E27;
+  --surface: rgba(255, 255, 255, 0.05);
+  --text-primary: #FFFFFF;
+  --text-secondary: rgba(255, 255, 255, 0.7);
+
+  /* Effects */
+  --glass-blur: 20px;
+  --glass-opacity: 0.7;
+  --glass-border: rgba(255, 255, 255, 0.18);
+
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.6s ease;
+}
+
+/* ============================================================================
+   Example 1: Hero Section
+   ========================================================================= */
+
+.heroSection {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: var(--background);
+}
+
+.heroBackground {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: var(--space-xl);
+  max-width: 800px;
+}
+
+.heroTitle {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--space-lg);
+  line-height: 1.2;
+}
+
+.heroSubtitle {
+  font-family: var(--font-text);
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  color: var(--text-secondary);
+  margin-bottom: var(--space-2xl);
+  line-height: 1.6;
+}
+
+.heroCTA {
+  font-family: var(--font-text);
+  font-size: 1.125rem;
+  font-weight: 600;
+  padding: var(--space-md) var(--space-xl);
+  background: linear-gradient(135deg, var(--primary), var(--tertiary));
+  color: var(--text-primary);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  min-width: 44px;
+  min-height: 44px;
+}
+
+.heroCTA:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(232, 93, 117, 0.3);
+}
+
+.heroCTA:active {
+  transform: translateY(0);
+}
+
+/* ============================================================================
+   Example 2: Loading State
+   ========================================================================= */
+
+.loadingContainer {
+  position: relative;
+  min-height: 400px;
+}
+
+.loadingOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 14, 39, 0.95);
+  backdrop-filter: blur(var(--glass-blur));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.loadingText {
+  font-family: var(--font-text);
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-md);
+}
+
+.loadingProgress {
+  width: 200px;
+  height: 4px;
+  background: var(--surface);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progressBar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--secondary), var(--tertiary));
+  animation: progressAnimation 2s ease-in-out infinite;
+}
+
+@keyframes progressAnimation {
+  0% { width: 0%; }
+  50% { width: 70%; }
+  100% { width: 100%; }
+}
+
+/* ============================================================================
+   Example 3: Interactive Quantum Button
+   ========================================================================= */
+
+.quantumButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-lg);
+  background: var(--surface);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  min-width: 48px;
+  min-height: 48px;
+  backdrop-filter: blur(var(--glass-blur));
+}
+
+.quantumButton:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--secondary);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(78, 205, 196, 0.2);
+}
+
+.quantumButton:active {
+  transform: translateY(-2px);
+}
+
+.quantumButton.active {
+  background: linear-gradient(135deg, rgba(232, 93, 117, 0.2), rgba(167, 139, 250, 0.2));
+  border-color: var(--primary);
+}
+
+.buttonIcon {
+  flex-shrink: 0;
+}
+
+.buttonLabel {
+  font-family: var(--font-text);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ============================================================================
+   Example 4: Brand Identity Card
+   ========================================================================= */
+
+.brandCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--space-3xl);
+  background: var(--surface);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  backdrop-filter: blur(var(--glass-blur));
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.brandIcon {
+  margin-bottom: var(--space-xl);
+}
+
+.brandContent {
+  text-align: center;
+  width: 100%;
+}
+
+.brandTitle {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.brandTagline {
+  font-family: var(--font-text);
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-2xl);
+}
+
+.brandFeatures {
+  display: flex;
+  gap: var(--space-lg);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-md);
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 8px;
+  font-family: var(--font-text);
+  font-size: 0.875rem;
+  color: var(--text-primary);
+}
+
+.featureIcon {
+  font-size: 1.25rem;
+}
+
+/* ============================================================================
+   Example 5: Background Decoration
+   ========================================================================= */
+
+.decoratedSection {
+  position: relative;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-3xl);
+  overflow: hidden;
+}
+
+.backgroundDecoration {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.15;
+  pointer-events: none;
+  filter: blur(40px);
+}
+
+.decoratedContent {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  text-align: center;
+}
+
+.decoratedContent h2 {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  color: var(--text-primary);
+  margin-bottom: var(--space-lg);
+}
+
+.decoratedContent p {
+  font-family: var(--font-text);
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* ============================================================================
+   Example 6: Feature Showcase Grid
+   ========================================================================= */
+
+.featureGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-xl);
+  padding: var(--space-xl);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.featureCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--space-xl);
+  background: var(--surface);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  backdrop-filter: blur(var(--glass-blur));
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.featureCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.3);
+  border-color: var(--secondary);
+}
+
+.featureIcon {
+  margin-bottom: var(--space-lg);
+}
+
+.featureTitle {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--space-md);
+  text-align: center;
+}
+
+.featureDescription {
+  font-family: var(--font-text);
+  font-size: 1rem;
+  color: var(--text-secondary);
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* ============================================================================
+   Example 7: Modal/Dialog
+   ========================================================================= */
+
+.openModalButton {
+  font-family: var(--font-text);
+  font-size: 1rem;
+  font-weight: 600;
+  padding: var(--space-md) var(--space-lg);
+  background: var(--primary);
+  color: var(--text-primary);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  min-width: 44px;
+  min-height: 44px;
+  transition: all var(--transition-normal);
+}
+
+.openModalButton:hover {
+  background: color-mix(in srgb, var(--primary) 90%, white);
+  transform: scale(1.05);
+}
+
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 14, 39, 0.9);
+  backdrop-filter: blur(var(--glass-blur));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  padding: var(--space-lg);
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modalContent {
+  background: var(--background);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  padding: var(--space-2xl);
+  max-width: 500px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.modalIcon {
+  margin-bottom: var(--space-lg);
+}
+
+.modalTitle {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--space-md);
+  text-align: center;
+}
+
+.modalDescription {
+  font-family: var(--font-text);
+  font-size: 1rem;
+  color: var(--text-secondary);
+  text-align: center;
+  line-height: 1.6;
+  margin-bottom: var(--space-xl);
+}
+
+.modalActions {
+  display: flex;
+  gap: var(--space-md);
+  width: 100%;
+}
+
+.modalButtonPrimary,
+.modalButtonSecondary {
+  flex: 1;
+  font-family: var(--font-text);
+  font-size: 1rem;
+  font-weight: 600;
+  padding: var(--space-md);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  min-width: 44px;
+  min-height: 44px;
+  transition: all var(--transition-normal);
+}
+
+.modalButtonPrimary {
+  background: var(--primary);
+  color: var(--text-primary);
+}
+
+.modalButtonPrimary:hover {
+  background: color-mix(in srgb, var(--primary) 90%, white);
+}
+
+.modalButtonSecondary {
+  background: var(--surface);
+  color: var(--text-primary);
+  border: 1px solid var(--glass-border);
+}
+
+.modalButtonSecondary:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* ============================================================================
+   Example 8: Status Indicator
+   ========================================================================= */
+
+.statusContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-lg);
+  padding: var(--space-2xl);
+}
+
+.statusIndicator {
+  position: relative;
+}
+
+.statusLabel {
+  font-family: var(--font-text);
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.statusControls {
+  display: flex;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+.statusControls button {
+  font-family: var(--font-text);
+  font-size: 0.875rem;
+  padding: var(--space-sm) var(--space-md);
+  background: var(--surface);
+  color: var(--text-primary);
+  border: 1px solid var(--glass-border);
+  border-radius: 8px;
+  cursor: pointer;
+  min-width: 44px;
+  min-height: 44px;
+  transition: all var(--transition-fast);
+}
+
+.statusControls button:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--secondary);
+}
+
+/* Status-specific styles */
+.status-idle {
+  opacity: 0.6;
+}
+
+.status-processing {
+  filter: hue-rotate(180deg);
+}
+
+.status-success {
+  filter: hue-rotate(90deg);
+}
+
+.status-error {
+  filter: hue-rotate(270deg);
+  opacity: 0.8;
+}
+
+/* ============================================================================
+   Example 9: Responsive Sizing
+   ========================================================================= */
+
+.responsiveDemo {
+  display: flex;
+  gap: var(--space-2xl);
+  padding: var(--space-2xl);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.sizeVariant {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.sizeVariant h3 {
+  font-family: var(--font-text);
+  font-size: 1rem;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+/* ============================================================================
+   Example 10: Accessibility
+   ========================================================================= */
+
+.accessibleSection {
+  padding: var(--space-2xl);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.accessibilityControls {
+  margin-bottom: var(--space-xl);
+}
+
+.controlLabel {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  font-family: var(--font-text);
+  font-size: 1rem;
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.accessibleContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xl);
+}
+
+.accessibilityInfo {
+  text-align: left;
+  width: 100%;
+}
+
+.accessibilityInfo h3 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  margin-bottom: var(--space-md);
+}
+
+.accessibilityInfo ul {
+  list-style: none;
+  padding: 0;
+}
+
+.accessibilityInfo li {
+  font-family: var(--font-text);
+  font-size: 1rem;
+  color: var(--text-secondary);
+  padding: var(--space-sm) 0;
+}
+
+.staticVersion {
+  filter: grayscale(0.5);
+  opacity: 0.8;
+}
+
+/* ============================================================================
+   Example 11: Lazy Loading
+   ========================================================================= */
+
+.lazyContainer {
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.placeholder {
+  padding: var(--space-2xl);
+  text-align: center;
+}
+
+.placeholder p {
+  font-family: var(--font-text);
+  font-size: 1rem;
+  color: var(--text-secondary);
+}
+
+/* ============================================================================
+   Example 12: Complete Page Layout
+   ========================================================================= */
+
+.completePage {
+  background: var(--background);
+  min-height: 100vh;
+}
+
+.featuresSection {
+  padding: var(--space-3xl) var(--space-xl);
+}
+
+.sectionTitle {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-align: center;
+  margin-bottom: var(--space-2xl);
+}
+
+.brandSection {
+  padding: var(--space-3xl) var(--space-xl);
+  background: linear-gradient(180deg, transparent 0%, rgba(78, 205, 196, 0.05) 100%);
+}
+
+.ctaSection {
+  position: relative;
+  padding: var(--space-3xl);
+  overflow: hidden;
+}
+
+.ctaBackground {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+.ctaContent {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xl);
+  text-align: center;
+}
+
+.ctaContent h2 {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: var(--text-primary);
+  max-width: 600px;
+}
+
+/* ============================================================================
+   Responsive Adjustments
+   ========================================================================= */
+
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 2rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1rem;
+  }
+
+  .brandTitle {
+    font-size: 2rem;
+  }
+
+  .featureGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .modalContent {
+    padding: var(--space-lg);
+  }
+
+  .modalActions {
+    flex-direction: column;
+  }
+
+  .responsiveDemo {
+    flex-direction: column;
+  }
+}
+
+/* ============================================================================
+   Print Styles
+   ========================================================================= */
+
+@media print {
+  .heroSection,
+  .loadingOverlay,
+  .modalOverlay,
+  .backgroundDecoration {
+    display: none;
+  }
+}

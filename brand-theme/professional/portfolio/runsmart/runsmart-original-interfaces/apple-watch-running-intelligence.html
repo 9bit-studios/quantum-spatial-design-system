@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RunSmart - Apple Watch Ultra</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', system-ui, sans-serif;
+            background: #000000;
+            color: #FFFFFF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 40px;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        /* Apple Watch Ultra Frame - 49mm */
+        .watch-frame {
+            width: 396px;
+            height: 484px;
+            background: #1C1C1E;
+            border-radius: 55px;
+            padding: 14px;
+            box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.9),
+                        inset 0 0 0 2px rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Action Button (left side) */
+        .action-button {
+            position: absolute;
+            left: -4px;
+            top: 160px;
+            width: 8px;
+            height: 60px;
+            background: #FF9500;
+            border-radius: 4px 0 0 4px;
+            z-index: 200;
+        }
+
+        /* Digital Crown & Side Button */
+        .crown {
+            position: absolute;
+            right: -6px;
+            top: 140px;
+            width: 12px;
+            height: 50px;
+            background: linear-gradient(135deg, #666, #333);
+            border-radius: 6px;
+            z-index: 200;
+        }
+
+        .side-button {
+            position: absolute;
+            right: -6px;
+            top: 210px;
+            width: 12px;
+            height: 40px;
+            background: linear-gradient(135deg, #555, #222);
+            border-radius: 6px;
+            z-index: 200;
+        }
+
+        .screen {
+            width: 100%;
+            height: 100%;
+            background: #000;
+            border-radius: 45px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Always-On Display with LTPO */
+        .aod-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        /* Status Bar */
+        .status-bar {
+            padding: 12px 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 13px;
+            font-weight: 600;
+            position: relative;
+            z-index: 10;
+        }
+
+        .time-display {
+            color: #CDFF00;
+            font-weight: 700;
+        }
+
+        /* Live Activity Header */
+        .live-activity {
+            background: linear-gradient(180deg, rgba(205, 255, 0, 0.15) 0%, transparent 100%);
+            padding: 16px;
+            border-bottom: 1px solid rgba(205, 255, 0, 0.2);
+        }
+
+        .activity-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .activity-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: #CDFF00;
+        }
+
+        .ai-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            background: rgba(205, 255, 0, 0.2);
+            padding: 4px 8px;
+            border-radius: 8px;
+            font-size: 10px;
+            font-weight: 700;
+            color: #CDFF00;
+        }
+
+        .ai-pulse {
+            width: 6px;
+            height: 6px;
+            background: #CDFF00;
+            border-radius: 3px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.6; transform: scale(0.8); }
+        }
+
+        /* Primary Metrics - Large Display */
+        .primary-metrics {
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .metric-hero {
+            text-align: center;
+        }
+
+        .metric-value-large {
+            font-size: 64px;
+            font-weight: 700;
+            line-height: 1;
+            background: linear-gradient(135deg, #CDFF00 0%, #A0CC00 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .metric-label-large {
+            font-size: 12px;
+            color: #888;
+            text-transform: uppercase;
+            margin-top: 4px;
+            letter-spacing: 1px;
+        }
+
+        /* Heart Rate Zone Visualization */
+        .hr-zone-display {
+            background: rgba(255, 0, 0, 0.1);
+            border: 1px solid #EF4444;
+            border-radius: 16px;
+            padding: 12px;
+            margin: 0 16px;
+        }
+
+        .hr-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .hr-value {
+            font-size: 32px;
+            font-weight: 700;
+            color: #EF4444;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .heartbeat {
+            animation: heartbeat 1s infinite;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            25% { transform: scale(1.1); }
+        }
+
+        .hr-zone {
+            font-size: 11px;
+            color: #888;
+            text-transform: uppercase;
+        }
+
+        .hr-zone-bar {
+            height: 6px;
+            background: #1A1A1A;
+            border-radius: 3px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hr-zone-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #10B981, #F59E0B, #EF4444);
+            width: 78%;
+            border-radius: 3px;
+            transition: width 0.3s;
+        }
+
+        /* AI Coaching Insight Card */
+        .ai-insight-card {
+            background: linear-gradient(135deg, rgba(205, 255, 0, 0.1) 0%, rgba(160, 204, 0, 0.05) 100%);
+            border: 1px solid rgba(205, 255, 0, 0.3);
+            border-radius: 16px;
+            padding: 12px;
+            margin: 0 16px 12px 16px;
+        }
+
+        .insight-header {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 6px;
+        }
+
+        .insight-icon {
+            font-size: 16px;
+        }
+
+        .insight-title {
+            font-size: 11px;
+            font-weight: 700;
+            color: #CDFF00;
+            text-transform: uppercase;
+        }
+
+        .insight-text {
+            font-size: 13px;
+            color: #CCC;
+            line-height: 1.4;
+        }
+
+        .insight-action {
+            margin-top: 8px;
+            padding: 8px 12px;
+            background: #CDFF00;
+            color: #000;
+            border-radius: 10px;
+            font-size: 12px;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        /* Secondary Metrics Grid */
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+            padding: 0 16px 12px 16px;
+        }
+
+        .metric-card {
+            background: #0A0A0A;
+            border: 1px solid #1A1A1A;
+            border-radius: 12px;
+            padding: 10px;
+        }
+
+        .metric-label {
+            font-size: 10px;
+            color: #888;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+
+        .metric-value {
+            font-size: 20px;
+            font-weight: 700;
+            color: #CDFF00;
+        }
+
+        .metric-subtext {
+            font-size: 9px;
+            color: #666;
+            margin-top: 2px;
+        }
+
+        /* Haptic Feedback Indicator */
+        .haptic-feedback {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(205, 255, 0, 0.3), transparent);
+            opacity: 0;
+            pointer-events: none;
+            animation: haptic 0.5s;
+        }
+
+        @keyframes haptic {
+            0% { opacity: 0; transform: translate(-50%, -50%) scale(0.5); }
+            50% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+            100% { opacity: 0; transform: translate(-50%, -50%) scale(1.5); }
+        }
+
+        /* VoiceOver Accessibility Indicator */
+        .voiceover-indicator {
+            position: absolute;
+            bottom: 12px;
+            right: 12px;
+            width: 32px;
+            height: 32px;
+            background: rgba(205, 255, 0, 0.2);
+            border: 2px solid #CDFF00;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            z-index: 100;
+        }
+
+        /* Adaptive Brightness Ring */
+        .brightness-ring {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+            box-shadow: inset 0 0 20px rgba(205, 255, 0, 0.1);
+            border-radius: 45px;
+        }
+
+        /* Screen Label */
+        .screen-label {
+            position: absolute;
+            top: -30px;
+            left: 0;
+            font-size: 14px;
+            color: #888;
+            font-weight: 600;
+        }
+
+        /* Live Workout Mode Indicator */
+        .live-workout-pill {
+            position: absolute;
+            top: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(205, 255, 0, 0.9);
+            color: #000;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 10px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            z-index: 100;
+        }
+
+        .recording-dot {
+            width: 6px;
+            height: 6px;
+            background: #EF4444;
+            border-radius: 3px;
+            animation: recording 2s infinite;
+        }
+
+        @keyframes recording {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+
+        /* Complications Bar */
+        .complications-bar {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(20px);
+            border-top: 1px solid #1A1A1A;
+            padding: 8px 16px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .complication {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2px;
+            font-size: 9px;
+            color: #888;
+        }
+
+        .complication-icon {
+            font-size: 16px;
+        }
+
+        .complication.active {
+            color: #CDFF00;
+        }
+
+        /* Predictive Pace Card */
+        .prediction-card {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(147, 51, 234, 0.1) 100%);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            border-radius: 16px;
+            padding: 12px;
+            margin: 0 16px 12px 16px;
+        }
+
+        .prediction-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .prediction-title {
+            font-size: 11px;
+            font-weight: 700;
+            color: #60A5FA;
+            text-transform: uppercase;
+        }
+
+        .confidence-badge {
+            background: rgba(59, 130, 246, 0.2);
+            color: #60A5FA;
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-size: 9px;
+            font-weight: 700;
+        }
+
+        .prediction-value {
+            font-size: 28px;
+            font-weight: 700;
+            color: #60A5FA;
+            margin-bottom: 4px;
+        }
+
+        .prediction-desc {
+            font-size: 11px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <!-- Screen 1: Live Run - AI Coaching -->
+    <div class="watch-frame" style="position: relative;">
+        <div class="screen-label">Screen 1: Live Run - AI Coaching</div>
+        <div class="action-button"></div>
+        <div class="crown"></div>
+        <div class="side-button"></div>
+
+        <div class="screen">
+            <div class="live-workout-pill">
+                <div class="recording-dot"></div>
+                LIVE RUN
+            </div>
+
+            <div class="brightness-ring"></div>
+
+            <div class="status-bar">
+                <div class="time-display">10:47</div>
+                <div>🔋 87%</div>
+            </div>
+
+            <div class="live-activity">
+                <div class="activity-header">
+                    <div class="activity-title">Tempo Run</div>
+                    <div class="ai-badge">
+                        <div class="ai-pulse"></div>
+                        AI ACTIVE
+                    </div>
+                </div>
+            </div>
+
+            <div class="primary-metrics">
+                <div class="metric-hero">
+                    <div class="metric-value-large">7:42</div>
+                    <div class="metric-label-large">Current Pace</div>
+                </div>
+            </div>
+
+            <div class="hr-zone-display">
+                <div class="hr-header">
+                    <div class="hr-value">
+                        <span class="heartbeat">❤️</span>
+                        <span>168</span>
+                    </div>
+                    <div class="hr-zone">Zone 4 - Threshold</div>
+                </div>
+                <div class="hr-zone-bar">
+                    <div class="hr-zone-fill"></div>
+                </div>
+            </div>
+
+            <div class="ai-insight-card">
+                <div class="insight-header">
+                    <div class="insight-icon">⚡</div>
+                    <div class="insight-title">AI Coach Alert</div>
+                </div>
+                <div class="insight-text">
+                    You're 15 seconds ahead of target pace. Ease back slightly to maintain energy for final 2 miles.
+                </div>
+                <div class="insight-action">
+                    TAP FOR GUIDANCE
+                </div>
+            </div>
+
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-label">Distance</div>
+                    <div class="metric-value">4.2</div>
+                    <div class="metric-subtext">of 6 miles</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Cadence</div>
+                    <div class="metric-value">176</div>
+                    <div class="metric-subtext">spm • ideal</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Elevation</div>
+                    <div class="metric-value">+247</div>
+                    <div class="metric-subtext">ft gained</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Power</div>
+                    <div class="metric-value">289</div>
+                    <div class="metric-subtext">watts</div>
+                </div>
+            </div>
+
+            <div class="voiceover-indicator">🔊</div>
+        </div>
+    </div>
+
+    <!-- Screen 2: Predictive Performance -->
+    <div class="watch-frame" style="position: relative;">
+        <div class="screen-label">Screen 2: Predictive Analytics</div>
+        <div class="action-button"></div>
+        <div class="crown"></div>
+        <div class="side-button"></div>
+
+        <div class="screen">
+            <div class="brightness-ring"></div>
+
+            <div class="status-bar">
+                <div class="time-display">10:47</div>
+                <div>🔋 87%</div>
+            </div>
+
+            <div class="live-activity">
+                <div class="activity-header">
+                    <div class="activity-title">Performance Prediction</div>
+                    <div class="ai-badge">
+                        <div class="ai-pulse"></div>
+                        AI ANALYZING
+                    </div>
+                </div>
+            </div>
+
+            <div class="prediction-card">
+                <div class="prediction-header">
+                    <div class="prediction-title">🎯 Predicted Finish Time</div>
+                    <div class="confidence-badge">94% CONF</div>
+                </div>
+                <div class="prediction-value">46:12</div>
+                <div class="prediction-desc">Based on current HR, pace, cadence, & elevation</div>
+            </div>
+
+            <div class="ai-insight-card">
+                <div class="insight-header">
+                    <div class="insight-icon">🧠</div>
+                    <div class="insight-title">Neural Analysis</div>
+                </div>
+                <div class="insight-text">
+                    Your biometrics show optimal performance. Heart rate variability is +12% vs your 30-day average. You're primed for a PR!
+                </div>
+            </div>
+
+            <div class="prediction-card" style="border-color: rgba(139, 92, 246, 0.3); background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(236, 72, 153, 0.1) 100%);">
+                <div class="prediction-header">
+                    <div class="prediction-title" style="color: #A78BFA;">⚡ Fatigue Level</div>
+                    <div class="confidence-badge" style="background: rgba(139, 92, 246, 0.2); color: #A78BFA;">LOW</div>
+                </div>
+                <div class="prediction-value" style="color: #A78BFA;">23%</div>
+                <div class="prediction-desc">Recovery is excellent. Ready for hard effort tomorrow.</div>
+            </div>
+
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-label">VO₂ Max</div>
+                    <div class="metric-value">54.2</div>
+                    <div class="metric-subtext">+1.3 this week</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Efficiency</div>
+                    <div class="metric-value">98%</div>
+                    <div class="metric-subtext">excellent</div>
+                </div>
+            </div>
+
+            <div class="voiceover-indicator">🔊</div>
+        </div>
+    </div>
+
+    <!-- Screen 3: Adaptive Recovery Intelligence -->
+    <div class="watch-frame" style="position: relative;">
+        <div class="screen-label">Screen 3: Recovery Intelligence</div>
+        <div class="action-button"></div>
+        <div class="crown"></div>
+        <div class="side-button"></div>
+
+        <div class="screen">
+            <div class="brightness-ring"></div>
+
+            <div class="status-bar">
+                <div class="time-display">6:42 AM</div>
+                <div>🔋 92%</div>
+            </div>
+
+            <div class="live-activity">
+                <div class="activity-header">
+                    <div class="activity-title">Recovery Status</div>
+                    <div class="ai-badge">
+                        <div class="ai-pulse"></div>
+                        MONITORING
+                    </div>
+                </div>
+            </div>
+
+            <div class="primary-metrics">
+                <div class="metric-hero">
+                    <div class="metric-value-large" style="background: linear-gradient(135deg, #10B981 0%, #059669 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">87%</div>
+                    <div class="metric-label-large">Recovered</div>
+                </div>
+            </div>
+
+            <div class="ai-insight-card" style="border-color: rgba(16, 185, 129, 0.3); background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(5, 150, 105, 0.05) 100%);">
+                <div class="insight-header">
+                    <div class="insight-icon">🌙</div>
+                    <div class="insight-title" style="color: #10B981;">Sleep Analysis</div>
+                </div>
+                <div class="insight-text">
+                    7h 42m deep sleep detected. HRV increased 18% overnight. Your body is ready for today's tempo run.
+                </div>
+            </div>
+
+            <div class="prediction-card">
+                <div class="prediction-header">
+                    <div class="prediction-title">📊 Readiness Score</div>
+                    <div class="confidence-badge">OPTIMAL</div>
+                </div>
+                <div class="prediction-value">9.2/10</div>
+                <div class="prediction-desc">Resting HR: 47 bpm (-5 vs avg) • HRV: 82ms (+12)</div>
+            </div>
+
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-label">Resting HR</div>
+                    <div class="metric-value">47</div>
+                    <div class="metric-subtext">-5 vs avg</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">HRV</div>
+                    <div class="metric-value">82</div>
+                    <div class="metric-subtext">+18% optimal</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Sleep</div>
+                    <div class="metric-value">7:42</div>
+                    <div class="metric-subtext">deep rest</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Stress</div>
+                    <div class="metric-value">LOW</div>
+                    <div class="metric-subtext">baseline</div>
+                </div>
+            </div>
+
+            <div class="voiceover-indicator">🔊</div>
+        </div>
+    </div>
+
+    <!-- Screen 4: Accessibility - VoiceOver Mode -->
+    <div class="watch-frame" style="position: relative;">
+        <div class="screen-label">Screen 4: VoiceOver + Haptic Mode</div>
+        <div class="action-button"></div>
+        <div class="crown"></div>
+        <div class="side-button"></div>
+
+        <div class="screen">
+            <div class="brightness-ring"></div>
+
+            <div class="status-bar">
+                <div class="time-display">10:52</div>
+                <div>🔋 84%</div>
+            </div>
+
+            <div class="live-activity" style="background: linear-gradient(180deg, rgba(59, 130, 246, 0.15) 0%, transparent 100%); border-bottom-color: rgba(59, 130, 246, 0.2);">
+                <div class="activity-header">
+                    <div class="activity-title" style="color: #60A5FA;">Accessible Run Mode</div>
+                    <div class="ai-badge" style="background: rgba(59, 130, 246, 0.2); color: #60A5FA;">
+                        <div class="ai-pulse" style="background: #60A5FA;"></div>
+                        VOICEOVER
+                    </div>
+                </div>
+            </div>
+
+            <div class="primary-metrics" style="text-align: center; padding: 24px 16px;">
+                <div style="font-size: 18px; color: #60A5FA; margin-bottom: 12px; font-weight: 600;">
+                    🔊 Audio Guidance Active
+                </div>
+                <div style="font-size: 14px; color: #CCC; line-height: 1.6; margin-bottom: 16px;">
+                    Haptic feedback + voice guidance for eyes-free running
+                </div>
+
+                <div class="ai-insight-card" style="border-color: rgba(59, 130, 246, 0.3); background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(37, 99, 235, 0.05) 100%); text-align: left;">
+                    <div class="insight-header">
+                        <div class="insight-icon">🎯</div>
+                        <div class="insight-title" style="color: #60A5FA;">Smart Haptics</div>
+                    </div>
+                    <div class="insight-text" style="margin-bottom: 12px;">
+                        • <strong>Double tap</strong> - Pace too fast<br>
+                        • <strong>Single tap</strong> - On target<br>
+                        • <strong>Triple tap</strong> - Pace too slow<br>
+                        • <strong>Long buzz</strong> - Mile complete
+                    </div>
+                </div>
+
+                <div class="ai-insight-card" style="margin-top: 12px; border-color: rgba(16, 185, 129, 0.3); background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(5, 150, 105, 0.05) 100%); text-align: left;">
+                    <div class="insight-header">
+                        <div class="insight-icon">🗣️</div>
+                        <div class="insight-title" style="color: #10B981;">Voice Announcements</div>
+                    </div>
+                    <div class="insight-text">
+                        Every 0.25 mile: Current pace, heart rate, time<br><br>
+                        <strong>Siri Integration:</strong> "Hey Siri, what's my pace?" - instant response
+                    </div>
+                </div>
+            </div>
+
+            <div class="metrics-grid">
+                <div class="metric-card" style="border: 2px solid #60A5FA; background: rgba(59, 130, 246, 0.1);">
+                    <div class="metric-label" style="color: #60A5FA;">Pace</div>
+                    <div class="metric-value" style="color: #60A5FA;">7:38</div>
+                    <div class="metric-subtext">ON TARGET ✓</div>
+                </div>
+                <div class="metric-card" style="border: 2px solid #EF4444; background: rgba(239, 68, 68, 0.1);">
+                    <div class="metric-label" style="color: #EF4444;">HR</div>
+                    <div class="metric-value" style="color: #EF4444;">172</div>
+                    <div class="metric-subtext">ZONE 4</div>
+                </div>
+            </div>
+
+            <div class="voiceover-indicator" style="border-color: #60A5FA; background: rgba(59, 130, 246, 0.3);">
+                🔊
+            </div>
+
+            <div class="complications-bar">
+                <div class="complication active">
+                    <div class="complication-icon">👁️</div>
+                    <div>VoiceOver</div>
+                </div>
+                <div class="complication active">
+                    <div class="complication-icon">📳</div>
+                    <div>Haptic</div>
+                </div>
+                <div class="complication active">
+                    <div class="complication-icon">🎙️</div>
+                    <div>Siri</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

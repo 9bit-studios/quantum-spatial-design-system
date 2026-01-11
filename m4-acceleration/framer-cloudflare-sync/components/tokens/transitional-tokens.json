@@ -1,0 +1,43 @@
+{
+  "_meta": {
+    "name": "Transitional",
+    "description": "Emerging dimensional design system",
+    "version": "1.0.0"
+  },
+  "colors": {
+    "primary": "#131A36",
+    "secondary": "#331F4A",
+    "accent": "#5AC8FA",
+    "background": "#FFFFFF",
+    "text": "#121212",
+    "surface": "#F8F9FA",
+    "border": "#E4E7EB",
+    "success": "#00C170",
+    "warning": "#FFC400",
+    "error": "#FF4C4C"
+  },
+  "typography": {
+    "fontFamily": "SF Pro, Inter, system-ui, sans-serif",
+    "baseSize": "16px",
+    "scale": 1.333
+  },
+  "spacing": {
+    "unit": "8px",
+    "grid": 8,
+    "scale": {
+      "xs": "4px",
+      "sm": "8px",
+      "md": "16px",
+      "lg": "32px",
+      "xl": "48px",
+      "xxl": "64px",
+      "xxxl": "96px"
+    }
+  },
+  "borderRadius": {
+    "small": "6px",
+    "medium": "10px",
+    "large": "16px",
+    "pill": "999px"
+  }
+}

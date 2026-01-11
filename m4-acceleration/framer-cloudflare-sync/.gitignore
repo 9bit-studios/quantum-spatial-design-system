@@ -1,0 +1,179 @@
+# Create .gitignore
+cat > .gitignore << 'EOF'
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Build outputs
+dist/
+build/
+.next/
+out/
+
+# Cache directories
+.cache/
+.parcel-cache/
+.vercel/
+
+# IDE/Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+.nyc_output/
+
+# Temporary files
+tmp/
+temp/
+EOF
+
+.env.quantum-secure
+.env.master-example
+.env.quantum-secure.metadata.json
+.env.validated
+.gitignore
+.gitmodules
+.last-ts-sync
+.env.master
+.env.master.example
+.env.secure.example
+.env.secure.example
+.env.example
+.env.generic
+.env
+.env.local
+.env.secure
+.claude
+.claude-cache
+.claude-code
+apple-intelligence-env.sh
+unified-config-loader.js
+unified-env-loader.js
+.gitignore
+.next
+.vercel
+next-env.d.ts
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+
+# Build artifacts
+dist/
+build/
+.build/
+*.app
+*.ipa
+*.dSYM
+
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Xcode
+DerivedData/
+*.xcworkspace/xcuserdata/
+*.xcodeproj/xcuserdata/
+*.xcodeproj/project.xcworkspace/xcuserdata/
+xcuserdata/
+
+# Media assets (exceeds GitHub size limits)
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.heic
+*.psd
+*.ai
+*.sketch
+
+# Exclude Apple Sample Projects
+apple-intelligence/foundation/learning-source/AppleSampleProjects/
+
+# Exclude shared frameworks (quantum-spatial)
+quantum-spatial/shared-frameworks/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Environment
+.env
+.env.local
+.env.production
+
+# Cache
+.cache/
+*.swp
+*.swo
+*~
+
+# INCLUDE these config files
+!tsconfig.json
+!tsconfig.*.json
+!package.json
+!package-lock.json
+!.gitmodules
+!.gitignore
+

@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700">
+  <!-- Background -->
+  <rect width="900" height="700" fill="#f8f9fa" />
+  
+  <!-- Title -->
+  <text x="450" y="35" font-family="Arial" font-size="24" font-weight="bold" text-anchor="middle" fill="#131A36">Game Art AI Workflow</text>
+  
+  <!-- Main Phase Boxes -->
+  <rect x="80" y="70" width="740" height="100" rx="10" fill="#e8f4ff" stroke="#1677ff" stroke-width="2" />
+  <rect x="80" y="190" width="740" height="100" rx="10" fill="#e8f4ff" stroke="#1677ff" stroke-width="2" />
+  <rect x="80" y="310" width="740" height="100" rx="10" fill="#e8f4ff" stroke="#1677ff" stroke-width="2" />
+  <rect x="80" y="430" width="740" height="100" rx="10" fill="#e8f4ff" stroke="#1677ff" stroke-width="2" />
+  <rect x="80" y="550" width="740" height="100" rx="10" fill="#e8f4ff" stroke="#1677ff" stroke-width="2" />
+  
+  <!-- Phase Titles -->
+  <text x="450" y="105" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="#131A36">Phase 1: Visual Direction Development</text>
+  <text x="450" y="225" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="#131A36">Phase 2: Character Art Development</text>
+  <text x="450" y="345" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="#131A36">Phase 3: Environment Art Development</text>
+  <text x="450" y="465" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="#131A36">Phase 4: UI and Effect Art Development</text>
+  <text x="450" y="585" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="#131A36">Phase 5: Implementation Support &amp; QA</text>
+  
+  <!-- Phase 1 Subprocesses -->
+  <rect x="100" y="120" width="160" height="40" rx="5" fill="#5AC8FA" stroke="#331F4A" stroke-width="1" />
+  <rect x="280" y="120" width="160" height="40" rx="5" fill="#5AC8FA" stroke="#331F4A" stroke-width="1" />
+  <rect x="460" y="120" width="160" height="40" rx="5" fill="#5AC8FA" stroke="#331F4A" stroke-width="1" />
+  <rect x="640" y="120" width="160" height="40" rx="5" fill="#5AC8FA" stroke="#331F4A" stroke-width="1" />
+  
+  <text x="180" y="143" font-family="Arial" font-size="12" text-anchor="middle" fill="#131A36">Art Style Exploration</text>
+  <text x="360" y="143" font-family="Arial" font-size="12" text-anchor="middle" fill="#131A36">Color Palette</text>
+  <text x="540" y="143" font-family="Arial" font-size="12" text-anchor="middle" fill="#131A36">Visual Language</text>
+  <text x="720" y="143" font-family="Arial" font-size="12" text-anchor="middle" fill="#131A36">Style Guide Creation</text>
+  
+  <!-- Phase 2 Subprocesses -->
+  <rect x="100" y="240" width="160" height="40" rx="5" fill="#5AC8FA" stroke="#331F4A" stroke-width="1" />
+  <rect x="280" y="240" width="160" height="40" rx="5" fill="#5AC8FA" stroke="#331F4A" stroke-width="1" />
+  <rect x="460" y="240" width="160" height="40" rx="5" fill="#5AC8FA" stroke="#331F4A" stroke-width="1" />
+  <rect x="640" y="240" width="160" height="40" rx="5" fill="#5AC8FA" stroke="#331F4A" stroke-width="1" />
+  
+  <text x="180" y="263" font-family="Arial" font-size="12" text-anchor="middle" fill="#131A36">Character Design Brief</text>
+  <text x="360" y="263" font-family="Arial" font-size="12" text-anchor="middle" fill="#131A36">Character Concept</text>
+  <text x="540" y="263" font-family="Arial" font-size="12" text-anchor="middle" fill="#131A36">Character Technical</text>
+  <text x="720" y="263" font-family="Arial" font-size="12" text-anchor="middle" fill="#131A36">Character Finalization</text>
+  
+  <!-- Phase 3 Subprocesses -->
+  <rect x="100" y="360" width="160" height="40" rx="5" fill="#5AC8FA" stroke="#331F4A" stroke-width="1" />
+  <rect x="280" y="360" width="160" height="40" rx="5" fill="#5AC8FA" stroke="#331F4A" stroke-width="1" />
+  <rect x="460" y="360" width="160" height="40" rx="5" fill="#5AC8FA" stroke="#331F4A" stroke-width="1" />
+  <rect x="640" y="360" width="160" height="40" rx="5" fill="#5AC8FA" stroke="#331F4A" stroke-width="1" />
+  
+  <text x="180" y="383" font-family="Arial" font-size="12" text-anchor="middle" fill="#131A36">Environment Brief</text>
+  <text x="360" y="383" font-family="Arial" font-size="12" text-anchor="middle" fill="#131A36">Environment Concept</text>
+  <text x="540" y="383" font-family="Arial" font-size="12" text-anchor="middle" fill="#131A36">Environment Technical</text>
+  <text x="720" y="383" font-family="Arial" font-size="12" text-anchor="middle" fill="#131A36">Environment Assets</text>
+  
+  <!-- Phase 4 Subprocesses -->
+  <rect x="100" y="480" width="160" height="40" rx="5" fill="#5AC8FA" stroke="#331F4A" stroke-width="1" />
+  <rect x="280" y="480" width="160" height="40" rx="5" fill="#5AC8FA" stroke="#331F4A" stroke-width="1" />
+  <rect x="460" y="480" width="160" height="40" rx="5" fill="#5AC8FA" stroke="#331F4A" stroke-width="1" />
+  <rect x="640" y="480" width="160" height="40" rx="5" fill="#5AC8FA" stroke="#331F4A" stroke-width="1" />
+  
+  <text x="180" y="503" font-family="Arial" font-size="12" text-anchor="middle" fill="#131A36">UI Design System</text>
+  <text x="360" y="503" font-family="Arial" font-size="12" text-anchor="middle" fill="#131A36">Visual Effects</text>
+  <text x="540" y="503" font-family="Arial" font-size="12" text-anchor="middle" fill="#131A36">Technical Art Direction</text>
+  <text x="720" y="503" font-family="Arial" font-size="12" text-anchor="middle" fill="#131A36">UI/UX Implementation</text>
+  
+  <!-- Phase 5 Subprocesses -->
+  <rect x="100" y="600" width="160" height="40" rx="5" fill="#5AC8FA" stroke="#331F4A" stroke-width="1" />
+  <rect x="280" y="600" width="160" height="40" rx="5" fill="#5AC8FA" stroke="#331F4A" stroke-width="1" />
+  <rect x="460" y="600" width="160" height="40" rx="5" fill="#5AC8FA" stroke="#331F4A" stroke-width="1" />
+  <rect x="640" y="600" width="160" height="40" rx="5" fill="#5AC8FA" stroke="#331F4A" stroke-width="1" />
+  
+  <text x="180" y="623" font-family="Arial" font-size="12" text-anchor="middle" fill="#131A36">Art Implementation</text>
+  <text x="360" y="623" font-family="Arial" font-size="12" text-anchor="middle" fill="#131A36">Art Optimization</text>
+  <text x="540" y="623" font-family="Arial" font-size="12" text-anchor="middle" fill="#131A36">Art QA Process</text>
+  <text x="720" y="623" font-family="Arial" font-size="12" text-anchor="middle" fill="#131A36">Final Delivery</text>
+  
+  <!-- Connection arrows -->
+  <polyline points="450,170 450,190" stroke="#331F4A" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+  <polyline points="450,290 450,310" stroke="#331F4A" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+  <polyline points="450,410 450,430" stroke="#331F4A" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+  <polyline points="450,530 450,550" stroke="#331F4A" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+  
+  <!-- Integration Hints -->
+  <text x="50" y="105" font-family="Arial" font-size="10" fill="#1677ff" text-anchor="start" transform="rotate(-90, 50, 105)">Design Integration →</text>
+  <text x="50" y="225" font-family="Arial" font-size="10" fill="#1677ff" text-anchor="start" transform="rotate(-90, 50, 225)">Narrative Integration →</text>
+  <text x="50" y="345" font-family="Arial" font-size="10" fill="#1677ff" text-anchor="start" transform="rotate(-90, 50, 345)">Technical Integration →</text>
+  <text x="50" y="465" font-family="Arial" font-size="10" fill="#1677ff" text-anchor="start" transform="rotate(-90, 50, 465)">UX Integration →</text>
+  <text x="50" y="585" font-family="Arial" font-size="10" fill="#1677ff" text-anchor="start" transform="rotate(-90, 50, 585)">Engineering Integration →</text>
+  
+  <!-- AI Integration Indicators -->
+  <circle cx="100" y="95" r="5" fill="#BF4080" />
+  <circle cx="100" y="215" r="5" fill="#BF4080" />
+  <circle cx="100" y="335" r="5" fill="#BF4080" />
+  <circle cx="100" y="455" r="5" fill="#BF4080" />
+  <circle cx="100" y="575" r="5" fill="#BF4080" />
+  
+  <text x="110" y="95" font-family="Arial" font-size="10" fill="#BF4080">AI Assistance</text>
+  <text x="110" y="215" font-family="Arial" font-size="10" fill="#BF4080">AI Assistance</text>
+  <text x="110" y="335" font-family="Arial" font-size="10" fill="#BF4080">AI Assistance</text>
+  <text x="110" y="455" font-family="Arial" font-size="10" fill="#BF4080">AI Assistance</text>
+  <text x="110" y="575" font-family="Arial" font-size="10" fill="#BF4080">AI Assistance</text>
+  
+  <!-- Marker definitions -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#331F4A" />
+    </marker>
+  </defs>
+</svg>

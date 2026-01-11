@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>M4-Optimized Quantum-Spatial Pixel Viewer</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      background-color: #1A1A1A;
+      color: #FFFFFF;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    header {
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    
+    h1 {
+      font-size: 24px;
+      margin-bottom: 8px;
+      color: #5AC8FA;
+    }
+    
+    p {
+      font-size: 16px;
+      margin-bottom: 20px;
+      max-width: 800px;
+      text-align: center;
+      color: #CCCCCC;
+    }
+    
+    .description {
+      background-color: #2A2A2A;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 30px;
+      border-left: 4px solid #5AC8FA;
+    }
+    
+    .description strong {
+      color: #FF2D55;
+    }
+    
+    .canvas-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    
+    @media (min-width: 992px) {
+      .canvas-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+    
+    .pixel-container {
+      background-color: #222222;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.2s ease;
+    }
+    
+    .pixel-container:hover {
+      transform: translateY(-5px);
+    }
+    
+    .pixel-canvas {
+      width: 200px;
+      height: 200px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+    }
+    
+    .pixel-title {
+      font-size: 18px;
+      margin-bottom: 5px;
+      color: #FFFFFF;
+    }
+    
+    .pixel-info {
+      font-size: 14px;
+      color: #AAAAAA;
+    }
+    
+    .m4-badge {
+      background: linear-gradient(135deg, #6A3093, #BF4080);
+      color: white;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: bold;
+      margin-top: 8px;
+    }
+    
+    .controls {
+      display: flex;
+      gap: 20px;
+      margin: 30px 0;
+    }
+    
+    button {
+      background-color: #333333;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background-color 0.2s;
+    }
+    
+    button:hover {
+      background-color: #444444;
+    }
+    
+    button.active {
+      background-color: #5AC8FA;
+      color: #111111;
+    }
+    
+    footer {
+      margin-top: 50px;
+      text-align: center;
+      font-size: 14px;
+      color: #888888;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>M4-Optimized Quantum-Spatial Pixel Viewer</h1>
+    <p>Explore the different quantum states with Apple M4 optimization</p>
+    
+    <div class="description">
+      <p>This pixel viewer leverages the <strong>Apple Silicon M4</strong> Neural Engine and Metal APIs for accelerated rendering of quantum-spatial volumetric pixels. The pixels will automatically adapt to take advantage of M4 hardware if available, falling back to standard rendering on other devices.</p>
+    </div>
+  </header>
+  
+  <div class="controls">
+    <button id="toggle-m4" class="active">M4 Optimization: ON</button>
+    <button id="toggle-animation" class="active">Animation: ON</button>
+  </div>
+  
+  <div class="canvas-grid">
+    <div class="pixel-container">
+      <canvas id="heritage-canvas" class="pixel-canvas" width="200" height="200"></canvas>
+      <h3 class="pixel-title">Heritage</h3>
+      <p class="pixel-info">Stable base quantum state</p>
+      <div class="m4-badge">M4 Optimized</div>
+    </div>
+    
+    <div class="pixel-container">
+      <canvas id="transitional-canvas" class="pixel-canvas" width="200" height="200"></canvas>
+      <h3 class="pixel-title">Transitional</h3>
+      <p class="pixel-info">Quantum flux state</p>
+      <div class="m4-badge">M4 Optimized</div>
+    </div>
+    
+    <div class="pixel-container">
+      <canvas id="quantum-canvas" class="pixel-canvas" width="200" height="200"></canvas>
+      <h3 class="pixel-title">Quantum</h3>
+      <p class="pixel-info">Entangled energy state</p>
+      <div class="m4-badge">M4 Optimized</div>
+    </div>
+    
+    <div class="pixel-container">
+      <canvas id="superposition-canvas" class="pixel-canvas" width="200" height="200"></canvas>
+      <h3 class="pixel-title">Superposition</h3>
+      <p class="pixel-info">Multi-dimensional state</p>
+      <div class="m4-badge">M4 Optimized</div>
+    </div>
+  </div>
+  
+  <footer>
+    <p>© 2025 9Bit Studios - M4-Optimized Quantum-Spatial Design System</p>
+  </footer>
+
+  <script src="volumetric-pixel-generator.js"></script>
+  <script>
+    // Initialize all pixel canvases
+    const heritageCanvas = document.getElementById('heritage-canvas');
+    const transitionalCanvas = document.getElementById('transitional-canvas');
+    const quantumCanvas = document.getElementById('quantum-canvas');
+    const superpositionCanvas = document.getElementById('superposition-canvas');
+    
+    // Animation IDs for cancellation
+    let heritageAnimationId = null;
+    let transitionalAnimationId = null;
+    let quantumAnimationId = null;
+    let superpositionAnimationId = null;
+    
+    // UI control elements
+    const toggleM4Button = document.getElementById('toggle-m4');
+    const toggleAnimationButton = document.getElementById('toggle-animation');
+    
+    // State tracking
+    let useM4 = true;
+    let isAnimating = true;
+    
+    // Pixel options
+    const heritageOptions = { 
+      state: 'heritage',
+      size: 200,
+      primaryColor: '#2C5F2D',
+      accentColor: '#3DFF74',
+      glowIntensity: 3
+    };
+    
+    const transitionalOptions = { 
+      state: 'transitional',
+      size: 200,
+      primaryColor: '#331F4A',
+      accentColor: '#5AC8FA',
+      glowIntensity: 4
+    };
+    
+    const quantumOptions = { 
+      state: 'quantum',
+      size: 200,
+      primaryColor: '#6A3093',
+      accentColor: '#BF4080',
+      glowIntensity: 6
+    };
+    
+    const superpositionOptions = { 
+      state: 'superposition',
+      size: 200,
+      primaryColor: '#FFFFFF',
+      accentColor: '#5AC8FA',
+      glowIntensity: 8
+    };
+    
+    // Initialize all pixels
+    function initAllPixels() {
+      if (isAnimating) {
+        // Start animations
+        heritageAnimationId = animateVolumetricPixel(heritageCanvas, heritageOptions);
+        transitionalAnimationId = animateVolumetricPixel(transitionalCanvas, transitionalOptions);
+        quantumAnimationId = animateVolumetricPixel(quantumCanvas, quantumOptions);
+        superpositionAnimationId = animateVolumetricPixel(superpositionCanvas, superpositionOptions);
+      } else {
+        // Render static images
+        renderVolumetricPixelToCanvas(heritageCanvas, heritageOptions, useM4);
+        renderVolumetricPixelToCanvas(transitionalCanvas, transitionalOptions, useM4);
+        renderVolumetricPixelToCanvas(quantumCanvas, quantumOptions, useM4);
+        renderVolumetricPixelToCanvas(superpositionCanvas, superpositionOptions, useM4);
+      }
+    }
+    
+    // Cancel all animations
+    function cancelAllAnimations() {
+      if (heritageAnimationId) cancelAnimationFrame(heritageAnimationId);
+      if (transitionalAnimationId) cancelAnimationFrame(transitionalAnimationId);
+      if (quantumAnimationId) cancelAnimationFrame(quantumAnimationId);
+      if (superpositionAnimationId) cancelAnimationFrame(superpositionAnimationId);
+      
+      heritageAnimationId = null;
+      transitionalAnimationId = null;
+      quantumAnimationId = null;
+      superpositionAnimationId = null;
+    }
+    
+    // Toggle M4 optimization
+    toggleM4Button.addEventListener('click', function() {
+      useM4 = !useM4;
+      this.textContent = `M4 Optimization: ${useM4 ? 'ON' : 'OFF'}`;
+      this.classList.toggle('active');
+      
+      // Reset animations/renderings with new setting
+      cancelAllAnimations();
+      initAllPixels();
+    });
+    
+    // Toggle animation
+    toggleAnimationButton.addEventListener('click', function() {
+      isAnimating = !isAnimating;
+      this.textContent = `Animation: ${isAnimating ? 'ON' : 'OFF'}`;
+      this.classList.toggle('active');
+      
+      cancelAllAnimations();
+      initAllPixels();
+    });
+    
+    // Check if device has M4 capabilities
+    if (!isM4Device()) {
+      // Update UI to show no M4 capability
+      document.querySelectorAll('.m4-badge').forEach(badge => {
+        badge.textContent = 'Standard Rendering';
+        badge.style.background = 'linear-gradient(135deg, #555555, #777777)';
+      });
+      
+      // Update toggle button state
+      toggleM4Button.classList.remove('active');
+      toggleM4Button.textContent = 'M4 Optimization: Not Available';
+      toggleM4Button.disabled = true;
+      toggleM4Button.style.opacity = '0.5';
+      toggleM4Button.style.cursor = 'not-allowed';
+      
+      useM4 = false;
+    }
+    
+    // Initialize all pixels on page load
+    document.addEventListener('DOMContentLoaded', initAllPixels);
+  </script>
+</body>
+</html>

@@ -1,0 +1,273 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <!-- Background with subtle grid -->
+  <rect width="1200" height="800" fill="#131A36" />
+  <g opacity="0.1">
+    <path d="M0,100 L1200,100" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M0,200 L1200,200" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M0,300 L1200,300" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M0,400 L1200,400" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M0,500 L1200,500" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M0,600 L1200,600" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M0,700 L1200,700" stroke="#5AC8FA" stroke-width="1" />
+    
+    <path d="M100,0 L100,800" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M300,0 L300,800" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M500,0 L500,800" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M700,0 L700,800" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M900,0 L900,800" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M1100,0 L1100,800" stroke="#5AC8FA" stroke-width="1" />
+  </g>
+  
+  <!-- Header and Navigation -->
+  <rect x="0" y="0" width="1200" height="70" fill="#331F4A" />
+  <text x="60" y="40" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="24" font-weight="bold" fill="#FFFFFF">Product Strategy Hub</text>
+  
+  <!-- Navigation Breadcrumbs -->
+  <rect x="600" y="15" width="550" height="40" rx="20" fill="#0D0D15" />
+  <text x="630" y="40" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="14" fill="#5AC8FA">Workspaces /</text>
+  <text x="730" y="40" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="14" font-weight="bold" fill="#6A3093">Product Strategy Hub</text>
+  <text x="1090" y="40" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="14" fill="#BF4080">AI Active</text>
+  <circle cx="1120" cy="35" r="8" fill="#BF4080">
+    <animate attributeName="opacity" values="0.7;1;0.7" dur="2s" repeatCount="indefinite" />
+  </circle>
+  
+  <!-- Back to Central Command -->
+  <rect x="60" y="70" width="200" height="30" rx="15" fill="#0D0D15" />
+  <text x="160" y="90" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="14" fill="#5AC8FA" text-anchor="middle">↩ Back to Central Command</text>
+  
+  <!-- Dashboard Sections -->
+  <g>
+    <!-- Strategic Roadmap -->
+    <rect x="50" y="120" width="550" height="330" rx="10" fill="#0D0D15" stroke="#6A3093" stroke-width="2" />
+    <text x="325" y="150" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Strategic Roadmap</text>
+    
+    <!-- Timeline View -->
+    <g>
+      <!-- Timeline Header -->
+      <rect x="80" y="170" width="490" height="40" rx="5" fill="#331F4A" />
+      <text x="120" y="195" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="14" fill="#FFFFFF">Product</text>
+      <text x="230" y="195" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="14" fill="#FFFFFF">Q1</text>
+      <text x="310" y="195" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="14" fill="#FFFFFF">Q2</text>
+      <text x="390" y="195" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="14" fill="#FFFFFF">Q3</text>
+      <text x="470" y="195" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="14" fill="#FFFFFF">Q4</text>
+      
+      <!-- Timeline Lines -->
+      <line x1="190" y1="190" x2="190" y2="400" stroke="#5AC8FA" stroke-width="1" opacity="0.5" />
+      <line x1="270" y1="190" x2="270" y2="400" stroke="#5AC8FA" stroke-width="1" opacity="0.5" />
+      <line x1="350" y1="190" x2="350" y2="400" stroke="#5AC8FA" stroke-width="1" opacity="0.5" />
+      <line x1="430" y1="190" x2="430" y2="400" stroke="#5AC8FA" stroke-width="1" opacity="0.5" />
+      <line x1="510" y1="190" x2="510" y2="400" stroke="#5AC8FA" stroke-width="1" opacity="0.5" />
+      
+      <!-- Timeline Items -->
+      <rect x="80" y="220" width="110" height="30" rx="5" fill="#331F4A" />
+      <text x="135" y="240" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle">AI Branding Quiz</text>
+      
+      <rect x="190" y="220" width="80" height="30" rx="5" fill="#BF4080" />
+      <text x="230" y="240" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle">Launch</text>
+      
+      <rect x="80" y="260" width="110" height="30" rx="5" fill="#331F4A" />
+      <text x="135" y="280" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle">Content Calendar</text>
+      
+      <rect x="270" y="260" width="80" height="30" rx="5" fill="#BF4080" />
+      <text x="310" y="280" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle">Launch</text>
+      
+      <rect x="80" y="300" width="110" height="30" rx="5" fill="#331F4A" />
+      <text x="135" y="320" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle">Brand Scanner</text>
+      
+      <rect x="270" y="300" width="160" height="30" rx="5" fill="#5AC8FA" />
+      <text x="350" y="320" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle">Development → Launch</text>
+      
+      <rect x="80" y="340" width="110" height="30" rx="5" fill="#331F4A" />
+      <text x="135" y="360" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle">Oksana Assets</text>
+      
+      <rect x="350" y="340" width="160" height="30" rx="5" fill="#5AC8FA" />
+      <text x="430" y="360" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle">Development → Launch</text>
+      
+      <!-- AI-added suggestion -->
+      <rect x="80" y="380" width="110" height="30" rx="5" fill="#331F4A" stroke="#BF4080" stroke-width="2" stroke-dasharray="5,2" />
+      <text x="135" y="400" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle">Pocket Oracle</text>
+      
+      <rect x="430" y="380" width="80" height="30" rx="5" fill="#BF4080" stroke="#FFFFFF" stroke-width="1" stroke-dasharray="5,2" />
+      <text x="470" y="400" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle">Proposed</text>
+    </g>
+    
+    <!-- Quantum-Spatial Design System -->
+    <rect x="620" y="120" width="550" height="330" rx="10" fill="#0D0D15" stroke="#5AC8FA" stroke-width="2" />
+    <text x="895" y="150" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Quantum-Spatial Design System</text>
+    
+    <!-- Design System Gallery -->
+    <g>
+      <!-- Color Palette -->
+      <rect x="650" y="180" width="240" height="120" rx="5" fill="#331F4A" />
+      <text x="770" y="200" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">Color Palette</text>
+      
+      <rect x="670" y="220" width="40" height="40" rx="5" fill="#131A36" />
+      <rect x="720" y="220" width="40" height="40" rx="5" fill="#331F4A" />
+      <rect x="770" y="220" width="40" height="40" rx="5" fill="#0D0D15" />
+      <rect x="820" y="220" width="40" height="40" rx="5" fill="#6A3093" />
+      
+      <rect x="670" y="270" width="40" height="20" rx="5" fill="#5AC8FA" />
+      <rect x="720" y="270" width="40" height="20" rx="5" fill="#126D71" />
+      <rect x="770" y="270" width="40" height="20" rx="5" fill="#BF4080" />
+      <rect x="820" y="270" width="40" height="20" rx="5" fill="#2D854D" />
+      
+      <!-- Component Samples -->
+      <rect x="900" y="180" width="240" height="120" rx="5" fill="#331F4A" />
+      <text x="1020" y="200" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">Component Samples</text>
+      
+      <rect x="920" y="220" width="200" height="30" rx="15" fill="#0D0D15" stroke="#5AC8FA" stroke-width="1" />
+      <text x="1020" y="240" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle">Button Component</text>
+      
+      <rect x="920" y="260" width="200" height="30" rx="5" fill="#0D0D15" stroke="#5AC8FA" stroke-width="1" />
+      <text x="1020" y="280" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle">Card Component</text>
+      
+      <!-- Grid System Preview -->
+      <rect x="650" y="310" width="490" height="120" rx="5" fill="#331F4A" />
+      <text x="895" y="330" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">Grid System</text>
+      
+      <!-- Grid Visualization -->
+      <g opacity="0.7">
+        <line x1="670" y1="350" x2="1120" y2="350" stroke="#5AC8FA" stroke-width="1" />
+        <line x1="670" y1="380" x2="1120" y2="380" stroke="#5AC8FA" stroke-width="1" />
+        <line x1="670" y1="410" x2="1120" y2="410" stroke="#5AC8FA" stroke-width="1" />
+        
+        <line x1="670" y1="350" x2="670" y2="410" stroke="#5AC8FA" stroke-width="1" />
+        <line x1="720" y1="350" x2="720" y2="410" stroke="#5AC8FA" stroke-width="1" />
+        <line x1="770" y1="350" x2="770" y2="410" stroke="#5AC8FA" stroke-width="1" />
+        <line x1="820" y1="350" x2="820" y2="410" stroke="#5AC8FA" stroke-width="1" />
+        <line x1="870" y1="350" x2="870" y2="410" stroke="#5AC8FA" stroke-width="1" />
+        <line x1="920" y1="350" x2="920" y2="410" stroke="#5AC8FA" stroke-width="1" />
+        <line x1="970" y1="350" x2="970" y2="410" stroke="#5AC8FA" stroke-width="1" />
+        <line x1="1020" y1="350" x2="1020" y2="410" stroke="#5AC8FA" stroke-width="1" />
+        <line x1="1070" y1="350" x2="1070" y2="410" stroke="#5AC8FA" stroke-width="1" />
+        <line x1="1120" y1="350" x2="1120" y2="410" stroke="#5AC8FA" stroke-width="1" />
+      </g>
+      
+      <!-- Quantum Pixel Representation -->
+      <rect x="680" y="360" width="20" height="20" fill="#5AC8FA" opacity="0.7" />
+      <rect x="830" y="360" width="20" height="20" fill="#BF4080" opacity="0.7" />
+      <rect x="980" y="360" width="20" height="20" fill="#2D854D" opacity="0.7" />
+      <rect x="1030" y="390" width="20" height="20" fill="#6A3093" opacity="0.7" />
+      <rect x="880" y="390" width="20" height="20" fill="#FFD166" opacity="0.7" />
+    </g>
+    
+    <!-- AI-Enhanced Workflow Visualizations -->
+    <rect x="50" y="470" width="550" height="310" rx="10" fill="#0D0D15" stroke="#BF4080" stroke-width="2" />
+    <text x="325" y="500" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#FFFFFF" text-anchor="middle">AI-Enhanced Workflow Visualizations</text>
+    
+    <!-- Workflow Diagram -->
+    <g>
+      <rect x="80" y="530" width="490" height="220" rx="5" fill="#331F4A" />
+      
+      <!-- Workflow Boxes -->
+      <rect x="150" y="560" width="120" height="60" rx="5" fill="#6A3093" />
+      <text x="210" y="590" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">Concept</text>
+      <text x="210" y="610" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">AI Content Gen</text>
+      
+      <rect x="350" y="560" width="120" height="60" rx="5" fill="#5AC8FA" />
+      <text x="410" y="590" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">Design</text>
+      <text x="410" y="610" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">AI Asset Creation</text>
+      
+      <rect x="150" y="660" width="120" height="60" rx="5" fill="#FF6B6B" />
+      <text x="210" y="690" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">Development</text>
+      <text x="210" y="710" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">AI Code Assist</text>
+      
+      <rect x="350" y="660" width="120" height="60" rx="5" fill="#29B6F6" />
+      <text x="410" y="690" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">Launch</text>
+      <text x="410" y="710" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">AI Marketing</text>
+      
+      <!-- Connection Arrows -->
+      <path d="M270,590 L350,590" stroke="#FFFFFF" stroke-width="2" fill="none" marker-end="url(#arrowhead)" />
+      <path d="M410,620 L410,660" stroke="#FFFFFF" stroke-width="2" fill="none" marker-end="url(#arrowhead)" />
+      <path d="M350,690 L270,690" stroke="#FFFFFF" stroke-width="2" fill="none" marker-end="url(#arrowhead)" />
+      <path d="M150,690 L130,690 L130,590 L150,590" stroke="#FFFFFF" stroke-width="2" fill="none" marker-end="url(#arrowhead)" />
+      
+      <!-- Arrowhead marker definition -->
+      <defs>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+          <polygon points="0 0, 10 3.5, 0 7" fill="#FFFFFF" />
+        </marker>
+      </defs>
+      
+      <!-- AI Automation Indicators -->
+      <circle cx="270" y="570" r="10" fill="#BF4080" opacity="0.7">
+        <animate attributeName="opacity" values="0.7;1;0.7" dur="2s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="430" y="640" r="10" fill="#BF4080" opacity="0.7">
+        <animate attributeName="opacity" values="0.7;1;0.7" dur="2s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="290" y="710" r="10" fill="#BF4080" opacity="0.7">
+        <animate attributeName="opacity" values="0.7;1;0.7" dur="2s" repeatCount="indefinite" />
+      </circle>
+      <circle cx="130" y="640" r="10" fill="#BF4080" opacity="0.7">
+        <animate attributeName="opacity" values="0.7;1;0.7" dur="2s" repeatCount="indefinite" />
+      </circle>
+    </g>
+    
+    <!-- Product Portfolio -->
+    <rect x="620" y="470" width="550" height="310" rx="10" fill="#0D0D15" stroke="#FFD166" stroke-width="2" />
+    <text x="895" y="500" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="20" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Product Portfolio</text>
+    
+    <!-- Product Cards -->
+    <g>
+      <rect x="650" y="530" width="150" height="120" rx="5" fill="#331F4A" />
+      <text x="725" y="550" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">AI Branding Quiz</text>
+      <rect x="670" y="570" width="110" height="60" rx="5" fill="#0D0D15" />
+      <rect x="700" y="590" width="50" height="20" rx="10" fill="#29B6F6" />
+      <text x="725" y="605" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle">Live</text>
+      
+      <rect x="820" y="530" width="150" height="120" rx="5" fill="#331F4A" />
+      <text x="895" y="550" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">Content Calendar</text>
+      <rect x="840" y="570" width="110" height="60" rx="5" fill="#0D0D15" />
+      <rect x="870" y="590" width="50" height="20" rx="10" fill="#5AC8FA" />
+      <text x="895" y="605" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle">Dev</text>
+      
+      <rect x="990" y="530" width="150" height="120" rx="5" fill="#331F4A" />
+      <text x="1065" y="550" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">Brand Scanner</text>
+      <rect x="1010" y="570" width="110" height="60" rx="5" fill="#0D0D15" />
+      <rect x="1040" y="590" width="50" height="20" rx="10" fill="#5AC8FA" />
+      <text x="1065" y="605" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle">Dev</text>
+      
+      <rect x="650" y="670" width="150" height="120" rx="5" fill="#331F4A" />
+      <text x="725" y="690" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">Oksana Assets</text>
+      <rect x="670" y="710" width="110" height="60" rx="5" fill="#0D0D15" />
+      <rect x="700" y="730" width="50" height="20" rx="10" fill="#FFD166" />
+      <text x="725" y="745" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle">Plan</text>
+      
+      <rect x="820" y="670" width="150" height="120" rx="5" fill="#331F4A" stroke="#BF4080" stroke-width="2" stroke-dasharray="5,2" />
+      <text x="895" y="690" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">Pocket Oracle</text>
+      <rect x="840" y="710" width="110" height="60" rx="5" fill="#0D0D15" />
+      <rect x="870" y="730" width="50" height="20" rx="10" fill="#BF4080" />
+      <text x="895" y="745" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle">AI Rec</text>
+      
+      <rect x="990" y="670" width="150" height="120" rx="5" fill="#331F4A" opacity="0.6" />
+      <text x="1065" y="690" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">+ Add Product</text>
+    </g>
+  </g>
+  
+  <!-- Tooltips and Navigation Aids -->
+  <g>
+    <!-- Help Tooltip -->
+    <rect x="1040" y="70" width="120" height="30" rx="15" fill="#6A3093" />
+    <text x="1100" y="90" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">Need Help?</text>
+    
+    <!-- AI Suggestion Tooltip -->
+    <rect x="680" y="630" width="200" height="40" rx="10" fill="#BF4080" opacity="0.8">
+      <animate attributeName="opacity" values="0.8;0.4;0.8" dur="3s" repeatCount="indefinite" />
+    </rect>
+    <text x="780" y="650" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle">AI has suggested a new product</text>
+    <text x="780" y="665" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle">based on market analysis</text>
+    
+    <!-- Wayfinding Related Items -->
+    <rect x="50" y="770" width="1120" height="30" rx="15" fill="#331F4A" opacity="0.9" />
+    <text x="600" y="790" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">Suggested Next: Explore Brand Expression Hub to align product design with brand guidelines</text>
+    
+    <!-- Flow Indicator -->
+    <g>
+      <path d="M325,450 L325,470" stroke="#5AC8FA" stroke-width="2" fill="none" stroke-dasharray="5,3">
+        <animate attributeName="stroke-opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite" />
+      </path>
+      <text x="375" y="460" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="12" fill="#5AC8FA" text-anchor="middle">Roadmap informs Workflow</text>
+    </g>
+  </g>
+ </svg>

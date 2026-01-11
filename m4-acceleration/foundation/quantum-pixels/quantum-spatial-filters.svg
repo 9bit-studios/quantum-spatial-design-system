@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <!-- 
+    Quantum-Spatial Filter Effects
+    Core Filter Definitions
+    
+    This file contains all filter effect definitions for the Quantum-Spatial Design System.
+    Include this in your SVG components by referencing with <use> elements.
+  -->
+  
+  <defs>
+    <!-- ==================== HERITAGE STATE FILTERS ==================== -->
+    
+    <!-- Heritage Glow Filter -->
+    <filter id="heritage-glow-filter" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feColorMatrix type="matrix" 
+        values="0 0 0 0 0.239
+                0 0 0 0 1.000
+                0 0 0 0 0.455
+                0 0 0 0.5 0" 
+        in="blur" result="coloredBlur" />
+      <feComposite in="SourceGraphic" in2="coloredBlur" operator="over" />
+    </filter>
+    
+    <!-- Heritage Pixel Filter -->
+    <filter id="heritage-pixel-filter" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="2" result="noise" />
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="2" xChannelSelector="R" yChannelSelector="G" />
+    </filter>
+    
+    <!-- Heritage State Filter (M4-optimized) -->
+    <filter id="heritage-state-filter" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="0.5" result="blur" />
+      <feColorMatrix type="matrix" 
+        values="1 0 0 0 0
+                0 1.2 0 0 0
+                0 0 1 0 0
+                0 0 0 1 0" />
+    </filter>
+    
+    <!-- ==================== TRANSITIONAL STATE FILTERS ==================== -->
+    
+    <!-- Transitional Glow Filter -->
+    <filter id="transitional-glow-filter" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feColorMatrix type="matrix" 
+        values="0 0 0 0 0.353
+                0 0 0 0 0.784
+                0 0 0 0 0.980
+                0 0 0 0.5 0" 
+        in="blur" result="coloredBlur" />
+      <feComposite in="SourceGraphic" in2="coloredBlur" operator="over" />
+    </filter>
+    
+    <!-- Transitional Blend Filter -->
+    <filter id="transitional-blend-filter" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="1" result="blur" />
+      <feBlend in="SourceGraphic" in2="blur" mode="screen" />
+    </filter>
+    
+    <!-- Transitional State Filter (M4-optimized) -->
+    <filter id="transitional-state-filter" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="0.8" result="blur" />
+      <feColorMatrix type="matrix" 
+        values="1 0 0 0 0
+                0 1 0 0 0
+                0 0 1.5 0 0
+                0 0 0 1 0" />
+    </filter>
+    
+    <!-- ==================== QUANTUM STATE FILTERS ==================== -->
+    
+    <!-- Quantum Glow Filter -->
+    <filter id="quantum-glow-filter" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feColorMatrix type="matrix" 
+        values="0 0 0 0 0.749
+                0 0 0 0 0.251
+                0 0 0 0 0.502
+                0 0 0 0.5 0" 
+        in="blur" result="coloredBlur" />
+      <feComposite in="SourceGraphic" in2="coloredBlur" operator="over" />
+    </filter>
+    
+    <!-- Quantum Glass Effect -->
+    <filter id="quantum-glass-filter" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" />
+      <feColorMatrix type="matrix"
+          values="1 0 0 0 0
+                  0 1 0 0 0
+                  0 0 1 0 0
+                  0 0 0 10 -3" />
+    </filter>
+    
+    <!-- Quantum Dimensional Effect -->
+    <filter id="quantum-dimension-filter" x="0%" y="0%" width="100%" height="100%">
+      <feMorphology operator="dilate" radius="1" result="dilate" />
+      <feGaussianBlur in="dilate" stdDeviation="2" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+    <!-- Quantum State Filter (M4-optimized) -->
+    <filter id="quantum-state-filter" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="1.2" result="blur" />
+      <feColorMatrix type="matrix" 
+        values="1.2 0 0 0 0
+                0 1 0 0 0
+                0 0 1.2 0 0
+                0 0 0 1 0" />
+    </filter>
+    
+    <!-- ==================== SUPERPOSITION STATE FILTERS ==================== -->
+    
+    <!-- Superposition Blend Filter -->
+    <filter id="superposition-blend-filter" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="1" result="blur1" />
+      <feOffset dx="2" dy="2" result="offset1" />
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1.5" result="blur2" />
+      <feOffset in="blur2" dx="-2" dy="-2" result="offset2" />
+      <feBlend in="offset1" in2="offset2" mode="screen" result="blend" />
+      <feComposite in="blend" in2="SourceGraphic" operator="over" />
+    </filter>
+    
+    <!-- Superposition Phase Shift Filter -->
+    <filter id="superposition-phase-filter" x="-30%" y="-30%" width="160%" height="160%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="3" seed="5" result="noise" />
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="5" xChannelSelector="R" yChannelSelector="G" result="displace" />
+      <feComposite in="displace" in2="SourceGraphic" operator="arithmetic" k1="0.5" k2="0.5" k3="0" k4="0" />
+    </filter>
+    
+    <!-- ==================== M4-OPTIMIZED FILTERS ==================== -->
+    
+    <!-- M4-Optimized Glow Filter -->
+    <filter id="m4-glow-filter" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+    <!-- M4-Optimized Glass Effect -->
+    <filter id="m4-glass-filter" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="1" />
+      <feColorMatrix type="matrix"
+          values="1 0 0 0 0
+                  0 1 0 0 0
+                  0 0 1 0 0
+                  0 0 0 5 -2" />
+    </filter>
+    
+    <!-- M4-Optimized Dimension Effect -->
+    <filter id="m4-dimension-filter" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="0.8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+    <!-- ==================== UTILITY FILTERS ==================== -->
+    
+    <!-- Subtle Shadow -->
+    <filter id="subtle-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="1" result="blur" />
+      <feOffset dx="1" dy="1" result="offsetBlur" />
+      <feComposite in="SourceGraphic" in2="offsetBlur" operator="over" />
+    </filter>
+    
+    <!-- Depth Shadow -->
+    <filter id="depth-shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2" result="blur" />
+      <feOffset dx="2" dy="3" result="offsetBlur" />
+      <feComposite in="SourceGraphic" in2="offsetBlur" operator="over" />
+    </filter>
+    
+    <!-- Inner Glow -->
+    <filter id="inner-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur" />
+      <feComposite in="blur" in2="SourceGraphic" operator="atop" />
+    </filter>
+  </defs>
+</svg>

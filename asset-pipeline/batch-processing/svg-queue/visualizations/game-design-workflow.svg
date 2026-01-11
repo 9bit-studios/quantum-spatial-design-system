@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 700">
+  <!-- Background -->
+  <rect width="900" height="700" fill="#f8f9fa" />
+  
+  <!-- Title -->
+  <text x="450" y="35" font-family="Arial" font-size="24" font-weight="bold" text-anchor="middle" fill="#131A36">Game Design AI Workflow</text>
+  
+  <!-- Main Phase Boxes -->
+  <rect x="80" y="70" width="740" height="100" rx="10" fill="#d9e8fc" stroke="#2f54eb" stroke-width="2" />
+  <rect x="80" y="190" width="740" height="100" rx="10" fill="#d9e8fc" stroke="#2f54eb" stroke-width="2" />
+  <rect x="80" y="310" width="740" height="100" rx="10" fill="#d9e8fc" stroke="#2f54eb" stroke-width="2" />
+  <rect x="80" y="430" width="740" height="100" rx="10" fill="#d9e8fc" stroke="#2f54eb" stroke-width="2" />
+  <rect x="80" y="550" width="740" height="100" rx="10" fill="#d9e8fc" stroke="#2f54eb" stroke-width="2" />
+  
+  <!-- Phase Titles -->
+  <text x="450" y="105" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="#131A36">Phase 1: Concept Development</text>
+  <text x="450" y="225" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="#131A36">Phase 2: Systems Design</text>
+  <text x="450" y="345" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="#131A36">Phase 3: Feature Implementation Planning</text>
+  <text x="450" y="465" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="#131A36">Phase 4: Playtesting &amp; Iteration</text>
+  <text x="450" y="585" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="#131A36">Phase 5: Launch Preparation</text>
+  
+  <!-- Phase 1 Subprocesses -->
+  <rect x="100" y="120" width="160" height="40" rx="5" fill="#5AC8FA" stroke="#331F4A" stroke-width="1" />
+  <rect x="280" y="120" width="160" height="40" rx="5" fill="#5AC8FA" stroke="#331F4A" stroke-width="1" />
+  <rect x="460" y="120" width="160" height="40" rx="5" fill="#5AC8FA" stroke="#331F4A" stroke-width="1" />
+  <rect x="640" y="120" width="160" height="40" rx="5" fill="#5AC8FA" stroke="#331F4A" stroke-width="1" />
+  
+  <text x="180" y="143" font-family="Arial" font-size="12" text-anchor="middle" fill="#131A36">Design Pillars Generation</text>
+  <text x="360" y="143" font-family="Arial" font-size="12" text-anchor="middle" fill="#131A36">Core Loop Modeling</text>
+  <text x="540" y="143" font-family="Arial" font-size="12" text-anchor="middle" fill="#131A36">Player Experience Goals</text>
+  <text x="720" y="143" font-family="Arial" font-size="12" text-anchor="middle" fill="#131A36">GDD Integration</text>
+  
+  <!-- Phase 2 Subprocesses -->
+  <rect x="100" y="240" width="160" height="40" rx="5" fill="#5AC8FA" stroke="#331F4A" stroke-width="1" />
+  <rect x="280" y="240" width="160" height="40" rx="5" fill="#5AC8FA" stroke="#331F4A" stroke-width="1" />
+  <rect x="460" y="240" width="160" height="40" rx="5" fill="#5AC8FA" stroke="#331F4A" stroke-width="1" />
+  <rect x="640" y="240" width="160" height="40" rx="5" fill="#5AC8FA" stroke="#331F4A" stroke-width="1" />
+  
+  <text x="180" y="263" font-family="Arial" font-size="12" text-anchor="middle" fill="#131A36">Mechanics Brainstorming</text>
+  <text x="360" y="263" font-family="Arial" font-size="12" text-anchor="middle" fill="#131A36">Progression System Design</text>
+  <text x="540" y="263" font-family="Arial" font-size="12" text-anchor="middle" fill="#131A36">Economy Balancing</text>
+  <text x="720" y="263" font-family="Arial" font-size="12" text-anchor="middle" fill="#131A36">System Integration</text>
+  
+  <!-- Phase 3 Subprocesses -->
+  <rect x="100" y="360" width="160" height="40" rx="5" fill="#5AC8FA" stroke="#331F4A" stroke-width="1" />
+  <rect x="280" y="360" width="160" height="40" rx="5" fill="#5AC8FA" stroke="#331F4A" stroke-width="1" />
+  <rect x="460" y="360" width="160" height="40" rx="5" fill="#5AC8FA" stroke="#331F4A" stroke-width="1" />
+  <rect x="640" y="360" width="160" height="40" rx="5" fill="#5AC8FA" stroke="#331F4A" stroke-width="1" />
+  
+  <text x="180" y="383" font-family="Arial" font-size="12" text-anchor="middle" fill="#131A36">Feature Prioritization</text>
+  <text x="360" y="383" font-family="Arial" font-size="12" text-anchor="middle" fill="#131A36">Technical Specification</text>
+  <text x="540" y="383" font-family="Arial" font-size="12" text-anchor="middle" fill="#131A36">Prototype Planning</text>
+  <text x="720" y="383" font-family="Arial" font-size="12" text-anchor="middle" fill="#131A36">Dev Handoff</text>
+  
+  <!-- Phase 4 Subprocesses -->
+  <rect x="100" y="480" width="160" height="40" rx="5" fill="#5AC8FA" stroke="#331F4A" stroke-width="1" />
+  <rect x="280" y="480" width="160" height="40" rx="5" fill="#5AC8FA" stroke="#331F4A" stroke-width="1" />
+  <rect x="460" y="480" width="160" height="40" rx="5" fill="#5AC8FA" stroke="#331F4A" stroke-width="1" />
+  <rect x="640" y="480" width="160" height="40" rx="5" fill="#5AC8FA" stroke="#331F4A" stroke-width="1" />
+  
+  <text x="180" y="503" font-family="Arial" font-size="12" text-anchor="middle" fill="#131A36">Playtest Protocol</text>
+  <text x="360" y="503" font-family="Arial" font-size="12" text-anchor="middle" fill="#131A36">Feedback Analysis</text>
+  <text x="540" y="503" font-family="Arial" font-size="12" text-anchor="middle" fill="#131A36">Iteration Planning</text>
+  <text x="720" y="503" font-family="Arial" font-size="12" text-anchor="middle" fill="#131A36">Refinement Implementation</text>
+  
+  <!-- Phase 5 Subprocesses -->
+  <rect x="100" y="600" width="160" height="40" rx="5" fill="#5AC8FA" stroke="#331F4A" stroke-width="1" />
+  <rect x="280" y="600" width="160" height="40" rx="5" fill="#5AC8FA" stroke="#331F4A" stroke-width="1" />
+  <rect x="460" y="600" width="160" height="40" rx="5" fill="#5AC8FA" stroke="#331F4A" stroke-width="1" />
+  <rect x="640" y="600" width="160" height="40" rx="5" fill="#5AC8FA" stroke="#331F4A" stroke-width="1" />
+  
+  <text x="180" y="623" font-family="Arial" font-size="12" text-anchor="middle" fill="#131A36">Launch Feature Set</text>
+  <text x="360" y="623" font-family="Arial" font-size="12" text-anchor="middle" fill="#131A36">Marketing Materials</text>
+  <text x="540" y="623" font-family="Arial" font-size="12" text-anchor="middle" fill="#131A36">Post-Launch Planning</text>
+  <text x="720" y="623" font-family="Arial" font-size="12" text-anchor="middle" fill="#131A36">Release Strategy</text>
+  
+  <!-- Connection arrows -->
+  <polyline points="450,170 450,190" stroke="#331F4A" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+  <polyline points="450,290 450,310" stroke="#331F4A" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+  <polyline points="450,410 450,430" stroke="#331F4A" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+  <polyline points="450,530 450,550" stroke="#331F4A" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+  
+  <!-- Integration Hints -->
+  <text x="50" y="105" font-family="Arial" font-size="10" fill="#331F4A" text-anchor="start" transform="rotate(-90, 50, 105)">Narrative Integration →</text>
+  <text x="50" y="225" font-family="Arial" font-size="10" fill="#331F4A" text-anchor="start" transform="rotate(-90, 50, 225)">Art Integration →</text>
+  <text x="50" y="345" font-family="Arial" font-size="10" fill="#331F4A" text-anchor="start" transform="rotate(-90, 50, 345)">Development Integration →</text>
+  <text x="50" y="465" font-family="Arial" font-size="10" fill="#331F4A" text-anchor="start" transform="rotate(-90, 50, 465)">QA Integration →</text>
+  <text x="50" y="585" font-family="Arial" font-size="10" fill="#331F4A" text-anchor="start" transform="rotate(-90, 50, 585)">Marketing Integration →</text>
+  
+  <!-- AI Integration Indicators -->
+  <circle cx="100" y="95" r="5" fill="#BF4080" />
+  <circle cx="100" y="215" r="5" fill="#BF4080" />
+  <circle cx="100" y="335" r="5" fill="#BF4080" />
+  <circle cx="100" y="455" r="5" fill="#BF4080" />
+  <circle cx="100" y="575" r="5" fill="#BF4080" />
+  
+  <text x="110" y="95" font-family="Arial" font-size="10" fill="#BF4080">AI Assistance</text>
+  <text x="110" y="215" font-family="Arial" font-size="10" fill="#BF4080">AI Assistance</text>
+  <text x="110" y="335" font-family="Arial" font-size="10" fill="#BF4080">AI Assistance</text>
+  <text x="110" y="455" font-family="Arial" font-size="10" fill="#BF4080">AI Assistance</text>
+  <text x="110" y="575" font-family="Arial" font-size="10" fill="#BF4080">AI Assistance</text>
+  
+  <!-- Marker definitions -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#331F4A" />
+    </marker>
+  </defs>
+</svg>

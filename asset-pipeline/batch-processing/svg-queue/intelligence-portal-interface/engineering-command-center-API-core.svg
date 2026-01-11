@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300">
+  <!-- Background and effects definitions -->
+  <defs>
+    <!-- Deep space background gradient -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A0621" />
+      <stop offset="60%" stop-color="#131A36" />
+      <stop offset="100%" stop-color="#0D0D15" />
+    </linearGradient>
+    
+    <!-- Technical grid patterns -->
+    <pattern id="techGrid" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <rect width="20" height="20" fill="none" />
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#5AC8FA" stroke-width="0.5" opacity="0.3" />
+    </pattern>
+    
+    <!-- Code structure gradients -->
+    <linearGradient id="codeBlockGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#331F4A" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#0D0D15" stop-opacity="0.6" />
+    </linearGradient>
+    
+    <linearGradient id="codeLineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#613FE7" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#613FE7" stop-opacity="0.7" />
+    </linearGradient>
+    
+    <!-- Shattering cosmic monster part gradients -->
+    <linearGradient id="part1Gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#BF4080" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#6A3093" stop-opacity="0.5" />
+    </linearGradient>
+    
+    <linearGradient id="part2Gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#613FE7" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#5AC8FA" stop-opacity="0.5" />
+    </linearGradient>
+    
+    <linearGradient id="part3Gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF2D55" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#FF6B6B" stop-opacity="0.5" />
+    </linearGradient>
+    
+    <!-- Energy flow animations -->
+    <linearGradient id="energyFlow1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#5AC8FA" stop-opacity="0" />
+      <stop offset="50%" stop-color="#5AC8FA" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#5AC8FA" stop-opacity="0" />
+      <animate attributeName="x1" values="0%;25%;0%" dur="4s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="100%;75%;100%" dur="4s" repeatCount="indefinite" />
+    </linearGradient>
+    
+    <linearGradient id="energyFlow2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#613FE7" stop-opacity="0" />
+      <stop offset="50%" stop-color="#613FE7" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#613FE7" stop-opacity="0" />
+      <animate attributeName="x1" values="0%;25%;0%" dur="5s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="100%;75%;100%" dur="5s" repeatCount="indefinite" />
+    </linearGradient>
+    
+    <linearGradient id="energyFlow3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF2D55" stop-opacity="0" />
+      <stop offset="50%" stop-color="#FF2D55" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#FF2D55" stop-opacity="0" />
+      <animate attributeName="x1" values="0%;25%;0%" dur="6s" repeatCount="indefinite" />
+      <animate attributeName="x2" values="100%;75%;100%" dur="6s" repeatCount="indefinite" />
+    </linearGradient>
+    
+    <!-- Connection glow filter -->
+    <filter id="connectionGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  
+  <!-- Main background -->
+  <rect width="800" height="300" fill="url(#bgGradient)" />
+  
+  <!-- Technical grid pattern -->
+  <rect width="800" height="300" fill="url(#techGrid)" />
+  
+  <!-- Code structure -->
+  <g transform="translate(100, 50)">
+    <!-- Code block container -->
+    <rect x="0" y="0" width="200" height="200" rx="5" fill="url(#codeBlockGradient)" stroke="#331F4A" stroke-width="1" />
+    
+    <!-- Code lines -->
+    <rect x="10" y="20" width="180" height="3" fill="url(#codeLineGradient)" rx="1" />
+    <rect x="10" y="35" width="150" height="3" fill="url(#codeLineGradient)" rx="1" />
+    <rect x="10" y="50" width="170" height="3" fill="url(#codeLineGradient)" rx="1" />
+    <rect x="10" y="65" width="130" height="3" fill="url(#codeLineGradient)" rx="1" />
+    <rect x="10" y="80" width="160" height="3" fill="url(#codeLineGradient)" rx="1" />
+    <rect x="10" y="95" width="140" height="3" fill="url(#codeLineGradient)" rx="1" />
+    <rect x="10" y="110" width="175" height="3" fill="url(#codeLineGradient)" rx="1" />
+    <rect x="10" y="125" width="155" height="3" fill="url(#codeLineGradient)" rx="1" />
+    <rect x="10" y="140" width="165" height="3" fill="url(#codeLineGradient)" rx="1" />
+    <rect x="10" y="155" width="145" height="3" fill="url(#codeLineGradient)" rx="1" />
+    <rect x="10" y="170" width="170" height="3" fill="url(#codeLineGradient)" rx="1" />
+    <rect x="10" y="185" width="160" height="3" fill="url(#codeLineGradient)" rx="1" />
+    
+    <!-- Function brackets -->
+    <path d="M20,15 L30,15 L30,60 L20,60" fill="none" stroke="#5AC8FA" stroke-width="1" opacity="0.8" />
+    <path d="M20,75 L30,75 L30,130 L20,130" fill="none" stroke="#5AC8FA" stroke-width="1" opacity="0.8" />
+    <path d="M20,145 L30,145 L30,190 L20,190" fill="none" stroke="#5AC8FA" stroke-width="1" opacity="0.8" />
+  </g>
+  
+  <!-- Shattering cosmic monster representation -->
+  <!-- Part 1 (Vaclond) -->
+  <g transform="translate(400, 150)">
+    <path d="M-80,-60 L0,-80 L80,-60 L100,0 L80,60 L0,80 L-80,60 L-100,0 Z" fill="url(#part1Gradient)" stroke="#6A3093" stroke-width="2" />
+    
+    <!-- Technical interior details -->
+    <path d="M-60,-40 L0,-60 L60,-40 L80,0 L60,40 L0,60 L-60,40 L-80,0 Z" fill="none" stroke="#FFFFFF" stroke-width="0.5" stroke-dasharray="5,3" opacity="0.6" />
+    <path d="M-40,-20 L0,-40 L40,-20 L60,0 L40,20 L0,40 L-40,20 L-60,0 Z" fill="none" stroke="#FFFFFF" stroke-width="0.5" stroke-dasharray="5,3" opacity="0.6" />
+    <path d="M-20,-10 L0,-20 L20,-10 L30,0 L20,10 L0,20 L-20,10 L-30,0 Z" fill="none" stroke="#FFFFFF" stroke-width="0.5" stroke-dasharray="5,3" opacity="0.6" />
+    
+    <!-- Center node -->
+    <circle cx="0" cy="0" r="15" fill="#0D0D15" stroke="#5AC8FA" stroke-width="1" />
+    <text x="0" y="4" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="7" fill="#FFFFFF" text-anchor="middle">CORE</text>
+  </g>
+  
+  <!-- Part 2 (Prothohar) -->
+  <g transform="translate(600, 80)">
+    <path d="M-50,-40 L0,-50 L50,-40 L60,0 L50,40 L0,50 L-50,40 L-60,0 Z" fill="url(#part2Gradient)" stroke="#613FE7" stroke-width="2" />
+    
+    <!-- Technical interior details -->
+    <path d="M-35,-30 L0,-40 L35,-30 L45,0 L35,30 L0,40 L-35,30 L-45,0 Z" fill="none" stroke="#FFFFFF" stroke-width="0.5" stroke-dasharray="5,3" opacity="0.6" />
+    <path d="M-20,-15 L0,-25 L20,-15 L30,0 L20,15 L0,25 L-20,15 L-30,0 Z" fill="none" stroke="#FFFFFF" stroke-width="0.5" stroke-dasharray="5,3" opacity="0.6" />
+    
+    <!-- Center node -->
+    <circle cx="0" cy="0" r="10" fill="#0D0D15" stroke="#5AC8FA" stroke-width="1" />
+    <text x="0" y="3" font-family="SF Pro Text, -apple-system, system-ui, sans-serif" font-size="6" fill="#FFFFFF" text-anchor="middle">API</text>
+  </g>
+</svg>
+  

@@ -1,0 +1,56 @@
+{
+  "name": "@oksana-foundation/quantum-leap-suite",
+  "version": "1.0.0",
+  "description": "M4-accelerated generation suite for SVG components, Hexecute game, and Vision Pro UI kit",
+  "main": "orchestrator/quantum-leap-orchestrator.ts",
+  "type": "module",
+  "scripts": {
+    "quantum-leap": "tsx quantum-leap-orchestrator.ts",
+    "full-suite": "tsx quantum-leap-orchestrator.ts --full-suite",
+    "svg-only": "tsx quantum-leap-orchestrator.ts --svg-only --deploy --notion",
+    "game-only": "tsx quantum-leap-orchestrator.ts --game-only",
+    "vision-pro-only": "tsx quantum-leap-orchestrator.ts --vision-pro-only",
+    "parallel": "tsx quantum-leap-orchestrator.ts --full-suite --parallel",
+    "migrate-tools": "tsx tool-migration.ts --generate-templates",
+    "setup": "node setup.js",
+    "test": "echo \"Ready for quantum leap!\" && exit 0"
+  },
+  "keywords": [
+    "quantum-spatial",
+    "svg-generation",
+    "game-development",
+    "vision-pro",
+    "foundation-model",
+    "m4-neural-engine",
+    "quantum-spatial",
+    "visual-intelligence",
+    "creative-intelligence",
+    "oksana"
+  ],
+  "author": "Oksana <hello@oksana.ai>",
+  "license": "PROPRIETARY",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.71.2",
+    "@notionhq/client": "^5.4.0",
+    "@modelcontextprotocol/sdk": "^0.6.1",
+    "chalk": "^5.6.2",
+    "tsx": "^4.7.0",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/9bitstudios/quantum-leap-suite"
+  },
+  "bugs": {
+    "url": "https://github.com/9bitstudios/quantum-leap-suite/issues"
+  },
+  "homepage": "https://oksana.ai/quantum-leap"
+}

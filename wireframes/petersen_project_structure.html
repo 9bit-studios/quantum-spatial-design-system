@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petersen Games Project Structure</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #0a0621;
+            color: #ffffff;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .diagram {
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: 20px;
+            margin: 20px 0;
+            backdrop-filter: blur(10px);
+        }
+        .folder {
+            background: rgba(0,122,255,0.1);
+            border: 1px solid rgba(0,122,255,0.3);
+            border-radius: 8px;
+            padding: 10px;
+            margin: 8px 0;
+            font-family: 'Monaco', 'Menlo', monospace;
+        }
+        .git-repo {
+            background: rgba(46,204,113,0.1);
+            border: 1px solid rgba(46,204,113,0.3);
+            border-radius: 8px;
+            padding: 8px;
+            margin: 4px 0;
+            font-size: 0.9em;
+        }
+        .auth-flow {
+            background: rgba(241,196,15,0.1);
+            border: 1px solid rgba(241,196,15,0.3);
+            border-radius: 8px;
+            padding: 8px;
+            margin: 4px 0;
+        }
+        .workflow {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        @media (max-width: 768px) {
+            .workflow {
+                grid-template-columns: 1fr;
+            }
+        }
+        h1, h2 {
+            color: #5ac8fa;
+            margin-bottom: 16px;
+        }
+        h3 {
+            color: #bf4080;
+            margin-bottom: 12px;
+        }
+        .highlight {
+            background: rgba(255,159,10,0.2);
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎮 Petersen Games Project Structure & Git Organization</h1>
+        
+        <div class="diagram">
+            <h2>Directory Structure Overview</h2>
+            <div class="folder">
+                📁 /Users/pennyplatt/9Bit_Studios/
+                <div style="margin-left: 20px;">
+                    <div class="folder">
+                        📁 client-portal/ <span class="highlight">← Main 9Bit Studios CRM & Client Management</span>
+                        <div class="git-repo">🔗 Git: 9bit-studios/client-portal (Vercel deployment)</div>
+                        <div style="margin-left: 20px;">
+                            <div class="folder">
+                                📁 clients/
+                                <div style="margin-left: 20px;">
+                                    <div class="folder">
+                                        📁 petersen_games/ <span class="highlight">← Client data & assets in CRM</span>
+                                        <div style="margin-left: 20px;">
+                                            📄 client-profile.json<br>
+                                            📄 project-briefs.md<br>
+                                            📁 reference/<br>
+                                            📁 campaign-assets/<br>
+                                            📄 billing-history.json
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="folder">
+                        📁 petersen-games-shopify/ <span class="highlight">← Separate project folder</span>
+                        <div class="git-repo">🔗 Git: petersengames/shopify-store (Client's repo)</div>
+                        <div style="margin-left: 20px;">
+                            📁 theme-files/<br>
+                            📁 api-automation/<br>
+                            📁 product-optimization/<br>
+                            📄 package.json<br>
+                            📄 README.md
+                        </div>
+                    </div>
+                    
+                    <div class="folder">
+                        📁 petersen-games-vercel/ <span class="highlight">← Future Next.js store</span>
+                        <div class="git-repo">🔗 Git: petersengames/nextjs-store (Client's repo)</div>
+                        <div style="margin-left: 20px;">
+                            📁 components/<br>
+                            📁 pages/<br>
+                            📁 lib/<br>
+                            📄 package.json<br>
+                            📄 vercel.json
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="workflow">
+            <div class="diagram">
+                <h3>🔐 Authentication & Authorization Flow</h3>
+                <div class="auth-flow">
+                    <strong>1. Client Portal (CRM)</strong><br>
+                    • Arthur logs into client-portal.9bitstudios.io<br>
+                    • Views project status, invoices, deliverables<br>
+                    • Managed through Supabase auth
+                </div>
+                <div class="auth-flow">
+                    <strong>2. Store Development</strong><br>
+                    • Separate GitHub repos for store code<br>
+                    • Arthur gets read-only access if needed<br>
+                    • Deploy keys for Vercel/Shopify
+                </div>
+                <div class="auth-flow">
+                    <strong>3. Store Management</strong><br>
+                    • Arthur gets Shopify admin access<br>
+                    • Vercel dashboard for deployments<br>
+                    • No direct code access needed
+                </div>
+            </div>
+
+            <div class="diagram">
+                <h3>🔄 Development Workflow</h3>
+                <div class="auth-flow">
+                    <strong>Development Phase</strong><br>
+                    • Work in separate project folder<br>
+                    • Commit to client's GitHub repo<br>
+                    • Auto-deploy to staging
+                </div>
+                <div class="auth-flow">
+                    <strong>Client Updates</strong><br>
+                    • Project status logged in CRM<br>
+                    • Deliverables uploaded to client portal<br>
+                    • Billing tracked in Supabase
+                </div>
+                <div class="auth-flow">
+                    <strong>Handoff</strong><br>
+                    • Transfer repo ownership to client<br>
+                    • Provide admin credentials<br>
+                    • Maintain support contract if desired
+                </div>
+            </div>
+        </div>
+
+        <div class="diagram">
+            <h2>📊 Integration Points</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px;">
+                <div class="folder">
+                    <strong>Client Portal CRM</strong><br>
+                    • Client authentication<br>
+                    • Project management<br>
+                    • Invoice & billing<br>
+                    • File sharing<br>
+                    • Communication logs
+                </div>
+                <div class="folder">
+                    <strong>Store Development</strong><br>
+                    • Separate codebase<br>
+                    • Independent deployment<br>
+                    • Client-owned infrastructure<br>
+                    • Custom domain setup<br>
+                    • Performance monitoring
+                </div>
+                <div class="folder">
+                    <strong>Handoff Process</strong><br>
+                    • Documentation in CRM<br>
+                    • Credentials transfer<br>
+                    • Training materials<br>
+                    • Support transition<br>
+                    • Ongoing maintenance
+                </div>
+            </div>
+        </div>
+
+        <div class="diagram">
+            <h2>🎯 Key Clarifications</h2>
+            <div class="auth-flow">
+                <strong>✅ Correct Understanding:</strong><br>
+                • Client-portal = CRM system for ALL clients (including Petersen Games)<br>
+                • petersen-games-shopify = Separate development project<br>
+                • Different Git repos for different purposes<br>
+                • Arthur's auth is through client-portal for project management<br>
+                • Store development happens in separate, client-owned repos
+            </div>
+            
+            <div class="auth-flow">
+                <strong>🔗 Connection Strategy:</strong><br>
+                • CRM tracks project status and deliverables<br>
+                • Store repos are separate but referenced in CRM<br>
+                • Deployment webhooks can update CRM status<br>
+                • All client communication flows through CRM<br>
+                • Store ownership transfers to client upon completion
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,445 @@
+/* QuantumSpatial_12 Component Styles
+ * Design System: Quantum Spatial (9Bit Studios)
+ * M4-Optimized: GPU-accelerated animations
+ * Accessibility: Respects prefers-reduced-motion
+ */
+
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0a0e27;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.svg {
+  width: 100%;
+  height: 100%;
+  will-change: transform;
+}
+
+/* ===== M4-Optimized Animations ===== */
+
+/* Energy Field Rotation (30s) */
+.energyField {
+  animation: quantumRotate 30s linear infinite;
+  transform-origin: 400px 400px;
+}
+
+/* Grid Lines Pulse */
+.gridLineH {
+  animation: pulseOpacity 3s ease-in-out infinite;
+}
+
+.gridLineV {
+  animation: pulseOpacity 3s ease-in-out infinite reverse;
+}
+
+.gridCircle1 {
+  animation: breatheRadius1 5s ease-in-out infinite;
+}
+
+.gridCircle2 {
+  animation: breatheRadius2 4s ease-in-out infinite;
+}
+
+/* Fibonacci Spiral Animation */
+.spiralPath {
+  animation: spiralDraw 8s ease-in-out infinite, pulseOpacity 3s ease-in-out infinite;
+}
+
+/* Core Sphere Pulse */
+.coreCircle {
+  animation: corePulse 4s ease-in-out infinite;
+}
+
+.reflection {
+  animation: reflectionGlow 3s ease-in-out infinite;
+}
+
+/* Particle Orbits */
+.particle1 {
+  animation: orbit1 12s linear infinite, particleGlow 2s ease-in-out infinite;
+  transform-origin: 400px 400px;
+}
+
+.particle2 {
+  animation: orbit2 15s linear infinite, particleGlow 2.5s ease-in-out infinite;
+  transform-origin: 400px 400px;
+}
+
+.particle3 {
+  animation: orbit3 18s linear infinite, particleGlow 3s ease-in-out infinite;
+  transform-origin: 400px 400px;
+}
+
+.particle4 {
+  animation: orbit4 10s linear infinite reverse, particleGlow 2.2s ease-in-out infinite;
+  transform-origin: 400px 400px;
+}
+
+/* Field Lines Pulse */
+.fieldLine1 {
+  animation: pulseOpacity 4s ease-in-out infinite;
+}
+
+.fieldLine2 {
+  animation: pulseOpacity 4s ease-in-out infinite reverse;
+}
+
+.fieldLine3 {
+  animation: pulseOpacity 3.5s ease-in-out infinite;
+  animation-delay: 0.5s;
+}
+
+.fieldLine4 {
+  animation: pulseOpacity 3.5s ease-in-out infinite reverse;
+  animation-delay: 0.5s;
+}
+
+/* Outer Ring Pulse */
+.outerRing {
+  animation: ringPulse 6s ease-in-out infinite;
+}
+
+/* Data Streams */
+.dataStream1 {
+  animation: streamFlow 2s linear infinite;
+}
+
+.dataStream2 {
+  animation: streamFlow 2s linear infinite reverse;
+}
+
+/* Corner Nodes Pulse */
+.node1 {
+  animation: nodePulse 3s ease-in-out infinite;
+}
+
+.node2 {
+  animation: nodePulse 3.5s ease-in-out infinite;
+}
+
+.node3 {
+  animation: nodePulse 4s ease-in-out infinite;
+}
+
+.node4 {
+  animation: nodePulse 4.5s ease-in-out infinite;
+}
+
+/* ===== Keyframe Definitions ===== */
+
+@keyframes quantumRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulseOpacity {
+  0%,
+  100% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+@keyframes breatheRadius1 {
+  0%,
+  100% {
+    r: 250px;
+  }
+  50% {
+    r: 260px;
+  }
+}
+
+@keyframes breatheRadius2 {
+  0%,
+  100% {
+    r: 180px;
+  }
+  50% {
+    r: 175px;
+  }
+}
+
+@keyframes spiralDraw {
+  0% {
+    stroke-dasharray: 0, 1000;
+  }
+  100% {
+    stroke-dasharray: 1000, 0;
+  }
+}
+
+@keyframes corePulse {
+  0%,
+  100% {
+    r: 120px;
+  }
+  50% {
+    r: 125px;
+  }
+}
+
+@keyframes reflectionGlow {
+  0%,
+  100% {
+    opacity: 0.15;
+  }
+  50% {
+    opacity: 0.25;
+  }
+}
+
+@keyframes orbit1 {
+  from {
+    transform: rotate(0deg) translateX(120px);
+  }
+  to {
+    transform: rotate(360deg) translateX(120px);
+  }
+}
+
+@keyframes orbit2 {
+  from {
+    transform: rotate(0deg) translateX(120px);
+  }
+  to {
+    transform: rotate(360deg) translateX(120px);
+  }
+}
+
+@keyframes orbit3 {
+  from {
+    transform: rotate(0deg) translateX(120px);
+  }
+  to {
+    transform: rotate(360deg) translateX(120px);
+  }
+}
+
+@keyframes orbit4 {
+  from {
+    transform: rotate(0deg) translateX(120px);
+  }
+  to {
+    transform: rotate(360deg) translateX(120px);
+  }
+}
+
+@keyframes particleGlow {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes ringPulse {
+  0%,
+  100% {
+    r: 300px;
+  }
+  50% {
+    r: 305px;
+  }
+}
+
+@keyframes streamFlow {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: 30;
+  }
+}
+
+@keyframes nodePulse {
+  0%,
+  100% {
+    r: 12px;
+  }
+  50% {
+    r: 15px;
+  }
+}
+
+/* ===== Static Variant (No Animations) ===== */
+
+.static .energyField,
+.static .gridLineH,
+.static .gridLineV,
+.static .gridCircle1,
+.static .gridCircle2,
+.static .spiralPath,
+.static .coreCircle,
+.static .reflection,
+.static .particle1,
+.static .particle2,
+.static .particle3,
+.static .particle4,
+.static .fieldLine1,
+.static .fieldLine2,
+.static .fieldLine3,
+.static .fieldLine4,
+.static .outerRing,
+.static .dataStream1,
+.static .dataStream2,
+.static .node1,
+.static .node2,
+.static .node3,
+.static .node4 {
+  animation: none !important;
+}
+
+/* ===== Accessibility: Reduced Motion ===== */
+
+@media (prefers-reduced-motion: reduce) {
+  .energyField,
+  .gridLineH,
+  .gridLineV,
+  .gridCircle1,
+  .gridCircle2,
+  .spiralPath,
+  .coreCircle,
+  .reflection,
+  .particle1,
+  .particle2,
+  .particle3,
+  .particle4,
+  .fieldLine1,
+  .fieldLine2,
+  .fieldLine3,
+  .fieldLine4,
+  .outerRing,
+  .dataStream1,
+  .dataStream2,
+  .node1,
+  .node2,
+  .node3,
+  .node4 {
+    animation: none !important;
+  }
+}
+
+/* ===== Performance Optimization ===== */
+
+/* GPU Acceleration for animated elements */
+.energyField,
+.particle1,
+.particle2,
+.particle3,
+.particle4 {
+  will-change: transform;
+}
+
+.coreCircle,
+.outerRing {
+  will-change: r;
+}
+
+.spiralPath,
+.dataStream1,
+.dataStream2 {
+  will-change: stroke-dasharray, stroke-dashoffset;
+}
+
+/* Mobile Optimization: Reduce effects on smaller screens */
+@media (max-width: 768px) {
+  .container {
+    background: #0a0e27; /* Solid background instead of gradient */
+  }
+
+  /* Reduce blur for performance */
+  .energyField,
+  .coreCircle,
+  .outerRing {
+    filter: none;
+  }
+
+  /* Simplify particle animations */
+  .particle1,
+  .particle2,
+  .particle3,
+  .particle4 {
+    animation-duration: 20s; /* Slower, less resource-intensive */
+  }
+}
+
+/* Dark Mode (explicit support) */
+@media (prefers-color-scheme: dark) {
+  .container {
+    background: #0a0e27;
+  }
+}
+
+/* Light Mode (fallback) */
+@media (prefers-color-scheme: light) {
+  .container {
+    background: #f5f5f7; /* Apple-style light background */
+  }
+
+  .svg rect[fill='#0A0E27'] {
+    fill: #f5f5f7;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .container {
+    border: 2px solid currentColor;
+  }
+
+  /* Increase opacity for better visibility */
+  .gridLineH,
+  .gridLineV,
+  .fieldLine1,
+  .fieldLine2,
+  .fieldLine3,
+  .fieldLine4 {
+    opacity: 0.8 !important;
+  }
+}
+
+/* ===== Design Token Reference ===== */
+
+/*
+ * Quantum Spatial Design Tokens Used:
+ *
+ * Colors:
+ * - Primary: #E85D75 (Coral - accent)
+ * - Secondary: #4ECDC4 (Cyan - energy)
+ * - Background: #0A0E27 (Deep Space)
+ * - Surface: rgba(255, 255, 255, 0.05)
+ * - Glass Border: rgba(255, 255, 255, 0.18)
+ *
+ * Effects:
+ * - Glass Blur: 20px
+ * - Glass Opacity: 0.7
+ * - Shadow Radius: 8px
+ *
+ * Spacing (8px grid):
+ * - Base: 8px
+ * - Touch Targets: 44px minimum (Apple HIG)
+ *
+ * Typography (SF Pro):
+ * - Display: SF Pro Display
+ * - Text: SF Pro Text
+ *
+ * Performance (M4-optimized):
+ * - GPU acceleration via will-change
+ * - Transform-based animations
+ * - Reduced complexity on mobile
+ * - Respects prefers-reduced-motion
+ */

@@ -1,0 +1,118 @@
+/**
+ * QuantumSpatial_11 Component Styles
+ *
+ * Quantum-spatial design system tokens for 9Bit Studios
+ * Includes glassmorphism effects and dark-mysterious theme
+ */
+
+.quantumContainer {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  isolation: isolate;
+}
+
+/* Hero placement variant */
+.heroPlacement {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  aspect-ratio: 1;
+  margin: 0 auto;
+}
+
+/* Icon size variant */
+.iconSize {
+  width: 64px;
+  height: 64px;
+}
+
+/* Background variant for better visibility */
+.withBackground {
+  background: radial-gradient(
+    circle at center,
+    rgba(232, 93, 117, 0.05) 0%,
+    rgba(10, 14, 39, 0.8) 100%
+  );
+  border-radius: 24px;
+  padding: var(--space-xl, 32px);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+/* Glassmorphism card container */
+.glassCard {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 20px;
+  padding: var(--space-lg, 24px);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive scaling */
+@media (max-width: 768px) {
+  .heroPlacement {
+    max-width: 400px;
+  }
+
+  .withBackground {
+    padding: var(--space-md, 16px);
+    border-radius: 16px;
+  }
+
+  .glassCard {
+    padding: var(--space-md, 16px);
+    border-radius: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroPlacement {
+    max-width: 300px;
+  }
+
+  .iconSize {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+/* Dark theme overrides (default is dark, but support system preference) */
+@media (prefers-color-scheme: light) {
+  .withBackground {
+    background: radial-gradient(
+      circle at center,
+      rgba(232, 93, 117, 0.08) 0%,
+      rgba(255, 255, 255, 0.95) 100%
+    );
+  }
+
+  .glassCard {
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow:
+      0 8px 32px rgba(0, 0, 0, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  }
+}
+
+/* Animation performance optimization for M4 */
+@media (prefers-reduced-motion: no-preference) {
+  .quantumContainer {
+    will-change: transform;
+    transform: translateZ(0);
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .glassCard {
+    border-width: 2px;
+    border-color: currentColor;
+  }
+}

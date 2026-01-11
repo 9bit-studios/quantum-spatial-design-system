@@ -1,0 +1,162 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background with dimensional grid -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A0621" />
+      <stop offset="70%" stop-color="#131A36" />
+      <stop offset="100%" stop-color="#1E1F5C" />
+    </linearGradient>
+    
+    <linearGradient id="oksanaGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#331F4A" />
+      <stop offset="100%" stop-color="#6A3093" />
+    </linearGradient>
+    
+    <linearGradient id="jrotharkeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#126D71" />
+      <stop offset="100%" stop-color="#29B6F6" />
+    </linearGradient>
+    
+    <linearGradient id="portalGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#BF4080" />
+      <stop offset="100%" stop-color="#FF2D55" />
+    </linearGradient>
+    
+    <linearGradient id="visionGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5AC8FA" />
+      <stop offset="100%" stop-color="#126D71" />
+    </linearGradient>
+    
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+    <pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse">
+      <path d="M 100 0 L 0 0 0 100" fill="none" stroke="#331F4A" stroke-width="0.5" stroke-opacity="0.15" />
+    </pattern>
+    
+    <pattern id="dimensionalGrid" width="200" height="200" patternUnits="userSpaceOnUse" patternTransform="scale(0.5) rotate(15)">
+      <path d="M 0,0 L 200,0 L 200,200 L 0,200 Z" fill="none" stroke="#5AC8FA" stroke-width="0.5" stroke-opacity="0.05" />
+      <path d="M 0,50 L 200,50 M 0,100 L 200,100 M 0,150 L 200,150" fill="none" stroke="#5AC8FA" stroke-width="0.3" stroke-opacity="0.05" />
+      <path d="M 50,0 L 50,200 M 100,0 L 100,200 M 150,0 L 150,200" fill="none" stroke="#5AC8FA" stroke-width="0.3" stroke-opacity="0.05" />
+    </pattern>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bgGradient)" />
+  <rect width="800" height="600" fill="url(#grid)" />
+  <rect width="800" height="600" fill="url(#dimensionalGrid)" />
+  
+  <!-- Central Connector Hub -->
+  <g transform="translate(400, 300)">
+    <!-- Hub structure -->
+    <circle r="60" fill="#0D0D15" opacity="0.9" />
+    <circle r="55" fill="#131A36" opacity="0.95" />
+    
+    <!-- Hexagonal connector framework -->
+    <path d="M 0,-35 L 30.31,-17.5 L 30.31,17.5 L 0,35 L -30.31,17.5 L -30.31,-17.5 Z" fill="none" stroke="#5AC8FA" stroke-width="1" stroke-opacity="0.7" />
+    
+    <!-- Inner connector -->
+    <path d="M 0,-20 L 17.32,-10 L 17.32,10 L 0,20 L -17.32,10 L -17.32,-10 Z" fill="none" stroke="#5AC8FA" stroke-width="1" stroke-opacity="0.9" />
+    
+    <!-- Quantum pixel at center -->
+    <rect x="-8" y="-8" width="16" height="16" fill="#5AC8FA" opacity="0.9">
+      <animate attributeName="opacity" values="0.9;0.7;0.9" dur="3s" repeatCount="indefinite" />
+      <animate attributeName="transform" values="rotate(0);rotate(90);rotate(180);rotate(270);rotate(360)" dur="12s" repeatCount="indefinite" />
+    </rect>
+    
+    <!-- Connector energy rings -->
+    <circle r="70" fill="none" stroke="#5AC8FA" stroke-width="1" stroke-opacity="0.4">
+      <animate attributeName="r" values="70;75;70" dur="5s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.4;0.2;0.4" dur="5s" repeatCount="indefinite" />
+    </circle>
+    
+    <circle r="80" fill="none" stroke="#BF4080" stroke-width="1" stroke-opacity="0.3" transform="rotate(45)">
+      <animate attributeName="r" values="80;85;80" dur="7s" repeatCount="indefinite" />
+      <animate attributeName="stroke-opacity" values="0.3;0.1;0.3" dur="7s" repeatCount="indefinite" />
+    </circle>
+    
+    <text x="0" y="-70" font-family="SF Pro Display, Arial" font-size="11" fill="#FFFFFF" text-anchor="middle">Quantum-Spatial Framework</text>
+  </g>
+  
+  <!-- Product Implementation Nodes -->
+  <!-- 1. Oksana Creative Platform -->
+  <g transform="translate(200, 150)">
+    <!-- Platform container -->
+    <rect x="-75" y="-40" width="150" height="80" rx="10" fill="url(#oksanaGradient)" opacity="0.9" />
+    
+    <!-- Platform details -->
+    <text x="0" y="-15" font-family="SF Pro Display, Arial" font-size="14" fill="#FFFFFF" text-anchor="middle">Oksana</text>
+    <text x="0" y="10" font-family="SF Pro Display, Arial" font-size="10" fill="#FFFFFF" text-anchor="middle">Creative Platform</text>
+    
+    <!-- Connection to hub -->
+    <path d="M 0,40 L 100,120" stroke="#5AC8FA" stroke-width="2" stroke-opacity="0.5" fill="none">
+      <animate attributeName="stroke-opacity" values="0.5;0.8;0.5" dur="3s" repeatCount="indefinite" />
+    </path>
+  </g>
+  
+  <!-- 2. JRotharke Design System -->
+  <g transform="translate(600, 150)">
+    <!-- System container -->
+    <rect x="-75" y="-40" width="150" height="80" rx="10" fill="url(#jrotharkeGradient)" opacity="0.9" />
+    
+    <!-- System details -->
+    <text x="0" y="-15" font-family="SF Pro Display, Arial" font-size="14" fill="#FFFFFF" text-anchor="middle">JRotharke</text>
+    <text x="0" y="10" font-family="SF Pro Display, Arial" font-size="10" fill="#FFFFFF" text-anchor="middle">Design System</text>
+    
+    <!-- Connection to hub -->
+    <path d="M 0,40 L -100,120" stroke="#29B6F6" stroke-width="2" stroke-opacity="0.5" fill="none">
+      <animate attributeName="stroke-opacity" values="0.5;0.8;0.5" dur="3.5s" repeatCount="indefinite" />
+    </path>
+  </g>
+  
+  <!-- 3. Quantum Portal -->
+  <g transform="translate(200, 450)">
+    <!-- Portal container -->
+    <rect x="-75" y="-40" width="150" height="80" rx="10" fill="url(#portalGradient)" opacity="0.9" />
+    
+    <!-- Portal details -->
+    <text x="0" y="-15" font-family="SF Pro Display, Arial" font-size="14" fill="#FFFFFF" text-anchor="middle">Quantum Portal</text>
+    <text x="0" y="10" font-family="SF Pro Display, Arial" font-size="10" fill="#FFFFFF" text-anchor="middle">Asset Gateway</text>
+    
+    <!-- Connection to hub -->
+    <path d="M 0,-40 L 100,-80" stroke="#FF2D55" stroke-width="2" stroke-opacity="0.5" fill="none">
+      <animate attributeName="stroke-opacity" values="0.5;0.8;0.5" dur="4s" repeatCount="indefinite" />
+    </path>
+  </g>
+  
+  <!-- 4. Vision Framework -->
+  <g transform="translate(600, 450)">
+    <!-- Framework container -->
+    <rect x="-75" y="-40" width="150" height="80" rx="10" fill="url(#visionGradient)" opacity="0.9" />
+    
+    <!-- Framework details -->
+    <text x="0" y="-15" font-family="SF Pro Display, Arial" font-size="14" fill="#FFFFFF" text-anchor="middle">Vision Framework</text>
+    <text x="0" y="10" font-family="SF Pro Display, Arial" font-size="10" fill="#FFFFFF" text-anchor="middle">Spatial Analytics</text>
+    
+    <!-- Connection to hub -->
+    <path d="M 0,-40 L -100,-80" stroke="#5AC8FA" stroke-width="2" stroke-opacity="0.5" fill="none">
+      <animate attributeName="stroke-opacity" values="0.5;0.8;0.5" dur="4.5s" repeatCount="indefinite" />
+    </path>
+  </g>
+  
+  <!-- Decorative elements -->
+  <g class="particles">
+    <!-- Quantum particles -->
+    <circle cx="400" cy="300" r="2" fill="#5AC8FA" opacity="0.7">
+      <animateMotion path="M 0,0 L 20,-20 L 40,0 L 20,20 Z" dur="8s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.7;0.3;0.7" dur="4s" repeatCount="indefinite" />
+    </circle>
+    
+    <circle cx="400" cy="300" r="2" fill="#FF2D55" opacity="0.7">
+      <animateMotion path="M 0,0 L -20,-20 L -40,0 L -20,20 Z" dur="6s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.7;0.3;0.7" dur="3s" repeatCount="indefinite" />
+    </circle>
+    
+    <circle cx="400" cy="300" r="2" fill="#29B6F6" opacity="0.7">
+      <animateMotion path="M 0,0 L 20,20 L 0,40 L -20,20 Z" dur="7s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.7;0.3;0.7" dur="3.5s" repeatCount="indefinite" />
+    </circle>
+  </g>
+</svg>

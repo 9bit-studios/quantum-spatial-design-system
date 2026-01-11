@@ -1,0 +1,623 @@
+{
+  "colors": [
+    {
+      "name": "text-buttons-fill",
+      "value": "#16091899",
+      "category": "extracted",
+      "source": "Text Buttons",
+      "usage": 5
+    },
+    {
+      "name": "vector-stroke",
+      "value": "#FFFFFFE5",
+      "category": "extracted",
+      "source": "Vector",
+      "usage": 312
+    },
+    {
+      "name": "button-primary-fill",
+      "value": "#160918FF",
+      "category": "extracted",
+      "source": "Button Primary",
+      "usage": 43
+    },
+    {
+      "name": "button-primary-effect",
+      "value": "#00000008",
+      "category": "foundation",
+      "source": "Button Primary",
+      "usage": 84
+    },
+    {
+      "name": "button-primary-effect",
+      "value": "#0000001A",
+      "category": "foundation",
+      "source": "Button Primary",
+      "usage": 57
+    },
+    {
+      "name": "button-secondary-fill",
+      "value": "#0B010DFF",
+      "category": "extracted",
+      "source": "Button Secondary",
+      "usage": 8
+    },
+    {
+      "name": "button-secondary-stroke",
+      "value": "#FFFFFF1A",
+      "category": "extracted",
+      "source": "Button Secondary",
+      "usage": 30
+    },
+    {
+      "name": "button-ghost-stroke",
+      "value": "#9747FFFF",
+      "category": "accent",
+      "source": "Button Ghost",
+      "usage": 25
+    },
+    {
+      "name": "state-hover-stroke",
+      "value": "#FFFFFF33",
+      "category": "extracted",
+      "source": "State=Hover",
+      "usage": 80
+    },
+    {
+      "name": "ghost-fill",
+      "value": "#FFFFFF80",
+      "category": "extracted",
+      "source": "Ghost",
+      "usage": 65
+    },
+    {
+      "name": "state-normal-fill",
+      "value": "#7B00FFFF",
+      "category": "extracted",
+      "source": "State=Normal",
+      "usage": 85
+    },
+    {
+      "name": "vector-stroke",
+      "value": "#FFFFFFFF",
+      "category": "extracted",
+      "source": "Vector",
+      "usage": 476
+    },
+    {
+      "name": "state-hover-fill",
+      "value": "#150621FF",
+      "category": "extracted",
+      "source": "State=Hover",
+      "usage": 17
+    },
+    {
+      "name": "start-learning-effect",
+      "value": "#00000040",
+      "category": "foundation",
+      "source": "START LEARNING",
+      "usage": 6
+    },
+    {
+      "name": "tab-button-fill",
+      "value": "#16090E66",
+      "category": "extracted",
+      "source": "Tab Button",
+      "usage": 2
+    },
+    {
+      "name": "vector-fill",
+      "value": "#000000FF",
+      "category": "foundation",
+      "source": "Vector",
+      "usage": 15
+    },
+    {
+      "name": "ellipse-15-fill",
+      "value": "#5DD27AFF",
+      "category": "accent",
+      "source": "Ellipse 15",
+      "usage": 2
+    },
+    {
+      "name": "ellipse-73-fill",
+      "value": "#ED5E56FF",
+      "category": "accent",
+      "source": "Ellipse 73",
+      "usage": 2
+    },
+    {
+      "name": "vector-fill",
+      "value": "#D9D9D9FF",
+      "category": "extracted",
+      "source": "Vector",
+      "usage": 7
+    },
+    {
+      "name": "logo-stroke",
+      "value": "#8A38F5FF",
+      "category": "accent",
+      "source": "Logo",
+      "usage": 1
+    },
+    {
+      "name": "polygon-stroke",
+      "value": "#2737CF80",
+      "category": "extracted",
+      "source": "Polygon",
+      "usage": 2
+    },
+    {
+      "name": "button-circle-fill",
+      "value": "#16090EFF",
+      "category": "extracted",
+      "source": "Button Circle",
+      "usage": 1
+    },
+    {
+      "name": "circle-fill",
+      "value": "#0B010DCC",
+      "category": "extracted",
+      "source": "Circle",
+      "usage": 1
+    },
+    {
+      "name": "circle-effect",
+      "value": "#00000026",
+      "category": "foundation",
+      "source": "Circle",
+      "usage": 5
+    },
+    {
+      "name": "color-fill",
+      "value": "#979797FF",
+      "category": "extracted",
+      "source": "Color",
+      "usage": 1
+    },
+    {
+      "name": "state-selected-stroke",
+      "value": "#6E00FFFF",
+      "category": "extracted",
+      "source": "State=Selected",
+      "usage": 4
+    },
+    {
+      "name": "glow-fill",
+      "value": "#2670E9FF",
+      "category": "accent",
+      "source": "Glow",
+      "usage": 1
+    },
+    {
+      "name": "glow-fill",
+      "value": "#0066FFFF",
+      "category": "extracted",
+      "source": "Glow",
+      "usage": 3
+    },
+    {
+      "name": "button-circle-effect",
+      "value": "#0000000D",
+      "category": "foundation",
+      "source": "Button Circle",
+      "usage": 22
+    },
+    {
+      "name": "how-to-make-your-layout-adaptive-effect",
+      "value": "#00000080",
+      "category": "foundation",
+      "source": "How to make your layout adaptive",
+      "usage": 4
+    },
+    {
+      "name": "info-progress-fill",
+      "value": "#080808FF",
+      "category": "foundation",
+      "source": "Info | Progress",
+      "usage": 2
+    },
+    {
+      "name": "stroke-effect",
+      "value": "#8E9BAE80",
+      "category": "extracted",
+      "source": "Stroke",
+      "usage": 2
+    },
+    {
+      "name": "arrow-fill",
+      "value": "#BBA6FFFF",
+      "category": "extracted",
+      "source": "Arrow",
+      "usage": 1
+    },
+    {
+      "name": "arrow-stroke",
+      "value": "#FEFEFEFF",
+      "category": "extracted",
+      "source": "Arrow",
+      "usage": 1
+    },
+    {
+      "name": "circle-stroke",
+      "value": "#FFFFFF12",
+      "category": "extracted",
+      "source": "Circle",
+      "usage": 5
+    },
+    {
+      "name": "circle-effect",
+      "value": "#FFFFFF26",
+      "category": "extracted",
+      "source": "Circle",
+      "usage": 3
+    },
+    {
+      "name": "arrow-effect",
+      "value": "#7FA3BD85",
+      "category": "extracted",
+      "source": "Arrow",
+      "usage": 1
+    },
+    {
+      "name": "98-fill",
+      "value": "#5AC8FAFF",
+      "category": "accent",
+      "source": "98",
+      "usage": 2
+    },
+    {
+      "name": "glass-button-stroke",
+      "value": "#FFFFFF66",
+      "category": "extracted",
+      "source": "Glass Button",
+      "usage": 1
+    },
+    {
+      "name": "button-effect",
+      "value": "#5846F540",
+      "category": "extracted",
+      "source": "Button",
+      "usage": 1
+    },
+    {
+      "name": "button-effect",
+      "value": "#7389FFFF",
+      "category": "accent",
+      "source": "Button",
+      "usage": 1
+    },
+    {
+      "name": "button-effect",
+      "value": "#4B46F64D",
+      "category": "extracted",
+      "source": "Button",
+      "usage": 1
+    },
+    {
+      "name": "button-effect",
+      "value": "#7B00FF42",
+      "category": "extracted",
+      "source": "Button",
+      "usage": 1
+    },
+    {
+      "name": "button-effect",
+      "value": "#4E5AC233",
+      "category": "extracted",
+      "source": "Button",
+      "usage": 1
+    },
+    {
+      "name": "glass-button-effect",
+      "value": "#F6F9FF33",
+      "category": "extracted",
+      "source": "Glass Button",
+      "usage": 1
+    },
+    {
+      "name": "active-off-effect",
+      "value": "#0000004C",
+      "category": "foundation",
+      "source": "Active=Off",
+      "usage": 4
+    },
+    {
+      "name": "left-effect",
+      "value": "#0000004D",
+      "category": "foundation",
+      "source": "Left",
+      "usage": 4
+    },
+    {
+      "name": "ellipse-effect",
+      "value": "#00000033",
+      "category": "foundation",
+      "source": "Ellipse ",
+      "usage": 5
+    },
+    {
+      "name": "active-on-fill",
+      "value": "#060715FF",
+      "category": "extracted",
+      "source": "Active=On",
+      "usage": 1
+    },
+    {
+      "name": "ellipse-stroke",
+      "value": "#FFFFFF4D",
+      "category": "extracted",
+      "source": "Ellipse ",
+      "usage": 3
+    },
+    {
+      "name": "number-fill",
+      "value": "#6792FFFF",
+      "category": "accent",
+      "source": "Number",
+      "usage": 2
+    },
+    {
+      "name": "12-fill",
+      "value": "#FFFFFFB2",
+      "category": "extracted",
+      "source": "12",
+      "usage": 30
+    },
+    {
+      "name": "-fill",
+      "value": "#FFFFFF99",
+      "category": "extracted",
+      "source": "􀆄",
+      "usage": 125
+    },
+    {
+      "name": "close-fill",
+      "value": "#FF3B30FF",
+      "category": "accent",
+      "source": "Close",
+      "usage": 1
+    },
+    {
+      "name": "minimize-fill",
+      "value": "#34C759FF",
+      "category": "accent",
+      "source": "Minimize",
+      "usage": 2
+    },
+    {
+      "name": "27-fill",
+      "value": "#080415FF",
+      "category": "extracted",
+      "source": "27",
+      "usage": 3
+    },
+    {
+      "name": "ellipse-1-fill",
+      "value": "#644BED99",
+      "category": "extracted",
+      "source": "Ellipse 1",
+      "usage": 2
+    },
+    {
+      "name": "all-products-fill",
+      "value": "#19BCFEFF",
+      "category": "accent",
+      "source": "All Products",
+      "usage": 4
+    },
+    {
+      "name": "base-fill",
+      "value": "#08041580",
+      "category": "extracted",
+      "source": "Base",
+      "usage": 1
+    },
+    {
+      "name": "ellipse-1-fill",
+      "value": "#0057FF75",
+      "category": "extracted",
+      "source": "Ellipse 1",
+      "usage": 3
+    },
+    {
+      "name": "most-popular-button-effect",
+      "value": "#351EA1FF",
+      "category": "extracted",
+      "source": "Most Popular Button",
+      "usage": 2
+    },
+    {
+      "name": "button-circle-fill",
+      "value": "#1E1155FF",
+      "category": "extracted",
+      "source": "Button Circle",
+      "usage": 1
+    },
+    {
+      "name": "button-circle-effect",
+      "value": "#381EA3FF",
+      "category": "extracted",
+      "source": "Button Circle",
+      "usage": 4
+    },
+    {
+      "name": "ellipse-1-fill",
+      "value": "#644BEDFF",
+      "category": "extracted",
+      "source": "Ellipse 1",
+      "usage": 1
+    },
+    {
+      "name": "rectangle-866-fill",
+      "value": "#000000CC",
+      "category": "foundation",
+      "source": "Rectangle 866",
+      "usage": 11
+    },
+    {
+      "name": "filters-card-fill",
+      "value": "#0A0B14FF",
+      "category": "extracted",
+      "source": "Filters Card",
+      "usage": 1
+    },
+    {
+      "name": "rectangle-125-stroke",
+      "value": "#FFECECFF",
+      "category": "extracted",
+      "source": "Rectangle 125",
+      "usage": 1
+    },
+    {
+      "name": "button-circle-fill",
+      "value": "#0D122AFF",
+      "category": "extracted",
+      "source": "Button Circle",
+      "usage": 2
+    },
+    {
+      "name": "ellipse-1-fill",
+      "value": "#1967FFFF",
+      "category": "extracted",
+      "source": "Ellipse 1",
+      "usage": 1
+    },
+    {
+      "name": "ellipse-1461-fill",
+      "value": "#414052FF",
+      "category": "extracted",
+      "source": "Ellipse 1461",
+      "usage": 19
+    },
+    {
+      "name": "vector-fill",
+      "value": "#09CF83FF",
+      "category": "accent",
+      "source": "Vector",
+      "usage": 3
+    },
+    {
+      "name": "vector-fill",
+      "value": "#A259FFFF",
+      "category": "accent",
+      "source": "Vector",
+      "usage": 3
+    },
+    {
+      "name": "vector-fill",
+      "value": "#F24E1EFF",
+      "category": "accent",
+      "source": "Vector",
+      "usage": 3
+    },
+    {
+      "name": "vector-fill",
+      "value": "#FF7262FF",
+      "category": "accent",
+      "source": "Vector",
+      "usage": 3
+    },
+    {
+      "name": "vector-fill",
+      "value": "#FF9A00FF",
+      "category": "accent",
+      "source": "Vector",
+      "usage": 6
+    },
+    {
+      "name": "vector-fill",
+      "value": "#31A8FFFF",
+      "category": "accent",
+      "source": "Vector",
+      "usage": 6
+    },
+    {
+      "name": "vector-fill",
+      "value": "#FF61F6FF",
+      "category": "accent",
+      "source": "Vector",
+      "usage": 6
+    },
+    {
+      "name": "path-fill",
+      "value": "#FDB300FF",
+      "category": "accent",
+      "source": "Path",
+      "usage": 5
+    },
+    {
+      "name": "path-fill",
+      "value": "#EA6C00FF",
+      "category": "accent",
+      "source": "Path",
+      "usage": 10
+    },
+    {
+      "name": "path-fill",
+      "value": "#FDAD00FF",
+      "category": "accent",
+      "source": "Path",
+      "usage": 15
+    },
+    {
+      "name": "path-fill",
+      "value": "#FDD231FF",
+      "category": "accent",
+      "source": "Path",
+      "usage": 10
+    },
+    {
+      "name": "path-fill",
+      "value": "#FEEEB7FF",
+      "category": "extracted",
+      "source": "Path",
+      "usage": 5
+    },
+    {
+      "name": "ellipse-1461-fill",
+      "value": "#29283EFF",
+      "category": "extracted",
+      "source": "Ellipse 1461",
+      "usage": 8
+    },
+    {
+      "name": "header-fill",
+      "value": "#0804154D",
+      "category": "extracted",
+      "source": "Header",
+      "usage": 1
+    },
+    {
+      "name": "main-content-effect",
+      "value": "#094173A6",
+      "category": "extracted",
+      "source": "Main Content",
+      "usage": 1
+    },
+    {
+      "name": "main-content-effect",
+      "value": "#0B1532FF",
+      "category": "extracted",
+      "source": "Main Content",
+      "usage": 1
+    },
+    {
+      "name": "state-normal-fill",
+      "value": "#4E177CFF",
+      "category": "extracted",
+      "source": "State=Normal",
+      "usage": 1
+    },
+    {
+      "name": "state-hover-fill",
+      "value": "#4E177C80",
+      "category": "extracted",
+      "source": "State=Hover",
+      "usage": 2
+    }
+  ],
+  "timestamp": "2025-12-03T06:32:26.587Z",
+  "figmaFileKey": "unknown",
+  "extractedFrom": "Text Buttons, Symbols | Icons, Menu Buttons, Guide, Info | Progress, Custom Buttons, Top, 27, Text Buttons"
+}

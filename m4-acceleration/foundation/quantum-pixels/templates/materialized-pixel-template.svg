@@ -1,0 +1,38 @@
+<svg width="{{size}}" height="{{size}}" viewBox="0 0 {{size}} {{size}}" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="glow-materialized" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="{{glowIntensity}}" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <linearGradient id="materializedGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="{{color}}" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="{{color}}" stop-opacity="1"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Main pixel shape -->
+  <rect
+    x="0"
+    y="0"
+    width="{{size}}"
+    height="{{size}}"
+    rx="{{borderRadius}}"
+    fill="url(#materializedGradient)"
+    filter="url(#glow-materialized)"
+    class="quantum-pixel materialized-state"
+  />
+  
+  <!-- Highlight edge -->
+  <rect
+    x="{{highlightOffset}}"
+    y="{{highlightOffset}}"
+    width="{{highlightSize}}"
+    height="{{highlightSize}}"
+    rx="{{highlightRadius}}"
+    stroke="{{accentColor}}"
+    stroke-width="1"
+    fill="none"
+    opacity="0.3"
+    class="pixel-highlight"
+  />
+</svg>

@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <!-- Background -->
+  <rect width="800" height="500" fill="#0A0621" />
+  
+  <!-- Grid background -->
+  <g opacity="0.1">
+    <!-- Horizontal grid lines with perspective effect -->
+    <path d="M200,450 L600,450" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M150,400 L650,400" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M125,350 L675,350" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M100,300 L700,300" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M90,250 L710,250" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M80,200 L720,200" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M70,150 L730,150" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M60,100 L740,100" stroke="#5AC8FA" stroke-width="1" />
+    
+    <!-- Vertical grid lines -->
+    <path d="M200,100 L200,450" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M250,100 L250,450" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M300,100 L300,450" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M350,100 L350,450" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M400,100 L400,450" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M450,100 L450,450" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M500,100 L500,450" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M550,100 L550,450" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M600,100 L600,450" stroke="#5AC8FA" stroke-width="1" />
+  </g>
+  
+  <!-- Title -->
+  <text x="400" y="50" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" font-size="24" font-weight="bold" fill="#FFFFFF" text-anchor="middle">PlayCanvas + WebGPU: Interactive Fiction Made Visual</text>
+  
+  <!-- PlayCanvas IDE Visualization -->
+  <g transform="translate(110, 100)">
+    <rect x="0" y="0" width="580" height="300" rx="10" fill="#131A36" stroke="#5AC8FA" stroke-width="2" />
+    
+    <!-- IDE Header -->
+    <rect x="0" y="0" width="580" height="30" rx="10" fill="#331F4A" />
+    <circle cx="20" cy="15" r="6" fill="#BF4080" />
+    <circle cx="40" cy="15" r="6" fill="#FF6B57" />
+    <circle cx="60" cy="15" r="6" fill="#2D854D" />
+    <text x="290" y="20" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">PlayCanvas Editor</text>
+    
+    <!-- Left Panel - Assets -->
+    <rect x="0" y="30" width="140" height="270" fill="#0D0D15" />
+    <text x="70" y="50" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle">Assets</text>
+    
+    <!-- Asset Items -->
+    <rect x="10" y="60" width="120" height="20" rx="4" fill="#331F4A" opacity="0.7" />
+    <text x="40" y="75" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#FFFFFF">Scenes</text>
+    
+    <rect x="10" y="85" width="120" height="20" rx="4" fill="#331F4A" opacity="0.7" />
+    <text x="40" y="100" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#FFFFFF">Characters</text>
+    
+    <rect x="10" y="110" width="120" height="20" rx="4" fill="#6A3093" />
+    <text x="40" y="125" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#FFFFFF">Narrative</text>
+    
+    <rect x="10" y="135" width="120" height="20" rx="4" fill="#331F4A" opacity="0.7" />
+    <text x="40" y="150" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#FFFFFF">Environments</text>
+    
+    <rect x="10" y="160" width="120" height="20" rx="4" fill="#331F4A" opacity="0.7" />
+    <text x="40" y="175" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#FFFFFF">Materials</text>
+    
+    <!-- Center Panel - Scene View -->
+    <rect x="140" y="30" width="300" height="270" fill="#0A0621" />
+    
+    <!-- 3D Scene with interactive fiction environment -->
+    <g>
+      <!-- Stylized room environment -->
+      <path d="M140,300 L440,300 L440,120 L365,70 L215,70 L140,120 Z" fill="#131A36" />
+      <path d="M195,300 L385,300 L385,150 L332,120 L248,120 L195,150 Z" fill="#331F4A" />
+      
+      <!-- Windows with glow -->
+      <rect x="200" y="100" width="40" height="60" fill="#5AC8FA" opacity="0.3" />
+      <rect x="340" y="100" width="40" height="60" fill="#5AC8FA" opacity="0.3" />
+      
+      <!-- Character silhouette with quantum effect -->
+      <g transform="translate(290, 230)">
+        <!-- Basic character shape -->
+        <path d="M0,0 C-5,-15 -15,-30 -10,-40 C-5,-50 5,-50 10,-40 C15,-30 5,-15 0,0" fill="#6A3093" />
+        <rect x="-15" y="0" width="30" height="45" rx="10" fill="#6A3093" />
+        
+        <!-- Quantum pixel effect -->
+        <rect x="-12" y="10" width="6" height="6" fill="#5AC8FA" opacity="0.8" />
+        <rect x="6" y="22" width="6" height="6" fill="#5AC8FA" opacity="0.8" />
+        <rect x="-8" y="32" width="6" height="6" fill="#5AC8FA" opacity="0.8" />
+      </g>
+      
+      <!-- Narrative text with glow effect -->
+      <g transform="translate(290, 170)">
+        <rect x="-80" y="-15" width="160" height="30" rx="15" fill="#0A0621" opacity="0.7" stroke="#5AC8FA" stroke-width="1" />
+        <text x="0" y="5" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle">The door creaks as you enter...</text>
+      </g>
+    </g>
+    
+    <!-- Right Panel - Properties & Ink Script -->
+    <rect x="440" y="30" width="140" height="270" fill="#0D0D15" />
+    <text x="510" y="50" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle">Ink Script</text>
+    
+    <!-- Script Code -->
+    <g transform="translate(450, 65)">
+      <text x="0" y="15" font-family="'SF Mono', monospace" font-size="9" fill="#BF4080">// Scene dialog</text>
+      <text x="0" y="30" font-family="'SF Mono', monospace" font-size="9" fill="#5AC8FA">VAR fear_level = 0</text>
+      <text x="0" y="45" font-family="'SF Mono', monospace" font-size="9" fill="#FFFFFF">The door creaks as you enter...</text>
+      <text x="0" y="60" font-family="'SF Mono', monospace" font-size="9" fill="#FFFFFF">* [Look around]</text>
+      <text x="0" y="75" font-family="'SF Mono', monospace" font-size="9" fill="#5AC8FA">  -> examine_room</text>
+      <text x="0" y="90" font-family="'SF Mono', monospace" font-size="9" fill="#FFFFFF">* [Call out]</text>
+      <text x="0" y="105" font-family="'SF Mono', monospace" font-size="9" fill="#5AC8FA">  -> call_out</text>
+      <text x="0" y="120" font-family="'SF Mono', monospace" font-size="9" fill="#FFFFFF">* [Step back]</text>
+      <text x="0" y="135" font-family="'SF Mono', monospace" font-size="9" fill="#5AC8FA">  {fear_level++}</text>
+      <text x="0" y="150" font-family="'SF Mono', monospace" font-size="9" fill="#5AC8FA">  -> entrance</text>
+    </g>
+  </g>
+  
+  <!-- Key Benefits -->
+  <g transform="translate(150, 420)">
+    <text x="0" y="0" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF">Key Benefits</text>
+    
+    <!-- Benefits with quantum pixel bullets -->
+    <g transform="translate(0, 20)">
+      <rect x="0" y="-8" width="8" height="8" fill="#5AC8FA" />
+      <rect x="8" y="-8" width="8" height="8" fill="#6A3093" />
+      <text x="25" y="0" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="14" fill="#FFFFFF">Metal-accelerated 60-90 FPS on M4</text>
+    </g>
+    
+    <g transform="translate(0, 45)">
+      <rect x="0" y="-8" width="8" height="8" fill="#5AC8FA" />
+      <rect x="8" y="-8" width="8" height="8" fill="#6A3093" />
+      <text x="25" y="0" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="14" fill="#FFFFFF">Visual editor with drag-and-drop interface</text>
+    </g>
+    
+    <g transform="translate(400, 20)">
+      <rect x="0" y="-8" width="8" height="8" fill="#5AC8FA" />
+      <rect x="8" y="-8" width="8" height="8" fill="#6A3093" />
+      <text x="25" y="0" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="14" fill="#FFFFFF">Direct ML-Ink integration</text>
+    </g>
+    
+    <g transform="translate(400, 45)">
+      <rect x="0" y="-8" width="8" height="8" fill="#5AC8FA" />
+      <rect x="8" y="-8" width="8" height="8" fill="#6A3093" />
+      <text x="25" y="0" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="14" fill="#FFFFFF">Rapid prototyping for all platforms</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,156 @@
+{
+  "extends": "../tsconfig.base.json",
+
+  "compilerOptions": {
+    "composite": true,
+    "outDir": "./dist",
+    "rootDir": "./",
+
+    "jsx": "preserve",
+
+    "allowJs": true,
+    "checkJs": false,
+    "resolveJsonModule": true,
+    "noPropertyAccessFromIndexSignature": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+
+    "types": [
+      "node"
+    ],
+    
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./*"],
+      "@/asset-pipeline/*": ["./asset-pipeline/*"],
+      "@/components/*": ["./components/*"],
+      "@/components-index/*": ["./components/index*"],
+      "@/architecture/*": ["./architecture/*"],
+      "@/catalog/*": ["./catalog/*"],
+      "@/catalog-analysis/*": ["./catalog/analysis*"],
+      "@/catalog-inventory/*": ["./catalog/inventory*"],
+      "@/catalog-reports/*": ["./catalog/reports*"],
+      "@/pixels/*": ["./components/pixels*"],
+      "@/quantum-pixels/*": ["./components/quantum-pixels*"],
+      "@/templates/*": ["./components/templates*"],
+      "@/voxels/*": ["./components/voxels*"],
+      "@/integrations/*": ["./integrations/*"],
+      "@/utils/*": ["./utils/*"],
+      "@/m4-acceleration/*": ["./m4-acceleration/*"],
+      "@/asset-pipeline/*": ["./asset-pipeline/*"],
+        
+      "@quantum-spatial/design-system/tokens": ["./tokens"],
+      "@quantum-spatial/design-system/tokens/*": ["./tokens/*"],
+      "@quantum-spatial/oksana-bridge": ["../oksana-bridge/src"],
+        
+      "@validation/*": ["../../validation/*"],
+      "@oksana/types/*": ["../../types/*"],
+      "@oksana/services/*": ["../../scripts/services/*"],
+      "@oksana/foundation/*": ["../../apple-intelligence/foundation/*"],
+      "@oksana/security/*": ["../../security/*"],
+      
+      "@apple-intelligence/*": [
+        "../../apple-intelligence/*",
+        "../../apple-intelligence/enhanced-mcp-strategic-director",
+        "../../apple-intelligence/apple-intelligence-orchestrator-integration.js",
+        "../../apple-intelligence/mcp-servers/*"
+      ],
+      "@strategic-director/*": [
+        "../../validation/strategic-director-auto-integration*"
+      ],
+      
+      "@apple-hig/*": [
+        "../../validation/enhanced-apple-hig-qa-validator",
+        "../../validation/enhanced-apple-hig-qa-validator*"
+      ],
+      "@hig-validator/*": [
+        "./validation/enhanced-hig-validator/*",
+        "../../validation/enhanced-hig-validator/*"
+      ],
+      
+      "@tokens/*": [
+        "./tokens/*",
+        "./assets/tokens/*",
+        "./scripts/services/types/tokens.d.ts",
+        "../../Oksana/types/tokens/*",
+        "../../quantum-spatial/design-system/tokens/*"
+      ],
+      "@quantum-spatial/*": [
+        "../../quantum-spatial/design-system/*",
+        "../../quantum-spatial/design-system/quantum-spatial-design-system/*",
+        "../../Oksana/quantum-spatial/*"
+      ],
+      
+      "@theme/*": ["./src/*", "./*"],
+      "@assets/*": ["./assets/*"],
+      "@snippets/*": ["./snippets/*"],
+      "@sections/*": ["./sections/*"],
+      "@templates/*": ["./templates/*"],
+      "@locales/*": ["./locales/*"],
+      "@config/*": ["./config/*"],
+      
+      "@liquid-types/*": [
+        "./types/liquid/*",
+        "./types/*"
+      ],
+      "@theme-types/*": [
+        "./types/theme/*",
+        "./types/*"
+      ],
+      "@shopify-types/*": [
+        "./types/shopify/*"
+      ],
+      
+      "@bridge/*": [
+        "../oksana-bridge/src/*",
+        "../../xcode-model-bridge/*",
+        "../../OksanaPlatform/OksanaPlatform/Core/Bridges/*"
+      ],
+      
+      "@qa/*": [
+        "./qa/*",
+        "./validation/*"
+      ],
+      "@validation/*": [
+        "./validation/*"
+      ]
+    }
+  },
+  
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "types/**/*.d.ts",
+
+    "validation/**/*.ts",
+    "qa/**/*.ts",
+
+    "*.ts"
+  ],
+  
+  "exclude": [
+    "node_modules",
+    "dist",
+    ".shopify",
+    ".theme-check",
+    "coverage",
+
+    "assets/*.liquid.js",
+    "assets/*.min.js",
+
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.spec.ts",
+    "**/*.spec.tsx",
+
+    "asset-pipeline/extracted-assets/**/*",
+    "asset-pipeline/batch-processing/tsx-queue/**/*",
+    "asset-pipeline/automation/**/*",
+    "asset-pipeline/resources/**/*",
+    "documentation/**/*",
+    "tools/**/*",
+    "tokens/brand/token_storage_organization.ts"
+  ],
+  
+  "references": []
+}

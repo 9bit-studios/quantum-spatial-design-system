@@ -1,0 +1,66 @@
+{
+  "_meta": {
+    "name": "Quantum",
+    "description": "Fully dimensional spatial design system",
+    "version": "1.0.0"
+  },
+  "colors": {
+    "primary": "#131A36",
+    "secondary": "#331F4A",
+    "accent": "#5AC8FA",
+    "background": {
+      "light": "#FFFFFF",
+      "dark": "#121212"
+    },
+    "text": {
+      "light": "#0F0F0F",
+      "dark": "#F5F5F5"
+    },
+    "surface": {
+      "light": "#F9FAFB",
+      "dark": "#1E1E1E"
+    },
+    "border": {
+      "light": "#E2E8F0",
+      "dark": "#2D2D2D"
+    },
+    "success": "#00D26A",
+    "warning": "#FFB800",
+    "error": "#FF4D4F"
+  },
+  "typography": {
+    "fontFamily": "SF Pro Display, SF Pro, system-ui, sans-serif",
+    "baseSize": "16px",
+    "scale": 1.414
+  },
+  "spacing": {
+    "unit": "4px",
+    "grid": 4,
+    "scale": {
+      "2xs": "2px",
+      "xs": "4px",
+      "sm": "8px",
+      "md": "16px",
+      "lg": "32px",
+      "xl": "64px",
+      "2xl": "96px",
+      "3xl": "128px"
+    }
+  },
+  "borderRadius": {
+    "small": "8px",
+    "medium": "12px",
+    "large": "20px",
+    "xl": "28px",
+    "pill": "999px"
+  },
+  "m4": {
+    "optimizations": {
+      "useNeuralEngine": true,
+      "useMetal": true,
+      "useProMotion": true,
+      "memoryOptimization": "balanced",
+      "renderQuality": "high"
+    }
+  }
+}

@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RunSmart - Today</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', system-ui, sans-serif;
+            background: #000000;
+            color: #FFFFFF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* iPhone 15 Pro Frame */
+        .phone-frame {
+            width: 393px;
+            height: 852px;
+            background: #000;
+            border-radius: 55px;
+            padding: 12px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8),
+                        inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Dynamic Island */
+        .dynamic-island {
+            position: absolute;
+            top: 12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 126px;
+            height: 37px;
+            background: #000;
+            border-radius: 20px;
+            z-index: 100;
+        }
+
+        .screen {
+            width: 100%;
+            height: 100%;
+            background: #000;
+            border-radius: 47px;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
+        /* Status Bar */
+        .status-bar {
+            padding: 54px 24px 12px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        .time {
+            color: #FFF;
+        }
+
+        .status-icons {
+            display: flex;
+            gap: 6px;
+            align-items: center;
+            color: #FFF;
+        }
+
+        /* Main Content */
+        .content {
+            padding: 0 24px 100px 24px;
+        }
+
+        /* Header */
+        .header {
+            margin-bottom: 32px;
+        }
+
+        .greeting {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .streak-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(205, 255, 0, 0.15);
+            border: 1px solid #CDFF00;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            color: #CDFF00;
+            margin-top: 8px;
+        }
+
+        /* Hero Workout Card */
+        .hero-card {
+            background: linear-gradient(135deg, #0A0A0A 0%, #0A1A0A 100%);
+            border: 1px solid #1A1A1A;
+            border-radius: 24px;
+            padding: 24px;
+            margin-bottom: 24px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #CDFF00 0%, #A0CC00 100%);
+        }
+
+        .ai-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            background: rgba(205, 255, 0, 0.1);
+            border: 1px solid #CDFF00;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 700;
+            color: #CDFF00;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 16px;
+        }
+
+        .workout-title {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .workout-meta {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 16px;
+            font-size: 15px;
+            color: #888;
+        }
+
+        .workout-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .why-section {
+            background: rgba(205, 255, 0, 0.05);
+            border-left: 2px solid #CDFF00;
+            padding: 12px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        .why-title {
+            font-size: 12px;
+            font-weight: 600;
+            color: #CDFF00;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+            letter-spacing: 0.5px;
+        }
+
+        .why-text {
+            font-size: 14px;
+            color: #CCC;
+            line-height: 1.5;
+        }
+
+        .start-button {
+            width: 100%;
+            padding: 18px;
+            background: #CDFF00;
+            color: #000;
+            border: none;
+            border-radius: 16px;
+            font-size: 17px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .start-button:active {
+            transform: scale(0.98);
+            background: #E0FF33;
+        }
+
+        /* Progress Ring */
+        .progress-section {
+            background: #0A0A0A;
+            border: 1px solid #1A1A1A;
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .progress-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .progress-title {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .progress-value {
+            font-size: 14px;
+            color: #CDFF00;
+            font-weight: 700;
+        }
+
+        .ring-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .progress-ring {
+            width: 160px;
+            height: 160px;
+            position: relative;
+        }
+
+        .ring-svg {
+            transform: rotate(-90deg);
+        }
+
+        .ring-background {
+            fill: none;
+            stroke: #1A1A1A;
+            stroke-width: 12;
+        }
+
+        .ring-progress {
+            fill: none;
+            stroke: url(#gradient);
+            stroke-width: 12;
+            stroke-linecap: round;
+            stroke-dasharray: 440;
+            stroke-dashoffset: 110; /* 75% progress */
+            transition: stroke-dashoffset 0.5s ease;
+        }
+
+        .ring-center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .ring-percentage {
+            font-size: 40px;
+            font-weight: 700;
+            color: #CDFF00;
+        }
+
+        .ring-label {
+            font-size: 12px;
+            color: #888;
+            text-transform: uppercase;
+        }
+
+        .progress-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+        }
+
+        .stat-mini {
+            text-align: center;
+        }
+
+        .stat-mini-value {
+            font-size: 18px;
+            font-weight: 700;
+            color: #CDFF00;
+            margin-bottom: 2px;
+        }
+
+        .stat-mini-label {
+            font-size: 11px;
+            color: #666;
+            text-transform: uppercase;
+        }
+
+        /* Quick Stats */
+        .quick-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .quick-stat-card {
+            background: #0A0A0A;
+            border: 1px solid #1A1A1A;
+            border-radius: 16px;
+            padding: 16px;
+        }
+
+        .quick-stat-icon {
+            width: 32px;
+            height: 32px;
+            background: rgba(205, 255, 0, 0.1);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 12px;
+            font-size: 18px;
+        }
+
+        .quick-stat-value {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .quick-stat-label {
+            font-size: 12px;
+            color: #888;
+        }
+
+        .quick-stat-change {
+            font-size: 11px;
+            color: #CDFF00;
+            font-weight: 600;
+            margin-top: 4px;
+        }
+
+        /* Bottom Tab Bar */
+        .tab-bar {
+            position: fixed;
+            bottom: 12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 369px;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid #1A1A1A;
+            border-radius: 24px;
+            padding: 12px 20px;
+            display: flex;
+            justify-content: space-around;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .tab-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .tab-icon {
+            font-size: 24px;
+            opacity: 0.5;
+            transition: all 0.2s;
+        }
+
+        .tab-label {
+            font-size: 10px;
+            color: #888;
+            font-weight: 500;
+        }
+
+        .tab-item.active .tab-icon {
+            opacity: 1;
+            filter: drop-shadow(0 0 8px #CDFF00);
+        }
+
+        .tab-item.active .tab-label {
+            color: #CDFF00;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="phone-frame">
+        <div class="dynamic-island"></div>
+
+        <div class="screen">
+            <div class="status-bar">
+                <div class="time">9:41</div>
+                <div class="status-icons">
+                    <span>📶</span>
+                    <span>🔋</span>
+                </div>
+            </div>
+
+            <div class="content">
+                <div class="header">
+                    <div class="greeting">Good morning,<br>Sarah</div>
+                    <div class="streak-badge">
+                        🔥 12 day streak
+                    </div>
+                </div>
+
+                <div class="hero-card">
+                    <div class="ai-badge">⚡ AI Intelligence</div>
+                    <div class="workout-title">Easy Recovery Run</div>
+                    <div class="workout-meta">
+                        <div class="workout-meta-item">
+                            <span>⏱️</span>
+                            <span>30 min</span>
+                        </div>
+                        <div class="workout-meta-item">
+                            <span>📏</span>
+                            <span>3.5 miles</span>
+                        </div>
+                        <div class="workout-meta-item">
+                            <span>💓</span>
+                            <span>Zone 2</span>
+                        </div>
+                    </div>
+                    <div class="why-section">
+                        <div class="why-title">Why this workout?</div>
+                        <div class="why-text">Your pace improved 8% this week. Today's easy run will help your body adapt while maintaining momentum toward your 10K goal.</div>
+                    </div>
+                    <button class="start-button">Start Run</button>
+                </div>
+
+                <div class="progress-section">
+                    <div class="progress-header">
+                        <div class="progress-title">Weekly Goal</div>
+                        <div class="progress-value">15/20 miles</div>
+                    </div>
+                    <div class="ring-container">
+                        <div class="progress-ring">
+                            <svg class="ring-svg" width="160" height="160">
+                                <defs>
+                                    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                        <stop offset="0%" style="stop-color:#CDFF00;stop-opacity:1" />
+                                        <stop offset="100%" style="stop-color:#A0CC00;stop-opacity:1" />
+                                    </linearGradient>
+                                </defs>
+                                <circle class="ring-background" cx="80" cy="80" r="70" />
+                                <circle class="ring-progress" cx="80" cy="80" r="70" />
+                            </svg>
+                            <div class="ring-center">
+                                <div class="ring-percentage">75%</div>
+                                <div class="ring-label">Complete</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="progress-stats">
+                        <div class="stat-mini">
+                            <div class="stat-mini-value">4</div>
+                            <div class="stat-mini-label">Runs</div>
+                        </div>
+                        <div class="stat-mini">
+                            <div class="stat-mini-value">136</div>
+                            <div class="stat-mini-label">Min</div>
+                        </div>
+                        <div class="stat-mini">
+                            <div class="stat-mini-value">1,847</div>
+                            <div class="stat-mini-label">Cal</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="quick-stats">
+                    <div class="quick-stat-card">
+                        <div class="quick-stat-icon">🏃</div>
+                        <div class="quick-stat-value">8:24</div>
+                        <div class="quick-stat-label">Avg Pace</div>
+                        <div class="quick-stat-change">↑ 8% faster</div>
+                    </div>
+                    <div class="quick-stat-card">
+                        <div class="quick-stat-icon">💚</div>
+                        <div class="quick-stat-value">142</div>
+                        <div class="quick-stat-label">Avg HR</div>
+                        <div class="quick-stat-change">Zone 2 optimal</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-bar">
+                <div class="tab-item active">
+                    <div class="tab-icon">🏠</div>
+                    <div class="tab-label">Today</div>
+                </div>
+                <div class="tab-item">
+                    <div class="tab-icon">📅</div>
+                    <div class="tab-label">Calendar</div>
+                </div>
+                <div class="tab-item">
+                    <div class="tab-icon">📊</div>
+                    <div class="tab-label">Progress</div>
+                </div>
+                <div class="tab-item">
+                    <div class="tab-icon">💬</div>
+                    <div class="tab-label">Coach</div>
+                </div>
+                <div class="tab-item">
+                    <div class="tab-icon">👥</div>
+                    <div class="tab-label">Community</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

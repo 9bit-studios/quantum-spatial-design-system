@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cache Cleanup Guide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 30px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            color: white;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+            font-weight: 300;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .cache-category {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .category-title {
+            color: #FFD700;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .icon {
+            width: 24px;
+            height: 24px;
+        }
+        
+        .cache-list {
+            list-style: none;
+        }
+        
+        .cache-item {
+            color: white;
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .cache-item:last-child {
+            border-bottom: none;
+        }
+        
+        .cache-path {
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        .size-estimate {
+            font-size: 0.8rem;
+            color: #4FC3F7;
+            background: rgba(79, 195, 247, 0.2);
+            padding: 2px 8px;
+            border-radius: 10px;
+        }
+        
+        .cleanup-commands {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            padding: 25px;
+            margin-top: 20px;
+        }
+        
+        .command-title {
+            color: #FFD700;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+        
+        .command {
+            background: rgba(0, 0, 0, 0.5);
+            color: #00FF00;
+            padding: 10px 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+            font-family: 'Monaco', 'Menlo', monospace;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .command:hover {
+            background: rgba(0, 0, 0, 0.7);
+            transform: translateY(-2px);
+        }
+        
+        .warning {
+            background: rgba(255, 152, 0, 0.2);
+            border: 1px solid rgba(255, 152, 0, 0.5);
+            border-radius: 10px;
+            padding: 15px;
+            margin: 20px 0;
+            color: #FFB74D;
+        }
+        
+        .safe-badge {
+            background: rgba(76, 175, 80, 0.3);
+            color: #81C784;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+        }
+        
+        .caution-badge {
+            background: rgba(255, 152, 0, 0.3);
+            color: #FFB74D;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #4FC3F7;
+        }
+        
+        .stat-label {
+            color: white;
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧹 System Cache Cleanup Guide</h1>
+        
+        <div class="grid">
+            <div class="cache-category">
+                <div class="category-title">
+                    <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2L2 7v10c0 5.55 3.84 9.95 9 11 5.16-1.05 9-5.45 9-11V7l-10-5z"/>
+                    </svg>
+                    Safe to Remove
+                </div>
+                <ul class="cache-list">
+                    <li class="cache-item">
+                        <span class="cache-path">node_modules/</span>
+                        <div>
+                            <span class="size-estimate">~500MB</span>
+                            <span class="caution-badge">Live Risk</span>
+                        </div>
+                    </li>
+                    <li class="cache-item">
+                        <span class="cache-path">dist/ or build/</span>
+                        <div>
+                            <span class="size-estimate">~50MB</span>
+                            <span class="safe-badge">Safe</span>
+                        </div>
+                    </li>
+                    <li class="cache-item">
+                        <span class="cache-path">.next/</span>
+                        <div>
+                            <span class="size-estimate">~100MB</span>
+                            <span class="safe-badge">Safe</span>
+                        </div>
+                    </li>
+                    <li class="cache-item">
+                        <span class="cache-path">~/.npm/</span>
+                        <div>
+                            <span class="size-estimate">~200MB</span>
+                            <span class="safe-badge">Safe</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="cache-category">
+                <div class="category-title">
+                    <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    Project Specific
+                </div>
+                <ul class="cache-list">
+                    <li class="cache-item">
+                        <span class="cache-path">component-catalog.json</span>
+                        <div>
+                            <span class="size-estimate">~1MB</span>
+                            <span class="safe-badge">Safe</span>
+                        </div>
+                    </li>
+                    <li class="cache-item">
+                        <span class="cache-path">reorganize-components.sh</span>
+                        <div>
+                            <span class="size-estimate">~5KB</span>
+                            <span class="safe-badge">Safe</span>
+                        </div>
+                    </li>
+                    <li class="cache-item">
+                        <span class="cache-path">.tsbuildinfo</span>
+                        <div>
+                            <span class="size-estimate">~500KB</span>
+                            <span class="safe-badge">Safe</span>
+                        </div>
+                    </li>
+                    <li class="cache-item">
+                        <span class="cache-path">*.log files</span>
+                        <div>
+                            <span class="size-estimate">~10MB</span>
+                            <span class="safe-badge">Safe</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="cache-category">
+                <div class="category-title">
+                    <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 9a3 3 0 11-6 0 3 3 0 016 0zM12 1l9 5v4c0 7-5 13-9 16-4-3-9-9-9-16V6l9-5z"/>
+                    </svg>
+                    Use Caution
+                </div>
+                <ul class="cache-list">
+                    <li class="cache-item">
+                        <span class="cache-path">package-lock.json</span>
+                        <div>
+                            <span class="size-estimate">~1MB</span>
+                            <span class="caution-badge">Caution</span>
+                        </div>
+                    </li>
+                    <li class="cache-item">
+                        <span class="cache-path">.env.local</span>
+                        <div>
+                            <span class="size-estimate">~1KB</span>
+                            <span class="caution-badge">Caution</span>
+                        </div>
+                    </li>
+                    <li class="cache-item">
+                        <span class="cache-path">.git/objects/</span>
+                        <div>
+                            <span class="size-estimate">~50MB</span>
+                            <span class="caution-badge">Caution</span>
+                        </div>
+                    </li>
+                    <li class="cache-item">
+                        <span class="cache-path">Database backups</span>
+                        <div>
+                            <span class="size-estimate">Varies</span>
+                            <span class="caution-badge">Caution</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="warning">
+            ⚠️ <strong>Before cleaning:</strong> Ensure you have backups and your Git repository is up to date. Test in development environment first.
+        </div>
+        
+        <div class="cleanup-commands">
+            <div class="command-title">🦄 Quick Cleanup Commands</div>
+            
+            <div class="command" onclick="copyToClipboard(this)">
+                # Clean npm cache (safe for live projects)
+                npm cache clean --force
+            </div>
+            
+            <div class="command" onclick="copyToClipboard(this)">
+                # Remove unused packages
+                npm prune
+            </div>
+            
+            <div class="command" onclick="copyToClipboard(this)">
+                # Clean build artifacts
+                rm -rf dist build .next
+            </div>
+            
+            <div class="command" onclick="copyToClipboard(this)">
+                # Clean TypeScript cache
+                rm -f *.tsbuildinfo
+            </div>
+            
+            <div class="command" onclick="copyToClipboard(this)">
+                # Clean your project analysis files
+                rm -f component-catalog.json reorganize-components.sh
+            </div>
+        </div>
+        
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-number">~850MB</div>
+                <div class="stat-label">Potential Space Saved</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">15</div>
+                <div class="stat-label">Cache Types</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">5</div>
+                <div class="stat-label">Minutes to Clean</div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function copyToClipboard(element) {
+            const text = element.textContent.trim();
+            navigator.clipboard.writeText(text).then(() => {
+                const original = element.style.background;
+                element.style.background = 'rgba(76, 175, 80, 0.5)';
+                element.innerHTML = '✓ Copied to clipboard!';
+                
+                setTimeout(() => {
+                    element.style.background = original;
+                    element.textContent = text;
+                }, 2000);
+            });
+        }
+        
+        // Add some interactive animations
+        document.querySelectorAll('.cache-item').forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                item.style.transform = 'translateX(5px)';
+                item.style.background = 'rgba(255, 255, 255, 0.05)';
+            });
+            
+            item.addEventListener('mouseleave', () => {
+                item.style.transform = 'translateX(0)';
+                item.style.background = 'transparent';
+            });
+        });
+    </script>
+</body>
+</html>

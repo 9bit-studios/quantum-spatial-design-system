@@ -1,0 +1,23 @@
+{
+  "name": "runsmart-prototype",
+  "version": "1.0.0",
+  "description": "RunSmart Analytics - Interactive HTML Prototype for Portfolio",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "deploy": "wrangler pages deploy . --project-name=runsmart-prototype --branch=production",
+    "deploy:preview": "wrangler pages deploy . --project-name=runsmart-prototype --branch=preview",
+    "dev": "python3 -m http.server 8080"
+  },
+  "keywords": [
+    "runsmart",
+    "design-system",
+    "portfolio",
+    "cloudflare-pages"
+  ],
+  "author": "Penny Platt - 9Bit Studios <hello@9bitstudios.com>",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "wrangler": "^3.95.0"
+  }
+}

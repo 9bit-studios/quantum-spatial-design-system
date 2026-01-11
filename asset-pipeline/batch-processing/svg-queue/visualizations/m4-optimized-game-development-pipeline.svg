@@ -1,0 +1,203 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 800">
+  <!-- Background -->
+  <rect width="1000" height="800" fill="#f8f9fa" />
+  
+  <!-- Title -->
+  <text x="500" y="40" font-family="Arial" font-size="24" font-weight="bold" text-anchor="middle">Jrotharke: M4-Optimized Art Strategy &amp; Production Pipeline</text>
+  
+  <!-- Asset Categories Section -->
+  <rect x="50" y="80" width="900" height="160" rx="10" fill="#f0f5ff" stroke="#2f54eb" stroke-width="2" />
+  <text x="500" y="105" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle">Core Asset Categories</text>
+  
+  <!-- Asset Categories -->
+  <rect x="70" y="120" width="160" height="100" rx="5" fill="#d6e4ff" stroke="#2f54eb" stroke-width="1" />
+  <text x="150" y="145" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle">Characters</text>
+  <text x="150" y="165" font-family="Arial" font-size="10" text-anchor="middle">• Portraits (emotions)</text>
+  <text x="150" y="180" font-family="Arial" font-size="10" text-anchor="middle">• Full body (poses)</text>
+  <text x="150" y="195" font-family="Arial" font-size="10" text-anchor="middle">• Animation states</text>
+  <text x="150" y="210" font-family="Arial" font-size="10" text-anchor="middle">• Vision Pro 3D models</text>
+  
+  <rect x="250" y="120" width="160" height="100" rx="5" fill="#d6e4ff" stroke="#2f54eb" stroke-width="1" />
+  <text x="330" y="145" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle">Environments</text>
+  <text x="330" y="165" font-family="Arial" font-size="10" text-anchor="middle">• Background scenes</text>
+  <text x="330" y="180" font-family="Arial" font-size="10" text-anchor="middle">• Parallax layers</text>
+  <text x="330" y="195" font-family="Arial" font-size="10" text-anchor="middle">• Atmospheric effects</text>
+  <text x="330" y="210" font-family="Arial" font-size="10" text-anchor="middle">• Interactive elements</text>
+  
+  <rect x="430" y="120" width="160" height="100" rx="5" fill="#d6e4ff" stroke="#2f54eb" stroke-width="1" />
+  <text x="510" y="145" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle">UI Elements</text>
+  <text x="510" y="165" font-family="Arial" font-size="10" text-anchor="middle">• Dialog frames</text>
+  <text x="510" y="180" font-family="Arial" font-size="10" text-anchor="middle">• Choice buttons</text>
+  <text x="510" y="195" font-family="Arial" font-size="10" text-anchor="middle">• Status indicators</text>
+  <text x="510" y="210" font-family="Arial" font-size="10" text-anchor="middle">• Navigation elements</text>
+  
+  <rect x="610" y="120" width="160" height="100" rx="5" fill="#d6e4ff" stroke="#2f54eb" stroke-width="1" />
+  <text x="690" y="145" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle">Codex Visuals</text>
+  <text x="690" y="165" font-family="Arial" font-size="10" text-anchor="middle">• Character bios</text>
+  <text x="690" y="180" font-family="Arial" font-size="10" text-anchor="middle">• Location artworks</text>
+  <text x="690" y="195" font-family="Arial" font-size="10" text-anchor="middle">• Lore illustrations</text>
+  <text x="690" y="210" font-family="Arial" font-size="10" text-anchor="middle">• Conceptual pieces</text>
+  
+  <rect x="790" y="120" width="140" height="100" rx="5" fill="#d6e4ff" stroke="#2f54eb" stroke-width="1" />
+  <text x="860" y="145" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle">Effects</text>
+  <text x="860" y="165" font-family="Arial" font-size="10" text-anchor="middle">• Magic &amp; abilities</text>
+  <text x="860" y="180" font-family="Arial" font-size="10" text-anchor="middle">• Environment FX</text>
+  <text x="860" y="195" font-family="Arial" font-size="10" text-anchor="middle">• Transition effects</text>
+  <text x="860" y="210" font-family="Arial" font-size="10" text-anchor="middle">• Spatial 3D effects</text>
+  
+  <!-- M4-Optimized Pipeline Section -->
+  <rect x="50" y="260" width="900" height="400" rx="10" fill="#fff2e8" stroke="#fa541c" stroke-width="2" />
+  <text x="500" y="285" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle">M4-Optimized Art Production Pipeline</text>
+  
+  <!-- Pipeline Stages -->
+  <rect x="70" y="300" width="180" height="340" rx="5" fill="#ffe7ba" stroke="#fa8c16" stroke-width="1" />
+  <text x="160" y="325" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle">1. Worldbuilding Reference</text>
+  
+  <rect x="70" y="340" width="180" height="80" rx="5" fill="#fff7e6" stroke="#ffa940" stroke-width="1" />
+  <text x="160" y="360" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">Fantasy Worldbuilding Suite</text>
+  <text x="160" y="380" font-family="Arial" font-size="10" text-anchor="middle">• Extract entity descriptions</text>
+  <text x="160" y="395" font-family="Arial" font-size="10" text-anchor="middle">• Define visual style guidelines</text>
+  <text x="160" y="410" font-family="Arial" font-size="10" text-anchor="middle">• Tag key visual elements</text>
+  
+  <rect x="70" y="430" width="180" height="80" rx="5" fill="#fff7e6" stroke="#ffa940" stroke-width="1" />
+  <text x="160" y="450" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">Style Definition</text>
+  <text x="160" y="470" font-family="Arial" font-size="10" text-anchor="middle">• Create unified art direction</text>
+  <text x="160" y="485" font-family="Arial" font-size="10" text-anchor="middle">• Develop color palettes</text>
+  <text x="160" y="500" font-family="Arial" font-size="10" text-anchor="middle">• Establish visual language</text>
+  
+  <rect x="70" y="520" width="180" height="80" rx="5" fill="#fff7e6" stroke="#ffa940" stroke-width="1" />
+  <text x="160" y="540" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">Firefly Asset Audit</text>
+  <text x="160" y="560" font-family="Arial" font-size="10" text-anchor="middle">• Catalog existing assets</text>
+  <text x="160" y="575" font-family="Arial" font-size="10" text-anchor="middle">• Identify reusable elements</text>
+  <text x="160" y="590" font-family="Arial" font-size="10" text-anchor="middle">• Map gaps requiring creation</text>
+  
+  <!-- ML Generator -->
+  <rect x="270" y="300" width="180" height="340" rx="5" fill="#ffe7ba" stroke="#fa8c16" stroke-width="1" />
+  <text x="360" y="325" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle">2. ML Asset Generation</text>
+  
+  <rect x="270" y="340" width="180" height="80" rx="5" fill="#fff7e6" stroke="#ffa940" stroke-width="1" />
+  <text x="360" y="360" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">Neural Engine Processing</text>
+  <text x="360" y="380" font-family="Arial" font-size="10" text-anchor="middle">• Optimized M4 prompting</text>
+  <text x="360" y="395" font-family="Arial" font-size="10" text-anchor="middle">• Style-consistent generation</text>
+  <text x="360" y="410" font-family="Arial" font-size="10" text-anchor="middle">• Batch asset creation</text>
+  
+  <rect x="270" y="430" width="180" height="80" rx="5" fill="#fff7e6" stroke="#ffa940" stroke-width="1" />
+  <text x="360" y="450" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">Variation System</text>
+  <text x="360" y="470" font-family="Arial" font-size="10" text-anchor="middle">• Character expression sets</text>
+  <text x="360" y="485" font-family="Arial" font-size="10" text-anchor="middle">• Environment conditions</text>
+  <text x="360" y="500" font-family="Arial" font-size="10" text-anchor="middle">• Lighting &amp; time variations</text>
+  
+  <rect x="270" y="520" width="180" height="80" rx="5" fill="#fff7e6" stroke="#ffa940" stroke-width="1" />
+  <text x="360" y="540" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">2D-to-3D Conversion</text>
+  <text x="360" y="560" font-family="Arial" font-size="10" text-anchor="middle">• Depth map generation</text>
+  <text x="360" y="575" font-family="Arial" font-size="10" text-anchor="middle">• Parallax layer extraction</text>
+  <text x="360" y="590" font-family="Arial" font-size="10" text-anchor="middle">• Vision Pro preparation</text>
+  
+  <!-- Refinement -->
+  <rect x="470" y="300" width="180" height="340" rx="5" fill="#ffe7ba" stroke="#fa8c16" stroke-width="1" />
+  <text x="560" y="325" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle">3. Asset Refinement</text>
+  
+  <rect x="470" y="340" width="180" height="80" rx="5" fill="#fff7e6" stroke="#ffa940" stroke-width="1" />
+  <text x="560" y="360" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">Style Consistency</text>
+  <text x="560" y="380" font-family="Arial" font-size="10" text-anchor="middle">• Manual touch-ups</text>
+  <text x="560" y="395" font-family="Arial" font-size="10" text-anchor="middle">• Style transfer application</text>
+  <text x="560" y="410" font-family="Arial" font-size="10" text-anchor="middle">• Color harmony adjustments</text>
+  
+  <rect x="470" y="430" width="180" height="80" rx="5" fill="#fff7e6" stroke="#ffa940" stroke-width="1" />
+  <text x="560" y="450" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">Asset Optimization</text>
+  <text x="560" y="470" font-family="Arial" font-size="10" text-anchor="middle">• Resolution standardization</text>
+  <text x="560" y="485" font-family="Arial" font-size="10" text-anchor="middle">• Layer preparation</text>
+  <text x="560" y="500" font-family="Arial" font-size="10" text-anchor="middle">• File format optimization</text>
+  
+  <rect x="470" y="520" width="180" height="80" rx="5" fill="#fff7e6" stroke="#ffa940" stroke-width="1" />
+  <text x="560" y="540" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">Animation Prep</text>
+  <text x="560" y="560" font-family="Arial" font-size="10" text-anchor="middle">• Layer separation</text>
+  <text x="560" y="575" font-family="Arial" font-size="10" text-anchor="middle">• Animation keyframes</text>
+  <text x="560" y="590" font-family="Arial" font-size="10" text-anchor="middle">• Transition states</text>
+  
+  <!-- Integration -->
+  <rect x="670" y="300" width="180" height="340" rx="5" fill="#ffe7ba" stroke="#fa8c16" stroke-width="1" />
+  <text x="760" y="325" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle">4. Game Integration</text>
+  
+  <rect x="670" y="340" width="180" height="80" rx="5" fill="#fff7e6" stroke="#ffa940" stroke-width="1" />
+  <text x="760" y="360" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">Asset Metadata</text>
+  <text x="760" y="380" font-family="Arial" font-size="10" text-anchor="middle">• Narrative connection tags</text>
+  <text x="760" y="395" font-family="Arial" font-size="10" text-anchor="middle">• Emotional/state markers</text>
+  <text x="760" y="410" font-family="Arial" font-size="10" text-anchor="middle">• Context requirements</text>
+  
+  <rect x="670" y="430" width="180" height="80" rx="5" fill="#fff7e6" stroke="#ffa940" stroke-width="1" />
+  <text x="760" y="450" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">Swift Integration</text>
+  <text x="760" y="470" font-family="Arial" font-size="10" text-anchor="middle">• Asset catalog organization</text>
+  <text x="760" y="485" font-family="Arial" font-size="10" text-anchor="middle">• SwiftUI component binding</text>
+  <text x="760" y="500" font-family="Arial" font-size="10" text-anchor="middle">• Performance optimization</text>
+  
+  <rect x="670" y="520" width="180" height="80" rx="5" fill="#fff7e6" stroke="#ffa940" stroke-width="1" />
+  <text x="760" y="540" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">Ink Script Connection</text>
+  <text x="760" y="560" font-family="Arial" font-size="10" text-anchor="middle">• Scene-based triggers</text>
+  <text x="760" y="575" font-family="Arial" font-size="10" text-anchor="middle">• State-responsive display</text>
+  <text x="760" y="590" font-family="Arial" font-size="10" text-anchor="middle">• Dynamic loading system</text>
+  
+  <!-- Automation Tools -->
+  <rect x="50" y="680" width="900" height="100" rx="10" fill="#f6ffed" stroke="#52c41a" stroke-width="2" />
+  <text x="500" y="705" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle">Automation &amp; Batch Processing Tools</text>
+  
+  <rect x="70" y="720" width="200" height="40" rx="5" fill="#d9f7be" stroke="#52c41a" stroke-width="1" />
+  <text x="170" y="745" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">Swift Asset Processor</text>
+  
+  <rect x="290" y="720" width="200" height="40" rx="5" fill="#d9f7be" stroke="#52c41a" stroke-width="1" />
+  <text x="390" y="745" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">Neural Engine Batch Generator</text>
+  
+  <rect x="510" y="720" width="200" height="40" rx="5" fill="#d9f7be" stroke="#52c41a" stroke-width="1" />
+  <text x="610" y="745" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">Style Transfer Applicator</text>
+  
+  <rect x="730" y="720" width="200" height="40" rx="5" fill="#d9f7be" stroke="#52c41a" stroke-width="1" />
+  <text x="830" y="745" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">Metadata Tagger &amp; Optimizer</text>
+  
+  <!-- Connection Lines -->
+  <!-- Asset Categories to Pipeline -->
+  <line x1="150" y1="220" x2="160" y2="300" stroke="#2f54eb" stroke-width="1.5" stroke-dasharray="5,3" />
+  <polygon points="157,295 160,300 163,295" fill="#2f54eb" />
+  
+  <line x1="330" y1="220" x2="360" y2="300" stroke="#2f54eb" stroke-width="1.5" stroke-dasharray="5,3" />
+  <polygon points="357,295 360,300 363,295" fill="#2f54eb" />
+  
+  <line x1="510" y1="220" x2="560" y2="300" stroke="#2f54eb" stroke-width="1.5" stroke-dasharray="5,3" />
+  <polygon points="557,295 560,300 563,295" fill="#2f54eb" />
+  
+  <line x1="690" y1="220" x2="760" y2="300" stroke="#2f54eb" stroke-width="1.5" stroke-dasharray="5,3" />
+  <polygon points="757,295 760,300 763,295" fill="#2f54eb" />
+  
+  <line x1="860" y1="220" x2="760" y2="300" stroke="#2f54eb" stroke-width="1.5" stroke-dasharray="5,3" />
+  <polygon points="757,295 760,300 763,295" fill="#2f54eb" />
+  
+  <!-- Pipeline Flows -->
+  <line x1="250" y1="420" x2="270" y2="420" stroke="#fa8c16" stroke-width="2" />
+  <polygon points="265,415 270,420 265,425" fill="#fa8c16" />
+  
+  <line x1="450" y1="420" x2="470" y2="420" stroke="#fa8c16" stroke-width="2" />
+  <polygon points="465,415 470,420 465,425" fill="#fa8c16" />
+  
+  <line x1="650" y1="420" x2="670" y2="420" stroke="#fa8c16" stroke-width="2" />
+  <polygon points="665,415 670,420 665,425" fill="#fa8c16" />
+  
+  <!-- Automation Connections -->
+  <line x1="160" y1="600" x2="170" y2="720" stroke="#fa8c16" stroke-width="1.5" stroke-dasharray="5,3" />
+  <polygon points="167,715 170,720 173,715" fill="#fa8c16" />
+  
+  <line x1="360" y1="600" x2="390" y2="720" stroke="#fa8c16" stroke-width="1.5" stroke-dasharray="5,3" />
+  <polygon points="387,715 390,720 393,715" fill="#fa8c16" />
+  
+  <line x1="560" y1="600" x2="610" y2="720" stroke="#fa8c16" stroke-width="1.5" stroke-dasharray="5,3" />
+  <polygon points="607,715 610,720 613,715" fill="#fa8c16" />
+  
+  <line x1="760" y1="600" x2="830" y2="720" stroke="#fa8c16" stroke-width="1.5" stroke-dasharray="5,3" />
+  <polygon points="827,715 830,720 833,715" fill="#fa8c16" />
+  
+  <!-- Pipeline to tool connections -->
+  <path d="M850 640 Q900 640 900 700 Q900 745 830 745" fill="none" stroke="#52c41a" stroke-width="1.5" stroke-dasharray="5,3" />
+  <polygon points="835,742 830,745 835,748" fill="#52c41a" />
+  
+  <!-- Cycle connection -->
+  <path d="M50 450 Q20 450 20 740 Q20 780 950 780 Q980 780 980 450 Q980 150 950 150" fill="none" stroke="#2f54eb" stroke-width="1.5" stroke-dasharray="10,5" />
+  <text x="500" y="795" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle">Continuous Improvement Cycle</text>
+</svg>

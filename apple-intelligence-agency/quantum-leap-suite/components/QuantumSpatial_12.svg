@@ -1,0 +1,238 @@
+<svg width="800" height="800" viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Quantum Spatial Gradients -->
+    <radialGradient id="quantumCore" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#E85D75;stop-opacity:0.8" />
+      <stop offset="50%" style="stop-color:#4ECDC4;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#0A0E27;stop-opacity:0.2" />
+    </radialGradient>
+
+    <linearGradient id="glassMorphism" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:0.1" />
+      <stop offset="50%" style="stop-color:#4ECDC4;stop-opacity:0.05" />
+      <stop offset="100%" style="stop-color:#E85D75;stop-opacity:0.15" />
+    </linearGradient>
+
+    <radialGradient id="energyField" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#4ECDC4;stop-opacity:0.9" />
+      <stop offset="70%" style="stop-color:#E85D75;stop-opacity:0.4" />
+      <stop offset="100%" style="stop-color:#0A0E27;stop-opacity:0" />
+    </radialGradient>
+
+    <!-- Liquid Glass Blur Effects -->
+    <filter id="liquidGlass">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="20" result="blur" />
+      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0.7 0" result="glass" />
+      <feBlend in="SourceGraphic" in2="glass" mode="normal" />
+    </filter>
+
+    <filter id="glowEffect">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- M4-Optimized Animation Paths -->
+    <animateTransform
+      id="quantumRotation"
+      attributeName="transform"
+      attributeType="XML"
+      type="rotate"
+      from="0 400 400"
+      to="360 400 400"
+      dur="20s"
+      repeatCount="indefinite"
+    />
+
+    <animateTransform
+      id="pulseScale"
+      attributeName="transform"
+      attributeType="XML"
+      type="scale"
+      values="1;1.05;1"
+      dur="4s"
+      repeatCount="indefinite"
+      additive="sum"
+    />
+  </defs>
+
+  <!-- Background: Deep Quantum Space -->
+  <rect width="800" height="800" fill="#0A0E27"/>
+
+  <!-- Outer Energy Field (Rotating) -->
+  <g filter="url(#liquidGlass)">
+    <circle cx="400" cy="400" r="350" fill="url(#energyField)" opacity="0.3">
+      <animateTransform
+        attributeName="transform"
+        attributeType="XML"
+        type="rotate"
+        from="0 400 400"
+        to="360 400 400"
+        dur="30s"
+        repeatCount="indefinite"
+      />
+    </circle>
+  </g>
+
+  <!-- Quantum Spatial Grid Layer 1 -->
+  <g opacity="0.4" stroke="url(#glassMorphism)" stroke-width="1.5" fill="none">
+    <line x1="100" y1="400" x2="700" y2="400">
+      <animate attributeName="opacity" values="0.2;0.6;0.2" dur="3s" repeatCount="indefinite"/>
+    </line>
+    <line x1="400" y1="100" x2="400" y2="700">
+      <animate attributeName="opacity" values="0.6;0.2;0.6" dur="3s" repeatCount="indefinite"/>
+    </line>
+    <circle cx="400" cy="400" r="250">
+      <animate attributeName="r" values="250;260;250" dur="5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="400" cy="400" r="180">
+      <animate attributeName="r" values="180;175;180" dur="4s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Fibonacci Spiral Elements (Quantum Proportions) -->
+  <g filter="url(#glowEffect)" opacity="0.6">
+    <path d="M 400 400 Q 500 300 550 400 Q 500 500 400 550 Q 300 500 250 400 Q 300 300 400 250"
+          stroke="#4ECDC4"
+          stroke-width="2"
+          fill="none"
+          opacity="0.7">
+      <animate attributeName="stroke-dasharray" values="0,1000;1000,0" dur="8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.4;0.8;0.4" dur="3s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- Central Quantum Core (Glassmorphic Sphere) -->
+  <g filter="url(#liquidGlass)">
+    <circle cx="400" cy="400" r="120" fill="url(#quantumCore)" opacity="0.8">
+      <animate attributeName="r" values="120;125;120" dur="4s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Glass Reflection Layer -->
+    <ellipse cx="380" cy="370" rx="80" ry="50" fill="#FFFFFF" opacity="0.15">
+      <animate attributeName="opacity" values="0.15;0.25;0.15" dur="3s" repeatCount="indefinite"/>
+    </ellipse>
+  </g>
+
+  <!-- Orbiting Quantum Particles -->
+  <g filter="url(#glowEffect)">
+    <!-- Particle 1: Cyan -->
+    <circle cx="400" cy="280" r="8" fill="#4ECDC4" opacity="0.9">
+      <animateTransform
+        attributeName="transform"
+        attributeType="XML"
+        type="rotate"
+        from="0 400 400"
+        to="360 400 400"
+        dur="12s"
+        repeatCount="indefinite"
+      />
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Particle 2: Coral -->
+    <circle cx="520" cy="400" r="6" fill="#E85D75" opacity="0.9">
+      <animateTransform
+        attributeName="transform"
+        attributeType="XML"
+        type="rotate"
+        from="0 400 400"
+        to="360 400 400"
+        dur="15s"
+        repeatCount="indefinite"
+      />
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Particle 3: White -->
+    <circle cx="400" cy="520" r="5" fill="#FFFFFF" opacity="0.8">
+      <animateTransform
+        attributeName="transform"
+        attributeType="XML"
+        type="rotate"
+        from="0 400 400"
+        to="360 400 400"
+        dur="18s"
+        repeatCount="indefinite"
+      />
+      <animate attributeName="opacity" values="0.4;0.9;0.4" dur="3s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Particle 4: Cyan (Outer Orbit) -->
+    <circle cx="280" cy="400" r="7" fill="#4ECDC4" opacity="0.7">
+      <animateTransform
+        attributeName="transform"
+        attributeType="XML"
+        type="rotate"
+        from="360 400 400"
+        to="0 400 400"
+        dur="10s"
+        repeatCount="indefinite"
+      />
+      <animate attributeName="opacity" values="0.3;0.8;0.3" dur="2.2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Quantum Field Lines (Spatial Connections) -->
+  <g stroke="url(#glassMorphism)" stroke-width="1" fill="none" opacity="0.3">
+    <path d="M 400 400 L 550 250">
+      <animate attributeName="opacity" values="0.1;0.5;0.1" dur="4s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 400 400 L 250 550">
+      <animate attributeName="opacity" values="0.5;0.1;0.5" dur="4s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 400 400 L 550 550">
+      <animate attributeName="opacity" values="0.2;0.6;0.2" dur="3.5s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 400 400 L 250 250">
+      <animate attributeName="opacity" values="0.6;0.2;0.6" dur="3.5s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- Outer Glassmorphic Ring -->
+  <g filter="url(#liquidGlass)">
+    <circle cx="400" cy="400" r="300"
+            stroke="rgba(255, 255, 255, 0.18)"
+            stroke-width="2"
+            fill="none"
+            opacity="0.5">
+      <animate attributeName="r" values="300;305;300" dur="6s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Quantum Data Streams (Animated Paths) -->
+  <g opacity="0.4">
+    <path d="M 150 400 Q 275 300 400 400 T 650 400"
+          stroke="#4ECDC4"
+          stroke-width="1.5"
+          fill="none"
+          stroke-dasharray="5,10">
+      <animate attributeName="stroke-dashoffset" from="0" to="30" dur="2s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 400 150 Q 500 275 400 400 T 400 650"
+          stroke="#E85D75"
+          stroke-width="1.5"
+          fill="none"
+          stroke-dasharray="5,10">
+      <animate attributeName="stroke-dashoffset" from="0" to="-30" dur="2s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- Corner Quantum Nodes -->
+  <g filter="url(#glowEffect)" opacity="0.6">
+    <circle cx="150" cy="150" r="12" fill="#4ECDC4">
+      <animate attributeName="r" values="12;15;12" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="650" cy="150" r="12" fill="#E85D75">
+      <animate attributeName="r" values="12;15;12" dur="3.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="150" cy="650" r="12" fill="#E85D75">
+      <animate attributeName="r" values="12;15;12" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="650" cy="650" r="12" fill="#4ECDC4">
+      <animate attributeName="r" values="12;15;12" dur="4.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>

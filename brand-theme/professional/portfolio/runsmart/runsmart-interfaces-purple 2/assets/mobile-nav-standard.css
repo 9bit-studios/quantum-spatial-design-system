@@ -1,0 +1,117 @@
+/**
+ * Mobile Navigation Standard
+ * Standardized bottom nav positioning for iOS-style app prototype
+ * RunSmart - Quantum Spatial Design System
+ *
+ * BEST PRACTICE: Nav fixed at bottom of .screen container (not browser window)
+ * This ensures consistent behavior across all screens and viewport sizes
+ */
+
+/* Bottom Navigation - Standard Positioning */
+.bottom-nav,
+.tab-bar {
+    position: fixed;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 369px;
+    max-width: calc(100% - 24px); /* Responsive fallback */
+    background: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(26, 26, 26, 0.8);
+    border-radius: 24px;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.5),
+        0 0 0 1px rgba(123, 0, 255, 0.1);
+    z-index: 1000;
+}
+
+/* Nav Items */
+.nav-item,
+.tab-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 12px;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.nav-item:active,
+.tab-item:active {
+    transform: scale(0.95);
+    background: rgba(123, 0, 255, 0.1);
+}
+
+/* Nav Icons */
+.nav-icon,
+.tab-icon {
+    width: 24px;
+    height: 24px;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+    color: #FFFFFF;
+}
+
+/* Nav Labels */
+.nav-label,
+.tab-label {
+    font-size: 10px;
+    color: #888;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+/* Active State */
+.nav-item.active .nav-icon,
+.tab-item.active .tab-icon {
+    opacity: 1;
+    color: #7B00FF;
+    filter: drop-shadow(0 0 8px rgba(123, 0, 255, 0.6));
+}
+
+.nav-item.active .nav-label,
+.tab-item.active .tab-label {
+    color: #FFFFFF;
+    font-weight: 600;
+}
+
+/* Hover State (for desktop testing) */
+@media (hover: hover) {
+    .nav-item:hover,
+    .tab-item:hover {
+        background: rgba(123, 0, 255, 0.05);
+    }
+
+    .nav-item:hover .nav-icon,
+    .tab-item:hover .tab-icon {
+        opacity: 0.7;
+    }
+}
+
+/* Safe Area Inset Support (iOS notch/home indicator) */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+    .bottom-nav,
+    .tab-bar {
+        padding-bottom: calc(12px + env(safe-area-inset-bottom));
+    }
+}
+
+/* Ensure content doesn't get hidden behind nav */
+.screen {
+    padding-bottom: 100px; /* Space for nav */
+}
+
+.content {
+    padding-bottom: 100px; /* Additional space for scrollable content */
+}

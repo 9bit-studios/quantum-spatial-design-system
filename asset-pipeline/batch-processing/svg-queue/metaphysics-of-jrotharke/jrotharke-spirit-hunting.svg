@@ -1,0 +1,543 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600">
+  <!-- Background -->
+  <rect width="900" height="600" fill="#0A0621" />
+  
+  <!-- Dimensional grid with perspective effect representing spiritual hunting grounds -->
+  <g opacity="0.12">
+    <!-- Horizontal grid lines with subtle distortion -->
+    <path d="M100,550 Q450,530 800,550" stroke="#5AC8FA" stroke-width="1">
+      <animate attributeName="d" values="M100,550 Q450,530 800,550;M100,550 Q450,540 800,550;M100,550 Q450,530 800,550" dur="10s" repeatCount="indefinite" />
+    </path>
+    <path d="M80,500 Q450,480 820,500" stroke="#5AC8FA" stroke-width="1">
+      <animate attributeName="d" values="M80,500 Q450,480 820,500;M80,500 Q450,490 820,500;M80,500 Q450,480 820,500" dur="12s" repeatCount="indefinite" />
+    </path>
+    <path d="M60,450 Q450,430 840,450" stroke="#5AC8FA" stroke-width="1">
+      <animate attributeName="d" values="M60,450 Q450,430 840,450;M60,450 Q450,440 840,450;M60,450 Q450,430 840,450" dur="11s" repeatCount="indefinite" />
+    </path>
+    <path d="M50,400 Q450,380 850,400" stroke="#5AC8FA" stroke-width="1">
+      <animate attributeName="d" values="M50,400 Q450,380 850,400;M50,400 Q450,390 850,400;M50,400 Q450,380 850,400" dur="9s" repeatCount="indefinite" />
+    </path>
+    <path d="M40,350 Q450,330 860,350" stroke="#5AC8FA" stroke-width="1">
+      <animate attributeName="d" values="M40,350 Q450,330 860,350;M40,350 Q450,340 860,350;M40,350 Q450,330 860,350" dur="10s" repeatCount="indefinite" />
+    </path>
+    <path d="M30,300 Q450,280 870,300" stroke="#5AC8FA" stroke-width="1">
+      <animate attributeName="d" values="M30,300 Q450,280 870,300;M30,300 Q450,290 870,300;M30,300 Q450,280 870,300" dur="13s" repeatCount="indefinite" />
+    </path>
+    <path d="M25,250 Q450,230 875,250" stroke="#5AC8FA" stroke-width="1">
+      <animate attributeName="d" values="M25,250 Q450,230 875,250;M25,250 Q450,240 875,250;M25,250 Q450,230 875,250" dur="12s" repeatCount="indefinite" />
+    </path>
+    <path d="M20,200 Q450,180 880,200" stroke="#5AC8FA" stroke-width="1">
+      <animate attributeName="d" values="M20,200 Q450,180 880,200;M20,200 Q450,190 880,200;M20,200 Q450,180 880,200" dur="9s" repeatCount="indefinite" />
+    </path>
+    <path d="M15,150 Q450,130 885,150" stroke="#5AC8FA" stroke-width="1">
+      <animate attributeName="d" values="M15,150 Q450,130 885,150;M15,150 Q450,140 885,150;M15,150 Q450,130 885,150" dur="14s" repeatCount="indefinite" />
+    </path>
+    <path d="M10,100 Q450,80 890,100" stroke="#5AC8FA" stroke-width="1">
+      <animate attributeName="d" values="M10,100 Q450,80 890,100;M10,100 Q450,90 890,100;M10,100 Q450,80 890,100" dur="15s" repeatCount="indefinite" />
+    </path>
+    
+    <!-- Vertical grid lines with subtle distortion -->
+    <path d="M150,100 Q160,300 150,550" stroke="#5AC8FA" stroke-width="1">
+      <animate attributeName="d" values="M150,100 Q160,300 150,550;M150,100 Q155,300 150,550;M150,100 Q160,300 150,550" dur="15s" repeatCount="indefinite" />
+    </path>
+    <path d="M225,100 Q235,300 225,550" stroke="#5AC8FA" stroke-width="1">
+      <animate attributeName="d" values="M225,100 Q235,300 225,550;M225,100 Q230,300 225,550;M225,100 Q235,300 225,550" dur="14s" repeatCount="indefinite" />
+    </path>
+    <path d="M300,100 Q310,300 300,550" stroke="#5AC8FA" stroke-width="1">
+      <animate attributeName="d" values="M300,100 Q310,300 300,550;M300,100 Q305,300 300,550;M300,100 Q310,300 300,550" dur="16s" repeatCount="indefinite" />
+    </path>
+    <path d="M375,100 Q385,300 375,550" stroke="#5AC8FA" stroke-width="1">
+      <animate attributeName="d" values="M375,100 Q385,300 375,550;M375,100 Q380,300 375,550;M375,100 Q385,300 375,550" dur="13s" repeatCount="indefinite" />
+    </path>
+    <path d="M450,100 Q460,300 450,550" stroke="#5AC8FA" stroke-width="1">
+      <animate attributeName="d" values="M450,100 Q460,300 450,550;M450,100 Q455,300 450,550;M450,100 Q460,300 450,550" dur="15s" repeatCount="indefinite" />
+    </path>
+    <path d="M525,100 Q535,300 525,550" stroke="#5AC8FA" stroke-width="1">
+      <animate attributeName="d" values="M525,100 Q535,300 525,550;M525,100 Q530,300 525,550;M525,100 Q535,300 525,550" dur="12s" repeatCount="indefinite" />
+    </path>
+    <path d="M600,100 Q610,300 600,550" stroke="#5AC8FA" stroke-width="1">
+      <animate attributeName="d" values="M600,100 Q610,300 600,550;M600,100 Q605,300 600,550;M600,100 Q610,300 600,550" dur="14s" repeatCount="indefinite" />
+    </path>
+    <path d="M675,100 Q685,300 675,550" stroke="#5AC8FA" stroke-width="1">
+      <animate attributeName="d" values="M675,100 Q685,300 675,550;M675,100 Q680,300 675,550;M675,100 Q685,300 675,550" dur="13s" repeatCount="indefinite" />
+    </path>
+    <path d="M750,100 Q760,300 750,550" stroke="#5AC8FA" stroke-width="1">
+      <animate attributeName="d" values="M750,100 Q760,300 750,550;M750,100 Q755,300 750,550;M750,100 Q760,300 750,550" dur="16s" repeatCount="indefinite" />
+    </path>
+  </g>
+  
+  <!-- Title -->
+  <text x="450" y="50" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" font-size="28" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Jrotharke: The Art of Spirit Hunting and Harvesting</text>
+  <text x="450" y="85" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" font-size="18" fill="#5AC8FA" text-anchor="middle">Tracking and Capturing Conceptual Entities</text>
+  
+  <!-- Spirit Hunter with Traditional Tools -->
+  <g transform="translate(225, 275)">
+    <!-- Hunter -->
+    <g>
+      <!-- Physical body -->
+      <path d="M0,-40 C-5,-45 -10,-45 -5,-40 S0,-45 5,-40 S0,-45 0,-40" fill="#708090" /> <!-- Head -->
+      <rect x="-15" y="-40" width="30" height="40" rx="5" fill="#708090" /> <!-- Torso -->
+      
+      <!-- Hunter's specialized attire with quantum-spatial patterns -->
+      <path d="M-15,-30 L-35,-10 L-30,10 L-15,0" fill="#331F4A" /> <!-- Left arm with sleeve -->
+      <path d="M15,-30 L35,-10 L30,10 L15,0" fill="#331F4A" /> <!-- Right arm with sleeve -->
+      
+      <!-- Quantum-spatial embroidery on hunter's attire -->
+      <path d="M-10,-35 L5,-35 L5,-25 L-5,-25 Z" fill="#6A3093" opacity="0.7" /> <!-- Chest emblem -->
+      <path d="M-25,-5 L-32,0 L-25,5" stroke="#5AC8FA" stroke-width="1" opacity="0.7" /> <!-- Left sleeve pattern -->
+      <path d="M25,-5 L32,0 L25,5" stroke="#5AC8FA" stroke-width="1" opacity="0.7" /> <!-- Right sleeve pattern -->
+      
+      <rect x="-12" y="0" width="8" height="35" rx="3" fill="#708090" /> <!-- Left leg -->
+      <rect x="4" y="0" width="8" height="35" rx="3" fill="#708090" /> <!-- Right leg -->
+      
+      <!-- Lower body attire -->
+      <path d="M-12,5 L-16,15 L-12,25" stroke="#331F4A" stroke-width="2" /> <!-- Left leg decoration -->
+      <path d="M12,5 L16,15 L12,25" stroke="#331F4A" stroke-width="2" /> <!-- Right leg decoration -->
+    </g>
+    
+    <!-- Spirit Hunting Tools -->
+    <g>
+      <!-- Conceptual Net - captures spiritual essence -->
+      <path d="M35,-10 L50,10 L40,25 L20,25 L10,10 L25,-10 Z" fill="none" stroke="#BF4080" stroke-width="1.5" opacity="0.7">
+        <!-- Subtle animation to show net's activity -->
+        <animate attributeName="opacity" values="0.7;0.9;0.7" dur="4s" repeatCount="indefinite" />
+      </path>
+      
+      <!-- Net's internal pattern - conceptual capture webbing -->
+      <path d="M35,-10 L10,10 M25,-10 L40,25 M50,10 L20,25" stroke="#BF4080" stroke-width="0.8" opacity="0.5" />
+      
+      <!-- Spirit Essence Vial - for containing captured spirits -->
+      <rect x="-40" y="-10" width="10" height="20" rx="3" fill="#0D0D15" stroke="#5AC8FA" stroke-width="1" />
+      <rect x="-38" y="-8" width="6" height="16" rx="2" fill="#5AC8FA" opacity="0.3">
+        <!-- Pulsing animation to show contained essence -->
+        <animate attributeName="opacity" values="0.3;0.5;0.3" dur="2s" repeatCount="indefinite" />
+      </rect>
+      
+      <!-- Thought Compass - for detecting conceptual entities -->
+      <circle cx="-25" y="-30" r="10" fill="#0D0D15" stroke="#6A3093" stroke-width="1" />
+      <path d="M-30,-35 L-20,-25 M-30,-25 L-20,-35" stroke="#6A3093" stroke-width="1" />
+      <path d="M-25,-30 L-25,-25" stroke="#FFFFFF" stroke-width="1">
+        <!-- Rotating needle animation -->
+        <animateTransform attributeName="transform" type="rotate" from="0 -25 -30" to="360 -25 -30" dur="6s" repeatCount="indefinite" />
+      </path>
+    </g>
+    
+    <!-- Mental Connection to Spirit World - how hunter perceives the prey -->
+    <g>
+      <!-- Thought perception waves -->
+      <path d="M0,-50 Q10,-60 20,-50 Q30,-40 40,-50" stroke="#FFFFFF" stroke-width="1" opacity="0.4" fill="none">
+        <animate attributeName="d" values="M0,-50 Q10,-60 20,-50 Q30,-40 40,-50;M0,-50 Q10,-65 20,-55 Q30,-45 40,-55;M0,-50 Q10,-60 20,-50 Q30,-40 40,-50" dur="5s" repeatCount="indefinite" />
+      </path>
+      <path d="M0,-50 Q-10,-60 -20,-50 Q-30,-40 -40,-50" stroke="#FFFFFF" stroke-width="1" opacity="0.4" fill="none">
+        <animate attributeName="d" values="M0,-50 Q-10,-60 -20,-50 Q-30,-40 -40,-50;M0,-50 Q-10,-65 -20,-55 Q-30,-45 -40,-55;M0,-50 Q-10,-60 -20,-50 Q-30,-40 -40,-50" dur="5s" repeatCount="indefinite" />
+      </path>
+    </g>
+    
+    <!-- Explanatory Text -->
+    <text x="0" y="55" font-family="'SF Pro Display', sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">Spirit Hunter</text>
+    <text x="0" y="75" font-family="'SF Pro Display', sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle" opacity="0.7">Equipped with Conceptual Hunting Tools</text>
+  </g>
+  
+  <!-- Spirit Prey Being Tracked and Hunted -->
+  <g transform="translate(600, 275)">
+    <g>
+      <!-- The conceptual entity - partially physical, partially thought-form -->
+      <!-- Outer aura - represents the entity's conceptual nature -->
+      <ellipse cx="0" cy="0" rx="80" ry="60" fill="#6A3093" opacity="0.2">
+        <animate attributeName="rx" values="80;85;80" dur="8s" repeatCount="indefinite" />
+        <animate attributeName="ry" values="60;65;60" dur="7s" repeatCount="indefinite" />
+      </ellipse>
+      
+      <!-- Inner aura - brighter, more concentrated -->
+      <ellipse cx="0" cy="0" rx="50" ry="40" fill="#6A3093" opacity="0.3">
+        <animate attributeName="rx" values="50;53;50" dur="5s" repeatCount="indefinite" />
+        <animate attributeName="ry" values="40;43;40" dur="6s" repeatCount="indefinite" />
+      </ellipse>
+      
+      <!-- The spirit entity's semi-physical manifestation -->
+      <g>
+        <!-- Base form - shifts between states -->
+        <path d="M-20,-20 C-30,-10 -30,10 -20,20 C-10,30 10,30 20,20 C30,10 30,-10 20,-20 C10,-30 -10,-30 -20,-20 Z" fill="#BF4080" opacity="0.6">
+          <animate attributeName="d" values="M-20,-20 C-30,-10 -30,10 -20,20 C-10,30 10,30 20,20 C30,10 30,-10 20,-20 C10,-30 -10,-30 -20,-20 Z;M-25,-15 C-35,-5 -35,15 -25,25 C-15,35 15,35 25,25 C35,15 35,-5 25,-15 C15,-25 -15,-25 -25,-15 Z;M-20,-20 C-30,-10 -30,10 -20,20 C-10,30 10,30 20,20 C30,10 30,-10 20,-20 C10,-30 -10,-30 -20,-20 Z" dur="15s" repeatCount="indefinite" />
+        </path>
+        
+        <!-- Rippling internal patterns - represents the conceptual "organs" -->
+        <path d="M0,0 C-10,-5 -15,5 -5,10 C5,15 15,5 10,-5 C5,-15 -5,-10 0,0 Z" fill="#5AC8FA" opacity="0.5">
+          <animate attributeName="d" values="M0,0 C-10,-5 -15,5 -5,10 C5,15 15,5 10,-5 C5,-15 -5,-10 0,0 Z;M0,0 C-15,-10 -20,5 -10,15 C5,20 20,5 15,-10 C5,-20 -10,-15 0,0 Z;M0,0 C-10,-5 -15,5 -5,10 C5,15 15,5 10,-5 C5,-15 -5,-10 0,0 Z" dur="10s" repeatCount="indefinite" />
+        </path>
+        
+        <!-- The conceptual "eyes" - how it perceives the world -->
+        <circle cx="-10" cy="-5" r="4" fill="#FFFFFF" opacity="0.8">
+          <animate attributeName="opacity" values="0.8;0.4;0.8" dur="3s" repeatCount="indefinite" />
+        </circle>
+        <circle cx="10" cy="-5" r="4" fill="#FFFFFF" opacity="0.8">
+          <animate attributeName="opacity" values="0.8;0.4;0.8" dur="3s" repeatCount="indefinite" />
+        </circle>
+      </g>
+      
+      <!-- Concept particles emitted by the entity - essence that can be harvested -->
+      <g>
+        <rect x="-40" y="-20" width="6" height="6" fill="#BF4080" opacity="0.7">
+          <animate attributeName="opacity" values="0.7;0.2;0.7" dur="4s" repeatCount="indefinite" />
+          <animate attributeName="x" values="-40;-70;-40" dur="8s" repeatCount="indefinite" />
+          <animate attributeName="y" values="-20;-10;-20" dur="8s" repeatCount="indefinite" />
+        </rect>
+        
+        <rect x="30" y="15" width="8" height="8" fill="#BF4080" opacity="0.7">
+          <animate attributeName="opacity" values="0.7;0.3;0.7" dur="5s" repeatCount="indefinite" />
+          <animate attributeName="x" values="30;60;30" dur="10s" repeatCount="indefinite" />
+          <animate attributeName="y" values="15;30;15" dur="10s" repeatCount="indefinite" />
+        </rect>
+        
+        <rect x="20" y="-30" width="5" height="5" fill="#BF4080" opacity="0.7">
+          <animate attributeName="opacity" values="0.7;0.4;0.7" dur="3s" repeatCount="indefinite" />
+          <animate attributeName="x" values="20;40;20" dur="7s" repeatCount="indefinite" />
+          <animate attributeName="y" values="-30;-50;-30" dur="7s" repeatCount="indefinite" />
+        </rect>
+        
+        <rect x="-25" y="25" width="7" height="7" fill="#BF4080" opacity="0.7">
+          <animate attributeName="opacity" values="0.7;0.3;0.7" dur="6s" repeatCount="indefinite" />
+          <animate attributeName="x" values="-25;-45;-25" dur="9s" repeatCount="indefinite" />
+          <animate attributeName="y" values="25;45;25" dur="9s" repeatCount="indefinite" />
+        </rect>
+      </g>
+      
+      <!-- The entity's conceptual nature represented through text -->
+      <g opacity="0.8">
+        <text x="0" y="0" font-family="'SF Pro Display', sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle">courage</text>
+        <animate attributeName="opacity" values="0.8;0.3;0.8" dur="8s" repeatCount="indefinite" />
+      </g>
+    </g>
+    
+    <!-- Awareness Tendrils - detects hunter's presence -->
+    <path d="M-65,15 Q-40,0 -20,10" stroke="#5AC8FA" stroke-width="1.5" opacity="0.5" fill="none">
+      <animate attributeName="d" values="M-65,15 Q-40,0 -20,10;M-65,15 Q-45,5 -20,15;M-65,15 Q-40,0 -20,10" dur="6s" repeatCount="indefinite" />
+    </path>
+    
+    <path d="M-50,-25 Q-35,-15 -15,-10" stroke="#5AC8FA" stroke-width="1.5" opacity="0.5" fill="none">
+      <animate attributeName="d" values="M-50,-25 Q-35,-15 -15,-10;M-50,-25 Q-30,-20 -15,-15;M-50,-25 Q-35,-15 -15,-10" dur="7s" repeatCount="indefinite" />
+    </path>
+    
+    <!-- Tracking Traces - what the hunter follows -->
+    <g opacity="0.6">
+      <path d="M-70,-40 L-60,-30" stroke="#BF4080" stroke-width="1.5" />
+      <path d="M-90,-20 L-75,-15" stroke="#BF4080" stroke-width="1.5" />
+      <path d="M-100,0 L-85,0" stroke="#BF4080" stroke-width="1.5" />
+      <path d="M-95,20 L-80,25" stroke="#BF4080" stroke-width="1.5" />
+      <path d="M-75,40 L-65,30" stroke="#BF4080" stroke-width="1.5" />
+      
+      <animate attributeName="opacity" values="0.6;0.2;0.6" dur="4s" repeatCount="indefinite" />
+    </g>
+    
+    <!-- Explanatory Text -->
+    <text x="0" y="75" font-family="'SF Pro Display', sans-serif" font-size="14" fill="#BF4080" text-anchor="middle">Conceptual Entity</text>
+    <text x="0" y="95" font-family="'SF Pro Display', sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle" opacity="0.7">Manifesting the Concept of Courage</text>
+  </g>
+  
+  <!-- Connection between Hunter and Prey -->
+  <g>
+    <!-- Visual representation of the hunting connection -->
+    <path d="M310,275 Q395,240 480,275" stroke="#FFFFFF" stroke-width="1" opacity="0.3" stroke-dasharray="5,5">
+      <animate attributeName="opacity" values="0.3;0.6;0.3" dur="5s" repeatCount="indefinite" />
+    </path>
+    
+    <!-- Thought patterns connecting hunter to prey -->
+    <g opacity="0.5">
+      <path d="M330,270 Q375,255 420,270" stroke="#5AC8FA" stroke-width="1" fill="none" />
+      <path d="M335,280 Q375,295 415,280" stroke="#BF4080" stroke-width="1" fill="none" />
+      
+      <animate attributeName="opacity" values="0.5;0.2;0.5" dur="3s" repeatCount="indefinite" />
+    </g>
+  </g>
+  
+  <!-- Metaphysical Harvesting Process -->
+  <g transform="translate(450, 450)">
+    <!-- Process visualization -->
+    <rect x="-200" y="-80" width="400" height="160" rx="10" fill="#131A36" opacity="0.7" />
+    
+    <!-- Process title -->
+    <text x="0" y="-50" font-family="'SF Pro Display', sans-serif" font-size="18" fill="#FFFFFF" text-anchor="middle">Metaphysical Harvesting Process</text>
+    
+    <!-- Four-stage process -->
+    <g transform="translate(-150, 0)">
+      <!-- Stage 1: Attunement -->
+      <circle cx="0" cy="0" r="25" fill="#331F4A" stroke="#5AC8FA" stroke-width="1.5" />
+      <text x="0" y="-5" font-family="'SF Pro Display', sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">Stage 1</text>
+      <text x="0" y="10" font-family="'SF Pro Display', sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">Attunement</text>
+      
+      <!-- Mental synchronization visualization -->
+      <path d="M-15,-15 Q0,-20 15,-15" stroke="#FFFFFF" stroke-width="1" opacity="0.7" fill="none" />
+      <path d="M-15,0 Q0,-5 15,0" stroke="#FFFFFF" stroke-width="1" opacity="0.7" fill="none" />
+      <path d="M-15,15 Q0,10 15,15" stroke="#FFFFFF" stroke-width="1" opacity="0.7" fill="none" />
+    </g>
+    
+    <g transform="translate(-50, 0)">
+      <!-- Stage 2: Perception -->
+      <circle cx="0" cy="0" r="25" fill="#331F4A" stroke="#5AC8FA" stroke-width="1.5" />
+      <text x="0" y="-5" font-family="'SF Pro Display', sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">Stage 2</text>
+      <text x="0" y="10" font-family="'SF Pro Display', sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">Perception</text>
+      
+      <!-- Focused consciousness visualization -->
+      <circle cx="0" cy="0" r="10" fill="none" stroke="#FFFFFF" stroke-width="1" opacity="0.7" />
+      <path d="M-10,-10 L10,10 M-10,10 L10,-10" stroke="#FFFFFF" stroke-width="1" opacity="0.7" />
+    </g>
+    
+    <g transform="translate(50, 0)">
+      <!-- Stage 3: Capture -->
+      <circle cx="0" cy="0" r="25" fill="#331F4A" stroke="#5AC8FA" stroke-width="1.5" />
+      <text x="0" y="-5" font-family="'SF Pro Display', sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">Stage 3</text>
+      <text x="0" y="10" font-family="'SF Pro Display', sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">Capture</text>
+      
+      <!-- Net visualization -->
+      <path d="M-15,-5 L15,-5 L10,15 L-10,15 Z" fill="none" stroke="#BF4080" stroke-width="1" opacity="0.7" />
+      <path d="M-15,-5 L-10,15 M0,-5 L0,15 M15,-5 L10,15" stroke="#BF4080" stroke-width="1" opacity="0.7" />
+    </g>
+    
+    <g transform="translate(150, 0)">
+      <!-- Stage 4: Containment -->
+      <circle cx="0" cy="0" r="25" fill="#331F4A" stroke="#5AC8FA" stroke-width="1.5" />
+      <text x="0" y="-5" font-family="'SF Pro Display', sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">Stage 4</text>
+      <text x="0" y="10" font-family="'SF Pro Display', sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">Containment</text>
+      
+      <!-- Essence vial visualization -->
+      <rect x="-8" y="-15" width="16" height="30" rx="3" fill="none" stroke="#5AC8FA" stroke-width="1" opacity="0.7" />
+      <rect x="-5" y="-12" width="10" height="24" rx="2" fill="#5AC8FA" opacity="0.3" />
+    </g>
+    
+    <!-- Process flow arrows -->
+    <path d="M-125,0 L-75,0" stroke="#FFFFFF" stroke-width="1" opacity="0.7" marker-end="url(#arrowhead)" />
+    <path d="M-25,0 L25,0" stroke="#FFFFFF" stroke-width="1" opacity="0.7" marker-end="url(#arrowhead)" />
+    <path d="M75,0 L125,0" stroke="#FFFFFF" stroke-width="1" opacity="0.7" marker-end="url(#arrowhead)" />
+    
+    <!-- Arrow marker definition -->
+    <defs>
+      <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+        <polygon points="0 0, 10 3.5, 0 7" fill="#FFFFFF" opacity="0.7" />
+      </marker>
+    </defs>
+  </g>
+  
+  <!-- Harvested Spiritual Essences and Their Uses -->
+  <g transform="translate(225, 180)">
+    <!-- Container for harvested essences -->
+    <rect x="-125" y="-60" width="250" height="120" rx="10" fill="#0D0D15" opacity="0.8" />
+    
+    <!-- Section title -->
+    <text x="0" y="-35" font-family="'SF Pro Display', sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">Harvested Spiritual Essences</text>
+    
+    <!-- Different essence vials -->
+    <g transform="translate(-85, 10)">
+      <!-- Courage essence -->
+      <rect x="-10" y="-25" width="20" height="40" rx="3" fill="#131A36" stroke="#BF4080" stroke-width="1" />
+      <rect x="-5" y="-20" width="10" height="30" rx="2" fill="#BF4080" opacity="0.4">
+        <animate attributeName="opacity" values="0.4;0.6;0.4" dur="5s" repeatCount="indefinite" />
+      </rect>
+      
+      <text x="0" y="30" font-family="'SF Pro Display', sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">Courage</text>
+    </g>
+    
+    <g transform="translate(-30, 10)">
+      <!-- Wisdom essence -->
+      <rect x="-10" y="-25" width="20" height="40" rx="3" fill="#131A36" stroke="#5AC8FA" stroke-width="1" />
+      <rect x="-5" y="-20" width="10" height="30" rx="2" fill="#5AC8FA" opacity="0.4">
+        <animate attributeName="opacity" values="0.4;0.6;0.4" dur="4s" repeatCount="indefinite" />
+      </rect>
+      
+      <text x="0" y="30" font-family="'SF Pro Display', sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">Wisdom</text>
+    </g>
+    
+    <g transform="translate(30, 10)">
+      <!-- Joy essence -->
+      <rect x="-10" y="-25" width="20" height="40" rx="3" fill="#131A36" stroke="#FFFF00" stroke-width="1" />
+      <rect x="-5" y="-20" width="10" height="30" rx="2" fill="#FFFF00" opacity="0.4">
+        <animate attributeName="opacity" values="0.4;0.7;0.4" dur="3s" repeatCount="indefinite" />
+      </rect>
+      
+      <text x="0" y="30" font-family="'SF Pro Display', sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">Joy</text>
+    </g>
+    
+    <g transform="translate(90, 10)">
+      <!-- Serenity essence -->
+      <rect x="-10" y="-25" width="20" height="40" rx="3" fill="#131A36" stroke="#2D854D" stroke-width="1" />
+      <rect x="-5" y="-20" width="10" height="30" rx="2" fill="#2D854D" opacity="0.4">
+        <animate attributeName="opacity" values="0.4;0.5;0.4" dur="6s" repeatCount="indefinite" />
+      </rect>
+      
+      <text x="0" y="30" font-family="'SF Pro Display', sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">Serenity</text>
+    </g>
+  </g>
+  
+  <!-- Uses of Harvested Essences -->
+  <g transform="translate(675, 180)">
+    <!-- Container for essence uses -->
+    <rect x="-125" y="-60" width="250" height="120" rx="10" fill="#0D0D15" opacity="0.8" />
+    
+    <!-- Section title -->
+    <text x="0" y="-35" font-family="'SF Pro Display', sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">Spiritual Essence Applications</text>
+    
+    <!-- Different applications -->
+    <g transform="translate(-85, 0)">
+      <!-- Healing ritual -->
+      <circle cx="0" cy="0" r="15" fill="none" stroke="#2D854D" stroke-width="1" />
+      <path d="M0,-10 L0,10 M-10,0 L10,0" stroke="#2D854D" stroke-width="1" />
+      <text x="0" y="25" font-family="'SF Pro Display', sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">Healing</text>
+    </g>
+    
+    <g transform="translate(-30, 0)">
+      <!-- Enchantment -->
+      <path d="M-10,-10 L10,10 M-10,10 L10,-10" stroke="#6A3093" stroke-width="1" />
+      <circle cx="0" cy="0" r="15" fill="none" stroke="#6A3093" stroke-width="1" />
+      <text x="0" y="25" font-family="'SF Pro Display', sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">Enchantment</text>
+    </g>
+    
+    <g transform="translate(25, 0)">
+      <!-- Divination -->
+      <path d="M0,-15 L0,15" stroke="#5AC8FA" stroke-width="1" />
+      <path d="M-13,-7.5 L13,7.5" stroke="#5AC8FA" stroke-width="1" />
+      <path d="M-13,7.5 L13,-7.5" stroke="#5AC8FA" stroke-width="1" />
+      <circle cx="0" cy="0" r="15" fill="none" stroke="#5AC8FA" stroke-width="1" />
+      <text x="0" y="25" font-family="'SF Pro Display', sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">Divination</text>
+    </g>
+    
+    <g transform="translate(80, 0)">
+      <!-- Manifestation -->
+      <rect x="-10" y="-10" width="20" height="20" fill="none" stroke="#BF4080" stroke-width="1" />
+      <circle cx="0" cy="0" r="8" fill="none" stroke="#BF4080" stroke-width="1" />
+      <text x="0" y="25" font-family="'SF Pro Display', sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">Manifestation</text>
+    </g>
+  </g>
+  
+  <!-- Conceptual Flora Harvesting -->
+  <g transform="translate(225, 400)">
+    <!-- Container for metaphysical plants -->
+    <rect x="-125" y="-80" width="250" height="160" rx="10" fill="#131A36" opacity="0.7" />
+    
+    <!-- Section title -->
+    <text x="0" y="-55" font-family="'SF Pro Display', sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">Metaphysical Flora Harvesting</text>
+    
+    <!-- The plant itself - changes based on thoughts -->
+    <g transform="translate(0, 0)">
+      <!-- Physical appearance -->
+      <path d="M0,50 L0,20" stroke="#2D854D" stroke-width="2" /> <!-- Stem -->
+      
+      <!-- Leaves that change with thought energy -->
+      <path d="M0,30 C-20,20 -25,0 -10,-10" fill="#2D854D" opacity="0.7"> <!-- Left leaf -->
+        <animate attributeName="d" values="M0,30 C-20,20 -25,0 -10,-10;M0,30 C-25,15 -30,-5 -15,-15;M0,30 C-20,20 -25,0 -10,-10" dur="15s" repeatCount="indefinite" />
+      </path>
+      
+      <path d="M0,30 C20,20 25,0 10,-10" fill="#2D854D" opacity="0.7"> <!-- Right leaf -->
+        <animate attributeName="d" values="M0,30 C20,20 25,0 10,-10;M0,30 C25,15 30,-5 15,-15;M0,30 C20,20 25,0 10,-10" dur="15s" repeatCount="indefinite" />
+      </path>
+      
+      <!-- Conceptual flower - blooms with ideation -->
+      <circle cx="0" cy="-10" r="15" fill="#BF4080" opacity="0.5">
+        <animate attributeName="r" values="15;18;15" dur="8s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.5;0.7;0.5" dur="8s" repeatCount="indefinite" />
+      </circle>
+      
+      <circle cx="0" cy="-10" r="8" fill="#FFFF00" opacity="0.7">
+        <animate attributeName="r" values="8;10;8" dur="6s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.7;0.9;0.7" dur="6s" repeatCount="indefinite" />
+      </circle>
+      
+      <!-- Thought patterns affecting growth -->
+      <path d="M-30,0 Q-15,-10 0,0 Q15,-10 30,0" stroke="#5AC8FA" stroke-width="1" opacity="0.6" fill="none">
+        <animate attributeName="d" values="M-30,0 Q-15,-10 0,0 Q15,-10 30,0;M-30,0 Q-15,-15 0,-5 Q15,-15 30,0;M-30,0 Q-15,-10 0,0 Q15,-10 30,0" dur="10s" repeatCount="indefinite" />
+      </path>
+      
+      <!-- Conceptual essence - what's being harvested -->
+      <text x="0" cy="-10" font-family="'SF Pro Display', sans-serif" font-size="8" fill="#FFFFFF" text-anchor="middle">clarity</text>
+    </g>
+    
+    <!-- Harvesting tools -->
+    <g transform="translate(-75, 20)">
+      <!-- Thought pruners -->
+      <path d="M-10,-15 L10,15 M-10,15 L10,-15" stroke="#5AC8FA" stroke-width="1.5" />
+      <circle cx="0" cy="0" r="20" fill="none" stroke="#5AC8FA" stroke-width="1" />
+      <text x="0" y="35" font-family="'SF Pro Display', sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">Thought Pruners</text>
+    </g>
+    
+    <g transform="translate(75, 20)">
+      <!-- Concept collector -->
+      <rect x="-15" y="-20" width="30" height="40" rx="5" fill="none" stroke="#BF4080" stroke-width="1.5" />
+      <path d="M-10,-10 L10,10 M-10,10 L10,-10" stroke="#BF4080" stroke-width="1" />
+      <text x="0" y="35" font-family="'SF Pro Display', sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">Concept Collector</text>
+    </g>
+  </g>
+  
+  <!-- Conceptual Predator/Prey Relationships -->
+  <g transform="translate(675, 400)">
+    <!-- Container for ecosystem dynamics -->
+    <rect x="-125" y="-80" width="250" height="160" rx="10" fill="#131A36" opacity="0.7" />
+    
+    <!-- Section title -->
+    <text x="0" y="-55" font-family="'SF Pro Display', sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">Conceptual Ecology Dynamics</text>
+    
+    <!-- Predator/prey relationship visualization -->
+    <g transform="translate(-50, 0)">
+      <!-- Prey concept (Fear) -->
+      <circle cx="0" cy="0" r="20" fill="#5AC8FA" opacity="0.4">
+        <animate attributeName="r" values="20;22;20" dur="5s" repeatCount="indefinite" />
+      </circle>
+      
+      <text x="0" y="0" font-family="'SF Pro Display', sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">fear</text>
+      <text x="0" y="35" font-family="'SF Pro Display', sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">Lesser Concept</text>
+    </g>
+    
+    <g transform="translate(50, 0)">
+      <!-- Predator concept (Courage) -->
+      <circle cx="0" cy="0" r="30" fill="#BF4080" opacity="0.4">
+        <animate attributeName="r" values="30;33;30" dur="6s" repeatCount="indefinite" />
+      </circle>
+      
+      <text x="0" y="0" font-family="'SF Pro Display', sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">courage</text>
+      <text x="0" y="35" font-family="'SF Pro Display', sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">Greater Concept</text>
+    </g>
+    
+    <!-- Predation relationship -->
+    <path d="M-30,0 L30,0" stroke="#FFFFFF" stroke-width="1" opacity="0.6" stroke-dasharray="3,3" marker-end="url(#arrowhead2)" />
+    
+    <!-- Arrow marker definition -->
+    <defs>
+      <marker id="arrowhead2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+        <polygon points="0 0, 10 3.5, 0 7" fill="#FFFFFF" opacity="0.7" />
+      </marker>
+    </defs>
+  </g>
+  
+  <!-- M4 Development Toolkit Benefits -->
+  <g transform="translate(450, 570)">
+    <rect x="-410" y="-30" width="820" height="50" rx="8" fill="#131A36" opacity="0.9" />
+    
+    <text x="0" y="-10" font-family="'SF Pro Display', sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF" text-anchor="middle">M4-Optimized Spirit Hunting Experience</text>
+    
+    <!-- 4-column layout for benefits -->
+    <g transform="translate(-305, 15)">
+      <rect x="-15" y="-7" width="8" height="8" fill="#5AC8FA" />
+      <rect x="-7" y="-7" width="8" height="8" fill="#6A3093" />
+      <text x="0" y="0" font-family="'SF Pro Text', sans-serif" font-size="12" fill="#FFFFFF" text-anchor="start">Neural Engine-Powered</text>
+      <text x="0" y="15" font-family="'SF Pro Text', sans-serif" font-size="10" fill="#FFFFFF" text-anchor="start">Spirit Entity AI</text>
+    </g>
+    
+    <g transform="translate(-105, 15)">
+      <rect x="-15" y="-7" width="8" height="8" fill="#5AC8FA" />
+      <rect x="-7" y="-7" width="8" height="8" fill="#6A3093" />
+      <text x="0" y="0" font-family="'SF Pro Text', sans-serif" font-size="12" fill="#FFFFFF" text-anchor="start">Metal-Accelerated</text>
+      <text x="0" y="15" font-family="'SF Pro Text', sans-serif" font-size="10" fill="#FFFFFF" text-anchor="start">Thought-Form Rendering</text>
+    </g>
+    
+    <g transform="translate(105, 15)">
+      <rect x="-15" y="-7" width="8" height="8" fill="#5AC8FA" />
+      <rect x="-7" y="-7" width="8" height="8" fill="#6A3093" />
+      <text x="0" y="0" font-family="'SF Pro Text', sans-serif" font-size="12" fill="#FFFFFF" text-anchor="start">Procedural Generation</text>
+      <text x="0" y="15" font-family="'SF Pro Text', sans-serif" font-size="10" fill="#FFFFFF" text-anchor="start">of Spiritual Entities</text>
+    </g>
+    
+    <g transform="translate(305, 15)">
+      <rect x="-15" y="-7" width="8" height="8" fill="#5AC8FA" />
+      <rect x="-7" y="-7" width="8" height="8" fill="#6A3093" />
+      <text x="0" y="0" font-family="'SF Pro Text', sans-serif" font-size="12" fill="#FFFFFF" text-anchor="start">On-Device Concept</text>
+      <text x="0" y="15" font-family="'SF Pro Text', sans-serif" font-size="10" fill="#FFFFFF" text-anchor="start">Mapping and Physics</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,187 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600">
+  <!-- Background -->
+  <rect width="900" height="600" fill="#0A0621" />
+  
+  <!-- Dimensional grid with perspective effect -->
+  <g opacity="0.12">
+    <!-- Horizontal grid lines with perspective effect -->
+    <path d="M150,550 L750,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M100,500 L800,500" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M75,450 L825,450" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M50,400 L850,400" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M40,350 L860,350" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M30,300 L870,300" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M25,250 L875,250" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M20,200 L880,200" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M15,150 L885,150" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M10,100 L890,100" stroke="#5AC8FA" stroke-width="1" />
+    
+    <!-- Vertical grid lines -->
+    <path d="M150,100 L150,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M225,100 L225,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M300,100 L300,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M375,100 L375,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M450,100 L450,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M525,100 L525,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M600,100 L600,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M675,100 L675,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M750,100 L750,550" stroke="#5AC8FA" stroke-width="1" />
+  </g>
+  
+  <!-- Title -->
+  <text x="450" y="60" font-family="'SF Pro Display', sans-serif" font-size="28" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Logan's Development Workshop</text>
+  <text x="450" y="90" font-family="'SF Pro Display', sans-serif" font-size="16" fill="#5AC8FA" text-anchor="middle">Technical Environment with M4-Optimized Tools</text>
+  
+  <!-- Main visualization with four quadrants -->
+  <g transform="translate(450, 320)">
+    <!-- First Quadrant: M4 Optimization Guide -->
+    <g transform="translate(-225, -150)">
+      <rect x="-150" y="-70" width="300" height="140" rx="10" fill="#131A36" stroke="#5AC8FA" stroke-width="2" />
+      
+      <text x="0" y="-40" font-family="'SF Pro Display', sans-serif" font-size="18" font-weight="bold" fill="#FFFFFF" text-anchor="middle">M4 Optimization Guide</text>
+      
+      <!-- M4 chip visualization -->
+      <g transform="translate(0, 0)">
+        <!-- M4 chip representation -->
+        <rect x="-75" y="-25" width="150" height="50" rx="5" fill="#0D0D15" stroke="#5AC8FA" stroke-width="1.5" />
+        
+        <!-- CPU cores -->
+        <rect x="-65" y="-15" width="30" height="30" rx="3" fill="#5AC8FA" opacity="0.7" />
+        <text x="-50" y="0" font-family="'SF Pro Text', sans-serif" font-size="8" fill="#0D0D15" text-anchor="middle">CPU</text>
+        
+        <!-- GPU cores -->
+        <rect x="-25" y="-15" width="30" height="30" rx="3" fill="#BF4080" opacity="0.7" />
+        <text x="-10" y="0" font-family="'SF Pro Text', sans-serif" font-size="8" fill="#0D0D15" text-anchor="middle">GPU</text>
+        
+        <!-- Neural Engine -->
+        <rect x="15" y="-15" width="30" height="30" rx="3" fill="#6A3093" opacity="0.7" />
+        <text x="30" y="0" font-family="'SF Pro Text', sans-serif" font-size="8" fill="#0D0D15" text-anchor="middle">NE</text>
+        
+        <!-- Unified Memory -->
+        <rect x="55" y="-15" width="30" height="30" rx="3" fill="#2D854D" opacity="0.7" />
+        <text x="70" y="0" font-family="'SF Pro Text', sans-serif" font-size="8" fill="#0D0D15" text-anchor="middle">RAM</text>
+      </g>
+      
+      <text x="0" y="40" font-family="'SF Pro Text', sans-serif" font-size="11" fill="#FFFFFF" text-anchor="middle">Best practices for utilizing Apple Silicon</text>
+      <text x="0" y="55" font-family="'SF Pro Text', sans-serif" font-size="11" fill="#FFFFFF" text-anchor="middle">with Metal and Neural Engine optimization</text>
+    </g>
+    
+    <!-- Second Quadrant: API Integration Map -->
+    <g transform="translate(225, -150)">
+      <rect x="-150" y="-70" width="300" height="140" rx="10" fill="#131A36" stroke="#BF4080" stroke-width="2" />
+      
+      <text x="0" y="-40" font-family="'SF Pro Display', sans-serif" font-size="18" font-weight="bold" fill="#FFFFFF" text-anchor="middle">API Integration Map</text>
+      
+      <!-- API connections visualization -->
+      <g transform="translate(0, 0)">
+        <!-- Central system node -->
+        <circle cx="0" cy="0" r="25" fill="#0D0D15" stroke="#BF4080" stroke-width="1.5" />
+        <text x="0" y="4" font-family="'SF Pro Text', sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">Core</text>
+        
+        <!-- Connected services -->
+        <circle cx="-80" cy="-20" r="15" fill="#0D0D15" stroke="#5AC8FA" stroke-width="1" />
+        <text x="-80" y="-17" font-family="'SF Pro Text', sans-serif" font-size="7" fill="#FFFFFF" text-anchor="middle">Supabase</text>
+        
+        <circle cx="-60" cy="40" r="15" fill="#0D0D15" stroke="#6A3093" stroke-width="1" />
+        <text x="-60" cy="43" font-family="'SF Pro Text', sans-serif" font-size="7" fill="#FFFFFF" text-anchor="middle">Notion</text>
+        
+        <circle cx="60" cy="40" r="15" fill="#0D0D15" stroke="#2D854D" stroke-width="1" />
+        <text x="60" cy="43" font-family="'SF Pro Text', sans-serif" font-size="7" fill="#FFFFFF" text-anchor="middle">CloudKit</text>
+        
+        <circle cx="80" cy="-20" r="15" fill="#0D0D15" stroke="#BF4080" stroke-width="1" />
+        <text x="80" cy="-17" font-family="'SF Pro Text', sans-serif" font-size="7" fill="#FFFFFF" text-anchor="middle">Claude</text>
+        
+        <!-- Connection lines -->
+        <line x1="-66" y1="-13" x2="-22" y2="-7" stroke="#5AC8FA" stroke-width="1" />
+        <line x1="-46" y1="32" x2="-18" y2="12" stroke="#6A3093" stroke-width="1" />
+        <line x1="46" y1="32" x2="18" y2="12" stroke="#2D854D" stroke-width="1" />
+        <line x1="66" y1="-13" x2="22" y2="-7" stroke="#BF4080" stroke-width="1" />
+      </g>
+      
+      <text x="0" y="40" font-family="'SF Pro Text', sans-serif" font-size="11" fill="#FFFFFF" text-anchor="middle">Visual representation of system connections</text>
+      <text x="0" y="55" font-family="'SF Pro Text', sans-serif" font-size="11" fill="#FFFFFF" text-anchor="middle">with authentication and data flow</text>
+    </g>
+    
+    <!-- Third Quadrant: Toolkit Quickstart -->
+    <g transform="translate(-225, 150)">
+      <rect x="-150" y="-70" width="300" height="140" rx="10" fill="#131A36" stroke="#6A3093" stroke-width="2" />
+      
+      <text x="0" y="-40" font-family="'SF Pro Display', sans-serif" font-size="18" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Toolkit Quickstart</text>
+      
+      <!-- Development tools visualization -->
+      <g transform="translate(0, 0)">
+        <!-- Tool icons -->
+        <rect x="-120" y="-20" width="40" height="40" rx="5" fill="#0D0D15" stroke="#5AC8FA" stroke-width="1" />
+        <text x="-100" y="5" font-family="'SF Pro Text', sans-serif" font-size="8" fill="#FFFFFF" text-anchor="middle">PlayCanvas</text>
+        
+        <rect x="-60" y="-20" width="40" height="40" rx="5" fill="#0D0D15" stroke="#BF4080" stroke-width="1" />
+        <text x="-40" y="5" font-family="'SF Pro Text', sans-serif" font-size="8" fill="#FFFFFF" text-anchor="middle">React 3F</text>
+        
+        <rect x="0" y="-20" width="40" height="40" rx="5" fill="#0D0D15" stroke="#6A3093" stroke-width="1" />
+        <text x="20" y="5" font-family="'SF Pro Text', sans-serif" font-size="8" fill="#FFFFFF" text-anchor="middle">Godot</text>
+        
+        <rect x="60" y="-20" width="40" height="40" rx="5" fill="#0D0D15" stroke="#2D854D" stroke-width="1" />
+        <text x="80" y="5" font-family="'SF Pro Text', sans-serif" font-size="8" fill="#FFFFFF" text-anchor="middle">Reality</text>
+      </g>
+      
+      <text x="0" y="40" font-family="'SF Pro Text', sans-serif" font-size="11" fill="#FFFFFF" text-anchor="middle">Getting started with development tools</text>
+      <text x="0" y="55" font-family="'SF Pro Text', sans-serif" font-size="11" fill="#FFFFFF" text-anchor="middle">optimized for Metal acceleration</text>
+    </g>
+    
+    <!-- Fourth Quadrant: Code Snippet Library -->
+    <g transform="translate(225, 150)">
+      <rect x="-150" y="-70" width="300" height="140" rx="10" fill="#131A36" stroke="#2D854D" stroke-width="2" />
+      
+      <text x="0" y="-40" font-family="'SF Pro Display', sans-serif" font-size="18" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Code Snippet Library</text>
+      
+      <!-- Code snippets visualization -->
+      <g transform="translate(0, 0)">
+        <!-- Code cards -->
+        <rect x="-125" y="-25" width="70" height="50" rx="5" fill="#0D0D15" stroke="#5AC8FA" stroke-width="1" />
+        <text x="-90" y="-10" font-family="'SF Mono', monospace" font-size="6" fill="#5AC8FA">WebGPU</text>
+        <text x="-90" y="0" font-family="'SF Mono', monospace" font-size="6" fill="#FFFFFF">config(){</text>
+        <text x="-90" y="10" font-family="'SF Mono', monospace" font-size="6" fill="#FFFFFF">  metal=true</text>
+        <text x="-90" y="20" font-family="'SF Mono', monospace" font-size="6" fill="#FFFFFF">}</text>
+        
+        <rect x="-40" y="-25" width="70" height="50" rx="5" fill="#0D0D15" stroke="#BF4080" stroke-width="1" />
+        <text x="-5" y="-10" font-family="'SF Mono', monospace" font-size="6" fill="#BF4080">ML-Ink</text>
+        <text x="-5" y="0" font-family="'SF Mono', monospace" font-size="6" fill="#FFFFFF">EXTERNAL</text>
+        <text x="-5" y="10" font-family="'SF Mono', monospace" font-size="6" fill="#FFFFFF">genResponse</text>
+        <text x="-5" y="20" font-family="'SF Mono', monospace" font-size="6" fill="#FFFFFF">(char, ctx)</text>
+        
+        <rect x="45" y="-25" width="70" height="50" rx="5" fill="#0D0D15" stroke="#6A3093" stroke-width="1" />
+        <text x="80" y="-10" font-family="'SF Mono', monospace" font-size="6" fill="#6A3093">Swift UI</text>
+        <text x="80" y="0" font-family="'SF Mono', monospace" font-size="6" fill="#FFFFFF">struct View {</text>
+        <text x="80" y="10" font-family="'SF Mono', monospace" font-size="6" fill="#FFFFFF">  @State var</text>
+        <text x="80" y="20" font-family="'SF Mono', monospace" font-size="6" fill="#FFFFFF">  state = 0</text>
+        <text x="80" y="30" font-family="'SF Mono', monospace" font-size="6" fill="#FFFFFF">}</text>
+      </g>
+      
+      <text x="0" y="40" font-family="'SF Pro Text', sans-serif" font-size="11" fill="#FFFFFF" text-anchor="middle">Reusable components for common needs</text>
+      <text x="0" y="55" font-family="'SF Pro Text', sans-serif" font-size="11" fill="#FFFFFF" text-anchor="middle">with M4-optimized implementations</text>
+    </g>
+  </g>
+  
+  <!-- AI Assistant indicators -->
+  <g transform="translate(450, 520)">
+    <rect x="-350" y="-30" width="700" height="60" rx="10" fill="#131A36" opacity="0.8" />
+    
+    <text x="0" y="-5" font-family="'SF Pro Display', sans-serif" font-size="18" font-weight="bold" fill="#FFFFFF" text-anchor="middle">AI Integration Points</text>
+    
+    <!-- AI Assistant features -->
+    <g transform="translate(-260, 20)">
+      <rect x="-8" y="-8" width="16" height="16" fill="#5AC8FA" opacity="0.7" />
+      <text x="15" y="4" font-family="'SF Pro Text', sans-serif" font-size="12" fill="#FFFFFF" text-anchor="start">Code Optimization Suggestions</text>
+    </g>
+    
+    <g transform="translate(-60, 20)">
+      <rect x="-8" y="-8" width="16" height="16" fill="#6A3093" opacity="0.7" />
+      <text x="15" y="4" font-family="'SF Pro Text', sans-serif" font-size="12" fill="#FFFFFF" text-anchor="start">Bug Detection and Fixes</text>
+    </g>
+    
+    <g transform="translate(140, 20)">
+      <rect x="-8" y="-8" width="16" height="16" fill="#BF4080" opacity="0.7" />
+      <text x="15" y="4" font-family="'SF Pro Text', sans-serif" font-size="12" fill="#FFFFFF" text-anchor="start">API Integration Assistance</text>
+    </g>
+  </g>
+</svg>

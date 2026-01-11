@@ -1,0 +1,188 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <!-- Background with quantum grid -->
+  <rect width="1200" height="800" fill="#0A0621" />
+  
+  <!-- Dimensional grid with perspective effect -->
+  <g opacity="0.1">
+    <!-- Horizontal grid lines -->
+    <path d="M100,700 Q600,680 1100,700" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M150,650 Q600,630 1050,650" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M200,600 Q600,580 1000,600" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M250,550 Q600,530 950,550" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M300,500 Q600,480 900,500" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M350,450 Q600,430 850,450" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M400,400 Q600,380 800,400" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M450,350 Q600,330 750,350" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M500,300 Q600,280 700,300" stroke="#5AC8FA" stroke-width="1" />
+    
+    <!-- Vertical grid lines -->
+    <path d="M400,300 L400,700" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M500,300 L500,700" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M600,300 L600,700" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M700,300 L700,700" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M800,300 L800,700" stroke="#5AC8FA" stroke-width="1" />
+  </g>
+  
+  <!-- Title with quantum-spatial effect -->
+  <g>
+    <text x="600" y="120" font-family="'SF Pro Display', sans-serif" font-size="80" font-weight="bold" fill="#FFFFFF" text-anchor="middle">VISION &amp; APPROACH</text>
+    <!-- Quantum pixels on title -->
+    <rect x="410" y="90" width="10" height="10" fill="#5AC8FA" opacity="0.8" />
+    <rect x="790" y="110" width="8" height="8" fill="#6A3093" opacity="0.8" />
+    <rect x="420" y="130" width="12" height="12" fill="#BF4080" opacity="0.8" />
+    <rect x="780" y="90" width="14" height="14" fill="#5AC8FA" opacity="0.7" />
+  </g>
+  
+  <!-- Market Opportunity Panel -->
+  <g transform="translate(320, 350)">
+    <rect x="-220" y="-130" width="440" height="350" rx="15" fill="#131A36" opacity="0.9" stroke="#5AC8FA" stroke-width="2" />
+    <text x="0" y="-90" font-family="'SF Pro Display', sans-serif" font-size="32" fill="#FFFFFF" text-anchor="middle">MARKET OPPORTUNITY</text>
+    
+    <!-- Vision Pro Content Gap -->
+    <g transform="translate(0, -30)">
+      <circle cx="0" cy="0" r="40" fill="#331F4A" stroke="#5AC8FA" stroke-width="1.5" />
+      <!-- Vision Pro stylized icon -->
+      <path d="M-20,-15 C-20,-20 20,-20 20,-15 C20,-5 20,5 20,15 C20,20 -20,20 -20,15 C-20,5 -20,-5 -20,-15 Z" fill="none" stroke="#5AC8FA" stroke-width="1.5" />
+      <path d="M-10,-5 C-10,-10 10,-10 10,-5 C10,0 10,5 10,10 C10,12 -10,12 -10,10 C-10,5 -10,0 -10,-5 Z" fill="none" stroke="#5AC8FA" stroke-width="1" />
+      <text x="0" y="55" font-family="'SF Pro Text', sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">Vision Pro</text>
+      <text x="0" y="75" font-family="'SF Pro Text', sans-serif" font-size="14" fill="#5AC8FA" text-anchor="middle">Content Gap</text>
+    </g>
+    
+    <!-- Spatial Storytelling -->
+    <g transform="translate(-130, 100)">
+      <circle cx="0" cy="0" r="40" fill="#331F4A" stroke="#BF4080" stroke-width="1.5" />
+      <!-- Storytelling icon -->
+      <path d="M-15,-15 L15,15 M-15,15 L15,-15" stroke="#BF4080" stroke-width="1.5" />
+      <circle cx="0" cy="0" r="20" fill="none" stroke="#BF4080" stroke-width="1.5" />
+      <text x="0" y="55" font-family="'SF Pro Text', sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">Spatial</text>
+      <text x="0" y="75" font-family="'SF Pro Text', sans-serif" font-size="14" fill="#BF4080" text-anchor="middle">Storytelling</text>
+    </g>
+    
+    <!-- IP Adaptation -->
+    <g transform="translate(130, 100)">
+      <circle cx="0" cy="0" r="40" fill="#331F4A" stroke="#6A3093" stroke-width="1.5" />
+      <!-- IP Adaptation icon -->
+      <rect x="-15" y="-15" width="30" height="30" fill="none" stroke="#6A3093" stroke-width="1.5" />
+      <path d="M-10,-10 L10,10 M-10,10 L10,-10" stroke="#6A3093" stroke-width="1.5" />
+      <text x="0" y="55" font-family="'SF Pro Text', sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">IP</text>
+      <text x="0" y="75" font-family="'SF Pro Text', sans-serif" font-size="14" fill="#6A3093" text-anchor="middle">Adaptation</text>
+    </g>
+    
+    <!-- Connecting lines -->
+    <path d="M0,-30 L-130,100" stroke="#5AC8FA" stroke-width="1.5" stroke-dasharray="5,5" />
+    <path d="M0,-30 L130,100" stroke="#5AC8FA" stroke-width="1.5" stroke-dasharray="5,5" />
+    <path d="M-130,100 L130,100" stroke="#5AC8FA" stroke-width="1.5" stroke-dasharray="5,5" />
+    
+    <!-- Quantum pixel decoration -->
+    <rect x="-190" y="-100" width="12" height="12" fill="#5AC8FA" opacity="0.7" />
+    <rect x="180" y="-100" width="10" height="10" fill="#BF4080" opacity="0.8" />
+    <rect x="-190" y="150" width="14" height="14" fill="#6A3093" opacity="0.7" />
+    <rect x="180" y="150" width="8" height="8" fill="#5AC8FA" opacity="0.7" />
+  </g>
+  
+  <!-- Unique Approach Panel -->
+  <g transform="translate(880, 350)">
+    <rect x="-230" y="-130" width="460" height="350" rx="15" fill="#131A36" opacity="0.9" stroke="#6A3093" stroke-width="2" />
+    <text x="0" y="-90" font-family="'SF Pro Display', sans-serif" font-size="32" fill="#FFFFFF" text-anchor="middle">UNIQUE APPROACH</text>
+    
+    <!-- Fantasy Worldbuilding Suite -->
+    <g transform="translate(-140, -30)">
+      <rect x="-60" y="-50" width="120" height="120" rx="10" fill="#331F4A" stroke="#5AC8FA" stroke-width="1.5" />
+      <!-- Stylized Notion icon -->
+      <path d="M-30,-30 L30,30 M-30,30 L30,-30" stroke="#5AC8FA" stroke-width="1.5" />
+      <rect x="-20" y="-20" width="40" height="40" fill="none" stroke="#5AC8FA" stroke-width="1.5" />
+      <text x="0" y="80" font-family="'SF Pro Text', sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">Fantasy</text>
+      <text x="0" y="100" font-family="'SF Pro Text', sans-serif" font-size="14" fill="#5AC8FA" text-anchor="middle">Worldbuilding</text>
+    </g>
+    
+    <!-- Quantum-Spatial Design -->
+    <g transform="translate(140, -30)">
+      <rect x="-60" y="-50" width="120" height="120" rx="10" fill="#331F4A" stroke="#BF4080" stroke-width="1.5" />
+      <!-- Stylized design icon -->
+      <path d="M-30,-30 L30,30" stroke="#BF4080" stroke-width="2" />
+      <path d="M-30,30 L30,-30" stroke="#BF4080" stroke-width="2" />
+      <circle cx="0" cy="0" r="20" fill="none" stroke="#BF4080" stroke-width="2" />
+      <text x="0" y="80" font-family="'SF Pro Text', sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">Quantum-Spatial</text>
+      <text x="0" y="100" font-family="'SF Pro Text', sans-serif" font-size="14" fill="#BF4080" text-anchor="middle">Design System</text>
+    </g>
+    
+    <!-- AI-Enhanced Pipeline -->
+    <g transform="translate(0, 100)">
+      <rect x="-60" y="-50" width="120" height="120" rx="10" fill="#331F4A" stroke="#6A3093" stroke-width="1.5" />
+      <!-- Stylized AI icon -->
+      <path d="M-30,-30 L30,30 M-30,30 L30,-30" stroke="#6A3093" stroke-width="1.5" />
+      <circle cx="0" cy="0" r="25" fill="none" stroke="#6A3093" stroke-width="1.5" />
+      <circle cx="-15" cy="-15" r="5" fill="#6A3093" />
+      <circle cx="15" cy="15" r="5" fill="#6A3093" />
+      <text x="0" y="80" font-family="'SF Pro Text', sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">AI-Enhanced</text>
+      <text x="0" y="100" font-family="'SF Pro Text', sans-serif" font-size="14" fill="#6A3093" text-anchor="middle">Creative Pipeline</text>
+    </g>
+    
+    <!-- Connecting lines -->
+    <path d="M-140,-30 L0,100" stroke="#6A3093" stroke-width="1.5" stroke-dasharray="5,5" />
+    <path d="M140,-30 L0,100" stroke="#6A3093" stroke-width="1.5" stroke-dasharray="5,5" />
+    <path d="M-140,-30 L140,-30" stroke="#6A3093" stroke-width="1.5" stroke-dasharray="5,5" />
+    
+    <!-- Quantum pixel decoration -->
+    <rect x="-210" y="-100" width="12" height="12" fill="#BF4080" opacity="0.7" />
+    <rect x="200" y="-100" width="10" height="10" fill="#5AC8FA" opacity="0.8" />
+    <rect x="-210" y="150" width="14" height="14" fill="#5AC8FA" opacity="0.7" />
+    <rect x="200" y="150" width="8" height="8" fill="#6A3093" opacity="0.7" />
+  </g>
+  
+  <!-- Core Technologies Bar -->
+  <g transform="translate(600, 620)">
+    <rect x="-550" y="-40" width="1100" height="80" rx="10" fill="#0D0D15" stroke="#5AC8FA" stroke-width="1.5" />
+    <text x="0" y="-10" font-family="'SF Pro Display', sans-serif" font-size="24" fill="#FFFFFF" text-anchor="middle">CORE TECHNOLOGIES</text>
+    
+    <!-- Technology icons in a row -->
+    <g transform="translate(-400, 20)">
+      <circle cx="0" cy="0" r="15" fill="#331F4A" stroke="#5AC8FA" stroke-width="1" />
+      <text x="0" y="5" font-family="'SF Pro Text', sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">Notion</text>
+    </g>
+    
+    <g transform="translate(-200, 20)">
+      <circle cx="0" cy="0" r="15" fill="#331F4A" stroke="#BF4080" stroke-width="1" />
+      <text x="0" y="5" font-family="'SF Pro Text', sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">Ink</text>
+    </g>
+    
+    <g transform="translate(0, 20)">
+      <circle cx="0" cy="0" r="15" fill="#331F4A" stroke="#6A3093" stroke-width="1" />
+      <text x="0" y="5" font-family="'SF Pro Text', sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">Supabase</text>
+    </g>
+    
+    <g transform="translate(200, 20)">
+      <circle cx="0" cy="0" r="15" fill="#331F4A" stroke="#5AC8FA" stroke-width="1" />
+      <text x="0" y="5" font-family="'SF Pro Text', sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">Framer</text>
+    </g>
+    
+    <g transform="translate(400, 20)">
+      <circle cx="0" cy="0" r="15" fill="#331F4A" stroke="#BF4080" stroke-width="1" />
+      <text x="0" y="5" font-family="'SF Pro Text', sans-serif" font-size="9" fill="#FFFFFF" text-anchor="middle">M4 Mac</text>
+    </g>
+    
+    <!-- Current Gap indicator -->
+    <text x="0" y="45" font-family="'SF Pro Text', sans-serif" font-size="14" fill="#5AC8FA" text-anchor="middle">Current Gap: Environmental intelligence and spatial computing behavior</text>
+  </g>
+  
+  <!-- 9Bit Studios Logo suggesting in top corner -->
+  <g transform="translate(120, 120)">
+    <rect x="-40" y="-40" width="80" height="80" rx="10" fill="#131A36" stroke="#5AC8FA" stroke-width="2" />
+    <text x="0" y="0" font-family="'SF Pro Display', sans-serif" font-size="24" font-weight="bold" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle">9B</text>
+    <rect x="-25" y="-25" width="8" height="8" fill="#BF4080" opacity="0.8" />
+    <rect x="15" y="15" width="10" height="10" fill="#5AC8FA" opacity="0.7" />
+  </g>
+  
+  <!-- Time indicator -->
+  <g transform="translate(1080, 120)">
+    <rect x="-80" y="-30" width="160" height="60" rx="30" fill="#0D0D15" stroke="#6A3093" stroke-width="1.5" />
+    <text x="0" y="8" font-family="'SF Pro Text', sans-serif" font-size="24" fill="#FFFFFF" text-anchor="middle">5 minutes</text>
+  </g>
+  
+  <!-- Connecting element between the two main panels -->
+  <g>
+    <path d="M540,350 L650,350" stroke="#5AC8FA" stroke-width="2" />
+    <circle cx="595" cy="350" r="10" fill="#331F4A" stroke="#5AC8FA" stroke-width="2" />
+    <rect x="590" y="345" width="10" height="10" fill="#BF4080" opacity="0.8" />
+  </g>
+</svg>

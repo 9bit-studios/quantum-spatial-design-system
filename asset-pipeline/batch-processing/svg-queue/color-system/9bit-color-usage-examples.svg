@@ -1,0 +1,301 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1600">
+  <!-- Background -->
+  <rect width="1200" height="1600" fill="#0A0621" />
+  
+  <!-- Grid Background -->
+  <g opacity="0.1">
+    <!-- Horizontal lines -->
+    <path d="M0,0 L1200,0" stroke="#36EAE8" stroke-width="1" />
+    <path d="M0,100 L1200,100" stroke="#36EAE8" stroke-width="1" />
+    <path d="M0,200 L1200,200" stroke="#36EAE8" stroke-width="1" />
+    <path d="M0,300 L1200,300" stroke="#36EAE8" stroke-width="1" />
+    <path d="M0,400 L1200,400" stroke="#36EAE8" stroke-width="1" />
+    <path d="M0,500 L1200,500" stroke="#36EAE8" stroke-width="1" />
+    <path d="M0,600 L1200,600" stroke="#36EAE8" stroke-width="1" />
+    <path d="M0,700 L1200,700" stroke="#36EAE8" stroke-width="1" />
+    <path d="M0,800 L1200,800" stroke="#36EAE8" stroke-width="1" />
+    <path d="M0,900 L1200,900" stroke="#36EAE8" stroke-width="1" />
+    <path d="M0,1000 L1200,1000" stroke="#36EAE8" stroke-width="1" />
+    <path d="M0,1100 L1200,1100" stroke="#36EAE8" stroke-width="1" />
+    <path d="M0,1200 L1200,1200" stroke="#36EAE8" stroke-width="1" />
+    <path d="M0,1300 L1200,1300" stroke="#36EAE8" stroke-width="1" />
+    <path d="M0,1400 L1200,1400" stroke="#36EAE8" stroke-width="1" />
+    <path d="M0,1500 L1200,1500" stroke="#36EAE8" stroke-width="1" />
+    
+    <!-- Vertical lines -->
+    <path d="M0,0 L0,1600" stroke="#36EAE8" stroke-width="1" />
+    <path d="M100,0 L100,1600" stroke="#36EAE8" stroke-width="1" />
+    <path d="M200,0 L200,1600" stroke="#36EAE8" stroke-width="1" />
+    <path d="M300,0 L300,1600" stroke="#36EAE8" stroke-width="1" />
+    <path d="M400,0 L400,1600" stroke="#36EAE8" stroke-width="1" />
+    <path d="M500,0 L500,1600" stroke="#36EAE8" stroke-width="1" />
+    <path d="M600,0 L600,1600" stroke="#36EAE8" stroke-width="1" />
+    <path d="M700,0 L700,1600" stroke="#36EAE8" stroke-width="1" />
+    <path d="M800,0 L800,1600" stroke="#36EAE8" stroke-width="1" />
+    <path d="M900,0 L900,1600" stroke="#36EAE8" stroke-width="1" />
+    <path d="M1000,0 L1000,1600" stroke="#36EAE8" stroke-width="1" />
+    <path d="M1100,0 L1100,1600" stroke="#36EAE8" stroke-width="1" />
+  </g>
+  
+  <!-- Title -->
+  <text x="600" y="70" font-family="SF Pro Display" font-size="36" font-weight="bold" fill="#FFFFFF" text-anchor="middle">9Bit Studios Color Usage Examples</text>
+  <text x="600" y="110" font-family="SF Pro Text" font-size="18" fill="#FFFFFF" text-anchor="middle">Application Across Product Ecosystems</text>
+  
+  <!-- Product Category: Games -->
+  <g transform="translate(100, 180)">
+    <rect width="1000" height="360" rx="12" fill="#2E1B45" opacity="0.8" />
+    <rect width="1000" height="60" rx="12" fill="#5B2C91" />
+    
+    <!-- Section Title -->
+    <text x="500" y="40" font-family="SF Pro Display" font-size="24" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Games Portfolio: High-Intensity Application</text>
+    
+    <!-- Game UI Example -->
+    <g transform="translate(50, 90)">
+      <!-- Game UI Frame -->
+      <rect x="0" y="0" width="280" height="240" rx="8" fill="#0A0621" stroke="#36EAE8" stroke-width="1" />
+      
+      <!-- Game HUD Elements -->
+      <rect x="20" y="20" width="240" height="40" rx="4" fill="#2E1B45" />
+      <text x="40" y="45" font-family="SF Pro Display" font-size="16" font-weight="bold" fill="#FFFFFF">Player Status</text>
+      
+      <!-- Health Bar -->
+      <rect x="40" y="70" width="120" height="16" rx="8" fill="#161D4E" />
+      <rect x="40" y="70" width="80" height="16" rx="8" fill="#FF6B57" />
+      <text x="170" y="83" font-family="SF Pro Text" font-size="12" fill="#FFFFFF">Health</text>
+      
+      <!-- Energy Bar -->
+      <rect x="40" y="95" width="120" height="16" rx="8" fill="#161D4E" />
+      <rect x="40" y="95" width="100" height="16" rx="8" fill="#36EAE8" />
+      <text x="170" y="108" font-family="SF Pro Text" font-size="12" fill="#FFFFFF">Energy</text>
+      
+      <!-- Inventory Slots -->
+      <rect x="40" y="130" width="40" height="40" rx="4" fill="#2E1B45" stroke="#5B2C91" stroke-width="2" />
+      <rect x="90" y="130" width="40" height="40" rx="4" fill="#2E1B45" stroke="#5B2C91" stroke-width="2" />
+      <rect x="140" y="130" width="40" height="40" rx="4" fill="#2E1B45" stroke="#36EAE8" stroke-width="2" />
+      <rect x="190" y="130" width="40" height="40" rx="4" fill="#2E1B45" stroke="#5B2C91" stroke-width="2" />
+      
+      <!-- Game Controls -->
+      <circle cx="70" cy="200" r="20" fill="#5B2C91" opacity="0.8" />
+      <circle cx="130" cy="200" r="20" fill="#36EAE8" opacity="0.8" />
+      <circle cx="190" cy="200" r="20" fill="#FF6B57" opacity="0.8" />
+      
+      <!-- Pixel corner element -->
+      <rect x="0" y="0" width="6" height="6" fill="#3DFF74" />
+      <rect x="6" y="0" width="6" height="6" fill="#3DFF74" opacity="0.8" />
+      <rect x="0" y="6" width="6" height="6" fill="#3DFF74" opacity="0.8" />
+      <rect x="6" y="6" width="6" height="6" fill="#3DFF74" opacity="0.6" />
+    </g>
+    
+    <!-- Game Specifics -->
+    <g transform="translate(380, 90)">
+      <text x="0" y="30" font-family="SF Pro Display" font-size="20" font-weight="bold" fill="#FFFFFF">Gaming Interface Guidelines</text>
+      
+      <text x="0" y="70" font-family="SF Pro Text" font-size="16" fill="#FFFFFF">• Full saturation values (100%)</text>
+      <text x="0" y="100" font-family="SF Pro Text" font-size="16" fill="#FFFFFF">• High contrast for gameplay elements</text>
+      <text x="0" y="130" font-family="SF Pro Text" font-size="16" fill="#FFFFFF">• Vibrant accent colors for interactive elements</text>
+      <text x="0" y="160" font-family="SF Pro Text" font-size="16" fill="#FFFFFF">• 8-bit pixel elements incorporate Retro Green</text>
+      <text x="0" y="190" font-family="SF Pro Text" font-size="16" fill="#FFFFFF">• Health/status indicators use Dimensional Orange</text>
+      <text x="0" y="220" font-family="SF Pro Text" font-size="16" fill="#FFFFFF">• Energy/mana uses Digital Cyan</text>
+    </g>
+    
+    <!-- Color Indicators -->
+    <g transform="translate(720, 140)">
+      <!-- Distinctive swatch set for games -->
+      <rect x="0" y="0" width="30" height="30" rx="4" fill="#5B2C91" />
+      <text x="40" y="20" font-family="SF Pro Text" font-size="14" fill="#FFFFFF">Quantum Purple (100%)</text>
+      
+      <rect x="0" y="40" width="30" height="30" rx="4" fill="#36EAE8" />
+      <text x="40" y="60" font-family="SF Pro Text" font-size="14" fill="#FFFFFF">Digital Cyan (100%)</text>
+      
+      <rect x="0" y="80" width="30" height="30" rx="4" fill="#FF6B57" />
+      <text x="40" y="100" font-family="SF Pro Text" font-size="14" fill="#FFFFFF">Dimensional Orange (100%)</text>
+      
+      <rect x="0" y="120" width="30" height="30" rx="4" fill="#3DFF74" />
+      <text x="40" y="140" font-family="SF Pro Text" font-size="14" fill="#FFFFFF">Retro Green (100%)</text>
+    </g>
+  </g>
+  
+  <!-- Product Category: SaaS Products -->
+  <g transform="translate(100, 580)">
+    <rect width="1000" height="360" rx="12" fill="#2E1B45" opacity="0.8" />
+    <rect width="1000" height="60" rx="12" fill="#5B2C91" />
+    
+    <!-- Section Title -->
+    <text x="500" y="40" font-family="SF Pro Display" font-size="24" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Creative SaaS Products: Reduced-Intensity Application</text>
+    
+    <!-- SaaS UI Example -->
+    <g transform="translate(50, 90)">
+      <!-- App Frame -->
+      <rect x="0" y="0" width="280" height="240" rx="8" fill="#0A0621" stroke="#36EAE8" stroke-opacity="0.6" stroke-width="1" />
+      
+      <!-- Header -->
+      <rect x="0" y="0" width="280" height="40" rx="8" fill="#2E1B45" />
+      <text x="20" y="25" font-family="SF Pro Display" font-size="16" font-weight="semibold" fill="#FFFFFF">Oksana Asset Manager</text>
+      
+      <!-- Sidebar Navigation -->
+      <rect x="0" y="40" width="70" height="200" fill="#161D4E" />
+      
+      <!-- Navigation Icons (Simplified) -->
+      <rect x="15" y="60" width="40" height="4" rx="2" fill="#5B2C91" opacity="0.8" />
+      <rect x="15" y="70" width="30" height="4" rx="2" fill="#5B2C91" opacity="0.8" />
+      
+      <rect x="15" y="100" width="40" height="4" rx="2" fill="#FFFFFF" opacity="0.6" />
+      <rect x="15" y="110" width="30" height="4" rx="2" fill="#FFFFFF" opacity="0.6" />
+      
+      <rect x="15" y="140" width="40" height="4" rx="2" fill="#FFFFFF" opacity="0.6" />
+      <rect x="15" y="150" width="30" height="4" rx="2" fill="#FFFFFF" opacity="0.6" />
+      
+      <rect x="15" y="180" width="40" height="4" rx="2" fill="#FFFFFF" opacity="0.6" />
+      <rect x="15" y="190" width="30" height="4" rx="2" fill="#FFFFFF" opacity="0.6" />
+      
+      <!-- Main Content Area -->
+      <rect x="70" y="40" width="210" height="200" fill="#0A0621" />
+      
+      <!-- Content Elements -->
+      <rect x="85" y="55" width="80" height="80" rx="4" fill="#2E1B45" />
+      <rect x="175" y="55" width="80" height="80" rx="4" fill="#2E1B45" />
+      <rect x="85" y="145" width="80" height="80" rx="4" fill="#2E1B45" />
+      <rect x="175" y="145" width="80" height="80" rx="4" fill="#2E1B45" />
+      
+      <!-- Highlight Element -->
+      <rect x="85" y="55" width="80" height="80" rx="4" stroke="#36EAE8" stroke-opacity="0.8" stroke-width="2" fill="none" />
+      
+      <!-- Pixel corner element (more subtle) -->
+      <rect x="0" y="0" width="4" height="4" fill="#36EAE8" opacity="0.6" />
+      <rect x="4" y="0" width="4" height="4" fill="#36EAE8" opacity="0.4" />
+      <rect x="0" y="4" width="4" height="4" fill="#36EAE8" opacity="0.4" />
+      <rect x="4" y="4" width="4" height="4" fill="#36EAE8" opacity="0.2" />
+    </g>
+    
+    <!-- SaaS Specifics -->
+    <g transform="translate(380, 90)">
+      <text x="0" y="30" font-family="SF Pro Display" font-size="20" font-weight="bold" fill="#FFFFFF">SaaS Interface Guidelines</text>
+      
+      <text x="0" y="70" font-family="SF Pro Text" font-size="16" fill="#FFFFFF">• Reduced saturation values (80%)</text>
+      <text x="0" y="100" font-family="SF Pro Text" font-size="16" fill="#FFFFFF">• Subtle accent colors for professional tools</text>
+      <text x="0" y="130" font-family="SF Pro Text" font-size="16" fill="#FFFFFF">• Clean, functional interfaces with minimal noise</text>
+      <text x="0" y="160" font-family="SF Pro Text" font-size="16" fill="#FFFFFF">• Quantum pixels at lower opacity for branding</text>
+      <text x="0" y="190" font-family="SF Pro Text" font-size="16" fill="#FFFFFF">• Strategic use of accent colors for selected states</text>
+      <text x="0" y="220" font-family="SF Pro Text" font-size="16" fill="#FFFFFF">• Focus on readability and reduced eye strain</text>
+    </g>
+    
+    <!-- Color Indicators -->
+    <g transform="translate(720, 140)">
+      <!-- Distinctive swatch set for SaaS -->
+      <rect x="0" y="0" width="30" height="30" rx="4" fill="#5B2C91" opacity="0.8" />
+      <text x="40" y="20" font-family="SF Pro Text" font-size="14" fill="#FFFFFF">Quantum Purple (80%)</text>
+      
+      <rect x="0" y="40" width="30" height="30" rx="4" fill="#36EAE8" opacity="0.8" />
+      <text x="40" y="60" font-family="SF Pro Text" font-size="14" fill="#FFFFFF">Digital Cyan (80%)</text>
+      
+      <rect x="0" y="80" width="30" height="30" rx="4" fill="#FF6B57" opacity="0.8" />
+      <text x="40" y="100" font-family="SF Pro Text" font-size="14" fill="#FFFFFF">Dimensional Orange (80%)</text>
+      
+      <rect x="0" y="120" width="30" height="30" rx="4" fill="#FFFFFF" opacity="0.8" />
+      <text x="40" y="140" font-family="SF Pro Text" font-size="14" fill="#FFFFFF">White (80% for text/UI)</text>
+    </g>
+  </g>
+  
+  <!-- Product Category: Documentation -->
+  <g transform="translate(100, 980)">
+    <rect width="1000" height="360" rx="12" fill="#2E1B45" opacity="0.8" />
+    <rect width="1000" height="60" rx="12" fill="#5B2C91" />
+    
+    <!-- Section Title -->
+    <text x="500" y="40" font-family="SF Pro Display" font-size="24" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Documentation: Subtle-Intensity Application</text>
+    
+    <!-- Documentation Example -->
+    <g transform="translate(50, 90)">
+      <!-- Doc Frame -->
+      <rect x="0" y="0" width="280" height="240" rx="8" fill="#0A0621" stroke="#36EAE8" stroke-opacity="0.4" stroke-width="1" />
+      
+      <!-- Header -->
+      <rect x="0" y="0" width="280" height="30" rx="8" fill="#161D4E" />
+      <text x="20" y="20" font-family="SF Pro Display" font-size="14" font-weight="semibold" fill="#FFFFFF">Technical Documentation</text>
+      
+      <!-- Document Content -->
+      <rect x="20" y="45" width="160" height="8" rx="4" fill="#5B2C91" opacity="0.6" />
+      <rect x="20" y="65" width="240" height="4" rx="2" fill="#FFFFFF" opacity="0.8" />
+      <rect x="20" y="75" width="240" height="4" rx="2" fill="#FFFFFF" opacity="0.8" />
+      <rect x="20" y="85" width="200" height="4" rx="2" fill="#FFFFFF" opacity="0.8" />
+      <rect x="20" y="95" width="220" height="4" rx="2" fill="#FFFFFF" opacity="0.8" />
+      
+      <rect x="20" y="115" width="120" height="6" rx="3" fill="#36EAE8" opacity="0.6" />
+      <rect x="40" y="135" width="200" height="4" rx="2" fill="#FFFFFF" opacity="0.7" />
+      <rect x="40" y="145" width="200" height="4" rx="2" fill="#FFFFFF" opacity="0.7" />
+      <rect x="40" y="155" width="180" height="4" rx="2" fill="#FFFFFF" opacity="0.7" />
+      
+      <rect x="20" y="175" width="100" height="6" rx="3" fill="#36EAE8" opacity="0.6" />
+      <rect x="40" y="195" width="190" height="4" rx="2" fill="#FFFFFF" opacity="0.7" />
+      <rect x="40" y="205" width="200" height="4" rx="2" fill="#FFFFFF" opacity="0.7" />
+      <rect x="40" y="215" width="170" height="4" rx="2" fill="#FFFFFF" opacity="0.7" />
+      
+      <!-- Pixel corner element (very subtle) -->
+      <rect x="0" y="0" width="4" height="4" fill="#36EAE8" opacity="0.4" />
+      <rect x="4" y="0" width="4" height="4" fill="#36EAE8" opacity="0.3" />
+      <rect x="0" y="4" width="4" height="4" fill="#36EAE8" opacity="0.3" />
+      <rect x="4" y="4" width="4" height="4" fill="#36EAE8" opacity="0.2" />
+    </g>
+    
+    <!-- Documentation Specifics -->
+    <g transform="translate(380, 90)">
+      <text x="0" y="30" font-family="SF Pro Display" font-size="20" font-weight="bold" fill="#FFFFFF">Documentation Guidelines</text>
+      
+      <text x="0" y="70" font-family="SF Pro Text" font-size="16" fill="#FFFFFF">• Low saturation values (60%)</text>
+      <text x="0" y="100" font-family="SF Pro Text" font-size="16" fill="#FFFFFF">• Minimalist color application for extended reading</text>
+      <text x="0" y="130" font-family="SF Pro Text" font-size="16" fill="#FFFFFF">• Increased white space for content breathing room</text>
+      <text x="0" y="160" font-family="SF Pro Text" font-size="16" fill="#FFFFFF">• Minimal quantum pixel elements for branding only</text>
+      <text x="0" y="190" font-family="SF Pro Text" font-size="16" fill="#FFFFFF">• Accent colors reserved for headings and links</text>
+      <text x="0" y="220" font-family="SF Pro Text" font-size="16" fill="#FFFFFF">• Focus on optimal reading comfort for long sessions</text>
+    </g>
+    
+    <!-- Color Indicators -->
+    <g transform="translate(720, 140)">
+      <!-- Distinctive swatch set for Documentation -->
+      <rect x="0" y="0" width="30" height="30" rx="4" fill="#5B2C91" opacity="0.6" />
+      <text x="40" y="20" font-family="SF Pro Text" font-size="14" fill="#FFFFFF">Quantum Purple (60%)</text>
+      
+      <rect x="0" y="40" width="30" height="30" rx="4" fill="#36EAE8" opacity="0.6" />
+      <text x="40" y="60" font-family="SF Pro Text" font-size="14" fill="#FFFFFF">Digital Cyan (60%)</text>
+      
+      <rect x="0" y="80" width="30" height="30" rx="4" fill="#161D4E" opacity="0.9" />
+      <text x="40" y="100" font-family="SF Pro Text" font-size="14" fill="#FFFFFF">Midnight Navy (90%)</text>
+      
+      <rect x="0" y="120" width="30" height="30" rx="4" fill="#FFFFFF" opacity="0.9" />
+      <text x="40" y="140" font-family="SF Pro Text" font-size="14" fill="#FFFFFF">White (90% for body text)</text>
+    </g>
+  </g>
+  
+  <!-- Accessibility Considerations -->
+  <g transform="translate(100, 1380)">
+    <rect width="1000" height="170" rx="12" fill="#36EAE8" opacity="0.15" />
+    
+    <text x="40" y="40" font-family="SF Pro Display" font-size="24" font-weight="bold" fill="#FFFFFF">Accessibility Considerations</text>
+    
+    <text x="40" y="80" font-family="SF Pro Text" font-size="16" fill="#FFFFFF">• All text maintains minimum 4.5:1 contrast ratio against backgrounds</text>
+    <text x="40" y="110" font-family="SF Pro Text" font-size="16" fill="#FFFFFF">• Interactive elements include non-color identifiers (icons, shapes, labels)</text>
+    <text x="40" y="140" font-family="SF Pro Text" font-size="16" fill="#FFFFFF">• Color pairs are tested for all forms of color vision deficiency</text>
+    
+    <!-- Contrast example -->
+    <g transform="translate(650, 60)">
+      <rect x="0" y="0" width="120" height="30" rx="15" fill="#0A0621" />
+      <text x="60" y="20" font-family="SF Pro Text" font-size="14" font-weight="medium" fill="#36EAE8" text-anchor="middle">WCAG AA: PASS</text>
+      
+      <rect x="150" y="0" width="120" height="30" rx="15" fill="#0A0621" />
+      <text x="210" y="20" font-family="SF Pro Text" font-size="14" font-weight="medium" fill="#FFFFFF" text-anchor="middle">WCAG AAA: PASS</text>
+    </g>
+  </g>
+  
+  <!-- 9Bit Branding -->
+  <g transform="translate(1050, 1550)">
+    <!-- Stylized 9 logo -->
+    <g>
+      <rect x="10" y="0" width="10" height="10" fill="#3DFF74" />
+      <rect x="20" y="0" width="10" height="10" fill="#4F8CFF" />
+      <rect x="10" y="10" width="10" height="10" fill="#5B2C91" />
+      <rect x="20" y="10" width="10" height="10" fill="#36EAE8" />
+      <rect x="30" y="10" width="10" height="10" fill="#FF6B57" />
+    </g>
+    <text x="-10" y="35" font-family="SF Pro Display" font-size="14" font-weight="bold" fill="#FFFFFF" text-anchor="end">9Bit Studios</text>
+  </g>
+</svg>

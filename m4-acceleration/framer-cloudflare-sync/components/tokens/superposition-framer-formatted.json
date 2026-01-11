@@ -1,0 +1,145 @@
+{
+  "$schema": "https://framer.com/schema/design-system.json",
+  "name": "9Bit Studios Quantum-Spatial Design System (Superposition)",
+  "version": "1.1.0",
+  "tokens": {
+    "colors": {
+      "primary": {
+        "value": "#6A3093"
+      },
+      "secondary": {
+        "value": "#BF4080"
+      },
+      "accent": {
+        "value": "#5AC8FA"
+      },
+      "vibrant": {
+        "value": "#FF2D55"
+      },
+      "background-light": {
+        "value": "#FFFFFF"
+      },
+      "background-dark": {
+        "value": "#121212"
+      },
+      "background-gradient": {
+        "value": "linear-gradient(135deg, #1A1A2E 0%, #16213E 50%, #0F3460 100%)"
+      },
+      "text-light": {
+        "value": "#0A0A0A"
+      },
+      "text-dark": {
+        "value": "#F5F5F7"
+      },
+      "text-accent": {
+        "value": "#5AC8FA"
+      },
+      "surface-light": {
+        "value": "#F8F9FC"
+      },
+      "surface-dark": {
+        "value": "#1A1A2E"
+      },
+      "surface-glass": {
+        "value": "rgba(255, 255, 255, 0.08)"
+      },
+      "border-light": {
+        "value": "#DFE2E6"
+      },
+      "border-dark": {
+        "value": "#2A2A3C"
+      },
+      "border-accent": {
+        "value": "rgba(90, 200, 250, 0.3)"
+      },
+      "success": {
+        "value": "#00D26A"
+      },
+      "warning": {
+        "value": "#FFB800"
+      },
+      "error": {
+        "value": "#FF4D4F"
+      },
+      "energy-low": {
+        "value": "#5856D6"
+      },
+      "energy-medium": {
+        "value": "#BF4080"
+      },
+      "energy-high": {
+        "value": "#FF2D55"
+      }
+    },
+    "typography": {
+      "fontFamily": {
+        "value": "SF Pro Display, SF Pro, system-ui, sans-serif"
+      },
+      "baseSize": {
+        "value": "16px"
+      },
+      "scale": {
+        "value": 1.5
+      }
+    },
+    "spacing": {
+      "3xs": {
+        "value": "1px"
+      },
+      "2xs": {
+        "value": "2px"
+      },
+      "xs": {
+        "value": "4px"
+      },
+      "sm": {
+        "value": "8px"
+      },
+      "md": {
+        "value": "16px"
+      },
+      "lg": {
+        "value": "32px"
+      },
+      "xl": {
+        "value": "64px"
+      },
+      "2xl": {
+        "value": "96px"
+      },
+      "3xl": {
+        "value": "128px"
+      },
+      "4xl": {
+        "value": "192px"
+      }
+    },
+    "borderRadius": {
+      "none": {
+        "value": "0px"
+      },
+      "xs": {
+        "value": "4px"
+      },
+      "small": {
+        "value": "8px"
+      },
+      "medium": {
+        "value": "16px"
+      },
+      "large": {
+        "value": "24px"
+      },
+      "xl": {
+        "value": "32px"
+      },
+      "pill": {
+        "value": "999px"
+      },
+      "circle": {
+        "value": "50%"
+      }
+    },
+    "shadows": {}
+  }
+}

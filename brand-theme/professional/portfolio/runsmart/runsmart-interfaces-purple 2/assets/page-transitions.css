@@ -1,0 +1,97 @@
+/**
+ * Page Transition Animations
+ * Slide-in/out effects for iOS-style page navigation
+ * RunSmart - Quantum Spatial Design System
+ */
+
+/* Base transition */
+.screen {
+  transition: transform 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+  will-change: transform;
+}
+
+/* Exit Animations */
+.page-exit-left {
+  transform: translateX(-100%);
+}
+
+.page-exit-right {
+  transform: translateX(100%);
+}
+
+/* Entrance Animations */
+.page-enter-from-right {
+  animation: slideInFromRight 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+.page-enter-from-left {
+  animation: slideInFromLeft 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Back Button Styles */
+.back-button {
+  width: 36px;
+  height: 36px;
+  background: #0A0A0A;
+  border: 1px solid #1A1A1A;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+
+.back-button:hover {
+  background: #151515;
+}
+
+.back-button:active {
+  background: #151515;
+  transform: scale(0.95);
+}
+
+.back-button svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Header layout for back button + title + spacer */
+.header-with-back {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 0 24px 24px 24px;
+}
+
+.header-title-centered {
+  flex: 1;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.header-spacer {
+  width: 36px; /* Same as back button for balanced layout */
+}

@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quantum-Spatial Design System - Cloudflare Test</title>
+  <style id="dynamic-styles"></style>
+</head>
+<body>
+  <div class="container">
+    <h1>Quantum-Spatial Design System</h1>
+    <h2>Cloudflare Worker Integration Test</h2>
+    
+    <div class="status-panel">
+      <h3>Connection Status</h3>
+      <div id="connection-status">Testing connection...</div>
+    </div>
+    
+    <div class="token-panel">
+      <h3>Design Tokens</h3>
+      <div class="token-controls">
+        <button id="heritage-btn" class="token-btn">Heritage</button>
+        <button id="transitional-btn" class="token-btn">Transitional</button>
+        <button id="quantum-btn" class="token-btn">Quantum</button>
+        <button id="superposition-btn" class="token-btn">Superposition</button>
+      </div>
+      <div id="token-display">Select a token set to view</div>
+    </div>
+    
+    <div class="device-panel">
+      <h3>Device Capabilities</h3>
+      <div id="device-info">Detecting device capabilities...</div>
+    </div>
+    
+    <div class="component-preview">
+      <h3>Component Preview</h3>
+      <div class="preview-container">
+        <button class="preview-button">Primary Button</button>
+        <div class="preview-card">
+          <h4>Card Title</h4>
+          <p>This card will update based on the selected design tokens.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Configuration
+    const CLOUDFLARE_WORKER_URL = 'https://quantum-spatial-design-system.9bitstudios.workers.dev';
+    
+    // DOM Elements
+    const connectionStatus = document.getElementById('connection-status');
+    const tokenDisplay = document.getElementById('token-display');
+    const deviceInfo = document.getElementById('device-info');
+    const dynamicStyles = document.getElementById('dynamic-styles');
+    
+    // Token Set Buttons
+    const heritageBtn = document.getElementById('heritage-btn');
+    const transitionalBtn = document.getElementById('transitional-btn');
+    const quantumBtn = document.getElementById('quantum-btn');
+    const superpositionBtn = document.getElementById('superposition-btn');
+    
+    // Current Token State
+    let currentTokenSet = null;
+    let isM4Device = false;
+    
+    // Test Connection to Cloudflare Worker
+    async function testConnection() {
+      try {
+        const response = await fetch(`${CLOUDFLARE_WORKER_URL}/health`);
+        if (response.ok) {
+          const data = await response.json();
+          connectionStatus.innerHTML = `
+            <div class="success">✓ Connected to Cloudflare Worker</div>
+            <div>Worker Status: ${data.status}</div>
+            <div>Worker Version: ${data.version || 'N/A'}</div>
+          `;
+          return true;
+        } else {
+          connectionStatus.innerHTML = `
+            <div class="error">✗ Error connecting to Cloudflare Worker</div>
+            <div>Status: ${response.status} ${response.statusText}</div>
+          `;
+          return false;
+        }
+      } catch (error) {
+        connectionStatus.innerHTML = `
+          <div class="error">✗ Error connecting to Cloudflare Worker</div>
+          <div>${error.message}</div>
+        `;
+        return false;
+      }
+    }
+    
+    // Fetch Design Tokens
+    async function fetchTokens(tokenSet) {
+      try {
+        const response = await fetch(`${CLOUDFLARE_WORKER_URL}/tokens/${tokenSet}`);
+        if (response.ok) {
+          const tokens = await response.json();
+          currentTokenSet = tokens;
+          tokenDisplay.innerHTML = `
+            <div class="success">✓ Loaded ${tokenSet} tokens</div>
+            <pre>${JSON.stringify(tokens, null, 2).substring(0, 500)}...</pre>
+          `;
+          applyTokens(tokens);
+          return tokens;
+        } else {
+          tokenDisplay.innerHTML = `
+            <div class="error">✗ Error loading ${tokenSet} tokens</div>
+            <div>Status: ${response.status} ${response.statusText}</div>
+          `;
+          return null;
+        }
+      } catch (error) {
+        tokenDisplay.innerHTML = `
+          <div class="error">✗ Error loading ${tokenSet} tokens</div>
+          <div>${error.message}</div>
+        `;
+        return null;
+      }
+    }
+    
+    // Detect Device Capabilities
+    function detectDeviceCapabilities() {
+      const capabilities = {
+        userAgent: navigator.userAgent,
+        platform: navigator.platform,
+        vendor: navigator.vendor,
+        memory: navigator.deviceMemory,
+        hardwareConcurrency: navigator.hardwareConcurrency,
+        connection: navigator.connection ? {
+          effectiveType: navigator.connection.effectiveType,
+          downlink: navigator.connection.downlink,
+          rtt: navigator.connection.rtt,
+          saveData: navigator.connection.saveData
+        } : 'Not available'
+      };
+      
+      // Attempt to detect Apple Silicon M4
+      const userAgent = navigator.userAgent;
+      const isMac = userAgent.includes('Mac');
+      const isSiliconMac = userAgent.includes('Apple Silicon') || 
+                         (isMac && !userAgent.includes('Intel'));
+      
+      // Check for GPU capabilities
+      let gpuInfo = 'Not available';
+      if (window.WebGLRenderingContext) {
+        const canvas = document.createElement('canvas');
+        const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+        if (gl) {
+          const debugInfo = gl.getExtension('WEBGL_debug_renderer_info');
+          if (debugInfo) {
+            gpuInfo = {
+              vendor: gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL),
+              renderer: gl.getParameter(debugInfo.UNMASKED_RENDERER_WEBGL)
+            };
+          }
+        }
+      }
+      
+      capabilities.gpu = gpuInfo;
+      capabilities.isM4Detected = isSiliconMac;
+      
+      isM4Device = isSiliconMac;
+      
+      deviceInfo.innerHTML = `
+        <div>${isSiliconMac ? '✓ Apple Silicon detected' : '✗ Apple Silicon not detected'}</div>
+        <div>Platform: ${capabilities.platform}</div>
+        <div>GPU: ${typeof gpuInfo === 'object' ? gpuInfo.renderer : gpuInfo}</div>
+        <div>CPU Cores: ${capabilities.hardwareConcurrency || 'Not available'}</div>
+        <pre>${JSON.stringify(capabilities, null, 2)}</pre>
+      `;
+      
+      return capabilities;
+    }
+    
+    // Apply Tokens to UI
+    function applyTokens(tokens) {
+      if (!tokens) return;
+      
+      const colors = tokens.colors || {};
+      const typography = tokens.typography || {};
+      const spacing = tokens.spacing || {};
+      const borderRadius = tokens.borderRadius || {};
+      const shadows = tokens.shadows || {};
+      
+      let css = `
+        :root {
+          /* Colors */
+          --primary: ${colors.primary || '#5AC8FA'};
+          --secondary: ${colors.secondary || '#BF4080'};
+          --background: ${colors.background || '#FFFFFF'};
+          --text: ${colors.text || '#333333'};
+          --accent: ${colors.accent || '#6A3093'};
+          
+          /* Typography */
+          --font-family: ${typography.fontFamily || 'system-ui, sans-serif'};
+          --font-size-base: ${typography.fontSize?.base || '16px'};
+          --font-size-h1: ${typography.fontSize?.h1 || '2.5rem'};
+          --font-size-h2: ${typography.fontSize?.h2 || '2rem'};
+          --font-size-h3: ${typography.fontSize?.h3 || '1.75rem'};
+          --font-size-h4: ${typography.fontSize?.h4 || '1.5rem'};
+          --font-weight-normal: ${typography.fontWeight?.normal || 400};
+          --font-weight-bold: ${typography.fontWeight?.bold || 700};
+          
+          /* Spacing */
+          --spacing-xs: ${spacing.xs || '0.25rem'};
+          --spacing-sm: ${spacing.sm || '0.5rem'};
+          --spacing-md: ${spacing.md || '1rem'};
+          --spacing-lg: ${spacing.lg || '1.5rem'};
+          --spacing-xl: ${spacing.xl || '2rem'};
+          
+          /* Border Radius */
+          --radius-sm: ${borderRadius.sm || '0.25rem'};
+          --radius-md: ${borderRadius.md || '0.5rem'};
+          --radius-lg: ${borderRadius.lg || '1rem'};
+          
+          /* Shadows */
+          --shadow-sm: ${shadows.sm || '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)'};
+          --shadow-md: ${shadows.md || '0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)'};
+          --shadow-lg: ${shadows.lg || '0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)'};
+        }
+        
+        body {
+          font-family: var(--font-family);
+          font-size: var(--font-size-base);
+          color: var(--text);
+          background-color: var(--background);
+          margin: 0;
+          padding: 0;
+        }
+        
+        .container {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: var(--spacing-xl);
+        }
+        
+        h1, h2, h3, h4 {
+          font-weight: var(--font-weight-bold);
+        }
+        
+        h1 {
+          font-size: var(--font-size-h1);
+          color: var(--primary);
+        }
+        
+        h2 {
+          font-size: var(--font-size-h2);
+          color: var(--secondary);
+        }
+        
+        h3 {
+          font-size: var(--font-size-h3);
+          color: var(--accent);
+        }
+        
+        .status-panel, .token-panel, .device-panel, .component-preview {
+          margin-bottom: var(--spacing-xl);
+          padding: var(--spacing-lg);
+          border-radius: var(--radius-md);
+          box-shadow: var(--shadow-sm);
+          background-color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .success {
+          color: #4CAF50;
+          font-weight: var(--font-weight-bold);
+        }
+        
+        .error {
+          color: #F44336;
+          font-weight: var(--font-weight-bold);
+        }
+        
+        .token-controls {
+          display: flex;
+          gap: var(--spacing-md);
+          margin-bottom: var(--spacing-md);
+        }
+        
+        .token-btn {
+          background-color: var(--primary);
+          color: white;
+          border: none;
+          padding: var(--spacing-sm) var(--spacing-md);
+          border-radius: var(--radius-sm);
+          cursor: pointer;
+          font-weight: var(--font-weight-bold);
+          transition: background-color 0.3s;
+        }
+        
+        .token-btn:hover {
+          background-color: var(--accent);
+        }
+        
+        pre {
+          background-color: #f5f5f5;
+          padding: var(--spacing-md);
+          border-radius: var(--radius-sm);
+          overflow: auto;
+          max-height: 200px;
+          font-size: 0.9em;
+        }
+        
+        .preview-container {
+          display: flex;
+          gap: var(--spacing-xl);
+          flex-wrap: wrap;
+        }
+        
+        .preview-button {
+          background-color: var(--primary);
+          color: white;
+          border: none;
+          padding: var(--spacing-md) var(--spacing-lg);
+          border-radius: var(--radius-sm);
+          font-weight: var(--font-weight-bold);
+          cursor: pointer;
+          transition: all 0.3s;
+        }
+        
+        .preview-button:hover {
+          background-color: var(--accent);
+          transform: translateY(-2px);
+          box-shadow: var(--shadow-md);
+        }
+        
+        .preview-card {
+          background-color: white;
+          padding: var(--spacing-lg);
+          border-radius: var(--radius-md);
+          box-shadow: var(--shadow-md);
+          min-width: 250px;
+          transition: all 0.3s;
+        }
+        
+        .preview-card:hover {
+          transform: translateY(-5px);
+          box-shadow: var(--shadow-lg);
+        }
+        
+        .preview-card h4 {
+          margin-top: 0;
+          color: var(--accent);
+        }
+      `;
+      
+      // Add M4-specific enhancements if detected
+      if (isM4Device) {
+        css += `
+          .preview-button, .preview-card {
+            transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          }
+          
+          .preview-button:active {
+            transform: scale(0.95);
+          }
+          
+          .preview-card {
+            backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.7);
+          }
+          
+          body {
+            background: linear-gradient(135deg, ${colors.background || '#FFFFFF'}, ${colors.accent || '#6A3093'}20);
+          }
+        `;
+      }
+      
+      dynamicStyles.textContent = css;
+    }
+    
+    // Initialize
+    async function init() {
+      // Test connection to Cloudflare Worker
+      const connected = await testConnection();
+      
+      // Detect device capabilities
+      detectDeviceCapabilities();
+      
+      // Set up event listeners for token buttons
+      heritageBtn.addEventListener('click', () => fetchTokens('heritage'));
+      transitionalBtn.addEventListener('click', () => fetchTokens('transitional'));
+      quantumBtn.addEventListener('click', () => fetchTokens('quantum'));
+      superpositionBtn.addEventListener('click', () => fetchTokens('superposition'));
+      
+      // Load quantum tokens by default if connected
+      if (connected) {
+        fetchTokens('quantum');
+      }
+    }
+    
+    // Start the application
+    document.addEventListener('DOMContentLoaded', init);
+  </script>
+  
+  <style>
+    /* Base styles before tokens are loaded */
+    body {
+      font-family: system-ui, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f7f9fc;
+      color: #333;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    h1 {
+      color: #5AC8FA;
+    }
+    
+    h2 {
+      color: #BF4080;
+    }
+    
+    h3 {
+      color: #6A3093;
+    }
+    
+    .status-panel, .token-panel, .device-panel, .component-preview {
+      margin-bottom: 30px;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      background-color: white;
+    }
+    
+    .success {
+      color: #4CAF50;
+      font-weight: bold;
+    }
+    
+    .error {
+      color: #F44336;
+      font-weight: bold;
+    }
+    
+    .token-controls {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+    
+    .token-btn {
+      background-color: #5AC8FA;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    
+    .token-btn:hover {
+      background-color: #6A3093;
+    }
+    
+    pre {
+      background-color: #f5f5f5;
+      padding: 15px;
+      border-radius: 4px;
+      overflow: auto;
+      max-height: 200px;
+      font-size: 0.9em;
+    }
+  </style>
+</body>
+</html>

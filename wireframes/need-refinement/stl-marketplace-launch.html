@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Always a Monster: STL Marketplace Launch</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, #131A36 0%, #0D0D15 100%);
+            color: white;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .header {
+            text-align: center;
+            background: rgba(51, 31, 74, 0.3);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(90, 200, 250, 0.2);
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            background: linear-gradient(135deg, #5AC8FA, #BF4080);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+        }
+        
+        .plan-comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .plan-card {
+            background: rgba(51, 31, 74, 0.2);
+            border-radius: 12px;
+            padding: 2rem;
+            border: 1px solid rgba(90, 200, 250, 0.2);
+        }
+        
+        .plan-9bit {
+            border-color: #5AC8FA;
+            background: rgba(90, 200, 250, 0.05);
+        }
+        
+        .plan-petersen {
+            border-color: #BF4080;
+            background: rgba(191, 64, 128, 0.05);
+        }
+        
+        .plan-card h2 {
+            color: #5AC8FA;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        .plan-petersen h2 {
+            color: #BF4080;
+        }
+        
+        .timeline {
+            background: rgba(13, 13, 21, 0.4);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+        }
+        
+        .timeline h4 {
+            color: #5AC8FA;
+            margin-bottom: 1rem;
+        }
+        
+        .timeline-item {
+            display: flex;
+            align-items: center;
+            margin: 0.5rem 0;
+            padding: 0.5rem;
+            background: rgba(51, 31, 74, 0.3);
+            border-radius: 6px;
+        }
+        
+        .timeline-day {
+            background: #BF4080;
+            color: white;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            min-width: 60px;
+            text-align: center;
+            margin-right: 1rem;
+        }
+        
+        .tech-stack {
+            background: rgba(13, 13, 21, 0.4);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+        }
+        
+        .tech-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(90, 200, 250, 0.1);
+        }
+        
+        .tech-item:last-child {
+            border-bottom: none;
+        }
+        
+        .status-ready {
+            color: #5AC8FA;
+            font-weight: 600;
+        }
+        
+        .status-needed {
+            color: #BF4080;
+            font-weight: 600;
+        }
+        
+        .revenue-model {
+            background: linear-gradient(135deg, rgba(90, 200, 250, 0.1), rgba(191, 64, 128, 0.1));
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .pricing-tiers {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .tier {
+            background: rgba(13, 13, 21, 0.4);
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            border: 1px solid rgba(90, 200, 250, 0.2);
+        }
+        
+        .tier h4 {
+            color: #5AC8FA;
+            margin-bottom: 0.5rem;
+        }
+        
+        .tier-price {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #BF4080;
+            margin-bottom: 1rem;
+        }
+        
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .feature-list li {
+            padding: 0.25rem 0;
+            font-size: 0.9rem;
+        }
+        
+        .action-section {
+            background: rgba(51, 31, 74, 0.3);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+            border: 1px solid #5AC8FA;
+        }
+        
+        .action-section h3 {
+            color: #5AC8FA;
+            margin-bottom: 1rem;
+        }
+        
+        .quick-wins {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .quick-win {
+            background: rgba(13, 13, 21, 0.4);
+            border-radius: 8px;
+            padding: 1rem;
+            border-left: 3px solid #5AC8FA;
+        }
+        
+        .metric {
+            background: linear-gradient(135deg, #5AC8FA, #6A3093);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: inline-block;
+            margin: 0.25rem;
+        }
+        
+        .warning {
+            background: rgba(191, 64, 128, 0.1);
+            border: 1px solid #BF4080;
+            border-radius: 8px;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .warning h4 {
+            color: #BF4080;
+            margin-bottom: 0.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .container { padding: 1rem; }
+            .plan-comparison { grid-template-columns: 1fr; }
+            .pricing-tiers { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Always a Monster</h1>
+            <p style="font-size: 1.2rem; color: #5AC8FA; margin-bottom: 1rem;">STL Marketplace & Membership Launch</p>
+            <p style="color: rgba(255,255,255,0.8);">Accelerated launch strategy for monetizing Sandy's creature designs through digital memberships</p>
+        </div>
+
+        <!-- Plan Comparison -->
+        <div class="plan-comparison">
+            <!-- 9Bit Studios Plan -->
+            <div class="plan-card plan-9bit">
+                <h2>🦄 Option A: 9Bit Studios Infrastructure</h2>
+                <p style="margin-bottom: 1.5rem; color: rgba(255,255,255,0.8);">Leverage existing tech stack for rapid deployment</p>
+                
+                <div class="tech-stack">
+                    <h4 style="color: #5AC8FA; margin-bottom: 1rem;">Ready Infrastructure</h4>
+                    <div class="tech-item">
+                        <span>Supabase Backend</span>
+                        <span class="status-ready">✓ Ready</span>
+                    </div>
+                    <div class="tech-item">
+                        <span>Fastmail Integration</span>
+                        <span class="status-ready">✓ Ready</span>
+                    </div>
+                    <div class="tech-item">
+                        <span>Stripe Payments</span>
+                        <span class="status-ready">✓ Ready</span>
+                    </div>
+                    <div class="tech-item">
+                        <span>Framer Frontend</span>
+                        <span class="status-ready">✓ Template Available</span>
+                    </div>
+                    <div class="tech-item">
+                        <span>Cloudinary CDN</span>
+                        <span class="status-ready">✓ Ready</span>
+                    </div>
+                </div>
+
+                <div class="timeline">
+                    <h4>7-Day Launch Timeline</h4>
+                    <div class="timeline-item">
+                        <div class="timeline-day">Day 1</div>
+                        <span>Framer template setup + branding</span>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-day">Day 2</div>
+                        <span>Supabase schema for STL products</span>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-day">Day 3</div>
+                        <span>Stripe subscription integration</span>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-day">Day 4</div>
+                        <span>File delivery system setup</span>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-day">Day 5</div>
+                        <span>Upload first STL collection</span>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-day">Day 6</div>
+                        <span>Email automation sequences</span>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-day">Day 7</div>
+                        <span>Launch & marketing push</span>
+                    </div>
+                </div>
+
+                <div class="metric">Estimated Cost: $0-200</div>
+                <div class="metric">Time to Revenue: 7 days</div>
+                <div class="metric">Setup Complexity: Low</div>
+            </div>
+
+            <!-- Petersen Games Plan -->
+            <div class="plan-card plan-petersen">
+                <h2>🏗️ Option B: Petersen Games Integration</h2>
+                <p style="margin-bottom: 1.5rem; color: rgba(255,255,255,0.8);">Build within existing Petersen infrastructure</p>
+                
+                <div class="tech-stack">
+                    <h4 style="color: #BF4080; margin-bottom: 1rem;">Required Setup</h4>
+                    <div class="tech-item">
+                        <span>Website Integration</span>
+                        <span class="status-needed">⚠ Needs Development</span>
+                    </div>
+                    <div class="tech-item">
+                        <span>Payment Processing</span>
+                        <span class="status-needed">⚠ Unknown System</span>
+                    </div>
+                    <div class="tech-item">
+                        <span>User Management</span>
+                        <span class="status-needed">⚠ Custom Build</span>
+                    </div>
+                    <div class="tech-item">
+                        <span>File Delivery</span>
+                        <span class="status-needed">⚠ New Infrastructure</span>
+                    </div>
+                    <div class="tech-item">
+                        <span>Email System</span>
+                        <span class="status-needed">⚠ Integration Required</span>
+                    </div>
+                </div>
+
+                <div class="timeline">
+                    <h4>21-Day Launch Timeline</h4>
+                    <div class="timeline-item">
+                        <div class="timeline-day">Week 1</div>
+                        <span>Audit existing systems & requirements</span>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-day">Week 2</div>
+                        <span>Custom development & integration</span>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-day">Week 3</div>
+                        <span>Testing, debugging, launch prep</span>
+                    </div>
+                </div>
+
+                <div class="warning">
+                    <h4>Integration Challenges</h4>
+                    <ul style="margin-top: 0.5rem; padding-left: 1.5rem;">
+                        <li>Unknown existing tech stack compatibility</li>
+                        <li>Potential conflict with current e-commerce</li>
+                        <li>Custom development required for most features</li>
+                        <li>Longer testing and debugging phase</li>
+                    </ul>
+                </div>
+
+                <div class="metric">Estimated Cost: $1,500-3,000</div>
+                <div class="metric">Time to Revenue: 21+ days</div>
+                <div class="metric">Setup Complexity: High</div>
+            </div>
+        </div>
+
+        <!-- Revenue Model -->
+        <div class="revenue-model">
+            <h3 style="color: #5AC8FA; margin-bottom: 1rem;">Always a Monster: Revenue Strategy</h3>
+            
+            <div class="pricing-tiers">
+                <div class="tier">
+                    <h4>Hobbyist</h4>
+                    <div class="tier-price">$9.99/mo</div>
+                    <ul class="feature-list">
+                        <li>• 2 STL downloads/month</li>
+                        <li>• Basic creature collection</li>
+                        <li>• Standard resolution files</li>
+                        <li>• Community access</li>
+                    </ul>
+                </div>
+                
+                <div class="tier">
+                    <h4>Creator</h4>
+                    <div class="tier-price">$19.99/mo</div>
+                    <ul class="feature-list">
+                        <li>• 8 STL downloads/month</li>
+                        <li>• Premium creature collection</li>
+                        <li>• High-res + pre-supported files</li>
+                        <li>• Monthly exclusive releases</li>
+                        <li>• Commercial license</li>
+                    </ul>
+                </div>
+                
+                <div class="tier">
+                    <h4>Studio</h4>
+                    <div class="tier-price">$49.99/mo</div>
+                    <ul class="feature-list">
+                        <li>• Unlimited downloads</li>
+                        <li>• Full creature library access</li>
+                        <li>• Early access to new releases</li>
+                        <li>• Custom creature commissions</li>
+                        <li>• Extended commercial license</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Wins -->
+        <div class="action-section">
+            <h3>Immediate Revenue Opportunities</h3>
+            
+            <div class="quick-wins">
+                <div class="quick-win">
+                    <h4 style="color: #5AC8FA; margin-bottom: 0.5rem;">Launch Collection</h4>
+                    <p>Package 10-15 of Sandy's best creature designs into "Cosmic Horrors Vol. 1"</p>
+                    <div class="metric">Week 1 Revenue Target: $500-1,500</div>
+                </div>
+                
+                <div class="quick-win">
+                    <h4 style="color: #5AC8FA; margin-bottom: 0.5rem;">Pre-Launch Validation</h4>
+                    <p>Survey existing Petersen Games customers about STL interest</p>
+                    <div class="metric">Validation in 48 hours</div>
+                </div>
+                
+                <div class="quick-win">
+                    <h4 style="color: #5AC8FA; margin-bottom: 0.5rem;">Cross-Platform Promotion</h4>
+                    <p>Leverage tabletop community for digital product awareness</p>
+                    <div class="metric">Built-in audience activation</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Implementation Details -->
+        <div class="plan-card">
+            <h2 style="color: #5AC8FA;">Recommended: 9Bit Studios Implementation</h2>
+            
+            <div style="background: rgba(90, 200, 250, 0.1); border-radius: 8px; padding: 1rem; margin: 1rem 0;">
+                <h4 style="color: #5AC8FA; margin-bottom: 0.5rem;">Why This Approach Wins:</h4>
+                <ul style="padding-left: 1.5rem;">
+                    <li><strong>Speed to Market:</strong> 7 days vs 21+ days</li>
+                    <li><strong>Proven Infrastructure:</strong> Battle-tested payment and delivery systems</li>
+                    <li><strong>Scalability:</strong> Built for growth from day one</li>
+                    <li><strong>Brand Flexibility:</strong> Always a Monster can grow independently</li>
+                    <li><strong>Lower Risk:</strong> No dependency on unknown Petersen systems</li>
+                </ul>
+            </div>
+
+            <div class="timeline">
+                <h4>Week 1 Action Items (9Bit Implementation)</h4>
+                <div class="timeline-item">
+                    <div class="timeline-day">Mon</div>
+                    <span>Select Framer template, configure branding for "Always a Monster"</span>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-day">Tue</div>
+                    <span>Set up Supabase tables for products, users, subscriptions</span>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-day">Wed</div>
+                    <span>Configure Stripe for subscription billing</span>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-day">Thu</div>
+                    <span>Build secure file delivery system with Cloudinary</span>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-day">Fri</div>
+                    <span>Upload and optimize first STL collection</span>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-day">Sat</div>
+                    <span>Set up Fastmail email sequences for onboarding</span>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-day">Sun</div>
+                    <span>Soft launch with beta testers, collect feedback</span>
+                </div>
+            </div>
+
+            <div style="background: linear-gradient(135deg, #5AC8FA, #BF4080); border-radius: 8px; padding: 1.5rem; margin-top: 2rem; text-align: center;">
+                <h3 style="color: white; margin-bottom: 1rem;">Next Step: Validate & Launch</h3>
+                <p style="color: white; margin-bottom: 1rem;">Get Arthur's approval for 9Bit infrastructure approach, then execute the 7-day launch plan</p>
+                <div class="metric" style="background: rgba(255,255,255,0.2);">Potential Month 1 Revenue: $2,000-8,000</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

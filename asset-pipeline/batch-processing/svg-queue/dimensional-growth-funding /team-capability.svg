@@ -1,0 +1,181 @@
+<svg width="800" height="500" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background with dimensional grid -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A0621" />
+      <stop offset="100%" stop-color="#131A36" />
+    </linearGradient>
+    
+    <!-- Glow filters -->
+    <filter id="cyanGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+    <filter id="purpleGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+    <filter id="roseGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  
+  <!-- Background with grid -->
+  <rect width="800" height="500" fill="url(#bgGradient)" />
+  
+  <!-- Dimensional Grid -->
+  <g opacity="0.15">
+    <!-- Horizontal grid lines -->
+    <g stroke="#5AC8FA" stroke-width="0.5">
+      <line x1="0" y1="50" x2="800" y2="50" />
+      <line x1="0" y1="100" x2="800" y2="100" />
+      <line x1="0" y1="150" x2="800" y2="150" />
+      <line x1="0" y1="200" x2="800" y2="200" />
+      <line x1="0" y1="250" x2="800" y2="250" />
+      <line x1="0" y1="300" x2="800" y2="300" />
+      <line x1="0" y1="350" x2="800" y2="350" />
+      <line x1="0" y1="400" x2="800" y2="400" />
+      <line x1="0" y1="450" x2="800" y2="450" />
+    </g>
+    
+    <!-- Vertical grid lines -->
+    <g stroke="#5AC8FA" stroke-width="0.5">
+      <line x1="50" y1="0" x2="50" y2="500" />
+      <line x1="100" y1="0" x2="100" y2="500" />
+      <line x1="150" y1="0" x2="150" y2="500" />
+      <line x1="200" y1="0" x2="200" y2="500" />
+      <line x1="250" y1="0" x2="250" y2="500" />
+      <line x1="300" y1="0" x2="300" y2="500" />
+      <line x1="350" y1="0" x2="350" y2="500" />
+      <line x1="400" y1="0" x2="400" y2="500" />
+      <line x1="450" y1="0" x2="450" y2="500" />
+      <line x1="500" y1="0" x2="500" y2="500" />
+      <line x1="550" y1="0" x2="550" y2="500" />
+      <line x1="600" y1="0" x2="600" y2="500" />
+      <line x1="650" y1="0" x2="650" y2="500" />
+      <line x1="700" y1="0" x2="700" y2="500" />
+      <line x1="750" y1="0" x2="750" y2="500" />
+    </g>
+  </g>
+  
+  <!-- Talent Matrix - Central Connection Hub -->
+  <g transform="translate(400, 250)">
+    <circle cx="0" cy="0" r="40" fill="#131A36" stroke="#5AC8FA" stroke-width="2">
+      <animate attributeName="r" values="40;42;40" dur="4s" repeatCount="indefinite" />
+    </circle>
+    <text x="0" y="-5" text-anchor="middle" fill="#FFFFFF" font-family="SF Pro Display, sans-serif" font-size="14">9Bit</text>
+    <text x="0" y="15" text-anchor="middle" fill="#FFFFFF" font-family="SF Pro Display, sans-serif" font-size="14">Studios</text>
+  </g>
+  
+  <!-- Team Member: Penny Platt -->
+  <g transform="translate(250, 175)">
+    <circle cx="0" cy="0" r="80" fill="#131A36" stroke="#BF4080" stroke-width="2" opacity="0.9" />
+    
+    <!-- Name and Title -->
+    <text x="0" y="-45" text-anchor="middle" fill="#FFFFFF" font-family="SF Pro Display, sans-serif" font-size="18">Penny Platt</text>
+    <text x="0" y="-25" text-anchor="middle" fill="#BF4080" font-family="SF Pro Display, sans-serif" font-size="14">Founder &amp; Creative Director</text>
+    
+    <!-- Skills Matrix -->
+    <g transform="translate(0, 10)">
+      <text x="-60" y="0" text-anchor="start" fill="#FFFFFF" font-family="SF Pro Display, sans-serif" font-size="12">Creative Direction</text>
+      <rect x="-60" y="5" width="120" height="5" rx="2.5" fill="#131A36" stroke="#5AC8FA" stroke-width="1" />
+      <rect x="-60" y="5" width="110" height="5" rx="2.5" fill="#5AC8FA" />
+      
+      <text x="-60" y="25" text-anchor="start" fill="#FFFFFF" font-family="SF Pro Display, sans-serif" font-size="12">Quantum-Spatial Design</text>
+      <rect x="-60" y="30" width="120" height="5" rx="2.5" fill="#131A36" stroke="#5AC8FA" stroke-width="1" />
+      <rect x="-60" y="30" width="120" height="5" rx="2.5" fill="#5AC8FA" />
+      
+      <text x="-60" y="50" text-anchor="start" fill="#FFFFFF" font-family="SF Pro Display, sans-serif" font-size="12">Apple Ecosystem</text>
+      <rect x="-60" y="55" width="120" height="5" rx="2.5" fill="#131A36" stroke="#5AC8FA" stroke-width="1" />
+      <rect x="-60" y="55" width="100" height="5" rx="2.5" fill="#5AC8FA" />
+    </g>
+  </g>
+  
+  <!-- Team Member: Arthur Petersen -->
+  <g transform="translate(550, 175)">
+    <circle cx="0" cy="0" r="80" fill="#131A36" stroke="#6A3093" stroke-width="2" opacity="0.9" />
+    
+    <!-- Name and Title -->
+    <text x="0" y="-45" text-anchor="middle" fill="#FFFFFF" font-family="SF Pro Display, sans-serif" font-size="18">Arthur Petersen</text>
+    <text x="0" y="-25" text-anchor="middle" fill="#6A3093" font-family="SF Pro Display, sans-serif" font-size="14">Strategic Partner</text>
+    <text x="0" y="-5" text-anchor="middle" fill="#FFFFFF" font-family="SF Pro Display, sans-serif" font-size="10">(joining at profitability)</text>
+    
+    <!-- Skills Matrix -->
+    <g transform="translate(0, 20)">
+      <text x="-60" y="0" text-anchor="start" fill="#FFFFFF" font-family="SF Pro Display, sans-serif" font-size="12">Gaming Industry</text>
+      <rect x="-60" y="5" width="120" height="5" rx="2.5" fill="#131A36" stroke="#5AC8FA" stroke-width="1" />
+      <rect x="-60" y="5" width="115" height="5" rx="2.5" fill="#5AC8FA" />
+      
+      <text x="-60" y="25" text-anchor="start" fill="#FFFFFF" font-family="SF Pro Display, sans-serif" font-size="12">Revenue Generation</text>
+      <rect x="-60" y="30" width="120" height="5" rx="2.5" fill="#131A36" stroke="#5AC8FA" stroke-width="1" />
+      <rect x="-60" y="30" width="105" height="5" rx="2.5" fill="#5AC8FA" />
+      
+      <text x="-60" y="50" text-anchor="start" fill="#FFFFFF" font-family="SF Pro Display, sans-serif" font-size="12">Narrative Design</text>
+      <rect x="-60" y="55" width="120" height="5" rx="2.5" fill="#131A36" stroke="#5AC8FA" stroke-width="1" />
+      <rect x="-60" y="55" width="110" height="5" rx="2.5" fill="#5AC8FA" />
+    </g>
+  </g>
+  
+  <!-- Combined Team Strengths -->
+  <g transform="translate(400, 350)">
+    <rect x="-200" y="-30" width="400" height="100" rx="5" fill="#131A36" stroke="#5AC8FA" stroke-width="2" opacity="0.9" />
+    
+    <text x="0" y="-5" text-anchor="middle" fill="#FFFFFF" font-family="SF Pro Display, sans-serif" font-size="16">Combined Team Strengths</text>
+    
+    <text x="-180" y="25" text-anchor="start" fill="#FFFFFF" font-family="SF Pro Display, sans-serif" font-size="12">• Creative-Technical Leadership</text>
+    <text x="-180" y="50" text-anchor="start" fill="#FFFFFF" font-family="SF Pro Display, sans-serif" font-size="12">• Revenue Generation Capabilities</text>
+    
+    <text x="30" y="25" text-anchor="start" fill="#FFFFFF" font-family="SF Pro Display, sans-serif" font-size="12">• Gaming Community Expertise</text>
+    <text x="30" y="50" text-anchor="start" fill="#FFFFFF" font-family="SF Pro Display, sans-serif" font-size="12">• AI-Enhanced Small Team Effectiveness</text>
+  </g>
+  
+  <!-- Connection Lines Between Team Members -->
+  <g>
+    <!-- Connection to central hub -->
+    <line x1="310" y1="175" x2="370" y2="230" stroke="#BF4080" stroke-width="2" />
+    <line x1="490" y1="175" x2="430" y2="230" stroke="#6A3093" stroke-width="2" />
+    
+    <!-- Connection to combined strengths -->
+    <line x1="400" y1="290" x2="400" y2="320" stroke="#5AC8FA" stroke-width="2" />
+  </g>
+  
+  <!-- Energy Particles Moving Along Connections -->
+  <g>
+    <circle cx="320" cy="185" r="3" fill="#BF4080">
+      <animate attributeName="cx" values="310;370" dur="3s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="175;230" dur="3s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="1;0;1" dur="3s" repeatCount="indefinite" />
+    </circle>
+    
+    <circle cx="480" cy="185" r="3" fill="#6A3093">
+      <animate attributeName="cx" values="490;430" dur="3.5s" repeatCount="indefinite" />
+      <animate attributeName="cy" values="175;230" dur="3.5s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="1;0;1" dur="3.5s" repeatCount="indefinite" />
+    </circle>
+    
+    <circle cx="400" cy="295" r="3" fill="#5AC8FA">
+      <animate attributeName="cy" values="290;320" dur="2s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="1;0;1" dur="2s" repeatCount="indefinite" />
+    </circle>
+  </g>
+  
+  <!-- Quantum Pixel Decorative Elements -->
+  <g>
+    <!-- Penny's area -->
+    <rect x="150" y="100" width="10" height="10" fill="#BF4080" opacity="0.7" />
+    <rect x="200" y="125" width="15" height="15" fill="#BF4080" opacity="0.5" />
+    <rect x="165" y="150" width="8" height="8" fill="#BF4080" opacity="0.6" />
+    
+    <!-- Arthur's area -->
+    <rect x="640" y="100" width="10" height="10" fill="#6A3093" opacity="0.7" />
+    <rect x="590" y="125" width="15" height="15" fill="#6A3093" opacity="0.5" />
+    <rect x="625" y="150" width="8" height="8" fill="#6A3093" opacity="0.6" />
+  </g>
+  
+  <!-- Title text -->
+  <text x="400" y="50" text-anchor="middle" fill="#FFFFFF" font-family="SF Pro Display, sans-serif" font-size="24">Team Capability</text>
+  <text x="400" y="80" text-anchor="middle" fill="#5AC8FA" font-family="SF Pro Display, sans-serif" font-size="14">Quantum Talent Matrix</text>
+</svg>

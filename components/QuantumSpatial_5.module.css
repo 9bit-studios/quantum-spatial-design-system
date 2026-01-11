@@ -1,0 +1,93 @@
+/* QuantumSpatial_5 Component Styles */
+
+.quantumContainer {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Responsive sizing */
+.quantumContainer svg {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+/* Performance optimization for M4 */
+@media (prefers-reduced-motion: reduce) {
+  .quantumContainer svg * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* Dark theme container */
+.darkTheme {
+  background: #0A0E27;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Light theme container */
+.lightTheme {
+  background: #F8FAFC;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Glassmorphism wrapper */
+.glassWrapper {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 16px;
+  padding: 32px;
+}
+
+/* Interactive hover state */
+.interactive {
+  cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.interactive:hover {
+  transform: scale(1.05);
+}
+
+.interactive:active {
+  transform: scale(0.98);
+}
+
+/* Accessibility - Focus state */
+.quantumContainer:focus-visible {
+  outline: 2px solid #E85D75;
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+/* Mobile optimization - Reduce complexity */
+@media (max-width: 768px) {
+  .quantumContainer {
+    max-width: 200px;
+  }
+
+  .glassWrapper {
+    padding: 16px;
+  }
+
+  .darkTheme,
+  .lightTheme {
+    padding: 16px;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .quantumContainer svg {
+    filter: contrast(1.2);
+  }
+}

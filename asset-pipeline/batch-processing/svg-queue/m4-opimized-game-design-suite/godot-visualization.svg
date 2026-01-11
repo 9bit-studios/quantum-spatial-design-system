@@ -1,0 +1,172 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <!-- Background -->
+  <rect width="800" height="500" fill="#0A0621" />
+  
+  <!-- Grid background -->
+  <g opacity="0.1">
+    <!-- Horizontal grid lines with perspective effect -->
+    <path d="M200,450 L600,450" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M150,400 L650,400" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M125,350 L675,350" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M100,300 L700,300" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M90,250 L710,250" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M80,200 L720,200" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M70,150 L730,150" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M60,100 L740,100" stroke="#5AC8FA" stroke-width="1" />
+    
+    <!-- Vertical grid lines -->
+    <path d="M200,100 L200,450" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M250,100 L250,450" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M300,100 L300,450" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M350,100 L350,450" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M400,100 L400,450" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M450,100 L450,450" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M500,100 L500,450" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M550,100 L550,450" stroke="#5AC8FA" stroke-width="1" />
+    <path d="M600,100 L600,450" stroke="#5AC8FA" stroke-width="1" />
+  </g>
+  
+  <!-- Title -->
+  <text x="400" y="50" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" font-size="24" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Godot Engine: Powerful RPG Creation Made Simple</text>
+  
+  <!-- Godot Editor with Node-based Visual Scripting -->
+  <g transform="translate(100, 90)">
+    <!-- Editor container -->
+    <rect x="0" y="0" width="600" height="320" rx="10" fill="#131A36" stroke="#5AC8FA" stroke-width="2" />
+    
+    <!-- Editor Header -->
+    <rect x="0" y="0" width="600" height="30" rx="10" fill="#331F4A" />
+    <text x="300" y="20" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle">Godot 4.2 - Jrotharke RPG Project</text>
+    
+    <!-- Left Panel - Scene Tree -->
+    <rect x="0" y="30" width="150" height="290" fill="#0D0D15" />
+    <text x="75" y="50" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle">Scene Tree</text>
+    
+    <!-- Scene Tree Items -->
+    <g transform="translate(10, 70)">
+      <text x="0" y="0" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#FFFFFF">⚫ Main</text>
+      <text x="15" y="20" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#FFFFFF">⚫ World</text>
+      <text x="30" y="40" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#FFFFFF">⚫ Environment</text>
+      <text x="30" y="60" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#FFFFFF">⚫ Characters</text>
+      <text x="45" y="80" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#5AC8FA">→ Player</text>
+      <text x="45" y="100" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#FFFFFF">⚫ NPCs</text>
+      <text x="60" y="120" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#FFFFFF">⚫ MerchantNPC</text>
+      <text x="60" y="140" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#FFFFFF">⚫ VillagerNPC</text>
+      <text x="30" y="160" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#FFFFFF">⚫ Interactibles</text>
+      <text x="15" y="180" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#FFFFFF">⚫ UI</text>
+      <text x="30" y="200" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#FFFFFF">⚫ DialogueSystem</text>
+    </g>
+    
+    <!-- Center Panel - Visual Node Editor -->
+    <rect x="150" y="30" width="300" height="290" fill="#0A0621" />
+    
+    <!-- Node Graph Editor for Visual Scripting -->
+    <g transform="translate(300, 175)">
+      <!-- Connection Lines -->
+      <path d="M-100,-80 C-80,-80 -30,-50 -30,-30" stroke="#5AC8FA" stroke-width="2" fill="none" />
+      <path d="M-30,-30 C-30,-10 30,-10 30,-30" stroke="#5AC8FA" stroke-width="2" fill="none" />
+      <path d="M-30,-30 C-30,0 -80,30 -30,50" stroke="#5AC8FA" stroke-width="2" fill="none" />
+      <path d="M30,-30 C30,0 80,30 30,50" stroke="#5AC8FA" stroke-width="2" fill="none" />
+      <path d="M-30,50 C-30,70 30,70 30,50" stroke="#5AC8FA" stroke-width="2" fill="none" />
+      
+      <!-- Node Boxes -->
+      <!-- Start Node -->
+      <g transform="translate(-100, -80)">
+        <rect x="-40" y="-15" width="80" height="30" rx="5" fill="#331F4A" stroke="#5AC8FA" stroke-width="1" />
+        <text x="0" y="5" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">Start Dialog</text>
+      </g>
+      
+      <!-- Condition Node -->
+      <g transform="translate(-30, -30)">
+        <rect x="-40" y="-15" width="80" height="30" rx="5" fill="#6A3093" stroke="#5AC8FA" stroke-width="1" />
+        <text x="0" y="5" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">If Quest Active</text>
+      </g>
+      
+      <!-- Branch Node -->
+      <g transform="translate(30, -30)">
+        <rect x="-40" y="-15" width="80" height="30" rx="5" fill="#331F4A" stroke="#5AC8FA" stroke-width="1" />
+        <text x="0" y="5" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">Branch</text>
+      </g>
+      
+      <!-- Response Nodes -->
+      <g transform="translate(-30, 50)">
+        <rect x="-40" y="-15" width="80" height="30" rx="5" fill="#BF4080" stroke="#5AC8FA" stroke-width="1" />
+        <text x="0" y="5" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">Response A</text>
+      </g>
+      
+      <g transform="translate(30, 50)">
+        <rect x="-40" y="-15" width="80" height="30" rx="5" fill="#BF4080" stroke="#5AC8FA" stroke-width="1" />
+        <text x="0" y="5" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">Response B</text>
+      </g>
+      
+      <!-- Quantum Pixels for Visual Effect -->
+      <rect x="-110" y="-70" width="8" height="8" fill="#5AC8FA" opacity="0.7" />
+      <rect x="-20" y="-40" width="8" height="8" fill="#5AC8FA" opacity="0.7" />
+      <rect x="40" y="-20" width="8" height="8" fill="#5AC8FA" opacity="0.7" />
+      <rect x="-40" y="60" width="8" height="8" fill="#5AC8FA" opacity="0.7" />
+    </g>
+    
+    <!-- Right Panel - Inspector and Properties -->
+    <rect x="450" y="30" width="150" height="290" fill="#0D0D15" />
+    <text x="525" y="50" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle">Inspector</text>
+    
+    <!-- Properties Panel -->
+    <g transform="translate(460, 70)">
+      <text x="0" y="0" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="bold" fill="#5AC8FA">DialogueNode</text>
+      
+      <text x="0" y="25" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#FFFFFF">Text:</text>
+      <rect x="0" y="30" width="130" height="40" rx="5" fill="#331F4A" />
+      <text x="5" y="45" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="9" fill="#FFFFFF">Have you found the</text>
+      <text x="5" y="60" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="9" fill="#FFFFFF">ancient artifact yet?</text>
+      
+      <text x="0" y="85" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#FFFFFF">Character:</text>
+      <rect x="0" y="90" width="130" height="25" rx="5" fill="#331F4A" />
+      <text x="5" y="105" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="9" fill="#FFFFFF">MerchantNPC</text>
+      
+      <text x="0" y="125" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#FFFFFF">Variables:</text>
+      <rect x="0" y="130" width="130" height="25" rx="5" fill="#331F4A" />
+      <text x="5" y="145" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="9" fill="#FFFFFF">quest_active = true</text>
+      
+      <text x="0" y="165" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="#FFFFFF">Animation:</text>
+      <rect x="0" y="170" width="130" height="25" rx="5" fill="#331F4A" />
+      <text x="5" y="185" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="9" fill="#FFFFFF">talking_idle</text>
+    </g>
+  </g>
+  
+  <!-- 3D Game View Preview (Bottom) -->
+  <g transform="translate(200, 425)">
+    <!-- 3D Game World Preview -->
+    <rect x="0" y="0" width="400" height="50" rx="10" fill="#331F4A" stroke="#5AC8FA" stroke-width="1" />
+    <text x="200" y="30" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="16" fill="#FFFFFF" text-anchor="middle">Game Preview: Jrotharke RPG World</text>
+  </g>
+  
+  <!-- Key Benefits -->
+  <g transform="translate(150, 430)">
+    <text x="0" y="0" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF">Key Benefits</text>
+    
+    <!-- Benefits with quantum pixel bullets -->
+    <g transform="translate(0, 20)">
+      <rect x="0" y="-8" width="8" height="8" fill="#5AC8FA" />
+      <rect x="8" y="-8" width="8" height="8" fill="#6A3093" />
+      <text x="25" y="0" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#FFFFFF">Native Metal optimization for M4</text>
+    </g>
+    
+    <g transform="translate(0, 40)">
+      <rect x="0" y="-8" width="8" height="8" fill="#5AC8FA" />
+      <rect x="8" y="-8" width="8" height="8" fill="#6A3093" />
+      <text x="25" y="0" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#FFFFFF">Visual scripting - no coding required</text>
+    </g>
+    
+    <g transform="translate(400, 20)">
+      <rect x="0" y="-8" width="8" height="8" fill="#5AC8FA" />
+      <rect x="8" y="-8" width="8" height="8" fill="#6A3093" />
+      <text x="25" y="0" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#FFFFFF">Direct Ink narrative integration</text>
+    </g>
+    
+    <g transform="translate(400, 40)">
+      <rect x="0" y="-8" width="8" height="8" fill="#5AC8FA" />
+      <rect x="8" y="-8" width="8" height="8" fill="#6A3093" />
+      <text x="25" y="0" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif" font-size="12" fill="#FFFFFF">Notion worldbuilding integration</text>
+    </g>
+  </g>
+</svg>

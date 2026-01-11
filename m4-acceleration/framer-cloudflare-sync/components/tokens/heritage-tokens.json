@@ -1,0 +1,43 @@
+{
+  "_meta": {
+    "name": "Heritage",
+    "description": "Flat orthogonal design system",
+    "version": "1.0.0"
+  },
+  "colors": {
+    "primary": "#131A36",
+    "secondary": "#331F4A",
+    "accent": "#5AC8FA",
+    "background": "#FFFFFF",
+    "text": "#1A1A1A",
+    "surface": "#F7F7F7",
+    "border": "#E0E0E0",
+    "success": "#00C853",
+    "warning": "#FFD600",
+    "error": "#FF3D00"
+  },
+  "typography": {
+    "fontFamily": "SF Pro Text, Inter, system-ui, sans-serif",
+    "baseSize": "16px",
+    "scale": 1.25
+  },
+  "spacing": {
+    "unit": "8px",
+    "grid": 8,
+    "scale": {
+      "xs": "4px",
+      "sm": "8px",
+      "md": "16px",
+      "lg": "24px",
+      "xl": "32px",
+      "xxl": "48px",
+      "xxxl": "64px"
+    }
+  },
+  "borderRadius": {
+    "small": "4px",
+    "medium": "8px",
+    "large": "12px",
+    "pill": "999px"
+  }
+}

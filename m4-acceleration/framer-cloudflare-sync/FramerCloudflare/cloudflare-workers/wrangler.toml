@@ -1,0 +1,14 @@
+name = "quantum-spatial-design-system-staging"
+main = "src/worker.js"
+compatibility_date = "2025-05-01"
+account_id = "9bit-studios"
+workers_dev = true
+route = "api-staging.9bitstudios.io/*"
+
+[vars]
+ENVIRONMENT = "staging"
+CLOUDINARY_CLOUD_NAME = "9bitstudios"
+
+[env.staging]
+route = "api-staging.9bitstudios.io/*"
+vars = { ENVIRONMENT = "staging", CLOUDINARY_CLOUD_NAME = "9bitstudios" }

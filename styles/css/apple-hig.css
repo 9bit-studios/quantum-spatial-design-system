@@ -1,0 +1,18 @@
+/**
+ * APPLE HIG STYLES
+ * Human Interface Guidelines Compliance
+ */
+
+:root {
+  --touch-target-min: 44px;
+  --corner-radius: 12px;
+  --spacing-unit: 8px;
+  --font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", system-ui, sans-serif;
+}
+
+.apple-button {
+  min-height: var(--touch-target-min);
+  min-width: var(--touch-target-min);
+  border-radius: var(--corner-radius);
+  font-family: var(--font-family);
+}

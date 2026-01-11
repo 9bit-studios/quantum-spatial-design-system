@@ -1,0 +1,177 @@
+{
+  "version": "2.1.0",
+  "colors": {
+    "primary": {
+      "quantum": {
+        "value": "#BF4080",
+        "type": "color",
+        "description": "Quantum primary color - signature 9Bit Studios"
+      },
+      "ultraMarine": {
+        "value": "#5AC8FA",
+        "type": "color",
+        "description": "Ultra Marine - Apple-inspired accent"
+      },
+      "violet": {
+        "value": "#6A3093",
+        "type": "color",
+        "description": "Deep violet - sophistication and depth"
+      }
+    },
+    "foundation": {
+      "heritage": {
+        "value": "#331F4A",
+        "type": "color",
+        "description": "Heritage foundation - deep purple base"
+      },
+      "darkMatter": {
+        "value": "#131A36",
+        "type": "color",
+        "description": "Dark matter - deepest background"
+      },
+      "cosmicDust": {
+        "value": "#1A0D26",
+        "type": "color",
+        "description": "Cosmic dust - ultra dark"
+      }
+    },
+    "glass": {
+      "frosted": {
+        "value": "rgba(255, 255, 255, 0.1)",
+        "type": "color",
+        "description": "Frosted glass overlay"
+      },
+      "shimmer": {
+        "value": "rgba(191, 64, 128, 0.2)",
+        "type": "color",
+        "description": "Quantum shimmer effect"
+      },
+      "glow": {
+        "value": "rgba(90, 200, 250, 0.3)",
+        "type": "color",
+        "description": "Ultra marine glow"
+      }
+    },
+    "semantic": {
+      "success": {
+        "value": "#34C759",
+        "type": "color",
+        "description": "Success state - Apple green"
+      },
+      "warning": {
+        "value": "#FF9500",
+        "type": "color",
+        "description": "Warning state - Apple orange"
+      },
+      "error": {
+        "value": "#FF3B30",
+        "type": "color",
+        "description": "Error state - Apple red"
+      },
+      "info": {
+        "value": "#007AFF",
+        "type": "color",
+        "description": "Info state - Apple blue"
+      }
+    }
+  },
+  "spacing": {
+    "base": 8,
+    "scale": {
+      "xs": 4,
+      "sm": 8,
+      "md": 16,
+      "lg": 24,
+      "xl": 32,
+      "xxl": 48,
+      "xxxl": 64
+    },
+    "grid": {
+      "columns": 12,
+      "gutter": 16,
+      "margin": 24
+    }
+  },
+  "typography": {
+    "xs": {
+      "fontSize": 11,
+      "fontFamily": "SF Pro Text",
+      "fontWeight": 400,
+      "lineHeight": 1.5
+    },
+    "sm": {
+      "fontSize": 13,
+      "fontFamily": "SF Pro Text",
+      "fontWeight": 400,
+      "lineHeight": 1.5
+    },
+    "body": {
+      "fontSize": 15,
+      "fontFamily": "SF Pro Text",
+      "fontWeight": 400,
+      "lineHeight": 1.5
+    },
+    "md": {
+      "fontSize": 17,
+      "fontFamily": "SF Pro Text",
+      "fontWeight": 400,
+      "lineHeight": 1.5
+    },
+    "lg": {
+      "fontSize": 20,
+      "fontFamily": "SF Pro Text",
+      "fontWeight": 400,
+      "lineHeight": 1.5
+    },
+    "xl": {
+      "fontSize": 24,
+      "fontFamily": "SF Pro Text",
+      "fontWeight": 400,
+      "lineHeight": 1.5
+    },
+    "xxl": {
+      "fontSize": 28,
+      "fontFamily": "SF Pro Text",
+      "fontWeight": 400,
+      "lineHeight": 1.5
+    },
+    "display": {
+      "fontSize": 34,
+      "fontFamily": "SF Pro Text",
+      "fontWeight": 400,
+      "lineHeight": 1.5
+    },
+    "hero": {
+      "fontSize": 48,
+      "fontFamily": "SF Pro Text",
+      "fontWeight": 400,
+      "lineHeight": 1.5
+    }
+  },
+  "effects": {
+    "blur": {
+      "subtle": 8,
+      "medium": 16,
+      "strong": 24,
+      "intense": 32
+    },
+    "shadows": {
+      "sm": {
+        "value": "0 1px 3px rgba(0, 0, 0, 0.12)",
+        "description": "Small shadow for cards"
+      },
+      "md": {
+        "value": "0 4px 6px rgba(0, 0, 0, 0.16)",
+        "description": "Medium shadow for modals"
+      },
+      "lg": {
+        "value": "0 10px 20px rgba(0, 0, 0, 0.2)",
+        "description": "Large shadow for dropdowns"
+      },
+      "quantum": {
+        "value": "0 0 40px rgba(191, 64, 128, 0.4)",
+        "description": "Quantum glow effect"
+      }
+    }
+  }
+}

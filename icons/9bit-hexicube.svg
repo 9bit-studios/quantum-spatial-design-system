@@ -1,0 +1,20 @@
+<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="100" height="100" fill="#09021A"/>
+<g opacity="0.4">
+<path d="M49.93 11.11L82.34 34.44V65.55L49.93 88.88L17.52 65.55V34.44L49.93 11.11Z" stroke="white" stroke-width="3.89"/>
+</g>
+<path d="M49.93 11.11L82.34 34.44V65.55L49.93 88.88L17.52 65.55V34.44L49.93 11.11Z" stroke="white" stroke-width="0.97"/>
+<path d="M49.93 11.11V50" stroke="white" stroke-width="0.65" stroke-dasharray="0.65 0.65"/>
+<path d="M82.34 65.56L49.93 50" stroke="white" stroke-width="0.65" stroke-dasharray="0.65 0.65"/>
+<path d="M49.93 88.89V50" stroke="white" stroke-width="0.65" stroke-dasharray="0.65 0.65"/>
+<path d="M17.52 65.56L49.93 50" stroke="white" stroke-width="0.65" stroke-dasharray="0.65 0.65"/>
+<path d="M82.34 38.33C84.4884 38.33 86.23 36.5884 86.23 34.44C86.23 32.2916 84.4884 30.55 82.34 30.55C80.1916 30.55 78.45 32.2916 78.45 34.44C78.45 36.5884 80.1916 38.33 82.34 38.33Z" stroke="white" stroke-width="0.39" stroke-miterlimit="10"/>
+<path d="M17.52 38.33C19.6684 38.33 21.41 36.5884 21.41 34.44C21.41 32.2916 19.6684 30.55 17.52 30.55C15.3716 30.55 13.63 32.2916 13.63 34.44C13.63 36.5884 15.3716 38.33 17.52 38.33Z" stroke="white" stroke-width="0.39" stroke-miterlimit="10"/>
+<path d="M49.93 15C52.0784 15 53.82 13.2584 53.82 11.11C53.82 8.96161 52.0784 7.22 49.93 7.22C47.7816 7.22 46.04 8.96161 46.04 11.11C46.04 13.2584 47.7816 15 49.93 15Z" stroke="white" stroke-width="0.39" stroke-miterlimit="10"/>
+<path d="M82.34 69.45C84.4884 69.45 86.23 67.7084 86.23 65.56C86.23 63.4116 84.4884 61.67 82.34 61.67C80.1916 61.67 78.45 63.4116 78.45 65.56C78.45 67.7084 80.1916 69.45 82.34 69.45Z" stroke="white" stroke-width="0.39" stroke-miterlimit="10"/>
+<path d="M49.93 92.78C52.0784 92.78 53.82 91.0384 53.82 88.89C53.82 86.7416 52.0784 85 49.93 85C47.7816 85 46.04 86.7416 46.04 88.89C46.04 91.0384 47.7816 92.78 49.93 92.78Z" stroke="white" stroke-width="0.39" stroke-miterlimit="10"/>
+<path d="M17.52 69.45C19.6684 69.45 21.41 67.7084 21.41 65.56C21.41 63.4116 19.6684 61.67 17.52 61.67C15.3716 61.67 13.63 63.4116 13.63 65.56C13.63 67.7084 15.3716 69.45 17.52 69.45Z" stroke="white" stroke-width="0.39" stroke-miterlimit="10"/>
+<path d="M82.34 34.44L49.93 50" stroke="white" stroke-width="0.65" stroke-dasharray="0.65 0.65"/>
+<path d="M17.52 34.44L49.93 50" stroke="white" stroke-width="0.65" stroke-dasharray="0.65 0.65"/>
+<path opacity="0.7" d="M49.93 56.48C53.5088 56.48 56.41 53.5788 56.41 50C56.41 46.4212 53.5088 43.52 49.93 43.52C46.3512 43.52 43.45 46.4212 43.45 50C43.45 53.5788 46.3512 56.48 49.93 56.48Z" fill="white"/>
+</svg>

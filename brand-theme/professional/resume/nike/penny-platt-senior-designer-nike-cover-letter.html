@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senior Graphic Designer | Apple Ecosystem Specialist</title>
+    <style>
+        @page {
+            size: letter;
+            margin: 0.5in 0.75in;
+            orphans: 3;
+            widows: 3;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif;
+            font-size: 10pt;
+            line-height: 1.4;
+            color: #131A36;
+            background: white;
+            max-width: 8.5in;
+            margin: 0 auto;
+            padding: 0.5in 0.75in;
+            orphans: 3;
+            widows: 3;
+        }
+        
+        .header {
+            margin-bottom: 14px;
+            border-bottom: 1px solid rgba(64, 93, 229, 0.15);
+            padding-bottom: 12px;
+        }
+        
+        h1 {
+            font-family: 'SF Pro Display', -apple-system, sans-serif;
+            font-size: 26pt;
+            font-weight: 600;
+            color: #131A36;
+            margin-bottom: 3px;
+            letter-spacing: -0.5px;
+        }
+        
+        .tagline {
+            font-size: 12pt;
+            font-weight: 500;
+            color: #6A3093;
+            margin-bottom: 10px;
+        }
+        
+        .contact {
+            font-size: 9pt;
+            color: #613FE7;
+            line-height: 1.6;
+        }
+        
+        .contact-row {
+            display: flex;
+            gap: 18px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        
+        .contact a {
+            color: #613FE7;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+        
+        .contact-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+        
+        .icon {
+            width: 12px;
+            height: 12px;
+            opacity: 0.7;
+        }
+        
+        .section {
+            margin-bottom: 10px;
+        }
+        
+        .section-title {
+            font-family: 'SF Pro Display', -apple-system, sans-serif;
+            font-size: 13pt;
+            font-weight: 600;
+            color: #613FE7;
+            margin-top: 20px;
+            margin-bottom: 6px;
+            padding-left: 8px;
+            border-left: 3px solid #613FE7;
+        }
+        
+        .profile {
+            font-size: 10pt;
+            line-height: 1.5;
+            margin-bottom: 8px;
+        }
+        
+        .profile-highlight {
+            background: rgba(97, 63, 231, 0.05);
+            border-left: 3px solid #613FE7;
+            padding: 6px 10px;
+            margin: 5px 0 6px 0;
+            border-radius: 3px;
+        }
+        
+        .job {
+            margin-bottom: 10px;
+            page-break-inside: avoid;
+        }
+        
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 4px;
+        }
+        
+        .job-title {
+            font-size: 11pt;
+            font-weight: 600;
+            color: #131A36;
+        }
+        
+        .job-company {
+            font-size: 10.5pt;
+            font-weight: 500;
+            color: #405de5;
+        }
+        
+        .job-date {
+            font-size: 8.5pt;
+            color: #6A3093;
+        }
+        
+        .job-location {
+            font-size: 8.5pt;
+            color: #6A3093;
+            margin-bottom: 5px;
+        }
+        
+        .job ul {
+            margin-left: 16px;
+            margin-top: 5px;
+        }
+        
+        .job li {
+            margin-bottom: 3px;
+            line-height: 1.35;
+        }
+        
+        .portfolio-highlight {
+            background: rgba(97, 63, 231, 0.05);
+            border-left: 3px solid #613FE7;
+            padding: 7px 10px;
+            margin: 6px 0 10px 0;
+            border-radius: 4px;
+        }
+        
+        .portfolio-title {
+            font-weight: 600;
+            color: #613FE7;
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .portfolio-link {
+            font-size: 9pt;
+            color: #405de5;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px 24px;
+            font-size: 10pt;
+        }
+        
+        .skill-category {
+            font-weight: 600;
+            color: #131A36;
+        }
+        
+        .skill-list {
+            color: #131A36;
+            margin-top: 2px;
+        }
+        
+        .education-item {
+            margin-bottom: 6px;
+            font-size: 9.5pt;
+        }
+        
+        .education-degree {
+            font-weight: 600;
+            color: #131A36;
+        }
+        
+        .education-school {
+            color: #405de5;
+        }
+        
+        .cert-item {
+            font-size: 9.5pt;
+            margin-bottom: 4px;
+        }
+        
+        .education-year {
+            color: #6A3093;
+            font-size: 9pt;
+        }
+        
+        @media print {
+            body {
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Penny Platt</h1>
+        <div class="tagline">Senior Graphic Designer | Apple Ecosystem Specialist</div>
+        <div class="contact">
+            <div class="contact-row">
+                <span class="contact-item">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    Portland, Oregon | Remote or On-Site
+                </span>
+                <span class="contact-item">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                    (971) 386-7688
+                </span>
+            </div>
+            <div class="contact-row">
+                <a href="/cdn-cgi/l/email-protection#d7a7b2b9b9ae97eeb5bea3a4a3a2b3beb8a4f9beb8">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                    <span class="__cf_email__" data-cfemail="cabaafa4a4b38af3a8a3beb9bebfaea3a5b9e4a3a5">[email&#160;protected]</span>
+                <a href="https://linkedin.com/in/penny-platt">
+                    <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
+                    @penny-platt
+                </a>
+                <a href="https://9bitstudios.io">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="2" y1="12" x2="22" y2="12"></line>
+                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                    </svg>
+                    9bitstudios.io
+                </a>
+                <a href="https://Oksana.ai">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="2" y1="12" x2="22" y2="12"></line>
+                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                    </svg>
+                    Oksana.ai
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <p><strong>Nike World Headquarters</strong></p>
+        <p>Attn: Hiring Manager – Graphic Designer 2, Production Artist II</p>
+        <p>1 Bowerman Drivr</p>
+        <p>Beaverton, OR 97005</p>
+    </div>
+    
+    <div class="section">
+        <p>Dear Hiring Manager,</p>
+    </div>
+    
+    <div class="section">
+        <p>I'm writing to express my strong interest in the Graphic Designer 2 – Production Artist II position at Nike World Headquarters. As a Portland-based designer with 20+ years of experience creating production-ready graphics for sports, wellness, and multi-product brands, I'm excited about the opportunity to contribute to Nike's iconic apparel design legacy.</p>
+    </div>
+    
+    <div class="section">
+        <h2 class="section-title">Sports Content Expertise with Measurable Results</h2>
+        <p>In my most recent in-house role, I served as Creative Director for RunSmart Online, a running coaching platform where I developed a comprehensive visual system for 1,000+ active athletes. This work directly parallels Nike's apparel production needs:</p>
+        <ul>
+            <li><strong>Content Strategy & Production</strong> Created 100+ pieces of training content including workout schematics, seasonal campaign graphics, athlete profiles, and educational infographics—all maintaining rigorous brand consistency across digital and print applications.</li>
+            <li><strong>User Journey Optimization</strong> Conducted a complete content audit and designed user journey visualization for the onboarding flow, resulting in a 40% increase in user engagement and 25% membership growth.</li>
+            <li><strong>Systematic Design Execution</strong> Developed production templates for recurring content types (training plans, race prep guides, nutrition content) that enabled consistent, efficient output while maintaining creative quality.</li>
+            <li><strong>Multi-Channel Coordination</strong> Maintained visual coherence across email campaigns, social media, blog graphics, and app interface—experience that translates directly to Nike's need for consistency across athlete uniforms, retail merchandise, and digital platforms.</li>
+        </ul>
+    </div>
+    
+    <div class="section">
+        <h2 class="section-title">Production-Ready Graphics & Technical Precision</h2>
+        <p>My background includes extensive production art experience across multiple industries:</p>
+        <ul>
+            <li><strong>Petersen Games</strong> Directed design for 100+ SKU product line, creating production specifications for complex multi-component graphics and managing international creative teams—experience highly relevant to Nike's global production coordination.</li>
+            <li><strong>American College of Healthcare Sciences</strong> Led design for e-commerce platform generating $500K+ annual revenue, creating product photography layouts, promotional graphics, and seasonal campaigns while maintaining brand consistency across 100+ digital touchpoints.</li>
+            <li><strong>Texas Creative</strong> Produced responsive email templates and landing pages with conversion optimization focus, developing brand identity systems and digital style guides for diverse clients.</li>
+        </ul>
+    </div>
+    
+    <div class="section">
+        <h2 class="section-title">Technical Skills & Tools Alignment</h2>
+        <p>I bring expert-level proficiency in Adobe Illustrator and the full Adobe Suite, with particular strength in creating production-ready vector graphics and detailed schematics. I'm familiar with 3D apparel visualization workflows and have experience with collaborative tools including Smartsheets, Airtable, and Miro. I'm a quick learner with CLO and other specialized tools, and I thrive in fast-paced environments requiring attention to detail and multi-project management.</p>
+    </div>
+    
+    <div class="section">
+        <h2 class="section-title">Why Nike & Why Now</h2>
+        <p>Nike's commitment to innovation in athletic performance inspires me, and the opportunity to work on apparel graphics that directly impact athletes resonates deeply with my experience creating content for running coaches and competitive athletes. I understand the intersection of technical specification requirements and creative expression that makes sports apparel graphics both functional and inspiring.</p>
+    </div>
+    
+    <div class="section">
+        <p>As a Portland resident, I'm immediately available for the November 23rd start date with no relocation required. The hybrid model aligns perfectly with my work preferences, and I'm excited about the opportunity to collaborate onsite with Nike's Production Art team while maintaining the focus time needed for detailed production work.</p>
+    </div>
+    
+    <div class="section">
+        <p>I'd welcome the opportunity to discuss how my sports content experience, production design expertise, and systematic approach to brand consistency can contribute to Nike's apparel graphics team. I'm available for an interview at your convenience and can provide work samples demonstrating my relevant sports and apparel design experience.</p>
+    </div>
+    
+    <div class="section">
+        <p>Thank you for considering my application. I look forward to the possibility of contributing to Nike's continued excellence in athletic apparel design.</p>
+    </div>
+    
+    <div class="portfolio-highlight">
+        <div class="portfolio-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+            </svg>
+            Portfolio Highlights Available
+        </div>
+        <div style="font-size: 9.5pt; line-height: 1.5; margin-bottom: 6px; margin-left: 20px;">
+            <ul>
+                <li>RunSmart visual brand system and user journey documentation</li>
+                <li>Multi-product design system examples</li>
+                <li>Production specification documentation</li>
+                <li>Running content campaigns and strategy directives</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="signature">
+        <p>Thank you for your consideration.</p>
+        <p>Sincerely,</p>
+        <p><strong>Penny Platt</strong></p>
+    </div>
+
+</body>
+</html>

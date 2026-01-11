@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penny Platt - Resume (Apple Store)</title>
+    <style>
+        @page {
+            size: letter;
+            margin: 0.75in;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif;
+            font-size: 10pt;
+            line-height: 1.4;
+            color: #131A36;
+            background: white;
+            max-width: 8.5in;
+            margin: 0 auto;
+            padding: 0.75in;
+        }
+        
+        .header {
+            margin-bottom: 24px;
+            border-bottom: 1px solid rgba(64, 93, 229, 0.15);
+            padding-bottom: 16px;
+        }
+        
+        h1 {
+            font-family: 'SF Pro Display', -apple-system, sans-serif;
+            font-size: 28pt;
+            font-weight: 600;
+            color: #131A36;
+            margin-bottom: 4px;
+            letter-spacing: -0.5px;
+        }
+        
+        .tagline {
+            font-size: 13pt;
+            font-weight: 500;
+            color: #6A3093;
+            margin-bottom: 12px;
+        }
+        
+        .contact {
+            font-size: 9pt;
+            color: #613FE7;
+            line-height: 1.6;
+        }
+        
+        .contact-row {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        
+        .contact a {
+            color: #613FE7;
+            text-decoration: none;
+        }
+        
+        .section {
+            margin-bottom: 20px;
+        }
+        
+        .section-title {
+            font-family: 'SF Pro Display', -apple-system, sans-serif;
+            font-size: 14pt;
+            font-weight: 600;
+            color: #613FE7;
+            margin-bottom: 8px;
+            padding-left: 8px;
+            border-left: 3px solid #613FE7;
+        }
+        
+        .profile {
+            font-size: 10pt;
+            line-height: 1.5;
+            margin-bottom: 16px;
+        }
+        
+        .job {
+            margin-bottom: 16px;
+            page-break-inside: avoid;
+        }
+        
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 4px;
+        }
+        
+        .job-title {
+            font-size: 12pt;
+            font-weight: 600;
+            color: #131A36;
+        }
+        
+        .job-company {
+            font-size: 11pt;
+            font-weight: 500;
+            color: #405de5;
+        }
+        
+        .job-date {
+            font-size: 9pt;
+            color: #6A3093;
+        }
+        
+        .job-location {
+            font-size: 9pt;
+            color: #6A3093;
+            margin-bottom: 6px;
+        }
+        
+        .job ul {
+            margin-left: 16px;
+            margin-top: 6px;
+        }
+        
+        .job li {
+            margin-bottom: 4px;
+            line-height: 1.4;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px 24px;
+            font-size: 10pt;
+        }
+        
+        .skill-category {
+            font-weight: 600;
+            color: #131A36;
+        }
+        
+        .skill-list {
+            color: #131A36;
+            margin-top: 2px;
+        }
+        
+        .education-item {
+            margin-bottom: 8px;
+        }
+        
+        .education-degree {
+            font-weight: 600;
+            color: #131A36;
+        }
+        
+        .education-school {
+            color: #405de5;
+        }
+        
+        .education-year {
+            color: #6A3093;
+            font-size: 9pt;
+        }
+        
+        @media print {
+            body {
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Penny Platt</h1>
+        <div class="tagline">Creative Professional & Apple Ecosystem Enthusiast</div>
+        <div class="contact">
+            <div class="contact-row">
+                <span>Portland, Oregon | Available for Full-Time or Part-Time</span>
+                <span>(971) 386-7688</span>
+            </div>
+            <div class="contact-row">
+                <a href="mailto:penny@9bitstudios.io">penny@9bitstudios.io</a>
+                <a href="https://9bitstudios.io">9bitstudios.io</a>
+                <a href="https://linkedin.com/in/penny-platt">linkedin.com/in/penny-platt</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Profile</h2>
+        <p class="profile">Creative professional with 20+ years of customer-facing experience helping clients solve problems through technology. Passionate about Apple products and committed to creating exceptional customer experiences. Known for systematic problem-solving, clear communication, and genuine enthusiasm for helping people discover the right solutions for their needs.</p>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Relevant Skills</h2>
+        <div class="skills-grid">
+            <div>
+                <div class="skill-category">Customer Experience</div>
+                <div class="skill-list">20+ years client-facing roles, problem-solving, technical consultation</div>
+            </div>
+            <div>
+                <div class="skill-category">Apple Ecosystem</div>
+                <div class="skill-list">iOS, macOS, Apple Intelligence, accessibility features, app ecosystem</div>
+            </div>
+            <div>
+                <div class="skill-category">Communication</div>
+                <div class="skill-list">Translating technical concepts, training, customer education</div>
+            </div>
+            <div>
+                <div class="skill-category">Team Collaboration</div>
+                <div class="skill-list">Cross-functional partnerships, distributed teams, mentoring</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Professional Experience</h2>
+        
+        <div class="job">
+            <div class="job-header">
+                <div>
+                    <div class="job-title">Founder & Creative Director</div>
+                    <div class="job-company">9Bit Studios</div>
+                </div>
+                <div class="job-date">September 2023 - Present</div>
+            </div>
+            <div class="job-location">Portland, OR</div>
+            <ul>
+                <li>Provide technical consultation and guidance on Apple platform features and capabilities</li>
+                <li>Design user experiences prioritizing accessibility and intuitive interaction</li>
+                <li>Research and implement emerging Apple technologies and frameworks</li>
+                <li>Communicate complex technical concepts to diverse audiences</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <div>
+                    <div class="job-title">Art Director & UX Designer</div>
+                    <div class="job-company">RunSmart Online</div>
+                </div>
+                <div class="job-date">January 2021 - January 2023</div>
+            </div>
+            <div class="job-location">Remote</div>
+            <ul>
+                <li>Delivered customer support and onboarding for 10,000+ app users</li>
+                <li>Increased user engagement 40% by understanding and solving customer needs</li>
+                <li>Collaborated with team members to improve product based on user feedback</li>
+                <li>Created clear documentation and training materials for users and staff</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <div>
+                    <div class="job-title">Art Director</div>
+                    <div class="job-company">American College of Healthcare Sciences</div>
+                </div>
+                <div class="job-date">January 2018 - January 2021</div>
+            </div>
+            <div class="job-location">Portland, OR</div>
+            <ul>
+                <li>Trained staff and students on digital tools and technology adoption</li>
+                <li>Provided technical support and problem-solving for users at all skill levels</li>
+                <li>Managed e-commerce customer experience generating $500k+ annual revenue</li>
+                <li>Translated complex technical requirements into user-friendly solutions</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <div>
+                    <div class="job-title">Art Director</div>
+                    <div class="job-company">Petersen Games</div>
+                </div>
+                <div class="job-date">January 2016 - January 2018</div>
+            </div>
+            <div class="job-location">Rockwall, TX</div>
+            <ul>
+                <li>Managed customer relationships for campaigns generating $2M+ in funding</li>
+                <li>Coordinated international team communication and collaboration</li>
+                <li>Problem-solved creative and technical challenges with systematic approach</li>
+                <li>Delivered exceptional service to diverse customer base</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <div>
+                    <div class="job-title">Senior Designer</div>
+                    <div class="job-company">Texas Creative</div>
+                </div>
+                <div class="job-date">January 2014 - April 2016</div>
+            </div>
+            <div class="job-location">Austin, TX</div>
+            <ul>
+                <li>Collaborated with clients to understand needs and deliver solutions</li>
+                <li>Provided creative consultation for diverse business challenges</li>
+                <li>Maintained positive client relationships through clear communication</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Education</h2>
+        <div class="education-item">
+            <span class="education-degree">BA, Communication Design</span> | 
+            <span class="education-school">University of Texas at San Antonio</span> 
+            <span class="education-year">(2010-2012)</span>
+        </div>
+        <div class="education-item">
+            <span class="education-degree">AAS, Visual Communications</span> | 
+            <span class="education-school">Collin College</span> 
+            <span class="education-year">(1995-1998)</span>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Additional Information</h2>
+        <p>Passionate about Apple's commitment to accessibility and inclusion. As a neurodivergent individual, I deeply appreciate how thoughtful technology design can be transformative. Committed to creating welcoming, supportive experiences for all customers.</p>
+    </div>
+</body>
+</html>

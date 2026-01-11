@@ -1,0 +1,106 @@
+{
+  "$schema": "https://framer.com/schema/design-system.json",
+  "name": "9Bit Studios Quantum-Spatial Design System (Quantum)",
+  "version": "1.0.0",
+  "tokens": {
+    "colors": {
+      "primary": {
+        "value": "#131A36"
+      },
+      "secondary": {
+        "value": "#331F4A"
+      },
+      "accent": {
+        "value": "#5AC8FA"
+      },
+      "background-light": {
+        "value": "#FFFFFF"
+      },
+      "background-dark": {
+        "value": "#121212"
+      },
+      "text-light": {
+        "value": "#0F0F0F"
+      },
+      "text-dark": {
+        "value": "#F5F5F5"
+      },
+      "surface-light": {
+        "value": "#F9FAFB"
+      },
+      "surface-dark": {
+        "value": "#1E1E1E"
+      },
+      "border-light": {
+        "value": "#E2E8F0"
+      },
+      "border-dark": {
+        "value": "#2D2D2D"
+      },
+      "success": {
+        "value": "#00D26A"
+      },
+      "warning": {
+        "value": "#FFB800"
+      },
+      "error": {
+        "value": "#FF4D4F"
+      }
+    },
+    "typography": {
+      "fontFamily": {
+        "value": "SF Pro Display, SF Pro, system-ui, sans-serif"
+      },
+      "baseSize": {
+        "value": "16px"
+      },
+      "scale": {
+        "value": 1.414
+      }
+    },
+    "spacing": {
+      "2xs": {
+        "value": "2px"
+      },
+      "xs": {
+        "value": "4px"
+      },
+      "sm": {
+        "value": "8px"
+      },
+      "md": {
+        "value": "16px"
+      },
+      "lg": {
+        "value": "32px"
+      },
+      "xl": {
+        "value": "64px"
+      },
+      "2xl": {
+        "value": "96px"
+      },
+      "3xl": {
+        "value": "128px"
+      }
+    },
+    "borderRadius": {
+      "small": {
+        "value": "8px"
+      },
+      "medium": {
+        "value": "12px"
+      },
+      "large": {
+        "value": "20px"
+      },
+      "xl": {
+        "value": "28px"
+      },
+      "pill": {
+        "value": "999px"
+      }
+    },
+    "shadows": {}
+  }
+}

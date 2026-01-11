@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Component Extraction & Staging Workflow</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #000;
+            color: #fff;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+        .workflow-phase {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.06) 100%);
+            border: 0.5px solid rgba(255, 255, 255, 0.08);
+            border-radius: 14px;
+            padding: 24px;
+            margin: 24px 0;
+            backdrop-filter: blur(16px);
+        }
+        .phase-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .extraction-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 20px;
+        }
+        .token-hierarchy {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 16px;
+            margin: 20px 0;
+        }
+        .token-layer {
+            border-radius: 8px;
+            padding: 16px;
+            position: relative;
+        }
+        .layer-1 { background: rgba(255, 59, 48, 0.1); border-left: 4px solid #ff3b30; }
+        .layer-2 { background: rgba(255, 149, 0, 0.1); border-left: 4px solid #ff9500; }
+        .layer-3 { background: rgba(52, 199, 89, 0.1); border-left: 4px solid #34c759; }
+        .layer-4 { background: rgba(0, 122, 255, 0.1); border-left: 4px solid #007aff; }
+        .component-inventory {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 12px;
+            margin: 16px 0;
+        }
+        .component-item {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 8px;
+            padding: 12px;
+            font-size: 14px;
+        }
+        .priority-high { border-left: 4px solid #ff3b30; }
+        .priority-medium { border-left: 4px solid #ff9500; }
+        .priority-low { border-left: 4px solid #34c759; }
+        .workflow-flow {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        .flow-step {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            padding: 16px 20px;
+            margin: 8px;
+            flex: 1;
+            min-width: 180px;
+            text-align: center;
+        }
+        .arrow {
+            font-size: 24px;
+            color: #007aff;
+            margin: 0 8px;
+        }
+        .code-snippet {
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            padding: 16px;
+            margin: 16px 0;
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 13px;
+            overflow-x: auto;
+        }
+        .staging-preview {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        h1, h2, h3 { color: #fff; }
+        h1 { font-size: 28px; font-weight: 700; }
+        h2 { font-size: 22px; font-weight: 600; color: #007aff; }
+        h3 { font-size: 18px; font-weight: 600; }
+        .highlight { color: #ff9500; }
+        .success { color: #34c759; }
+        .error { color: #ff3b30; }
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        .tab {
+            padding: 8px 16px;
+            border-radius: 6px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.1);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .tab.active {
+            background: #007aff;
+            border-color: #007aff;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔧 Multi-Phase Component Extraction & Staging Workflow</h1>
+        <p>Systematic approach to extract, index, and stage your components while preserving token complexity and creating visual catalogs.</p>
+
+        <!-- Phase Overview -->
+        <div class="workflow-flow">
+            <div class="flow-step">
+                <strong>Phase 1</strong><br>
+                Component Inventory & Analysis
+            </div>
+            <span class="arrow">→</span>
+            <div class="flow-step">
+                <strong>Phase 2</strong><br>
+                Token Classification & Mapping
+            </div>
+            <span class="arrow">→</span>
+            <div class="flow-step">
+                <strong>Phase 3</strong><br>
+                Extraction & Modularization
+            </div>
+            <span class="arrow">→</span>
+            <div class="flow-step">
+                <strong>Phase 4</strong><br>
+                Visual Staging & Catalog
+            </div>
+        </div>
+
+        <!-- Phase 1: Component Inventory -->
+        <div class="workflow-phase">
+            <h2>Phase 1: Component Inventory & Analysis</h2>
+            <p><strong>Goal:</strong> Comprehensive mapping of all existing components across projects without modification.</p>
+
+            <div class="tabs">
+                <div class="tab active" onclick="showTab('inventory')">Component Inventory</div>
+                <div class="tab" onclick="showTab('analysis')">Token Analysis</div>
+                <div class="tab" onclick="showTab('foundation')">Foundation Audit</div>
+            </div>
+
+            <div id="inventory" class="tab-content active">
+                <h3>Complete Component Catalog</h3>
+                
+                <div class="phase-grid">
+                    <div class="extraction-card">
+                        <h4>🔴 High Priority (Immediate)</h4>
+                        <div class="component-inventory">
+                            <div class="component-item priority-high">AppleNavigation (187 lines)</div>
+                            <div class="component-item priority-high">EnhancedStatCard (196 lines)</div>
+                            <div class="component-item priority-high">VimeoModule (156 lines)</div>
+                            <div class="component-item priority-high">ArtworkSpace (119 lines)</div>
+                            <div class="component-item priority-high">Mobile Menu Toggle (28 lines)</div>
+                        </div>
+                    </div>
+
+                    <div class="extraction-card">
+                        <h4>🟡 Medium Priority (Next Phase)</h4>
+                        <div class="component-inventory">
+                            <div class="component-item priority-medium">EnhancedActivityFeed (134 lines)</div>
+                            <div class="component-item priority-medium">FilterTabs (60+ lines)</div>
+                            <div class="component-item priority-medium">Search Input (30+ lines)</div>
+                            <div class="component-item priority-medium">Auth Buttons (45 lines)</div>
+                            <div class="component-item priority-medium">Product Grid (embedded)</div>
+                        </div>
+                    </div>
+
+                    <div class="extraction-card">
+                        <h4>📋 Remaining Inventory Needed</h4>
+                        <ul style="margin: 0; padding-left: 20px; color: rgba(255,255,255,0.8);">
+                            <li><strong>E-commerce Project:</strong> 50 components to analyze</li>
+                            <li><strong>Foundation Folder:</strong> Component audit needed</li>
+                            <li><strong>Quantum-Spatial:</strong> 35 Framer components</li>
+                            <li><strong>Original Generations:</strong> Archive review</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="code-snippet">
+# Component Inventory Script Template
+# For each project folder:
+
+1. Scan all .tsx/.jsx files
+2. Extract component names, line counts, dependencies
+3. Identify embedded vs standalone components
+4. Map token usage patterns
+5. Document provider dependencies
+6. Note Framer-specific implementations
+                </div>
+            </div>
+
+            <div id="analysis" class="tab-content">
+                <h3>Token Architecture Mapping</h3>
+                
+                <div class="token-hierarchy">
+                    <div class="token-layer layer-1">
+                        <h4>Layer 1: Core foundation</h4>
+                        <ul style="margin: 8px 0; padding-left: 16px; font-size: 14px;">
+                            <li>UnifiedDesignSystem tokens</li>
+                            <li>Apple HIG compliance rules</li>
+                            <li>Accessibility standards</li>
+                            <li>Base spacing/typography scales</li>
+                        </ul>
+                    </div>
+
+                    <div class="token-layer layer-2">
+                        <h4>Layer 2: Theme Layers</h4>
+                        <ul style="margin: 8px 0; padding-left: 16px; font-size: 14px;">
+                            <li>LiquidGlassTokens (in sidemenu)</li>
+                            <li>QuantumTokens (inline)</li>
+                            <li>EcommerceTokens</li>
+                            <li>AppleNavigationTokens</li>
+                        </ul>
+                    </div>
+
+                    <div class="token-layer layer-3">
+                        <h4>Layer 3: Providers</h4>
+                        <ul style="margin: 8px 0; padding-left: 16px; font-size: 14px;">
+                            <li>ContentProvider (Cloudinary)</li>
+                            <li>DesignSystemProvider</li>
+                            <li>PetersenGamesStyleProvider</li>
+                            <li>UseDesignSystem hook</li>
+                        </ul>
+                    </div>
+
+                    <div class="token-layer layer-4">
+                        <h4>Layer 4: Implementation</h4>
+                        <ul style="margin: 8px 0; padding-left: 16px; font-size: 14px;">
+                            <li>Component-specific tokens</li>
+                            <li>State-based variations</li>
+                            <li>Platform adaptations</li>
+                            <li>Animation specifications</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="staging-preview">
+                    <h4>Current Token Confusion Points</h4>
+                    <ul style="color: rgba(255,255,255,0.8);">
+                        <li><span class="error">LiquidGlass tokens embedded in sidemenu</span> - Need extraction</li>
+                        <li><span class="error">Multiple overlapping providers</span> - Need consolidation mapping</li>
+                        <li><span class="error">UnifiedNavigation not actually unified</span> - Need true unification</li>
+                        <li><span class="highlight">Token complexity is valuable</span> - Preserve while organizing</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="foundation" class="tab-content">
+                <h3>Foundation Audit Process</h3>
+                
+                <div class="code-snippet">
+# Foundation Analysis Checklist
+# Identify flawless foundation patterns:
+
+1. NAVIGATION foundation
+   - Which nav patterns work seamlessly?
+   - What token usage is most consistent?
+   - Where is responsive behavior perfect?
+
+2. LAYOUT foundation  
+   - Which grid systems are rock-solid?
+   - What spacing patterns never break?
+   - Where is the visual hierarchy clearest?
+
+3. COMPONENT foundation
+   - Which components need zero fixes?
+   - What interaction patterns are bulletproof?
+   - Where is the token application perfect?
+
+4. PROVIDER foundation
+   - Which context setups work flawlessly?
+   - What token delivery is most reliable?
+   - Where is state management cleanest?
+                </div>
+            </div>
+        </div>
+
+        <!-- Phase 2: Token Classification -->
+        <div class="workflow-phase">
+            <h2>Phase 2: Token Classification & Mapping</h2>
+            <p><strong>Goal:</strong> Create clear hierarchical token structure without losing complexity.</p>
+
+            <div class="phase-grid">
+                <div class="extraction-card">
+                    <h4>Token Extraction Process</h4>
+                    <ol style="margin: 0; padding-left: 20px; color: rgba(255,255,255,0.9);">
+                        <li><strong>Identify:</strong> All token sources across projects</li>
+                        <li><strong>Classify:</strong> By purpose (foundation, theme, component)</li>
+                        <li><strong>Map:</strong> Usage patterns and dependencies</li>
+                        <li><strong>Preserve:</strong> Complexity while organizing hierarchy</li>
+                        <li><strong>Document:</strong> Purpose and context for each token set</li>
+                    </ol>
+                </div>
+
+                <div class="extraction-card">
+                    <h4>Token Hierarchy Structure</h4>
+                    <div class="code-snippet">
+design-tokens/
+├── 01-foundation/
+│   ├── core-spacing.ts
+│   ├── core-typography.ts
+│   ├── accessibility.ts
+│   └── apple-hig.ts
+├── 02-themes/
+│   ├── liquid-glass.ts
+│   ├── quantum-spatial.ts
+│   ├── ecommerce.ts
+│   └── apple-navigation.ts
+├── 03-components/
+│   ├── navigation.tokens.ts
+│   ├── cards.tokens.ts
+│   └── forms.tokens.ts
+└── 04-providers/
+    ├── unified-provider.ts
+    └── theme-context.ts
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Phase 3: Extraction & Modularization -->
+        <div class="workflow-phase">
+            <h2>Phase 3: Extraction & Modularization</h2>
+            <p><strong>Goal:</strong> Extract components while maintaining their sophistication and token relationships.</p>
+
+            <div class="tabs">
+                <div class="tab active" onclick="showTab('extraction')">Extraction Process</div>
+                <div class="tab" onclick="showTab('framer')">Framer Translation</div>
+                <div class="tab" onclick="showTab('modular')">Modularization</div>
+            </div>
+
+            <div id="extraction" class="tab-content active">
+                <h3>Systematic Component Extraction</h3>
+                
+                <div class="code-snippet">
+# Extraction Workflow per Component:
+
+1. ANALYSIS PHASE
+   - Document current dependencies
+   - Map token usage patterns  
+   - Identify embedded sub-components
+   - Note provider requirements
+
+2. EXTRACTION PHASE
+   - Create standalone component file
+   - Preserve all token complexity
+   - Maintain existing functionality
+   - Document props interface
+
+3. VALIDATION PHASE
+   - Test in original context
+   - Verify visual consistency
+   - Check responsive behavior
+   - Validate accessibility
+
+4. DOCUMENTATION PHASE
+   - Usage examples
+   - Prop specifications
+   - Token mappings
+   - Integration notes
+                </div>
+
+                <div class="staging-preview">
+                    <h4>Example: AppleNavigation Extraction</h4>
+                    <div class="code-snippet">
+// Before: Embedded in dashboard (187 lines)
+// After: Standalone component with:
+
+interface AppleNavigationProps {
+  isMobile: boolean;
+  currentTime: string;
+  showInternalNav?: boolean;
+  sections?: Array<{ id: string; label: string }>;
+  onSectionChange?: (section: string) => void;
+  title?: string;
+  subtitle?: string;
+  tokenTheme?: 'unified' | 'liquid-glass' | 'quantum';
+}
+
+// Preserves: All visual sophistication, token complexity
+// Adds: Theme flexibility, better prop interface
+// Maintains: Exact visual output, responsive behavior
+                    </div>
+                </div>
+            </div>
+
+            <div id="framer" class="tab-content">
+                <h3>Framer Component Translation</h3>
+                
+                <div class="phase-grid">
+                    <div class="extraction-card">
+                        <h4>Translation Requirements</h4>
+                        <ul style="margin: 0; padding-left: 20px; color: rgba(255,255,255,0.9);">
+                            <li>Preserve exact visual appearance</li>
+                            <li>Maintain interaction behaviors</li>
+                            <li>Convert token usage to Framer-compatible</li>
+                            <li>Add Framer-specific features (overrides, variants)</li>
+                            <li>Ensure responsive breakpoint behavior</li>
+                        </ul>
+                    </div>
+
+                    <div class="extraction-card">
+                        <h4>Framer-Specific Enhancements</h4>
+                        <div class="code-snippet">
+// Add Framer capabilities:
+- Override system for text/images
+- Variant system for states
+- Component property controls
+- Auto-layout integration
+- Responsive behavior
+- Instance management
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="modular" class="tab-content">
+                <h3>Modular Assembly System</h3>
+                
+                <div class="code-snippet">
+# Modular Component Structure:
+
+components/
+├── pixels/
+│   ├── buttons/
+│   ├── inputs/
+│   └── typography/
+├── molecules/
+│   ├── navigation/
+│   ├── cards/
+│   └── forms/
+├── organisms/
+│   ├── headers/
+│   ├── sidebars/
+│   └── dashboards/
+├── templates/
+│   ├── layouts/
+│   └── pages/
+└── providers/
+    ├── design-system/
+    └── content/
+                </div>
+            </div>
+        </div>
+
+        <!-- Phase 4: Visual Staging -->
+        <div class="workflow-phase">
+            <h2>Phase 4: Visual Staging & Catalog Creation</h2>
+            <p><strong>Goal:</strong> Create comprehensive visual catalogs that showcase components and token applications.</p>
+
+            <div class="phase-grid">
+                <div class="extraction-card">
+                    <h4>Component Catalog Features</h4>
+                    <ul style="margin: 0; padding-left: 20px; color: rgba(255,255,255,0.9);">
+                        <li><strong>Visual Grid:</strong> All components displayed in organized grid</li>
+                        <li><strong>State Showcase:</strong> Every component state visible</li>
+                        <li><strong>Token Display:</strong> Token values shown alongside components</li>
+                        <li><strong>Theme Switching:</strong> Live preview of different token themes</li>
+                        <li><strong>Responsive Demo:</strong> Breakpoint behavior visualization</li>
+                        <li><strong>Usage Examples:</strong> Real implementation scenarios</li>
+                    </ul>
+                </div>
+
+                <div class="extraction-card">
+                    <h4>Connected App Demonstration</h4>
+                    <div class="staging-preview">
+                        <h5>Complete User Journey Staging</h5>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin: 12px 0;">
+                            <div style="background: rgba(0,122,255,0.2); padding: 12px; border-radius: 8px; text-align: center;">
+                                <strong>Homepage</strong><br>
+                                <small>Hero, Navigation, Product Grid</small>
+                            </div>
+                            <div style="background: rgba(255,149,0,0.2); padding: 12px; border-radius: 8px; text-align: center;">
+                                <strong>Authentication</strong><br>
+                                <small>Login, Signup, Reset</small>
+                            </div>
+                            <div style="background: rgba(52,199,89,0.2); padding: 12px; border-radius: 8px; text-align: center;">
+                                <strong>Dashboard</strong><br>
+                                <small>Stats, Navigation, Content</small>
+                            </div>
+                            <div style="background: rgba(139,92,246,0.2); padding: 12px; border-radius: 8px; text-align: center;">
+                                <strong>Account</strong><br>
+                                <small>Profile, Settings, Orders</small>
+                            </div>
+                        </div>
+                        <p style="color: rgba(255,255,255,0.7); font-size: 14px; margin: 8px 0;">
+                            Fluent navigation with context-aware components, demonstrating spatial reasoning and advanced UX flows.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="staging-preview">
+                <h4>Catalog Implementation Structure</h4>
+                <div class="code-snippet">
+catalog/
+├── index.html                    # Main catalog interface
+├── components/
+│   ├── pixels-showcase.html       # quantum-pixel components display
+│   ├── molecules-showcase.html   # Molecular components display
+│   ├── organisms-showcase.html   # Organism components display
+│   └── templates-showcase.html   # Template layouts display
+├── tokens/
+│   ├── foundation-display.html  # Core token visualization
+│   ├── themes-display.html       # Theme comparison interface
+│   └── usage-examples.html       # Token application examples
+├── flows/
+│   ├── connected-app.html        # Full app flow demonstration
+│   ├── auth-journey.html         # Authentication flow
+│   └── ecommerce-flow.html       # Shopping experience
+└── assets/
+    ├── extracted-components/     # All component files
+    ├── token-definitions/        # Token structure files
+    └── demo-data/               # Sample content for staging
+                </div>
+            </div>
+        </div>
+
+        <!-- Implementation Plan -->
+        <div class="workflow-phase">
+            <h2>🦄 Implementation Parameters & Guidelines</h2>
+            
+            <div class="phase-grid">
+                <div class="extraction-card">
+                    <h4>Claude Work Parameters</h4>
+                    <ul style="margin: 0; padding-left: 20px; color: rgba(255,255,255,0.9);">
+                        <li><strong>Follow Guides:</strong> Reference available documentation first</li>
+                        <li><strong>Preserve Complexity:</strong> Don't simplify - organize</li>
+                        <li><strong>Complete Analysis:</strong> Full 50+ component inventory required</li>
+                        <li><strong>QA Integration:</strong> Built-in checks and validation</li>
+                        <li><strong>Iterative Improvement:</strong> Structured feedback loops</li>
+                        <li><strong>Modular Approach:</strong> Phase-by-phase completion</li>
+                    </ul>
+                </div>
+
+                <div class="extraction-card">
+                    <h4>Success Criteria</h4>
+                    <ul style="margin: 0; padding-left: 20px; color: rgba(255,255,255,0.9);">
+                        <li>✅ <strong>Complete Inventory:</strong> All components cataloged and analyzed</li>
+                        <li>✅ <strong>Token Preservation:</strong> Complexity maintained while organized</li>
+                        <li>✅ <strong>Visual Staging:</strong> Comprehensive component showcase</li>
+                        <li>✅ <strong>Connected Flows:</strong> Full app navigation demonstrated</li>
+                        <li>✅ <strong>Framer Ready:</strong> Components translated for Framer use</li>
+                        <li>✅ <strong>Developer Ready:</strong> Clear implementation documentation</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="staging-preview">
+                <h4>Quality Assurance Framework</h4>
+                <div class="code-snippet">
+# QA Checkpoints for Each Phase:
+
+PHASE 1 QA:
+- Inventory completeness verified
+- Token mapping accuracy confirmed  
+- Foundation patterns identified
+- Dependencies documented
+
+PHASE 2 QA:
+- Token hierarchy logical and complete
+- Classification preserves complexity
+- No token functionality lost
+- Provider relationships clear
+
+PHASE 3 QA:
+- Component extraction maintains visual fidelity
+- Framer translation preserves behavior
+- Modular structure enables assembly
+- Documentation supports implementation
+
+PHASE 4 QA:
+- Visual catalog showcases all components
+- Token themes demonstrate properly
+- Connected flows work seamlessly
+- Implementation guides are clear
+                </div>
+            </div>
+        </div>
+
+        <!-- Next Steps -->
+        <div class="workflow-phase">
+            <h2>🤓 Immediate Next Steps</h2>
+            
+            <div class="workflow-flow">
+                <div class="flow-step">
+                    <strong>Week 1</strong><br>
+                    Complete Component Inventory<br>
+                    <small>(50+ eCommerce + 35 Framer)</small>
+                </div>
+                <span class="arrow">→</span>
+                <div class="flow-step">
+                    <strong>Week 2</strong><br>
+                    Token Classification<br>
+                    <small>(Organize without simplifying)</small>
+                </div>
+                <span class="arrow">→</span>
+                <div class="flow-step">
+                    <strong>Week 3</strong><br>
+                    Priority Extraction<br>
+                    <small>(High-priority components)</small>
+                </div>
+                <span class="arrow">→</span>
+                <div class="flow-step">
+                    <strong>Week 4</strong><br>
+                    Visual Staging<br>
+                    <small>(Component catalog creation)</small>
+                </div>
+            </div>
+
+            <div class="staging-preview">
+                <h4 style="color: #34c759;">Ready to Begin Phase 1</h4>
+                <p>With this structured workflow, we can systematically transform your sophisticated component collection into an organized, modular system while preserving all complexity and creating comprehensive visual staging.</p>
+                
+                <div style="background: rgba(52,199,89,0.1); border: 1px solid rgba(52,199,89,0.3); border-radius: 8px; padding: 16px; margin: 16px 0;">
+                    <strong>Workflow Benefits:</strong>
+                    <ul style="margin: 8px 0; padding-left: 20px; color: rgba(255,255,255,0.9);">
+                        <li>Preserves your sophisticated token architecture</li>
+                        <li>Creates visual component staging and catalogs</li>
+                        <li>Enables modular assembly and reuse</li>
+                        <li>Supports Framer component translation</li>
+                        <li>Demonstrates connected app flows</li>
+                        <li>Provides clear developer implementation guides</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showTab(tabName) {
+            // Hide all tab contents
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            
+            // Remove active class from all tabs
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // Show selected tab content
+            document.getElementById(tabName).classList.add('active');
+            
+            // Add active class to clicked tab
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>

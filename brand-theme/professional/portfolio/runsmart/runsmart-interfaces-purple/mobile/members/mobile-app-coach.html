@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RunSmart - AI Coach</title>
+    <link rel="stylesheet" href="../../assets/runsmart-design-system.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', system-ui, sans-serif;
+            background: #000000;
+            color: #FFFFFF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .settings-icon {
+            width: 36px;
+            height: 36px;
+            background: #0A0A0A;
+            border: 1px solid #1A1A1A;
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            text-decoration: none;
+            flex-shrink: 0;
+        }
+
+        .ai-status {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 12px;
+            color: #7B00FF;
+        }
+
+        .status-dot {
+            width: 6px;
+            height: 6px;
+            background: #7B00FF;
+            border-radius: 3px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        /* Messages */
+        .messages {
+            flex: 1;
+            padding: 20px 24px;
+            overflow-y: auto;
+        }
+
+        .message {
+            margin-bottom: 16px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .message.ai {
+            align-items: flex-start;
+        }
+
+        .message.user {
+            align-items: flex-end;
+        }
+
+        .message-avatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 16px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+        }
+
+        .message.ai .message-avatar {
+            background: linear-gradient(135deg, #7B00FF 0%, #A0CC00 100%);
+            color: #000;
+        }
+
+        .message.user .message-avatar {
+            background: #333;
+        }
+
+        .message-bubble {
+            max-width: 75%;
+            padding: 12px 16px;
+            border-radius: 20px;
+            font-size: 15px;
+            line-height: 1.4;
+        }
+
+        .message.ai .message-bubble {
+            background: linear-gradient(135deg, #0A0A0A 0%, #0A1A0A 100%);
+            border: 1px solid #1A1A1A;
+            border-radius: 20px 20px 20px 4px;
+        }
+
+        .message.user .message-bubble {
+            background: #7B00FF;
+            color: #FFFFFF;
+            border-radius: 20px 20px 4px 20px;
+            font-weight: 500;
+        }
+
+        .message-time {
+            font-size: 11px;
+            color: #666;
+            margin-top: 4px;
+            padding: 0 8px;
+        }
+
+        /* Quick Actions */
+        .quick-actions {
+            display: flex;
+            gap: 8px;
+            margin-top: 12px;
+        }
+
+        .quick-action-btn {
+            padding: 8px 14px;
+            background: transparent;
+            border: 1px solid #7B00FF;
+            color: #7B00FF;
+            border-radius: 16px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .quick-action-btn:active {
+            background: rgba(205, 255, 0, 0.1);
+            transform: scale(0.95);
+        }
+
+        /* AI Insight Card */
+        .insight-card {
+            background: rgba(205, 255, 0, 0.05);
+            border: 1px solid #7B00FF;
+            border-radius: 16px;
+            padding: 12px;
+            margin-top: 8px;
+        }
+
+        .insight-title {
+            font-size: 12px;
+            font-weight: 700;
+            color: #7B00FF;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+
+        .insight-text {
+            font-size: 14px;
+            color: #CCC;
+            line-height: 1.4;
+        }
+
+        /* Input Bar */
+        .input-bar {
+            padding: 12px 24px 24px 24px;
+            border-top: 1px solid #1A1A1A;
+            background: #000;
+        }
+
+        .input-container {
+            display: flex;
+            gap: 8px;
+            align-items: flex-end;
+        }
+
+        .input-field {
+            flex: 1;
+            background: #0A0A0A;
+            border: 1px solid #1A1A1A;
+            border-radius: 24px;
+            padding: 12px 16px;
+            color: #FFF;
+            font-size: 15px;
+            font-family: inherit;
+            resize: none;
+            max-height: 100px;
+        }
+
+        .input-field:focus {
+            outline: none;
+            border-color: #7B00FF;
+        }
+
+        .input-field::placeholder {
+            color: #666;
+        }
+
+        .send-button {
+            width: 44px;
+            height: 44px;
+            background: #7B00FF;
+            border: none;
+            border-radius: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 20px;
+            transition: all 0.2s;
+        }
+
+        .send-button:active {
+            transform: scale(0.9);
+        }
+
+        .voice-button {
+            width: 44px;
+            height: 44px;
+            background: #0A0A0A;
+            border: 1px solid #1A1A1A;
+            border-radius: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 20px;
+            transition: all 0.2s;
+        }
+
+        .voice-button:active {
+            background: #151515;
+        }
+
+        /* Typing Indicator */
+        .typing-indicator {
+            display: flex;
+            gap: 4px;
+            padding: 12px 16px;
+        }
+
+        .typing-dot {
+            width: 8px;
+            height: 8px;
+            background: #666;
+            border-radius: 4px;
+            animation: typing 1.4s infinite;
+        }
+
+        .typing-dot:nth-child(2) { animation-delay: 0.2s; }
+        .typing-dot:nth-child(3) { animation-delay: 0.4s; }
+
+        @keyframes typing {
+            0%, 60%, 100% { transform: translateY(0); }
+            30% { transform: translateY(-8px); }
+        }
+
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .nav-icon {
+            font-size: 24px;
+            opacity: 0.5;
+            transition: all 0.2s;
+        }
+
+        .nav-label {
+            font-size: 10px;
+            color: #888;
+            font-weight: 500;
+        }
+
+        .nav-item.active .nav-icon {
+            opacity: 1;
+            filter: drop-shadow(0 0 8px #7B00FF);
+        }
+
+        .nav-label.active {
+            color: var(--text-primary);
+            font-weight: var(--font-weight-medium);
+        }
+        .nav-icon.active {
+            color: var(--purple-primary);
+        }
+        /* SF Symbols Icons */
+        .nav-icon svg,
+        .status-icons svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        .settings-icon svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        .voice-button svg,
+        .send-button svg {
+            width: 20px;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="phone-frame">
+        <div class="dynamic-island"></div>
+
+        <div class="screen">
+            <div class="status-bar">
+                <div class="time">9:41</div>
+                <div class="status-icons">
+                    <svg width="18" height="12" viewBox="0 0 18 12" fill="currentColor" style="opacity: 0.8;">
+                        <circle cx="2" cy="10" r="1.5" fill="currentColor"/>
+                        <circle cx="6" cy="7.5" r="1.5" fill="currentColor"/>
+                        <circle cx="10" cy="5" r="1.5" fill="currentColor"/>
+                        <circle cx="14" cy="2.5" r="1.5" fill="currentColor"/>
+                    </svg>
+                    <span class="notification-badge">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6z"/>
+                        </svg>
+                        <span class="badge-dot">3</span>
+                    </span>
+                    <svg width="22" height="12" viewBox="0 0 22 12" fill="none" style="margin-left: 6px;">
+                        <rect x="1" y="1" width="18" height="10" rx="2" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                        <rect x="3" y="3" width="13" height="6" rx="1" fill="currentColor"/>
+                        <rect x="19.5" y="4" width="1.5" height="4" rx="0.75" fill="currentColor"/>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="content">
+                <div class="header-top">
+                    <div class="header-title">AI Coach</div>
+                </div>
+                <div class="ai-status">
+                    <div class="status-dot"></div>
+                    <span>AI is online and learning your patterns</span>
+                </div>
+            </div>
+            
+            <div class="messages">
+                <!-- AI Message 1 -->
+                <div class="message ai">
+                    <div class="message-avatar">
+                        <img src="https://res.cloudinary.com/cloudninestudios/image/upload/v1765009462/steve-coach_lmfpam.jpg"
+                            alt="Steve AI Coach"
+                            loading="lazy"></div>
+                    <div class="message-bubble">
+                        Good morning Sarah! I noticed you crushed yesterday's tempo run. How are your legs feeling today?
+                    </div>
+                    <div class="message-time">Today, 8:15 AM</div>
+                    <div class="quick-actions">
+                        <button class="quick-action-btn">Feeling great!</button>
+                        <button class="quick-action-btn">A bit sore</button>
+                        <button class="quick-action-btn">Need rest</button>
+                    </div>
+                </div>
+                
+                <!-- User Message 1 -->
+                <div class="message user">
+                    <div class="message-avatar">
+                        <img src="https://res.cloudinary.com/cloudninestudios/image/upload/v1765009460/mike-johnson_e2dtyk.jpg"
+                            alt="Mike Johnson"
+                            loading="lazy">
+                    </div>
+                    <div class="message-bubble">
+                        A bit sore, but nothing major
+                    </div>
+                    <div class="message-time">8:17 AM</div>
+                </div>
+                
+                <!-- AI Message 2 -->
+                <div class="message ai">
+                    <div class="message-avatar">
+                        <img src="https://res.cloudinary.com/cloudninestudios/image/upload/v1765009462/steve-coach_lmfpam.jpg"
+                            alt="Steve AI Coach"
+                            loading="lazy"></div>
+                    <div class="message-bubble">
+                        Perfect! That's exactly what we want - you're adapting to the training. I've adjusted today's run to keep that progress going.
+                        <div class="insight-card">
+                            <div class="insight-title"><svg class="icon icon-inline" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 2L6 13.5H10L8 22L18 11.5H14L16 2Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/></svg> Adjustment Made</div>
+                            <div class="insight-text">Reduced intensity by 10% to optimize recovery while maintaining momentum. Your pace is trending up 8% this week!</div>
+                        </div>
+                    </div>
+                    <div class="message-time">8:18 AM</div>
+                </div>
+                
+                <!-- User Message 2 -->
+                <div class="message user">
+                    <div class="message-avatar">
+                        <img src="https://res.cloudinary.com/cloudninestudios/image/upload/v1765009460/mike-johnson_e2dtyk.jpg"
+                            alt="Mike Johnson"
+                            loading="lazy">
+                    </div>
+                    <div class="message-bubble">
+                        Should I run in the rain today?
+                    </div>
+                    <div class="message-time">8:45 AM</div>
+                </div>
+                
+                <!-- AI Message 3 -->
+                <div class="message ai">
+                    <div class="message-avatar">
+                        <img src="https://res.cloudinary.com/cloudninestudios/image/upload/v1765009462/steve-coach_lmfpam.jpg"
+                            alt="Steve AI Coach"
+                            loading="lazy"></div>
+                    <div class="message-bubble">
+                        Light rain is actually great for running! Here's what I recommend:
+                        <br><br>
+                        ✓ Wear a light rain jacket<br>
+                        ✓ Choose routes with good drainage<br>
+                        ✓ Watch for slippery surfaces<br>
+                        ✓ Add 15-30 sec to your pace<br>
+                        <br>
+                        Weather builds mental toughness! <svg class="icon icon-inline" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.4 6C14.4 7.54667 13.1467 8.8 11.6 8.8H9.6C8.71634 8.8 8 9.51634 8 10.4V14.8C8 15.9046 8.89543 16.8 10 16.8H10.8C11.9046 16.8 12.8 17.6954 12.8 18.8V21.2M9.6 3.2C9.6 4.52548 10.6745 5.6 12 5.6C13.3255 5.6 14.4 4.52548 14.4 3.2M17.6 6C17.6 4.67452 18.6745 3.6 20 3.6C21.3255 3.6 22.4 4.67452 22.4 6V10C22.4 11.5464 21.1464 12.8 19.6 12.8V16.4C19.6 19.0509 17.4509 21.2 14.8 21.2H12.8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <div class="message-time">8:46 AM</div>
+                </div>
+                
+                <!-- User Message 3 -->
+                <div class="message user">
+                    <div class="message-avatar">
+                        <img src="https://res.cloudinary.com/cloudninestudios/image/upload/v1765009460/mike-johnson_e2dtyk.jpg"
+                            alt="Mike Johnson"
+                            loading="lazy">
+                    </div>
+                    <div class="message-bubble">
+                        I only have 20 minutes today, work meeting came up
+                    </div>
+                    <div class="message-time">9:30 AM</div>
+                </div>
+                
+                <!-- AI Message 4 -->
+                <div class="message ai">
+                    <div class="message-avatar">
+                        <img src="https://res.cloudinary.com/cloudninestudios/image/upload/v1765009462/steve-coach_lmfpam.jpg"
+                            alt="Steve AI Coach"
+                            loading="lazy"></div>
+                    <div class="message-bubble">
+                        No problem! Quality over quantity. Here's your modified workout:
+                        <div class="insight-card">
+                            <div class="insight-title"><svg class="icon icon-inline" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="13.5" cy="4" r="2" stroke="currentColor" stroke-width="1.5"/><path d="M8 22L10.5 18L11 13L9 11L5 12M16 11L14 8L11 9L11.5 13L14 16M19 22L16.5 19L14 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Quick Workout</div>
+                            <div class="insight-text">
+                                <strong>5 min warm-up</strong><br>
+                                <strong>10 min tempo</strong> (comfornavly hard)<br>
+                                <strong>5 min cool-down</strong><br>
+                                <br>
+                                Short runs still build fitness when done right!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="message-time">9:31 AM</div>
+                    <div class="quick-actions">
+                        <button class="quick-action-btn">Start Workout</button>
+                        <button class="quick-action-btn">Save for Later</button>
+                    </div>
+                </div>
+                
+                <!-- Typing Indicator -->
+                <div class="message ai" style="margin-top: 20px;">
+                    <div class="message-avatar">
+                        <img src="https://res.cloudinary.com/cloudninestudios/image/upload/v1765009462/steve-coach_lmfpam.jpg"
+                            alt="Steve AI Coach"
+                            loading="lazy"></div>
+                    <div class="message-bubble">
+                        <div class="typing-indicator">
+                            <div class="typing-dot"></div>
+                            <div class="typing-dot"></div>
+                            <div class="typing-dot"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="input-bar">
+                <div class="input-container">
+                    <button class="voice-button">
+                        <svg viewBox="0 0 24 24" fill="#888888">
+                            <path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z"/>
+                            <path d="M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"/>
+                        </svg>
+                    </button>
+                    <textarea
+                        class="input-field"
+                        placeholder="Ask your coach anything..."
+                        rows="1"
+                        ></textarea>
+                    <button class="send-button">
+                        <svg viewBox="0 0 24 24" fill="#FFFFFF">
+                            <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="bottom-nav">
+                <a href="mobile-app-today.html" class="nav-item">
+                    <svg class="nav-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+                    </svg>
+                    <div class="nav-label">Today</div>
+                </a>
+                <a href="mobile-app-calendar.html" class="nav-item">
+                    <svg class="nav-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"/>
+                    </svg>
+                    <div class="nav-label">Calendar</div>
+                </a>
+                <a href="mobile-app-progress.html" class="nav-item">
+                    <svg class="nav-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M3 13h2v8H3v-8zm4-6h2v14H7V7zm4-4h2v18h-2V3zm4 9h2v9h-2v-9zm4-5h2v14h-2V7z"/>
+                    </svg>
+                    <div class="nav-label">Progress</div>
+                </a>
+                <a href="mobile-app-coach.html" class="nav-item active">
+                    <svg class="nav-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/>
+                    </svg>
+                    <div class="nav-label">Coach</div>
+                </a>
+                <a href="mobile-app-community.html" class="nav-item">
+                    <svg class="nav-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M16 11c1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 3-1.34 3-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+                    </svg>
+                    <div class="nav-label">Community</div>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Core Scripts -->
+    <script src="../../../scripts/core/dom-ready.js"></script>
+    <script src="../../../scripts/core/context-detection.js"></script>
+
+    <!-- Feature Scripts -->
+    <script src="../../../scripts/transitions/page-transitions.js"></script>
+    <script src="../../../scripts/interactions/navigation.js"></script>
+
+    <!-- Init Script -->
+    <script src="../../../scripts/init/mobile-coach-init.js"></script>
+</body>
+</html>

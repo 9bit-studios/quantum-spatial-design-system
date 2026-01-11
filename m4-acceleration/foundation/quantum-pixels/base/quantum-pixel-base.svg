@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <!-- 
+    Quantum Pixel System - Base Pixels
+    
+    This file contains the four core quantum pixel states:
+    1. Fully Materialized (solid)
+    2. Partially Materialized (translucent)
+    3. Energy State (glowing outlines)
+    4. Superposition State (multiple layered positions)
+    
+    Each pixel is available in various sizes (1x, 2x, 3x, 4x) based on 8px as the base unit.
+  -->
+  
+  <!-- Include color and filter definitions -->
+  <defs>
+    <!-- Import external definitions -->
+    <style>
+      @import url('/Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/m4-acceleration/foundation/quantum-pixels/quantum-spatial-colors.svg');
+      @import url('/Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/m4-acceleration/foundation/quantum-pixels/quantum-spatial-filters.svg');
+      @import url('/Users/pennyplatt/Documents//Oksana/quantum-spatial/design-system/m4-acceleration/foundation/quantum-pixels/quantum-spatial-animations.svg');
+    </style>
+    
+    <!-- ==================== HERITAGE STATE PIXEL DEFINITIONS ==================== -->
+    
+    <!-- Heritage 1x Pixel (8px) -->
+    <g id="heritage-pixel-1x">
+      <rect width="8" height="8" fill="url(#heritage-gradient-primary)" />
+    </g>
+    
+    <!-- Heritage 2x Pixel (16px) -->
+    <g id="heritage-pixel-2x">
+      <rect width="16" height="16" fill="url(#heritage-gradient-primary)" />
+      <rect x="1" y="1" width="14" height="14" fill="url(#heritage-gradient-edge)" fill-opacity="0.3" />
+    </g>
+    
+    <!-- Heritage 3x Pixel (24px) -->
+    <g id="heritage-pixel-3x">
+      <rect width="24" height="24" fill="url(#heritage-gradient-primary)" />
+      <rect x="2" y="2" width="20" height="20" fill="url(#heritage-gradient-edge)" fill-opacity="0.3" />
+    </g>
+    
+    <!-- Heritage 4x Pixel (32px) -->
+    <g id="heritage-pixel-4x">
+      <rect width="32" height="32" fill="url(#heritage-gradient-primary)" />
+      <rect x="3" y="3" width="26" height="26" fill="url(#heritage-gradient-edge)" fill-opacity="0.3" />
+      <rect x="6" y="6" width="20" height="20" fill="url(#heritage-gradient-primary)" fill-opacity="0.6" />
+    </g>
+    
+    <!-- Heritage Partially Materialized Pixel -->
+    <g id="heritage-pixel-partial">
+      <rect width="24" height="24" fill="url(#heritage-gradient-primary)" fill-opacity="0.6" />
+      <rect x="2" y="2" width="20" height="20" fill="url(#heritage-gradient-edge)" fill-opacity="0.3" />
+    </g>
+    
+    <!-- Heritage Energy State Pixel -->
+    <g id="heritage-pixel-energy">
+      <rect width="24" height="24" fill="none" stroke="url(#heritage-gradient-edge)" stroke-width="2" />
+      <rect x="4" y="4" width="16" height="16" fill="url(#heritage-gradient-glow)" fill-opacity="0.3" />
+    </g>
+    
+    <!-- Heritage Superposition Pixel -->
+    <g id="heritage-pixel-superposition">
+      <rect x="-2" y="-2" width="24" height="24" fill="url(#heritage-gradient-primary)" fill-opacity="0.3" />
+      <rect x="2" y="2" width="24" height="24" fill="url(#heritage-gradient-primary)" fill-opacity="0.5" />
+      <rect x="6" y="6" width="16" height="16" fill="url(#heritage-gradient-edge)" fill-opacity="0.7" />
+    </g>
+    
+    <!-- ==================== TRANSITIONAL STATE PIXEL DEFINITIONS ==================== -->
+    
+    <!-- Transitional 1x Pixel (8px) -->
+    <g id="transitional-pixel-1x">
+      <rect width="8" height="8" rx="2" fill="url(#transitional-gradient-primary)" />
+    </g>
+    
+    <!-- Transitional 2x Pixel (16px) -->
+    <g id="transitional-pixel-2x">
+      <rect width="16" height="16" rx="3" fill="url(#transitional-gradient-primary)" />
+      <rect x="1" y="1" width="14" height="14" rx="2" fill="url(#transitional-gradient-edge)" fill-opacity="0.3" />
+    </g>
+    
+    <!-- Transitional 3x Pixel (24px) -->
+    <g id="transitional-pixel-3x">
+      <rect width="24" height="24" rx="4" fill="url(#transitional-gradient-primary)" />
+      <rect x="2" y="2" width="20" height="20" rx="3" fill="url(#transitional-gradient-edge)" fill-opacity="0.3" />
+    </g>
+    
+    <!-- Transitional 4x Pixel (32px) -->
+    <g id="transitional-pixel-4x">
+      <rect width="32" height="32" rx="5" fill="url(#transitional-gradient-primary)" />
+      <rect x="3" y="3" width="26" height="26" rx="4" fill="url(#transitional-gradient-edge)" fill-opacity="0.3" />
+      <rect x="6" y="6" width="20" height="20" rx="3" fill="url(#transitional-gradient-primary)" fill-opacity="0.6" />
+    </g>
+    
+    <!-- Transitional Partially Materialized Pixel -->
+    <g id="transitional-pixel-partial">
+      <rect width="24" height="24" rx="4" fill="url(#transitional-gradient-primary)" fill-opacity="0.6" />
+      <rect x="2" y="2" width="20" height="20" rx="3" fill="url(#transitional-gradient-edge)" fill-opacity="0.3" />
+    </g>
+    
+    <!-- Transitional Energy State Pixel -->
+    <g id="transitional-pixel-energy">
+      <rect width="24" height="24" rx="4" fill="none" stroke="url(#transitional-gradient-edge)" stroke-width="2" />
+      <rect x="4" y="4" width="16" height="16" rx="3" fill="url(#transitional-gradient-glow)" fill-opacity="0.3" />
+    </g>
+    
+    <!-- Transitional Superposition Pixel -->
+    <g id="transitional-pixel-superposition">
+      <rect x="-2" y="-2" width="24" height="24" rx="4" fill="url(#transitional-gradient-primary)" fill-opacity="0.3" />
+      <rect x="2" y="2" width="24" height="24" rx="4" fill="url(#transitional-gradient-primary)" fill-opacity="0.5" />
+      <rect x="6" y="6" width="16" height="16" rx="3" fill="url(#transitional-gradient-edge)" fill-opacity="0.7" />
+    </g>
+    
+    <!-- ==================== QUANTUM STATE PIXEL DEFINITIONS ==================== -->
+    
+    <!-- Quantum 1x Pixel (8px) -->
+    <g id="quantum-pixel-1x">
+      <rect width="8" height="8" rx="3" fill="url(#quantum-gradient-primary)" />
+    </g>
+    
+    <!-- Quantum 2x Pixel (16px) -->
+    <g id="quantum-pixel-2x">
+      <rect width="16" height="16" rx="6" fill="url(#quantum-gradient-primary)" />
+      <rect x="1" y="1" width="14" height="14" rx="5" fill="url(#quantum-gradient-edge)" fill-opacity="0.3" />
+    </g>
+    
+    <!-- Quantum 3x Pixel (24px) -->
+    <g id="quantum-pixel-3x">
+      <rect width="24" height="24" rx="9" fill="url(#quantum-gradient-primary)" />
+      <rect x="2" y="2" width="20" height="20" rx="7" fill="url(#quantum-gradient-edge)" fill-opacity="0.3" />
+    </g>
+    
+    <!-- Quantum 4x Pixel (32px) -->
+    <g id="quantum-pixel-4x">
+      <rect width="32" height="32" rx="12" fill="url(#quantum-gradient-primary)" />
+      <rect x="3" y="3" width="26" height="26" rx="10" fill="url(#quantum-gradient-edge)" fill-opacity="0.3" />
+      <rect x="6" y="6" width="20" height="20" rx="8" fill="url(#quantum-gradient-primary)" fill-opacity="0.6" />
+    </g>
+    
+    <!-- Quantum Partially Materialized Pixel -->
+    <g id="quantum-pixel-partial">
+      <rect width="24" height="24" rx="9" fill="url(#quantum-gradient-primary)" fill-opacity="0.6" filter="url(#quantum-glass-filter)" />
+      <rect x="2" y="2" width="20" height="20" rx="7" fill="url(#quantum-gradient-edge)" fill-opacity="0.3" />
+    </g>
+    
+    <!-- Quantum Energy State Pixel -->
+    <g id="quantum-pixel-energy">
+      <rect width="24" height="24" rx="9" fill="none" stroke="url(#quantum-gradient-edge)" stroke-width="2" />
+      <rect x="4" y="4" width="16" height="16" rx="6" fill="url(#quantum-gradient-glow)" fill-opacity="0.3" filter="url(#quantum-glow-filter)" />
+    </g>
+    
+    <!-- Quantum Superposition Pixel -->
+    <g id="quantum-pixel-superposition">
+      <rect x="-2" y="-2" width="24" height="24" rx="9" fill="url(#quantum-gradient-primary)" fill-opacity="0.3" />
+      <rect x="2" y="2" width="24" height="24" rx="9" fill="url(#quantum-gradient-primary)" fill-opacity="0.5" />
+      <rect x="6" y="6" width="16" height="16" rx="6" fill="url(#quantum-gradient-edge)" fill-opacity="0.7" filter="url(#quantum-dimension-filter)" />
+    </g>
+  </defs>
+  
+  <!-- ==================== PIXEL DEMONSTRATIONS ==================== -->
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#deep-space-bg)" />
+  
+  <!-- Title -->
+  <text x="400" y="40" font-family="SF Pro Display, Arial, sans-serif" font-size="24" fill="#5AC8FA" text-anchor="middle">Quantum Pixel System</text>
+  <text x="400" y="70" font-family="SF Pro Display, Arial, sans-serif" font-size="16" fill="#5AC8FA" text-anchor="middle" opacity="0.7">Base Pixel States</text>
+  
+  <!-- ==================== HERITAGE STATE PIXELS ==================== -->
+  
+  <g transform="translate(100, 140)">
+    <text x="0" y="-20" font-family="SF Pro Display, Arial, sans-serif" font-size="16" fill="#3DFF74" text-anchor="middle">Heritage State</text>
+    
+    <!-- Size Variants -->
+    <g transform="translate(-64, 0)">
+      <text x="0" y="-10" font-family="SF Pro Display, Arial, sans-serif" font-size="12" fill="#3DFF74" text-anchor="middle" opacity="0.7">1x</text>
+      <use href="#heritage-pixel-1x" />
+    </g>
+    
+    <g transform="translate(-32, 0)">
+      <text x="0" y="-10" font-family="SF Pro Display, Arial, sans-serif" font-size="12" fill="#3DFF74" text-anchor="middle" opacity="0.7">2x</text>
+      <use href="#heritage-pixel-2x" />
+    </g>
+    
+    <g transform="translate(8, 0)">
+      <text x="0" y="-10" font-family="SF Pro Display, Arial, sans-serif" font-size="12" fill="#3DFF74" text-anchor="middle" opacity="0.7">3x</text>
+      <use href="#heritage-pixel-3x" />
+    </g>
+    
+    <g transform="translate(56, 0)">
+      <text x="0" y="-10" font-family="SF Pro Display, Arial, sans-serif" font-size="12" fill="#3DFF74" text-anchor="middle" opacity="0.7">4x</text>
+      <use href="#heritage-pixel-4x" />
+    </g>
+    
+    <!-- State Variants -->
+    <g transform="translate(-48, 80)">
+      <text x="0" y="-10" font-family="SF Pro Display, Arial, sans-serif" font-size="12" fill="#3DFF74" text-anchor="middle" opacity="0.7">Fully Materialized</text>
+      <use href="#heritage-pixel-3x" />
+    </g>
+    
+    <g transform="translate(16, 80)">
+      <text x="0" y="-10" font-family="SF Pro Display, Arial, sans-serif" font-size="12" fill="#3DFF74" text-anchor="middle" opacity="0.7">Partially Materialized</text>
+      <use href="#heritage-pixel-partial" />
+    </g>
+    
+    <g transform="translate(-48, 140)">
+      <text x="0" y="-10" font-family="SF Pro Display, Arial, sans-serif" font-size="12" fill="#3DFF74" text-anchor="middle" opacity="0.7">Energy State</text>
+      <use href="#heritage-pixel-energy" />
+    </g>
+    
+    <g transform="translate(16, 140)">
+      <text x="0" y="-10" font-family="SF Pro Display, Arial, sans-serif" font-size="12" fill="#3DFF74" text-anchor="middle" opacity="0.7">Superposition</text>
+      <use href="#heritage-pixel-superposition" />
+    </g>
+  </g>
+  
+  <!-- ==================== TRANSITIONAL STATE PIXELS ==================== -->
+  
+  <g transform="translate(400, 140)">
+    <text x="0" y="-20" font-family="SF Pro Display, Arial, sans-serif" font-size="16" fill="#5AC8FA" text-anchor="middle">Transitional State</text>
+    
+    <!-- Size Variants -->
+    <g transform="translate(-64, 0)">
+      <text x="0" y="-10" font-family="SF Pro Display, Arial, sans-serif" font-size="12" fill="#5AC8FA" text-anchor="middle" opacity="0.7">1x</text>
+      <use href="#transitional-pixel-1x" />
+    </g>
+    
+    <g transform="translate(-32, 0)">
+      <text x="0" y="-10" font-family="SF Pro Display, Arial, sans-serif" font-size="12" fill="#5AC8FA" text-anchor="middle" opacity="0.7">2x</text>
+      <use href="#transitional-pixel-2x" />
+    </g>
+    
+    <g transform="translate(8, 0)">
+      <text x="0" y="-10" font-family="SF Pro Display, Arial, sans-serif" font-size="12" fill="#5AC8FA" text-anchor="middle" opacity="0.7">3x</text>
+      <use href="#transitional-pixel-3x" />
+    </g>
+    
+    <g transform="translate(56, 0)">
+      <text x="0" y="-10" font-family="SF Pro Display, Arial, sans-serif" font-size="12" fill="#5AC8FA" text-anchor="middle" opacity="0.7">4x</text>
+      <use href="#transitional-pixel-4x" />
+    </g>
+    
+    <!-- State Variants -->
+    <g transform="translate(-48, 80)">
+      <text x="0" y="-10" font-family="SF Pro Display, Arial, sans-serif" font-size="12" fill="#5AC8FA" text-anchor="middle" opacity="0.7">Fully Materialized</text>
+      <use href="#transitional-pixel-3x" />
+    </g>
+    
+    <g transform="translate(16, 80)">
+      <text x="0" y="-10" font-family="SF Pro Display, Arial, sans-serif" font-size="12" fill="#5AC8FA" text-anchor="middle" opacity="0.7">Partially Materialized</text>
+      <use href="#transitional-pixel-partial" />
+    </g>
+    
+    <g transform="translate(-48, 140)">
+      <text x="0" y="-10" font-family="SF Pro Display, Arial, sans-serif" font-size="12" fill="#5AC8FA" text-anchor="middle" opacity="0.7">Energy State</text>
+      <use href="#transitional-pixel-energy" />
+    </g>
+    
+    <g transform="translate(16, 140)">
+      <text x="0" y="-10" font-family="SF Pro Display, Arial, sans-serif" font-size="12" fill="#5AC8FA" text-anchor="middle" opacity="0.7">Superposition</text>
+      <use href="#transitional-pixel-superposition" />
+    </g>
+  </g>
+  
+  <!-- ==================== QUANTUM STATE PIXELS ==================== -->
+  
+  <g transform="translate(700, 140)">
+    <text x="0" y="-20" font-family="SF Pro Display, Arial, sans-serif" font-size="16" fill="#BF4080" text-anchor="middle">Quantum State</text>
+    
+    <!-- Size Variants -->
+    <g transform="translate(-64, 0)">
+      <text x="0" y="-10" font-family="SF Pro Display, Arial, sans-serif" font-size="12" fill="#BF4080" text-anchor="middle" opacity="0.7">1x</text>
+      <use href="#quantum-pixel-1x" />
+    </g>
+    
+    <g transform="translate(-32, 0)">
+      <text x="0" y="-10" font-family="SF Pro Display, Arial, sans-serif" font-size="12" fill="#BF4080" text-anchor="middle" opacity="0.7">2x</text>
+      <use href="#quantum-pixel-2x" />
+    </g>
+    
+    <g transform="translate(8, 0)">
+      <text x="0" y="-10" font-family="SF Pro Display, Arial, sans-serif" font-size="12" fill="#BF4080" text-anchor="middle" opacity="0.7">3x</text>
+      <use href="#quantum-pixel-3x" />
+    </g>
+    
+    <g transform="translate(56, 0)">
+      <text x="0" y="-10" font-family="SF Pro Display, Arial, sans-serif" font-size="12" fill="#BF4080" text-anchor="middle" opacity="0.7">4x</text>
+      <use href="#quantum-pixel-4x" />
+    </g>
+    
+    <!-- State Variants -->
+    <g transform="translate(-48, 80)">
+      <text x="0" y="-10" font-family="SF Pro Display, Arial, sans-serif" font-size="12" fill="#BF4080" text-anchor="middle" opacity="0.7">Fully Materialized</text>
+      <use href="#quantum-pixel-3x" />
+    </g>
+    
+    <g transform="translate(16, 80)">
+      <text x="0" y="-10" font-family="SF Pro Display, Arial, sans-serif" font-size="12" fill="#BF4080" text-anchor="middle" opacity="0.7">Partially Materialized</text>
+      <use href="#quantum-pixel-partial" />
+    </g>
+    
+    <g transform="translate(-48, 140)">
+      <text x="0" y="-10" font-family="SF Pro Display, Arial, sans-serif" font-size="12" fill="#BF4080" text-anchor="middle" opacity="0.7">Energy State</text>
+      <use href="#quantum-pixel-energy" />
+    </g>
+    
+    <g transform="translate(16, 140)">
+      <text x="0" y="-10" font-family="SF Pro Display, Arial, sans-serif" font-size="12" fill="#BF4080" text-anchor="middle" opacity="0.7">Superposition</text>
+      <use href="#quantum-pixel-superposition" />
+    </g>
+  </g>
+  
+  <!-- Implementation Notes -->
+  <g transform="translate(400, 500)">
+    <text x="0" y="0" font-family="SF Pro Display, Arial, sans-serif" font-size="14" fill="#5AC8FA" text-anchor="middle">Implementation Rules</text>
+    <text x="0" y="25" font-family="SF Pro Display, Arial, sans-serif" font-size="12" fill="#5AC8FA" text-anchor="middle" opacity="0.8">• Always include at least 3 different pixel states in any composition</text>
+    <text x="0" y="45" font-family="SF Pro Display, Arial, sans-serif" font-size="12" fill="#5AC8FA" text-anchor="middle" opacity="0.8">• Maintain minimum spacing between pixels (at least 50% of the pixel size)</text>
+    <text x="0" y="65" font-family="SF Pro Display, Arial, sans-serif" font-size="12" fill="#5AC8FA" text-anchor="middle" opacity="0.8">• When animating, transition between states using fade, particle, or dimensional shift effects</text>
+  </g>
+</svg>

@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penny Platt - Resume</title>
+    <style>
+        @page {
+            size: letter;
+            margin: 0.75in;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif;
+            font-size: 10pt;
+            line-height: 1.4;
+            color: #131A36;
+            background: white;
+            max-width: 8.5in;
+            margin: 0 auto;
+            padding: 0.75in;
+        }
+        
+        .header {
+            margin-bottom: 24px;
+            border-bottom: 1px solid rgba(64, 93, 229, 0.15);
+            padding-bottom: 16px;
+        }
+        
+        h1 {
+            font-family: 'SF Pro Display', -apple-system, sans-serif;
+            font-size: 28pt;
+            font-weight: 600;
+            color: #131A36;
+            margin-bottom: 4px;
+            letter-spacing: -0.5px;
+        }
+        
+        .tagline {
+            font-size: 13pt;
+            font-weight: 500;
+            color: #6A3093;
+            margin-bottom: 12px;
+        }
+        
+        .contact {
+            font-size: 9pt;
+            color: #613FE7;
+            line-height: 1.8;
+        }
+        
+        .contact-row {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        
+        .contact a {
+            color: #613FE7;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+        
+        .contact-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+        
+        .icon {
+            width: 12px;
+            height: 12px;
+            opacity: 0.7;
+        }
+        
+        .section {
+            margin-bottom: 20px;
+        }
+        
+        .section-title {
+            font-family: 'SF Pro Display', -apple-system, sans-serif;
+            font-size: 14pt;
+            font-weight: 600;
+            color: #613FE7;
+            margin-bottom: 8px;
+            padding-left: 8px;
+            border-left: 3px solid #613FE7;
+        }
+        
+        .profile {
+            font-size: 10pt;
+            line-height: 1.5;
+            margin-bottom: 16px;
+        }
+        
+        .job {
+            margin-bottom: 16px;
+            page-break-inside: avoid;
+        }
+        
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 4px;
+        }
+        
+        .job-title {
+            font-size: 12pt;
+            font-weight: 600;
+            color: #131A36;
+        }
+        
+        .job-company {
+            font-size: 11pt;
+            font-weight: 500;
+            color: #405de5;
+        }
+        
+        .job-date {
+            font-size: 9pt;
+            color: #6A3093;
+        }
+        
+        .job-location {
+            font-size: 9pt;
+            color: #6A3093;
+            margin-bottom: 6px;
+        }
+        
+        .job ul {
+            margin-left: 16px;
+            margin-top: 6px;
+        }
+        
+        .job li {
+            margin-bottom: 4px;
+            line-height: 1.4;
+        }
+        
+        .portfolio-highlight {
+            background: rgba(97, 63, 231, 0.05);
+            border-left: 3px solid #613FE7;
+            padding: 10px 12px;
+            margin: 10px 0;
+            border-radius: 4px;
+        }
+        
+        .portfolio-title {
+            font-weight: 600;
+            color: #613FE7;
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .portfolio-link {
+            font-size: 9pt;
+            color: #405de5;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px 24px;
+            font-size: 10pt;
+        }
+        
+        .skill-category {
+            font-weight: 600;
+            color: #131A36;
+        }
+        
+        .skill-list {
+            color: #131A36;
+            margin-top: 2px;
+        }
+        
+        .education-item {
+            margin-bottom: 8px;
+        }
+        
+        .education-degree {
+            font-weight: 600;
+            color: #131A36;
+        }
+        
+        .education-school {
+            color: #405de5;
+        }
+        
+        .education-year {
+            color: #6A3093;
+            font-size: 9pt;
+        }
+        
+        @media print {
+            body {
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Penny Platt</h1>
+        <div class="tagline">Creative Developer & UX Strategist</div>
+        <div class="contact">
+            <div class="contact-row">
+                <span class="contact-item">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    Portland, Oregon | Remote or On-Site
+                </span>
+                <span class="contact-item">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                    (971) 386-7688
+                </span>
+            </div>
+            <div class="contact-row">
+                <a href="mailto:penny@9bitstudios.io">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                    penny@9bitstudios.io
+                <a href="https://linkedin.com/in/penny-platt">
+                    <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
+                    @penny-platt
+                </a>
+                <a href="https://9bitstudios.io">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="2" y1="12" x2="22" y2="12"></line>
+                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                    </svg>
+                    9bitstudios.io
+                </a>
+                <a href="https://Oksana.ai">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="2" y1="12" x2="22" y2="12"></line>
+                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                    </svg>
+                    Oksana.ai
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Dear Hiring Team,</h2>
+        <p class="profile">I'm excited to apply for the Web Developer position at Topcon Healthcare Solutions. After 20 years as a creative director, I learned to code because I was tired of watching beautiful designs break during implementation. I build the systems that prevent that from happening—and I'm ready to bring that combination of creative vision and technical execution to your team. </p>
+    </div>
+    
+    <div class="section">
+        <h2 class="section-title">Type Safety & Validation as Quality Control</h2>
+        <p>My art direction background instilled an auditing practive early, reinforcing that media that gets results requires systematic validation. I've carried this principle into modern development through:</p>
+        <ul>
+            <li>TypeScript validation layers that ensure design system compliance</li>
+            <li>Automated QA processes that catch inconsistencies before deployment</li>
+            <li>Component libraries with built-in accessibility requirements and responsive behavior</li>
+            <li>Design token systems that enforce brand consistency programmatically</li>
+        </ul>
+        <p>This means: when designs are handed off, the technical build doesn't just look right—it's validated against design systems, accessibility standards, and performance benchmarks automatically.</p>
+    </div>
+    
+    <div class="section">
+        <h2 class="section-title">Integration Intelligence</h2>
+        <p>I've built what I call Oksana— a brand-aware content intelligence platform that demonstrates my approach to complex integrations. Currently implemented as a Notion integration (with a Vercel interface in development), Oksana syncs:</p>
+        <ul>
+            <li>RESTful Application Programming Interface (API) integration for data synchronization</li>
+            <li>Content Management System (CMS) architecture using Notion as operations hub</li>
+            <li>Analytics visualization through Grid API integration</li>
+            <li>Automated content workflows that reduced manual operations by 89%</li>
+        </ul>
+        <p>For my client Petersen Games, this integration provides analytics intelligence that informs content strategy in real-time. I practice content batching and acceleration through this system—exactly the kind of workflow automation and API integration your role requires.</p>
+    </div>
+    
+    <div class="section">
+        <h2 class="section-title">Proven Results Through Systematic Optimization</h2>
+        <p>As Creative User Experience (UX) Lead at RunSmart Online, I increased user engagement 40% and grew memberships 25% through data-informed development:</p>
+        <ul>
+            <li>Restructuring navigation based on user behavior data</li>
+            <li>Built analytics dashboards using Google Analytics 4 (GA4) that tracked conversion funnels</li>
+            <li>Collaborated with engineering teams on design system implementation</li>
+            <li>Implemented responsive designs with systematic A/B testing across devices</li>
+            <li>Optimized page load speed and implemented Content Delivery Networks (CDNs)</li>
+        </ul>
+        <p>At American College of Healthcare Sciences, I improved organic traffic 45% through comprehensive web audits addressing technical Search Engine Optimization (SEO), page speed optimization, and structured metadata. These weren't surface-level visual changes—they were systematic improvements informed by data and validated through testing.</p>
+    </div>
+    
+    <div class="section">
+        <h2 class="section-title">How I Work With Teams</h2>
+        <p>I dive deep into understanding business goals, translate them into technical requirements, and deliver implementations that are both beautiful and measurable. My systematic approach means I can:</p>
+        <ul>
+            <li><strong>Build faster </strong>- Reusable component libraries and design tokens accelerate development while maintaining consistency</li>
+            <li><strong>Build Better </strong>— Type safety and automated validation ensure quality at scale</li>
+            <li><strong>Build Smarter </strong>— Data-informed decisions backed by analytics and user behavior</li>
+            <li><strong>Build Smarter </strong>— Clear documentation and systematic processes make cross-functional work smoother</li>
+        </ul>
+        <p>My systematic thinking (part of being neurodivergent) naturally produces documentation and processes that create a single source of truth for designers, content creators, project managers, and developers. When working with clients, I translate their needs into technical specifications and provide regular progress updates that align with their expectations.</p>
+    </div>
+    
+    <div class="section">
+        <h2 class="section-title">Technical Alignment With Modern Requirements</h2>
+        <ul>
+            <li><strong>Front-End Development:</strong>HyperText Markup Language (HTML5), Cascading Style Sheets (CSS3), JavaScript (ES6+), responsive design, browser compatibility testing</li>
+            <li><strong>Back-End Capabilities:</strong>Node.js, API development, database integration, server-side logic</li>
+            <li><strong>Modern Frsmeworks:</strong>React, TypeScript, Next.js for full-stack applications</li>
+            <li><strong>Content Management:</strong>WordPress, Shopify, Framer, custom CMS implementations and acceleration through my Notion integration</li>
+            <li><strong>Modern UX Practices:</strong>IxDF certified, data-driven approach to UX best practices</li>
+            <li><strong>Accessibility</strong>WCAG (Web Content Accessibility Guidelines) compliance, screen reader optimization, inclusive design principles</li>
+            <li><strong>Performance & SEO:</strong>Page speed optimization, CDN implementation, structured metadata, search engine best practices</li>
+            <li><strong>Security:</strong>Best practices for protecting against vulnerabilities, secure API integration, data protection protocols </li>
+            <li><strong>Version Control:</strong>Git workflows, collaborative development, code review practices </li>
+            <li><strong>Testing & QA:</strong>ss-browser compatibility, device testing, automated validation, bug tracking</li>
+            <li><strong>Design Tools:</strong>Adobe Creative Cloud (20 years experience), Figma, design system development</li>
+        </ul>
+    </div>
+    
+    <div class="section">
+        <h2 class="section-title">What I Bring to the Team</h2>
+        <p>My combination of creative direction and technical implementation means I can:</p>
+        <ul>
+            <li>Design and develop a modern website that communicates your technical expertise</li>
+            <li>Implement analytics and tracking to understand visitor behavior and optimize conversion</li>
+            <li>Build content management workflows that make updates efficient and maintainable</li>
+            <li>Ensure cross-browser compatibility and responsive design for all devices</li>
+            <li>Apply SEO best practices to improve visibility and search engine performance</li>
+            <li>Create documentation and company resources that support long-term site maintenance and team growth</li>
+        </ul>
+        <p>I'd welcome the opportunity to discuss how my validation-first approach, integration expertise, and creative leadership can contribute to Topcon's digital growth. I'm available for interviews at your convenience and can provide portfolio examples, code samples, and design system documentation upon request.</p>
+    </div>
+    
+    <div class="section">
+        <p>Thank you for considering my application.</p>
+    </div>
+    
+    <div class="section">
+        <p>Sincerely,</p>
+    </div>
+    
+    <div class="section">
+        <p>Penny Platt</p>
+    </div>
+    
+</body>
+</html>

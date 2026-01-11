@@ -1,0 +1,14 @@
+{
+  "platforms": [
+    "Vercel Analytics",
+    "Cloudflare Analytics",
+    "Apple App Analytics"
+  ],
+  "tracking_events": [
+    "site_visit",
+    "contact_form_submit",
+    "service_inquiry",
+    "portfolio_view"
+  ],
+  "privacy_compliance": "GDPR and Apple ATT compliant"
+}

@@ -1,0 +1,57 @@
+<svg width="320" height="160" viewBox="0 0 320 160" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="320" height="160" fill="#131A36" />
+  
+  <!-- Dimensional Grid -->
+  <g opacity="0.15">
+    <!-- Horizontal Lines -->
+    <path d="M0 20 H320 M0 40 H320 M0 60 H320 M0 80 H320 M0 100 H320 M0 120 H320 M0 140 H320" stroke="#5AC8FA" />
+    
+    <!-- Vertical Lines -->
+    <path d="M40 0 V160 M80 0 V160 M120 0 V160 M160 0 V160 M200 0 V160 M240 0 V160 M280 0 V160" stroke="#5AC8FA" />
+    
+    <!-- Perspective Lines -->
+    <path d="M0 0 L320 160" stroke="#5AC8FA" opacity="0.05" />
+    <path d="M320 0 L0 160" stroke="#5AC8FA" opacity="0.05" />
+  </g>
+  
+  <!-- Transitional State Elements -->
+  <!-- Heritage to Quantum Transition -->
+  <g>
+    <!-- Heritage State (Left) -->
+    <rect x="40" y="40" width="80" height="80" fill="#2C5F2D" />
+    <rect x="50" y="50" width="60" height="60" fill="#3D8B40" />
+    
+    <!-- Transition Zone (Middle) -->
+    <path d="M120 40 L200 40 L200 120 L120 120 Z" fill="#331F4A" />
+    <path d="M130 50 L190 50 L190 110 L130 110 Z" fill="#6A3093" opacity="0.7" />
+    
+    <!-- Energy Flow -->
+    <path d="M100 80 L150 80" stroke="#5AC8FA" stroke-width="2">
+      <animate attributeName="stroke-dasharray" values="1,30;30,1" dur="3s" repeatCount="indefinite" />
+    </path>
+    
+    <!-- Quantum State (Right) -->
+    <g transform="translate(200, 40)">
+      <rect x="0" y="0" width="80" height="80" fill="#331F4A" />
+      <rect x="10" y="10" width="60" height="60" fill="#6A3093" opacity="0.8">
+        <animate attributeName="opacity" values="0.8;0.9;0.8" dur="4s" repeatCount="indefinite" />
+      </rect>
+      
+      <!-- Reflection Effect -->
+      <path d="M10 10 L70 10 L70 70 L10 70 Z" fill="#5AC8FA" opacity="0.1" />
+    </g>
+  </g>
+  
+  <!-- Energy Particles -->
+  <g>
+    <circle cx="100" cy="80" r="2" fill="#5AC8FA">
+      <animate attributeName="cx" values="100;150;200" dur="3s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.2;0.8;0.2" dur="3s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="90" cy="80" r="1.5" fill="#5AC8FA">
+      <animate attributeName="cx" values="90;140;190" dur="4s" repeatCount="indefinite" />
+      <animate attributeName="opacity" values="0.2;0.7;0.2" dur="4s" repeatCount="indefinite" />
+    </circle>
+  </g>
+</svg>
